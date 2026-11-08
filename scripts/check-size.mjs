@@ -33,13 +33,20 @@ const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 // modules exist; they are calibrated after the first drawing batch.
 //
 // Calibration history (newest first):
+//   - 2026-11-08: the root now holds the runtime (the `Icon` base, `createIcon`,
+//     the stroke maths and the accessibility rules) and still no icon. Measured:
+//     root 3011 bytes raw, 1044 bytes brotli; meta unchanged at 155 bytes brotli.
+//     The root budget rises to 1.25 KiB, about 20% over the measured runtime: room
+//     for a small fix, while an accidental inline of `./meta` or of a dependency
+//     still fails. The specification's per-icon targets replace it once icon
+//     modules exist.
 //   - 2026-11-08: provisional budgets set at scaffold time, when both entries hold
 //     only the grid constant. Measured brotli: root 55 bytes (a re-export of
 //     `./meta`), meta 155 bytes. Budgets of 0.5 KiB each are a floor that leaves
 //     room for growth while still catching an accidental inline of a large
 //     module; both recalibrate when the runtime and the generated icons land.
 const BUDGETS = [
-  { name: 'root (components, Icon base)', path: 'dist/index.mjs', brotli: 0.5 * 1024 },
+  { name: 'root (components, Icon base)', path: 'dist/index.mjs', brotli: 1.25 * 1024 },
   { name: 'meta (typed metadata)', path: 'dist/meta/index.mjs', brotli: 0.5 * 1024 }
 ]
 

@@ -40,10 +40,11 @@ set.
 
 > [!NOTE]
 > **Status: pre-1.0, no icons yet.** The repository, its quality gates and the release
-> workflow are in place, and the `./meta` subpath already exports the drawing grid the set
-> is built on. The `Icon` runtime, the build pipeline and the first drawing batch come next,
-> in the order the [development plan](./docs/development_plan.md) sets. Nothing is
-> published to npm until `1.0.0`.
+> workflow are in place, the `./meta` subpath exports the drawing grid the set is built on,
+> and the root exports the runtime every icon will render through (the `Icon` base and
+> `createIcon`). The build pipeline and the first drawing batch come next, in the order the
+> [development plan](./docs/development_plan.md) sets. Nothing is published to npm until
+> `1.0.0`.
 
 The library has **zero direct dependencies**: `react` arrives as a peer dependency, so you
 control its version and the supply-chain surface stays minimal.
@@ -83,12 +84,13 @@ and is not built yet.
 
 ### ⚛️ React
 
-- 📋 **Pure components**: no hooks, no context and no `'use client'`, so they render in
-  Server Components and client components alike
-- 📋 **Accessible by default**: decorative icons are silent; a `title` turns an icon into a
+- ✅ **A pure runtime**: the `Icon` base and `createIcon` use no hooks, no context and no
+  `'use client'`, so they render in Server Components and client components alike
+- ✅ **Accessible by default**: decorative icons are silent; a `title` turns an icon into a
   named image
-- 📋 **`ref` as a regular prop** (React 19), no `forwardRef`
-- 📋 **`absoluteStrokeWidth`** keeps the visual stroke constant at every size
+- ✅ **`ref` as a regular prop** (React 19), no `forwardRef`
+- ✅ **`absoluteStrokeWidth`** keeps the visual stroke constant at every size
+- 📋 **One component per icon** (`LightningIcon`), generated from the drawings
 
 ### 🧩 Developer Experience
 
@@ -114,8 +116,9 @@ and is not built yet.
 | `./sprite.svg`    | The SVG sprite                                                 | Planned |
 | `./metadata.json` | Merged metadata of every icon                                  | Planned |
 
-Today `.` and `./meta` both export `ICON_GRID`; the components, `IconName` and the planned
-subpaths are added by the runtime and pipeline phases of the
+Today `.` exports the runtime (`Icon`, `createIcon` and their types) and `ICON_GRID`, and
+`./meta` exports `ICON_GRID`; the icon components, `IconName` and the planned subpaths are
+added by the pipeline phase and the drawing batches of the
 [development plan](./docs/development_plan.md).
 
 ```
@@ -168,11 +171,27 @@ const scale = 48 / ICON_GRID.size
 const visualStroke = ICON_GRID.strokeWidth * scale
 ```
 
-The component API arrives with the runtime. Its shape is fixed by the specification: one
-component per icon, named `<Name>Icon` (`LightningIcon`), sized with `size`, coloured by
-`currentColor`, silent by default and named by `title`. See
+The runtime is available now. Until the first icons ship it renders only drawings you pass
+it, as data; the icon components will be made the same way, one `createIcon` call per icon:
+
+```tsx
+import { createIcon } from '@bymax-one/icons'
+
+const MinusIcon = createIcon('minus', [['line', { x1: 4.75, y1: 12, x2: 19.25, y2: 12 }]])
+
+export function ZoomOut() {
+  return (
+    <button type="button" aria-label="Zoom out">
+      <MinusIcon size={16} />
+    </button>
+  )
+}
+```
+
+The icon is silent (`aria-hidden="true"`) because the button carries the name; pass `title`
+to make an icon a named image of its own. See
 [Example Integration](./docs/technical_specification.md#15-example-integration) in the
-specification for the intended usage.
+specification for the intended usage once icons ship.
 
 ---
 
@@ -299,14 +318,16 @@ stale copy fails the build. The org package checks then run on the packed tarbal
 An icon set is markup that consumers render inside their own pages, so what matters is that
 nothing it ships can carry executable content or reach outside the drawing. The properties
 below are fixed by the specification; each is enforced from the phase that builds the part
-it protects, and the runtime, pipeline and preview do not exist yet.
+it protects. The runtime enforces the first and the third today; the pipeline and the
+preview do not exist yet.
 
 ### Elements are built from data
 
 Each generated module holds its drawing as a list of elements and attributes, and the
 component creates those elements through React. There is no JSX string, no
 `dangerouslySetInnerHTML` and no runtime parsing of SVG text, so a path never passes through
-an HTML parser in the consumer's page.
+an HTML parser in the consumer's page. An icon also drops a consumer's `children` and
+`dangerouslySetInnerHTML`, so no prop can add content to the drawing.
 
 ### Only drawing elements are allowed
 
@@ -372,7 +393,8 @@ it is a regression everywhere at once. The suite is held to a bar beyond "the te
   every push to `main` and cold once a week; a surviving mutant fails the run
 - ✅ **Published-artifact gates**: `check:exports` resolves the types the way each module
   system does, `check:runtime` loads every subpath from the packed tarball in ESM and
-  CommonJS, `check:published` compiles this README's snippets against `dist/`, and
+  CommonJS and renders a fixture icon from it through `react-dom/server` and as a Server
+  Component, `check:published` compiles this README's snippets against `dist/`, and
   `check:api` requires an "Apply to a derived backend" CHANGELOG note when the built
   declarations change
 - ✅ **Bundle size budget** per subpath, measured on the brotli-compressed bundle
@@ -414,11 +436,47 @@ object whose values are literal types.
 
 The type of `ICON_GRID`, exported from both subpaths.
 
+### `IconProps`
+
+The props of every icon component. Every other SVG attribute, `className`, `style`, `data-*`
+attribute and event handler is passed to the `<svg>`, and one the consumer names overrides
+the default of the same name.
+
+| Prop                  | Type                 | Default        | Behaviour                                                                                          |
+| --------------------- | -------------------- | -------------- | -------------------------------------------------------------------------------------------------- |
+| `size`                | `number \| string`   | `24`           | Width and height; a number is px, a string any CSS length                                          |
+| `strokeWidth`         | `number \| string`   | `1.5`          | Stroke width at 24 px; ignored by filled and brand icons                                           |
+| `absoluteStrokeWidth` | `boolean`            | `false`        | Writes `strokeWidth * 24 / size`; a CSS-length `size` such as `'1em'` keeps `strokeWidth` as given |
+| `color`               | `string`             | `currentColor` | The stroke (or fill) colour; drawing details in `currentColor` follow it                           |
+| `title`               | `string`             | none           | Gives `role="img"`, `aria-label` and a `<title>` child; an empty title counts as none              |
+| `ref`                 | `Ref<SVGSVGElement>` | none           | A regular prop (React 19)                                                                          |
+
+Without a title the icon is `aria-hidden="true"`; any `role` or `aria-*` prop with a value
+suppresses that default. Every icon defaults to `focusable="false"`.
+
+### `createIcon(name, iconNode, options?)`
+
+Creates a named icon component from a drawing. `name` is kebab-case (a `TypeError`
+otherwise) and gives the component's `displayName` (`lightning-filled` becomes
+`LightningFilledIcon`) and the class names `bx-icon bx-icon-<name>`, which come before the
+consumer's `className`. `options.paint` is `'stroke'` (the default, for line icons) or
+`'fill'` (filled icons and brand marks: filled in `color`, no stroke attributes).
+
+### `Icon`
+
+The base every component renders through, for a drawing of your own:
+`<Icon iconNode={...} paint="fill" />` takes the `IconProps` plus `iconNode` and `paint`.
+
+### Drawing types
+
+`IconNode` is a list of `IconElement` tuples, `[tag, attributes]`. `IconElementTag` is
+limited to `path`, `line`, `polyline`, `polygon`, `circle`, `ellipse` and `rect`, and
+`IconAttributeName` to their geometry plus `fill`, `fillRule` and `clipRule`.
+
 ### Planned surface
 
 The components (`LightningIcon`, `LightningFilledIcon`, `LightningSmIcon`,
-`GoogleBrandIcon`), the `Icon` base, `IconProps`, `IconName` and the per-icon metadata are
-specified in the [Public API](./docs/technical_specification.md#8-public-api) section of
+`GoogleBrandIcon`), `IconName` and the per-icon metadata are specified in the [Public API](./docs/technical_specification.md#8-public-api) section of
 the specification and are documented here as each one ships.
 
 ---

@@ -10,6 +10,8 @@
  *   5. A minimal consumer, scaffolded in an OS temp dir, installs the packed
  *      tarball via a `file:` dependency and resolves every subpath from both
  *      ESM and CJS through the published `exports` map
+ *   6. The same consumer renders a fixture icon made with the installed
+ *      `createIcon` through `react-dom/server`
  *
  * Exit codes:
  *   0: all assertions pass
@@ -39,8 +41,16 @@ const SUBPATHS = ['.', './meta']
 // checks below (build artifacts, subpath resolution, tarball contents) gate the
 // rest of the package shape.
 const EXPECTED_EXPORTS = {
-  '.': ['ICON_GRID'],
+  '.': ['ICON_GRID', 'Icon', 'createIcon'],
   './meta': ['ICON_GRID']
+}
+
+// React is the package's peer, so the consumer installs it beside the tarball, at
+// the versions this repository tests against: the render below then exercises the
+// same React the specs do.
+const REACT_VERSIONS = {
+  react: require('react/package.json').version,
+  'react-dom': require('react-dom/package.json').version
 }
 
 const ALLOWED_TARBALL_PATHS = [
@@ -175,7 +185,7 @@ function scaffoldConsumer(tarballPath) {
     name: 'dogfood-consumer',
     version: '0.0.1',
     type: 'module',
-    dependencies: { [pkg.name]: `file:${tarballPath}` }
+    dependencies: { [pkg.name]: `file:${tarballPath}`, ...REACT_VERSIONS }
   }
   writeFileSync(resolve(consumerDir, 'package.json'), JSON.stringify(consumerPkgJson, null, 2))
   return spawnSync('pnpm', ['install', '--no-frozen-lockfile'], {
@@ -210,6 +220,28 @@ function checkConsumerResolution() {
   else fail(`Consumer CJS require failed (code ${cjsResult.status}): ${cjsResult.stderr}`)
 }
 
+function checkConsumerRender() {
+  section('6. Consumer render smoke (react-dom/server)')
+  const probe = [
+    "import { createElement } from 'react'",
+    "import { renderToStaticMarkup } from 'react-dom/server'",
+    `import { createIcon } from ${JSON.stringify(pkg.name)}`,
+    "const FixtureIcon = createIcon('fixture', [['path', { d: 'M4 12h16' }]])",
+    "const html = renderToStaticMarkup(createElement(FixtureIcon, { title: 'Fixture' }))",
+    'const expected = [\'viewBox="0 0 24 24"\', \'role="img"\', \'aria-label="Fixture"\',',
+    '  \'class="bx-icon bx-icon-fixture"\', \'<title>Fixture</title><path d="M4 12h16"></path>\']',
+    'const missing = expected.filter((part) => !html.includes(part))',
+    'if (missing.length) { console.error(html); process.exit(6) }'
+  ].join('\n')
+  const result = spawnSync('node', ['--input-type=module', '-e', probe], {
+    cwd: consumerDir,
+    encoding: 'utf8',
+    timeout: 30_000
+  })
+  if (result.status === 0) pass('a fixture icon renders from the installed tarball')
+  else fail(`Consumer render failed (code ${result.status}): ${result.stderr}`)
+}
+
 function checkConsumerInstall() {
   section('5. Consumer file: install smoke (packed tarball)')
   const { tarballPath, files } = packTarball()
@@ -222,6 +254,7 @@ function checkConsumerInstall() {
   }
   pass('pnpm install with packed tarball succeeded')
   checkConsumerResolution()
+  checkConsumerRender()
 }
 
 function cleanup() {

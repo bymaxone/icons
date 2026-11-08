@@ -19,3 +19,11 @@ and deprecated, each rename with the alias that keeps the old name working.
   scripts.
 - `ICON_GRID` in `./meta`, re-exported from the root: the 24 px master grid of the
   set (viewBox, live area, padding and the 1.5 px round stroke) as frozen, typed data.
+- The icon runtime in the root entry: the `Icon` base, which renders a drawing held as
+  data (`IconNode`) into an `<svg>` with `createElement`, and `createIcon`, which makes a
+  named component (`displayName`, `bx-icon bx-icon-<name>` classes) from a drawing.
+  `IconProps` carries `size`, `strokeWidth`, `color`, `title`, `ref` as a regular prop,
+  and `absoluteStrokeWidth`, which writes `strokeWidth * 24 / size` for pixel sizes.
+  Icons are `aria-hidden` by default; a `title` gives `role="img"`, `aria-label` and a
+  `<title>` child; a consumer `role` or `aria-*` suppresses the default. No hook, context
+  or `'use client'`.

@@ -267,20 +267,21 @@ Generated modules are rebuilt from source in CI and compared with the committed 
 ```ts
 interface IconProps extends Omit<SVGProps<SVGSVGElement>, 'ref'> {
   /** Width and height. Default 24. */
-  size?: number | string
+  size?: number | string | undefined
   /** Stroke width at 24 px. Default 1.5. Ignored by filled and brand icons. */
-  strokeWidth?: number | string
+  strokeWidth?: number | string | undefined
   /** Keep the visual stroke width constant at every size. */
-  absoluteStrokeWidth?: boolean
+  absoluteStrokeWidth?: boolean | undefined
   /** Colour. Default currentColor. */
-  color?: string
+  color?: string | undefined
   /** Accessible name. When present the icon is announced as an image. */
-  title?: string
-  ref?: Ref<SVGSVGElement>
+  title?: string | undefined
+  ref?: Ref<SVGSVGElement> | undefined
 }
 ```
 
-- `absoluteStrokeWidth` computes `strokeWidth × 24 / size`.
+- Every optional prop also accepts `undefined`, as `SVGProps` does, so consumers on `exactOptionalPropertyTypes` can pass a value that may be absent.
+- `absoluteStrokeWidth` computes `strokeWidth × 24 / size` when both are numeric and the size is positive; otherwise the stroke width is used unchanged.
 - `ref` is a regular prop (React 19); no `forwardRef`.
 
 ### 8.4 Server Components
