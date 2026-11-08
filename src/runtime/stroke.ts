@@ -16,7 +16,8 @@ import { ICON_GRID } from '@bymax-one/icons/meta'
  *
  * The division needs a pixel size, so it applies only when both values are numbers
  * or numeric strings and the size is above zero. A CSS length (`'1em'`, `'100%'`)
- * or a non-numeric width is returned as given, never as `NaN` or `Infinity`.
+ * or a non-numeric width is returned as given, never as `NaN` or `Infinity`. A
+ * blank string is not numeric, although `Number('')` is `0`.
  *
  * @param strokeWidth - The requested width at the 24 px master.
  * @param size - The rendered width and height.
@@ -29,8 +30,17 @@ export function resolveStrokeWidth(
   absolute: boolean
 ): number | string {
   if (!absolute) return strokeWidth
-  const width = Number(strokeWidth)
-  const pixels = Number(size)
+  const width = toNumber(strokeWidth)
+  const pixels = toNumber(size)
   if (!Number.isFinite(width) || !Number.isFinite(pixels) || pixels <= 0) return strokeWidth
   return (width * ICON_GRID.size) / pixels
+}
+
+/**
+ * Parses a width or size, treating a blank string as non-numeric.
+ * @param value - A number or a string from props.
+ * @returns The parsed number, or `NaN` when the string is blank.
+ */
+function toNumber(value: number | string): number {
+  return typeof value === 'string' && value.trim() === '' ? Number.NaN : Number(value)
 }

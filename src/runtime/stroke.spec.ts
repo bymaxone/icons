@@ -86,4 +86,22 @@ describe('resolveStrokeWidth', () => {
      */
     expect(resolveStrokeWidth('2px', 48, true)).toBe('2px')
   })
+
+  it('keeps an empty or blank width as given instead of zeroing the stroke', () => {
+    /**
+     * Scenario: `Number('')` and `Number('  ')` are `0`, which would write
+     * `stroke-width="0"` and make every stroke invisible; a blank width is not a
+     * number and is returned unchanged.
+     */
+    expect(resolveStrokeWidth('', 48, true)).toBe('')
+    expect(resolveStrokeWidth('  ', 48, true)).toBe('  ')
+  })
+
+  it('keeps the width when the size is an empty or blank string', () => {
+    /**
+     * Scenario: a blank size is not a pixel size, so no division happens.
+     */
+    expect(resolveStrokeWidth(2, '', true)).toBe(2)
+    expect(resolveStrokeWidth(2, ' ', true)).toBe(2)
+  })
 })
