@@ -1,0 +1,152 @@
+{
+  "name": "@bymax-one/icons",
+  "version": "0.1.0",
+  "description": "Original Bymax icon set for React 19: per-icon components, raw SVG, a sprite and typed metadata, drawn on one 24 px grid with a 1.5 px stroke.",
+  "author": "Bymax One <support@bymax.one>",
+  "license": "MIT",
+  "homepage": "https://github.com/bymaxone/icons#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bymaxone/icons.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bymaxone/icons/issues"
+  },
+  "type": "module",
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md",
+    "CHANGELOG.md",
+    "TRADEMARKS.md"
+  ],
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./meta": {
+      "import": {
+        "types": "./dist/meta/index.d.ts",
+        "default": "./dist/meta/index.mjs"
+      },
+      "require": {
+        "types": "./dist/meta/index.d.cts",
+        "default": "./dist/meta/index.cjs"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.cts",
+  "typesVersions": {
+    "*": {
+      "meta": [
+        "./dist/meta/index.d.cts",
+        "./dist/meta/index.d.ts"
+      ]
+    }
+  },
+  "scripts": {
+    "build": "pnpm clean && tsup && node scripts/strip-bundle-comments.mjs",
+    "check:api": "node scripts/check-api-surface.mjs",
+    "check:exports": "node scripts/check-exports.mjs",
+    "check:file-length": "node scripts/check-file-length.mjs",
+    "check:lint-graph": "node scripts/check-lint-graph-rules.mjs",
+    "check:mutants": "node scripts/check-mutation-directives.mjs",
+    "check:published": "node scripts/check-published-surface.mjs",
+    "check:runtime": "node scripts/check-consumer-runtime.mjs",
+    "clean": "node -e \"const fs=require('node:fs');for(const d of ['dist','coverage'])fs.rmSync(d,{recursive:true,force:true})\"",
+    "dogfood": "node scripts/dogfood-smoke-test.mjs",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint src scripts",
+    "lint:fix": "eslint src scripts --fix",
+    "mutation": "stryker run",
+    "mutation:dry-run": "stryker run --dryRunOnly",
+    "mutation:full": "node -e \"require('node:fs').rmSync('reports/stryker-incremental.json',{force:true,recursive:true})\" && stryker run",
+    "prepare": "husky",
+    "prepublishOnly": "pnpm clean && pnpm typecheck && pnpm lint && pnpm check:mutants && pnpm test:cov:all && pnpm build && pnpm size && pnpm check:exports && pnpm check:published && pnpm check:runtime",
+    "release": "npm publish --provenance --access public",
+    "size": "node scripts/check-size.mjs",
+    "test": "jest",
+    "test:cov": "jest --coverage",
+    "test:cov:all": "jest --config jest.coverage.config.ts --coverage",
+    "test:watch": "jest --watch",
+    "typecheck": "tsc --noEmit && tsc --noEmit -p tsconfig.build.json && tsc --noEmit -p tsconfig.meta.json"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,mjs,cjs}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md,yml,yaml}": [
+      "prettier --write"
+    ]
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "react": "^19.0.0"
+  },
+  "devDependencies": {
+    "@arethetypeswrong/cli": "^0.18.5",
+    "@commitlint/cli": "^21.2.1",
+    "@commitlint/config-conventional": "^21.2.0",
+    "@eslint/js": "^10.0.1",
+    "@stryker-mutator/core": "^10.0.0",
+    "@stryker-mutator/jest-runner": "^10.0.0",
+    "@stryker-mutator/typescript-checker": "^10.0.0",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^24",
+    "@types/react": "^19.2.14",
+    "@typescript-eslint/eslint-plugin": "^8.59.3",
+    "@typescript-eslint/parser": "^8.59.3",
+    "eslint": "^10.9.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-import-resolver-typescript": "^4.4.5",
+    "eslint-plugin-import-x": "^4.17.1",
+    "eslint-plugin-prettier": "^5.5.5",
+    "eslint-plugin-security": "^4.0.0",
+    "globals": "^17.6.0",
+    "husky": "^9.1.7",
+    "jest": "^30.4.2",
+    "lint-staged": "^17.2.0",
+    "prettier": "^3.8.3",
+    "react": "^19.2.6",
+    "ts-jest": "^29.4.9",
+    "ts-node": "^10.9.2",
+    "tsup": "^9.0.0",
+    "typescript": "^5.9.3"
+  },
+  "keywords": [
+    "icons",
+    "icon-set",
+    "svg",
+    "svg-icons",
+    "react",
+    "react-icons",
+    "react-server-components",
+    "sprite",
+    "design-system",
+    "accessibility",
+    "tree-shaking",
+    "typescript"
+  ],
+  "packageManager": "pnpm@11.20.0",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true,
+    "registry": "https://registry.npmjs.org/"
+  }
+}

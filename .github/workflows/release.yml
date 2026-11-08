@@ -1,0 +1,192 @@
+name: Release
+
+# Tag-driven release. Pushing a `v*.*.*` tag kicks off the publish flow; the
+# `workflow_dispatch` trigger is kept so an interrupted release can be re-run
+# manually from the Actions tab when needed.
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - 'v*.*.*'
+
+# A release is a destructive, shared-state operation: only one at a time.
+concurrency:
+  group: release
+  cancel-in-progress: false
+
+# Default to read-only at the workflow level. The publish job widens to
+# `contents: write` (for the GitHub Release) and `id-token: write` (for
+# the OIDC trusted publisher exchange).
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    name: Publish to npm and create GitHub Release
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    # Provenance (`--provenance`) requires a public repository: npm rejects a
+    # provenance publish sourced from a private repo, and the transparency-log
+    # attestation is only meaningful when the source is publicly verifiable. The
+    # job is therefore gated on visibility, consistent with the CodeQL,
+    # Scorecard, and mutation workflows. While private, a pushed tag cannot
+    # attempt a publish; once the repository is public the release activates
+    # automatically with no further edit.
+    if: ${{ github.event.repository.private == false }}
+
+    # The `npm-publish` environment gates the run behind a manual approval
+    # (configured in repo Settings, Environments). Even an accidentally
+    # pushed tag cannot publish without a reviewer clicking Approve.
+    environment:
+      name: npm-publish
+      url: https://www.npmjs.com/package/@bymax-one/icons
+
+    # Required for npm OIDC trusted publishing (`id-token: write`) and for
+    # `gh release create` (`contents: write`). No `NPM_TOKEN` secret needed:
+    # the publish exchanges the GitHub OIDC token for a short-lived npm
+    # credential via the Trusted Publisher configured on npmjs.com.
+    permissions:
+      contents: write
+      id-token: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          # The install step below runs the tagged repository's own scripts; the job token, which
+          # can write contents, must not stay in the repository's git configuration for them to read.
+          persist-credentials: false
+          fetch-depth: 0
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@ea17c68df8912ef543352723c149a84f56e3d413 # v6.1.0
+        with:
+          run_install: false
+
+      - name: Setup Node.js
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 24.x
+          cache: pnpm
+          registry-url: https://registry.npmjs.org
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Verify tag matches package.json version
+        # Guards against publishing a tag whose semver does not match the
+        # version committed to package.json: a mismatch always indicates
+        # a broken release and would otherwise ship the wrong metadata.
+        run: |
+          PKG_VERSION=$(node -p "require('./package.json').version")
+          TAG_VERSION=${GITHUB_REF_NAME#v}
+          if [ "$PKG_VERSION" != "$TAG_VERSION" ]; then
+            echo "Tag $GITHUB_REF_NAME does not match package.json version $PKG_VERSION"
+            exit 1
+          fi
+
+      - name: Extract release notes from CHANGELOG
+        # The GitHub Release body is the tag's own CHANGELOG section, so the notes a reader
+        # sees are the ones reviewed in the release PR. It runs before the gates and the
+        # publish: a version with no section stops the release before anything is published,
+        # and there is no fallback text. The version is matched as a literal, so the dots in
+        # `1.2.3` match only dots, and only the heading's own first bracket counts, so a
+        # second bracketed token on another heading cannot start the section. The notes go
+        # through a file, never through a shell or an output variable, so nothing inside the
+        # CHANGELOG is evaluated or can end the value.
+        run: |
+          VERSION=${GITHUB_REF_NAME#v}
+          awk -v ver="$VERSION" '
+            /^## \[/ {
+              if (found) exit
+              if (index($0, "## [" ver "]") == 1) { found = 1; next }
+            }
+            found { print }
+          ' CHANGELOG.md > "$RUNNER_TEMP/release-notes.md"
+          if ! grep -q '[^[:space:]]' "$RUNNER_TEMP/release-notes.md"; then
+            echo "CHANGELOG.md has no non-empty section for $VERSION"
+            exit 1
+          fi
+
+      - name: Verify (typecheck, lint, test, build, size)
+        run: pnpm prepublishOnly
+
+      - name: Package smoke test (packed tarball, every subpath, ESM + CJS)
+        # Runs the dogfood check as its own release gate rather than inside
+        # prepublishOnly: it packs a tarball, which must stay out of the
+        # `pnpm publish` lifecycle to avoid packing during the publish itself.
+        run: pnpm dogfood
+
+      - name: Verify a change to the public declarations carries its CHANGELOG note
+        # Runs after the build inside prepublishOnly, so `dist/` exists, and before the
+        # publish. It compares the built `.d.ts` and `.d.cts` with the previous published
+        # version, ignoring comments, and always prints what differs. A difference passes only
+        # when the CHANGELOG section of this version holds an "Apply to a derived backend" note,
+        # since the version number carries no compatibility information here. It reads the
+        # previous version from the public registry, so it needs no credential. There is no
+        # override: a difference without its note is resolved by writing the note.
+        #
+        # Every subpath under `dist/` is compared, `dist/meta` included. The root entry
+        # re-exports the grid and its type from `@bymax-one/icons/meta`, so a change there is a
+        # change to both entry points and needs the note.
+        run: node scripts/check-api-surface.mjs
+
+      - name: Verify published type resolution
+        # Runs after the build inside prepublishOnly and before the publish, so a
+        # tag cannot ship a tarball whose `exports` map resolves to declarations
+        # for the wrong module format.
+        #
+        # It is a step rather than a prepublishOnly entry because the publish below
+        # runs with `--ignore-scripts` — prepublishOnly already ran as its own step,
+        # and a second run would clean and rebuild the `dist/` the gates validated.
+        # A gate inside prepublishOnly would therefore never run on this path.
+        run: pnpm check:exports
+
+      - name: Consumer load
+        # A step for the same reason: prepublishOnly does not run on the publish
+        # below, which passes `--ignore-scripts`.
+        run: pnpm check:runtime
+
+      - name: Publish to npm with provenance
+        # `npm publish`, not `pnpm publish`. The registry's `readme` field is
+        # populated from the publish request, and pnpm 11 does not send it: every
+        # package in this family published under pnpm 11 carries an empty `readme`,
+        # while every one published under pnpm 10 — which delegated to the npm CLI
+        # — carries it. The same split shows in `_npmVersion`, present only on the
+        # publishes the npm CLI performed. An empty `readme` renders the npm package
+        # page with no documentation at all, which is where people actually read it.
+        # It already cost this family two corrective patch releases.
+        #
+        # `--ignore-scripts`: npm runs `prepublishOnly` on publish, and this job
+        # already ran it as its own step. Without the flag it runs twice, and the
+        # second run starts by cleaning — deleting and rebuilding the `dist/` the
+        # gates just validated, so the tarball shipped is not the artifact checked.
+        #
+        # `--access public` replaces pnpm's `--no-git-checks`: npm performs no git
+        # check on publish, and the scope needs an explicit public access flag.
+        # Authentication is OIDC trusted publishing: the npm CLI exchanges the
+        # GitHub OIDC token (`id-token: write` above) for a short-lived publish
+        # credential, so no token secret is involved.
+        # `--ignore-scripts` avoids re-running the lifecycle hooks
+        # (prepublishOnly, prepare) that already ran in the verify and
+        # package smoke-test steps above.
+        # Skips gracefully when the version was already published manually
+        # (for example during the bootstrap of the first release).
+        run: |
+          PKG_VERSION=$(node -p "require('./package.json').version")
+          if npm view "@bymax-one/icons@${PKG_VERSION}" version 2>/dev/null | grep -qF "$PKG_VERSION"; then
+            echo "Version ${PKG_VERSION} already published on npm, skipping publish step."
+          else
+            npm publish --provenance --access public --ignore-scripts
+          fi
+
+      - name: Create GitHub Release
+        # The notes come from the file written before the publish, so the Release body
+        # is never interpolated into the shell.
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "$GITHUB_REF_NAME" \
+            --title "$GITHUB_REF_NAME" \
+            --notes-file "$RUNNER_TEMP/release-notes.md"
