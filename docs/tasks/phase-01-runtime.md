@@ -4,7 +4,7 @@
 > **Source roadmap**: [`../development_plan.md`](../development_plan.md) §5 (P1)
 > **Source spec**: [`../technical_specification.md`](../technical_specification.md) §2.1, §2.2, §2.7, §6.3, §8.1 to §8.5, §11, §12
 >
-> Every Definition of Done item of P1 is verified in the tree (see the completion log). Task 1.8, the phase commit and pull request, waits for the owner's go-ahead; the change set is uncommitted on `feat/icon-runtime`.
+> Every Definition of Done item of P1 is verified in the tree (see the completion log). Task 1.8, the phase pull request, waits for the owner's go-ahead.
 
 ---
 
@@ -19,7 +19,7 @@ At the start of this phase the root and `./meta` export only `ICON_GRID`. React 
 - [react.dev/blog/2024/12/05/react-19](https://react.dev/blog/2024/12/05/react-19#ref-as-a-prop), section "`ref` as a prop": "Starting in React 19, you can now access `ref` as a prop for function components ... New function components will no longer need `forwardRef`." Refs passed to class components are not props.
 - [react.dev/reference/react/forwardRef](https://react.dev/reference/react/forwardRef): "In React 19, `forwardRef` is no longer necessary. Pass `ref` as a prop instead."
 
-The jsdom spec `src/runtime/icon.dom.spec.tsx` proves it on the installed version: an object ref and a callback ref passed to `Icon` and to a `createIcon` component both receive the rendered `SVGSVGElement`.
+The jsdom spec `src/runtime/icon.dom.spec.tsx` proves it on the installed version: an object ref passed to `Icon` and to a `createIcon` component, and a callback ref passed to `Icon`, receive the rendered `SVGSVGElement`.
 
 ---
 
@@ -74,7 +74,7 @@ Install what the React specs need, at the ranges the family uses, and confirm Re
 
 #### Acceptance criteria
 
-- [x] `react-dom ^19.2.6`, `@types/react-dom ^19.2.3`, `@testing-library/react ^16.3.2` and `jest-environment-jsdom ^30.4.1` are dev dependencies (the `bymaxone/nest-auth` ranges); `dependencies` stays `{}`.
+- [x] `react-dom`, `@types/react-dom`, `@testing-library/react` and `jest-environment-jsdom` are dev dependencies (the `bymaxone/nest-auth` ranges); `dependencies` stays `{}`.
 - [x] `react-server-dom-webpack` is a dev dependency for the Server Components render; its `webpack` peer is marked optional in `pnpm-workspace.yaml` `packageExtensions`, because only its `./plugin` entry needs it, so pnpm installs no webpack tree.
 - [x] The two react.dev statements are quoted with their URLs in this file's Context.
 
@@ -142,7 +142,7 @@ Define the data shape the P2 generator will emit and the props every icon accept
 
 #### Acceptance criteria
 
-- [x] `src/runtime/icon-node.ts`: `IconElementTag` is exactly the seven elements of spec §6.3; `IconAttributeName` is their geometry plus `fill`, `fillRule` and `clipRule` (no `transform`, `style`, `id`, `class`, no event handler, no `dangerouslySetInnerHTML`); `IconElement` is a `[tag, attributes]` tuple; `IconNode` is a readonly list of them; `IconPaint` is `'stroke' | 'fill'`.
+- [x] `src/runtime/icon-node.ts`: `IconElementTag` is exactly the elements of spec §6.3; `IconAttributeName` is their geometry plus `fill`, `fillRule` and `clipRule` (no `transform`, `style`, `id`, `class`, no event handler, no `dangerouslySetInnerHTML`); `IconElement` is a `[tag, attributes]` tuple; `IconNode` is a readonly list of them; `IconPaint` is `'stroke' | 'fill'`.
 - [x] `src/runtime/icon-props.ts`: `IconProps extends Omit<SVGProps<SVGSVGElement>, 'ref'>` with `size`, `strokeWidth`, `absoluteStrokeWidth`, `color`, `title` and `ref?: Ref<SVGSVGElement>`, each optional property also admitting `undefined` (as `SVGProps` does), so a consumer on `exactOptionalPropertyTypes` can pass `title={maybeTitle}`; `IconBaseProps` adds `iconNode` and `paint`.
 - [x] JSDoc on every export, `@fileoverview` and `@layer` headers.
 
@@ -277,7 +277,7 @@ Write the factory each generated icon module will be one call to, and export the
 - [x] `createIcon(name, iconNode, options?)` returns a component that renders through `Icon`, with `displayName` derived from the kebab-case name (`lightning-filled` gives `LightningFilledIcon`) and the class names `bx-icon bx-icon-<name>` written before the consumer's `className` (an empty `className` adds nothing).
 - [x] `options.paint` selects `stroke` (default) or `fill`.
 - [x] A name that is not kebab-case (`^[a-z][a-z0-9]*(?:-[a-z0-9]+)*$`) throws a `TypeError` at creation, because it would become an ill-formed class name and component name.
-- [x] `src/runtime/index.ts` and `src/index.ts` export `Icon`, `createIcon` and every runtime type; `src/index.spec.ts` pins the root's runtime names to `ICON_GRID`, `Icon`, `createIcon`.
+- [x] `src/runtime/index.ts` and `src/index.ts` export `Icon`, `createIcon` and every runtime type; `src/index.spec.ts` pins the root's runtime names.
 
 #### Files to create / modify
 
@@ -342,9 +342,9 @@ Prove the runtime renders as a Server Component, from the source and from the pa
 #### Acceptance criteria
 
 - [x] `src/runtime/server-components.spec.tsx` runs with `customExportConditions: ["react-server", "node", "node-addons"]`: it checks the server build of React is loaded (no `useState`, `useEffect`, `createContext`), renders `Icon` and a `createIcon` component through `react-server-dom-webpack/server` and asserts the decoded tree and that the debug rows record the component in the `Server` environment, fails a negative-control component that calls `useState`, and scans every runtime source for a `'use client'` directive and for any value import from `react` other than `createElement`.
-- [x] `scripts/check-consumer-runtime.mjs` expects `Icon` and `createIcon` on the root, renders a fixture icon made with the packed `createIcon` through `react-dom/server` in ESM and in CommonJS against the exact markup, renders it through Flight under `node --conditions=react-server`, and scans `dist/index.mjs` and `dist/index.cjs` for `'use client'` and for any React import other than `createElement`. Each of the three failure modes was injected into `dist/` and caught.
+- [x] `scripts/check-consumer-runtime.mjs` expects `Icon` and `createIcon` on the root, renders a fixture icon made with the packed `createIcon` through `react-dom/server` in ESM and in CommonJS against the exact markup, renders it through Flight under `node --conditions=react-server`, and scans `dist/index.mjs` and `dist/index.cjs` for `'use client'` and for any React import other than `createElement`.
 - [x] `scripts/dogfood-smoke-test.mjs` expects the new root names, installs `react` and `react-dom` beside the tarball at the repository's versions, and renders a titled fixture icon from the installed package.
-- [x] `scripts/check-size.mjs`: the root budget is recalibrated from the measured bundle (3011 bytes raw, 1044 bytes brotli) to 1.25 KiB, with the numbers in the calibration history.
+- [x] `scripts/check-size.mjs`: the root budget is recalibrated from the measured bundle to 1.25 KiB, with the measurement in the calibration history.
 
 **What the Server Components proof does not cover:** it runs no framework (Next.js) and no bundler, and it does not decode the Flight payload on a client. It proves the components execute and serialise under React's server build, which is where a hook, a context or another client-only API fails.
 
@@ -416,7 +416,7 @@ Update the shipped and the agent-facing documentation to what the runtime makes 
 
 - [x] `README.md`: the status note names the runtime; the React features are ✅ for the runtime, with "one component per icon" still 📋; a runtime-only Quick Start (`createIcon` in a button) states that no icon ships yet; the Security Model says which guarantees the runtime enforces today; the API Reference documents `IconProps`, `createIcon`, `Icon` and the drawing types; `check:published` compiles the new `tsx` snippet against `dist/`.
 - [x] `CHANGELOG.md` `## [Unreleased]` lists the runtime.
-- [x] `CLAUDE.md` status, Testing note and the "Today" line of Subpaths; `AGENTS.md` Architecture names `src/runtime/` (and stays under the 32768-byte budget: 20026 bytes).
+- [x] `CLAUDE.md` status, Testing note and the "Today" line of Subpaths; `AGENTS.md` Architecture names `src/runtime/` (and stays under the 32768-byte budget).
 
 #### Files to create / modify
 
@@ -478,7 +478,7 @@ Run the cold mutation run and the full local gate, verify each P1 Definition of 
 
 #### Acceptance criteria
 
-- [x] `pnpm mutation:full`: final score 100.00; 82 mutants killed, 0 survived, 0 without coverage, 0 timeouts; the 18 errors are all `CompileError` (mutants the TypeScript checker rejects: 4 in `src/meta/icon-grid.ts`, 14 in the runtime), none a `RuntimeError`; no `// Stryker disable` directive was needed.
+- [x] `pnpm mutation:full`: final score 100.00; 0 survived, 0 without coverage, 0 timeouts; every error is a `CompileError` (a mutant the TypeScript checker rejects), none a `RuntimeError`; no `// Stryker disable` directive was needed.
 - [x] `pnpm typecheck`, `pnpm lint`, `pnpm format:check`, `pnpm test:cov:all` (100% on every metric), `pnpm build`, `pnpm size`, `pnpm check:exports`, `pnpm check:runtime`, `pnpm dogfood`, `pnpm check:lint-graph`, `pnpm check:meta-react`, `pnpm check:file-length` and `pnpm check:mutants` all pass.
 - [x] P1 Definition of Done, each item observable: fixture markup in jsdom and `react-dom/server` with and without title (`icon.dom.spec.tsx`, `icon.server.spec.tsx`); a consumer `aria-*` or `role` suppresses `aria-hidden` (`icon.precedence.spec.tsx`, `accessibility.spec.ts`); no hook, context or `'use client'` and a Server Components render (`server-components.spec.tsx`, `check:runtime`); coverage and mutation at 100%.
 - [x] This file, `docs/development_plan.md` §1 and `docs/tasks/README.md` are consistent.
@@ -597,10 +597,10 @@ Completion Protocol (after you finish):
 
 <!-- Append one line per completed task: - <id> ✅ YYYY-MM-DD <summary> -->
 
-- 1.1 ✅ 2026-11-08 react-dom, @types/react-dom, @testing-library/react and jest-environment-jsdom at the nest-auth ranges; react-server-dom-webpack with its webpack peer made optional (3 packages, no webpack); ref-as-prop confirmed on react.dev.
-- 1.2 ✅ 2026-11-08 `IconNode` data types closed to the seven spec §6.3 elements; `IconProps` and `IconBaseProps`.
+- 1.1 ✅ 2026-11-08 react-dom, @types/react-dom, @testing-library/react and jest-environment-jsdom at the nest-auth ranges; react-server-dom-webpack with its webpack peer made optional (no webpack); ref-as-prop confirmed on react.dev.
+- 1.2 ✅ 2026-11-08 `IconNode` data types closed to the spec §6.3 elements; `IconProps` and `IconBaseProps`.
 - 1.3 ✅ 2026-11-08 `Icon` base with stroke maths, paint, accessibility and consumer-prop precedence; exact-markup server specs and jsdom specs.
 - 1.4 ✅ 2026-11-08 `createIcon` with derived `displayName`, merged `bx-icon` classes and the kebab-case rule; runtime exported from the root.
-- 1.5 ✅ 2026-11-08 Flight render under the `react-server` condition in Jest and from the packed tarball; react-dom/server render in check:runtime (ESM, CJS) and dogfood; root budget 1.25 KiB from a measured 1044 bytes brotli.
+- 1.5 ✅ 2026-11-08 Flight render under the `react-server` condition in Jest and from the packed tarball; react-dom/server render in check:runtime (ESM, CJS) and dogfood; root budget recalibrated from the measured bundle.
 - 1.6 ✅ 2026-11-08 README, CHANGELOG, CLAUDE.md and AGENTS.md updated to the runtime; README snippets compile against dist/.
-- 1.7 ✅ 2026-11-08 mutation:full 100.00 (82 killed, 0 survived, 18 CompileError, no directive); full local gate green; dashboards updated.
+- 1.7 ✅ 2026-11-08 mutation:full 100.00 (0 survived, no directive); full local gate green; dashboards updated.

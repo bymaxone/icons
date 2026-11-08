@@ -69,7 +69,7 @@
 | `./sprite.svg`    | The sprite                                               | None      | Planned |
 | `./metadata.json` | Merged metadata                                          | None      | Planned |
 
-Today `.` exports the runtime (`Icon`, `createIcon`, `IconProps`, `IconBaseProps`, `IconComponent`, `IconOptions` and the drawing types `IconNode`, `IconElement`, `IconElementTag`, `IconElementAttributes`, `IconAttributeName`, `IconPaint`) with `ICON_GRID` and `IconGrid`; `./meta` exports `ICON_GRID` and `IconGrid`. The planned subpaths are added in the pipeline phase, together with their `exports` entries, tsup entries and gate lists (`check-size.mjs`, `check-consumer-runtime.mjs`, `dogfood-smoke-test.mjs` and the `verify` job in `ci.yml`).
+Today `.` exports the runtime (`Icon`, `createIcon` and their types, listed in `src/index.ts`) with `ICON_GRID` and `IconGrid`; `./meta` exports `ICON_GRID` and `IconGrid`. The planned subpaths are added in the pipeline phase, together with their `exports` entries, tsup entries and gate lists (`check-size.mjs`, `check-consumer-runtime.mjs`, `dogfood-smoke-test.mjs` and the `verify` job in `ci.yml`).
 
 ---
 
