@@ -304,8 +304,7 @@ from the family.
 - `src/meta/`: the React-free entry (typed metadata, the grid, the `IconName` union).
 - `icons/`, `schemas/`, `categories.json`, `site/`: the drawing sources, metadata schemas,
   category list and catalog site, added by the pipeline and catalog phases.
-- `scripts/`: zero-dependency Node gates (size, exports, runtime, published surface, API
-  surface, file length, mutation directives, import graph), and later the generator and lints.
+- `scripts/`: Node gates, and later the generator and lints.
 
 ## Testing
 

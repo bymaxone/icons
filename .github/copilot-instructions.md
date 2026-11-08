@@ -8,9 +8,7 @@ math, …) — those live in the consuming repo, not here.
 
 Path-specific rules live alongside this file:
 
-- `.github/instructions/code.rust.instructions.md` — Rust crates
 - `.github/instructions/code.library.instructions.md` — publishable `@bymax-one/*` libraries
-- `.github/instructions/code.app.instructions.md` — apps that consume those libraries
 - `.github/instructions/tests.instructions.md` — test suites
 - `.github/agents/agent-code-reviewer.agent.md` — the reviewer agent definition
 

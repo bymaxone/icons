@@ -103,8 +103,6 @@ Commit messages are validated by commitlint via the `commit-msg` hook:
 <type>(<scope>): <subject>
 ```
 
-Types: `feat | fix | docs | refactor | perf | test | build | ci | chore | revert`.
-Scopes: `icons | brands | runtime | meta | site | build | deps | release`.
 The `pre-commit` hook runs lint-staged (ESLint + Prettier on staged files). Run
 `git config commit.template .gitmessage` once to get the template in your editor.
 
