@@ -11,20 +11,20 @@ Tasks live **one file per phase** in this folder (`phase-NN-<slug>.md`, numbered
 
 ## Phase files (folder index)
 
-| Phase | File                                                                   | Tasks     | Status         |
-| ----- | ---------------------------------------------------------------------- | --------- | -------------- |
-| P0    | [`phase-00-repository-scaffold.md`](./phase-00-repository-scaffold.md) | 0 / 7     | 🔄 In Progress |
-| P1    | not scaffolded yet                                                     | n/a       | 📋 ToDo        |
-| P2    | not scaffolded yet                                                     | n/a       | 📋 ToDo        |
-| B0    | not scaffolded yet                                                     | n/a       | 📋 ToDo        |
-| P3    | not scaffolded yet                                                     | n/a       | 📋 ToDo        |
-| B1    | not scaffolded yet                                                     | n/a       | 📋 ToDo        |
-| B2    | not scaffolded yet                                                     | n/a       | 📋 ToDo        |
-| B3    | not scaffolded yet                                                     | n/a       | 📋 ToDo        |
-| B4    | not scaffolded yet                                                     | n/a       | 📋 ToDo        |
-| P4    | not scaffolded yet                                                     | n/a       | 📋 ToDo        |
-| P5    | not scaffolded yet                                                     | n/a       | 📋 ToDo        |
-|       | **Total**                                                              | **0 / 7** | 🔄 In Progress |
+| Phase | File                                                                   | Tasks      | Status         |
+| ----- | ---------------------------------------------------------------------- | ---------- | -------------- |
+| P0    | [`phase-00-repository-scaffold.md`](./phase-00-repository-scaffold.md) | 0 / 7      | 🔄 In Progress |
+| P1    | [`phase-01-runtime.md`](./phase-01-runtime.md)                         | 7 / 8      | ✅ Done        |
+| P2    | not scaffolded yet                                                     | n/a        | 📋 ToDo        |
+| B0    | not scaffolded yet                                                     | n/a        | 📋 ToDo        |
+| P3    | not scaffolded yet                                                     | n/a        | 📋 ToDo        |
+| B1    | not scaffolded yet                                                     | n/a        | 📋 ToDo        |
+| B2    | not scaffolded yet                                                     | n/a        | 📋 ToDo        |
+| B3    | not scaffolded yet                                                     | n/a        | 📋 ToDo        |
+| B4    | not scaffolded yet                                                     | n/a        | 📋 ToDo        |
+| P4    | not scaffolded yet                                                     | n/a        | 📋 ToDo        |
+| P5    | not scaffolded yet                                                     | n/a        | 📋 ToDo        |
+|       | **Total**                                                              | **7 / 15** | 🔄 In Progress |
 
 ---
 

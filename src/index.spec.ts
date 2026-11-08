@@ -2,9 +2,9 @@
  * Unit tests for the public entry points.
  *
  * Layer: unit.
- * Goal: prove the root and `./meta` barrels expose the grid, through the same
- * package specifiers a consumer and the bundler use, and that the root re-exports
- * the `./meta` object rather than a copy of it.
+ * Goal: prove the root and `./meta` barrels expose the grid, and the root the
+ * runtime, through the same package specifiers a consumer and the bundler use, and
+ * that the root re-exports the `./meta` object rather than a copy of it.
  * Mocks: none.
  */
 
@@ -12,6 +12,8 @@ import * as root from '@bymax-one/icons'
 import * as meta from '@bymax-one/icons/meta'
 
 import { ICON_GRID } from './meta/icon-grid'
+import { createIcon } from './runtime/create-icon'
+import { Icon } from './runtime/icon'
 
 describe('public entry points', () => {
   it('exposes the grid from the meta subpath', () => {
@@ -30,12 +32,21 @@ describe('public entry points', () => {
     expect(root.ICON_GRID).toBe(meta.ICON_GRID)
   })
 
+  it('exposes the Icon base and the createIcon factory from the root', () => {
+    /**
+     * Scenario: the generated icon modules and consumers with drawings of their own
+     * render through these two; the root must expose the runtime's own functions.
+     */
+    expect(root.Icon).toBe(Icon)
+    expect(root.createIcon).toBe(createIcon)
+  })
+
   it('exports only the documented runtime names', () => {
     /**
      * Scenario: a barrel decides what is public; a runtime name added to either
      * entry by accident is new surface, so both lists are pinned.
      */
-    expect(Object.keys(root).sort()).toEqual(['ICON_GRID'])
+    expect(Object.keys(root).sort()).toEqual(['ICON_GRID', 'Icon', 'createIcon'])
     expect(Object.keys(meta).sort()).toEqual(['ICON_GRID'])
   })
 })

@@ -2,7 +2,7 @@
 
 > **Version:** 1.0.0
 > **Last updated:** 2026-11-08
-> **Status:** Approved spec, execution started (P0)
+> **Status:** Approved spec, execution under way (P1 done; P0 awaits its GitHub settings)
 > **Source spec:** [`technical_specification.md`](./technical_specification.md)
 > **Derived documents:** per-phase task files under `docs/tasks/` (one file per phase, scaffolded one phase at a time)
 
@@ -23,8 +23,8 @@
 
 ## 1. Progress Dashboard
 
-> **Overall progress: 0 / 11 phases (0%)**
-> **Active phase:** P0 (repository-governance)
+> **Overall progress: 1 / 11 phases (9%)**
+> **Active phase:** P0 (repository-governance: the GitHub settings of task 0.6 remain); P1 is done and P2 is next
 > **Blocked phases:** none
 >
 > Engineering phases are `P0` to `P5`; drawing batches are `B0` to `B4`. Every drawing batch
@@ -36,7 +36,7 @@
 | ID  | Name                              | Status | Progress | Size | Last Updated |
 | --- | --------------------------------- | ------ | -------- | ---- | ------------ |
 | P0  | repository-governance             | 🔄     | 0%       | M    | 2026-11-08   |
-| P1  | runtime                           | 📋     | 0%       | M    | 2026-11-08   |
+| P1  | runtime                           | ✅     | 100%     | M    | 2026-11-08   |
 | P2  | pipeline                          | 📋     | 0%       | L    | 2026-11-08   |
 | B0  | keystone-icons                    | 📋     | 0%       | M    | 2026-11-08   |
 | P3  | visual-tooling                    | 📋     | 0%       | L    | 2026-11-08   |

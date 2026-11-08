@@ -301,6 +301,8 @@ from the family.
 
 - `src/index.ts`: the root entry (components, the `Icon` base, the types). It imports `./meta` by
   package specifier, never by relative path, so the published package holds one copy of it.
+- `src/runtime/`: the `Icon` base, `createIcon`, the props, the drawing data types, the stroke maths
+  and the accessibility rules; part of the root entry, reached from `src/index.ts` by relative path.
 - `src/meta/`: the React-free entry (typed metadata, the grid, the `IconName` union).
 - `icons/`, `schemas/`, `categories.json`, `site/`: the drawing sources, metadata schemas,
   category list and catalog site, added by the pipeline and catalog phases.

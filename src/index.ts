@@ -1,5 +1,6 @@
 /**
- * @fileoverview Public entry point for the root subpath of `@bymax-one/icons`.
+ * @fileoverview Public entry point for the root subpath of `@bymax-one/icons`: the
+ * `Icon` base, the `createIcon` factory, their types, and the grid.
  * @layer Module
  *
  * The grid is re-exported from the `./meta` entry by package specifier rather than
@@ -9,5 +10,18 @@
  */
 
 export { ICON_GRID } from '@bymax-one/icons/meta'
+export { createIcon, Icon } from './runtime'
 
 export type { IconGrid } from '@bymax-one/icons/meta'
+export type {
+  IconAttributeName,
+  IconBaseProps,
+  IconComponent,
+  IconElement,
+  IconElementAttributes,
+  IconElementTag,
+  IconNode,
+  IconOptions,
+  IconPaint,
+  IconProps
+} from './runtime'

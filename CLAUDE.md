@@ -3,7 +3,7 @@
 > **Type:** npm public library (NOT an application)
 > **Package:** `@bymax-one/icons` — original Bymax icon set: React 19 components, raw SVG, an SVG sprite and typed metadata on one 24 px grid with a 1.5 px stroke
 > **Runtime:** any React 19 renderer, including Server Components | Tooling on Node.js 24+ | Zero direct dependencies (`react` is the only peer)
-> **Status:** 0.1.0, pre-1.0 and unpublished. The repository scaffold and gates are in place and `./meta` exports `ICON_GRID`; no icon is drawn yet. The phase order is in [docs/development_plan.md](./docs/development_plan.md).
+> **Status:** 0.1.0, pre-1.0 and unpublished. The repository scaffold and gates are in place, `./meta` exports `ICON_GRID`, and the root exports the runtime (`Icon`, `createIcon` and their types); no icon is drawn yet. The phase order is in [docs/development_plan.md](./docs/development_plan.md).
 
 ---
 
@@ -49,6 +49,7 @@
 - Co-located tests (`*.spec.ts`, `*.spec.tsx`). Every `it()` carries a comment stating the scenario.
 - **100% statements / branches / functions / lines** in both Jest configs (`pnpm test:cov`, `pnpm test:cov:all`).
 - React specs switch to jsdom with `/** @jest-environment @stryker-mutator/jest-runner/jest-env/jsdom */`.
+- The Server Components spec resolves packages with the `react-server` condition through `@jest-environment-options` and renders through `react-server-dom-webpack/server`; `check:runtime` repeats that render on the packed tarball.
 - Mutation testing (Stryker `break: 100`, `ignoreStatic: false`) is the deeper gate. Equivalent mutants carry `// Stryker disable next-line <Mutator>: <reason>`; a killable mutant is never disabled.
 - Generated modules are excluded from coverage and mutation; the runtime and the generator are not.
 
@@ -68,7 +69,7 @@
 | `./sprite.svg`    | The sprite                                               | None      | Planned |
 | `./metadata.json` | Merged metadata                                          | None      | Planned |
 
-Today `.` and `./meta` export `ICON_GRID` and `IconGrid`. The planned subpaths are added in the pipeline phase, together with their `exports` entries, tsup entries and gate lists (`check-size.mjs`, `check-consumer-runtime.mjs`, `dogfood-smoke-test.mjs` and the `verify` job in `ci.yml`).
+Today `.` exports the runtime (`Icon`, `createIcon` and their types, listed in `src/index.ts`) with `ICON_GRID` and `IconGrid`; `./meta` exports `ICON_GRID` and `IconGrid`. The planned subpaths are added in the pipeline phase, together with their `exports` entries, tsup entries and gate lists (`check-size.mjs`, `check-consumer-runtime.mjs`, `dogfood-smoke-test.mjs` and the `verify` job in `ci.yml`).
 
 ---
 
