@@ -34,6 +34,12 @@ const metaDeniedImports = [
   { name: 'react-dom', message: 'The ./meta subpath must not import React.' }
 ]
 
+// `paths` matches exact specifiers only, so every subpath of the two packages
+// (react/jsx-dev-runtime, react-dom/server, ...) is refused by pattern.
+const metaDeniedPatterns = [
+  { group: ['react/*', 'react-dom/*'], message: 'The ./meta subpath must not import React.' }
+]
+
 export default [
   // Global ignores: only build artifacts and coverage, NOT config files.
   {
@@ -167,10 +173,26 @@ export default [
 
   // The React-free metadata subpath (see metaDeniedImports above).
   {
-    files: ['src/meta/**/*.ts'],
-    ignores: ['**/*.spec.ts', '**/*.test.ts'],
+    files: ['src/meta/**/*.ts', 'src/meta/**/*.tsx'],
+    ignores: ['**/*.spec.ts', '**/*.test.ts', '**/*.spec.tsx', '**/*.test.tsx'],
     rules: {
-      'no-restricted-imports': ['error', { paths: metaDeniedImports }]
+      'no-restricted-imports': [
+        'error',
+        { paths: metaDeniedImports, patterns: metaDeniedPatterns }
+      ],
+      // no-restricted-imports does not see `import('react')` or `require('react')`.
+      'no-restricted-syntax': [
+        'error',
+        {
+          selector: 'ImportExpression[source.value=/^react(-dom)?(\\/|$)/]',
+          message: 'The ./meta subpath must not import React.'
+        },
+        {
+          selector:
+            "CallExpression[callee.name='require'][arguments.0.value=/^react(-dom)?(\\/|$)/]",
+          message: 'The ./meta subpath must not import React.'
+        }
+      ]
     }
   },
 

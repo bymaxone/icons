@@ -73,6 +73,10 @@ jobs:
         # still shows it enabled -- which is how a cycle gate stays green on a
         # real cycle. This makes one and requires the lint to reject it.
         run: pnpm check:lint-graph
+      - name: Prove ./meta refuses React
+        # A `paths` entry matches one exact specifier and a `files` glob can
+        # leave an extension out, so the rule is proven on real probes.
+        run: pnpm check:meta-react
       - name: Build all subpaths
         run: pnpm build
       - name: Verify build output integrity
