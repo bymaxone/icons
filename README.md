@@ -1,2 +1,472 @@
-# icons
-Original icon set for Bymax products: drawn on one grid with one stroke, shipped as tree-shakeable React 19 components that render in Server Components, plus raw SVG, a sprite and typed metadata. Accessible by default, zero runtime dependencies.
+<p align="center">
+  <img src="https://img.shields.io/badge/%40bymax--one-icons-000000?style=for-the-badge&logo=react&logoColor=61DAFB" alt="@bymax-one/icons" />
+</p>
+
+<h1 align="center">@bymax-one/icons</h1>
+
+<p align="center">
+  <strong>Original icons for Bymax products, drawn on one grid with one set of rules</strong><br />
+  <sub>24 px grid · 1.5 px round stroke · React 19 and Server Components · Raw SVG and sprite · Typed metadata · Zero Runtime Dependencies</sub>
+</p>
+
+<p align="center">
+  <a href="https://www.npmjs.com/package/@bymax-one/icons"><img src="https://img.shields.io/npm/v/@bymax-one/icons?style=flat-square&colorA=000000&colorB=000000" alt="npm version" /></a>
+  <a href="https://www.npmjs.com/package/@bymax-one/icons"><img src="https://img.shields.io/npm/dm/@bymax-one/icons?style=flat-square&colorA=000000&colorB=000000" alt="npm downloads" /></a>
+  <a href="https://github.com/bymaxone/icons/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/bymaxone/icons/ci.yml?branch=main&style=flat-square&colorA=000000&label=CI" alt="CI status" /></a>
+  <a href="https://github.com/bymaxone/icons/actions/workflows/ci.yml"><img src="https://img.shields.io/badge/coverage-100%25-brightgreen?style=flat-square&colorA=000000" alt="coverage" /></a>
+  <a href="https://scorecard.dev/viewer/?uri=github.com/bymaxone/icons"><img src="https://api.scorecard.dev/projects/github.com/bymaxone/icons/badge?style=flat-square" alt="OpenSSF Scorecard" /></a>
+  <a href="https://github.com/bymaxone/icons/blob/main/LICENSE"><img src="https://img.shields.io/github/license/bymaxone/icons?style=flat-square&colorA=000000&colorB=000000" alt="license" /></a>
+  <a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/TypeScript-strict-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" /></a>
+  <a href="https://nodejs.org/"><img src="https://img.shields.io/badge/Node.js-24%2B-339933?style=flat-square&logo=node.js&logoColor=white" alt="Node.js" /></a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/bymaxone/icons">GitHub</a> ·
+  <a href="https://github.com/bymaxone/icons/issues">Issues</a> ·
+  <a href="#-quick-start">Quick Start</a> ·
+  <a href="#-api-reference">API Reference</a> ·
+  <a href="./docs/technical_specification.md">Specification</a>
+</p>
+
+---
+
+## ✨ Overview
+
+`@bymax-one/icons` is a public icon set with its own drawings. It will ship every icon as a
+React component, a raw SVG file, a symbol in an SVG sprite and an entry in typed metadata.
+Every non-brand glyph is an original Bymax drawing built on one grid and one set of rules,
+so the products that use it do not look like every other app built on the same open-source
+set.
+
+> [!NOTE]
+> **Status: pre-1.0, no icons yet.** The repository, its quality gates and the release
+> workflow are in place, and the `./meta` subpath already exports the drawing grid the set
+> is built on. The `Icon` runtime, the build pipeline and the first drawing batch come next,
+> in the order the [development plan](./docs/development_plan.md) sets. Nothing is
+> published to npm until `1.0.0`.
+
+The library has **zero direct dependencies**: `react` arrives as a peer dependency, so you
+control its version and the supply-chain surface stays minimal.
+
+### Why @bymax-one/icons?
+
+- **Its own identity.** Most React products draw their interface from the same two or three
+  open-source sets, so the same house, gear and sparkle appear everywhere. These drawings
+  are new, made for Bymax products.
+- **Concepts other sets do not draw well.** Scene, shot, keyframe, credit, spending cap,
+  lip-sync and version are first-class icons, not approximations.
+- **One grid, one stroke, verified.** A 24 px master, a 20 px live area and a 1.5 px round
+  stroke apply to every icon, and a lint checks the rules a machine can check.
+- **The engineering of the most adopted sets.** One source SVG and one metadata file per
+  icon, named aliases with deprecation, per-icon ES modules that tree-shake, an accessible
+  default and a searchable catalog.
+
+---
+
+## 🔥 Features
+
+✅ marks what the package ships today; 📋 marks what the specification commits to for 1.0
+and is not built yet.
+
+### 🎨 Drawing System
+
+- ✅ **The grid as data**: `ICON_GRID` holds the viewBox, live area, padding and stroke of the
+  24 px master, frozen and typed with literal values
+- 📋 **About 125 original icons**: common concepts plus the Studio's own (scene, shot,
+  keyframe, credit, spending cap, lip-sync, version)
+- 📋 **Filled variants** for the icons with a stateful meaning, with the same silhouette as
+  the line icon so switching causes no size jump
+- 📋 **Hand-tuned 16 px masters** for the icons used in dense UI, drawn separately rather
+  than scaled
+- 📋 **Brand marks** in official geometry, monochrome `currentColor`, excluded from the MIT
+  grant (see [`TRADEMARKS.md`](./TRADEMARKS.md))
+
+### ⚛️ React
+
+- 📋 **Pure components**: no hooks, no context and no `'use client'`, so they render in
+  Server Components and client components alike
+- 📋 **Accessible by default**: decorative icons are silent; a `title` turns an icon into a
+  named image
+- 📋 **`ref` as a regular prop** (React 19), no `forwardRef`
+- 📋 **`absoluteStrokeWidth`** keeps the visual stroke constant at every size
+
+### 🧩 Developer Experience
+
+- ✅ **Zero runtime dependencies**: `react` is a peer, so you pin the version
+- ✅ **Dual-format output**: ESM and CJS with declarations for each format, verified against
+  the packed tarball on every run
+- ✅ **A React-free metadata entry**: `./meta` imports nothing from React, enforced by lint
+- ✅ **Typed end to end**: TypeScript `strict` with `exactOptionalPropertyTypes` and
+  `noUncheckedIndexedAccess`; zero `any`
+- 📋 **Per-icon modules** that tree-shake, plus raw SVG files, a sprite and merged metadata
+
+---
+
+## 📦 Subpath Exports
+
+| Subpath           | Contents                                                       | Status  |
+| ----------------- | -------------------------------------------------------------- | ------- |
+| `.`               | Every line and filled component, the `Icon` base and the types | Partial |
+| `./meta`          | Typed metadata and the `IconName` union, with no React import  | Partial |
+| `./icons/<name>`  | One icon's components, for consumers that avoid barrels        | Planned |
+| `./brands`        | Brand components                                               | Planned |
+| `./svg/*`         | Raw SVG files                                                  | Planned |
+| `./sprite.svg`    | The SVG sprite                                                 | Planned |
+| `./metadata.json` | Merged metadata of every icon                                  | Planned |
+
+Today `.` and `./meta` both export `ICON_GRID`; the components, `IconName` and the planned
+subpaths are added by the runtime and pipeline phases of the
+[development plan](./docs/development_plan.md).
+
+```
+@bymax-one/icons ─────────► @bymax-one/icons/meta
+ (React components)          (typed metadata, no React)
+        │
+        └──► react (peer)
+```
+
+The root imports `./meta` by package specifier, not by relative path. Each entry point is a
+separate bundle, and a module reached from two of them by a relative path would be copied
+into each; through the specifier the published package holds one copy. Every subpath ships
+ESM (`.mjs`) and CommonJS (`.cjs`), each with its own declarations (`.d.ts` and `.d.cts`).
+
+### Install
+
+```bash
+pnpm add @bymax-one/icons react
+```
+
+### Peer dependency matrix
+
+| Package | Version    | Needed by               |
+| ------- | ---------- | ----------------------- |
+| Node.js | `>=24.0.0` | Tooling and builds      |
+| `react` | `^19.0.0`  | The root and `./brands` |
+
+---
+
+## 🚀 Quick Start
+
+```bash
+# pnpm
+pnpm add @bymax-one/icons react
+
+# npm
+npm install @bymax-one/icons react
+
+# yarn
+yarn add @bymax-one/icons react
+```
+
+The grid is available now, from the React-free entry:
+
+```typescript
+import { ICON_GRID } from '@bymax-one/icons/meta'
+
+// Rendering at 48 px doubles every unit of the 24 px master.
+const scale = 48 / ICON_GRID.size
+const visualStroke = ICON_GRID.strokeWidth * scale
+```
+
+The component API arrives with the runtime. Its shape is fixed by the specification: one
+component per icon, named `<Name>Icon` (`LightningIcon`), sized with `size`, coloured by
+`currentColor`, silent by default and named by `title`. See
+[Example Integration](./docs/technical_specification.md#15-example-integration) in the
+specification for the intended usage.
+
+---
+
+## ⚙️ Configuration
+
+There is no global configuration, by design. Each icon is configured through its own props,
+and a set-wide default comes from CSS (`color`, `width` and `height` on a wrapper class),
+which needs no client boundary. A context provider for default size or colour is deliberately
+not offered.
+
+| Planned prop          | Default        | Description                                                  |
+| --------------------- | -------------- | ------------------------------------------------------------ |
+| `size`                | `24`           | Width and height                                             |
+| `strokeWidth`         | `1.5`          | Stroke width at 24 px; ignored by filled and brand icons     |
+| `absoluteStrokeWidth` | `false`        | Keeps the visual stroke width constant at every size         |
+| `color`               | `currentColor` | Colour of the drawing                                        |
+| `title`               | none           | Accessible name; when present the icon is announced as image |
+
+---
+
+## 📐 Design Language
+
+These rules are the identity of the set. They apply to every icon and are checked by lint
+where a machine can check them.
+
+### Grid
+
+- `viewBox="0 0 24 24"`, with a 20 × 20 live area (2 px padding). Large round shapes may
+  reach 21 × 21.
+- The 24 px drawing is the master for every icon. The 16 px masters are separate drawings.
+
+### Stroke
+
+- **1.5 px** at 24 px, round caps, round joins.
+- Straight strokes sit on `.25` / `.75` coordinates so they render sharp at 1x and 2x.
+
+### Corners
+
+- Continuous-curvature (squircle) corners: radius 2.5 on shapes 10 px or larger, 1.25 on
+  smaller shapes, 0 where three or more strokes meet.
+
+### Signature details
+
+- **Overlap knockout.** A modifier (plus, slash, badge, check) cuts the base shape with a
+  uniform 1.5 px gap, and always sits in the bottom-right 10 × 10 quadrant.
+- **Spark dot.** A 2 px filled dot, the only fill allowed in a line icon, marks "generated",
+  "AI" or "new" from the same top-right position.
+- **Recessed terminals.** Open strokes stop 0.5 px short of the live-area edge.
+
+### Theme behaviour
+
+Line and filled icons use `currentColor` only. They carry no colour of their own and work
+on light and dark themes without variants; contrast is the consumer's text colour.
+
+---
+
+## ✍️ Originality
+
+The drawings are not someone else's, and the process makes that verifiable: every icon is
+drawn from scratch with no third-party SVG pasted, traced or modified; every pull request
+that changes a drawing carries an originality attestation; each drawing batch keeps its
+contact sheets in the repository history; and CI compares each new icon with the most
+adopted open-source sets, flagging a close match for human review. The full policy is in
+[`CONTRIBUTING.md`](./CONTRIBUTING.md#drawing-originality).
+
+---
+
+## 🏗️ Architecture
+
+The build pipeline below is specified and lands in the pipeline phase; today the package
+builds the two entry points from hand-written source.
+
+```
+          icons/line/<name>.svg          icons/meta/<name>.json
+          icons/filled/  sm/  brands/    (tags, categories, aliases)
+                       │                          │
+                       ▼                          │
+        ┌──────────────────────────────┐          │
+        │  Normalise                   │          │
+        │  SVGO + Prettier, fixed root │          │
+        │  attributes, SVG lint        │          │
+        └──────────────┬───────────────┘          │
+                       ▼                          ▼
+        ┌─────────────────────────────────────────────────┐
+        │  Generate  (scripts/generate.mjs)               │
+        │  one TypeScript module per icon variant,        │
+        │  elements held as data: no JSX strings,         │
+        │  no dangerouslySetInnerHTML                     │
+        └──────────────────────┬──────────────────────────┘
+                               ▼
+        ┌─────────────────────────────────────────────────┐
+        │  Bundle  (tsup)                                 │
+        │  one entry per icon + root + ./meta + ./brands  │
+        │  ESM + CJS, .d.ts + .d.cts, siblings external   │
+        └───────┬───────────────┬───────────────┬─────────┘
+                ▼               ▼               ▼
+         React components   dist/svg/**     dist/sprite.svg
+         on the Icon base   raw SVG files   dist/metadata.json
+                │
+                ▼
+         Server Components and client components alike:
+         no hooks, no context, no 'use client'
+```
+
+Generated modules are rebuilt from source in CI and compared with the committed copy, so a
+stale copy fails the build. The org package checks then run on the packed tarball.
+
+### Design Principles
+
+| Principle                        | Description                                                                                        |
+| -------------------------------- | -------------------------------------------------------------------------------------------------- |
+| ✏️ **Original drawings**         | Every non-brand glyph is drawn from scratch; similarity with other sets is checked, not assumed    |
+| 📏 **One grid, one stroke**      | Every icon obeys the same grid and stroke rules, and the machine-checkable ones are linted         |
+| 🧾 **Data, not markup strings**  | Components build their elements from data, so no icon path ever passes through an HTML parser      |
+| 🌳 **One module per icon**       | Per-icon ES modules tree-shake, and sibling modules are external to each other so each exists once |
+| 🔇 **Silent by default**         | A decorative icon is hidden from assistive technology; a `title` makes it a named image            |
+| 🖥️ **Server-first**              | Pure functions with no hooks or context render in Server Components without a client boundary      |
+| 📦 **Zero runtime dependencies** | `react` is a peer; nothing else is installed with the package                                      |
+
+---
+
+## 🔐 Security Model
+
+An icon set is markup that consumers render inside their own pages, so what matters is that
+nothing it ships can carry executable content or reach outside the drawing. The properties
+below are fixed by the specification; each is enforced from the phase that builds the part
+it protects, and the runtime, pipeline and preview do not exist yet.
+
+### Elements are built from data
+
+Each generated module holds its drawing as a list of elements and attributes, and the
+component creates those elements through React. There is no JSX string, no
+`dangerouslySetInnerHTML` and no runtime parsing of SVG text, so a path never passes through
+an HTML parser in the consumer's page.
+
+### Only drawing elements are allowed
+
+The SVG lint admits `path`, `line`, `polyline`, `polygon`, `circle`, `ellipse` and `rect`,
+and refuses `transform`, `style`, `id`, `class`, `filter`, `<use>`, gradients and masks.
+Scripts, `foreignObject`, event handlers and external references therefore cannot enter a
+source file, and the raw SVG outputs and the sprite are built from the same checked sources.
+
+### Consumer text stays text
+
+The accessible `title` becomes an `aria-label` value and the text of a `<title>` child. It
+is never interpreted as markup.
+
+### Nothing is installed with the package
+
+`dependencies` is empty and `react` is a peer, so installing the package adds no third-party
+code to a consumer's tree. Releases are published from CI with npm provenance.
+
+### Pull-request previews run no pull-request code
+
+The rendered preview on drawing pull requests follows the safe `pull_request_target`
+pattern: the base branch is checked out, the changed SVGs are read with `git show`, and no
+code from the pull request is executed with repository credentials.
+
+---
+
+## 🛡️ Security Table
+
+| Layer           | Implementation                                                                                         |
+| --------------- | ------------------------------------------------------------------------------------------------------ |
+| Rendering       | Elements created from data through React; no HTML strings, no `dangerouslySetInnerHTML`                |
+| SVG sources     | Allow-listed drawing elements only; no `transform`, `style`, `id`, `class`, `filter`, `<use>` or masks |
+| Accessible name | `title` is rendered as text and an attribute value, never as markup                                    |
+| Supply chain    | `dependencies: {}`; third-party Actions pinned by commit SHA (org reusables by tag); CodeQL, Scorecard |
+| Release         | Tag-driven, `npm-publish` environment approval, OIDC trusted publishing with provenance                |
+
+> [!IMPORTANT]
+> **The guarantees cover what this package ships.** SVG that a consuming application builds
+> or inlines itself around an icon is outside them.
+
+---
+
+## 🧱 Tech Stack
+
+- **Runtime:** any React 19 renderer, including React Server Components
+- **Tooling:** Node.js 24+, pnpm 11
+- **Build:** tsup, ESM + CJS per subpath with `.d.ts` _and_ `.d.cts` declarations, browser
+  entries targeting `es2022` with the automatic JSX runtime
+- **Tests:** Jest + Stryker (mutation)
+- **TypeScript:** 5.x strict (`noUncheckedIndexedAccess`, `exactOptionalPropertyTypes`), zero
+  `any`
+
+---
+
+## 🧪 Testing & Quality
+
+An icon set is rendered on every screen of every product that uses it, so a regression in
+it is a regression everywhere at once. The suite is held to a bar beyond "the tests pass".
+
+- ✅ **100% line coverage**: statements, branches, functions and lines, enforced as a gate
+  in both Jest configs
+- ✅ **Mutation testing at `break: 100`**: [Stryker](https://stryker-mutator.io/) runs on
+  every push to `main` and cold once a week; a surviving mutant fails the run
+- ✅ **Published-artifact gates**: `check:exports` resolves the types the way each module
+  system does, `check:runtime` loads every subpath from the packed tarball in ESM and
+  CommonJS, `check:published` compiles this README's snippets against `dist/`, and
+  `check:api` requires an "Apply to a derived backend" CHANGELOG note when the built
+  declarations change
+- ✅ **Bundle size budget** per subpath, measured on the brotli-compressed bundle
+- 📋 **Every icon renders**: a generated smoke test renders every component in jsdom and in
+  `react-dom/server` and checks the default accessibility attributes
+- 📋 **Visual regression**: every icon rendered at 16, 20, 24 and 48 px, light and dark, and
+  compared with committed baselines
+- 📋 **Similarity check**: every new or changed icon compared with other sets and flagged
+  for review
+
+```bash
+pnpm test          # unit suite
+pnpm test:cov      # unit suite with the 100% coverage gate
+pnpm mutation      # Stryker mutation testing (break: 100)
+pnpm typecheck     # tsc strict check
+pnpm lint          # ESLint
+```
+
+---
+
+## 📖 API Reference
+
+### `ICON_GRID`
+
+Exported from `@bymax-one/icons/meta` and re-exported from `@bymax-one/icons`. A frozen
+object whose values are literal types.
+
+| Key              | Value         | Meaning                                      |
+| ---------------- | ------------- | -------------------------------------------- |
+| `viewBox`        | `'0 0 24 24'` | The `viewBox` of every icon's root `<svg>`   |
+| `size`           | `24`          | Width and height of the master canvas, in px |
+| `liveArea`       | `20`          | Width and height a drawing may occupy, in px |
+| `padding`        | `2`           | Space between the live area and each edge    |
+| `strokeWidth`    | `1.5`         | Stroke width of a line icon at 24 px         |
+| `strokeLinecap`  | `'round'`     | Cap applied to the open ends of every stroke |
+| `strokeLinejoin` | `'round'`     | Join applied where two stroke segments meet  |
+
+### `IconGrid`
+
+The type of `ICON_GRID`, exported from both subpaths.
+
+### Planned surface
+
+The components (`LightningIcon`, `LightningFilledIcon`, `LightningSmIcon`,
+`GoogleBrandIcon`), the `Icon` base, `IconProps`, `IconName` and the per-icon metadata are
+specified in the [Public API](./docs/technical_specification.md#8-public-api) section of
+the specification and are documented here as each one ships.
+
+---
+
+## 🚫 What This Library Does NOT Do
+
+1. **No icon font.** Fonts cost accessibility and tree-shaking; SVG covers every use.
+2. **No Vue, Svelte, Angular or React Native component packages in 1.0.** The raw SVG
+   output covers those consumers.
+3. **No context provider for default size or colour.** CSS does the same without a client
+   boundary.
+4. **No coloured or multi-colour icons**, apart from the optional `google-color` mark.
+5. **No third-party drawings** other than brand marks.
+6. **No dynamic loading by name at runtime.** A `<DynamicIcon name="...">` defeats
+   tree-shaking; map names to components explicitly.
+
+---
+
+## 🤝 Contributing
+
+Pull requests are welcome. Please open an issue first for significant changes.
+
+- Read [`docs/technical_specification.md`](./docs/technical_specification.md) for the design
+  language and architecture decisions.
+- Run the full gate listed in [`CONTRIBUTING.md`](./CONTRIBUTING.md), including the drawing
+  originality rules, before opening a PR.
+- Conventional Commits are enforced by `commitlint.config.cjs`.
+
+---
+
+## 🔒 Security Policy
+
+If you discover a security vulnerability, please **do not** open a public
+issue. Instead, email us at **support@bymax.one** with `[security]
+@bymax-one/icons` in the subject. We take security seriously and will
+respond promptly. See [`SECURITY.md`](./SECURITY.md) for the full policy.
+
+---
+
+## 📄 License
+
+[MIT](./LICENSE) © [Bymax One](https://github.com/bymaxone)
+
+Brand marks are excluded from the MIT grant and belong to their owners; see
+[`TRADEMARKS.md`](./TRADEMARKS.md).
+
+---
+
+<p align="center">
+  <sub>Built with ❤️ by <a href="https://github.com/bymaxone">Bymax One</a></sub>
+</p>

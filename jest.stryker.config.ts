@@ -1,0 +1,37 @@
+import type { Config } from 'jest'
+
+// Explicit `.ts` extension: Stryker loads this config in its sandbox under Node 24,
+// where native-TS ESM requires the extension on relative imports (an extensionless
+// './jest.config' throws ERR_MODULE_NOT_FOUND and aborts the whole mutation run).
+import base from './jest.config.ts'
+
+/**
+ * Stryker-only Jest configuration.
+ *
+ * Wraps the base unit-test config (`jest.config.ts`) with Stryker's
+ * instrumented Node test environment so that `coverageAnalysis: "perTest"`
+ * can map every mutant to the exact tests that cover it. The base config is
+ * left untouched (its `testEnvironment` stays the plain `'node'`) so that a
+ * normal `pnpm test` never depends on the mutation-testing toolchain.
+ *
+ * A React spec switches to jsdom with a docblock that names Stryker's wrapper,
+ * `@jest-environment @stryker-mutator/jest-runner/jest-env/jsdom`, which is
+ * transparent when Stryker is not running.
+ *
+ * Only used by `stryker run` through `jest.configFile` in `stryker.config.json`.
+ */
+const config: Config = {
+  ...base,
+  testEnvironment: '@stryker-mutator/jest-runner/jest-env/node',
+  // `check-api-surface.spec.ts`, `check-file-length.spec.ts` and
+  // `strip-bundle-comments.spec.ts` run a repository script on fixture directories and
+  // touch no code in `src`, so they kill no mutant; `pnpm test` still runs them.
+  testPathIgnorePatterns: [
+    ...(base.testPathIgnorePatterns ?? ['/node_modules/']),
+    '/check-api-surface\\.spec\\.ts$',
+    '/check-file-length\\.spec\\.ts$',
+    '/strip-bundle-comments\\.spec\\.ts$'
+  ]
+}
+
+export default config

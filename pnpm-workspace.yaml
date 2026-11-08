@@ -1,0 +1,53 @@
+# Build scripts are denied by default; an unlisted package counts as unreviewed.
+# `allowBuilds` is the only spelling pnpm 11 reads: onlyBuiltDependencies,
+# neverBuiltDependencies and their siblings were removed in v11 and replaced by
+# this map. Without an entry, `pnpm install` exits with ERR_PNPM_IGNORED_BUILDS
+# rather than warning.
+allowBuilds:
+  # Reached through jest-haste-map, which declares it under `dependencies` rather
+  # than `optionalDependencies`, so it arrives with jest rather than being chosen
+  # here.
+  #
+  # `false` is not the cautious half of a real choice, it is the only value that
+  # does anything. The package's install script is `node scripts/build-from-source.js`,
+  # whose body runs only when `npm_config_build_from_source === 'true'`, so under
+  # an ordinary install it is a no-op and `true` would compile nothing. What
+  # `false` buys is pnpm treating the package as reviewed instead of failing the
+  # install with ERR_PNPM_IGNORED_BUILDS.
+  '@parcel/watcher': false
+  esbuild: true
+  unrs-resolver: true
+
+# Forced versions for vulnerable transitive dev dependencies. These live here and
+# NOT in package.json: pnpm 11 no longer reads the `pnpm` field of package.json, so
+# an override placed there does nothing; it warns, but it does nothing.
+#
+# A floor sits above the advisory range rather than merely admitting a fixed
+# version, and that distinction is the whole of the protection: a caret that
+# permits a patched version forces nothing, because pnpm leaves a resolution that
+# already satisfies the range alone. So an entry here is never evidence of
+# anything; read the resolved version in pnpm-lock.yaml.
+overrides:
+  # GHSA-5p4m-2wfm-xmqj (CVSS 7.5): quadratic CPU while resolving !!omap.
+  # Transitive and build-time only; patched rather than ignored, because a
+  # scanner told to skip dev dependencies stays blind after this one is gone.
+  'js-yaml@3': '^3.15.2'
+  'js-yaml@4': '^4.3.2'
+  'brace-expansion@2': '^2.1.7'
+  'brace-expansion@5': '^5.0.12'
+  'esbuild': '^0.28.1'
+  # Host confusion and server-side request forgery advisories, all fixed in 3.1.6;
+  # floored on the same reasoning as above.
+  'fast-uri': '^3.1.9'
+  # GHSA-4mjr-xmp4-gh2g, GHSA-x5fp-wj9c-mxmx, GHSA-q8mj-m7cp-5q26 and
+  # GHSA-6pq8-jhm2-2vcw (moderate). Reached only through typed-rest-client, a
+  # dependency of @stryker-mutator/core, so development-scoped and never in the
+  # published package. 6.16.1 is the highest fix of the four.
+  'qs': '^6.16.1'
+  # GHSA-73wf-gq98-2v4g and GHSA-c83g-rgw3-j3cx (both CVSS 7.5): reachable only
+  # through the Babel toolchain jest and Stryker use, so development-scoped.
+  'browserslist': '^4.28.7'
+  # GHSA-8r5x-fm3f-whwj (CVSS 9.8), GHSA-p8wg-vrv2-v86f (CVSS 9.2) and
+  # GHSA-xw65-4hp5-5hc7 (CVSS 4.7), fixed in 4.7.10. Pulled only by ts-jest. Drop
+  # this entry once ts-jest's own range resolves to >= 4.7.10 on a fresh install.
+  'handlebars@4': '^4.7.10'
