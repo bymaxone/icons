@@ -60,7 +60,8 @@ function renderElement([tag, attributes]: IconElement, color: string): ReactElem
  * Root attributes are written in this order, and a later one wins: the grid
  * (`viewBox`, `width` and `height` from `size`), the paint, `focusable="false"`,
  * the accessibility attributes, then every remaining consumer prop. A consumer
- * attribute therefore overrides any default it names. `children` and
+ * attribute therefore overrides any default it names; one passed as `undefined` or
+ * `null` is absent, not an override, so the default stays. `children` and
  * `dangerouslySetInnerHTML` are dropped: the content is the drawing, preceded by a
  * `<title>` text child when `title` is set.
  *
@@ -97,9 +98,19 @@ export function Icon({
       ...paintAttributes(paint, color, resolveStrokeWidth(strokeWidth, size, absoluteStrokeWidth)),
       focusable: 'false',
       ...accessibilityAttributes(title, props),
-      ...props
+      ...withoutNullish(props)
     },
     ...titleChild,
     ...iconNode.map((element) => renderElement(element, color))
   )
+}
+
+/**
+ * Drops props whose value is `undefined` or `null`, so a prop that is absent in
+ * value does not erase the default of the same name when spread last.
+ * @param props - The remaining consumer props.
+ * @returns The props with a defined value.
+ */
+function withoutNullish(props: Record<string, unknown>): Record<string, unknown> {
+  return Object.fromEntries(Object.entries(props).filter(([, value]) => value != null))
 }

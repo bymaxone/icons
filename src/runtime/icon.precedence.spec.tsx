@@ -46,6 +46,20 @@ describe('Icon precedence: accessibility', () => {
     )
   })
 
+  it.each([
+    ['aria-hidden', { 'aria-hidden': undefined }, 'aria-hidden="true"'],
+    ['focusable', { focusable: undefined }, 'focusable="false"'],
+    ['viewBox', { viewBox: undefined }, 'viewBox="0 0 24 24"'],
+    ['stroke', { stroke: undefined }, 'stroke="currentColor"']
+  ])('keeps the default %s when the consumer passes it as undefined', (_name, extra, written) => {
+    /**
+     * Scenario: a prop passed as `undefined` (for example `aria-hidden={maybe}`)
+     * is absent, not an override; spreading it last would
+     * erase the default and expose a decorative icon or break the drawing.
+     */
+    expect(render(<Icon iconNode={FIXTURE} {...extra} />)).toContain(written)
+  })
+
   it('lets the consumer aria-label and role override the title-derived ones', () => {
     /**
      * Scenario: consumer props are written after the defaults, so an explicit
