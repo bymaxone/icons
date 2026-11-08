@@ -169,7 +169,8 @@ export default [
     files: ['src/meta/**/*.ts'],
     ignores: ['**/*.spec.ts', '**/*.test.ts'],
     rules: {
-      // One specifier allowlist: './' followed by a path with no '..' segment, so
+      // One specifier allowlist: './' followed by a path with no '..' segment and
+      // no backslash (a separator on Windows and to TypeScript's resolver), so
       // an import can only name a file at or below its own directory. Anything
       // else is refused: a package, a node: builtin, this package, an absolute
       // path or URL, and every relative path that climbs out (into src/,
@@ -178,7 +179,7 @@ export default [
         'error',
         {
           paths: deniedImports,
-          patterns: [{ regex: '^(?!\\./)|(?:^|/)\\.\\.(?:/|$)', message: META_MESSAGE }]
+          patterns: [{ regex: '^(?!\\./)|(?:^|/)\\.\\.(?:/|$)|\\\\', message: META_MESSAGE }]
         }
       ],
       // Runtime loading, whatever the specifier: literal, computed or template.

@@ -5,7 +5,8 @@
  * @layer scripts
  *
  * The lint rule set for `src/meta/` is an allowlist (specifiers that start with
- * `./` and contain no `..` segment), not a list of forbidden modules. A rule that is
+ * `./` and contain no `..` segment and no backslash), not a list of forbidden
+ * modules. A rule that is
  * enabled is not evidence that it matches, so this gate lints one probe per
  * way code can enter a module and requires each to be refused, plus clean
  * probes that must pass. Probes go through stdin, so nothing is written to
@@ -62,6 +63,7 @@ const REFUSED = [
     'relative import hiding a .. segment',
     "import * as r from './x/../../index'\nexport const u: unknown = r"
   ],
+  ['backslash separator', "import * as r from './..\\\\index'\nexport const u: unknown = r"],
   ['bare relative parent', "import * as r from '..'\nexport const u: unknown = r"],
   ['absolute path', "import * as r from '/tmp/react.js'\nexport const u: unknown = r"],
   ['file URL', "import * as r from 'file:///tmp/react.js'\nexport const u: unknown = r"],
