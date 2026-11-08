@@ -4,8 +4,8 @@
  * React-free and dependency-free.
  * @layer scripts
  *
- * The lint rule set for `src/meta/` is an allowlist (relative imports that stay
- * inside the directory), not a list of forbidden modules. A rule that is
+ * The lint rule set for `src/meta/` is an allowlist (specifiers that start with
+ * `./` and contain no `..` segment), not a list of forbidden modules. A rule that is
  * enabled is not evidence that it matches, so this gate lints one probe per
  * way code can enter a module and requires each to be refused, plus clean
  * probes that must pass. Probes go through stdin, so nothing is written to
@@ -50,6 +50,21 @@ const REFUSED = [
     'relative import leaving src/meta',
     "import * as r from '../index'\nexport const u: unknown = r"
   ],
+  [
+    'relative import leaving src/',
+    "import * as r from '../../node_modules/react/index.js'\nexport const u: unknown = r"
+  ],
+  [
+    'relative import climbing out and back in',
+    "import { ICON_GRID } from '../meta/icon-grid'\nexport const u = ICON_GRID"
+  ],
+  [
+    'relative import hiding a .. segment',
+    "import * as r from './x/../../index'\nexport const u: unknown = r"
+  ],
+  ['bare relative parent', "import * as r from '..'\nexport const u: unknown = r"],
+  ['absolute path', "import * as r from '/tmp/react.js'\nexport const u: unknown = r"],
+  ['file URL', "import * as r from 'file:///tmp/react.js'\nexport const u: unknown = r"],
   ['dynamic import, literal', "export const u: unknown = await import('react')"],
   ['dynamic import, computed', "const n = 'react'\nexport const u: unknown = await import(n)"],
   ['dynamic import, template', 'export const u: unknown = await import(`react`)'],

@@ -169,18 +169,16 @@ export default [
     files: ['src/meta/**/*.ts'],
     ignores: ['**/*.spec.ts', '**/*.test.ts'],
     rules: {
-      // Any bare specifier: a package, a node: builtin, this package itself.
+      // One specifier allowlist: './' followed by a path with no '..' segment, so
+      // an import can only name a file at or below its own directory. Anything
+      // else is refused: a package, a node: builtin, this package, an absolute
+      // path or URL, and every relative path that climbs out (into src/,
+      // node_modules or beyond).
       'no-restricted-imports': [
         'error',
-        { paths: deniedImports, patterns: [{ regex: '^[^.]', message: META_MESSAGE }] }
-      ],
-      // A relative path that leaves src/meta.
-      'import-x/no-restricted-paths': [
-        'error',
         {
-          zones: [
-            { target: './src/meta', from: './src', except: ['./meta'], message: META_MESSAGE }
-          ]
+          paths: deniedImports,
+          patterns: [{ regex: '^(?!\\./)|(?:^|/)\\.\\.(?:/|$)', message: META_MESSAGE }]
         }
       ],
       // Runtime loading, whatever the specifier: literal, computed or template.
