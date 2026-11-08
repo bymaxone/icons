@@ -35,9 +35,8 @@ const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 // What the budgets rest on:
 //   - root, 1.25 KiB brotli: the entry holds the runtime (the `Icon` base,
 //     `createIcon`, the stroke maths and the accessibility rules) and no icon,
-//     measured at 3011 bytes raw and 1044 bytes brotli. About 20% of headroom fits
-//     a small fix, while an accidental inline of `./meta` or of a dependency still
-//     fails. The specification's per-icon targets replace it once icon modules exist.
+//     measured at 3272 bytes raw and 1123 bytes brotli. The headroom fits a small
+//     fix, while an accidental inline of `./meta` or of a dependency still fails. The specification's per-icon targets replace it once icon modules exist.
 //   - meta, 0.5 KiB brotli: the entry holds the grid constant, measured at 155
 //     bytes brotli. The budget is a floor that still catches an accidental inline
 //     of a large module.
