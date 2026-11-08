@@ -25,20 +25,11 @@ const deniedImports = [
 ]
 
 // The `./meta` subpath is the React-free entry: typed metadata a consumer can load
-// without a renderer. A React import there would make every metadata consumer pay
-// for one, so it is refused at lint time rather than noticed in a bundle report.
-const metaDeniedImports = [
-  ...deniedImports,
-  { name: 'react', message: 'The ./meta subpath must not import React.' },
-  { name: 'react/jsx-runtime', message: 'The ./meta subpath must not import React.' },
-  { name: 'react-dom', message: 'The ./meta subpath must not import React.' }
-]
-
-// `paths` matches exact specifiers only, so every subpath of the two packages
-// (react/jsx-dev-runtime, react-dom/server, ...) is refused by pattern.
-const metaDeniedPatterns = [
-  { group: ['react/*', 'react-dom/*'], message: 'The ./meta subpath must not import React.' }
-]
+// without a renderer. Rather than listing what it may not import (every list had a
+// gap: a subpath, a computed specifier, an extension), it may import only from
+// itself. Static data needs no package, no sibling module and no runtime loading.
+const META_MESSAGE =
+  'The ./meta subpath may import only from src/meta (it must stay React-free and dependency-free).'
 
 export default [
   // Global ignores: only build artifacts and coverage, NOT config files.
@@ -171,27 +162,32 @@ export default [
     }
   },
 
-  // The React-free metadata subpath (see metaDeniedImports above).
+  // The React-free metadata subpath (see META_MESSAGE above). Files other than
+  // .ts are refused by scripts/check-meta-react-free.mjs, so this block sees all
+  // of src/meta.
   {
-    files: ['src/meta/**/*.ts', 'src/meta/**/*.tsx'],
-    ignores: ['**/*.spec.ts', '**/*.test.ts', '**/*.spec.tsx', '**/*.test.tsx'],
+    files: ['src/meta/**/*.ts'],
+    ignores: ['**/*.spec.ts', '**/*.test.ts'],
     rules: {
+      // Any bare specifier: a package, a node: builtin, this package itself.
       'no-restricted-imports': [
         'error',
-        { paths: metaDeniedImports, patterns: metaDeniedPatterns }
+        { paths: deniedImports, patterns: [{ regex: '^[^.]', message: META_MESSAGE }] }
       ],
-      // no-restricted-imports does not see `import('react')` or `require('react')`.
-      'no-restricted-syntax': [
+      // A relative path that leaves src/meta.
+      'import-x/no-restricted-paths': [
         'error',
         {
-          selector: 'ImportExpression[source.value=/^react(-dom)?(\\/|$)/]',
-          message: 'The ./meta subpath must not import React.'
-        },
-        {
-          selector:
-            "CallExpression[callee.name='require'][arguments.0.value=/^react(-dom)?(\\/|$)/]",
-          message: 'The ./meta subpath must not import React.'
+          zones: [
+            { target: './src/meta', from: './src', except: ['./meta'], message: META_MESSAGE }
+          ]
         }
+      ],
+      // Runtime loading, whatever the specifier: literal, computed or template.
+      'no-restricted-syntax': [
+        'error',
+        { selector: 'ImportExpression', message: META_MESSAGE },
+        { selector: "CallExpression[callee.name='require']", message: META_MESSAGE }
       ]
     }
   },

@@ -1,21 +1,20 @@
 /**
- * @fileoverview React-free gate for the `./meta` subpath — proves the lint rule
- * that keeps React out of `src/meta/` rejects every way React can enter, by
- * linting real probes and requiring each one to be refused.
+ * @fileoverview Self-contained gate for the `./meta` subpath — proves that
+ * `src/meta/` can load nothing from outside itself, so the entry stays
+ * React-free and dependency-free.
  * @layer scripts
  *
- * `./meta` is the entry a consumer loads without a renderer. The rule that
- * guards it is `no-restricted-imports`, and a rule that is enabled is not
- * evidence that it matches: a `paths` entry matches one exact specifier, and a
- * `files` glob can leave an extension out. This gate therefore lints probes
- * through the real configuration (stdin, so nothing is written to `src/`) and
- * fails when any React specifier passes or when a clean probe is refused. The
- * probes are not part of a TypeScript project, so type-aware parsing is off;
- * `no-restricted-imports` reads the import statement and needs no types.
+ * The lint rule set for `src/meta/` is an allowlist (relative imports that stay
+ * inside the directory), not a list of forbidden modules. A rule that is
+ * enabled is not evidence that it matches, so this gate lints one probe per
+ * way code can enter a module and requires each to be refused, plus clean
+ * probes that must pass. Probes go through stdin, so nothing is written to
+ * `src/`; they are not part of a TypeScript project, so type-aware parsing is
+ * off (none of these rules needs types).
  *
- * A `.tsx` file is refused outright: with `jsx: "react-jsx"` the compiler adds
- * the `react/jsx-runtime` import itself, so no import statement exists for the
- * lint rule to see.
+ * Lint only sees the extensions its `files` glob names, so any file under
+ * `src/meta/` that is not `.ts` fails the gate outright. That also covers JSX:
+ * with `jsx: "react-jsx"` the compiler adds the React import itself.
  */
 
 import { spawnSync } from 'node:child_process'
@@ -25,24 +24,54 @@ import { fileURLToPath } from 'node:url'
 
 const ROOT = fileURLToPath(new URL('..', import.meta.url))
 const META_DIR = join(ROOT, 'src', 'meta')
-const MESSAGE = 'The ./meta subpath must not import React'
+const PROBE_FILE = 'src/meta/__probe__.ts'
+const MESSAGE = 'The ./meta subpath may import only from src/meta'
 
-const REACT_SPECIFIERS = [
-  'react',
-  'react/jsx-runtime',
-  'react/jsx-dev-runtime',
-  'react-dom',
-  'react-dom/server',
-  'react-dom/client'
+/** One probe per way code can enter a module; every one must be refused. */
+const REFUSED = [
+  ['static import of a package', "import * as r from 'react'\nexport const u: unknown = r"],
+  [
+    'static import of a package subpath',
+    "import { renderToString } from 'react-dom/server'\nexport const u: unknown = renderToString"
+  ],
+  [
+    'static import of a node builtin',
+    "import { readFileSync } from 'node:fs'\nexport const u: unknown = readFileSync"
+  ],
+  [
+    'self-import of this package',
+    "import * as r from '@bymax-one/icons'\nexport const u: unknown = r"
+  ],
+  ['type-only import', "import type { FC } from 'react'\nexport type U = FC"],
+  ['side-effect import', "import 'react'\nexport const u = 1"],
+  ['re-export from a package', "export * from 'react'"],
+  ['import-equals require', "import r = require('react')\nexport const u: unknown = r"],
+  [
+    'relative import leaving src/meta',
+    "import * as r from '../index'\nexport const u: unknown = r"
+  ],
+  ['dynamic import, literal', "export const u: unknown = await import('react')"],
+  ['dynamic import, computed', "const n = 'react'\nexport const u: unknown = await import(n)"],
+  ['dynamic import, template', 'export const u: unknown = await import(`react`)'],
+  ['require, literal', "export const u: unknown = require('react')"],
+  ['require, computed', "const n = 'react'\nexport const u: unknown = require(n)"]
+]
+
+/** Probes that must pass: the rules may not refuse legitimate metadata code. */
+const ALLOWED = [
+  ['module with no imports', 'export const clean = 1'],
+  [
+    'relative import inside src/meta',
+    "import { ICON_GRID } from './icon-grid'\nexport const u = ICON_GRID"
+  ]
 ]
 
 /**
- * Lints one source text as if it lived at `filename`.
+ * Lints one source text as if it lived at {@link PROBE_FILE}.
  * @param {string} source - The probe source.
- * @param {string} filename - Path relative to the repository root.
  * @returns {{ status: number | null, output: string }} Exit status and combined output.
  */
-function lintProbe(source, filename) {
+function lintProbe(source) {
   const result = spawnSync(
     'pnpm',
     [
@@ -53,57 +82,46 @@ function lintProbe(source, filename) {
       'project:false',
       '--stdin',
       '--stdin-filename',
-      filename
+      PROBE_FILE
     ],
-    { cwd: ROOT, input: source, encoding: 'utf8' }
+    { cwd: ROOT, input: `${source}\n`, encoding: 'utf8' }
   )
   return { status: result.status, output: `${result.stdout}${result.stderr}` }
 }
 
 /**
- * Lists `.tsx` files anywhere under `src/meta/`.
+ * Lists files under `src/meta/` whose extension lint does not cover.
  * @param {string} dir - Directory to scan.
- * @returns {string[]} Absolute paths of `.tsx` files.
+ * @returns {string[]} Absolute paths of files that are not `.ts`.
  */
-function findTsx(dir) {
+function findNonTs(dir) {
   return readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
     const path = join(dir, entry.name)
-    if (entry.isDirectory()) return findTsx(path)
-    return entry.name.endsWith('.tsx') ? [path] : []
+    if (entry.isDirectory()) return findNonTs(path)
+    return entry.name.endsWith('.ts') ? [] : [path]
   })
 }
 
 /**
- * Runs every probe and returns the failures.
+ * Runs every probe and the extension scan.
  * @returns {string[]} Human-readable failures; empty when the gate passes.
  */
-function runProbes() {
+function runGate() {
   const failures = []
-  for (const ext of ['ts', 'tsx']) {
-    const filename = `src/meta/__probe__.${ext}`
-    for (const specifier of REACT_SPECIFIERS) {
-      const probes = [
-        `import * as probe from '${specifier}'\n\nexport const used: unknown = probe\n`,
-        `export const used: unknown = await import('${specifier}')\n`,
-        `export const used: unknown = require('${specifier}')\n`
-      ]
-      for (const probe of probes) {
-        const { status, output } = lintProbe(probe, filename)
-        if (status === 0 || !output.includes(MESSAGE)) {
-          failures.push(`${filename}: ${probe.trim().split('\n')[0]} was not refused`)
-        }
-      }
-    }
-    const clean = lintProbe('export const clean = 1\n', filename)
-    if (clean.status !== 0) failures.push(`${filename}: a React-free probe was refused`)
+  for (const [name, source] of REFUSED) {
+    const { status, output } = lintProbe(source)
+    if (status === 0 || !output.includes(MESSAGE)) failures.push(`not refused: ${name}`)
   }
-  for (const file of findTsx(META_DIR)) failures.push(`${file}: .tsx is not allowed in src/meta`)
+  for (const [name, source] of ALLOWED) {
+    if (lintProbe(source).status !== 0) failures.push(`wrongly refused: ${name}`)
+  }
+  for (const file of findNonTs(META_DIR)) failures.push(`only .ts is allowed in src/meta: ${file}`)
   return failures
 }
 
-const failures = runProbes()
+const failures = runGate()
 if (failures.length > 0) {
   for (const failure of failures) console.error(`✗ ${failure}`)
   process.exit(1)
 }
-console.log('✓ ./meta refuses every React import.')
+console.log(`✓ ./meta is self-contained (${REFUSED.length} entry forms refused).`)
