@@ -120,12 +120,11 @@ and is not built yet.
 | `./icons/<name>`  | One icon's components, for consumers that avoid barrels         | Empty   |
 | `./brands`        | Brand components                                                | Empty   |
 | `./svg/*`         | Raw SVG files (`svg/line/<name>.svg`, `filled`, `sm`, `brands`) | Empty   |
-| `./sprite.svg`    | The SVG sprite, one `<symbol id="bx-<name>">` per drawing       | Empty   |
+| `./sprite.svg`    | The SVG sprite, one `<symbol>` per drawing                      | Empty   |
 | `./metadata.json` | Merged metadata of every icon and brand                         | Empty   |
 
 **Empty** subpaths are built, exported and checked on every pull request, and hold nothing
-until the first drawings land. Today `.` exports the runtime (`Icon`, `createIcon` and their
-types) and `ICON_GRID`; `./meta` exports `ICON_GRID`, the records and the name unions.
+until the first drawings land.
 
 ```
 @bymax-one/icons ──► @bymax-one/icons/icons/<name> ──► @bymax-one/icons/runtime ──► react (peer)

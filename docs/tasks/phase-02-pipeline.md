@@ -14,7 +14,7 @@ This phase turns drawing and metadata sources into everything the package publis
 
 What it delivers:
 
-- **Sources**: `icons/{line,filled,sm,brands,meta}/` (empty, described by `icons/README.md`), `schemas/{icon,brand,category}.schema.json` (draft 2020-12) and `categories.json` (the twelve categories of spec §4.1). Placeholder drawings for tests live in `fixtures/icons/`, never in `icons/`.
+- **Sources**: `icons/{line,filled,sm,brands,meta}/` (empty, described by `icons/README.md`), `schemas/{icon,brand,category}.schema.json` (draft 2020-12) and `categories.json` (the categories of spec §4.1). Placeholder drawings for tests live in `fixtures/icons/`, never in `icons/`.
 - **Pipeline code** in `src/pipeline/`, not exported and not a tsup entry, at 100% coverage and 100% mutation: the SVG parse and formatter (SVGO), the live-area bound (resvg), the metadata validation (ajv), the icon lint, the module and data emitters, the file operations and the contact sheet.
 - **Generated modules**: `src/icons/generated/<name>/{index,line,filled,sm}.ts` (one module per variant, the drawing as an `IconNode` literal in one `/* @__PURE__ */ createIcon(...)` call), `src/icons/generated/index.ts` (the root's re-exports, by package specifier), `src/brands/generated/` and `src/meta/generated/metadata.ts` (data only, no import, so it passes the `src/meta` lint).
 - **Subpaths**: `./runtime`, `./brands`, `./icons/*`, `./svg/*`, `./sprite.svg` and `./metadata.json`, with `exports`, `typesVersions`, tsup entries and gates.
@@ -25,17 +25,17 @@ What it delivers:
 
 **Why `./runtime` exists.** Every icon module calls `createIcon`; the root re-exports every icon module by package specifier, so that each icon exists once. With the runtime inside the root, the root and each icon module would import each other: in ESM the icon module evaluates first and calls `createIcon` before the root has initialised its constants; in CommonJS the cycle hands the icon module a partial `exports`. The runtime therefore has its own entry, `./runtime`, and the root re-exports it. This is the one addition to spec §8.1.
 
-**The export map.** Every JavaScript subpath has per-condition `types` and `.mjs`/`.cjs` defaults, and a `typesVersions` entry; `./icons/*` maps to `dist/icons/*/index.*`, so the comment strip (which handles every `index.mjs` and `index.cjs`) covers each icon. `./svg/*`, `./sprite.svg` and `./metadata.json` are plain file exports; `metadata.json` also has a `typesVersions` entry, without which attw's node10 resolution fails.
+**The export map.** Every JavaScript subpath has per-condition `types` and `.mjs`/`.cjs` defaults, and a `typesVersions` entry; `./icons/*` maps to `dist/icons/*/index.*`. `./svg/*`, `./sprite.svg` and `./metadata.json` are plain file exports; `metadata.json` also has a `typesVersions` entry, without which attw's node10 resolution fails.
 
 **Formatting.** The formatter is SVGO `preset-default` with `convertShapeToPath` and `mergePaths` off, `floatPrecision: 3`, colours kept as six-digit hex, every `stroke*` attribute stripped from the elements, every fill control stripped from stroked drawings except the spark dot's `fill`, and the kind's fixed root attributes. SVGO's pretty printer writes one element per line; Prettier has no SVG parser without a plugin, so it formats the generated TypeScript only, through `prettier/standalone` (the Node build loads its parsers with a dynamic `import()` that Jest runs only behind `--experimental-vm-modules`).
 
 **The live area.** resvg measures the drawing with a 1 px round probe stroke, and the geometry is that box shrunk by half a pixel, so curves and arcs are bounded exactly. The lint enforces the hard limit, the 21 x 21 square centred on the canvas (spec §2.1); the 20 x 20 guideline for shapes that are not large and round is reviewed on the contact sheet.
 
-**The empty set and the fixtures.** The repository holds no drawing, so every gate runs on the empty set on every pull request: the barrels export nothing, the sprite holds no symbol, attw and the consumer runtime check `.`, `./runtime`, `./meta` and `./brands`. `pnpm check:fixtures` copies the repository to a scratch directory with `fixtures/icons` in place of `icons/` and runs, there, the lint, `generate`, `check:generated`, the three type checks, ESLint and Prettier on the generated modules, the render smoke test, the build, the size budgets with their per-icon rows, attw on each `./icons/<name>`, the consumer runtime, the dogfood install and the contact sheet. It never runs pnpm in the copy: its `node_modules` is a link to the repository's, and pnpm reinstalls a modules directory it finds installed for another project in place, through the link.
+**The empty set and the fixtures.** The repository holds no drawing, so every gate runs on the empty set on every pull request: the barrels export nothing and the sprite holds no symbol. `pnpm check:fixtures` copies the repository to a scratch directory with `fixtures/icons` in place of `icons/` and runs every gate there (the steps are in `scripts/check-fixture-package.mjs`). It never runs pnpm in the copy: its `node_modules` is a link to the repository's, and pnpm reinstalls a modules directory it finds installed for another project in place, through the link.
 
 **Generated code exclusions.** `**/generated/**` is excluded from both Jest coverage configs and from Stryker's `mutate`, as `bymaxone/nest-auth` excludes its generated OpenAPI directory. `src/icons/render-smoke.spec.tsx` renders every generated component, aliases included, in jsdom and through `react-dom/server`; its list comes from the generated metadata and the naming rules, so it needs no generation of its own.
 
-**The contact sheet (open question 1).** `pnpm contact-sheet` renders every drawing at 16, 20, 24 and 48 px on the light page (`#e9eff3`) and the dark page (`#101114`) of the Studio design system (`bymax-studio-web` `docs/preview/frontend/design-system.html`, direction A), in the ink (`#0d1b24` / `#ecf3f7`) and the six accents, with the tinted-button values the Studio paints with: light `--accent` yellow `#f2c200`, orange `#c2461c`, red `#c0283a`, green `#2f5a24`, blue `#2450b8`, lilac `#5e3fb0`; dark `--vivid` yellow `#ffd84d`, orange `#ff8a5c`, red `#ff6b78`, green `#8fd67a`, blue `#7fa6ff`, lilac `#c2a4ff`. It writes `reports/contact-sheet.png` (ignored), one device pixel per CSS pixel. Each cell is a group translated into place and scaled from the 24 px master; a nested `<svg>` would be simpler, but resvg aborts the whole process (a Rust panic, not a JavaScript error) on a nested `<svg>` that lies outside the sheet.
+**The contact sheet (open question 1).** `pnpm contact-sheet` renders every drawing at 16, 20, 24 and 48 px on the light page (`#e9eff3`) and the dark page (`#101114`) of the Studio design system (`bymax-studio-web` `docs/preview/frontend/design-system.html`, direction A), in the ink and the six accents (the values are in `src/pipeline/contact-sheet.ts`). It writes `reports/contact-sheet.png` (ignored), one device pixel per CSS pixel. Each cell is a group translated into place and scaled from the 24 px master; a nested `<svg>` would be simpler, but resvg aborts the whole process (a Rust panic, not a JavaScript error) on a nested `<svg>` that lies outside the sheet.
 
 ### Deviations from the specification
 
@@ -97,7 +97,7 @@ What it delivers:
 #### Acceptance criteria
 
 - [x] `schemas/icon.schema.json`, `brand.schema.json` and `category.schema.json` (draft 2020-12, ajv strict): tags, categories and at least two use cases required; aliases in Lucide's shape, a deprecated one requiring `toBeRemovedInVersion`, a current one carrying neither deprecation field; `variants` containing `line`; `opticalSizes` containing 24; brands requiring `title`, `source`, `guidelines`, `license`, `retrievedAt`, with an optional `multicolor`.
-- [x] `categories.json` lists the twelve categories of spec §4.1.
+- [x] `categories.json` lists the categories of spec §4.1.
 - [x] `icons/README.md` documents the layout; no `.gitkeep`, no empty directory.
 - [x] `fixtures/icons/` holds two placeholder icons (one with every variant and the spark dot, one with a current and a deprecated alias) and one placeholder brand.
 
@@ -450,7 +450,7 @@ Completion Protocol (after you finish):
 
 #### Acceptance criteria
 
-- [x] `pnpm contact-sheet [--icons <dir>] [--out <file>]` renders every drawing at 16, 20, 24 and 48 px on both Studio pages in the ink and the six accents (values in the Context) to `reports/contact-sheet.png`.
+- [x] `pnpm contact-sheet [--icons <dir>] [--out <file>]` renders every drawing at 16, 20, 24 and 48 px on both Studio pages in the ink and the six accents (values in `src/pipeline/contact-sheet.ts`) to `reports/contact-sheet.png`.
 - [x] Open question 1 of the plan is recorded as resolved with this choice.
 
 #### Files to create / modify
@@ -561,7 +561,7 @@ Completion Protocol (after you finish):
 
 #### Acceptance criteria
 
-- [x] `pnpm mutation:full`: final score 100.00 (928 killed, 18 timeouts, 535 compile errors, 3 ignored); 0 survived, 0 without coverage, no `RuntimeError`. The 18 timeouts (in `lint.ts`, `live-area.ts` and `metadata.ts`) were killed in the previous cold run, and a cold run of those three files kills all 92 of their mutants with no timeout: they are kills slowed past the 30 s limit, not hangs. Three `// Stryker disable next-line StringLiteral` directives, each with its reason, cover the names of the three custom SVGO plugins, which SVGO uses only as labels; every other equivalent mutant found was removed by simplifying the code (the redundant `addSchema`, flag filter, `finalNewline`, root check in the paint strip, and the live-area probe's fill, cap and join attributes, which resvg's box ignores).
+- [x] `pnpm mutation:full`: final score 100.00, 0 survived, 0 without coverage. The `// Stryker disable next-line StringLiteral` directives, each with its reason, cover the names of the custom SVGO plugins, which SVGO uses only as labels.
 - [x] `pnpm typecheck`, `lint`, `format:check`, `test:cov:all`, `build`, `size`, `check:exports`, `check:runtime`, `dogfood`, `check:lint-graph`, `check:meta-react`, `check:file-length`, `check:mutants`, `check:generated`, `lint:icons`, `check:fixtures` and `actionlint` pass.
 - [x] P2 Definition of Done, each item observable: a fixture icon becomes a component, a raw SVG, a sprite symbol and a metadata entry (`check:fixtures`); the lint rejects every rule of spec §6.3 and §12 (`lint-svg.spec.ts`, `lint-set.spec.ts`, `lint.spec.ts`); a stale module fails CI (`cli.spec.ts`, the `verify` job); 100% coverage and mutation on the pipeline; `check:exports`, `check:runtime` and `dogfood` cover every subpath.
 - [x] This file, `docs/development_plan.md` §1 and `docs/tasks/README.md` agree (P2 👀 until the merge).
@@ -674,12 +674,12 @@ Completion Protocol (after you finish):
 
 <!-- Append one line per completed task: - <id> ✅ YYYY-MM-DD <summary> -->
 
-- 2.1 ✅ 2026-11-08 Icon, brand and category schemas (ajv strict), the twelve categories, the icons layout README and placeholder fixtures outside `icons/`.
+- 2.1 ✅ 2026-11-08 Icon, brand and category schemas (ajv strict), the categories, the icons layout README and placeholder fixtures outside `icons/`.
 - 2.2 ✅ 2026-11-08 SVGO formatter, capture-only parse, resvg live-area bound and the naming rules, run by Node's native type stripping.
-- 2.3 ✅ 2026-11-08 Icon lint with sixteen rules, each with a failing fixture; a file SVGO cannot optimise is reported, not thrown; allowed elements are a Map, so a prototype key such as `constructor` is refused.
+- 2.3 ✅ 2026-11-08 Icon lint, each rule with a failing fixture; a file SVGO cannot optimise is reported, not thrown; allowed elements are a Map, so a prototype key such as `constructor` is refused.
 - 2.4 ✅ 2026-11-08 Generated variant modules, icon entries, barrels, brand modules, typed and frozen `./meta` records, and the static outputs.
 - 2.5 ✅ 2026-11-08 `./runtime`, `./brands`, `./icons/*` and asset subpaths; data-driven `check:exports`, `check:runtime`, `dogfood` and `size`.
 - 2.6 ✅ 2026-11-08 `check:generated`, `check:fixtures` and the CI `verify` steps; actionlint clean.
 - 2.7 ✅ 2026-11-08 `pnpm contact-sheet` with the Studio pages and accents; open question 1 resolved.
 - 2.8 ✅ 2026-11-08 README, CONTRIBUTING, CLAUDE.md, AGENTS.md and CHANGELOG updated to the pipeline.
-- 2.9 ✅ 2026-11-08 mutation:full 100.00 (three reasoned directives on SVGO plugin labels); full local gate and `check:fixtures` green; dashboards at P2 👀.
+- 2.9 ✅ 2026-11-08 mutation:full 100.00; full local gate and `check:fixtures` green; dashboards at P2 👀.

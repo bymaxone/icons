@@ -299,8 +299,8 @@ from the family.
 
 ## Architecture
 
-- `src/index.ts`: the root entry. It re-exports `./meta`, `./runtime` and every
-  `./icons/<name>` by package specifier, never by relative path, so each exists once.
+- `src/index.ts`: the root entry. It re-exports `ICON_GRID`, the runtime and the generated
+  icons; sibling subpaths come in by package specifier, so each module exists once.
 - `src/runtime/`: the `./runtime` entry: the `Icon` base, `createIcon`, the props, the drawing
   data types, the stroke maths and the accessibility rules.
 - `src/meta/`: the React-free entry (the grid, the typed metadata, the name unions).

@@ -29,13 +29,13 @@ and deprecated, each rename with the alias that keeps the old name working.
   or `'use client'`.
 - The `./runtime` subpath, which holds the `Icon` base and `createIcon`. The root
   re-exports both, so `import { createIcon } from '@bymax-one/icons'` keeps working; every
-  generated icon module imports the runtime from `./runtime`, which keeps one copy of it in
-  the package.
+  generated icon module imports it through the `./runtime` specifier, which keeps one copy
+  in the package.
 - The build pipeline. `pnpm generate` normalises the SVG sources with SVGO, runs the icon
   lint, and writes one TypeScript module per icon variant (the drawing as data for
   `createIcon`), the root and `./brands` re-exports and the typed metadata. `pnpm build`
   adds `dist/svg/{line,filled,sm,brands}/<name>.svg`, `dist/sprite.svg` (one
-  `<symbol id="bx-<name>">` per drawing) and `dist/metadata.json`.
+  `<symbol>` per drawing) and `dist/metadata.json`.
 - The subpaths `./icons/<name>`, `./brands`, `./svg/*`, `./sprite.svg` and
   `./metadata.json`, empty until the first drawings land.
 - `./meta` exports `ICON_NAMES`, `ICON_METADATA`, `BRAND_NAMES`, `BRAND_METADATA` and
