@@ -27,3 +27,25 @@ and deprecated, each rename with the alias that keeps the old name working.
   Icons are `aria-hidden` by default; a `title` gives `role="img"`, `aria-label` and a
   `<title>` child; a consumer `role` or `aria-*` suppresses the default. No hook, context
   or `'use client'`.
+- The `./runtime` subpath, which holds the `Icon` base and `createIcon`. The root
+  re-exports both, so `import { createIcon } from '@bymax-one/icons'` keeps working; every
+  generated icon module imports the runtime from `./runtime`, which keeps one copy of it in
+  the package.
+- The build pipeline. `pnpm generate` normalises the SVG sources with SVGO, runs the icon
+  lint, and writes one TypeScript module per icon variant (the drawing as data for
+  `createIcon`), the root and `./brands` re-exports and the typed metadata. `pnpm build`
+  adds `dist/svg/{line,filled,sm,brands}/<name>.svg`, `dist/sprite.svg` (one
+  `<symbol id="bx-<name>">` per drawing) and `dist/metadata.json`.
+- The subpaths `./icons/<name>`, `./brands`, `./svg/*`, `./sprite.svg` and
+  `./metadata.json`, empty until the first drawings land.
+- `./meta` exports `ICON_NAMES`, `ICON_METADATA`, `BRAND_NAMES`, `BRAND_METADATA` and
+  `ICON_CATEGORIES`, frozen, with the `IconName`, `BrandName` and `IconCategoryName` unions
+  and the record types.
+- The JSON Schemas of icon, brand and category metadata (`schemas/`), validated with ajv,
+  and `categories.json`.
+- `pnpm lint:icons`, the icon lint: allowed elements and attributes, fills and the spark-dot
+  exception, three-decimal precision, the live area, kebab-case file names paired with
+  their metadata, the schemas, alias and component-name uniqueness, declared variants and
+  brand names only in `icons/brands`.
+- `pnpm contact-sheet`: every drawing at 16, 20, 24 and 48 px on the light and dark Studio
+  pages, in the ink and the six accents, rendered to `reports/contact-sheet.png`.

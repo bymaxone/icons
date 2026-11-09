@@ -3,7 +3,7 @@
 > **Type:** npm public library (NOT an application)
 > **Package:** `@bymax-one/icons` — original Bymax icon set: React 19 components, raw SVG, an SVG sprite and typed metadata on one 24 px grid with a 1.5 px stroke
 > **Runtime:** any React 19 renderer, including Server Components | Tooling on Node.js 24+ | Zero direct dependencies (`react` is the only peer)
-> **Status:** 0.1.0, pre-1.0 and unpublished. The repository scaffold and gates are in place, `./meta` exports `ICON_GRID`, and the root exports the runtime (`Icon`, `createIcon` and their types); no icon is drawn yet. The phase order is in [docs/development_plan.md](./docs/development_plan.md).
+> **Status:** 0.1.0, pre-1.0 and unpublished. The repository scaffold and gates, the runtime (`Icon`, `createIcon` and their types, on `./runtime` and the root) and the build pipeline (`pnpm generate`, the icon lint, the static outputs) are in place; no icon is drawn yet. The phase order is in [docs/development_plan.md](./docs/development_plan.md).
 
 ---
 
@@ -13,7 +13,8 @@
 
 - Zero direct dependencies (`"dependencies": {}`). `react ^19` is a peer; tooling stays in `devDependencies`.
 - Export the public API from `src/index.ts` and `src/{subpath}/index.ts`. Use `export type` for types, `export` for components and constants.
-- The root imports a sibling subpath by package specifier (`@bymax-one/icons/meta`), never by relative path, so each module exists once in the published package.
+- An entry imports a sibling subpath by package specifier (`@bymax-one/icons/meta`, `@bymax-one/icons/runtime`, `@bymax-one/icons/icons/<name>`), never by relative path, so each module exists once in the published package.
+- `src/**/generated` is written by `pnpm generate` from `icons/`; never edit it by hand. `src/pipeline/` holds the generator, the icon lint and the contact sheet (not shipped, tested like the runtime); its relative imports carry the `.ts` extension because Node runs it with native type stripping.
 
 **2. English Only**
 
@@ -51,7 +52,7 @@
 - React specs switch to jsdom with `/** @jest-environment @stryker-mutator/jest-runner/jest-env/jsdom */`.
 - The Server Components spec resolves packages with the `react-server` condition through `@jest-environment-options` and renders through `react-server-dom-webpack/server`; `check:runtime` repeats that render on the packed tarball.
 - Mutation testing (Stryker `break: 100`, `ignoreStatic: false`) is the deeper gate. Equivalent mutants carry `// Stryker disable next-line <Mutator>: <reason>`; a killable mutant is never disabled.
-- Generated modules are excluded from coverage and mutation; the runtime and the generator are not.
+- Generated modules are excluded from coverage and mutation; the runtime and the generator (`src/pipeline/`) are not. `src/icons/render-smoke.spec.tsx` renders every generated component, and `pnpm check:fixtures` proves the generator and every package gate on the placeholder icons of `fixtures/icons`.
 
 **8. Build** — tsup builds every subpath → ESM (.mjs) + CJS (.cjs) + .d.ts + .d.cts, browser target `es2022`, JSX `automatic`, no `'use client'` banner. `sideEffects: false`. `react` and the package's own subpaths always external.
 
@@ -62,21 +63,22 @@
 | Subpath           | Purpose                                                  | Peer Deps | Status  |
 | ----------------- | -------------------------------------------------------- | --------- | ------- |
 | `.`               | Line and filled components, the `Icon` base, the types   | React 19  | Partial |
-| `./meta`          | Typed metadata and the `IconName` union, no React import | None      | Partial |
-| `./icons/<name>`  | One icon's components                                    | React 19  | Planned |
-| `./brands`        | Brand components                                         | React 19  | Planned |
-| `./svg/*`         | Raw SVG files                                            | None      | Planned |
-| `./sprite.svg`    | The sprite                                               | None      | Planned |
-| `./metadata.json` | Merged metadata                                          | None      | Planned |
+| `./runtime`       | The `Icon` base, `createIcon` and their types            | React 19  | Ready   |
+| `./meta`          | Typed metadata and the `IconName` union, no React import | None      | Ready   |
+| `./icons/<name>`  | One icon's components                                    | React 19  | Empty   |
+| `./brands`        | Brand components                                         | React 19  | Empty   |
+| `./svg/*`         | Raw SVG files                                            | None      | Empty   |
+| `./sprite.svg`    | The sprite                                               | None      | Empty   |
+| `./metadata.json` | Merged metadata                                          | None      | Empty   |
 
-Today `.` exports the runtime (`Icon`, `createIcon` and their types, listed in `src/index.ts`) with `ICON_GRID` and `IconGrid`; `./meta` exports `ICON_GRID` and `IconGrid`. The planned subpaths are added in the pipeline phase, together with their `exports` entries, tsup entries and gate lists (`check-size.mjs`, `check-consumer-runtime.mjs`, `dogfood-smoke-test.mjs` and the `verify` job in `ci.yml`).
+Every subpath is built, exported and gated; **Empty** ones hold nothing until the first drawings. The runtime has its own entry because each icon module imports `createIcon` and the root re-exports every icon; inside the root the two would import each other. The gates read the icon subpaths from the built `dist/metadata.json` (`scripts/package-expectations.mjs`), so a new icon needs no gate edit.
 
 ---
 
 ## Verification — Run Before Completing Any Task
 
 ```bash
-pnpm typecheck && pnpm lint && pnpm format:check && pnpm test:cov:all && pnpm build && pnpm size && pnpm check:exports && pnpm check:runtime
+pnpm typecheck && pnpm lint && pnpm format:check && pnpm lint:icons && pnpm check:generated && pnpm test:cov:all && pnpm build && pnpm size && pnpm check:exports && pnpm check:runtime && pnpm check:fixtures
 ```
 
 `pnpm check:api` compares the built `.d.ts`/`.d.cts` with the previous published version and always prints what differs. A difference passes only when the CHANGELOG section of the version being released holds an "Apply to a derived backend" (or "Apply to a consumer") note; there is no override. The release workflow runs it before the publish.

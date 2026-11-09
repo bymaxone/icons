@@ -39,10 +39,11 @@ so the products that use it do not look like every other app built on the same o
 set.
 
 > [!NOTE]
-> **Status: pre-1.0, no icons yet.** The repository, its quality gates and the release
-> workflow are in place, the `./meta` subpath exports the drawing grid the set is built on,
-> and the root exports the runtime every icon will render through (the `Icon` base and
-> `createIcon`). The build pipeline and the first drawing batch come next, in the order the
+> **Status: pre-1.0, no icons yet.** The repository, its quality gates, the release
+> workflow, the runtime every icon renders through (the `Icon` base and `createIcon`) and the
+> build pipeline are in place: an SVG and its metadata under `icons/` become a component, a
+> raw SVG file, a sprite symbol and a metadata entry, behind an icon lint. The pipeline is
+> proven on placeholder fixtures; the first drawing batch comes next, in the order the
 > [development plan](./docs/development_plan.md) sets. Nothing is published to npm until
 > `1.0.0`.
 
@@ -90,7 +91,8 @@ and is not built yet.
   named image
 - ✅ **`ref` as a regular prop** (React 19), no `forwardRef`
 - ✅ **`absoluteStrokeWidth`** keeps the visual stroke constant at every size
-- 📋 **One component per icon** (`LightningIcon`), generated from the drawings
+- 📋 **One component per icon** (`LightningIcon`): the generator that writes them ships; the
+  components arrive with the drawings
 
 ### 🧩 Developer Experience
 
@@ -100,38 +102,46 @@ and is not built yet.
 - ✅ **A React-free metadata entry**: `./meta` imports nothing from React, enforced by lint
 - ✅ **Typed end to end**: TypeScript `strict` with `exactOptionalPropertyTypes` and
   `noUncheckedIndexedAccess`; zero `any`
-- 📋 **Per-icon modules** that tree-shake, plus raw SVG files, a sprite and merged metadata
+- ✅ **A build pipeline**: SVGO normalisation, an icon lint over every SVG and metadata rule,
+  one generated module per icon variant, raw SVG files, a sprite and merged metadata, with a
+  stale-copy check in CI; proven end to end on placeholder fixtures
+- 📋 **Per-icon modules** that tree-shake: the entries, their exports and their gates exist,
+  and fill with the drawings
 
 ---
 
 ## 📦 Subpath Exports
 
-| Subpath           | Contents                                                       | Status  |
-| ----------------- | -------------------------------------------------------------- | ------- |
-| `.`               | Every line and filled component, the `Icon` base and the types | Partial |
-| `./meta`          | Typed metadata and the `IconName` union, with no React import  | Partial |
-| `./icons/<name>`  | One icon's components, for consumers that avoid barrels        | Planned |
-| `./brands`        | Brand components                                               | Planned |
-| `./svg/*`         | Raw SVG files                                                  | Planned |
-| `./sprite.svg`    | The SVG sprite                                                 | Planned |
-| `./metadata.json` | Merged metadata of every icon                                  | Planned |
+| Subpath           | Contents                                                        | Status  |
+| ----------------- | --------------------------------------------------------------- | ------- |
+| `.`               | Every line and filled component, the `Icon` base and the types  | Partial |
+| `./runtime`       | The `Icon` base, `createIcon` and their types                   | Ready   |
+| `./meta`          | Typed metadata and the `IconName` union, with no React import   | Ready   |
+| `./icons/<name>`  | One icon's components, for consumers that avoid barrels         | Empty   |
+| `./brands`        | Brand components                                                | Empty   |
+| `./svg/*`         | Raw SVG files (`svg/line/<name>.svg`, `filled`, `sm`, `brands`) | Empty   |
+| `./sprite.svg`    | The SVG sprite, one `<symbol id="bx-<name>">` per drawing       | Empty   |
+| `./metadata.json` | Merged metadata of every icon and brand                         | Empty   |
 
-Today `.` exports the runtime (`Icon`, `createIcon` and their types) and `ICON_GRID`, and
-`./meta` exports `ICON_GRID`; the icon components, `IconName` and the planned subpaths are
-added by the pipeline phase and the drawing batches of the
-[development plan](./docs/development_plan.md).
+**Empty** subpaths are built, exported and checked on every pull request, and hold nothing
+until the first drawings land. Today `.` exports the runtime (`Icon`, `createIcon` and their
+types) and `ICON_GRID`; `./meta` exports `ICON_GRID`, the records and the name unions.
 
 ```
-@bymax-one/icons ─────────► @bymax-one/icons/meta
- (React components)          (typed metadata, no React)
-        │
-        └──► react (peer)
+@bymax-one/icons ──► @bymax-one/icons/icons/<name> ──► @bymax-one/icons/runtime ──► react (peer)
+ (every component)    (one icon's components)          (Icon base, createIcon)
+        │                                                        │
+        └────────────────────────────────────────────────────────┴──► @bymax-one/icons/meta
+                                                                       (typed metadata, no React)
 ```
 
-The root imports `./meta` by package specifier, not by relative path. Each entry point is a
-separate bundle, and a module reached from two of them by a relative path would be copied
-into each; through the specifier the published package holds one copy. Every subpath ships
-ESM (`.mjs`) and CommonJS (`.cjs`), each with its own declarations (`.d.ts` and `.d.cts`).
+Every subpath imports its siblings by package specifier, not by relative path. Each entry
+point is a separate bundle, and a module reached from two of them by a relative path would
+be copied into each; through the specifier the published package holds one copy of each
+icon, of the runtime and of the grid. The runtime has an entry of its own because every icon
+module imports `createIcon`, and the root re-exports every icon. Every JavaScript subpath
+ships ESM (`.mjs`) and CommonJS (`.cjs`), each with its own declarations (`.d.ts` and
+`.d.cts`).
 
 ### Install
 
@@ -261,8 +271,10 @@ adopted open-source sets, flagging a close match for human review. The full poli
 
 ## 🏗️ Architecture
 
-The build pipeline below is specified and lands in the pipeline phase; today the package
-builds the two entry points from hand-written source.
+The pipeline runs from `pnpm generate` (the sources to `src/**/generated`, committed) and
+`pnpm build` (tsup, then the static outputs). Its logic lives in `src/pipeline/`, tested
+at 100% coverage and mutation like the runtime; the scripts in `scripts/` are thin entries,
+which Node 24 runs directly with its native type stripping.
 
 ```
           icons/line/<name>.svg          icons/meta/<name>.json
@@ -271,12 +283,12 @@ builds the two entry points from hand-written source.
                        ▼                          │
         ┌──────────────────────────────┐          │
         │  Normalise                   │          │
-        │  SVGO + Prettier, fixed root │          │
-        │  attributes, SVG lint        │          │
+        │  SVGO, fixed root attributes │          │
+        │  icon lint (+ ajv schemas)   │          │
         └──────────────┬───────────────┘          │
                        ▼                          ▼
         ┌─────────────────────────────────────────────────┐
-        │  Generate  (scripts/generate.mjs)               │
+        │  Generate  (pnpm generate, src/pipeline)        │
         │  one TypeScript module per icon variant,        │
         │  elements held as data: no JSX strings,         │
         │  no dangerouslySetInnerHTML                     │
@@ -284,7 +296,7 @@ builds the two entry points from hand-written source.
                                ▼
         ┌─────────────────────────────────────────────────┐
         │  Bundle  (tsup)                                 │
-        │  one entry per icon + root + ./meta + ./brands  │
+        │  one entry per icon, root, runtime, meta, brands│
         │  ESM + CJS, .d.ts + .d.cts, siblings external   │
         └───────┬───────────────┬───────────────┬─────────┘
                 ▼               ▼               ▼
@@ -398,8 +410,15 @@ it is a regression everywhere at once. The suite is held to a bar beyond "the te
   `check:api` requires an "Apply to a derived backend" CHANGELOG note when the built
   declarations change
 - ✅ **Bundle size budget** per subpath, measured on the brotli-compressed bundle
-- 📋 **Every icon renders**: a generated smoke test renders every component in jsdom and in
-  `react-dom/server` and checks the default accessibility attributes
+- ✅ **Every icon renders**: a smoke test driven by the generated metadata renders every
+  component, aliases included, in jsdom and in `react-dom/server` and checks the default
+  accessibility attributes
+- ✅ **Icon lint**: `pnpm lint:icons` checks the allowed elements and attributes, the fills
+  and the spark-dot exception, three-decimal precision, the live area, kebab-case names,
+  the metadata schemas, alias and component-name uniqueness, declared variants and brand
+  names; `pnpm check:generated` fails when a generated module is stale
+- ✅ **Fixture package**: `pnpm check:fixtures` builds a copy of the package on placeholder
+  icons and runs the generator, the smoke test and every package gate on it
 - 📋 **Visual regression**: every icon rendered at 16, 20, 24 and 48 px, light and dark, and
   compared with committed baselines
 - 📋 **Similarity check**: every new or changed icon compared with other sets and flagged
@@ -411,6 +430,9 @@ pnpm test:cov      # unit suite with the 100% coverage gate
 pnpm mutation      # Stryker mutation testing (break: 100)
 pnpm typecheck     # tsc strict check
 pnpm lint          # ESLint
+pnpm lint:icons    # the icon lint over icons/
+pnpm generate      # format the sources and write src/**/generated
+pnpm contact-sheet # render every drawing to reports/contact-sheet.png
 ```
 
 ---
@@ -473,19 +495,35 @@ The base every component renders through, for a drawing of your own:
 limited to `path`, `line`, `polyline`, `polygon`, `circle`, `ellipse` and `rect`, and
 `IconAttributeName` to their geometry plus `fill`, `fillRule` and `clipRule`.
 
+### Metadata (`@bymax-one/icons/meta`)
+
+Frozen data with no React import, generated from `icons/meta` and `categories.json`.
+
+| Export            | Type                                         | Contents                                                     |
+| ----------------- | -------------------------------------------- | ------------------------------------------------------------ |
+| `ICON_NAMES`      | `readonly IconName[]`                        | Every icon name, in name order                               |
+| `ICON_METADATA`   | `Readonly<Record<IconName, IconMetadata>>`   | Tags, categories, use cases, aliases, variants, sizes, since |
+| `BRAND_NAMES`     | `readonly BrandName[]`                       | Every brand name, in name order                              |
+| `BRAND_METADATA`  | `Readonly<Record<BrandName, BrandMetadata>>` | Title, source, guidelines, license, retrieval date, aliases  |
+| `ICON_CATEGORIES` | `readonly IconCategory[]`                    | The categories with their titles                             |
+
+`IconName`, `BrandName` and `IconCategoryName` are the unions of the generated names, and
+`IconAlias`, `IconMetadata`, `BrandMetadata`, `IconCategory` and `IconVariant` the shapes
+of the records. `metadata.json` holds the same records.
+
 ### Planned surface
 
 The components (`LightningIcon`, `LightningFilledIcon`, `LightningSmIcon`,
-`GoogleBrandIcon`), `IconName` and the per-icon metadata are specified in the [Public API](./docs/technical_specification.md#8-public-api) section of
-the specification and are documented here as each one ships.
+`GoogleBrandIcon`) are specified in the [Public API](./docs/technical_specification.md#8-public-api) section of
+the specification, generated by the pipeline, and documented here as each drawing ships.
 
 ---
 
 ## 🚫 What This Library Does NOT Do
 
 1. **No icon font.** Fonts cost accessibility and tree-shaking; SVG covers every use.
-2. **No Vue, Svelte, Angular or React Native component packages in 1.0.** The raw SVG
-   output covers those consumers.
+2. **No Vue, Svelte or Angular component packages.** The raw SVG output covers those
+   consumers. React Native components are planned as the `./native` subpath, after 1.0.
 3. **No context provider for default size or colour.** CSS does the same without a client
    boundary.
 4. **No coloured or multi-colour icons**, apart from the optional `google-color` mark.

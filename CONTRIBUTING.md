@@ -53,10 +53,28 @@ request template asks you to attest to them:
 Brand marks are the only exception: they use the owner's official geometry, never a
 Bymax redrawing, and are governed by [`TRADEMARKS.md`](./TRADEMARKS.md).
 
+## Adding an icon
+
+The drawing sources live in [`icons/`](./icons/README.md), one SVG per variant and one
+metadata file per name:
+
+1. Draw `icons/line/<name>.svg` on the 24 px grid; `<name>` is kebab-case and names what
+   is depicted. Add `icons/filled/<name>.svg` or `icons/sm/<name>.svg` only for a variant
+   the metadata declares; a brand mark goes in `icons/brands/<name>.svg`.
+2. Write `icons/meta/<name>.json` against `schemas/icon.schema.json` (or
+   `schemas/brand.schema.json` for a brand, with its `source`, `guidelines`, `license` and
+   `retrievedAt`).
+3. Run `pnpm generate`: it normalises the SVGs in place, runs the icon lint, and writes
+   `src/icons/generated`, `src/brands/generated` and `src/meta/generated`. Never edit those
+   directories by hand; `pnpm check:generated` fails when they differ from the sources.
+4. Run `pnpm contact-sheet` and review `reports/contact-sheet.png`.
+5. List the icon under `Unreleased` in `CHANGELOG.md`, and tick the originality
+   attestation in the pull request.
+
 ## Verification, run before every PR
 
 ```bash
-pnpm typecheck && pnpm lint && pnpm format:check && pnpm test:cov:all && pnpm build && pnpm size && pnpm check:exports && pnpm check:runtime
+pnpm typecheck && pnpm lint && pnpm format:check && pnpm lint:icons && pnpm check:generated && pnpm test:cov:all && pnpm build && pnpm size && pnpm check:exports && pnpm check:runtime && pnpm check:fixtures
 ```
 
 All of the following must pass:
@@ -72,6 +90,10 @@ All of the following must pass:
 - **Exports**: `attw --profile strict` resolves every entry point from the packed
   tarball
 - **Runtime**: every subpath loads from the packed tarball in ESM and CommonJS
+- **Icon lint**: every SVG and metadata rule of the specification over `icons/`
+- **Generated modules**: `src/**/generated` is what `pnpm generate` writes from the sources
+- **Fixture package**: the whole chain, from generation to the dogfood install, on the
+  placeholder icons of `fixtures/icons`
 
 Mutation testing (`pnpm mutation:full`) is a release gate, run manually before
 tagging a version, never on every PR.

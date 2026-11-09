@@ -32,6 +32,16 @@
         "default": "./dist/index.cjs"
       }
     },
+    "./runtime": {
+      "import": {
+        "types": "./dist/runtime/index.d.ts",
+        "default": "./dist/runtime/index.mjs"
+      },
+      "require": {
+        "types": "./dist/runtime/index.d.cts",
+        "default": "./dist/runtime/index.cjs"
+      }
+    },
     "./meta": {
       "import": {
         "types": "./dist/meta/index.d.ts",
@@ -42,6 +52,29 @@
         "default": "./dist/meta/index.cjs"
       }
     },
+    "./brands": {
+      "import": {
+        "types": "./dist/brands/index.d.ts",
+        "default": "./dist/brands/index.mjs"
+      },
+      "require": {
+        "types": "./dist/brands/index.d.cts",
+        "default": "./dist/brands/index.cjs"
+      }
+    },
+    "./icons/*": {
+      "import": {
+        "types": "./dist/icons/*/index.d.ts",
+        "default": "./dist/icons/*/index.mjs"
+      },
+      "require": {
+        "types": "./dist/icons/*/index.d.cts",
+        "default": "./dist/icons/*/index.cjs"
+      }
+    },
+    "./svg/*": "./dist/svg/*",
+    "./sprite.svg": "./dist/sprite.svg",
+    "./metadata.json": "./dist/metadata.json",
     "./package.json": "./package.json"
   },
   "main": "./dist/index.cjs",
@@ -49,33 +82,53 @@
   "types": "./dist/index.d.cts",
   "typesVersions": {
     "*": {
+      "runtime": [
+        "./dist/runtime/index.d.cts",
+        "./dist/runtime/index.d.ts"
+      ],
       "meta": [
         "./dist/meta/index.d.cts",
         "./dist/meta/index.d.ts"
+      ],
+      "brands": [
+        "./dist/brands/index.d.cts",
+        "./dist/brands/index.d.ts"
+      ],
+      "icons/*": [
+        "./dist/icons/*/index.d.cts",
+        "./dist/icons/*/index.d.ts"
+      ],
+      "metadata.json": [
+        "./dist/metadata.json"
       ]
     }
   },
   "scripts": {
-    "build": "pnpm clean && tsup && node scripts/strip-bundle-comments.mjs",
+    "build": "pnpm clean && tsup && node scripts/strip-bundle-comments.mjs && node scripts/generate.mjs --static",
     "check:api": "node scripts/check-api-surface.mjs",
     "check:exports": "node scripts/check-exports.mjs",
     "check:file-length": "node scripts/check-file-length.mjs",
+    "check:fixtures": "node scripts/check-fixture-package.mjs",
+    "check:generated": "node scripts/generate.mjs --check",
     "check:lint-graph": "node scripts/check-lint-graph-rules.mjs",
     "check:meta-react": "node scripts/check-meta-react-free.mjs",
     "check:mutants": "node scripts/check-mutation-directives.mjs",
     "check:published": "node scripts/check-published-surface.mjs",
     "check:runtime": "node scripts/check-consumer-runtime.mjs",
     "clean": "node -e \"const fs=require('node:fs');for(const d of ['dist','coverage'])fs.rmSync(d,{recursive:true,force:true})\"",
+    "contact-sheet": "node scripts/contact-sheet.mjs",
     "dogfood": "node scripts/dogfood-smoke-test.mjs",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
+    "generate": "node scripts/generate.mjs",
     "lint": "eslint src scripts",
     "lint:fix": "eslint src scripts --fix",
+    "lint:icons": "node scripts/lint-icons.mjs",
     "mutation": "stryker run",
     "mutation:dry-run": "stryker run --dryRunOnly",
     "mutation:full": "node -e \"require('node:fs').rmSync('reports/stryker-incremental.json',{force:true,recursive:true})\" && stryker run",
     "prepare": "husky",
-    "prepublishOnly": "pnpm clean && pnpm typecheck && pnpm lint && pnpm check:mutants && pnpm test:cov:all && pnpm build && pnpm size && pnpm check:exports && pnpm check:published && pnpm check:runtime",
+    "prepublishOnly": "pnpm clean && pnpm typecheck && pnpm lint && pnpm lint:icons && pnpm check:generated && pnpm check:mutants && pnpm test:cov:all && pnpm build && pnpm size && pnpm check:exports && pnpm check:published && pnpm check:runtime",
     "release": "npm publish --provenance --access public",
     "size": "node scripts/check-size.mjs",
     "test": "jest",
@@ -102,6 +155,7 @@
     "@commitlint/cli": "^21.2.1",
     "@commitlint/config-conventional": "^21.2.0",
     "@eslint/js": "^10.0.1",
+    "@resvg/resvg-js": "^2.6.2",
     "@stryker-mutator/core": "^10.0.0",
     "@stryker-mutator/jest-runner": "^10.0.0",
     "@stryker-mutator/typescript-checker": "^10.0.0",
@@ -112,6 +166,7 @@
     "@types/react-dom": "^19.3.0",
     "@typescript-eslint/eslint-plugin": "^8.59.3",
     "@typescript-eslint/parser": "^8.59.3",
+    "ajv": "^8.20.0",
     "eslint": "^10.9.1",
     "eslint-config-prettier": "^10.1.8",
     "eslint-import-resolver-typescript": "^4.4.5",
@@ -127,6 +182,7 @@
     "react": "^19.2.6",
     "react-dom": "^19.3.1",
     "react-server-dom-webpack": "^19.3.1",
+    "svgo": "^4.1.0",
     "ts-jest": "^29.4.9",
     "ts-node": "^10.9.2",
     "tsup": "^9.0.0",

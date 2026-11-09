@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/brand.schema.json",
+  "title": "Fixture Mark",
+  "source": "https://example.com/fixture-mark",
+  "guidelines": "https://example.com/fixture-mark/guidelines",
+  "license": "CC0-1.0",
+  "retrievedAt": "2026-11-08",
+  "aliases": [{ "name": "fixture-logo", "deprecated": false }],
+  "since": "0.1.0"
+}

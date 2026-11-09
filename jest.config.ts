@@ -12,7 +12,10 @@ const config: Config = {
   // uses package specifiers, an easy source of drift.
   moduleNameMapper: {
     '^@bymax-one/icons$': '<rootDir>/index.ts',
-    '^@bymax-one/icons/meta$': '<rootDir>/meta/index.ts'
+    '^@bymax-one/icons/brands$': '<rootDir>/brands/index.ts',
+    '^@bymax-one/icons/icons/([a-z0-9-]+)$': '<rootDir>/icons/generated/$1/index.ts',
+    '^@bymax-one/icons/meta$': '<rootDir>/meta/index.ts',
+    '^@bymax-one/icons/runtime$': '<rootDir>/runtime/index.ts'
   },
   transform: {
     '^.+\\.tsx?$': [
@@ -30,7 +33,10 @@ const config: Config = {
     '!**/*.test.ts',
     '!**/__tests__/**',
     '!**/index.ts',
-    '!**/*.d.ts'
+    '!**/*.d.ts',
+    // Written by the generator from the drawing sources. Their correctness is proven by
+    // the render smoke test over every generated component, not by line coverage.
+    '!**/generated/**'
   ],
   coverageThreshold: {
     global: {

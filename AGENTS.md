@@ -299,14 +299,19 @@ from the family.
 
 ## Architecture
 
-- `src/index.ts`: the root entry (components, the `Icon` base, the types). It imports `./meta` by
-  package specifier, never by relative path, so the published package holds one copy of it.
-- `src/runtime/`: the `Icon` base, `createIcon`, the props, the drawing data types, the stroke maths
-  and the accessibility rules; part of the root entry, reached from `src/index.ts` by relative path.
-- `src/meta/`: the React-free entry (typed metadata, the grid, the `IconName` union).
-- `icons/`, `schemas/`, `categories.json`, `site/`: the drawing sources, metadata schemas,
-  category list and catalog site, added by the pipeline and catalog phases.
-- `scripts/`: Node gates, and later the generator and lints.
+- `src/index.ts`: the root entry. It re-exports `./meta`, `./runtime` and every
+  `./icons/<name>` by package specifier, never by relative path, so each exists once.
+- `src/runtime/`: the `./runtime` entry: the `Icon` base, `createIcon`, the props, the drawing
+  data types, the stroke maths and the accessibility rules.
+- `src/meta/`: the React-free entry (the grid, the typed metadata, the name unions).
+- `src/icons/generated/`, `src/brands/generated/`, `src/meta/generated/`: written by
+  `pnpm generate`, committed, checked by `pnpm check:generated`.
+- `src/pipeline/`: the generator, the icon lint and the contact sheet; not shipped, held to
+  100% coverage and mutation; run by Node's native type stripping through `scripts/*.mjs`.
+- `icons/`, `schemas/`, `categories.json`: the drawing sources and their schemas;
+  `fixtures/icons/`: placeholder drawings for tests and `pnpm check:fixtures`. `site/` comes
+  with the catalog phase.
+- `scripts/`: the Node gates and the thin entries of the pipeline.
 
 ## Testing
 

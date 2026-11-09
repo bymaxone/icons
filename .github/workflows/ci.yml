@@ -1,9 +1,10 @@
 # CI — thin caller of the org-wide reusable pipeline (bymaxone/.github).
 #
 # The generic library jobs (hygiene, install, lint, typecheck, format, unit+coverage,
-# mutation) run via node-lib-ci.yml. This library's extra verification (build output
-# integrity across every subpath, published type resolution, consumer load from the
-# packed tarball, bundle-size budget) stays here. Mutation runs only on a push to
+# mutation) run via node-lib-ci.yml. This library's extra verification (the icon lint,
+# the stale-copy check of the generated modules, build output integrity across every
+# subpath, published type resolution, consumer load from the packed tarball,
+# bundle-size budget, and the fixture package build) stays here. Mutation runs only on a push to
 # main / manual dispatch, never on PRs.
 name: CI
 
@@ -77,14 +78,23 @@ jobs:
         # A `paths` entry matches one exact specifier and a `files` glob can
         # leave an extension out, so the rule is proven on real probes.
         run: pnpm check:meta-react
+      - name: Icon lint
+        # Every rule of the SVG and metadata sources: allowed elements and attributes,
+        # fills, precision, live area, names, schemas, aliases and variants.
+        run: pnpm lint:icons
+      - name: Generated modules match the sources
+        # Regenerates src/**/generated from icons/ and fails when the committed copy
+        # differs, so a hand edit or a forgotten `pnpm generate` cannot merge.
+        run: pnpm check:generated
       - name: Build all subpaths
         run: pnpm build
       - name: Verify build output integrity
         # Confirms every declared subpath produced both ESM and CJS bundles plus
-        # type declarations. A missing artifact here indicates a tsup
-        # misconfiguration that would ship a broken package to npm.
+        # type declarations, and that the static outputs exist. A missing artifact
+        # here indicates a tsup misconfiguration that would ship a broken package
+        # to npm. The icon entries are checked by the fixture package step below.
         run: |
-          for subpath in index meta/index; do
+          for subpath in index runtime/index meta/index brands/index; do
             for ext in mjs cjs d.ts d.cts; do
               if [ ! -f "dist/$subpath.$ext" ]; then
                 echo "Missing dist/$subpath.$ext"
@@ -92,7 +102,13 @@ jobs:
               fi
             done
           done
-          echo "Every entry point produced ESM + CJS + .d.ts + .d.cts"
+          for file in sprite.svg metadata.json; do
+            if [ ! -f "dist/$file" ]; then
+              echo "Missing dist/$file"
+              exit 1
+            fi
+          done
+          echo "Every entry point produced ESM + CJS + .d.ts + .d.cts, and the static outputs exist"
       - name: Verify published type resolution
         # A source-level typecheck compiles `src`, so it cannot catch a broken
         # `exports` map: a consumer resolving through the packed tarball may still
@@ -106,6 +122,12 @@ jobs:
         run: pnpm check:runtime
       - name: Bundle size budget
         run: pnpm size
+      - name: Fixture package
+        # The repository's own icons/ may be empty, so the steps above prove the empty
+        # set. This builds a scratch copy with the placeholder drawings of
+        # fixtures/icons and runs the generator, the type checks, the smoke test, the
+        # build, the size budgets, attw, the consumer runtime and the dogfood install on it.
+        run: pnpm check:fixtures
 
   security:
     if: github.event_name == 'pull_request' && github.event.repository.visibility == 'public'
