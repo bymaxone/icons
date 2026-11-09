@@ -11,7 +11,12 @@
  *      tarball via a `file:` dependency and resolves every subpath from both
  *      ESM and CJS through the published `exports` map
  *   6. The same consumer renders a fixture icon made with the installed
- *      `createIcon` through `react-dom/server`
+ *      `createIcon`, and every generated component, through `react-dom/server`
+ *
+ * The subpaths and the names each must export are read from the built
+ * `dist/metadata.json` (see `package-expectations.mjs`), so every icon and brand the
+ * build holds is covered, and a build with none still checks the runtime, `./meta` and
+ * `./brands`.
  *
  * Exit codes:
  *   0: all assertions pass
@@ -29,21 +34,24 @@ import { fileURLToPath } from 'node:url'
 import { execSync, spawnSync } from 'node:child_process'
 import { createRequire } from 'node:module'
 
+import { packageExpectations } from './package-expectations.mjs'
+
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 const require = createRequire(import.meta.url)
 const pkg = require(resolve(ROOT, 'package.json'))
 
-// The subpaths this package publishes, kept in sync with package.json "exports".
-const SUBPATHS = ['.', './meta']
-
-// Named runtime exports each subpath must resolve to. Type-only exports are
-// erased in the emitted JS and so are intentionally absent here; the structural
-// checks below (build artifacts, subpath resolution, tarball contents) gate the
-// rest of the package shape.
-const EXPECTED_EXPORTS = {
-  '.': ['ICON_GRID', 'Icon', 'createIcon'],
-  './meta': ['ICON_GRID']
+if (!existsSync(resolve(ROOT, 'dist', 'metadata.json'))) {
+  console.error('Missing build artifact: dist/metadata.json. Run "pnpm build" first.')
+  process.exit(2)
 }
+
+// Named runtime exports each subpath must resolve to, one subpath per JavaScript entry of
+// package.json "exports" and one per icon of the build. Type-only exports are erased in
+// the emitted JS and so are intentionally absent here; the structural checks below (build
+// artifacts, subpath resolution, tarball contents) gate the rest of the package shape.
+const EXPECTED = packageExpectations(ROOT)
+const EXPECTED_EXPORTS = EXPECTED.exports
+const SUBPATHS = Object.keys(EXPECTED_EXPORTS)
 
 // React is the package's peer, so the consumer installs it beside the tarball, at
 // the versions this repository tests against: the render below then exercises the
@@ -92,7 +100,14 @@ function specifierFor(subpath) {
  * never emitted, which is the half a single shared `types` entry used to hide.
  */
 function distArtifactsFor(subpath) {
-  const entry = pkg.exports[subpath]
+  // `./icons/<name>` is served by the `./icons/*` pattern: its `*` stands for the name.
+  const declared = new Map(Object.entries(pkg.exports))
+  const pattern = subpath.startsWith('./icons/') ? declared.get('./icons/*') : undefined
+  const name = subpath.slice('./icons/'.length)
+  const entry =
+    pattern === undefined
+      ? declared.get(subpath)
+      : JSON.parse(JSON.stringify(pattern).replaceAll('*', name))
   const strip = (value, where) => {
     // A clear failure beats `p.replace is not a function`: the shape of the
     // `exports` map is exactly what this script exists to check, so a malformed
@@ -135,9 +150,8 @@ function checkBuildArtifacts() {
 }
 
 async function checkNamedExports() {
-  for (const subpath of SUBPATHS) {
+  for (const [subpath, expected] of Object.entries(EXPECTED_EXPORTS)) {
     const { esm, cjs } = distArtifactsFor(subpath)
-    const expected = EXPECTED_EXPORTS[subpath]
 
     section(`2. ESM named exports: ${subpath}`)
     const esmModule = await import(resolve(ROOT, esm))
@@ -231,15 +245,24 @@ function checkConsumerRender() {
     'const expected = [\'viewBox="0 0 24 24"\', \'role="img"\', \'aria-label="Fixture"\',',
     '  \'class="bx-icon bx-icon-fixture"\', \'<title>Fixture</title><path d="M4 12h16"></path>\']',
     'const missing = expected.filter((part) => !html.includes(part))',
-    'if (missing.length) { console.error(html); process.exit(6) }'
+    'if (missing.length) { console.error(html); process.exit(6) }',
+    `for (const { subpath, name, className } of ${JSON.stringify(EXPECTED.components)}) {`,
+    `  const module = await import(${JSON.stringify(pkg.name)} + subpath.slice(1))`,
+    "  const markup = renderToStaticMarkup(createElement(module[name], { title: 'Named' }))",
+    "  const named = markup.includes('role=\"img\"') && markup.includes('<title>Named</title>')",
+    '  if (!named || !markup.includes(`class="${className}"`)) { console.error(markup); process.exit(7) }',
+    '}'
   ].join('\n')
   const result = spawnSync('node', ['--input-type=module', '-e', probe], {
     cwd: consumerDir,
     encoding: 'utf8',
     timeout: 30_000
   })
-  if (result.status === 0) pass('a fixture icon renders from the installed tarball')
-  else fail(`Consumer render failed (code ${result.status}): ${result.stderr}`)
+  if (result.status === 0) {
+    pass(
+      `a fixture icon and ${EXPECTED.components.length} generated component(s) render from the installed tarball`
+    )
+  } else fail(`Consumer render failed (code ${result.status}): ${result.stderr}`)
 }
 
 function checkConsumerInstall() {

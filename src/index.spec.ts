@@ -2,15 +2,20 @@
  * Unit tests for the public entry points.
  *
  * Layer: unit.
- * Goal: prove the root and `./meta` barrels expose the grid, and the root the
- * runtime, through the same package specifiers a consumer and the bundler use, and
- * that the root re-exports the `./meta` object rather than a copy of it.
+ * Goal: prove each entry exposes exactly its documented names through the same package
+ * specifiers a consumer and the bundler use; that the root re-exports the `./meta` grid
+ * and the `./runtime` functions rather than copies of them; and that the root and
+ * `./brands` export exactly the generated components.
  * Mocks: none.
  */
 
 import * as root from '@bymax-one/icons'
+import * as brands from '@bymax-one/icons/brands'
 import * as meta from '@bymax-one/icons/meta'
+import * as runtime from '@bymax-one/icons/runtime'
 
+import * as generatedBrands from './brands/generated'
+import * as generatedIcons from './icons/generated'
 import { ICON_GRID } from './meta/icon-grid'
 import { createIcon } from './runtime/create-icon'
 import { Icon } from './runtime/icon'
@@ -32,21 +37,35 @@ describe('public entry points', () => {
     expect(root.ICON_GRID).toBe(meta.ICON_GRID)
   })
 
-  it('exposes the Icon base and the createIcon factory from the root', () => {
+  it('exposes the Icon base and the createIcon factory from the runtime and the root', () => {
     /**
-     * Scenario: the generated icon modules and consumers with drawings of their own
-     * render through these two; the root must expose the runtime's own functions.
+     * Scenario: the generated icon modules import the runtime from `./runtime`, and the
+     * root re-exports the same two functions, not copies.
      */
-    expect(root.Icon).toBe(Icon)
-    expect(root.createIcon).toBe(createIcon)
+    expect(runtime.Icon).toBe(Icon)
+    expect(runtime.createIcon).toBe(createIcon)
+    expect(root.Icon).toBe(runtime.Icon)
+    expect(root.createIcon).toBe(runtime.createIcon)
   })
 
-  it('exports only the documented runtime names', () => {
+  it('exports only the documented names from each entry', () => {
     /**
-     * Scenario: a barrel decides what is public; a runtime name added to either
-     * entry by accident is new surface, so both lists are pinned.
+     * Scenario: a barrel decides what is public; a name added to an entry by accident is
+     * new surface, so every list is pinned. The root and `./brands` add exactly the
+     * generated components.
      */
-    expect(Object.keys(root).sort()).toEqual(['ICON_GRID', 'Icon', 'createIcon'])
-    expect(Object.keys(meta).sort()).toEqual(['ICON_GRID'])
+    expect(Object.keys(runtime).sort()).toStrictEqual(['Icon', 'createIcon'])
+    expect(Object.keys(meta).sort()).toStrictEqual([
+      'BRAND_METADATA',
+      'BRAND_NAMES',
+      'ICON_CATEGORIES',
+      'ICON_GRID',
+      'ICON_METADATA',
+      'ICON_NAMES'
+    ])
+    expect(Object.keys(root).sort()).toStrictEqual(
+      ['ICON_GRID', 'Icon', 'createIcon', ...Object.keys(generatedIcons)].sort()
+    )
+    expect(Object.keys(brands).sort()).toStrictEqual(Object.keys(generatedBrands).sort())
   })
 })

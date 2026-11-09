@@ -1,0 +1,12 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "tags": ["placeholder", "circle", "spark dot", "test fixture"],
+  "categories": ["system", "status"],
+  "useCases": [
+    "Proves the filled and 16 px variants are generated",
+    "Proves the spark dot passes the lint"
+  ],
+  "variants": ["line", "filled", "sm"],
+  "opticalSizes": [24, 16],
+  "since": "0.1.0"
+}

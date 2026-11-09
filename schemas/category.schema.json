@@ -1,0 +1,25 @@
+{
+  "$id": "https://raw.githubusercontent.com/bymaxone/icons/main/schemas/category.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Bymax icon categories",
+  "description": "The category list in categories.json that icon metadata refers to by name.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["$schema", "categories"],
+  "properties": {
+    "$schema": { "const": "./schemas/category.schema.json" },
+    "categories": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "title"],
+        "properties": {
+          "name": { "$ref": "icon.schema.json#/$defs/kebabName" },
+          "title": { "$ref": "icon.schema.json#/$defs/text" }
+        }
+      }
+    }
+  }
+}

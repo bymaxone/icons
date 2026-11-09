@@ -1,0 +1,21 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "tags": ["placeholder", "square", "test fixture"],
+  "categories": ["system"],
+  "useCases": [
+    "Proves the generator turns a line drawing into a component",
+    "Proves aliases are exported"
+  ],
+  "aliases": [
+    { "name": "fixture-box", "deprecated": false },
+    {
+      "name": "fixture-old-square",
+      "deprecated": true,
+      "deprecationReason": "Renamed to fixture-square.",
+      "toBeRemovedInVersion": "2.0.0"
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

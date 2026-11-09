@@ -2,7 +2,7 @@
 
 > **Version:** 1.0.0
 > **Last updated:** 2026-11-08
-> **Status:** Approved spec, execution under way (P1 done; P0 awaits its GitHub settings)
+> **Status:** Approved spec, execution under way (P1 done; P2 in review; P0 awaits its GitHub settings)
 > **Source spec:** [`technical_specification.md`](./technical_specification.md)
 > **Derived documents:** per-phase task files under `docs/tasks/` (one file per phase, scaffolded one phase at a time)
 
@@ -23,11 +23,12 @@
 
 ## 1. Progress Dashboard
 
-> **Overall progress: 1 / 11 phases (9%)**
-> **Active phase:** P0 (repository-governance: the GitHub settings of task 0.6 remain); P1 is done and P2 is next
+> **Overall progress: 1 / 12 phases (8%)**
+> **Active phase:** P2 (pipeline: implemented and verified locally, awaiting its pull request);
+> P0 still has the GitHub settings of task 0.6; B0 is next
 > **Blocked phases:** none
 >
-> Engineering phases are `P0` to `P5`; drawing batches are `B0` to `B4`. Every drawing batch
+> Engineering phases are `P0` to `P6`; drawing batches are `B0` to `B4`. Every drawing batch
 > closes on a founder-approval gate (section 4, rule 11), so a batch is ✅ only after that
 > approval is recorded.
 
@@ -37,7 +38,7 @@
 | --- | --------------------------------- | ------ | -------- | ---- | ------------ |
 | P0  | repository-governance             | 🔄     | 0%       | M    | 2026-11-08   |
 | P1  | runtime                           | ✅     | 100%     | M    | 2026-11-08   |
-| P2  | pipeline                          | 📋     | 0%       | L    | 2026-11-08   |
+| P2  | pipeline                          | 👀     | 90%      | L    | 2026-11-08   |
 | B0  | keystone-icons                    | 📋     | 0%       | M    | 2026-11-08   |
 | P3  | visual-tooling                    | 📋     | 0%       | L    | 2026-11-08   |
 | B1  | navigation-actions-status         | 📋     | 0%       | L    | 2026-11-08   |
@@ -46,14 +47,16 @@
 | B4  | filled-variants-sm-masters-brands | 📋     | 0%       | L    | 2026-11-08   |
 | P4  | catalog-site                      | 📋     | 0%       | M    | 2026-11-08   |
 | P5  | hardening-release                 | 📋     | 0%       | M    | 2026-11-08   |
+| P6  | react-native                      | 📋     | 0%       | M    | 2026-11-08   |
 
 ---
 
 ## 2. Dependency Graph
 
 ```
-P0 ── P1 ── P2 ── B0 ── P3 ── B1 ── B2 ── B3 ── B4 ── P4 ── P5
-                   │           │
+P0 ── P1 ── P2 ── B0 ── P3 ── B1 ── B2 ── B3 ── B4 ── P4 ── P5 ── P6
+                   │           │                 │                 │
+                   │           │                 └─────────────────┘  P6 also waits for the complete set of B4
                    │           └── bymax-studio-web adopts the package (local link)
                    └── founder approves the design language
 ```
@@ -64,7 +67,9 @@ for it, and the first drawings (B0) wait for the pipeline's SVG lint and generat
 design-language gate: nothing else is drawn until the founder approves it. The visual tooling
 (P3) then makes contact sheets, visual regression and the similarity check routine for the
 batches that follow. B2 fixes the list of 16 px masters that B4 draws. The catalog (P4) is
-built on the complete set, and P5 hardens and publishes `1.0.0`.
+built on the complete set, and P5 hardens and publishes `1.0.0`. P6 adds the React Native
+components after the release; it needs the complete set of B4 and the published package of
+P5 (decision D6).
 
 ---
 
@@ -214,6 +219,11 @@ These rules apply to every phase. Phase sections only add rules specific to them
 - **Context / preconditions:** P1 done.
 - **Rules-of-phase:** generated modules hold elements as data; no JSX strings, no
   `dangerouslySetInnerHTML`.
+- **Delivered with one addition to spec §8.1:** a `./runtime` subpath holding `Icon` and
+  `createIcon`, which the root re-exports. Each icon module imports `createIcon`, and the
+  root re-exports each icon module; with the runtime inside the root the two would import
+  each other, which fails at load in ESM and in CommonJS. Details in
+  [`tasks/phase-02-pipeline.md`](./tasks/phase-02-pipeline.md).
 - **References:** spec §6, §7, §8.1, §8.2, §11, §12.
 - **Size:** L
 
@@ -333,14 +343,44 @@ These rules apply to every phase. Phase sections only add rules specific to them
 - **References:** spec §11, §12, §13, §16.
 - **Size:** M
 
+### P6: react-native
+
+- **Goal:** Ship the same icon set as React Native components.
+- **Scope (in):** a `./native` subpath generated from the same `icons/` sources by the same
+  pipeline; components rendering with `react-native-svg` (`Svg`, `Path`, `Circle` and the
+  other allowed elements); the props contract of the web components where it applies
+  (`size`, `color` as the `currentColor` equivalent, `strokeWidth`, `title` as
+  `accessibilityLabel`, a decorative icon hidden with `accessibilityElementsHidden` and
+  `importantForAccessibility="no-hide-descendants"`); brand marks included; `react-native`
+  and `react-native-svg` as optional peer dependencies (`peerDependenciesMeta`), so
+  `dependencies` stays `{}` and web consumers are unaffected; tree-shakable per-icon
+  modules; Metro resolves the subpath through the `exports` map, with a `react-native`
+  condition if it needs one.
+- **Scope (out):** Vue, Svelte and Angular packages.
+- **Definition of Done:**
+  - The generated native modules pass `check:generated`.
+  - A Jest test renders every native icon, through `react-native-svg` mocks or
+    `react-test-renderer`.
+  - A scratch Expo app on the current SDK imports from the packed tarball and renders icons
+    on iOS and Android; how it was verified is recorded in the phase's task file.
+  - The size and attw gates cover `./native`.
+  - The README gains a React Native section.
+- **Context / preconditions:** P5 done (1.0.0 published) and B4 done (the complete set).
+- **Rules-of-phase:** the native components are generated from the same sources as the web
+  ones; no drawing is maintained twice.
+- **References:** spec §1.3, §10, §16, §17 (D6).
+- **Size:** M
+
 ---
 
 ## 6. Open Questions
 
-1. **Evidence for the B0 gate.** Every drawing batch closes with a contact sheet and a
-   similarity report (spec §16), but the tooling that produces them is built in P3, after B0.
-   B0 therefore needs either a minimal contact-sheet render and a manual similarity review, or
-   the contact-sheet half of P3 moved before B0. The founder decides before B0 starts.
+1. **Evidence for the B0 gate.** Resolved: P2 ships a minimal contact-sheet render,
+   `pnpm contact-sheet`, which draws every icon at 16, 20, 24 and 48 px on the light and dark
+   Studio pages in the ink and the six accents (the Studio design system's values), with
+   `@resvg/resvg-js` as a dev dependency, into `reports/contact-sheet.png`. B0 gates on that
+   sheet and a manual similarity review; P3 keeps the family sheet, the visual regression,
+   the automated similarity check and the PR preview.
 
 ---
 

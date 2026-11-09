@@ -1,0 +1,131 @@
+{
+  "$id": "https://raw.githubusercontent.com/bymaxone/icons/main/schemas/icon.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Bymax icon metadata",
+  "description": "The metadata of one non-brand icon: icons/meta/<name>.json, beside icons/line/<name>.svg.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["$schema", "tags", "categories", "useCases", "variants", "opticalSizes", "since"],
+  "properties": {
+    "$schema": {
+      "const": "../../schemas/icon.schema.json"
+    },
+    "tags": {
+      "description": "Search terms: what the icon depicts and what it is used for.",
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "$ref": "#/$defs/text"
+      }
+    },
+    "categories": {
+      "description": "Names from categories.json.",
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "$ref": "#/$defs/kebabName"
+      }
+    },
+    "useCases": {
+      "description": "Where the icon is used, at least two real cases.",
+      "type": "array",
+      "minItems": 2,
+      "uniqueItems": true,
+      "items": {
+        "$ref": "#/$defs/text"
+      }
+    },
+    "aliases": {
+      "description": "Other names the same components are exported under.",
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "$ref": "#/$defs/alias"
+      }
+    },
+    "variants": {
+      "description": "The drawings that exist: line always, filled and sm where drawn.",
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "enum": ["line", "filled", "sm"]
+      },
+      "contains": {
+        "const": "line"
+      }
+    },
+    "opticalSizes": {
+      "description": "The masters drawn by hand: 24 always, 16 when the sm variant exists.",
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "enum": [24, 16]
+      },
+      "contains": {
+        "const": 24
+      }
+    },
+    "since": {
+      "$ref": "#/$defs/version"
+    }
+  },
+  "$defs": {
+    "kebabName": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9]*(-[a-z0-9]+)*$"
+    },
+    "text": {
+      "type": "string",
+      "pattern": "^\\S(.*\\S)?$"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)$"
+    },
+    "alias": {
+      "description": "An alias in use (deprecated: false) or one being retired, which names the version that removes it.",
+      "oneOf": [
+        {
+          "$ref": "#/$defs/currentAlias"
+        },
+        {
+          "$ref": "#/$defs/deprecatedAlias"
+        }
+      ]
+    },
+    "currentAlias": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "deprecated"],
+      "properties": {
+        "name": {
+          "$ref": "#/$defs/kebabName"
+        },
+        "deprecated": {
+          "const": false
+        }
+      }
+    },
+    "deprecatedAlias": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "deprecated", "toBeRemovedInVersion"],
+      "properties": {
+        "name": {
+          "$ref": "#/$defs/kebabName"
+        },
+        "deprecated": {
+          "const": true
+        },
+        "deprecationReason": {
+          "$ref": "#/$defs/text"
+        },
+        "toBeRemovedInVersion": {
+          "$ref": "#/$defs/version"
+        }
+      }
+    }
+  }
+}

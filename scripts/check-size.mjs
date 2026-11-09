@@ -8,7 +8,7 @@
 // devDep cannot tamper with the bundle before `pnpm publish`. `node:zlib`'s
 // brotli matches what npm/CDN compression produces on the wire.
 
-import { readFileSync } from 'node:fs'
+import { existsSync, readdirSync, readFileSync } from 'node:fs'
 import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { brotliCompressSync, constants } from 'node:zlib'
@@ -28,22 +28,32 @@ const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 // raise it (and say why here) when growth is legitimate, tighten it when the
 // artifact shrinks.
 //
-// The per-icon targets of the specification (one icon plus the runtime at most
-// 1.5 KiB brotli, each further icon at most 0.6 KiB) are measured once icon
-// modules exist; they are calibrated after the first drawing batch.
+// What the budgets rest on, measured on a build that holds no drawing:
+//   - root, 0.25 KiB brotli: the entry re-exports the grid, the runtime and every icon by
+//     package specifier and holds no code of its own, measured at 85 bytes brotli. Each
+//     icon adds one re-export line, so the budget is recalibrated with the drawings.
+//   - runtime, 1.25 KiB brotli: the `Icon` base, `createIcon`, the stroke maths and the
+//     accessibility rules, measured at 3228 bytes raw and 1114 bytes brotli. The headroom
+//     fits a small fix, while an inlined dependency such as React fails.
+//   - meta, 1 KiB brotli: the grid, the deep freeze and the twelve categories, measured at
+//     497 bytes brotli with no record, and at 0.85 KiB brotli with the records of the
+//     fixture set (two icons, one brand) that `check:fixtures` builds. Every icon's record
+//     adds to it, so the budget is recalibrated with the drawings.
+//   - brands, 0.25 KiB brotli: the entry is empty until a brand mark exists (5 bytes
+//     brotli); the budget is a floor that catches an accidental inline of the runtime.
 //
-// What the budgets rest on:
-//   - root, 1.25 KiB brotli: the entry holds the runtime (the `Icon` base,
-//     `createIcon`, the stroke maths and the accessibility rules) and no icon,
-//     measured at 3272 bytes raw and 1123 bytes brotli. The headroom fits a small
-//     fix, while an accidental inline of `./meta` or of a dependency still fails. The specification's per-icon targets replace it once icon modules exist.
-//   - meta, 0.5 KiB brotli: the entry holds the grid constant, measured at 155
-//     bytes brotli. The budget is a floor that still catches an accidental inline
-//     of a large module.
+// Every icon module under `dist/icons/<name>/` is measured too, against the targets of the
+// specification: each icon at most 0.6 KiB brotli, and the runtime with one icon at most
+// 1.5 KiB brotli (the two files compressed together, as a consumer's bundle would ship
+// them). The targets are calibrated against the first drawings.
 const BUDGETS = [
-  { name: 'root (components, Icon base)', path: 'dist/index.mjs', brotli: 1.25 * 1024 },
-  { name: 'meta (typed metadata)', path: 'dist/meta/index.mjs', brotli: 0.5 * 1024 }
+  { name: 'root (re-exports)', path: 'dist/index.mjs', brotli: 0.25 * 1024 },
+  { name: 'runtime (Icon base)', path: 'dist/runtime/index.mjs', brotli: 1.25 * 1024 },
+  { name: 'meta (typed metadata)', path: 'dist/meta/index.mjs', brotli: 1 * 1024 },
+  { name: 'brands (brand marks)', path: 'dist/brands/index.mjs', brotli: 0.25 * 1024 }
 ]
+const ICON_BUDGET = 0.6 * 1024
+const RUNTIME_WITH_ICON_BUDGET = 1.5 * 1024
 
 const fmt = (n) => `${(n / 1024).toFixed(2)} kB`
 
@@ -54,14 +64,13 @@ const BROTLI_OPTS = {
 let failed = 0
 const rows = []
 
-for (const { name, path, brotli: limit } of BUDGETS) {
-  const abs = resolve(ROOT, path)
+/** Reads a build artifact, exiting with the build hint only when it is genuinely absent. */
+function readArtifact(path) {
   // Read straight away rather than stat-then-read: two syscalls where one will
   // do, and the pair is a check-then-use race — the artifact can be replaced
   // between them, so the size reported would not be the size that was checked.
-  let raw
   try {
-    raw = readFileSync(abs)
+    return readFileSync(resolve(ROOT, path))
   } catch (error) {
     // Only a genuinely absent artifact gets the friendly message. Anything
     // else — EACCES, EISDIR, a transient IO fault — keeps its own error, or
@@ -70,17 +79,26 @@ for (const { name, path, brotli: limit } of BUDGETS) {
     console.error(`Missing build artifact: ${path}. Run "pnpm build" first.`)
     process.exit(2)
   }
+}
+
+/** Records one row of the table, and a failure when it is over its budget. */
+function measure(name, raw, limit) {
   const compressed = brotliCompressSync(raw, BROTLI_OPTS).length
   const ok = compressed <= limit
   if (!ok) failed += 1
-  rows.push({
-    name,
-    raw: raw.length,
-    brotli: compressed,
-    limit,
-    delta: compressed - limit,
-    ok
-  })
+  rows.push({ name, raw: raw.length, brotli: compressed, limit, delta: compressed - limit, ok })
+}
+
+for (const { name, path, brotli: limit } of BUDGETS) measure(name, readArtifact(path), limit)
+
+// One directory per icon entry, `dist/icons/<name>/index.mjs`; none before the first drawing.
+const iconsDir = resolve(ROOT, 'dist', 'icons')
+const icons = existsSync(iconsDir) ? readdirSync(iconsDir).sort() : []
+const runtime = readArtifact('dist/runtime/index.mjs')
+for (const icon of icons) {
+  const bundle = readArtifact(`dist/icons/${icon}/index.mjs`)
+  measure(`icon ${icon}`, bundle, ICON_BUDGET)
+  measure(`runtime + ${icon}`, Buffer.concat([runtime, bundle]), RUNTIME_WITH_ICON_BUDGET)
 }
 
 const pad = (s, n) => String(s).padEnd(n)
@@ -96,6 +114,9 @@ for (const r of rows) {
   console.log(
     `  ${pad(r.name, 32)}${padL(fmt(r.raw), 12)}${padL(fmt(r.brotli), 12)}${padL(fmt(r.limit), 12)}  ${status}`
   )
+}
+if (icons.length === 0) {
+  console.log('  No icon module in dist/icons: the per-icon budgets apply once one is built.')
 }
 console.log('')
 

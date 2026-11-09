@@ -1,0 +1,54 @@
+{
+  "$id": "https://raw.githubusercontent.com/bymaxone/icons/main/schemas/brand.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Bymax brand mark metadata",
+  "description": "The metadata of one brand mark: icons/meta/<name>.json, beside icons/brands/<name>.svg.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["$schema", "title", "source", "guidelines", "license", "retrievedAt", "since"],
+  "properties": {
+    "$schema": { "const": "../../schemas/brand.schema.json" },
+    "title": {
+      "description": "The brand's own spelling of its name.",
+      "$ref": "icon.schema.json#/$defs/text"
+    },
+    "source": {
+      "description": "Where the path data was taken from.",
+      "$ref": "#/$defs/httpsUrl"
+    },
+    "guidelines": {
+      "description": "The owner's brand guidelines for the mark.",
+      "$ref": "#/$defs/httpsUrl"
+    },
+    "license": {
+      "description": "The license of the path data, such as CC0-1.0.",
+      "$ref": "icon.schema.json#/$defs/text"
+    },
+    "retrievedAt": {
+      "description": "The day the path data was retrieved.",
+      "type": "string",
+      "pattern": "^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$"
+    },
+    "tags": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": { "$ref": "icon.schema.json#/$defs/text" }
+    },
+    "aliases": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": { "$ref": "icon.schema.json#/$defs/alias" }
+    },
+    "multicolor": {
+      "description": "The mark keeps its official colours instead of currentColor.",
+      "type": "boolean"
+    },
+    "since": { "$ref": "icon.schema.json#/$defs/version" }
+  },
+  "$defs": {
+    "httpsUrl": {
+      "type": "string",
+      "pattern": "^https://\\S+$"
+    }
+  }
+}

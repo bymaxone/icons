@@ -4,21 +4,27 @@
  *
  * Every other gate reads the source or the type declarations. This one packs the
  * tarball, lays it out the way npm would, and loads every subpath from it — in
- * ESM and in CommonJS — asserting the values each one is supposed to export are
- * really there.
+ * ESM and in CommonJS — asserting each one exports exactly the names it is supposed
+ * to: the runtime, the metadata, and every icon and brand component the packed
+ * `dist/metadata.json` describes (see `package-expectations.mjs`).
  *
  * `attw` proves the declarations *resolve*; it never runs the JavaScript. A
  * broken `exports` map, a bundler misconfiguration, or an entry that ships an
  * empty module all pass a type check and fail here.
  *
- * Loading is not rendering, so the probes also render a fixture icon made with the
- * packed `createIcon`: through `react-dom/server` in ESM and in CommonJS, and
- * through the Server Components renderer under the `react-server` condition, where
- * React leaves out its client-only APIs. The built root is scanned as well: no
- * `'use client'` directive, and `createElement` as the only name it imports from
- * `react`. React, `react-dom` and `react-server-dom-webpack` come from this
- * repository's `node_modules`, which Node reaches by walking up from the consumer
- * directory, so the probes need no install.
+ * Loading is not rendering, so the probes also render: a fixture icon made with the
+ * packed `createIcon`, and every generated component, through `react-dom/server` in ESM
+ * and in CommonJS and through the Server Components renderer under the `react-server`
+ * condition, where React leaves out its client-only APIs. The root re-exports each icon
+ * from its own subpath, so the probes require the two to be the same object: each icon
+ * exists once. The assets resolve through `exports` as well: the sprite holds exactly the
+ * expected symbols, every raw SVG resolves, and `metadata.json` loads and matches `./meta`.
+ *
+ * The built bundles are scanned too: no `'use client'` directive anywhere, `createElement`
+ * as the only name the runtime imports from `react`, and no `react` import in any other
+ * bundle. React, `react-dom` and `react-server-dom-webpack` come from this repository's
+ * `node_modules`, which Node reaches by walking up from the consumer directory, so the
+ * probes need no install.
  *
  * Usage: `node scripts/check-consumer-runtime.mjs` (run after `pnpm build`).
  */
@@ -36,43 +42,14 @@ import { tmpdir } from 'node:os'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
+import { packageExpectations } from './package-expectations.mjs'
+
 const rootDir = join(dirname(fileURLToPath(import.meta.url)), '..')
 // Read from the manifest rather than hard-coded: this gate exists to inspect the
 // packed artifact, so a rename must not leave it silently checking a package that no
 // longer exists.
 const packageName = JSON.parse(readFileSync(join(rootDir, 'package.json'), 'utf8')).name
 const consumerDir = join(rootDir, '.consumer-runtime-check')
-
-/**
- * Subpath → the values a consumer must find on it.
- *
- * The root re-exports the grid from `./meta` by package specifier, so loading the
- * root from the tarball also proves that specifier resolves through the published
- * `exports` map rather than through a path that exists only in the repository.
- */
-const SUBPATHS = {
-  '.': ['ICON_GRID', 'Icon', 'createIcon'],
-  './meta': ['ICON_GRID']
-}
-
-const probeBody = `
-const failures = []
-for (const [subpath, names] of Object.entries(SUBPATHS)) {
-  const namespace = loaded[subpath]
-  if (namespace === undefined) {
-    failures.push(subpath + ' did not load')
-    continue
-  }
-  const missing = names.filter((name) => namespace[name] === undefined)
-  if (missing.length) failures.push(subpath + ' does not export: ' + missing.join(', '))
-}
-if (failures.length) {
-  for (const failure of failures) console.error('  ✗ ' + failure)
-  process.exit(1)
-}
-const total = Object.values(SUBPATHS).reduce((sum, names) => sum + names.length, 0)
-console.log('  ✓ ' + FORMAT + ': ' + Object.keys(SUBPATHS).length + ' subpath(s), ' + total + ' export(s) present')
-`
 
 /**
  * The fixture rendered from the tarball, and the markup it must produce: the
@@ -86,70 +63,136 @@ const FIXTURE_MARKUP =
   'stroke-linejoin="round" focusable="false" aria-hidden="true" ' +
   'class="bx-icon bx-icon-fixture"><path d="M4 12h16"></path></svg>'
 
-const renderBody = `
+/** The checks both module formats run, given `loaded`, `EXPECTED` and the render helpers. */
+const probeBody = `
+const failures = []
+for (const [subpath, names] of Object.entries(EXPECTED.exports)) {
+  const namespace = loaded[subpath]
+  if (namespace === undefined) {
+    failures.push(subpath + ' did not load')
+    continue
+  }
+  const actual = Object.keys(namespace).filter((name) => name !== 'default').sort()
+  if (JSON.stringify(actual) !== JSON.stringify(names)) {
+    failures.push(subpath + ' exports ' + JSON.stringify(actual) + ', expected ' + JSON.stringify(names))
+  }
+}
+for (const name of ['Icon', 'createIcon']) {
+  if (loaded['.'][name] !== loaded['./runtime'][name]) failures.push('the root ' + name + ' is a copy of the runtime one')
+}
+for (const [subpath, names] of Object.entries(EXPECTED.exports)) {
+  if (!subpath.startsWith('./icons/')) continue
+  for (const name of names) {
+    if (loaded['.'][name] !== loaded[subpath][name]) failures.push('the root ' + name + ' is a copy of the one in ' + subpath)
+  }
+}
 const FixtureIcon = loaded['.'].${FIXTURE_ICON}
 const markup = renderToStaticMarkup(createElement(FixtureIcon))
-if (markup !== ${JSON.stringify(FIXTURE_MARKUP)}) {
-  console.error('  ✗ ' + FORMAT + ': the fixture icon rendered ' + markup)
+if (markup !== ${JSON.stringify(FIXTURE_MARKUP)}) failures.push('the fixture icon rendered ' + markup)
+for (const { subpath, name, className } of EXPECTED.components) {
+  const html = renderToStaticMarkup(createElement(loaded[subpath][name]))
+  const silent = html.startsWith('<svg ') && html.includes('aria-hidden="true"') && html.includes('focusable="false"')
+  if (!silent || !html.includes('class="' + className + '"')) failures.push(name + ' rendered ' + html)
+}
+const sprite = readAsset('sprite.svg')
+const ids = [...sprite.matchAll(/<symbol id="([^"]+)"/g)].map((match) => match[1]).sort()
+if (JSON.stringify(ids) !== JSON.stringify([...EXPECTED.symbols].sort())) failures.push('the sprite holds ' + JSON.stringify(ids))
+for (const file of EXPECTED.svgFiles) {
+  if (!readAsset(file).startsWith('<svg xmlns="http://www.w3.org/2000/svg" ')) failures.push(file + ' is not a raw SVG')
+}
+if (JSON.stringify(metadataJson) !== JSON.stringify(EXPECTED.metadata)) failures.push('metadata.json does not load as packed')
+const meta = loaded['./meta']
+if (JSON.stringify(meta.ICON_METADATA) !== JSON.stringify(EXPECTED.metadata.icons) ||
+    JSON.stringify(meta.BRAND_METADATA) !== JSON.stringify(EXPECTED.metadata.brands)) {
+  failures.push('./meta and metadata.json describe different records')
+}
+if (failures.length) {
+  for (const failure of failures) console.error('  ✗ ' + FORMAT + ': ' + failure)
   process.exit(1)
 }
-console.log('  ✓ ' + FORMAT + ': a fixture icon renders through react-dom/server')
+const total = Object.values(EXPECTED.exports).reduce((sum, names) => sum + names.length, 0)
+console.log('  ✓ ' + FORMAT + ': ' + Object.keys(EXPECTED.exports).length + ' subpath(s) export exactly their ' + total + ' name(s); ' +
+  EXPECTED.components.length + ' generated component(s) and the fixture render; ' + EXPECTED.symbols.length + ' sprite symbol(s) and ' +
+  EXPECTED.svgFiles.length + ' raw SVG(s) resolve')
 `
 
 /**
- * Renders the fixture through Flight under `--conditions=react-server`. Loading
- * `react-server-dom-webpack/server` throws outside that condition, so a pass also
- * proves the condition was in effect; the component then runs on the React build
- * that has no `useState`, `useEffect` or `createContext`.
+ * Renders the fixture and every generated component through Flight under
+ * `--conditions=react-server`. Loading `react-server-dom-webpack/server` throws outside
+ * that condition, so a pass also proves the condition was in effect; the components then
+ * run on the React build that has no `useState`, `useEffect` or `createContext`.
  */
-const rscProbe = `import { createElement } from 'react'
+function rscProbe(expected) {
+  const imports = Object.keys(expected.exports)
+    .filter((subpath) => subpath === './brands' || subpath.startsWith('./icons/'))
+    .map((subpath, i) => `import * as m${i} from '${specifier(subpath)}'`)
+  const modules = Object.keys(expected.exports)
+    .filter((subpath) => subpath === './brands' || subpath.startsWith('./icons/'))
+    .map((subpath, i) => `'${subpath}': m${i}`)
+  return `import { createElement, Fragment } from 'react'
 import * as React from 'react'
 import { renderToPipeableStream } from 'react-server-dom-webpack/server'
 import { Writable } from 'node:stream'
 import { createIcon } from '${packageName}'
+${imports.join('\n')}
+const loaded = { ${modules.join(', ')} }
+const COMPONENTS = ${JSON.stringify(expected.components)}
 if (React.useState !== undefined) {
   console.error('  ✗ RSC: react resolved to its client build')
   process.exit(1)
 }
 const FixtureIcon = ${FIXTURE_ICON}
+const tree = createElement(Fragment, null, createElement(FixtureIcon),
+  ...COMPONENTS.map(({ subpath, name }) => createElement(loaded[subpath][name])))
 let payload = ''
 const sink = new Writable({
   write(chunk, _encoding, callback) { payload += chunk; callback() },
   final(callback) {
-    const row = payload.split('\\n').find((line) => line.startsWith('0:['))
-    const element = row === undefined ? [] : JSON.parse(row.slice(2))
-    const props = element[3] ?? {}
-    if (element[1] !== 'svg' || props.className !== 'bx-icon bx-icon-fixture' || props['aria-hidden'] !== 'true') {
+    const classes = ['bx-icon bx-icon-fixture', ...COMPONENTS.map((c) => c.className)]
+    const missing = classes.filter((name) => !payload.includes('"className":"' + name + '"'))
+    if (!payload.includes('["$","svg"') || !payload.includes('"aria-hidden":"true"') || missing.length) {
       console.error('  ✗ RSC: unexpected payload ' + payload)
       process.exit(1)
     }
-    console.log('  ✓ RSC: a fixture icon renders as a Server Component under react-server')
+    console.log('  ✓ RSC: the fixture and ' + COMPONENTS.length + ' generated component(s) render as Server Components under react-server')
     callback()
   }
 })
-renderToPipeableStream(createElement(FixtureIcon), {}, {
+renderToPipeableStream(tree, {}, {
   onError(error) {
     console.error('  ✗ RSC: ' + (error && error.message))
     process.exit(1)
   }
 }).pipe(sink)
 `
+}
+
+/** The bundles of every subpath that has JavaScript, by path in the package. */
+function bundles(expected) {
+  const entries = ['index', 'meta/index', 'brands/index']
+  for (const subpath of Object.keys(expected.exports)) {
+    if (subpath.startsWith('./icons/')) entries.push(`${subpath.slice(2)}/index`)
+  }
+  return entries.flatMap((entry) => [`dist/${entry}.mjs`, `dist/${entry}.cjs`])
+}
 
 /**
- * Scans the built root, in both formats, for what would put a consumer behind a
- * client boundary: a `'use client'` directive, or any React import other than
- * `createElement` (hooks, context and the other client-only APIs all come from
- * `react`).
+ * Scans the built bundles, in both formats, for what would put a consumer behind a
+ * client boundary: a `'use client'` directive, or a React import other than
+ * `createElement` in the runtime (hooks, context and the other client-only APIs all come
+ * from `react`). Every other bundle imports nothing from `react`: it renders through the
+ * runtime.
  * @param {string} packageDir - The unpacked package.
- * @returns {string[]} Failures; empty when the bundle is clean.
+ * @param {ReturnType<typeof packageExpectations>} expected - What the package exports.
+ * @returns {string[]} Failures; empty when the bundles are clean.
  */
-function scanRootBundle(packageDir) {
+function scanBundles(packageDir, expected) {
   const failures = []
-  const bundles = {
-    'dist/index.mjs': /^import\s+\{([^}]*)\}\s+from\s+'react';?$/gm,
-    'dist/index.cjs': /^var\s+(\w+)\s*=\s*require\('react'\);?$/gm
+  const runtime = {
+    'dist/runtime/index.mjs': /^import\s+\{([^}]*)\}\s+from\s+'react';?$/gm,
+    'dist/runtime/index.cjs': /^var\s+(\w+)\s*=\s*require\('react'\);?$/gm
   }
-  for (const [file, pattern] of Object.entries(bundles)) {
+  for (const [file, pattern] of Object.entries(runtime)) {
     const source = readFileSync(join(packageDir, file), 'utf8')
     if (/['"]use client['"]/.test(source)) failures.push(`${file} holds a 'use client' directive`)
     const imported = [...source.matchAll(pattern)].map((match) => match[1])
@@ -161,34 +204,45 @@ function scanRootBundle(packageDir) {
       failures.push(`${file} imports ${JSON.stringify(names)} from react, not only createElement`)
     }
   }
+  for (const file of bundles(expected)) {
+    const source = readFileSync(join(packageDir, file), 'utf8')
+    if (/['"]use client['"]/.test(source)) failures.push(`${file} holds a 'use client' directive`)
+    if (/from\s+['"]react['"]|require\(['"]react['"]\)/.test(source))
+      failures.push(`${file} imports react`)
+  }
   return failures
 }
 
 const specifier = (subpath) => (subpath === '.' ? packageName : packageName + subpath.slice(1))
 
-const esmProbe = `${Object.keys(SUBPATHS)
-  .map((s, i) => `import * as m${i} from '${specifier(s)}'`)
-  .join('\n')}
+function esmProbe(expected) {
+  const subpaths = Object.keys(expected.exports)
+  return `${subpaths.map((s, i) => `import * as m${i} from '${specifier(s)}'`).join('\n')}
+import { readFileSync } from 'node:fs'
+import { fileURLToPath } from 'node:url'
 import { createElement } from 'react'
 import { renderToStaticMarkup } from 'react-dom/server'
-const SUBPATHS = ${JSON.stringify(SUBPATHS)}
-const loaded = { ${Object.keys(SUBPATHS)
-  .map((s, i) => `'${s}': m${i}`)
-  .join(', ')} }
+import metadataJson from '${packageName}/metadata.json' with { type: 'json' }
+const EXPECTED = ${JSON.stringify(expected)}
+const loaded = { ${subpaths.map((s, i) => `'${s}': m${i}`).join(', ')} }
+const readAsset = (file) => readFileSync(fileURLToPath(import.meta.resolve('${packageName}/' + file)), 'utf8')
 const FORMAT = 'ESM'
-${probeBody}${renderBody}`
+${probeBody}`
+}
 
-const cjsProbe = `${Object.keys(SUBPATHS)
-  .map((s, i) => `const m${i} = require('${specifier(s)}')`)
-  .join('\n')}
+function cjsProbe(expected) {
+  const subpaths = Object.keys(expected.exports)
+  return `${subpaths.map((s, i) => `const m${i} = require('${specifier(s)}')`).join('\n')}
+const { readFileSync } = require('node:fs')
 const { createElement } = require('react')
 const { renderToStaticMarkup } = require('react-dom/server')
-const SUBPATHS = ${JSON.stringify(SUBPATHS)}
-const loaded = { ${Object.keys(SUBPATHS)
-  .map((s, i) => `'${s}': m${i}`)
-  .join(', ')} }
+const metadataJson = require('${packageName}/metadata.json')
+const EXPECTED = ${JSON.stringify(expected)}
+const loaded = { ${subpaths.map((s, i) => `'${s}': m${i}`).join(', ')} }
+const readAsset = (file) => readFileSync(require.resolve('${packageName}/' + file), 'utf8')
 const FORMAT = 'CJS'
-${probeBody}${renderBody}`
+${probeBody}`
+}
 
 function run(command, args, options = {}) {
   return execFileSync(command, args, { encoding: 'utf8', stdio: 'pipe', ...options })
@@ -198,18 +252,8 @@ function cleanup() {
   rmSync(consumerDir, { recursive: true, force: true })
 }
 
-console.log('Consumer load gate')
-
-if (!existsSync(join(rootDir, 'dist'))) {
-  console.error('✗ dist/ is missing — run `pnpm build` first')
-  process.exit(1)
-}
-
-cleanup()
-const packDir = mkdtempSync(join(tmpdir(), 'pack-'))
-let failed = false
-
-try {
+/** Packs the repository and unpacks the tarball as `node_modules/<name>` of the consumer. */
+function installTarball(packDir) {
   // `--ignore-scripts` keeps `prepublishOnly` from rebuilding underneath the
   // artifact this gate is meant to inspect.
   //
@@ -229,24 +273,42 @@ try {
   if (packed.length !== 1) {
     throw new Error(`expected one tarball in ${packDir}, found ${packed.length}`)
   }
-  const tarball = join(packDir, packed[0])
-
   const packageDir = join(consumerDir, 'node_modules', packageName)
   mkdirSync(packageDir, { recursive: true })
-  run('tar', ['-xzf', tarball, '-C', packageDir, '--strip-components=1'])
+  run('tar', ['-xzf', join(packDir, packed[0]), '-C', packageDir, '--strip-components=1'])
+  return packageDir
+}
 
+console.log('Consumer load gate')
+
+if (!existsSync(join(rootDir, 'dist'))) {
+  console.error('✗ dist/ is missing — run `pnpm build` first')
+  process.exit(1)
+}
+
+cleanup()
+const packDir = mkdtempSync(join(tmpdir(), 'pack-'))
+let failed = false
+
+try {
+  const packageDir = installTarball(packDir)
+  const expected = packageExpectations(packageDir)
   writeFileSync(
     join(consumerDir, 'package.json'),
     `${JSON.stringify({ name: 'consumer-runtime-check', private: true, version: '0.0.0', type: 'module' }, null, 2)}\n`
   )
-  writeFileSync(join(consumerDir, 'probe.mjs'), esmProbe)
-  writeFileSync(join(consumerDir, 'probe.cjs'), cjsProbe)
-  writeFileSync(join(consumerDir, 'probe-rsc.mjs'), rscProbe)
+  writeFileSync(join(consumerDir, 'probe.mjs'), esmProbe(expected))
+  writeFileSync(join(consumerDir, 'probe.cjs'), cjsProbe(expected))
+  writeFileSync(join(consumerDir, 'probe-rsc.mjs'), rscProbe(expected))
 
-  const scanFailures = scanRootBundle(packageDir)
+  const scanFailures = scanBundles(packageDir, expected)
   for (const failure of scanFailures) console.error(`  ✗ ${failure}`)
   if (scanFailures.length) failed = true
-  else console.log("  ✓ the built root has no 'use client' and imports only createElement")
+  else {
+    console.log(
+      "  ✓ no bundle has 'use client'; the runtime imports only createElement, and no other bundle imports react"
+    )
+  }
 
   const probes = [['probe.mjs'], ['probe.cjs'], ['--conditions=react-server', 'probe-rsc.mjs']]
   for (const args of probes) {
@@ -273,5 +335,5 @@ if (failed) {
 }
 
 console.log(
-  '✓ Every subpath loads in ESM and CommonJS, and the root renders on the server and as a Server Component.'
+  '✓ Every subpath loads in ESM and CommonJS, and every component renders on the server and as a Server Component.'
 )

@@ -30,7 +30,10 @@ const config: Config = {
   // would make identity checks fail across subpath boundaries.
   moduleNameMapper: {
     '^@bymax-one/icons$': '<rootDir>/src/index.ts',
-    '^@bymax-one/icons/meta$': '<rootDir>/src/meta/index.ts'
+    '^@bymax-one/icons/brands$': '<rootDir>/src/brands/index.ts',
+    '^@bymax-one/icons/icons/([a-z0-9-]+)$': '<rootDir>/src/icons/generated/$1/index.ts',
+    '^@bymax-one/icons/meta$': '<rootDir>/src/meta/index.ts',
+    '^@bymax-one/icons/runtime$': '<rootDir>/src/runtime/index.ts'
   },
   transform: {
     '^.+\\.tsx?$': [
@@ -48,7 +51,9 @@ const config: Config = {
     '!src/**/*.test.ts',
     '!src/**/__tests__/**',
     '!src/**/index.ts',
-    '!src/**/*.d.ts'
+    '!src/**/*.d.ts',
+    // Written by the generator; proven by the render smoke test, not by line coverage.
+    '!src/**/generated/**'
   ],
   coverageReporters: ['text', 'lcov', 'clover'],
   coverageThreshold: {
