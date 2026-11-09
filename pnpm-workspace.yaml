@@ -51,6 +51,14 @@ overrides:
   # GHSA-xw65-4hp5-5hc7 (CVSS 4.7), fixed in 4.7.10. Pulled only by ts-jest. Drop
   # this entry once ts-jest's own range resolves to >= 4.7.10 on a fresh install.
   'handlebars@4': '^4.7.10'
+  # GHSA-g3hv-75wg-m249 (moderate): denial of service through globparts
+  # amplification, fixed only in 11.0.1, with no backport to the 9 and 10 majors
+  # that glob 10 (via jest's coverage) and @eslint/config-array ask for.
+  # Development-scoped. Crossing the major is safe only because both callers use
+  # the named minimatch/Minimatch exports, which 11 keeps; the test and lint gates
+  # exercise both paths.
+  'minimatch@9': '^11.0.1'
+  'minimatch@10': '^11.0.1'
 
 # react-server-dom-webpack is the Server Components renderer the RSC spec renders
 # through. Its `webpack` peer serves only the `./plugin` entry (the bundler
