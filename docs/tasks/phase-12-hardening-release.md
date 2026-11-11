@@ -10,7 +10,7 @@
 
 P5 holds every gate at its final threshold and prepares the first publish. It adds no icon and changes no component API. The first publish is manual, by the founder; every task up to it is done in this repository.
 
-- **Metadata for any product.** The use cases name no internal product, and each icon carries a short `label` for its standalone accessible name, which the catalog uses in its labelled example.
+- **Metadata for any product.** The use cases name no internal product, and each icon carries a short `label` for its standalone accessible name.
 - **The PR preview branch.** `icons-preview` keeps a directory per pull request (`pr-<n>/<sha>/`). It is cleaned when a pull request closes, and the directories of closed pull requests are removed once.
 - **The API surface check.** `scripts/check-api-surface.mjs`, byte-identical across the family, stops on a package that was never published: `npm view` answers E404 instead of an empty list. The fix is made in the family's canonical copy and copied here.
 - **Consumers.** The packed tarball is installed clean in a Next.js App Router application, rendered in a Server Component and a client component, and in a Vite application, each built.
