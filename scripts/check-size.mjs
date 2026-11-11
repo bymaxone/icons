@@ -29,17 +29,16 @@ const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 // artifact shrinks.
 //
 // What the budgets rest on, measured on a build that holds no drawing:
-//   - root, 0.75 KiB brotli: the entry re-exports the grid, the runtime and every icon by
+//   - root, 1.25 KiB brotli: the entry re-exports the grid, the runtime and every icon by
 //     package specifier and holds no code of its own, measured at 85 bytes brotli with no
-//     icon and at 577 bytes with 56 icons, about 9 bytes per icon. Each
+//     icon and at 577 bytes with 56 icons and 972 bytes with 106, about 8 bytes per icon. Each
 //     icon adds one re-export line, so every drawing batch recalibrates the budget.
 //   - runtime, 1.25 KiB brotli: the `Icon` base, `createIcon`, the stroke maths and the
 //     accessibility rules, measured at 3228 bytes raw and 1114 bytes brotli. The headroom
 //     fits a small fix, while an inlined dependency such as React fails.
-//   - meta, 3.5 KiB brotli: the grid, the deep freeze and the twelve categories, measured at
-//     497 bytes brotli with no record, at 1.13 KiB brotli with the records of the twelve
-//     keystone icons, and at 3057 bytes with 56 records, about 46 bytes
-//     brotli per record. The headroom fits about ten records or a tag edit; every drawing
+//   - meta, 6 KiB brotli: the grid, the deep freeze and the twelve categories, measured at
+//     497 bytes brotli with no record and at 5058 bytes with 106 records, about 43 bytes
+//     brotli per record. The headroom fits about twenty records or a tag edit; every drawing
 //     batch adds records, so each one recalibrates it.
 //   - brands, 0.25 KiB brotli: the entry is empty until a brand mark exists (5 bytes
 //     brotli); the budget is a floor that catches an accidental inline of the runtime.
@@ -47,15 +46,15 @@ const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 // Every icon module under `dist/icons/<name>/` is measured too, against the targets of the
 // specification: each icon at most 0.6 KiB brotli, and the runtime with one icon at most
 // 1.5 KiB brotli (the two files compressed together, as a consumer's bundle would ship
-// them). Against 56 icons the largest module, `settings`, measures 0.36 KiB
+// them). Against 106 icons the largest module, `settings`, measures 0.36 KiB
 // brotli and the largest pair 1.42 KiB, so the targets hold as budgets. A drawing that breaks them is
 // simplified, not budgeted for: a gear whose tooth corners each carried a cubic curve
 // measured 0.51 KiB alone and 1.58 KiB with the runtime, and drawing those corners with
 // the round join of the stroke brought it to 0.32 KiB and 1.36 KiB.
 const BUDGETS = [
-  { name: 'root (re-exports)', path: 'dist/index.mjs', brotli: 0.75 * 1024 },
+  { name: 'root (re-exports)', path: 'dist/index.mjs', brotli: 1.25 * 1024 },
   { name: 'runtime (Icon base)', path: 'dist/runtime/index.mjs', brotli: 1.25 * 1024 },
-  { name: 'meta (typed metadata)', path: 'dist/meta/index.mjs', brotli: 3.5 * 1024 },
+  { name: 'meta (typed metadata)', path: 'dist/meta/index.mjs', brotli: 6 * 1024 },
   { name: 'brands (brand marks)', path: 'dist/brands/index.mjs', brotli: 0.25 * 1024 }
 ]
 const ICON_BUDGET = 0.6 * 1024

@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "tags": ["microphone", "record", "audio input", "voice"],
+  "categories": ["audio-voice"],
+  "useCases": ["Starts a voice recording", "Selects the audio input"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

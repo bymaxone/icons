@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "tags": ["audio", "sound wave", "levels", "signal"],
+  "categories": ["audio-voice"],
+  "useCases": ["Shows an audio track", "Labels a sound clip"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

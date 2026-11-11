@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "tags": ["pointer", "select", "arrow", "mouse"],
+  "categories": ["editor-canvas"],
+  "useCases": ["Selects the selection tool", "Marks a click target"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

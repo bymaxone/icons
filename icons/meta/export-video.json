@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "tags": ["export", "share video", "download video", "publish"],
+  "categories": ["media-video"],
+  "useCases": ["Exports the final video", "Sends a render out of the app"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

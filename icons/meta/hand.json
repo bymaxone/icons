@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "tags": ["pan", "grab", "drag canvas", "palm"],
+  "categories": ["editor-canvas"],
+  "useCases": ["Pans the canvas", "Selects the hand tool"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

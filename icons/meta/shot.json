@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "tags": ["framing", "viewfinder", "subject", "take"],
+  "categories": ["media-video"],
+  "useCases": ["Marks a single shot of a scene", "Opens the framing of a shot"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

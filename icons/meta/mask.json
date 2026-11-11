@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "tags": ["clip", "matte", "stencil", "reveal"],
+  "categories": ["editor-canvas"],
+  "useCases": ["Adds a mask to a layer", "Edits the mask of a shot"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -27,6 +27,14 @@ and deprecated, each rename with the alias that keeps the old name working.
   `refresh`, `filter`, `sort`, `grip` and `pin`. Status: `check-circle`, `alert-triangle`
   (alias `warning`), `alert-circle`, `info`, `loader`, `clock`, `cloud-check`, `lock`,
   `eye`, `eye-off`, `history`, `queued`, `repair` and `version`.
+- The media, audio, file and editor icons, 50 drawings. Media and video: `pause`, `stop`,
+  `skip-back`, `skip-forward`, `loop`, `fullscreen`, `minimize`, `video`, `camera`,
+  `scissors`, `shot`, `keyframe`, `frame`, `extend`, `render`, `export-video`, `timeline`,
+  `transition` and `camera-motion`. Audio and voice: `mic`, `mic-off`, `volume`,
+  `volume-off`, `music`, `waveform`, `captions`, `voice`, `lip-sync` and `narration`. Files:
+  `file-video`, `file-audio`, `image`, `paperclip`, `reference-card` and `asset`. Editor and
+  canvas: `layers`, `crop`, `move`, `zoom-in`, `zoom-out`, `hand`, `cursor`, `text`,
+  `align-center`, `grid`, `palette`, `brush`, `eraser`, `split` and `mask`.
 - Repository scaffold: package manifest with the `.` and `./meta` exports map,
   build tooling, lint and test configuration, mutation testing configuration,
   commit governance, the open-source baseline files and the package-integrity

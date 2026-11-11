@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "tags": ["attach", "attachment", "clip", "file"],
+  "categories": ["files"],
+  "useCases": ["Attaches a file", "Shows the attachments of an item"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

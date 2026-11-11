@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "tags": ["cut", "trim", "clip", "shears"],
+  "categories": ["media-video"],
+  "useCases": ["Trims a clip", "Cuts a selection"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

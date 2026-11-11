@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "tags": ["tracks", "clips", "sequence", "editor"],
+  "categories": ["media-video"],
+  "useCases": ["Opens the timeline", "Labels the track area of the editor"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

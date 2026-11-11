@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "tags": ["center", "alignment", "text align", "justify"],
+  "categories": ["editor-canvas"],
+  "useCases": ["Centers the selected text", "Aligns layers on their centre"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "tags": ["lattice", "guides", "hash", "layout grid"],
+  "categories": ["editor-canvas"],
+  "useCases": ["Shows the canvas grid", "Snaps layers to the grid"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

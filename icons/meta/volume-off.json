@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "tags": ["mute", "silent", "speaker off", "no sound"],
+  "categories": ["audio-voice"],
+  "useCases": ["Mutes the playback", "Shows that sound is off"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}
