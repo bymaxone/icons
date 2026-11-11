@@ -5,3 +5,4 @@
  */
 
 export { ScriptIcon } from './line'
+export { ScriptSmIcon } from './sm'

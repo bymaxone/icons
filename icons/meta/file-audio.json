@@ -3,7 +3,7 @@
   "tags": ["audio file", "sound file", "music file", "media"],
   "categories": ["files"],
   "useCases": ["Marks an audio file", "Uploads a sound"],
-  "variants": ["line"],
-  "opticalSizes": [24],
+  "variants": ["line", "sm"],
+  "opticalSizes": [24, 16],
   "since": "0.1.0"
 }

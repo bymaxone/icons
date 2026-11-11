@@ -6,3 +6,4 @@
 
 export { EyeIcon } from './line'
 export { EyeFilledIcon } from './filled'
+export { EyeSmIcon } from './sm'

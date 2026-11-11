@@ -6,3 +6,4 @@
 
 export { FolderStackIcon } from './line'
 export { FolderStackFilledIcon } from './filled'
+export { FolderStackSmIcon } from './sm'

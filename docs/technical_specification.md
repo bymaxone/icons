@@ -102,14 +102,16 @@ These rules are the identity of the set. They are applied to every icon and chec
 1. **Overlap knockout.** Where a modifier (plus, slash, badge, check) overlaps a base shape, the base is cut with a uniform 1.5 px gap. Modifiers always sit in the bottom-right 10 × 10 quadrant.
 2. **Spark dot.** A 2 px filled dot is the only fill allowed in a line icon. It marks "generated", "AI" or "new", and always sits at the same top-right position.
 3. **Recessed terminals.** Open strokes stop 0.5 px short of the live-area edge.
-4. **The cut.** Distinct parts never touch. Where one part would meet another (a door and the floor line, a handle and its lens, a head and the shoulders, a crease and its page), it stops short by a 1.5 px gap, which is 3 units between the two centrelines, everywhere in the set. Parts that are attached, such as a clapper arm on its hinge, share a corner with radius 0 instead. The cut is the signature that still reads at 24 px; at 16 px the gap is 1 px, the minimum the 16 master allows.
+4. **The cut.** Distinct parts never touch. Where one part would meet another (a door and the floor line, a handle and its lens, a head and the shoulders, a crease and its page), it stops short by a 1.5 px gap, which is 3 units between the two centrelines, everywhere in the set. Parts that are attached, such as a clapper arm on its hinge, share a corner with radius 0 instead. The cut is the signature that still reads at 24 px; at 16 px the gap is 1 px, the minimum the 16 master allows. The 16 px master of `eye-off` is the exception: its slash crosses the lids with no cut, because a cut on each side of a diagonal slash leaves too little of each lid at 16 px for the eye to read.
 
 ### 2.5 Optical balance
 
 - A 20 px circle, an 18 px square and a 21 px-tall triangle read as the same size.
 - Asymmetric icons are centred by visual mass, not by bounding box.
 - Every icon passes a blur test at 16 px: the silhouette must still read.
-- Ink ceiling: no line or 16 px drawing covers more than 21.5% of the 24 × 24 canvas, measured with its stroke. A heavier drawing turns into a block in the blur test and outweighs its neighbours in a row. A filled drawing is solid by design, so the ceiling does not apply to it; section 2.6 holds it to its line icon instead.
+- Ink ceiling: no line drawing covers more than 21.5% of the 24 × 24 canvas, measured with its stroke. A heavier drawing turns into a block in the blur test and outweighs its neighbours in a row. A filled drawing is solid by design, so the ceiling does not apply to it; section 2.6 holds it to its line icon instead.
+- A 16 px master is held to the same weight, measured at 16 px: its 1.5 px stroke covers 24 / 16 times more of a 16 px canvas, so it covers at most 32.25% (21.5% × 24 / 16), and at most 1.5 times the ink of its line icon at 24 px, because a master simplifies and never adds geometry.
+- Between two distinct strokes of a 16 px master, the lightest path at 16 px and 1x, rendered by resvg, crosses no pixel darker than 0.25: one stroke's antialiased fringe. Two fringes on one pixel (0.5) are a cut that has closed. A fully clear pixel is the target where there is room; between two crisp 1.5 px strokes it needs 4 px between their axes. Straight strokes stay crisp, on the centres of the 16 px pixels.
 - No part reads as a digit or a letter at 16 or 24 px. A narrow upright closed shape is the usual culprit: a stadium reads as a zero, two stacked ones as an eight. Such a part takes a small corner, or the composition avoids it.
 
 ### 2.6 Filled variant

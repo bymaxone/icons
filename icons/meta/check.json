@@ -3,7 +3,7 @@
   "tags": ["tick", "done", "confirm", "success"],
   "categories": ["actions"],
   "useCases": ["Confirms an action", "Marks an item as done"],
-  "variants": ["line"],
-  "opticalSizes": [24],
+  "variants": ["line", "sm"],
+  "opticalSizes": [24, 16],
   "since": "0.1.0"
 }

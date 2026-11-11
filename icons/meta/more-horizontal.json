@@ -3,7 +3,7 @@
   "tags": ["ellipsis", "overflow", "options", "dots"],
   "categories": ["actions"],
   "useCases": ["Opens the overflow menu of a row", "Shows more actions of a card"],
-  "variants": ["line"],
-  "opticalSizes": [24],
+  "variants": ["line", "sm"],
+  "opticalSizes": [24, 16],
   "since": "0.1.0"
 }

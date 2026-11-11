@@ -5,3 +5,4 @@
  */
 
 export { CheckIcon } from './line'
+export { CheckSmIcon } from './sm'

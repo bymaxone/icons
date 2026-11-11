@@ -6,3 +6,4 @@
 
 export { OctopusIcon, PolviIcon } from './line'
 export { OctopusFilledIcon, PolviFilledIcon } from './filled'
+export { OctopusSmIcon, PolviSmIcon } from './sm'

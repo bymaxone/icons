@@ -6,3 +6,4 @@
 
 export { VolumeIcon } from './line'
 export { VolumeFilledIcon } from './filled'
+export { VolumeSmIcon } from './sm'

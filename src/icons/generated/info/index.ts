@@ -6,3 +6,4 @@
 
 export { InfoIcon } from './line'
 export { InfoFilledIcon } from './filled'
+export { InfoSmIcon } from './sm'

@@ -2,7 +2,7 @@
 
 > **Version:** 1.0.0
 > **Last updated:** 2026-11-11
-> **Status:** Approved spec, execution under way (P1, P2, B0, P3, B1, B2 and B3 done; B4 under way, its brand marks and filled variants done and its 16 px masters next; P0 awaits its GitHub settings)
+> **Status:** Approved spec, execution under way (P1, P2, B0, P3, B1, B2, B3 and B4 done; P4 next; P0 awaits its GitHub settings)
 > **Source spec:** [`technical_specification.md`](./technical_specification.md)
 > **Derived documents:** per-phase task files under `docs/tasks/` (one file per phase, scaffolded one phase at a time)
 
@@ -23,8 +23,8 @@
 
 ## 1. Progress Dashboard
 
-> **Overall progress: 7 / 12 phases (58%)**
-> **Active phase:** B4c (the 16 px masters of B4, after the `sm` stroke pull request); P0 still has
+> **Overall progress: 8 / 12 phases (67%)**
+> **Active phase:** P4 (the catalog site); P0 still has
 > the GitHub settings of task 0.6
 > **Blocked phases:** none
 >
@@ -44,7 +44,7 @@
 | B1  | navigation-actions-status         | ✅     | 100%     | L    | 2026-11-11   |
 | B2  | media-audio-files-editor          | ✅     | 100%     | L    | 2026-11-11   |
 | B3  | studio-ai-formats-billing         | ✅     | 100%     | L    | 2026-11-11   |
-| B4  | filled-variants-sm-masters-brands | 🔄     | 67%      | L    | 2026-11-11   |
+| B4  | filled-variants-sm-masters-brands | ✅     | 100%     | L    | 2026-11-11   |
 | P4  | catalog-site                      | 📋     | 0%       | M    | 2026-11-08   |
 | P5  | hardening-release                 | 📋     | 0%       | M    | 2026-11-08   |
 | P6  | react-native                      | 📋     | 0%       | M    | 2026-11-08   |
@@ -343,6 +343,10 @@ These rules apply to every phase. Phase sections only add rules specific to them
   Microsoft, LinkedIn and `google-color` are not in 1.0 (spec §5).
 - **B4b ✅ (2026-11-11):** the filled variants, approved by the delegated auditor
   on behalf of the founder, 2026-11-11 (pull request #16).
+- **`sm` stroke ✅ (2026-11-11):** a 16 px master renders at 16 px with a 1.5 px stroke by
+  default (pull request #17).
+- **B4c ✅ (2026-11-11):** the 16 px masters, approved by the delegated auditor on behalf
+  of the founder, 2026-11-11. B4 is done.
 
 ### P4: catalog-site
 

@@ -5,3 +5,4 @@
  */
 
 export { SearchIcon } from './line'
+export { SearchSmIcon } from './sm'

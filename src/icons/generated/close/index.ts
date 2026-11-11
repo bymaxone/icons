@@ -5,3 +5,4 @@
  */
 
 export { CloseIcon } from './line'
+export { CloseSmIcon } from './sm'

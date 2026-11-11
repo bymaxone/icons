@@ -5,3 +5,4 @@
  */
 
 export { LoaderIcon } from './line'
+export { LoaderSmIcon } from './sm'

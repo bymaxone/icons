@@ -6,3 +6,4 @@
 
 export { HomeIcon } from './line'
 export { HomeFilledIcon } from './filled'
+export { HomeSmIcon } from './sm'

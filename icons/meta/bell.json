@@ -3,7 +3,7 @@
   "tags": ["notifications", "alerts", "alarm", "ring"],
   "categories": ["system"],
   "useCases": ["Opens the notifications", "Shows unread alerts", "Filled: unread notifications"],
-  "variants": ["line", "filled"],
-  "opticalSizes": [24],
+  "variants": ["line", "filled", "sm"],
+  "opticalSizes": [24, 16],
   "since": "0.1.0"
 }

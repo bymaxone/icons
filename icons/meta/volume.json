@@ -7,7 +7,7 @@
     "Shows that sound is on",
     "Filled: the sound while it is on"
   ],
-  "variants": ["line", "filled"],
-  "opticalSizes": [24],
+  "variants": ["line", "filled", "sm"],
+  "opticalSizes": [24, 16],
   "since": "0.1.0"
 }

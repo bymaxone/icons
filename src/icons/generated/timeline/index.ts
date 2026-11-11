@@ -5,3 +5,4 @@
  */
 
 export { TimelineIcon } from './line'
+export { TimelineSmIcon } from './sm'

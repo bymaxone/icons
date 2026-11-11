@@ -5,3 +5,4 @@
  */
 
 export { PlusIcon } from './line'
+export { PlusSmIcon } from './sm'

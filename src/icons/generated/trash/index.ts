@@ -5,3 +5,4 @@
  */
 
 export { DeleteIcon, TrashIcon } from './line'
+export { DeleteSmIcon, TrashSmIcon } from './sm'

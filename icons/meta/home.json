@@ -7,7 +7,7 @@
     "Marks the home tab of a navigation bar",
     "Filled: the current page in the navigation"
   ],
-  "variants": ["line", "filled"],
-  "opticalSizes": [24],
+  "variants": ["line", "filled", "sm"],
+  "opticalSizes": [24, 16],
   "since": "0.1.0"
 }

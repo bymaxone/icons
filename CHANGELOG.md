@@ -53,6 +53,15 @@ and deprecated, each rename with the alias that keeps the old name working.
   `alert-circle`, `alert-triangle`, `info`, `cloud-check`, `clock`, `lightning`,
   `lightning-stack`, `wallet`, `card`, `crown`, `sparkle`, `octopus`, `character`, `sun`
   and `moon`.
+- The 16 px masters of 45 icons, separate drawings made for 16 px (`HomeSmIcon` to
+  `ShareSmIcon`, from the root and from `./icons/<name>`, aliases included), with their raw
+  SVG files under `svg/sm/`, sprite symbols and metadata: `home`, `dashboard`,
+  `folder-stack`, `library`, `templates`, `sidebar`, `chevron-up`, `chevron-down`,
+  `chevron-left`, `chevron-right`, `search`, `settings`, `plus`, `close`, `check`, `pencil`,
+  `trash`, `copy`, `download`, `upload`, `more-horizontal`, `more-vertical`, `filter`,
+  `check-circle`, `alert-triangle`, `alert-circle`, `info`, `loader`, `lock`, `eye`,
+  `eye-off`, `lightning`, `wallet`, `users`, `bell`, `duplicate`, `file`, `file-audio`,
+  `file-video`, `script`, `frame`, `timeline`, `volume`, `octopus` and `share`.
 - The 16 px masters render at 16 px with the set's 1.5 px stroke by default. `createIcon`
   takes a `masterSize` option (16 for a `<Name>SmIcon`, 24 by default) and `Icon` a
   `masterSize` prop: it is the default `size`, and `strokeWidth` is read in px at that size,
