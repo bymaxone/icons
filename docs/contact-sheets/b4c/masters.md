@@ -5,7 +5,7 @@ Each 16 px master is a separate drawing of its icon, made for 16 px: it sits on 
 ## Rules
 
 - **Stroke and gap.** Distinct parts stand 3.75 units apart between centrelines, a 1 px gap of ink; a diagonal gap takes 4.5 units, because a 1 px gap at 45 degrees closes on the pixel grid.
-- **Crispness.** Straight horizontal and vertical strokes sit on odd multiples of 0.75 units, the centres of the 16 px pixels, so each renders one full pixel and two fringes of 0.25. A pair symmetric about 12 (3.75 and 20.25) is crisp on both sides; a single centred stroke uses the axis 12.75.
+- **Crispness.** Straight horizontal and vertical strokes sit on odd multiples of 0.75 units, the centres of the 16 px pixels, so each renders one full pixel and two fringes of 0.25. A pair symmetric about 12 (3.75 and 20.25) is crisp on both sides; a single centred stroke uses the axis 12.75. The outline of `frame` is the exception: it sits between two pixel columns, at 75% each, so that its dashes keep their gap.
 - **Ink.** At 16 px a master covers at most 32.25% of the canvas, the ink ceiling of spec section 2.5 at the same weight (21.5% x 24 / 16), and at most 1.5 times the ink of its line icon at 24 px: a master simplifies and never adds geometry.
 - **Light between strokes.** G is the darkest pixel on the lightest path between two distinct parts, at 16 px 1x, rendered by resvg: 0 is a fully clear pixel between them, 0.25 a single stroke's antialiased fringe, 0.5 two fringes on one pixel, which is a cut that has closed. Every master has G of at most 0.25; a fully clear pixel between two crisp 1.5 px strokes needs 4 px between their axes, so G = 0 is a target where there is room.
 
