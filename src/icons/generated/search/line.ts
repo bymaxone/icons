@@ -12,6 +12,11 @@ import { createIcon } from '@bymax-one/icons/runtime'
  * @since 0.1.0
  */
 export const SearchIcon = /* @__PURE__ */ createIcon('search', [
-  ['circle', { cx: 10.25, cy: 10.25, r: 6.25 }],
-  ['line', { x1: 16.791, x2: 20.25, y1: 16.791, y2: 20.25 }]
+  ['circle', { cx: 9.75, cy: 9.75, r: 6.5 }],
+  [
+    'path',
+    {
+      d: 'm16.468 18.942 1.795 1.795a1.75 1.75 0 0 0 2.474-2.474l-1.795-1.795a1.75 1.75 0 0 0-2.474 2.474'
+    }
+  ]
 ])

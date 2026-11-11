@@ -254,6 +254,10 @@ These rules apply to every phase. Phase sections only add rules specific to them
   after P3 and before B1, until each lies at a chamfer distance above 0.30 px from every
   reference while still reading as its concept at 16 px. `search` may instead be accepted
   as a primitive glyph (spec §3.5), with the measurement that justifies it.
+- **Redrawn (B0.1):** folder f5, search q1, settings s9 and lightning a1 approved by the
+  delegated auditor on behalf of the founder, 2026-11-11. The similarity report holds the
+  measured distances, and only primitives are flagged. The evidence is in
+  [`contact-sheets/b0.1/`](./contact-sheets/b0.1/).
 - **Size:** M
 
 ### P3: visual-tooling
