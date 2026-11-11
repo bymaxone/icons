@@ -69,7 +69,7 @@ Ink is coverage at the size given, with the stroke. G and the parts it is measur
 
 ## Similarity
 
-Nine masters have a third-party drawing within d = 0.30. Seven are primitives that every set draws alike: the four chevrons, `plus`, `close` and `check`, as their line icons are. `alert-circle` (d = 0.18, `tabler/alert-circle`) and `info` (d = 0.21, `lucide/badge-info`) are conventions of spec section 3, item 5, a circle with a bar and a dot, as their line icons are (d = 0.06). [`similarity-sheet.png`](./similarity-sheet.png) shows every master beside its nearest references.
+Masters within d = 0.30 of a third-party drawing are primitives that every set draws alike: the four chevrons, `plus`, `close` and `check`, as their line icons are. `alert-circle` (d = 0.18, `tabler/alert-circle`) and `info` (d = 0.21, `lucide/badge-info`) are conventions of spec section 3, item 5, a circle with a bar and a dot, as their line icons are (d = 0.06). [`similarity-sheet.png`](./similarity-sheet.png) shows every master beside its nearest references.
 
 `eye` is at d = 0.24 from `tabler/gradienter`, a spirit level, not an eye. A solid pupil reaches d = 0.43 but turns the lids and the dot into a radio button at 16 px, so the ring stays.
 

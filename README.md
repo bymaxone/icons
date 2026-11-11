@@ -87,7 +87,7 @@ and is not built yet.
   keyframe, credit, spending cap, lip-sync, version)
 - ✅ **Filled variants** for 40 icons with a stateful meaning, with the same silhouette as
   the line icon so switching causes no size jump
-- ✅ **Hand-tuned 16 px masters** for 45 icons used in dense UI, drawn separately rather
+- ✅ **Hand-tuned 16 px masters** for icons used in dense UI, drawn separately rather
   than scaled, at 16 px with the set's 1.5 px stroke
 - ✅ **Brand marks**: in their owners' geometry from Simple Icons, monochrome
   `currentColor`, excluded from the MIT grant (see [`TRADEMARKS.md`](./TRADEMARKS.md))

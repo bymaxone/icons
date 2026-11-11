@@ -10,7 +10,7 @@
 
 ## Context
 
-B4c draws the 16 px masters of spec §4.2: the icons used at 16 px in the shell and the icons whose 24 px drawing fails at 16 px, 45 in all. Each master is a separate drawing on the 24-unit grid, made for 16 px, rendered with the set's 1.5 px stroke at 16 since the `sm` stroke pull request. Each icon's metadata declares the `sm` variant and the optical size 16.
+B4c draws the 16 px masters of spec §4.2: the icons used at 16 px in the shell and the icons whose 24 px drawing fails at 16 px. Each master is a separate drawing on the 24-unit grid, made for 16 px, rendered with the set's 1.5 px stroke at 16 since the `sm` stroke pull request. Each icon's metadata declares the `sm` variant and the optical size 16.
 
 ### Construction and evidence
 
