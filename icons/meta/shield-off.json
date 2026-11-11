@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Unprotected",
+  "tags": ["shield", "unprotected", "off", "disabled"],
+  "categories": ["security"],
+  "useCases": ["Warns that protection is off", "Shows an unverified source"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

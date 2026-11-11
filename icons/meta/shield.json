@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Security",
+  "tags": ["shield", "security", "protection", "safe"],
+  "categories": ["security"],
+  "useCases": ["Opens the security settings", "Marks a protected area"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

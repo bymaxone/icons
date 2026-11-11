@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Block user",
+  "tags": ["user", "block", "delete user", "x"],
+  "categories": ["people-roles"],
+  "useCases": ["Blocks a user", "Deletes an account"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

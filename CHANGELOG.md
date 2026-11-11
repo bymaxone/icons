@@ -81,6 +81,10 @@ and deprecated, each rename with the alias that keeps the old name working.
   `close-circle`, `circle-slash` (alias `ban`), `check-square`, `arrow-up`, `arrow-down`,
   `chevrons-up-down`, `sliders`, `toggle`, `qr-code`, `power` and `target`, with filled
   variants of `star`, `heart`, `bookmark`, `flag`, `check-square` and `toggle`.
+- People and security, 11 drawings (B5b): `user-minus`, `user-check`, `user-x`, `id-card`,
+  `building` (aliases `organization`, `company`), `key`, `shield`, `shield-check`,
+  `shield-off`, `fingerprint` and `lock-open` (alias `unlock`), with a filled
+  `shield-check`, and the categories `security` and `places-devices`.
 - The brand marks, in their owners' geometry from Simple Icons, filled with
   `currentColor` (`GoogleBrandIcon` and the others, from `./brands`). Microsoft and
   LinkedIn are not included, and the colour `google-color` mark is deferred.

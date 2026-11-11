@@ -36,7 +36,7 @@ const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 //   - runtime, 1.25 KiB brotli: the `Icon` base, `createIcon`, the stroke maths and the
 //     accessibility rules, measured at 3228 bytes raw and 1114 bytes brotli. The headroom
 //     fits a small fix, while an inlined dependency such as React fails.
-//   - meta, 10 KiB brotli: the grid, the deep freeze and the twelve categories, measured at
+//   - meta, 10 KiB brotli: the grid, the deep freeze and the categories, measured at
 //     497 bytes brotli with no record and at 9547 bytes with 173 icon and 14 brand records,
 //     about 49 bytes brotli per record, the icon's `label` included. The headroom fits about
 //     fifteen records or a tag edit; every drawing batch adds records, so each one

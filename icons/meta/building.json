@@ -1,0 +1,20 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Organization",
+  "tags": ["building", "company", "office", "organization"],
+  "categories": ["places-devices"],
+  "useCases": ["Switches between organizations", "Shows a company's details"],
+  "aliases": [
+    {
+      "name": "organization",
+      "deprecated": false
+    },
+    {
+      "name": "company",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

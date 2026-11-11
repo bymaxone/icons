@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Protected",
+  "tags": ["shield", "verified", "protected", "secure"],
+  "categories": ["security"],
+  "useCases": ["Shows that an account is protected", "Marks a verified domain"],
+  "variants": ["line", "filled"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

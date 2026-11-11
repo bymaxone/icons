@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "ID card",
+  "tags": ["id", "card", "identity", "badge", "profile"],
+  "categories": ["people-roles"],
+  "useCases": ["Shows a profile card", "Verifies a person's identity"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}
