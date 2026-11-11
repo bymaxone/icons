@@ -22,7 +22,7 @@ SVGO's `convertPathData` with `applyTransforms` applies `translate(2 2) scale(5/
 
 ### Metadata
 
-Each mark records as `source` the file its path was taken from, in the Simple Icons repository at the pinned version; `guidelines` from the Simple Icons data, or the owner's own page where that data gives none; `license` CC0-1.0; and `retrievedAt` 2026-11-11. `src/brands/provenance.spec.ts` holds every record to that `source`.
+Each mark's `source` names the file its path was taken from, at the pinned version of the `simple-icons` development dependency; `src/brands/provenance.spec.ts` holds every record to it.
 
 ### Not in 1.0
 
