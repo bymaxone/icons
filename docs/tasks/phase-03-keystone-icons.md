@@ -57,25 +57,23 @@ Measured with resvg at 20x zoom. The bounding box includes the stroke, the centr
 
 ### B0.1: four drawings redrawn
 
-The similarity check of P3 measured the batch against 9,382 third-party icons. Four
-composites lay between 0.15 and 0.23 px from the archetype another set draws, so the
-auditor reopened them. The rule for the redraw: above 0.30 px from every reference, still
-reading as its concept at 16 px, in the set's language. Each got two variants, and these
-were approved by the delegated auditor on behalf of the founder, 2026-11-11:
+The similarity check of P3 found these composites close to the archetype another set
+draws, so the auditor reopened them. The rule for the redraw: above 0.30 px from every
+reference, still reading as its concept at 16 px, in the set's language. The variants
+below were approved by the delegated auditor on behalf of the founder, 2026-11-11:
 
 - **`folder` (f5).** The folder is two parts: a front panel, and a back panel whose tab
   peeks above it and stops a cut short of it.
 - **`search` (q1).** The handle is a capsule outline, heavy by its mass and not by its
   stroke, a cut away from the lens.
-- **`settings` (s9).** Seven narrow teeth (18 degrees at the tip, 26 at the root), a
-  proportion none of the four sets draws, around a hub that stands free of the root.
-- **`lightning` (a1).** One piece, narrow and steep, with a short horizontal landing and
-  sharp tips. A bolt split in two was rejected: it applies the cut to a single part, and
-  it reads as a broken bolt.
+- **`settings` (s9).** Seven narrow teeth around a hub that stands free of the root.
+- **`lightning` (a1).** One piece, narrow and steep, with a short horizontal landing. A
+  bolt split in two was rejected: it applies the cut to a single part, and it reads as a
+  broken bolt.
 
 The measurements above are the redrawn ones. The similarity report of the whole batch is in
-[`../contact-sheets/b0.1/similarity.md`](../contact-sheets/b0.1/similarity.md): only
-`plus`, `close` and `check`, the primitives of spec §3.5, are flagged.
+[`../contact-sheets/b0.1/similarity.md`](../contact-sheets/b0.1/similarity.md); only
+primitives (spec §3.5) are flagged there.
 
 ### Evidence
 

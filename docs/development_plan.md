@@ -255,9 +255,9 @@ These rules apply to every phase. Phase sections only add rules specific to them
   reference while still reading as its concept at 16 px. `search` may instead be accepted
   as a primitive glyph (spec §3.5), with the measurement that justifies it.
 - **Redrawn (B0.1):** folder f5, search q1, settings s9 and lightning a1 approved by the
-  delegated auditor on behalf of the founder, 2026-11-11. Every composite of the batch now
-  lies above 0.30 px from its nearest third-party icon; only the three primitives are
-  flagged. The evidence is in [`contact-sheets/b0.1/`](./contact-sheets/b0.1/).
+  delegated auditor on behalf of the founder, 2026-11-11. The similarity report holds the
+  measured distances, and only primitives are flagged. The evidence is in
+  [`contact-sheets/b0.1/`](./contact-sheets/b0.1/).
 - **Size:** M
 
 ### P3: visual-tooling
