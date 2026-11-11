@@ -1,6 +1,6 @@
 # Phase P4: catalog-site
 
-> **Status**: 👀 Review · **Progress**: 2 / 4 tasks · **Last updated**: 2026-11-11
+> **Status**: ✅ Done · **Progress**: 3 / 4 tasks · **Last updated**: 2026-11-11
 > **Source roadmap**: [`../development_plan.md`](../development_plan.md) §5 (P4)
 > **Source spec**: [`../technical_specification.md`](../technical_specification.md) §9, §17 (D4)
 
@@ -18,18 +18,18 @@ The catalog is a static site in `site/`, built by `pnpm site` from the package's
 
 ### Publishing
 
-`.github/workflows/pages.yml` builds the site from `main` and deploys it to GitHub Pages. The CI `verify` job builds it on every pull request. The DNS record of `icons.bymax.one`, a CNAME to `bymaxone.github.io`, is the founder's to create.
+`.github/workflows/pages.yml` builds the site from `main` and deploys it to GitHub Pages. The CI `verify` job builds it on every pull request. The DNS record of `icons.bymax.one`, a CNAME to `bymaxone.github.io`, is the founder's to create; task 11.4 waits on it.
 
 ---
 
 ## Task index
 
-| ID   | Task                                         | Status    | Priority | Size | Depends on |
-| ---- | -------------------------------------------- | --------- | -------- | ---- | ---------- |
-| 11.1 | Model, escaping and search, with their tests | ✅ Done   | P0       | S    | none       |
-| 11.2 | Pages, browser script, styles and the build  | ✅ Done   | P0       | M    | 11.1       |
-| 11.3 | CI build and the Pages workflow              | 👀 Review | P0       | S    | 11.2       |
-| 11.4 | Publish on `icons.bymax.one`                 | 📋 ToDo   | P0       | S    | 11.3       |
+| ID   | Task                                         | Status     | Priority | Size | Depends on |
+| ---- | -------------------------------------------- | ---------- | -------- | ---- | ---------- |
+| 11.1 | Model, escaping and search, with their tests | ✅ Done    | P0       | S    | none       |
+| 11.2 | Pages, browser script, styles and the build  | ✅ Done    | P0       | M    | 11.1       |
+| 11.3 | CI build and the Pages workflow              | ✅ Done    | P0       | S    | 11.2       |
+| 11.4 | Publish on `icons.bymax.one`                 | ⛔ Blocked | P0       | S    | 11.3       |
 
 ---
 
@@ -39,3 +39,4 @@ The catalog is a static site in `site/`, built by `pnpm site` from the package's
 
 - 11.1 ✅ 2026-11-11 The catalog model, the escaping and the search, at full coverage.
 - 11.2 ✅ 2026-11-11 The home page with the construction specimen, one page per icon and brand mark, and the build.
+- 11.3 ✅ 2026-11-11 The CI builds the site and the Pages workflow deploys it; the design is approved by the delegated auditor on behalf of the founder.
