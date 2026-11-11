@@ -114,7 +114,7 @@ These rules are the identity of the set. They are applied to every icon and chec
 
 ### 2.6 Filled variant
 
-- Same outer silhouette as the line icon, so switching causes no size jump: the line drawing's closed parts filled together with their stroke, its open parts kept as stroke, and the same bounding box.
+- Same outer silhouette as the line icon, so switching causes no size jump: the line drawing's closed parts filled together with their stroke, its open parts kept as stroke, and the same bounding box. The one exception is `eye`: an almond as tall as the line icon's lids reads as a target, so its filled almond keeps the line icon's width and stops 0.75 units short of its top and bottom.
 - Interior details are knocked out at 1.5 px, and no knockout is narrower than 1.5 units at 24 px.
 - The silhouette reads in the blur test at 16 px. A knockout that closes at 16 px is measured and reported with the batch, not hidden.
 - Each path is written at the lowest precision that keeps every pixel within 32 of 255 of the three-decimal path at 1x, at 24 and at 16 px, and adds no knockout and narrows none.
