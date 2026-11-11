@@ -5,3 +5,4 @@
  */
 
 export { UsersIcon } from './line'
+export { UsersFilledIcon } from './filled'

@@ -5,3 +5,4 @@
  */
 
 export { MessageIcon } from './line'
+export { MessageFilledIcon } from './filled'

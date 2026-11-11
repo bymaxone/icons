@@ -2,14 +2,18 @@
   "$schema": "../../schemas/icon.schema.json",
   "tags": ["warning", "caution", "danger", "exclamation"],
   "categories": ["status"],
-  "useCases": ["Shows a warning message", "Marks a field that needs attention"],
+  "useCases": [
+    "Shows a warning message",
+    "Marks a field that needs attention",
+    "Filled: a warning that is active"
+  ],
   "aliases": [
     {
       "name": "warning",
       "deprecated": false
     }
   ],
-  "variants": ["line"],
+  "variants": ["line", "filled"],
   "opticalSizes": [24],
   "since": "0.1.0"
 }

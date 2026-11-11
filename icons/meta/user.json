@@ -2,8 +2,12 @@
   "$schema": "../../schemas/icon.schema.json",
   "tags": ["person", "account", "profile", "avatar"],
   "categories": ["people-roles"],
-  "useCases": ["Links to the user profile", "Stands in for a missing avatar"],
-  "variants": ["line"],
+  "useCases": [
+    "Links to the user profile",
+    "Stands in for a missing avatar",
+    "Filled: the profile tab while it is active"
+  ],
+  "variants": ["line", "filled"],
   "opticalSizes": [24],
   "since": "0.1.0"
 }

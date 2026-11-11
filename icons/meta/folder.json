@@ -2,8 +2,12 @@
   "$schema": "../../schemas/icon.schema.json",
   "tags": ["directory", "collection", "group", "project"],
   "categories": ["files"],
-  "useCases": ["Represents a folder in a file tree", "Groups related items"],
-  "variants": ["line"],
+  "useCases": [
+    "Represents a folder in a file tree",
+    "Groups related items",
+    "Filled: the selected folder"
+  ],
+  "variants": ["line", "filled"],
   "opticalSizes": [24],
   "since": "0.1.0"
 }

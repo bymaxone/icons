@@ -5,3 +5,4 @@
  */
 
 export { SunIcon } from './line'
+export { SunFilledIcon } from './filled'

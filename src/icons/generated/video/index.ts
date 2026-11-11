@@ -5,3 +5,4 @@
  */
 
 export { VideoIcon } from './line'
+export { VideoFilledIcon } from './filled'

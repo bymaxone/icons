@@ -2,8 +2,8 @@
   "$schema": "../../schemas/icon.schema.json",
   "tags": ["notifications", "alerts", "alarm", "ring"],
   "categories": ["system"],
-  "useCases": ["Opens the notifications", "Shows unread alerts"],
-  "variants": ["line"],
+  "useCases": ["Opens the notifications", "Shows unread alerts", "Filled: unread notifications"],
+  "variants": ["line", "filled"],
   "opticalSizes": [24],
   "since": "0.1.0"
 }

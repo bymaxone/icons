@@ -85,7 +85,7 @@ and is not built yet.
   the `aspect-*` formats to `sparkle`, `octopus` (alias `polvi`) and `bell`, 148 in all
 - 📋 **About 125 original icons**: common concepts plus the Studio's own (scene, shot,
   keyframe, credit, spending cap, lip-sync, version)
-- 📋 **Filled variants** for the icons with a stateful meaning, with the same silhouette as
+- ✅ **Filled variants** for 40 icons with a stateful meaning, with the same silhouette as
   the line icon so switching causes no size jump
 - 📋 **Hand-tuned 16 px masters** for the icons used in dense UI, drawn separately rather
   than scaled

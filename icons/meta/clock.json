@@ -2,8 +2,12 @@
   "$schema": "../../schemas/icon.schema.json",
   "tags": ["time", "duration", "schedule", "pending"],
   "categories": ["status"],
-  "useCases": ["Shows a time or a duration", "Marks an item that is scheduled"],
-  "variants": ["line"],
+  "useCases": [
+    "Shows a time or a duration",
+    "Marks an item that is scheduled",
+    "Filled: an item that is scheduled"
+  ],
+  "variants": ["line", "filled"],
   "opticalSizes": [24],
   "since": "0.1.0"
 }

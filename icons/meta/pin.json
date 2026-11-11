@@ -2,8 +2,12 @@
   "$schema": "../../schemas/icon.schema.json",
   "tags": ["pushpin", "keep", "stick", "favourite"],
   "categories": ["actions"],
-  "useCases": ["Pins an item to the top of a list", "Keeps a panel open"],
-  "variants": ["line"],
+  "useCases": [
+    "Pins an item to the top of a list",
+    "Keeps a panel open",
+    "Filled: an item that is pinned"
+  ],
+  "variants": ["line", "filled"],
   "opticalSizes": [24],
   "since": "0.1.0"
 }

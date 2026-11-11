@@ -1,6 +1,6 @@
 # Phase B4a: brand-marks
 
-> **Status**: 👀 Review · **Progress**: 3 / 4 tasks · **Last updated**: 2026-11-11
+> **Status**: ✅ Done · **Progress**: 4 / 4 tasks · **Last updated**: 2026-11-11
 > **Source roadmap**: [`../development_plan.md`](../development_plan.md) §5 (B4)
 > **Source spec**: [`../technical_specification.md`](../technical_specification.md) §5, §17 (D3)
 >
@@ -33,12 +33,12 @@ Each mark's `source` names the file its path was taken from, at the pinned versi
 
 ## Task index
 
-| ID  | Task                                                   | Status    | Priority | Size | Depends on |
-| --- | ------------------------------------------------------ | --------- | -------- | ---- | ---------- |
-| 8.1 | Import the marks and their metadata                    | ✅ Done   | P0       | S    | none       |
-| 8.2 | Evidence, budgets and the record of what is not in 1.0 | ✅ Done   | P0       | S    | 8.1        |
-| 8.3 | Approval                                               | ✅ Done   | P0       | S    | 8.2        |
-| 8.4 | Phase commit and pull request                          | 👀 Review | P0       | S    | 8.3        |
+| ID  | Task                                                   | Status  | Priority | Size | Depends on |
+| --- | ------------------------------------------------------ | ------- | -------- | ---- | ---------- |
+| 8.1 | Import the marks and their metadata                    | ✅ Done | P0       | S    | none       |
+| 8.2 | Evidence, budgets and the record of what is not in 1.0 | ✅ Done | P0       | S    | 8.1        |
+| 8.3 | Approval                                               | ✅ Done | P0       | S    | 8.2        |
+| 8.4 | Phase commit and pull request                          | ✅ Done | P0       | S    | 8.3        |
 
 ---
 
@@ -49,3 +49,4 @@ Each mark's `source` names the file its path was taken from, at the pinned versi
 - 8.1 ✅ 2026-11-11 The marks placed in the live area from Simple Icons 16.37.0, with their metadata.
 - 8.2 ✅ 2026-11-11 Comparison sheet and table, the brands budget, spec §5, D3 and `TRADEMARKS.md` updated.
 - 8.3 ✅ 2026-11-11 Approved by the delegated auditor on behalf of the founder.
+- 8.4 ✅ 2026-11-11 Merged in pull request #14.

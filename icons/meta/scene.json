@@ -2,8 +2,12 @@
   "$schema": "../../schemas/icon.schema.json",
   "tags": ["clapperboard", "take", "episode", "film"],
   "categories": ["media-video"],
-  "useCases": ["Represents a scene of an episode", "Opens the scene editor"],
-  "variants": ["line"],
+  "useCases": [
+    "Represents a scene of an episode",
+    "Opens the scene editor",
+    "Filled: the selected scene"
+  ],
+  "variants": ["line", "filled"],
   "opticalSizes": [24],
   "since": "0.1.0"
 }

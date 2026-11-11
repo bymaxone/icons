@@ -5,3 +5,4 @@
  */
 
 export { MicIcon } from './line'
+export { MicFilledIcon } from './filled'

@@ -5,3 +5,4 @@
  */
 
 export { DashboardIcon } from './line'
+export { DashboardFilledIcon } from './filled'

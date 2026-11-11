@@ -5,3 +5,4 @@
  */
 
 export { FolderIcon } from './line'
+export { FolderFilledIcon } from './filled'

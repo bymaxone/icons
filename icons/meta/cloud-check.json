@@ -2,8 +2,12 @@
   "$schema": "../../schemas/icon.schema.json",
   "tags": ["saved", "synced", "backup", "cloud"],
   "categories": ["status"],
-  "useCases": ["Shows that changes are saved", "Marks a project as synced"],
-  "variants": ["line"],
+  "useCases": [
+    "Shows that changes are saved",
+    "Marks a project as synced",
+    "Filled: everything is synced"
+  ],
+  "variants": ["line", "filled"],
   "opticalSizes": [24],
   "since": "0.1.0"
 }

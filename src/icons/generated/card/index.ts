@@ -5,3 +5,4 @@
  */
 
 export { CardIcon } from './line'
+export { CardFilledIcon } from './filled'

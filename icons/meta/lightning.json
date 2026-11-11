@@ -2,8 +2,12 @@
   "$schema": "../../schemas/icon.schema.json",
   "tags": ["bolt", "credit", "energy", "power"],
   "categories": ["credits-billing"],
-  "useCases": ["Shows a credit balance", "Marks an action that spends credits"],
-  "variants": ["line"],
+  "useCases": [
+    "Shows a credit balance",
+    "Marks an action that spends credits",
+    "Filled: a boost that is turned on"
+  ],
+  "variants": ["line", "filled"],
   "opticalSizes": [24],
   "since": "0.1.0"
 }

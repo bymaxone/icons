@@ -5,3 +5,4 @@
  */
 
 export { WalletIcon } from './line'
+export { WalletFilledIcon } from './filled'

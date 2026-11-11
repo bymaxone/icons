@@ -5,3 +5,4 @@
  */
 
 export { VolumeIcon } from './line'
+export { VolumeFilledIcon } from './filled'

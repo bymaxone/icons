@@ -5,3 +5,4 @@
  */
 
 export { LockIcon } from './line'
+export { LockFilledIcon } from './filled'

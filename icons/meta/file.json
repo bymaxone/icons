@@ -2,8 +2,12 @@
   "$schema": "../../schemas/icon.schema.json",
   "tags": ["document", "page", "paper", "sheet"],
   "categories": ["files"],
-  "useCases": ["Represents a document in a list", "Opens a file picker"],
-  "variants": ["line"],
+  "useCases": [
+    "Represents a document in a list",
+    "Opens a file picker",
+    "Filled: the selected file"
+  ],
+  "variants": ["line", "filled"],
   "opticalSizes": [24],
   "since": "0.1.0"
 }

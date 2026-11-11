@@ -5,3 +5,4 @@
  */
 
 export { CameraIcon } from './line'
+export { CameraFilledIcon } from './filled'

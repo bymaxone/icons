@@ -2,8 +2,12 @@
   "$schema": "../../schemas/icon.schema.json",
   "tags": ["photo", "capture", "snapshot", "picture"],
   "categories": ["media-video"],
-  "useCases": ["Takes a snapshot of a frame", "Opens the camera to capture a reference"],
-  "variants": ["line"],
+  "useCases": [
+    "Takes a snapshot of a frame",
+    "Opens the camera to capture a reference",
+    "Filled: the camera while it is on"
+  ],
+  "variants": ["line", "filled"],
   "opticalSizes": [24],
   "since": "0.1.0"
 }

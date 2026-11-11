@@ -5,3 +5,4 @@
  */
 
 export { CheckCircleIcon } from './line'
+export { CheckCircleFilledIcon } from './filled'

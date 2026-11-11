@@ -5,3 +5,4 @@
  */
 
 export { PauseIcon } from './line'
+export { PauseFilledIcon } from './filled'

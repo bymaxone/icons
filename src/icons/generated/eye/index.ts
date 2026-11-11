@@ -5,3 +5,4 @@
  */
 
 export { EyeIcon } from './line'
+export { EyeFilledIcon } from './filled'

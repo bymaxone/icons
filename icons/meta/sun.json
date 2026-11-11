@@ -2,8 +2,12 @@
   "$schema": "../../schemas/icon.schema.json",
   "tags": ["light mode", "day", "brightness", "theme"],
   "categories": ["system"],
-  "useCases": ["Switches to the light theme", "Shows the light mode option"],
-  "variants": ["line"],
+  "useCases": [
+    "Switches to the light theme",
+    "Shows the light mode option",
+    "Filled: the light theme while it is active"
+  ],
+  "variants": ["line", "filled"],
   "opticalSizes": [24],
   "since": "0.1.0"
 }

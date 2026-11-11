@@ -5,3 +5,4 @@
  */
 
 export { PinIcon } from './line'
+export { PinFilledIcon } from './filled'

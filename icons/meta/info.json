@@ -2,8 +2,12 @@
   "$schema": "../../schemas/icon.schema.json",
   "tags": ["information", "details", "about", "help"],
   "categories": ["status"],
-  "useCases": ["Shows a hint beside a setting", "Opens the details of an item"],
-  "variants": ["line"],
+  "useCases": [
+    "Shows a hint beside a setting",
+    "Opens the details of an item",
+    "Filled: an information notice that is open"
+  ],
+  "variants": ["line", "filled"],
   "opticalSizes": [24],
   "since": "0.1.0"
 }

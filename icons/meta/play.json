@@ -2,8 +2,12 @@
   "$schema": "../../schemas/icon.schema.json",
   "tags": ["start", "media", "video", "resume"],
   "categories": ["media-video"],
-  "useCases": ["Starts playback of a video or audio track", "Runs a preview"],
-  "variants": ["line"],
+  "useCases": [
+    "Starts playback of a video or audio track",
+    "Runs a preview",
+    "Filled: the main play button of a player"
+  ],
+  "variants": ["line", "filled"],
   "opticalSizes": [24],
   "since": "0.1.0"
 }

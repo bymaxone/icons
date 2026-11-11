@@ -5,3 +5,4 @@
  */
 
 export { SceneIcon } from './line'
+export { SceneFilledIcon } from './filled'

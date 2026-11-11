@@ -5,3 +5,4 @@
  */
 
 export { AlertTriangleIcon, WarningIcon } from './line'
+export { AlertTriangleFilledIcon, WarningFilledIcon } from './filled'

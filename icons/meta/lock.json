@@ -2,8 +2,12 @@
   "$schema": "../../schemas/icon.schema.json",
   "tags": ["locked", "private", "secure", "padlock"],
   "categories": ["status"],
-  "useCases": ["Marks a private project", "Locks a layer against edits"],
-  "variants": ["line"],
+  "useCases": [
+    "Marks a private project",
+    "Locks a layer against edits",
+    "Filled: an item that is locked"
+  ],
+  "variants": ["line", "filled"],
   "opticalSizes": [24],
   "since": "0.1.0"
 }

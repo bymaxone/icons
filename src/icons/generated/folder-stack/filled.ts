@@ -1,0 +1,26 @@
+/**
+ * @fileoverview The `folder-stack` icon, filled variant.
+ * Written by `pnpm generate` from icons/filled/folder-stack.svg: edit the source, never this file.
+ * @layer Generated
+ */
+
+import { createIcon } from '@bymax-one/icons/runtime'
+
+/**
+ * The `folder-stack` icon, filled variant: folders, projects, collection, all files.
+ *
+ * @since 0.1.0
+ */
+export const FolderStackFilledIcon = /* @__PURE__ */ createIcon(
+  'folder-stack-filled',
+  [
+    [
+      'path',
+      {
+        fillRule: 'evenodd',
+        d: 'M5.5 4.75v1.5l.01.15.05.14.07.13.09.11.11.1.13.06.14.05q.07.02.15.01t.15-.01.14-.05.13-.07.11-.09l.1-.11.06-.13L7 6.4V4.75Q7 4 7.75 4H10q1 0 1.8.6 1.2.9 2.7.9h3.25l.15-.01.14-.05.13-.07.11-.09.1-.11.06-.13.05-.14q.02-.07.01-.15t-.01-.15-.05-.14-.07-.13-.09-.11l-.11-.1-.13-.06L17.9 4h-3.4q-1 0-1.8-.6-1.2-.9-2.7-.9H7.75Q5.5 2.5 5.5 4.75M16.75 8.5h-6.5q-2.75 0-3.75 1t-1 3.75v1q0 2.75 1 3.75t3.75 1h6.5q2.75 0 3.75-1t1-3.75v-1q0-2.75-1-3.75t-3.75-1M4 10.75v6.5q0 2.13.56 2.69t2.69.56h9l.15.01.14.05.13.07.11.09.1.11.06.13.05.14q.02.07.01.15t-.01.15-.05.14-.07.13-.09.11l-.11.1-.13.06-.14.05q-.07.02-.15.01h-9Q4.5 22 3.5 21t-1-3.75v-6.5l.01-.15.05-.14.07-.13.09-.11.11-.1.13-.06.14-.05q.07-.02.15-.01t.15.01.14.05.13.07.11.09.1.11l.06.13.05.14q.02.07.01.15'
+      }
+    ]
+  ],
+  { paint: 'fill' }
+)

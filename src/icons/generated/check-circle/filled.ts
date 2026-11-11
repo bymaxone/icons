@@ -1,0 +1,26 @@
+/**
+ * @fileoverview The `check-circle` icon, filled variant.
+ * Written by `pnpm generate` from icons/filled/check-circle.svg: edit the source, never this file.
+ * @layer Generated
+ */
+
+import { createIcon } from '@bymax-one/icons/runtime'
+
+/**
+ * The `check-circle` icon, filled variant: success, done, complete, approved.
+ *
+ * @since 0.1.0
+ */
+export const CheckCircleFilledIcon = /* @__PURE__ */ createIcon(
+  'check-circle-filled',
+  [
+    [
+      'path',
+      {
+        fillRule: 'evenodd',
+        d: 'M2.25 12.75q0-3.73 2.64-6.36t6.36-2.64 6.36 2.64q.37.36.69.75l-7.55 7.55-2.47-2.47-.11-.1-.13-.06L7.9 12h-.15l-.15.01q-.07.01-.14.05t-.13.07-.11.09q-.1.1-.16.24t-.06.29.06.29.16.24l3 3 .11.1.13.06.14.05q.07.02.15.01t.15-.01.14-.05.13-.07.11-.09l7.88-7.88q1.09 1.95 1.09 4.35 0 3.73-2.64 6.36t-6.36 2.64-6.36-2.64-2.64-6.36m18-5.44q-.39-.64-.89-1.23l.86-.86.11-.1.13-.06.14-.05q.07-.02.15-.01t.15.01.14.05.13.07.11.09q.1.1.16.24t.06.29-.06.29-.16.24z'
+      }
+    ]
+  ],
+  { paint: 'fill' }
+)
