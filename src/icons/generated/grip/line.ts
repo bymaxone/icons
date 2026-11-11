@@ -12,10 +12,10 @@ import { createIcon } from '@bymax-one/icons/runtime'
  * @since 0.1.0
  */
 export const GripIcon = /* @__PURE__ */ createIcon('grip', [
-  ['circle', { cx: 9.25, cy: 5.75, r: 1 }],
-  ['circle', { cx: 9.25, cy: 12.25, r: 1 }],
-  ['circle', { cx: 9.25, cy: 18.75, r: 1 }],
-  ['circle', { cx: 15.25, cy: 5.75, r: 1 }],
-  ['circle', { cx: 15.25, cy: 12.25, r: 1 }],
-  ['circle', { cx: 15.25, cy: 18.75, r: 1 }]
+  ['circle', { cx: 9.25, cy: 5.75, r: 0.75 }],
+  ['circle', { cx: 9.25, cy: 12.25, r: 0.75 }],
+  ['circle', { cx: 9.25, cy: 18.75, r: 0.75 }],
+  ['circle', { cx: 15.25, cy: 5.75, r: 0.75 }],
+  ['circle', { cx: 15.25, cy: 12.25, r: 0.75 }],
+  ['circle', { cx: 15.25, cy: 18.75, r: 0.75 }]
 ])

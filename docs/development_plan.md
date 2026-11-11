@@ -286,6 +286,8 @@ These rules apply to every phase. Phase sections only add rules specific to them
   §4.1, with metadata.
 - **Definition of Done:** the batch gate of section 4, rule 11; `bymax-studio-web` consumes the
   package through a local link.
+- **Approved (2026-11-11):** the 44 drawings, approved by the delegated auditor on behalf of
+  the founder, 2026-11-11, after one round that redrew `dashboard`, `library` and `templates`.
 - **Studio adoption deferred (2026-11-11):** `bymax-studio-web` is still in its specification
   phase, with documents only and no `package.json`, so it has nothing to link the package
   into. The adoption becomes a criterion again in the first batch that closes after the Studio

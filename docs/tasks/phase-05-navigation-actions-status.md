@@ -1,10 +1,10 @@
 # Phase B1: navigation-actions-status
 
-> **Status**: 👀 Review · **Progress**: 4 / 6 tasks · **Last updated**: 2026-11-11
+> **Status**: 👀 Review · **Progress**: 5 / 6 tasks · **Last updated**: 2026-11-11
 > **Source roadmap**: [`../development_plan.md`](../development_plan.md) §5 (B1)
 > **Source spec**: [`../technical_specification.md`](../technical_specification.md) §2, §3, §4.1, §16, §17 (D5)
 >
-> The 44 drawings, their evidence and the size budgets are in the pull request; the batch waits for the approval of the delegated auditor.
+> The 44 drawings are approved by the delegated auditor on behalf of the founder, 2026-11-11; the phase pull request is open.
 
 ---
 
@@ -14,9 +14,24 @@ B1 draws the rest of the Navigation, Actions and Status categories of spec §4.1
 
 The drawings are written as code on the 24 unit grid, as in B0 (decision D1), in the language B0 fixed: the 1.5 px round stroke, squircle corners, and the cut between distinct parts. No third-party set was open while drawing. The similarity check of P3 measured every drawing against the icons of the reference sets, and every composite it placed at 0.30 px or closer was redrawn or carries a justification beside a measured alternative (below).
 
+### Approval
+
+**Batch approved by the delegated auditor on behalf of the founder, 2026-11-11.** The first round approved 34 drawings as drawn, sent back `dashboard`, `library` and `templates` for a redraw and asked for seven adjustments; the second round chose among two variants of each and approved the adjustments:
+
+- **`dashboard`** read as "08": a tall stadium is a zero and two stacked capsules an eight. It is now a wide header tile over a square and a narrow tile, all with small corners.
+- **`library`** read as a bar chart inside a frame. It is now an upright book and a leaning one on a shelf, a cut above it, with corners of 0.5 so a narrow book never reads as a zero.
+- **`templates`** read as an identity badge, and was the heaviest drawing of the set. It is now a layout without a frame: a header line, a block and three lines.
+- **`version`** read as a drawer with its handle. It is now a stack of cards: the front card, and the top edges of two cards behind it, whose corners turn down.
+- **`grip`**, **`more-horizontal`** and **`more-vertical`**: a circle of radius 1 under a 1.5 stroke left a hole of 0.5 units, which shows at 48 px. The dots are now radius 0.75, solid.
+- **`share`** sat 0.25 outside the 2 to 22 guide; **`history`** takes the hands of `clock`; **`folder-stack`** came under the ink ceiling.
+
+The ink ceiling reached one drawing of B0: `scene` covered 22.1% of the canvas. Its board is now one unit lower, and the whole drawing sits 0.5 units lower so it is centred again: 18.30 x 16.80 units, ink centroid 11.51, 12.25, ink 21.4%, nearest reference phosphor/film-slate at 0.76. The change was approved by the delegated auditor with the batch.
+
+Two rules came out of the audit and are now in spec §2.5: an ink ceiling of 21.5% of the canvas, and no part that reads as a digit or a letter. The conventional glyphs of the batch are listed in spec §3 item 5. A future `unlock` must lift one leg of the shackle by at least 3 units, so it does not read as the closed `lock`, whose shackle already stands a cut above the body.
+
 ### Where the language shows
 
-- **The cut.** The lid of `trash` stands a cut above the can; the stem of `filter` and the needle of `pin` hang a cut below their bodies; the shackle of `lock` stops a cut above the body; the divider of `sidebar` stops a cut short of the frame; the eraser of `pencil` is a part of its own. The two hands of `clock` are two parts, the hour hand a cut away from the minute hand.
+- **The cut.** The lid of `trash` stands a cut above the can; the stem of `filter` and the needle of `pin` hang a cut below their bodies; the shackle of `lock` stops a cut above the body; the divider of `sidebar` stops a cut short of the frame; the eraser of `pencil` is a part of its own. The two hands of `clock` and of `history` are two parts, the hour hand a cut away from the minute hand; the books of `library` stand a cut above the shelf.
 - **The knockout (spec §2.4, item 1).** Where one part crosses another, the part behind is cut 1.5 px clear of it: the check of `check-circle` and of `cloud-check` breaks through its outline, the slash of `eye-off` cuts the eye, and the front card of `copy` and `duplicate` hides the back card.
 - **Arrows enter their trays.** The arrow of `download` ends a cut above the floor of its tray, and the arrow of `upload` rises from the same point.
 
@@ -26,13 +41,13 @@ The report is [`../contact-sheets/b1/similarity.md`](../contact-sheets/b1/simila
 
 | Drawing                                                    | Nearest (d)                       | Why it stays, and the measured alternative                                                                                                                                                             |
 | ---------------------------------------------------------- | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `chevron-*`, `arrow-left`, `arrow-right`, `arrow-up-right` | 0.00 to 0.02                      | Primitive glyphs, expected to coincide (spec §3 item 5).                                                                                                                                               |
+| `chevron-*`, `arrow-left`, `arrow-right`, `arrow-up-right` | 0.00 to 0.02                      | Primitive glyphs, expected to coincide (spec §3 item 5). The glyphs below are listed there too.                                                                                                        |
 | `alert-triangle`                                           | phosphor/warning 0.30             | The general warning sign of ISO 7010 (W001). A capsule glyph alternative measures 0.27.                                                                                                                |
 | `alert-circle`                                             | tabler/alert-circle 0.06          | A character in a circle. Tabler draws `circle-letter-*`, `circle-number-*` and `clock-hour-*` icons, so a glyph in a ring lands near one of them. A capsule glyph measures 0.22, a squircle face 0.08. |
 | `info`                                                     | heroicons/information-circle 0.05 | The information mark (ISO 7001), a character in a circle as above. A capsule glyph measures 0.22, a squircle face 0.08.                                                                                |
 | `menu`                                                     | lucide/align-justify 0.03         | Three equal lines, a typographic glyph. A shorter middle line measures 0.19, two lines 0.24.                                                                                                           |
-| `more-horizontal`, `more-vertical`                         | 0.01                              | Three dots, a typographic glyph. Dashes measure 0.29 and 0.51.                                                                                                                                         |
-| `grip`                                                     | lucide/grip-vertical 0.12         | Six dots. Dashes measure 0.68, four dots 1.42.                                                                                                                                                         |
+| `more-horizontal`, `more-vertical`                         | 0.09, 0.10                        | Three dots, a typographic glyph. Dashes measure 0.29 and 0.51.                                                                                                                                         |
+| `grip`                                                     | lucide/grip-vertical 0.29         | Six dots. Dashes measure 0.68, four dots 1.42.                                                                                                                                                         |
 
 ### Measurements
 
@@ -53,37 +68,37 @@ Measured with resvg at 20x zoom. The bounding box includes the stroke, the centr
 | `clock`           | 18.50 x 18.50 | 12.41, 12.14 | 17.7% |
 | `cloud-check`     | 19.75 x 15.75 | 11.77, 12.99 | 12.8% |
 | `copy`            | 19.00 x 19.00 | 11.85, 11.85 | 17.6% |
-| `dashboard`       | 19.00 x 19.00 | 12.17, 11.86 | 24.9% |
+| `dashboard`       | 16.00 x 16.00 | 12.07, 12.01 | 21.0% |
 | `download`        | 17.50 x 18.50 | 12.22, 15.90 | 13.9% |
 | `duplicate`       | 19.00 x 19.00 | 12.32, 12.32 | 20.7% |
 | `eye`             | 16.00 x 14.00 | 12.22, 12.23 | 14.3% |
 | `eye-off`         | 17.50 x 17.50 | 12.22, 12.22 | 13.4% |
 | `filter`          | 17.30 x 17.00 | 12.22, 8.91  | 11.6% |
-| `folder-stack`    | 19.00 x 19.50 | 11.16, 13.38 | 21.9% |
-| `grip`            | 9.50 x 16.50  | 12.22, 12.23 | 9.8%  |
-| `history`         | 17.50 x 17.50 | 12.88, 11.55 | 15.6% |
+| `folder-stack`    | 19.00 x 19.50 | 11.19, 13.31 | 21.1% |
+| `grip`            | 9.00 x 16.00  | 12.22, 12.23 | 7.3%  |
+| `history`         | 17.50 x 17.50 | 12.95, 11.54 | 15.7% |
 | `info`            | 18.50 x 18.50 | 12.22, 12.36 | 15.8% |
-| `library`         | 19.00 x 19.00 | 11.60, 12.27 | 25.6% |
+| `library`         | 19.50 x 16.05 | 11.85, 13.53 | 20.8% |
 | `link`            | 18.60 x 18.60 | 12.22, 12.23 | 15.3% |
 | `loader`          | 17.15 x 17.50 | 14.51, 13.32 | 8.5%  |
 | `lock`            | 16.50 x 19.00 | 12.22, 13.29 | 16.7% |
 | `menu`            | 16.50 x 13.50 | 12.22, 12.22 | 12.6% |
-| `more-horizontal` | 17.50 x 3.50  | 12.22, 12.23 | 4.9%  |
-| `more-vertical`   | 3.50 x 17.50  | 12.22, 12.23 | 4.9%  |
+| `more-horizontal` | 17.00 x 3.00  | 12.22, 12.23 | 3.7%  |
+| `more-vertical`   | 3.00 x 17.00  | 12.22, 12.23 | 3.7%  |
 | `pencil`          | 17.05 x 17.05 | 11.57, 12.37 | 12.0% |
 | `pin`             | 13.40 x 19.50 | 12.22, 10.52 | 11.4% |
 | `queued`          | 15.50 x 18.50 | 12.22, 12.22 | 19.6% |
 | `redo`            | 16.75 x 15.20 | 12.18, 12.79 | 10.6% |
 | `refresh`         | 17.00 x 17.00 | 12.22, 12.22 | 13.8% |
 | `repair`          | 18.75 x 18.75 | 11.34, 12.61 | 12.2% |
-| `share`           | 20.25 x 19.50 | 13.15, 12.22 | 14.6% |
+| `share`           | 20.00 x 19.50 | 13.27, 12.23 | 14.4% |
 | `sidebar`         | 20.00 x 17.50 | 11.57, 12.23 | 19.6% |
 | `sort`            | 16.20 x 18.50 | 12.22, 12.23 | 11.1% |
-| `templates`       | 19.00 x 19.00 | 11.36, 11.63 | 27.4% |
+| `templates`       | 17.00 x 16.00 | 10.88, 11.33 | 17.8% |
 | `trash`           | 18.50 x 18.50 | 12.22, 11.90 | 14.5% |
 | `undo`            | 16.75 x 15.20 | 12.27, 12.79 | 10.6% |
 | `upload`          | 17.50 x 18.50 | 12.22, 14.21 | 13.9% |
-| `version`         | 19.00 x 18.00 | 11.87, 12.75 | 21.0% |
+| `version`         | 18.00 x 19.00 | 11.98, 12.26 | 19.2% |
 
 ### Evidence
 
@@ -129,7 +144,7 @@ The declaration build ran out of memory with 56 icons: the bundler inside tsup 9
 | 5.2 | Draw the action icons and their metadata     | ✅ Done   | P0       | M    | none       |
 | 5.3 | Draw the status icons and their metadata     | ✅ Done   | P0       | M    | none       |
 | 5.4 | Evidence, similarity and size budgets        | ✅ Done   | P0       | S    | 5.1 to 5.3 |
-| 5.5 | Batch approval                               | 👀 Review | P0       | S    | 5.4        |
+| 5.5 | Batch approval                               | ✅ Done   | P0       | S    | 5.4        |
 | 5.6 | Phase commit and pull request                | 👀 Review | P0       | S    | 5.5        |
 
 ---
@@ -248,14 +263,14 @@ Verification:
 
 ### Task 5.5: Batch approval
 
-- **Status**: 👀 Review
+- **Status**: ✅ Done
 - **Priority**: P0
 - **Size**: S
 - **Depends on**: 5.4
 
 #### Acceptance criteria
 
-- [ ] The batch is approved by the delegated auditor on behalf of the founder, and the approval is recorded in the plan and in this file.
+- [x] The batch is approved by the delegated auditor on behalf of the founder, and the approval is recorded in the plan and in this file.
 
 #### Agent prompt
 
@@ -302,3 +317,4 @@ the batch is approved and no thread is open.
 - 5.2 ✅ 2026-11-11 The 17 action icons drawn, with their metadata.
 - 5.3 ✅ 2026-11-11 The 14 status icons drawn, with their metadata.
 - 5.4 ✅ 2026-11-11 Sheets, similarity report, alternatives and baselines committed; the declaration build fixed and the size budgets recalibrated.
+- 5.5 ✅ 2026-11-11 Batch approved by the delegated auditor on behalf of the founder after one round: `dashboard`, `library` and `templates` redrawn, seven adjustments; spec §2.5 gains the ink ceiling and the digit-or-letter rule.

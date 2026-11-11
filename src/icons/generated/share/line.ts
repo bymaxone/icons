@@ -12,9 +12,9 @@ import { createIcon } from '@bymax-one/icons/runtime'
  * @since 0.1.0
  */
 export const ShareIcon = /* @__PURE__ */ createIcon('share', [
-  ['circle', { cx: 5.75, cy: 12.25, r: 3.25 }],
+  ['circle', { cx: 6, cy: 12.25, r: 3.25 }],
   ['circle', { cx: 19.25, cy: 5.25, r: 2 }],
   ['circle', { cx: 19.25, cy: 19.25, r: 2 }],
-  ['path', { d: 'm11.298 9.373 3.513-1.821' }],
-  ['path', { d: 'm11.298 15.127 3.513 1.821' }]
+  ['path', { d: 'm11.526 9.33 3.303-1.744' }],
+  ['path', { d: 'm11.526 15.17 3.303 1.744' }]
 ])
