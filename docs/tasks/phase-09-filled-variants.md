@@ -21,6 +21,7 @@ The forty: `home`, `dashboard`, `folder`, `folder-stack`, `library`, `templates`
 ### Rules of the phase
 
 - The ink ceiling of spec §2.5 does not apply to a filled drawing; spec §2.6 holds it to its line icon: the same silhouette and bounding box, knockouts of at least 1.5 units, a silhouette that reads in the 16 px blur test, and every knockout that closes at 16 px reported.
+- `eye` is the one drawing inside its line icon's bounding box rather than on it: a pointed almond as tall as the lids reads as a target, so it stops 0.75 units short at the top and bottom (see the construction record).
 - The size budget of spec §12 holds per component: at most 614.4 bytes brotli alone and 1536 with the runtime. No drawing is simplified to fit it.
 
 ---
