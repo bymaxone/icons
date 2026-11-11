@@ -1,10 +1,10 @@
 # Phase B4b: filled-variants
 
-> **Status**: 👀 Review · **Progress**: 2 / 4 tasks · **Last updated**: 2026-11-11
+> **Status**: ✅ Done · **Progress**: 4 / 4 tasks · **Last updated**: 2026-11-11
 > **Source roadmap**: [`../development_plan.md`](../development_plan.md) §5 (B4)
 > **Source spec**: [`../technical_specification.md`](../technical_specification.md) §2.5, §2.6, §12
 >
-> The drawings wait for the delegated auditor's approval on behalf of the founder.
+> The drawings are approved by the delegated auditor on behalf of the founder, 2026-11-11.
 
 ---
 
@@ -28,12 +28,12 @@ The forty: `home`, `dashboard`, `folder`, `folder-stack`, `library`, `templates`
 
 ## Task index
 
-| ID  | Task                                        | Status    | Priority | Size | Depends on |
-| --- | ------------------------------------------- | --------- | -------- | ---- | ---------- |
-| 9.1 | Draw the filled variants and their metadata | ✅ Done   | P0       | L    | none       |
-| 9.2 | Evidence, budgets and spec §2.5 and §2.6    | ✅ Done   | P0       | S    | 9.1        |
-| 9.3 | Approval                                    | 👀 Review | P0       | S    | 9.2        |
-| 9.4 | Phase commit and pull request               | 📋 ToDo   | P0       | S    | 9.3        |
+| ID  | Task                                        | Status  | Priority | Size | Depends on |
+| --- | ------------------------------------------- | ------- | -------- | ---- | ---------- |
+| 9.1 | Draw the filled variants and their metadata | ✅ Done | P0       | L    | none       |
+| 9.2 | Evidence, budgets and spec §2.5 and §2.6    | ✅ Done | P0       | S    | 9.1        |
+| 9.3 | Approval                                    | ✅ Done | P0       | S    | 9.2        |
+| 9.4 | Phase commit and pull request               | ✅ Done | P0       | S    | 9.3        |
 
 ---
 
@@ -43,3 +43,5 @@ The forty: `home`, `dashboard`, `folder`, `folder-stack`, `library`, `templates`
 
 - 9.1 ✅ 2026-11-11 The filled drawings with their metadata, some written from their geometry.
 - 9.2 ✅ 2026-11-11 Sheets, per-icon measures, the precision rule, and spec §2.5 and §2.6 updated.
+- 9.3 ✅ 2026-11-11 Approved by the delegated auditor on behalf of the founder, after one redraw of `eye` and `scene`.
+- 9.4 ✅ 2026-11-11 Pull request #16.
