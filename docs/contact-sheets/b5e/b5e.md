@@ -4,8 +4,8 @@ The last sub-batch of B5. [`b5e-1.png`](./b5e-1.png) shows the 10 line drawings 
 
 ## Language
 
-- **`bold`, `italic` and `underline`** are the letters B, I and U built from the set's own 1.5 stroke, not taken from a font: the one accepted exception to "no part reads as a letter" (spec section 3.5).
-- **`align-left`, `align-right` and `align-justify`** keep the four lines of `align-center` and change only how they align.
+- **`bold`, `italic` and `underline`** are the letters B, I and U built from the set's own 1.5 stroke, not taken from a font: the one accepted exception to "no part reads as a letter" (spec section 2.5).
+- **`align-left`, `align-right` and `align-justify`** are four lines like `align-center`, set to an edge.
 - **`columns`** is the frame of `sidebar` with a full divider in the middle; a loose divider reads as the letter I.
 - **`code`** sets a short slash between two angle brackets, apart from them by the cut; `prompt` is a frame with a chevron and a cursor.
 - **`branch` and `pull-request`** draw the git family as a graph of rings, each apart from its lines by the cut.
