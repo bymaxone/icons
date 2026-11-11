@@ -23,8 +23,8 @@
 
 ## 1. Progress Dashboard
 
-> **Overall progress: 9 / 14 phases (64%)**
-> **Active phase:** R1 (aesthetic redraw), then B5 (general icons), before the release of P5; P0 still has
+> **Overall progress: 10 / 14 phases (71%)**
+> **Active phase:** B5 (general icons), before the release of P5; P0 still has
 > the GitHub settings of task 0.6
 > **Blocked phases:** none
 >
@@ -46,7 +46,7 @@
 | B3  | studio-ai-formats-billing         | ✅     | 100%     | L    | 2026-11-11   |
 | B4  | filled-variants-sm-masters-brands | ✅     | 100%     | L    | 2026-11-11   |
 | P4  | catalog-site                      | ✅     | 100%     | M    | 2026-11-11   |
-| R1  | aesthetic-redraw                  | 🔄     | 33%      | M    | 2026-11-11   |
+| R1  | aesthetic-redraw                  | ✅     | 100%     | M    | 2026-11-11   |
 | B5  | general-icons                     | 📋     | 0%       | L    | 2026-11-11   |
 | P5  | hardening-release                 | 🔄     | 25%      | M    | 2026-11-11   |
 | P6  | react-native                      | 📋     | 0%       | M    | 2026-11-08   |
@@ -376,6 +376,7 @@ These rules apply to every phase. Phase sections only add rules specific to them
 - **Definition of Done:** every group is merged, each approved by the auditor.
 - **Group 1 ✅ (2026-11-11):** octopus, gift, globe, brush, crop and lock, approved by the delegated auditor on behalf of the founder.
 - **Group 2 ✅ (2026-11-11):** version, plan, style, hand, eraser and repair, approved by the delegated auditor on behalf of the founder.
+- **Group 3 ✅ (2026-11-11):** lip-sync, folder-stack, agent, the four aspect formats, extend and library, approved by the delegated auditor on behalf of the founder.
 - **Size:** M
 
 ### B5: general-icons
