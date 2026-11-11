@@ -375,6 +375,7 @@ These rules apply to every phase. Phase sections only add rules specific to them
 - **Process:** two or three variants per item on one sheet, the current drawing first: the line drawing at 48 on the dark page, at 24 and 16 px 1x, at 48 on the light page, and blurred. The auditor chooses; the same rules apply (the cut, the ink ceiling, G, similarity d > 0.30). One pull request per group, in the order above.
 - **Definition of Done:** every group is merged, each approved by the auditor.
 - **Group 1 ✅ (2026-11-11):** octopus, gift, globe, brush, crop and lock, approved by the delegated auditor on behalf of the founder.
+- **Group 2 ✅ (2026-11-11):** version, plan, style, hand, eraser and repair, approved by the delegated auditor on behalf of the founder.
 - **Size:** M
 
 ### B5: general-icons
