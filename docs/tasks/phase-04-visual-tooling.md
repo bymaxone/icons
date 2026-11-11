@@ -89,9 +89,7 @@ The auditor accepted the method and the calibration, kept those five and the thr
 The unprivileged job runs the base branch's scripts, so a pull request whose base predates
 them has no preview, by design: the pull request that introduces or renames the preview
 tooling. The job then checks that the base holds the tooling, writes a note to the run
-summary, passes, and uploads nothing; the publish half finds no artifact and does nothing.
-The workflow runs only for the drawing and metadata directories, so a change to
-`icons/README.md` alone does not start it.
+summary, passes, and uploads nothing.
 
 ### Later (P5)
 
