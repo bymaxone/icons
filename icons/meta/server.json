@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Server",
+  "tags": ["server", "rack", "host", "infrastructure"],
+  "categories": ["data-charts"],
+  "useCases": ["Shows the servers of a deployment", "Opens the infrastructure settings"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

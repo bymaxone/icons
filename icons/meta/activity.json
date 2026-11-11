@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Activity",
+  "tags": ["activity", "pulse", "monitoring", "health"],
+  "categories": ["data-charts"],
+  "useCases": ["Opens the activity of a service", "Shows the health of a system"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

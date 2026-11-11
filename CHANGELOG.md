@@ -85,6 +85,11 @@ and deprecated, each rename with the alias that keeps the old name working.
   `building` (aliases `organization`, `company`), `key`, `shield`, `shield-check`,
   `shield-off`, `fingerprint` and `lock-open` (alias `unlock`), with a filled
   `shield-check`, and the categories `security` and `places-devices`.
+- Data, time and files, 24 drawings (B5c): `chart-bar`, `chart-line`, `chart-pie`,
+  `trending-up`, `trending-down`, `activity`, `table`, `database`, `server`, `list`, `kanban`,
+  `calendar`, `alarm-clock` (alias `alarm`), `stopwatch` (alias `timer`), `file-text` (alias
+  `pdf`), `file-zip`, `file-plus`, `folder-open`, `folder-plus`, `book-open`, `cloud-upload`,
+  `cloud-download`, `cpu` and `hard-drive`, and the category `data-charts`.
 - The brand marks, in their owners' geometry from Simple Icons, filled with
   `currentColor` (`GoogleBrandIcon` and the others, from `./brands`). Microsoft and
   LinkedIn are not included, and the colour `google-color` mark is deferred.

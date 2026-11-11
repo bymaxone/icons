@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Line chart",
+  "tags": ["chart", "line", "trend", "analytics"],
+  "categories": ["data-charts"],
+  "useCases": ["Shows a metric over time", "Opens the analytics view"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

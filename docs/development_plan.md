@@ -47,7 +47,7 @@
 | B4  | filled-variants-sm-masters-brands | ✅     | 100%     | L    | 2026-11-11   |
 | P4  | catalog-site                      | ✅     | 100%     | M    | 2026-11-11   |
 | R1  | aesthetic-redraw                  | ✅     | 100%     | M    | 2026-11-11   |
-| B5  | general-icons                     | 🔄     | 34%      | L    | 2026-11-11   |
+| B5  | general-icons                     | 🔄     | 57%      | L    | 2026-11-11   |
 | P5  | hardening-release                 | 🔄     | 25%      | M    | 2026-11-11   |
 | P6  | react-native                      | 📋     | 0%       | M    | 2026-11-08   |
 
@@ -381,14 +381,15 @@ These rules apply to every phase. Phase sections only add rules specific to them
 
 ### B5: general-icons
 
-- **Goal:** Add the icons every product needs, which the first 148, drawn around the Studio, do not cover: 106 drawings in five sub-batches.
+- **Goal:** Add the icons every product needs, which the first 148, drawn around the Studio, do not cover: 105 drawings in five sub-batches.
 - **Why:** a founder decision of 2026-11-11, before 1.0. The names come from the coverage of a general-purpose set; Feather's list of names was read for coverage only, never its drawings, and Feather joins the similarity comparison set.
-- **Sub-batches:** B5a actions, status and controls (25); B5b people and security (11); B5c data, time and files (25); B5d commerce, communication, places and devices (35); B5e text and development (10).
+- **Sub-batches:** B5a actions, status and controls (25); B5b people and security (11); B5c data, time and files (24); B5d commerce, communication, places and devices (35); B5e text and development (10).
 - **Naming:** each name says what is drawn, and product meanings are aliases (`save` for `floppy-disk`, `team` for `users`, `terminal` for `prompt`). New categories: `security`, `data-charts`, `commerce`, `communication`, `places-devices` and `dev`. `bold`, `italic` and `underline` are the one accepted exception to "no part reads as a letter" (spec section 3.5).
 - **Variants:** 11 filled drawings for stateful icons; 16 px masters only where a measurement at 16 px shows a failure.
 - **Definition of Done:** the five sub-batches are merged, each approved by the auditor; then the release pull request of P5 is refreshed and merged.
 - **B5a ✅ (2026-11-11):** 25 icons and 6 filled variants, approved by the delegated auditor on behalf of the founder.
 - **B5b ✅ (2026-11-11):** 11 icons and a filled `shield-check`, approved by the delegated auditor on behalf of the founder.
+- **B5c ✅ (2026-11-11):** 24 icons, approved by the delegated auditor on behalf of the founder.
 - **Size:** L
 
 ### P5: hardening-release

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Trending down",
+  "tags": ["trend", "down", "decline", "decrease"],
+  "categories": ["data-charts"],
+  "useCases": ["Marks a metric that falls", "Shows a dropping value"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

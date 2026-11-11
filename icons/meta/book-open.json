@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Documentation",
+  "tags": ["book", "docs", "guide", "read"],
+  "categories": ["files"],
+  "useCases": ["Opens the documentation", "Links to a guide"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

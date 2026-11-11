@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Archive file",
+  "tags": ["zip", "archive", "compressed", "file"],
+  "categories": ["files"],
+  "useCases": ["Downloads files as an archive", "Marks a compressed file"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

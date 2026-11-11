@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Upload to cloud",
+  "tags": ["cloud", "upload", "sync", "backup"],
+  "categories": ["files"],
+  "useCases": ["Uploads files to the cloud", "Backs up a project"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

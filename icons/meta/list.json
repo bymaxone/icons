@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "List view",
+  "tags": ["list", "items", "bullets", "view"],
+  "categories": ["data-charts"],
+  "useCases": ["Switches a view to a list", "Shows the items of a collection"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

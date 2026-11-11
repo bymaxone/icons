@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Timer",
+  "tags": ["stopwatch", "timer", "duration", "measure"],
+  "categories": ["status"],
+  "useCases": ["Starts a timer", "Shows how long a task took"],
+  "aliases": [
+    {
+      "name": "timer",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

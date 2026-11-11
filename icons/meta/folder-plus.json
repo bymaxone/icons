@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "New folder",
+  "tags": ["folder", "new", "add", "create"],
+  "categories": ["files"],
+  "useCases": ["Creates a folder", "Adds a folder to a project"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}
