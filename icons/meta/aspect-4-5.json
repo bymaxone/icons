@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "tags": ["portrait", "ratio", "feed", "tall"],
+  "categories": ["formats"],
+  "useCases": ["Sets a 4:5 video format", "Labels a tall feed format"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

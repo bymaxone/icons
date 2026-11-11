@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "tags": ["size", "quality", "pixels", "scale"],
+  "categories": ["formats"],
+  "useCases": ["Sets the output resolution", "Shows the quality of a render"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

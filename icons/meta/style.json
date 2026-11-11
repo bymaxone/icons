@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "tags": ["look", "aesthetic", "preset", "visual style"],
+  "categories": ["ai-agent"],
+  "useCases": ["Picks a visual style", "Applies a style preset"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

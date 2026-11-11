@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "tags": ["magic wand", "create", "make", "ai"],
+  "categories": ["ai-agent"],
+  "useCases": ["Generates a video from a prompt", "Creates content with AI"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

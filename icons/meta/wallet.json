@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "tags": ["balance", "money", "funds", "purse"],
+  "categories": ["credits-billing"],
+  "useCases": ["Shows the credit balance", "Links to the billing page"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

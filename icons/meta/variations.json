@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "tags": ["options", "alternatives", "shapes", "versions"],
+  "categories": ["ai-agent"],
+  "useCases": ["Shows the variations of a result", "Generates alternatives"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

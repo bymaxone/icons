@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "tags": ["retry", "redo", "reroll", "ai"],
+  "categories": ["ai-agent"],
+  "useCases": ["Generates a new take", "Rerolls a result"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

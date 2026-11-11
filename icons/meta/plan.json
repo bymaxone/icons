@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "tags": ["tier", "subscription", "pricing", "levels"],
+  "categories": ["credits-billing"],
+  "useCases": ["Links to the plans", "Shows the current plan"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -2,7 +2,7 @@
 
 > **Version:** 1.0.0
 > **Last updated:** 2026-11-11
-> **Status:** Approved spec, execution under way (P1, P2, B0, P3 and B1 done; B2 in review; P0 awaits its GitHub settings)
+> **Status:** Approved spec, execution under way (P1, P2, B0, P3, B1 and B2 done; B3 in review; P0 awaits its GitHub settings)
 > **Source spec:** [`technical_specification.md`](./technical_specification.md)
 > **Derived documents:** per-phase task files under `docs/tasks/` (one file per phase, scaffolded one phase at a time)
 
@@ -23,8 +23,8 @@
 
 ## 1. Progress Dashboard
 
-> **Overall progress: 5 / 12 phases (42%)**
-> **Active phase:** B2 (media, audio, files and editor, pull request in review); P0 still has
+> **Overall progress: 6 / 12 phases (50%)**
+> **Active phase:** B3 (Studio, AI, formats, billing, people and system, pull request in review); P0 still has
 > the GitHub settings of task 0.6
 > **Blocked phases:** none
 >
@@ -42,8 +42,8 @@
 | B0  | keystone-icons                    | ✅     | 100%     | M    | 2026-11-10   |
 | P3  | visual-tooling                    | ✅     | 100%     | L    | 2026-11-11   |
 | B1  | navigation-actions-status         | ✅     | 100%     | L    | 2026-11-11   |
-| B2  | media-audio-files-editor          | 👀     | 90%      | L    | 2026-11-11   |
-| B3  | studio-ai-formats-billing         | 📋     | 0%       | L    | 2026-11-08   |
+| B2  | media-audio-files-editor          | ✅     | 100%     | L    | 2026-11-11   |
+| B3  | studio-ai-formats-billing         | 👀     | 90%      | L    | 2026-11-11   |
 | B4  | filled-variants-sm-masters-brands | 📋     | 0%       | L    | 2026-11-08   |
 | P4  | catalog-site                      | 📋     | 0%       | M    | 2026-11-08   |
 | P5  | hardening-release                 | 📋     | 0%       | M    | 2026-11-08   |

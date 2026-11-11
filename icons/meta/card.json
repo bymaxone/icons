@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "tags": ["credit card", "payment", "debit", "billing"],
+  "categories": ["credits-billing"],
+  "useCases": ["Adds a payment method", "Shows the saved card"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}
