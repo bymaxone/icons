@@ -2,7 +2,7 @@
 
 > **Version:** 1.0.0
 > **Last updated:** 2026-11-11
-> **Status:** Approved spec, execution under way (P1, P2, B0, P3, B1, B2, B3 and B4 done; P4 next; P0 awaits its GitHub settings)
+> **Status:** Approved spec, execution under way (P1, P2, B0, P3, B1, B2, B3, B4 and P4 done; P5 next; P0 awaits its GitHub settings)
 > **Source spec:** [`technical_specification.md`](./technical_specification.md)
 > **Derived documents:** per-phase task files under `docs/tasks/` (one file per phase, scaffolded one phase at a time)
 
@@ -23,8 +23,8 @@
 
 ## 1. Progress Dashboard
 
-> **Overall progress: 8 / 12 phases (67%)**
-> **Active phase:** P4 (the catalog site); P0 still has
+> **Overall progress: 9 / 12 phases (75%)**
+> **Active phase:** P5 (hardening and release); P0 still has
 > the GitHub settings of task 0.6
 > **Blocked phases:** none
 >
@@ -45,7 +45,7 @@
 | B2  | media-audio-files-editor          | ✅     | 100%     | L    | 2026-11-11   |
 | B3  | studio-ai-formats-billing         | ✅     | 100%     | L    | 2026-11-11   |
 | B4  | filled-variants-sm-masters-brands | ✅     | 100%     | L    | 2026-11-11   |
-| P4  | catalog-site                      | 📋     | 0%       | M    | 2026-11-08   |
+| P4  | catalog-site                      | ✅     | 100%     | M    | 2026-11-11   |
 | P5  | hardening-release                 | 📋     | 0%       | M    | 2026-11-08   |
 | P6  | react-native                      | 📋     | 0%       | M    | 2026-11-08   |
 
@@ -359,6 +359,11 @@ These rules apply to every phase. Phase sections only add rules specific to them
 - **Context / preconditions:** B4 approved.
 - **References:** spec §9, §17 (D4).
 - **Size:** M
+- **P4 ✅ (2026-11-11):** the catalog's design is approved by the delegated auditor on behalf
+  of the founder, 2026-11-11.
+- **Pending (2026-11-11):** the DNS record of `icons.bymax.one` (a CNAME to
+  `bymaxone.github.io`) is the founder's to create; until then the site is served at
+  `bymaxone.github.io/icons`.
 
 ### P5: hardening-release
 
@@ -368,6 +373,10 @@ These rules apply to every phase. Phase sections only add rules specific to them
   `chore(release): 1.0.0` pull request; the first, manual publish; trusted publishing for every
   release after it.
 - **Scope (out):** new icons or API changes.
+- **From the catalog review (2026-11-11):** write the use cases of the published metadata
+  without internal product names (the `octopus` cases name the Studio and Polvi; product
+  meanings stay in aliases), and add a short action label to the metadata for the labelled
+  `title` example of each icon page.
 - **Known blocker to clear first:** `scripts/check-api-surface.mjs`, byte-identical with the
   family, stops with an error when the package has never been published, because
   `npm view <name> versions` answers E404 instead of an empty list. The `api-surface` check on

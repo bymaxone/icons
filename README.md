@@ -9,6 +9,8 @@
   <sub>24 px grid · 1.5 px round stroke · React 19 and Server Components · Raw SVG and sprite · Typed metadata · Zero Runtime Dependencies</sub>
 </p>
 
+<p align="center"><a href="https://icons.bymax.one">Browse every icon at icons.bymax.one</a></p>
+
 <p align="center">
   <a href="https://www.npmjs.com/package/@bymax-one/icons"><img src="https://img.shields.io/npm/v/@bymax-one/icons?style=flat-square&colorA=000000&colorB=000000" alt="npm version" /></a>
   <a href="https://www.npmjs.com/package/@bymax-one/icons"><img src="https://img.shields.io/npm/dm/@bymax-one/icons?style=flat-square&colorA=000000&colorB=000000" alt="npm downloads" /></a>

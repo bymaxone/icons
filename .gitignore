@@ -34,6 +34,8 @@ build/
 *.tgz
 # The one-line icon entries tsup.config.ts writes for the declaration build
 .tsup-entries/
+# The catalog site pnpm site writes from dist/
+.site/
 
 # ============================================
 # TypeScript
