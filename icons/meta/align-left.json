@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Align left",
+  "tags": ["align", "left", "text", "paragraph"],
+  "categories": ["editor-canvas"],
+  "useCases": ["Aligns a text to the left", "Shows the left alignment of a block"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

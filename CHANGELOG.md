@@ -97,6 +97,10 @@ and deprecated, each rename with the alias that keeps the old name working.
   `tablet`, `laptop`, `printer`, `wifi`, `wifi-off`, `battery`, `cloud`, `cloud-off`, `video-off`
   and `camera-off`, with filled `thumbs-up`, `thumbs-down`, `map-pin` and `bell-off`, and the
   categories `commerce` and `communication`.
+- Text and development, 10 drawings (B5e): `bold`, `italic`, `underline`, `align-left`,
+  `align-right`, `align-justify`, `columns` (alias `layout`), `code`, `branch` (alias
+  `git-branch`) and `pull-request` (alias `git-pull-request`), the category `dev`, and the alias
+  `terminal` for `prompt`.
 - The brand marks, in their owners' geometry from Simple Icons, filled with
   `currentColor` (`GoogleBrandIcon` and the others, from `./brands`). Microsoft and
   LinkedIn are not included, and the colour `google-color` mark is deferred.

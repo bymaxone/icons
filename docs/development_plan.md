@@ -47,7 +47,7 @@
 | B4  | filled-variants-sm-masters-brands | ✅     | 100%     | L    | 2026-11-11   |
 | P4  | catalog-site                      | ✅     | 100%     | M    | 2026-11-11   |
 | R1  | aesthetic-redraw                  | ✅     | 100%     | M    | 2026-11-11   |
-| B5  | general-icons                     | 🔄     | 90%      | L    | 2026-11-11   |
+| B5  | general-icons                     | ✅     | 100%     | L    | 2026-11-11   |
 | P5  | hardening-release                 | 🔄     | 25%      | M    | 2026-11-11   |
 | P6  | react-native                      | 📋     | 0%       | M    | 2026-11-08   |
 
@@ -391,6 +391,7 @@ These rules apply to every phase. Phase sections only add rules specific to them
 - **B5b ✅ (2026-11-11):** 11 icons and a filled `shield-check`, approved by the delegated auditor on behalf of the founder.
 - **B5c ✅ (2026-11-11):** 24 icons, approved by the delegated auditor on behalf of the founder.
 - **B5d ✅ (2026-11-11):** 35 icons and four filled drawings, approved by the delegated auditor on behalf of the founder. `phone-off` became `phone-hang-up`: the middle of the handset is its grip, so a bar across it hid the phone; the hang-up handset alone reads as "end call", and `phone-off` is its alias.
+- **B5e ✅ (2026-11-11):** 10 icons, approved by the delegated auditor on behalf of the founder. `branch` and `pull-request` set the node language of the git family: rings apart from their lines by the cut.
 - **Size:** L
 
 ### P5: hardening-release

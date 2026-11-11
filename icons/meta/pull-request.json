@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Pull request",
+  "tags": ["pull request", "git", "merge", "review"],
+  "categories": ["dev"],
+  "useCases": ["Opens a pull request", "Shows a change awaiting review"],
+  "aliases": [
+    {
+      "name": "git-pull-request",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}
