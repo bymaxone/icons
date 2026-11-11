@@ -104,6 +104,38 @@ describe('createIcon: rendering', () => {
     expect(html).not.toContain('stroke')
   })
 
+  it('passes the master size to the Icon base', () => {
+    /**
+     * Scenario: a 16 px master is created with `masterSize: 16`; it renders exactly
+     * as the base with that master size, at 16 px with a 1.5 px stroke by default,
+     * and the consumer props still apply on top.
+     */
+    const SearchSmIcon = createIcon('search-sm', FIXTURE, { masterSize: 16 })
+    expect(renderToStaticMarkup(<SearchSmIcon />)).toBe(
+      renderToStaticMarkup(
+        <Icon iconNode={FIXTURE} className="bx-icon bx-icon-search-sm" masterSize={16} />
+      )
+    )
+    expect(renderToStaticMarkup(<SearchSmIcon />)).toContain('width="16"')
+    expect(renderToStaticMarkup(<SearchSmIcon size={32} absoluteStrokeWidth />)).toContain(
+      'stroke-width="1.125"'
+    )
+  })
+
+  it.each([0, -16, Number.NaN, Number.POSITIVE_INFINITY])(
+    'refuses the master size %p',
+    (masterSize) => {
+      /**
+       * Scenario: the stroke is divided by the master size, so a size that is not a
+       * positive finite number would write `Infinity`, a negative width or `NaN`;
+       * it is refused when the component is created.
+       */
+      expect(() => createIcon('search-sm', FIXTURE, { masterSize })).toThrow(
+        new TypeError(`Icon master size ${String(masterSize)} is not a positive number.`)
+      )
+    }
+  )
+
   it('creates independent components', () => {
     /**
      * Scenario: two factory calls share nothing: each component keeps its own

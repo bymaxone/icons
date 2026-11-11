@@ -1,6 +1,7 @@
 /**
  * @fileoverview The drawing grid every Bymax icon is built on: the 24 px master
- * canvas, its live area and padding, and the stroke the line icons are drawn with.
+ * canvas, its live area and padding, the stroke the line icons are drawn with, and
+ * the size the 16 px masters are made for.
  * These values are the design language as data, so the runtime defaults, the
  * generator and the SVG lint read one source instead of repeating the numbers.
  * @layer Metadata
@@ -15,6 +16,11 @@ export interface IconGrid {
   readonly viewBox: '0 0 24 24'
   /** Width and height of the master canvas, in px. */
   readonly size: 24
+  /**
+   * The px size the 16 px masters are made for. They are drawn on the same grid, so
+   * their stroke, `strokeWidth` px at this size, is `strokeWidth * size / smSize` units.
+   */
+  readonly smSize: 16
   /** Width and height of the area a drawing may occupy, in px. */
   readonly liveArea: 20
   /** Empty space between the live area and each canvas edge, in px. */
@@ -44,6 +50,7 @@ export interface IconGrid {
 export const ICON_GRID: IconGrid = Object.freeze({
   viewBox: '0 0 24 24',
   size: 24,
+  smSize: 16,
   liveArea: 20,
   padding: 2,
   strokeWidth: 1.5,

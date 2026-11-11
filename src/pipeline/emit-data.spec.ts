@@ -196,6 +196,7 @@ describe('sprite', () => {
      */
     const STROKE =
       'viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"'
+    const SM = STROKE.replace('stroke-width="1.5"', 'stroke-width="2.25"')
     const FILL = 'viewBox="0 0 24 24" fill="currentColor"'
     expect(sprite(build().set)).toBe(
       [
@@ -209,7 +210,7 @@ describe('sprite', () => {
         `  <symbol id="bx-ring-filled" ${FILL}>`,
         '    <circle cx="12" cy="12" r="8"/>',
         '  </symbol>',
-        `  <symbol id="bx-ring-sm" ${STROKE}>`,
+        `  <symbol id="bx-ring-sm" ${SM}>`,
         '    <circle cx="12" cy="12" r="6"/>',
         '  </symbol>',
         `  <symbol id="bx-acme-brand" ${FILL}>`,

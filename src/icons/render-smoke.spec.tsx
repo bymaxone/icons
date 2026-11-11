@@ -16,18 +16,26 @@ import { renderToStaticMarkup } from 'react-dom/server'
 
 import * as root from '@bymax-one/icons'
 import * as brands from '@bymax-one/icons/brands'
-import { BRAND_METADATA, BRAND_NAMES, ICON_METADATA, ICON_NAMES } from '@bymax-one/icons/meta'
+import {
+  BRAND_METADATA,
+  BRAND_NAMES,
+  ICON_GRID,
+  ICON_METADATA,
+  ICON_NAMES
+} from '@bymax-one/icons/meta'
 import type { BrandMetadata, IconMetadata } from '@bymax-one/icons/meta'
 import type { IconComponent } from '@bymax-one/icons/runtime'
 
 import { componentName, variantName } from '../pipeline/naming.ts'
 import type { Variant } from '../pipeline/naming.ts'
 
-/** One component to render: where it is exported, its name, and the class it writes. */
+/** One component to render: where it is exported, its name, the class it writes and its size. */
 interface Expected {
   readonly module: Record<string, unknown>
   readonly name: string
   readonly className: string
+  /** The default width and height: the master size, 16 for a 16 px master. */
+  readonly size: number
 }
 
 /** Loads one icon entry the way a consumer imports `@bymax-one/icons/icons/<name>`. */
@@ -45,7 +53,8 @@ function expectedOf(
     variants.map((variant) => ({
       module,
       name: componentName(exported, variant),
-      className: `bx-icon bx-icon-${variantName(name, variant)}`
+      className: `bx-icon bx-icon-${variantName(name, variant)}`,
+      size: variant === 'sm' ? ICON_GRID.smSize : ICON_GRID.size
     }))
   )
 }
@@ -90,14 +99,15 @@ describe('every generated component', () => {
   it('renders on the server, silent by default and carrying its class names', () => {
     /**
      * Scenario: a decorative icon is `aria-hidden` and not focusable; its classes let CSS
-     * target every icon or one of them.
+     * target every icon or one of them; it renders at its master size, 16 px for a
+     * 16 px master and 24 px for every other icon.
      */
-    for (const { module, name, className } of EXPECTED) {
+    for (const { module, name, className, size } of EXPECTED) {
       const Component = module[name] as IconComponent
       const html = renderToStaticMarkup(<Component />)
       expect(
         html.startsWith(
-          '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"'
+          `<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="0 0 24 24"`
         )
       ).toBe(true)
       expect(html).toContain('focusable="false" aria-hidden="true"')

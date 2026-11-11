@@ -157,7 +157,8 @@ describe('componentModules', () => {
   it('paints a filled variant with fill and a 16 px master with stroke', () => {
     /**
      * Scenario: the filled variant passes `{ paint: 'fill' }`; the sm master is stroked
-     * like the line icon and passes no option.
+     * like the line icon and passes its master size, 16, so it renders at 16 px with a
+     * 1.5 px stroke by default.
      */
     expect(modules.get('src/icons/generated/ring/filled.ts')).toBe(
       HEADER('The `ring` icon, filled variant.', 'icons/filled/ring.svg') +
@@ -170,7 +171,7 @@ describe('componentModules', () => {
       HEADER('The `ring` icon, sm variant.', 'icons/sm/ring.svg') +
         IMPORT +
         RING_DOC('sm') +
-        'export const RingSmIcon = /* @__PURE__ */ createIcon("ring-sm", [["line", { x1: 4, x2: 20, y1: 12, y2: 12 }]])\n' +
+        'export const RingSmIcon = /* @__PURE__ */ createIcon("ring-sm", [["line", { x1: 4, x2: 20, y1: 12, y2: 12 }]], { masterSize: 16 })\n' +
         RING_ALIASES('sm', 'RingSmIcon')
     )
   })

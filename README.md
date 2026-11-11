@@ -231,8 +231,8 @@ not offered.
 
 | Planned prop          | Default        | Description                                                  |
 | --------------------- | -------------- | ------------------------------------------------------------ |
-| `size`                | `24`           | Width and height                                             |
-| `strokeWidth`         | `1.5`          | Stroke width at 24 px; ignored by filled and brand icons     |
+| `size`                | `24`           | Width and height; 16 on a 16 px master (`LightningSmIcon`)   |
+| `strokeWidth`         | `1.5`          | Stroke width in px at the icon's master size (24, or 16)     |
 | `absoluteStrokeWidth` | `false`        | Keeps the visual stroke width constant at every size         |
 | `color`               | `currentColor` | Colour of the drawing                                        |
 | `title`               | none           | Accessible name; when present the icon is announced as image |
@@ -469,6 +469,7 @@ object whose values are literal types.
 | ---------------- | ------------- | -------------------------------------------- |
 | `viewBox`        | `'0 0 24 24'` | The `viewBox` of every icon's root `<svg>`   |
 | `size`           | `24`          | Width and height of the master canvas, in px |
+| `smSize`         | `16`          | The px size the 16 px masters are made for   |
 | `liveArea`       | `20`          | Width and height a drawing may occupy, in px |
 | `padding`        | `2`           | Space between the live area and each edge    |
 | `strokeWidth`    | `1.5`         | Stroke width of a line icon at 24 px         |
@@ -487,8 +488,8 @@ the default of the same name.
 
 | Prop                  | Type                 | Default        | Behaviour                                                                                          |
 | --------------------- | -------------------- | -------------- | -------------------------------------------------------------------------------------------------- |
-| `size`                | `number \| string`   | `24`           | Width and height; a number is px, a string any CSS length                                          |
-| `strokeWidth`         | `number \| string`   | `1.5`          | Stroke width at 24 px; ignored by filled and brand icons                                           |
+| `size`                | `number \| string`   | `24`           | Width and height, 16 by default on a 16 px master; a number is px, a string any CSS length         |
+| `strokeWidth`         | `number \| string`   | `1.5`          | Stroke width in px at the icon's master size (24, or 16 on a 16 px master); ignored when filled    |
 | `absoluteStrokeWidth` | `boolean`            | `false`        | Writes `strokeWidth * 24 / size`; a CSS-length `size` such as `'1em'` keeps `strokeWidth` as given |
 | `color`               | `string`             | `currentColor` | The stroke (or fill) colour; drawing details in `currentColor` follow it                           |
 | `title`               | `string`             | none           | Gives `role="img"`, `aria-label` and a `<title>` child; an empty title counts as none              |
@@ -504,11 +505,16 @@ otherwise) and gives the component's `displayName` (`lightning-filled` becomes
 `LightningFilledIcon`) and the class names `bx-icon bx-icon-<name>`, which come before the
 consumer's `className`. `options.paint` is `'stroke'` (the default, for line icons) or
 `'fill'` (filled icons and brand marks: filled in `color`, no stroke attributes).
+`options.masterSize` is the px size the drawing is made for, 24 by default and 16 for a
+16 px master (a positive number, a `TypeError` otherwise): it is the default `size`, and
+`strokeWidth` is read in px at that size, so a 16 px master draws its 1.5 px stroke as 2.25
+units of the 24 grid.
 
 ### `Icon`
 
 The base every component renders through, for a drawing of your own:
-`<Icon iconNode={...} paint="fill" />` takes the `IconProps` plus `iconNode` and `paint`.
+`<Icon iconNode={...} paint="fill" />` takes the `IconProps` plus `iconNode`, `paint` and
+`masterSize`.
 
 ### Drawing types
 

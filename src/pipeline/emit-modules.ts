@@ -6,6 +6,7 @@
  * @layer Pipeline
  */
 
+import { ICON_GRID } from '../meta/icon-grid.ts'
 import { drawnVariants } from './icon-set.ts'
 import type { BrandEntry, Drawing, IconEntry, IconSet } from './icon-set.ts'
 import type { AliasSource, IconVariantName } from './metadata.ts'
@@ -92,10 +93,21 @@ function aliasExports(icon: string, aliases: readonly AliasSource[], variant: Va
   })
 }
 
+/**
+ * The `createIcon` options each icon variant passes: a filled variant is painted with
+ * fill, and a 16 px master declares the size it is made for, so it renders at 16 px with
+ * the set's 1.5 px stroke by default.
+ */
+const VARIANT_OPTIONS: Readonly<Record<IconVariantName, string>> = {
+  line: '',
+  filled: `, { paint: 'fill' }`,
+  sm: `, { masterSize: ${ICON_GRID.smSize} }`
+}
+
 /** One variant module: the component, created from its drawing, and its aliases. */
 function variantModule(icon: IconEntry, variant: IconVariantName, drawing: Drawing): string {
   const name = componentName(icon.name, variant)
-  const paint = variant === 'filled' ? `, { paint: 'fill' }` : ''
+  const options = VARIANT_OPTIONS[variant]
   const doc = [
     '/**',
     ` * The \`${icon.name}\` icon, ${variant} variant: ${docText(icon.meta.tags.join(', '))}.`,
@@ -107,7 +119,7 @@ function variantModule(icon: IconEntry, variant: IconVariantName, drawing: Drawi
     header(`The \`${icon.name}\` icon, ${variant} variant.`, drawing.path),
     "import { createIcon } from '@bymax-one/icons/runtime'\n",
     doc,
-    `export const ${name} = /* @__PURE__ */ createIcon(${JSON.stringify(variantName(icon.name, variant))}, ${iconNodeLiteral(drawing.elements)}${paint})\n`,
+    `export const ${name} = /* @__PURE__ */ createIcon(${JSON.stringify(variantName(icon.name, variant))}, ${iconNodeLiteral(drawing.elements)}${options})\n`,
     ...aliasExports(icon.name, icon.meta.aliases ?? [], variant)
   ].join('\n')
 }

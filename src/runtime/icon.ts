@@ -78,7 +78,8 @@ function renderElement([tag, attributes]: IconElement, color: string): ReactElem
 export function Icon({
   iconNode,
   paint,
-  size = ICON_GRID.size,
+  masterSize = ICON_GRID.size,
+  size = masterSize,
   strokeWidth = ICON_GRID.strokeWidth,
   absoluteStrokeWidth = false,
   color = CURRENT_COLOR,
@@ -95,7 +96,11 @@ export function Icon({
       width: size,
       height: size,
       viewBox: ICON_GRID.viewBox,
-      ...paintAttributes(paint, color, resolveStrokeWidth(strokeWidth, size, absoluteStrokeWidth)),
+      ...paintAttributes(
+        paint,
+        color,
+        resolveStrokeWidth(strokeWidth, size, absoluteStrokeWidth, masterSize)
+      ),
       focusable: 'false',
       ...accessibilityAttributes(title, props),
       ...withoutNullish(props)

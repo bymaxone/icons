@@ -17,9 +17,16 @@ import type { IconNode, IconPaint } from './icon-node'
  * ignored at render time, so no consumer prop can become markup inside an icon.
  */
 export interface IconProps extends Omit<SVGProps<SVGSVGElement>, 'ref'> {
-  /** Width and height. Default 24. A number is px; a string is any CSS length. */
+  /**
+   * Width and height. Default the icon's master size: 24, or 16 for a 16 px master
+   * (`LightningSmIcon`). A number is px; a string is any CSS length.
+   */
   size?: number | string | undefined
-  /** Stroke width at 24 px. Default 1.5. Ignored by filled and brand icons. */
+  /**
+   * Stroke width in px at the icon's master size, so the default 1.5 is 1.5 px at
+   * 24 on a line icon and 1.5 px at 16 on a 16 px master; the stroke scales with
+   * the drawing at other sizes. Ignored by filled and brand icons.
+   */
   strokeWidth?: number | string | undefined
   /**
    * Keep the visual stroke width constant at every size: the stroke is written as
@@ -43,4 +50,9 @@ export interface IconBaseProps extends IconProps {
   iconNode: IconNode
   /** How the drawing is painted. Default `stroke`. */
   paint?: IconPaint | undefined
+  /**
+   * The px size the drawing is made for. Default 24; 16 for a 16 px master. It is
+   * the default `size`, and `strokeWidth` is read in px at this size.
+   */
+  masterSize?: number | undefined
 }

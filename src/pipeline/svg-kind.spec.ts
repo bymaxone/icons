@@ -28,6 +28,14 @@ const STROKE_ROOT = {
   'stroke-linejoin': 'round'
 }
 
+/** A 16 px master: the same grid and paint, made for 16 px with a 1.5 px stroke at that size. */
+const SM_ROOT = {
+  ...STROKE_ROOT,
+  width: '16',
+  height: '16',
+  'stroke-width': '2.25'
+}
+
 const FILL_ROOT = {
   xmlns: 'http://www.w3.org/2000/svg',
   width: '24',
@@ -57,10 +65,11 @@ describe('svg kinds', () => {
     /**
      * Scenario: the root attributes match what the `Icon` base renders for the same
      * drawing, attribute for attribute and in the same order, so a raw SVG, a sprite
-     * symbol and a component paint alike.
+     * symbol and a component paint alike; a 16 px master is 16 px wide with its
+     * 1.5 px stroke written as 2.25 units of the shared grid.
      */
     expect(Object.entries(rootAttributes('line'))).toStrictEqual(Object.entries(STROKE_ROOT))
-    expect(Object.entries(rootAttributes('sm'))).toStrictEqual(Object.entries(STROKE_ROOT))
+    expect(Object.entries(rootAttributes('sm'))).toStrictEqual(Object.entries(SM_ROOT))
     expect(Object.entries(rootAttributes('filled'))).toStrictEqual(Object.entries(FILL_ROOT))
     expect(Object.entries(rootAttributes('brands'))).toStrictEqual(Object.entries(FILL_ROOT))
   })
