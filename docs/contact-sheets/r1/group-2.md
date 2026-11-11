@@ -16,12 +16,12 @@ These drawings read as something else at 24 px on the dark page, or carried no c
 ## Rejected on the way
 
 - **`version`.** Nodes in a row measure d = 0.12 and 0.27 against Phosphor's `dots-three`; diamonds leading to a ring read as a key lying down, and standing up as a pendant; a document with a circular arrow reads as the action of restoring rather than the object.
-- **`plan`.** A podium of three separate bars reads as a bar chart, which B5 draws as `chart-bar`; stacked chevrons would collide with `chevrons-up-down`.
+- **`plan`.** A podium of three separate bars reads as a bar chart; stacked chevrons would read as a sort control.
 - **`style`.** A fan of swatches is cluttered at 24 px.
 
 ## Measures
 
-The cut is the smallest distance between two parts that do not touch, on the line drawing at 240 px; d is the nearest drawing of Lucide, Tabler, Phosphor and Heroicons. None of these icons has a filled drawing or a 16 px master.
+The cut is the smallest distance between two parts that do not touch, on the line drawing at 240 px; d is the nearest drawing of Lucide, Tabler, Phosphor and Heroicons.
 
 | Icon      | Cut  | Ink at 24 | Nearest (d) |
 | --------- | ---- | --------- | ----------- |
