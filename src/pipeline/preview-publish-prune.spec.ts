@@ -118,6 +118,21 @@ describe('pruneEarlierPreviews', () => {
     expect(calls.some(({ method }) => method === 'DELETE')).toBe(false)
   })
 
+  it('counts a file removed between its read and its delete as gone', async () => {
+    /**
+     * Scenario: the file is read, then another publish removes it before the delete lands;
+     * the delete answers 404, which is the state the removal wanted, so pruning carries on.
+     */
+    const { request, calls } = fakeRequest(({ method, path }) => {
+      if (path === `${ROOT}?ref=icons-preview`) return respond(200, [{ name: OLD }])
+      if (path === `${ROOT}/${OLD}?ref=icons-preview`)
+        return respond(200, [{ name: 'preview.png' }])
+      return method === 'GET' ? respond(200, { sha: 's' }) : respond(404)
+    })
+    expect(await pruneEarlierPreviews(request, REPO, manifest)).toBe(1)
+    expect(calls.filter(({ method }) => method === 'DELETE')).toHaveLength(1)
+  })
+
   it('reads the sha again and retries a removal that lost a race', async () => {
     /**
      * Scenario: another publish moved the branch between the read and the delete (409); the

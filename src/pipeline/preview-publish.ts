@@ -283,7 +283,8 @@ async function removeFile(request: GitHubRequest, path: string, message: string)
       sha: read(existing.body, 'sha'),
       branch: PREVIEW_BRANCH
     })
-    if (removed.status === 200) return
+    // 404: removed by another publish between the read and the delete; gone either way.
+    if (removed.status === 200 || removed.status === 404) return
     // 409: the branch moved between the read and the delete; read again and retry.
     if (removed.status !== 409 || attempt === WRITE_ATTEMPTS) {
       unexpected('preview image removal', removed)
