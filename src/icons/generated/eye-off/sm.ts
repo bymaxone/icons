@@ -13,10 +13,6 @@ import { createIcon } from '@bymax-one/icons/runtime'
  */
 export const EyeOffSmIcon = /* @__PURE__ */ createIcon(
   'eye-off-sm',
-  [
-    ['path', { d: 'M12.057 5.655a7.98 7.98 0 0 1 8.183 5.191' }],
-    ['path', { d: 'M13.443 19.845a7.98 7.98 0 0 1-8.183-5.191' }],
-    ['path', { d: 'm5.25 5.25 15 15' }]
-  ],
+  [['path', { d: 'M5.25 10.875a8.88 8.88 0 0 1 15 0m0 3.75a8.88 8.88 0 0 1-15 0m3-6.375 9 9' }]],
   { masterSize: 16 }
 )

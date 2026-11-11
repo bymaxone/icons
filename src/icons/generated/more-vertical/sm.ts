@@ -14,9 +14,9 @@ import { createIcon } from '@bymax-one/icons/runtime'
 export const MoreVerticalSmIcon = /* @__PURE__ */ createIcon(
   'more-vertical-sm',
   [
-    ['path', { d: 'M12.75 6.75h.01' }],
-    ['path', { d: 'M12.75 12.75h.01' }],
-    ['path', { d: 'M12.75 18.75h.01' }]
+    ['path', { d: 'M11.625 5.625h.75v.75h-.75Z' }],
+    ['path', { d: 'M11.625 11.625h.75v.75h-.75Z' }],
+    ['path', { d: 'M11.625 17.625h.75v.75h-.75Z' }]
   ],
   { masterSize: 16 }
 )
