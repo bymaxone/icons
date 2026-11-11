@@ -84,6 +84,15 @@ The auditor accepted the method and the calibration, kept those five and the thr
     and actions (`bymaxone/.github/...@v1`). They are first-party and follow the family's
     shared-CI release line on purpose.
 
+### The preview needs its tooling on the base branch
+
+The unprivileged job runs the base branch's scripts, so a pull request whose base predates
+them has no preview, by design: the pull request that introduces or renames the preview
+tooling. The job then checks that the base holds the tooling, writes a note to the run
+summary, passes, and uploads nothing; the publish half finds no artifact and does nothing.
+The workflow runs only for the drawing and metadata directories, so a change to
+`icons/README.md` alone does not start it.
+
 ### Later (P5)
 
 - The `icons-preview` branch keeps every preview it is given (`pr-<n>/<sha>/`). Cleaning a

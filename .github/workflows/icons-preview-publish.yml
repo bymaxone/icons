@@ -36,20 +36,38 @@ jobs:
     permissions:
       actions: read # downloads the artifact of the run that built it
       contents: write # stores the images on the icons-preview branch
+    outputs:
+      found: ${{ steps.artifact.outputs.found }}
     steps:
+      # A run whose base branch predates the preview tooling succeeds without an artifact;
+      # there is then nothing to publish.
+      - name: Find the preview artifact
+        id: artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_ID: ${{ github.event.workflow_run.id }}
+        run: |
+          count="$(gh api "repos/${GITHUB_REPOSITORY}/actions/runs/${RUN_ID}/artifacts" \
+            --jq '[.artifacts[] | select(.name == "icons-preview")] | length')"
+          if [ "$count" -gt 0 ]; then found=true; else found=false; fi
+          echo "found=${found}" >> "$GITHUB_OUTPUT"
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        if: steps.artifact.outputs.found == 'true'
         with:
           persist-credentials: false
       - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        if: steps.artifact.outputs.found == 'true'
         with:
           node-version: 24
       - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        if: steps.artifact.outputs.found == 'true'
         with:
           name: icons-preview
           run-id: ${{ github.event.workflow_run.id }}
           github-token: ${{ github.token }}
           path: ${{ runner.temp }}/icons-preview
       - name: Validate and store the images
+        if: steps.artifact.outputs.found == 'true'
         env:
           GITHUB_TOKEN: ${{ github.token }}
           RUN_HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
@@ -61,6 +79,7 @@ jobs:
   comment:
     name: Write the preview comment
     needs: images
+    if: needs.images.outputs.found == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 10
     concurrency:

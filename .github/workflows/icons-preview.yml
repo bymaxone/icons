@@ -12,8 +12,13 @@ name: Icon preview
 on:
   pull_request:
     branches: [main]
+    # The drawing and metadata sources only; a change to icons/README.md has nothing to show.
     paths:
-      - 'icons/**'
+      - 'icons/line/**'
+      - 'icons/filled/**'
+      - 'icons/sm/**'
+      - 'icons/brands/**'
+      - 'icons/meta/**'
 
 permissions: {}
 
@@ -33,17 +38,33 @@ jobs:
         with:
           ref: ${{ github.event.pull_request.base.sha }}
           persist-credentials: false
+      # The preview runs the base branch's tooling, so a pull request whose base predates it
+      # (the one that introduces or renames it) has no preview, by design. The job passes
+      # and uploads nothing, and the publish half finds no artifact and does nothing.
+      - name: Check that the base branch has the preview tooling
+        id: tooling
+        run: |
+          if [ -f scripts/icons-preview-build.mjs ]; then
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            echo "Preview tooling is not on the base branch yet; no preview for this pull request." >> "$GITHUB_STEP_SUMMARY"
+          fi
       - uses: pnpm/action-setup@73e46992e05b19abd31f2f3c20e0e7370d762115 # v6.1.1
+        if: steps.tooling.outputs.ready == 'true'
         with:
           run_install: false
       # No dependency cache: a pull request's job could otherwise seed one.
       - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        if: steps.tooling.outputs.ready == 'true'
         with:
           node-version: 24
           package-manager-cache: false
       - name: Install the base branch's dependencies
+        if: steps.tooling.outputs.ready == 'true'
         run: pnpm install --frozen-lockfile
       - name: Fetch the pull request's commits as data
+        if: steps.tooling.outputs.ready == 'true'
         env:
           PR_NUMBER: ${{ github.event.pull_request.number }}
           HEAD_SHA: ${{ github.event.pull_request.head.sha }}
@@ -56,6 +77,7 @@ jobs:
             "+refs/pull/${PR_NUMBER}/merge:refs/remotes/pull/merge"
           test "$(git rev-parse refs/remotes/pull/head)" = "$HEAD_SHA"
       - name: Lint and render
+        if: steps.tooling.outputs.ready == 'true'
         env:
           BASE_SHA: ${{ github.event.pull_request.base.sha }}
           HEAD_SHA: ${{ github.event.pull_request.head.sha }}
@@ -66,6 +88,7 @@ jobs:
           node scripts/icons-preview-build.mjs --base "$BASE_SHA" --head "$HEAD_SHA" \
             --merge "$MERGE_SHA" --pr "$PR_NUMBER" --out "$RUNNER_TEMP/icons-preview"
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        if: steps.tooling.outputs.ready == 'true'
         with:
           name: icons-preview
           path: |
