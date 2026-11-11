@@ -133,7 +133,7 @@ The reason the package exists is that its drawings are not someone else's. The p
 2. **Attestation.** Every pull request that adds or changes a drawing carries a checkbox: "This drawing is an original Bymax work." The PR template makes it mandatory.
 3. **Process evidence.** Each drawing batch keeps its contact sheets (section 16) in the repository history, so the evolution of every icon is traceable.
 4. **Similarity check in CI.** Each new or changed icon is rasterised and compared against every icon of Lucide, Tabler, Phosphor and Heroicons, not only the ones of the same name (all MIT or ISC, installed as dev dependencies for this purpose only). Both drawings are normalised first: the ink's bounds are scaled to one size and centred, and stroked drawings are redrawn with one stroke, so a moved, rescaled or reweighted copy still lines up. A pair is flagged when its symmetric chamfer distance is at most the threshold that [`similarity/calibration.md`](./similarity/calibration.md) sets from known pairs, and independent redesigns of the same concept are flagged too, which is why a flag asks for human review and never fails a build. The positives are moved and rescaled copies, so the calibration proves the check against those; a copy whose shape was also edited (a node moved, a corner changed) can lie above the threshold. The pull-request preview comment shows each changed icon beside its nearest matches.
-5. **Primitive glyphs.** Plus, close, chevrons and arrows will inevitably coincide with every other set, and so will the glyphs and signs that are conventions rather than drawings: three lines (`menu`), three dots (`more-horizontal`, `more-vertical`), the dot grid (`grip`), the general warning sign of ISO 7010 (W001, `alert-triangle`), and a character in a circle in the manner of the ISO 7001 information sign (`info`, `alert-circle`). Redrawing these to stand apart costs recognition. A flag on them is expected; the check matters for composite pictograms.
+5. **Primitive glyphs.** Plus, close, chevrons and arrows will inevitably coincide with every other set, and so will the glyphs and signs that are conventions rather than drawings: three lines (`menu`), three dots (`more-horizontal`, `more-vertical`), the dot grid (`grip`), the media signs (`stop`, `pause`), four arrows (`move`), the letter of the text tool (`text`), a lattice of lines (`grid`), the general warning sign of ISO 7010 (W001, `alert-triangle`), and a character in a circle in the manner of the ISO 7001 information sign (`info`, `alert-circle`). Redrawing these to stand apart costs recognition. A flag on them is expected; the check matters for composite pictograms.
 
 ---
 
@@ -160,12 +160,12 @@ About 125 non-brand icons, roughly 85 common concepts (C) and 40 Studio concepts
 
 ### 4.2 16 px masters
 
-The icons that appear at 16 px in the Studio shell, and the icons whose 24 px drawing fails at 16 px. The list is the union of two parts, about 40 in all:
+The icons that appear at 16 px in the Studio shell, and the icons whose 24 px drawing fails at 16 px. The list is the union of two parts, 42 in all:
 
 1. **By role in the shell:** navigation (`home`, `dashboard`, `folder-stack`, `library`, `templates`, `menu`, `sidebar`, the four chevrons, `search`, `settings`), the most common actions (`plus`, `close`, `check`, `pencil`, `trash`, `copy`, `download`, `upload`, `more-horizontal`, `more-vertical`, `filter`), status (`check-circle`, `alert-triangle`, `alert-circle`, `info`, `loader`, `lock`, `eye`, `eye-off`), the credit `lightning` and the `bell`.
-2. **By measurement:** every drawing whose render at 16 px and 1x fuses two of its parts or closes an interior that must stay open: `copy`, `duplicate`, `file`, `frame`, `lock`, `timeline` and `volume` fuse a cut, and the small nodes of `share` close. The check and its table are in [`contact-sheets/b2/sixteen-px.md`](./contact-sheets/b2/sixteen-px.md).
+2. **By measurement:** every drawing whose render at 16 px and 1x fuses two of its parts or closes an interior that must stay open: `copy`, `duplicate`, `file`, `file-audio`, `file-video`, `frame`, `lock`, `timeline` and `volume` fuse a cut (the three file icons share the crease of `file`), and the small nodes of `share` close. The check and its table are in [`contact-sheets/b2/sixteen-px.md`](./contact-sheets/b2/sixteen-px.md).
 
-`arrow-left` and `arrow-right` render cleanly at 16 px and stay with the 24 px drawing, which keeps the list at 40. The list comes from the role of each icon and from the measurement, not from usage measured in the Studio, which has no application yet; usage becomes a criterion again when it does.
+`arrow-left` and `arrow-right` render cleanly at 16 px and stay with the 24 px drawing. The list comes from the role of each icon and from the measurement, not from usage measured in the Studio, which has no application yet; usage becomes a criterion again when it does.
 
 ### 4.3 Naming
 

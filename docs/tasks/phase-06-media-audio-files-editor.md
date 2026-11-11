@@ -1,10 +1,10 @@
 # Phase B2: media-audio-files-editor
 
-> **Status**: 👀 Review · **Progress**: 4 / 6 tasks · **Last updated**: 2026-11-11
+> **Status**: 👀 Review · **Progress**: 5 / 6 tasks · **Last updated**: 2026-11-11
 > **Source roadmap**: [`../development_plan.md`](../development_plan.md) §5 (B2)
 > **Source spec**: [`../technical_specification.md`](../technical_specification.md) §2, §3, §4.1, §4.2, §16
 >
-> The 50 drawings, their evidence, the 16 px check and the 16 px master list are in the pull request; the batch waits for the approval of the delegated auditor.
+> The 50 drawings are approved by the delegated auditor on behalf of the founder, 2026-11-11; the phase pull request is open.
 
 ---
 
@@ -13,6 +13,15 @@
 B2 draws the Media and video, Audio and voice, Files and Editor and canvas categories of spec §4.1 that B0 did not: 19 media icons, 10 audio icons, 6 file icons and 15 editor icons, with their metadata. With B0 and B1 the set holds 106 drawings. B2 also fixes the list of 16 px masters (spec §4.2), which B4 draws.
 
 The drawings follow spec §2 as amended by the B1 audit: the cut between distinct parts, the knockout where one part crosses another, an ink ceiling of 21.5%, and no part that reads as a digit or a letter.
+
+### Approval
+
+**Batch approved by the delegated auditor on behalf of the founder, 2026-11-11**, with two corrections made in one round:
+
+- **The live area.** Eleven drawings reached past the 2 to 22 guide with their stroke, which spec §2.1 allows only for large round shapes: `brush`, `camera-motion`, `captions`, `eraser`, `frame`, `lip-sync`, `narration`, `render`, `split`, `volume` and `volume-off`. Each moved or narrowed inside the guide without a change to its drawing; every drawing of the set now lies inside it.
+- **The file family.** `file-audio` and `file-video` take the outline and the crease of `file` as drawn in B0, so the three read as one family; the note and the play sit a cut inside them.
+
+The conventional glyphs of the batch (`stop`, `pause`, `move`, `text`, `grid`) join the list in spec §3 item 5, and the list of 16 px masters is approved.
 
 ### Where the language shows
 
@@ -34,7 +43,7 @@ The report is [`../contact-sheets/b2/similarity.md`](../contact-sheets/b2/simila
 
 ### The 16 px check and the master list
 
-[`../contact-sheets/b2/sixteen-px.md`](../contact-sheets/b2/sixteen-px.md) renders every drawing at 16 px and 1x and records two objective tests: two parts that fuse through their inked pixels, and a closed part whose interior fills. `copy`, `duplicate`, `file`, `frame`, `lock`, `timeline` and `volume` fuse a cut at 16 px, and the small nodes of `share` close. The list of 16 px masters in spec §4.2 is the union of these and of the icons the Studio shell shows at 16 px by role, 40 in all. The list rests on role and measurement because the Studio has no application to measure usage in; the plan records when usage returns as a criterion.
+[`../contact-sheets/b2/sixteen-px.md`](../contact-sheets/b2/sixteen-px.md) renders every drawing at 16 px and 1x and records two objective tests: two parts that fuse through their inked pixels, and a closed part whose interior fills. `copy`, `duplicate`, `file`, `file-audio`, `file-video`, `frame`, `lock`, `timeline` and `volume` fuse a cut at 16 px (the three file icons share the crease of `file`), and the small nodes of `share` close. The list of 16 px masters in spec §4.2 is the union of these and of the icons the Studio shell shows at 16 px by role, 42 in all. The list rests on role and measurement because the Studio has no application to measure usage in; the plan records when usage returns as a criterion.
 
 ### Measurements
 
@@ -44,25 +53,25 @@ Measured with resvg at 20x zoom. The bounding box includes the stroke, the centr
 | ---------------- | ------------- | ------------ | ----- |
 | `align-center`   | 16.50 x 15.00 | 12.22, 11.18 | 13.2% |
 | `asset`          | 16.50 x 16.85 | 12.22, 12.71 | 19.7% |
-| `brush`          | 19.90 x 20.00 | 12.17, 11.95 | 12.7% |
+| `brush`          | 18.90 x 19.00 | 11.60, 12.52 | 12.0% |
 | `camera`         | 19.50 x 15.00 | 12.22, 13.19 | 18.4% |
-| `camera-motion`  | 19.50 x 19.50 | 12.41, 11.74 | 20.4% |
-| `captions`       | 20.50 x 15.50 | 12.03, 12.72 | 21.5% |
+| `camera-motion`  | 19.50 x 18.50 | 12.41, 11.43 | 20.4% |
+| `captions`       | 20.00 x 15.50 | 11.84, 12.73 | 21.3% |
 | `crop`           | 12.00 x 20.00 | 11.97, 11.97 | 12.0% |
 | `cursor`         | 15.40 x 16.80 | 10.93, 10.99 | 11.7% |
-| `eraser`         | 19.45 x 19.45 | 11.04, 13.11 | 16.2% |
+| `eraser`         | 19.45 x 19.45 | 11.54, 13.11 | 16.2% |
 | `export-video`   | 19.00 x 19.00 | 11.53, 12.04 | 20.4% |
 | `extend`         | 20.00 x 9.50  | 10.88, 12.22 | 12.2% |
-| `file-audio`     | 15.00 x 20.00 | 11.64, 12.74 | 20.1% |
-| `file-video`     | 15.00 x 20.00 | 11.76, 12.78 | 18.8% |
-| `frame`          | 20.50 x 16.50 | 12.22, 12.23 | 21.4% |
+| `file-audio`     | 15.00 x 20.00 | 11.72, 12.63 | 21.1% |
+| `file-video`     | 15.00 x 20.00 | 11.84, 12.51 | 20.1% |
+| `frame`          | 20.00 x 16.50 | 12.03, 12.23 | 21.1% |
 | `fullscreen`     | 17.50 x 17.50 | 12.22, 12.22 | 11.8% |
 | `grid`           | 19.50 x 19.50 | 12.22, 12.22 | 14.9% |
 | `hand`           | 16.00 x 18.50 | 12.36, 13.42 | 12.9% |
 | `image`          | 19.50 x 15.50 | 12.38, 12.31 | 21.0% |
 | `keyframe`       | 16.40 x 16.40 | 12.22, 12.23 | 14.0% |
 | `layers`         | 19.50 x 17.50 | 12.22, 12.05 | 20.4% |
-| `lip-sync`       | 20.50 x 10.15 | 12.23, 11.86 | 13.1% |
+| `lip-sync`       | 19.50 x 10.10 | 12.23, 11.84 | 12.4% |
 | `loop`           | 17.50 x 16.50 | 12.22, 12.22 | 14.3% |
 | `mask`           | 19.25 x 19.25 | 11.68, 11.68 | 17.2% |
 | `mic`            | 15.50 x 20.00 | 12.22, 12.16 | 16.5% |
@@ -70,25 +79,25 @@ Measured with resvg at 20x zoom. The bounding box includes the stroke, the centr
 | `minimize`       | 17.50 x 17.50 | 12.22, 12.22 | 11.8% |
 | `move`           | 19.50 x 19.50 | 12.22, 12.23 | 12.7% |
 | `music`          | 18.50 x 18.50 | 13.08, 12.26 | 17.9% |
-| `narration`      | 17.25 x 18.40 | 10.73, 11.16 | 16.2% |
+| `narration`      | 17.50 x 18.50 | 11.40, 11.12 | 16.4% |
 | `palette`        | 18.30 x 19.50 | 11.74, 11.58 | 18.6% |
 | `paperclip`      | 14.00 x 17.00 | 12.30, 11.91 | 13.0% |
 | `pause`          | 13.50 x 16.50 | 12.22, 12.22 | 19.0% |
 | `reference-card` | 16.50 x 19.00 | 12.06, 12.40 | 21.1% |
-| `render`         | 20.50 x 16.50 | 11.59, 11.27 | 21.1% |
+| `render`         | 20.00 x 16.50 | 11.42, 11.29 | 20.8% |
 | `scissors`       | 18.25 x 18.00 | 10.17, 12.25 | 15.0% |
 | `shot`           | 19.50 x 15.50 | 12.22, 12.22 | 13.4% |
 | `skip-back`      | 15.00 x 15.00 | 13.35, 12.22 | 13.0% |
 | `skip-forward`   | 15.00 x 15.00 | 11.10, 12.22 | 13.0% |
-| `split`          | 20.50 x 19.50 | 12.22, 12.22 | 15.8% |
+| `split`          | 19.50 x 19.50 | 12.22, 12.22 | 15.3% |
 | `stop`           | 14.50 x 14.50 | 12.22, 12.23 | 12.3% |
 | `text`           | 16.50 x 16.50 | 12.22, 8.76  | 7.6%  |
 | `timeline`       | 20.00 x 18.00 | 11.92, 12.95 | 21.5% |
 | `transition`     | 19.50 x 14.30 | 12.22, 12.22 | 16.3% |
 | `video`          | 20.00 x 13.50 | 11.98, 12.23 | 15.9% |
 | `voice`          | 19.50 x 18.50 | 11.70, 10.95 | 20.5% |
-| `volume`         | 20.75 x 14.80 | 12.21, 12.22 | 17.8% |
-| `volume-off`     | 20.50 x 14.80 | 11.25, 12.22 | 16.1% |
+| `volume`         | 20.00 x 14.80 | 12.43, 12.22 | 17.9% |
+| `volume-off`     | 20.00 x 14.80 | 11.44, 12.22 | 15.9% |
 | `waveform`       | 19.00 x 16.50 | 11.62, 12.22 | 12.8% |
 | `zoom-in`        | 19.50 x 19.50 | 11.78, 11.78 | 17.8% |
 | `zoom-out`       | 19.50 x 19.50 | 11.95, 11.95 | 16.5% |
@@ -132,7 +141,7 @@ The root and `meta` size budgets are recalibrated in the header of `scripts/chec
 | 6.2 | Draw the audio and voice icons and their metadata         | ✅ Done   | P0       | M    | none       |
 | 6.3 | Draw the file, editor and canvas icons and their metadata | ✅ Done   | P0       | M    | none       |
 | 6.4 | Evidence, the 16 px check and list, size budgets          | ✅ Done   | P0       | S    | 6.1 to 6.3 |
-| 6.5 | Batch approval                                            | 👀 Review | P0       | S    | 6.4        |
+| 6.5 | Batch approval                                            | ✅ Done   | P0       | S    | 6.4        |
 | 6.6 | Phase commit and pull request                             | 👀 Review | P0       | S    | 6.5        |
 
 ---
@@ -250,14 +259,14 @@ Verification:
 
 ### Task 6.5: Batch approval
 
-- **Status**: 👀 Review
+- **Status**: ✅ Done
 - **Priority**: P0
 - **Size**: M
 - **Depends on**: 6.4
 
 #### Acceptance criteria
 
-- [ ] The batch is approved by the delegated auditor on behalf of the founder, and the approval is recorded in the plan and in this file.
+- [x] The batch is approved by the delegated auditor on behalf of the founder, and the approval is recorded in the plan and in this file.
 
 #### Agent prompt
 
@@ -310,3 +319,4 @@ Verification:
 - 6.2 ✅ 2026-11-11 The 10 audio and voice icons drawn, with their metadata.
 - 6.3 ✅ 2026-11-11 The 6 file icons and the 15 editor and canvas icons drawn, with their metadata.
 - 6.4 ✅ 2026-11-11 Sheets, similarity report, alternatives, the 16 px check and the 16 px master list committed; baselines updated and the size budgets recalibrated.
+- 6.5 ✅ 2026-11-11 Batch approved by the delegated auditor on behalf of the founder after one round: eleven drawings moved inside the live area, `file-audio` and `file-video` rebuilt on the outline and crease of `file`.

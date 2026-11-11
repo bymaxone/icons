@@ -10,6 +10,8 @@ For every two distinct parts of a drawing (parts the vector keeps 0.5 units or m
 | ----------------- | -------------------------------- | ------------------- | ---- |
 | `copy`            | 0.00                             | yes                 | 0-1  |
 | `duplicate`       | 0.00                             | yes                 | 0-1  |
+| `file-audio`      | 0.00                             | yes                 | 0-1  |
+| `file-video`      | 0.00                             | yes                 | 0-1  |
 | `file`            | 0.00                             | yes                 | 0-1  |
 | `frame`           | 0.00                             | yes                 | 0-6  |
 | `lock`            | 0.00                             | yes                 | 0-1  |
@@ -17,6 +19,7 @@ For every two distinct parts of a drawing (parts the vector keeps 0.5 units or m
 | `volume`          | 0.00                             | yes                 | 2-3  |
 | `asset`           | 0.41                             | no                  | 0-1  |
 | `layers`          | 0.41                             | no                  | 1-2  |
+| `lip-sync`        | 0.41                             | no                  | 0-1  |
 | `share`           | 0.41                             | no                  | 0-3  |
 | `alert-circle`    | 1.00                             | no                  | 1-2  |
 | `camera-motion`   | 1.00                             | no                  | 0-1  |
@@ -27,7 +30,6 @@ For every two distinct parts of a drawing (parts the vector keeps 0.5 units or m
 | `download`        | 1.00                             | no                  | 0-1  |
 | `export-video`    | 1.00                             | no                  | 0-1  |
 | `eye`             | 1.00                             | no                  | 0-2  |
-| `file-audio`      | 1.00                             | no                  | 0-2  |
 | `filter`          | 1.00                             | no                  | 0-1  |
 | `folder-stack`    | 1.00                             | no                  | 0-2  |
 | `grid`            | 1.00                             | no                  | 0-2  |
@@ -35,7 +37,6 @@ For every two distinct parts of a drawing (parts the vector keeps 0.5 units or m
 | `home`            | 1.00                             | no                  | 0-1  |
 | `image`           | 1.00                             | no                  | 0-1  |
 | `library`         | 1.00                             | no                  | 0-2  |
-| `lip-sync`        | 1.00                             | no                  | 0-1  |
 | `mask`            | 1.00                             | no                  | 0-1  |
 | `mic-off`         | 1.00                             | no                  | 0-1  |
 | `mic`             | 1.00                             | no                  | 0-1  |
@@ -78,7 +79,6 @@ For every two distinct parts of a drawing (parts the vector keeps 0.5 units or m
 | `scissors`        | 1.83                             | no                  | 1-2  |
 | `align-center`    | 2.00                             | no                  | 0-1  |
 | `extend`          | 2.00                             | no                  | 0-1  |
-| `file-video`      | 2.00                             | no                  | 0-1  |
 | `fullscreen`      | 2.00                             | no                  | 1-3  |
 | `grip`            | 2.00                             | no                  | 0-1  |
 | `info`            | 2.00                             | no                  | 0-2  |
@@ -104,7 +104,7 @@ A closed part keeps its interior when at least two of the pixels inside it carry
 
 | Icon              | Part | Interior pixels clear |
 | ----------------- | ---- | --------------------- |
-| `file-audio`      | 2    | 0 of 4                |
+| `file-audio`      | 3    | 0 of 4                |
 | `grip`            | 2    | 0 of 1                |
 | `grip`            | 5    | 0 of 1                |
 | `image`           | 2    | 0 of 3                |
