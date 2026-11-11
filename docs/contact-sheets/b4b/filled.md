@@ -1,6 +1,6 @@
 # Filled variants: construction and measures
 
-Each filled drawing is its line icon's silhouette made solid: every closed part of the line drawing is filled together with its stroke, every open part keeps its stroke, and a part that lies inside another is knocked out at the stroke width, 1.5 units, under `fill-rule="evenodd"`. Most drawings are built that way with Skia's path operations (CanvasKit); the Construction column says which. Some are written from their geometry instead, as arcs and offset curves, because the Skia outline did not fit the per-component budget at a precision that kept the drawing (see [Analytic drawings](#analytic-drawings)). Others depart from the plain outline, as the Construction column notes: `cloud-check` closes its open cloud by its chord so the filled drawing keeps the line icon's bounding box, and `scene` keeps its clapper arm clear of the slate except at the hinge.
+Each filled drawing is its line icon's silhouette made solid: every closed part of the line drawing is filled together with its stroke, every open part keeps its stroke, and a part that lies inside another is knocked out at the stroke width, 1.5 units, under `fill-rule="evenodd"`. Most drawings are built that way with Skia's path operations (CanvasKit); the Construction column says which. Some are written from their geometry instead, as arcs and offset curves, for the reasons given under [Analytic drawings](#analytic-drawings). Others depart from the plain outline, as the Construction column notes: `cloud-check` closes its open cloud by its chord so the filled drawing keeps the line icon's bounding box, and `scene` keeps its clapper arm clear of the slate except at the hinge.
 
 ## Precision
 
@@ -14,7 +14,7 @@ Knockouts are measured at 480 px (20 px per unit). The analytic drawings are com
 
 ## Measures
 
-Sizes are brotli bytes of the component bundled alone by `scripts/check-component-size.mjs` (budget 614.4), and with the runtime (budget 1536). The bounding box is compared with the line icon's, both rendered at 960 px. A knockout of 1.5 units measures 1.46 to 1.52 at this resolution. "Closes at 16 px" counts the knockouts that keep fewer than 2 clear pixels at 16 px 1x: the dots of `alert-circle`, `alert-triangle` and `info`, each a disc 1.5 units across.
+Sizes are brotli bytes of the component bundled alone by `scripts/check-component-size.mjs` and with the runtime, each against its budget in that script. The bounding box is compared with the line icon's, both rendered at 960 px. A knockout of 1.5 units measures 1.46 to 1.52 at this resolution. "Closes at 16 px" counts the knockouts that keep fewer than 2 clear pixels at 16 px 1x: the dots of `alert-circle`, `alert-triangle` and `info`, each a disc 1.5 units across.
 
 | Icon              | Construction                 | Precision | Max diff at 1x (of 255) | Alone (B) | With runtime (B) | Bbox vs line (units) | Knockouts | Narrowest knockout (units) | Closes at 16 px |
 | ----------------- | ---------------------------- | --------- | ----------------------- | --------- | ---------------- | -------------------- | --------- | -------------------------- | --------------- |
@@ -70,7 +70,8 @@ Sizes are brotli bytes of the component bundled alone by `scripts/check-componen
 
 "Geometry" is the largest difference, 16x supersampled, against the exact definition drawn by resvg's own stroker: the line drawing's closed outline filled and stroked 1.5 with round joins and caps, its details knocked out with a mask. At one decimal, the Skia `settings` outline also opened two pinholes.
 
-- `eye`: a pointed almond, two arcs of r 8.264 about centres 2.014 above and below the axis, its tips round caps of r 0.75 that reach the line icon's left and right ink extent (x 4.261 and 20.239); the pupil of r 2.75 stays solid and the ring between r 2.75 and r 4.25 is knocked out. It is drawn rather than derived: an almond as tall as the lids reads as a target, so it sits 0.75 units inside the line icon's bounding box at the top and bottom.- `octopus`: the mantle's outer offset (its arc at r 6.75, the sides offset by 0.75, round corners where they meet the lower edge), each arm as a band 1.5 wide with a round end, and the two eyes knocked out as discs of r 1.5. The parts are unioned by the nonzero fill rule.
+- `eye`: a pointed almond, two arcs of r 8.264 about centres 2.014 above and below the axis, its tips round caps of r 0.75 that reach the line icon's left and right ink extent (x 4.261 and 20.239); the pupil of r 2.75 stays solid and the ring between r 2.75 and r 4.25 is knocked out. It is drawn rather than derived: an almond as tall as the lids reads as a target, so it sits 0.75 units inside the line icon's bounding box at the top and bottom.
+- `octopus`: the mantle's outer offset (its arc at r 6.75, the sides offset by 0.75, round corners where they meet the lower edge), each arm as a band 1.5 wide with a round end, and the two eyes knocked out as discs of r 1.5. The parts are unioned by the nonzero fill rule.
 - `settings`: the gear outline (straight flanks, arcs about the centre at r 8.8 and r 7.25) offset by 0.75, round at the convex corners and meeting at the concave ones, with the ring between r 2 and r 3.5 knocked out around the hub.
 
 ## Sheets

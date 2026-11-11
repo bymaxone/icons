@@ -43,5 +43,5 @@ The forty: `home`, `dashboard`, `folder`, `folder-stack`, `library`, `templates`
 
 - 9.1 ✅ 2026-11-11 The filled drawings with their metadata, some written from their geometry.
 - 9.2 ✅ 2026-11-11 Sheets, per-icon measures, the precision rule, and spec §2.5 and §2.6 updated.
-- 9.3 ✅ 2026-11-11 Approved by the delegated auditor on behalf of the founder, after one redraw of `eye` and `scene`.
+- 9.3 ✅ 2026-11-11 Approved by the delegated auditor on behalf of the founder, after the redraw of `eye` and `scene`.
 - 9.4 ✅ 2026-11-11 Pull request #16.

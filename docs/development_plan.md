@@ -341,7 +341,7 @@ These rules apply to every phase. Phase sections only add rules specific to them
   the brand marks; **B4b**, the filled variants; **B4c**, the 16 px masters, after an
   engineering pull request that gives the `sm` kind a 1.5 px stroke at 16 px by default.
   Microsoft, LinkedIn and `google-color` are not in 1.0 (spec §5).
-- **B4b ✅ (2026-11-11):** the filled variants of 40 icons, approved by the delegated auditor
+- **B4b ✅ (2026-11-11):** the filled variants, approved by the delegated auditor
   on behalf of the founder, 2026-11-11 (pull request #16).
 
 ### P4: catalog-site
