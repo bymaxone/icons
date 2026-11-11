@@ -74,6 +74,13 @@ and deprecated, each rename with the alias that keeps the old name working.
   name the icon most often takes when it stands alone, such as "Delete" for `trash` and
   "Back" for `arrow-left`. Pass it, or a name of your own, as `title`. Required by the
   schema: at most 32 characters, starting with a capital letter or a digit.
+- General-purpose actions, status and controls, 25 drawings (B5a): `minus`, `plus-circle`,
+  `minus-circle`, `floppy-disk` (alias `save`), `archive-box` (alias `archive`), `clipboard`,
+  `file-import` (alias `import`), `file-export` (alias `export`), `paper-plane` (alias `send`),
+  `square-arrow-up-right` (alias `external-link`), `bookmark`, `star`, `heart`, `flag`,
+  `close-circle`, `circle-slash` (alias `ban`), `check-square`, `arrow-up`, `arrow-down`,
+  `chevrons-up-down`, `sliders`, `toggle`, `qr-code`, `power` and `target`, with filled
+  variants of `star`, `heart`, `bookmark`, `flag`, `check-square` and `toggle`.
 - The brand marks, in their owners' geometry from Simple Icons, filled with
   `currentColor` (`GoogleBrandIcon` and the others, from `./brands`). Microsoft and
   LinkedIn are not included, and the colour `google-color` mark is deferred.

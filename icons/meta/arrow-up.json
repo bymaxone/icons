@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Up",
+  "tags": ["arrow", "up", "raise", "move up"],
+  "categories": ["navigation"],
+  "useCases": ["Moves an item up a list", "Scrolls back to the top"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

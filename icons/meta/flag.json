@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Flag",
+  "tags": ["flag", "report", "mark", "milestone"],
+  "categories": ["status"],
+  "useCases": ["Flags an item for review", "Marks a milestone"],
+  "variants": ["line", "filled"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

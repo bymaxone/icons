@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Toggle",
+  "tags": ["toggle", "switch", "on", "off"],
+  "categories": ["system"],
+  "useCases": ["Turns a setting on or off", "Shows the state of an option"],
+  "variants": ["line", "filled"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

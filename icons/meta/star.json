@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Favorite",
+  "tags": ["star", "favorite", "rate", "highlight"],
+  "categories": ["status"],
+  "useCases": ["Marks an item as a favorite", "Rates an item"],
+  "variants": ["line", "filled"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

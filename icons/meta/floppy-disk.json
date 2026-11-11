@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Save",
+  "tags": ["save", "disk", "store", "persist"],
+  "categories": ["actions"],
+  "useCases": ["Saves the current document", "Stores the changes of a form"],
+  "aliases": [
+    {
+      "name": "save",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Target",
+  "tags": ["target", "goal", "objective", "aim"],
+  "categories": ["status"],
+  "useCases": ["Sets a goal for a project", "Shows how close a metric is to its target"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Down",
+  "tags": ["arrow", "down", "lower", "move down"],
+  "categories": ["navigation"],
+  "useCases": ["Moves an item down a list", "Scrolls to the end"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

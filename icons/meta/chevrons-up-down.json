@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Choose",
+  "tags": ["select", "dropdown", "sort", "expand"],
+  "categories": ["navigation"],
+  "useCases": ["Opens a select menu", "Sorts a column both ways"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}
