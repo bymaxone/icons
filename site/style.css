@@ -327,13 +327,29 @@ svg {
 [data-theme='dark'][data-accent='ink'] .marks .cut {
   fill: #7fa6ff;
 }
-.marks .dim {
+.marks .cut-dim {
   fill: none;
-  stroke: #c0283a;
-  stroke-width: 0.08;
+  stroke: #2450b8;
+  stroke-width: 0.06;
 }
-[data-theme='dark'] .marks .dim {
-  stroke: #ff6b78;
+[data-theme='dark'] .marks .cut-dim {
+  stroke: #7fa6ff;
+}
+.marks .stroke-dim {
+  fill: none;
+  stroke: var(--muted);
+  stroke-width: 0.05;
+}
+.marks text {
+  font-family: var(--mono);
+  font-size: 0.6px;
+  fill: var(--muted);
+}
+.marks .cut-label {
+  fill: #2450b8;
+}
+[data-theme='dark'] .marks .cut-label {
+  fill: #7fa6ff;
 }
 .tag {
   position: absolute;
@@ -348,15 +364,6 @@ svg {
 .tag-grid {
   left: 8%;
   top: 2.2%;
-}
-.tag-stroke {
-  left: 8%;
-  bottom: 2.2%;
-}
-.tag-cut {
-  right: 3%;
-  bottom: 13%;
-  color: var(--ink);
 }
 .trio {
   display: flex;
@@ -704,6 +711,8 @@ svg {
   gap: 14px;
 }
 .pv {
+  display: flex;
+  flex-direction: column;
   margin: 0;
   background: var(--surface);
   border: 1px solid var(--line);
@@ -805,6 +814,7 @@ svg {
   filter: invert(1) hue-rotate(180deg);
 }
 .pv figcaption {
+  margin-top: auto;
   display: grid;
   gap: 10px;
   padding: 14px 16px;
@@ -907,10 +917,6 @@ svg {
 @media (max-width: 760px) {
   .cols {
     grid-template-columns: 1fr;
-  }
-  .tag-cut {
-    white-space: normal;
-    max-width: 46%;
   }
   .sws {
     margin-left: 0;

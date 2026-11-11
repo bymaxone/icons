@@ -371,6 +371,10 @@ These rules apply to every phase. Phase sections only add rules specific to them
   `chore(release): 1.0.0` pull request; the first, manual publish; trusted publishing for every
   release after it.
 - **Scope (out):** new icons or API changes.
+- **From the catalog review (2026-11-11):** write the use cases of the published metadata
+  without internal product names (the `octopus` cases name the Studio and Polvi; product
+  meanings stay in aliases), and add a short action label to the metadata for the labelled
+  `title` example of each icon page.
 - **Known blocker to clear first:** `scripts/check-api-surface.mjs`, byte-identical with the
   family, stops with an error when the package has never been published, because
   `npm view <name> versions` answers E404 instead of an empty list. The `api-surface` check on

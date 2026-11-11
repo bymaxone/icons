@@ -106,12 +106,12 @@ function specimen(render) {
     <div class="glyph">${render('HomeIcon')}</div>
     <svg class="marks" viewBox="0 0 24 24" aria-hidden="true">
       <rect class="cut" x="9.25" y="17" width="5.5" height="1.5"/>
-      <path class="dim" d="M15.6 17v1.5M15.3 17h.6M15.3 18.5h.6"/>
-      <path class="dim" d="M3.5 12.6h1.5M3.5 12.3v.6M5 12.3v.6"/>
+      <path class="cut-dim" d="M15.7 17v1.5M15.35 17h.7M15.35 18.5h.7M12 18.5v3.4"/>
+      <path class="stroke-dim" d="M3.5 12.6h1.5M3.5 12.25v.7M5 12.25v.7M3.5 12.95v8.95"/>
+      <text class="cut-label" x="12.35" y="22.65">the cut · 1.5 px</text>
+      <text x="3.85" y="22.65">stroke · 1.5 px</text>
     </svg>
     <span class="tag tag-grid">24 × 24 grid · 20 px live area</span>
-    <span class="tag tag-stroke">1.5 px stroke, round caps and joins</span>
-    <span class="tag tag-cut">The cut: distinct parts never touch, 1.5 px apart</span>
   </div>
   <figcaption class="trio">
     <span><span class="t">${render('HomeIcon')}</span>Line</span>

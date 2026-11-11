@@ -109,7 +109,9 @@ root.dataset.accent = prefs.accent ?? 'ink'
 
 document.addEventListener('DOMContentLoaded', () => {
   press('accent', root.dataset.accent)
-  if (document.querySelector('.grid')) showVariant('line')
+  const requested = new URLSearchParams(location.search).get('variant')
+  if (document.querySelector('.grid'))
+    showVariant(['filled', 'sm'].includes(requested) ? requested : 'line')
   document.getElementById('q')?.addEventListener('input', filter)
   document.getElementById('category')?.addEventListener('change', filter)
   const stroke = document.getElementById('stroke')
