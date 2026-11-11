@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/brand.schema.json",
+  "title": "TikTok",
+  "source": "https://tiktok.com",
+  "guidelines": "https://www.tiktok.com/brand",
+  "license": "CC0-1.0",
+  "retrievedAt": "2026-11-11",
+  "tags": ["short video", "social", "music", "creator"],
+  "since": "0.1.0"
+}

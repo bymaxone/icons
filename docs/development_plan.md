@@ -2,7 +2,7 @@
 
 > **Version:** 1.0.0
 > **Last updated:** 2026-11-11
-> **Status:** Approved spec, execution under way (P1, P2, B0, P3, B1 and B2 done; B3 in review; P0 awaits its GitHub settings)
+> **Status:** Approved spec, execution under way (P1, P2, B0, P3, B1, B2 and B3 done; B4 under way, its brand marks in review; P0 awaits its GitHub settings)
 > **Source spec:** [`technical_specification.md`](./technical_specification.md)
 > **Derived documents:** per-phase task files under `docs/tasks/` (one file per phase, scaffolded one phase at a time)
 
@@ -23,8 +23,8 @@
 
 ## 1. Progress Dashboard
 
-> **Overall progress: 6 / 12 phases (50%)**
-> **Active phase:** B3 (Studio, AI, formats, billing, people and system, pull request in review); P0 still has
+> **Overall progress: 7 / 12 phases (58%)**
+> **Active phase:** B4a (the brand marks of B4, pull request in review); P0 still has
 > the GitHub settings of task 0.6
 > **Blocked phases:** none
 >
@@ -43,8 +43,8 @@
 | P3  | visual-tooling                    | ✅     | 100%     | L    | 2026-11-11   |
 | B1  | navigation-actions-status         | ✅     | 100%     | L    | 2026-11-11   |
 | B2  | media-audio-files-editor          | ✅     | 100%     | L    | 2026-11-11   |
-| B3  | studio-ai-formats-billing         | 👀     | 90%      | L    | 2026-11-11   |
-| B4  | filled-variants-sm-masters-brands | 📋     | 0%       | L    | 2026-11-08   |
+| B3  | studio-ai-formats-billing         | ✅     | 100%     | L    | 2026-11-11   |
+| B4  | filled-variants-sm-masters-brands | 🔄     | 30%      | L    | 2026-11-11   |
 | P4  | catalog-site                      | 📋     | 0%       | M    | 2026-11-08   |
 | P5  | hardening-release                 | 📋     | 0%       | M    | 2026-11-08   |
 | P6  | react-native                      | 📋     | 0%       | M    | 2026-11-08   |
@@ -337,6 +337,10 @@ These rules apply to every phase. Phase sections only add rules specific to them
 - **Context / preconditions:** B3 approved.
 - **References:** spec §2.1, §2.2, §2.6, §5, §17 (D3).
 - **Size:** L
+- **Split (2026-11-11):** B4 lands as three pull requests, each with its own audit: **B4a**,
+  the 14 brand marks; **B4b**, the filled variants; **B4c**, the 16 px masters, after an
+  engineering pull request that gives the `sm` kind a 1.5 px stroke at 16 px by default.
+  Microsoft, LinkedIn and `google-color` are not in 1.0 (spec §5).
 
 ### P4: catalog-site
 

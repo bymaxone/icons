@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/brand.schema.json",
+  "title": "Instagram",
+  "source": "https://about.meta.com/brand/resources/instagram",
+  "guidelines": "https://about.meta.com/brand/resources/instagram",
+  "license": "CC0-1.0",
+  "retrievedAt": "2026-11-11",
+  "tags": ["photo", "social", "stories", "reels"],
+  "since": "0.1.0"
+}

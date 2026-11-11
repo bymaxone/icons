@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/brand.schema.json",
+  "title": "Discord",
+  "source": "https://discord.com/branding",
+  "guidelines": "https://discord.com/branding",
+  "license": "CC0-1.0",
+  "retrievedAt": "2026-11-11",
+  "tags": ["chat", "community", "server", "voice"],
+  "since": "0.1.0"
+}

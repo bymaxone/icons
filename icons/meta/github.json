@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/brand.schema.json",
+  "title": "GitHub",
+  "source": "https://github.com/logos",
+  "guidelines": "https://github.com/logos",
+  "license": "CC0-1.0",
+  "retrievedAt": "2026-11-11",
+  "tags": ["git", "code", "repository", "octocat"],
+  "since": "0.1.0"
+}

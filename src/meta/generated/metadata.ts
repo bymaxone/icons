@@ -157,7 +157,22 @@ export const ICON_NAMES = [
 ] as const
 
 /** Every brand name, in name order. */
-export const BRAND_NAMES = [] as const
+export const BRAND_NAMES = [
+  'apple',
+  'discord',
+  'facebook',
+  'github',
+  'google',
+  'instagram',
+  'pinterest',
+  'spotify',
+  'threads',
+  'tiktok',
+  'vimeo',
+  'whatsapp',
+  'x',
+  'youtube'
+] as const
 
 /** Every category name, in the order of categories.json. */
 export const CATEGORY_NAMES = [
@@ -346,4 +361,19 @@ export const ICONS = {
 
 /** The metadata of every brand mark, keyed by name. */
 // prettier-ignore
-export const BRANDS = {} as const
+export const BRANDS = {
+  "apple": {"title":"Apple","source":"https://www.apple.com","guidelines":"https://www.apple.com/legal/intellectual-property/guidelinesfor3rdparties.html","license":"CC0-1.0","retrievedAt":"2026-11-11","tags":["ios","mac","sign in","app store"],"aliases":[],"multicolor":false,"since":"0.1.0"},
+  "discord": {"title":"Discord","source":"https://discord.com/branding","guidelines":"https://discord.com/branding","license":"CC0-1.0","retrievedAt":"2026-11-11","tags":["chat","community","server","voice"],"aliases":[],"multicolor":false,"since":"0.1.0"},
+  "facebook": {"title":"Facebook","source":"https://about.meta.com/brand/resources/facebook/logo","guidelines":"https://about.meta.com/brand/resources/facebook/logo","license":"CC0-1.0","retrievedAt":"2026-11-11","tags":["social","meta","page","share"],"aliases":[],"multicolor":false,"since":"0.1.0"},
+  "github": {"title":"GitHub","source":"https://github.com/logos","guidelines":"https://github.com/logos","license":"CC0-1.0","retrievedAt":"2026-11-11","tags":["git","code","repository","octocat"],"aliases":[],"multicolor":false,"since":"0.1.0"},
+  "google": {"title":"Google","source":"https://partnermarketinghub.withgoogle.com","guidelines":"https://about.google/brand-resource-center/brand-elements/","license":"CC0-1.0","retrievedAt":"2026-11-11","tags":["search","sign in","account","g"],"aliases":[],"multicolor":false,"since":"0.1.0"},
+  "instagram": {"title":"Instagram","source":"https://about.meta.com/brand/resources/instagram","guidelines":"https://about.meta.com/brand/resources/instagram","license":"CC0-1.0","retrievedAt":"2026-11-11","tags":["photo","social","stories","reels"],"aliases":[],"multicolor":false,"since":"0.1.0"},
+  "pinterest": {"title":"Pinterest","source":"https://business.pinterest.com/en/brand-guidelines","guidelines":"https://business.pinterest.com/en/brand-guidelines","license":"CC0-1.0","retrievedAt":"2026-11-11","tags":["pins","boards","inspiration","share"],"aliases":[],"multicolor":false,"since":"0.1.0"},
+  "spotify": {"title":"Spotify","source":"https://developer.spotify.com/documentation/general/design-and-branding/#using-our-logo","guidelines":"https://developer.spotify.com/documentation/general/design-and-branding/#using-our-logo","license":"CC0-1.0","retrievedAt":"2026-11-11","tags":["music","audio","podcast","streaming"],"aliases":[],"multicolor":false,"since":"0.1.0"},
+  "threads": {"title":"Threads","source":"https://www.meta.com/brand/resources/instagram/threads","guidelines":"https://www.meta.com/brand/resources/instagram/threads","license":"CC0-1.0","retrievedAt":"2026-11-11","tags":["social","meta","post","conversation"],"aliases":[],"multicolor":false,"since":"0.1.0"},
+  "tiktok": {"title":"TikTok","source":"https://tiktok.com","guidelines":"https://www.tiktok.com/brand","license":"CC0-1.0","retrievedAt":"2026-11-11","tags":["short video","social","music","creator"],"aliases":[],"multicolor":false,"since":"0.1.0"},
+  "vimeo": {"title":"Vimeo","source":"https://press.vimeo.com/brand-guidelines","guidelines":"https://press.vimeo.com/brand-guidelines","license":"CC0-1.0","retrievedAt":"2026-11-11","tags":["video","hosting","player","creator"],"aliases":[],"multicolor":false,"since":"0.1.0"},
+  "whatsapp": {"title":"WhatsApp","source":"https://about.meta.com/brand/resources/whatsapp/whatsapp-brand","guidelines":"https://about.meta.com/brand/resources/whatsapp/whatsapp-brand","license":"CC0-1.0","retrievedAt":"2026-11-11","tags":["chat","message","meta","share"],"aliases":[],"multicolor":false,"since":"0.1.0"},
+  "x": {"title":"X","source":"https://x.com","guidelines":"https://about.x.com/en/who-we-are/brand-toolkit","license":"CC0-1.0","retrievedAt":"2026-11-11","tags":["twitter","social","post","share"],"aliases":[],"multicolor":false,"since":"0.1.0"},
+  "youtube": {"title":"YouTube","source":"https://www.youtube.com/howyoutubeworks/resources/brand-resources/#logos-icons-and-colors","guidelines":"https://www.youtube.com/howyoutubeworks/resources/brand-resources/#logos-icons-and-colors","license":"CC0-1.0","retrievedAt":"2026-11-11","tags":["video","channel","play","streaming"],"aliases":[],"multicolor":false,"since":"0.1.0"},
+} as const

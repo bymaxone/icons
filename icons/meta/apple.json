@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/brand.schema.json",
+  "title": "Apple",
+  "source": "https://www.apple.com",
+  "guidelines": "https://www.apple.com/legal/intellectual-property/guidelinesfor3rdparties.html",
+  "license": "CC0-1.0",
+  "retrievedAt": "2026-11-11",
+  "tags": ["ios", "mac", "sign in", "app store"],
+  "since": "0.1.0"
+}

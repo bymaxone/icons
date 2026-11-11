@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/brand.schema.json",
+  "title": "WhatsApp",
+  "source": "https://about.meta.com/brand/resources/whatsapp/whatsapp-brand",
+  "guidelines": "https://about.meta.com/brand/resources/whatsapp/whatsapp-brand",
+  "license": "CC0-1.0",
+  "retrievedAt": "2026-11-11",
+  "tags": ["chat", "message", "meta", "share"],
+  "since": "0.1.0"
+}

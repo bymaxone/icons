@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/brand.schema.json",
+  "title": "YouTube",
+  "source": "https://www.youtube.com/howyoutubeworks/resources/brand-resources/#logos-icons-and-colors",
+  "guidelines": "https://www.youtube.com/howyoutubeworks/resources/brand-resources/#logos-icons-and-colors",
+  "license": "CC0-1.0",
+  "retrievedAt": "2026-11-11",
+  "tags": ["video", "channel", "play", "streaming"],
+  "since": "0.1.0"
+}

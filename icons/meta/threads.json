@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/brand.schema.json",
+  "title": "Threads",
+  "source": "https://www.meta.com/brand/resources/instagram/threads",
+  "guidelines": "https://www.meta.com/brand/resources/instagram/threads",
+  "license": "CC0-1.0",
+  "retrievedAt": "2026-11-11",
+  "tags": ["social", "meta", "post", "conversation"],
+  "since": "0.1.0"
+}

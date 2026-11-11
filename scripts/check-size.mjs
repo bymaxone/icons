@@ -40,8 +40,10 @@ const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 //     497 bytes brotli with no record and at 6716 bytes with 148 records, about 42 bytes
 //     brotli per record. The headroom fits about thirty records or a tag edit; every drawing
 //     batch adds records, so each one recalibrates it.
-//   - brands, 0.25 KiB brotli: the entry is empty until a brand mark exists (5 bytes
-//     brotli); the budget is a floor that catches an accidental inline of the runtime.
+//   - brands, 5 KiB brotli: the entry holds every brand mark, measured at 5 bytes brotli
+//     with no mark and at 4015 bytes with 14 marks, about 290 bytes per mark, most of it the
+//     path data of the owner's geometry. The headroom fits three more marks; an inline of
+//     the runtime still fails.
 //
 // Every icon module under `dist/icons/<name>/` is measured too, against the targets of the
 // specification: each icon at most 0.6 KiB brotli, and the runtime with one icon at most
@@ -55,7 +57,7 @@ const BUDGETS = [
   { name: 'root (re-exports)', path: 'dist/index.mjs', brotli: 1.75 * 1024 },
   { name: 'runtime (Icon base)', path: 'dist/runtime/index.mjs', brotli: 1.25 * 1024 },
   { name: 'meta (typed metadata)', path: 'dist/meta/index.mjs', brotli: 8 * 1024 },
-  { name: 'brands (brand marks)', path: 'dist/brands/index.mjs', brotli: 0.25 * 1024 }
+  { name: 'brands (brand marks)', path: 'dist/brands/index.mjs', brotli: 5 * 1024 }
 ]
 const ICON_BUDGET = 0.6 * 1024
 const RUNTIME_WITH_ICON_BUDGET = 1.5 * 1024

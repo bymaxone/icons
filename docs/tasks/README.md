@@ -20,12 +20,12 @@ Tasks live **one file per phase** in this folder (`phase-NN-<slug>.md`, numbered
 | P3    | [`phase-04-visual-tooling.md`](./phase-04-visual-tooling.md)                       | 6 / 6       | ✅ Done        |
 | B1    | [`phase-05-navigation-actions-status.md`](./phase-05-navigation-actions-status.md) | 6 / 6       | ✅ Done        |
 | B2    | [`phase-06-media-audio-files-editor.md`](./phase-06-media-audio-files-editor.md)   | 6 / 6       | ✅ Done        |
-| B3    | [`phase-07-studio-ai-formats-billing.md`](./phase-07-studio-ai-formats-billing.md) | 5 / 6       | 👀 Review      |
-| B4    | not scaffolded yet                                                                 | n/a         | 📋 ToDo        |
+| B3    | [`phase-07-studio-ai-formats-billing.md`](./phase-07-studio-ai-formats-billing.md) | 6 / 6       | ✅ Done        |
+| B4a   | [`phase-08-brand-marks.md`](./phase-08-brand-marks.md)                             | 3 / 4       | 👀 Review      |
 | P4    | not scaffolded yet                                                                 | n/a         | 📋 ToDo        |
 | P5    | not scaffolded yet                                                                 | n/a         | 📋 ToDo        |
 | P6    | not scaffolded yet                                                                 | n/a         | 📋 ToDo        |
-|       | **Total**                                                                          | **44 / 53** | 🔄 In Progress |
+|       | **Total**                                                                          | **48 / 57** | 🔄 In Progress |
 
 ---
 

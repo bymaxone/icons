@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/brand.schema.json",
+  "title": "Pinterest",
+  "source": "https://business.pinterest.com/en/brand-guidelines",
+  "guidelines": "https://business.pinterest.com/en/brand-guidelines",
+  "license": "CC0-1.0",
+  "retrievedAt": "2026-11-11",
+  "tags": ["pins", "boards", "inspiration", "share"],
+  "since": "0.1.0"
+}
