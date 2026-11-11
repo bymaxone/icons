@@ -380,8 +380,7 @@ These rules apply to every phase. Phase sections only add rules specific to them
 - **API surface check on a first release (cleared 2026-11-11):** `scripts/check-api-surface.mjs`
   stopped with an error on a package never published, because `npm view <name> versions`
   answers E404 instead of an empty list. It now reads E404 as "no earlier published version"
-  and still stops on any other npm failure. The family's copies carry the same defect, which
-  only a library's first release reaches; the fix is written to be copied as it is.
+  and still stops on any other npm failure.
 - **Definition of Done:**
   - Every gate of spec §12 is green, and `pnpm prepublishOnly` passes.
   - `@bymax-one/icons@1.0.0` is on npm; the published tarball matches a local pack.
