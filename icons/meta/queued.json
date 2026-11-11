@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "tags": ["waiting", "pending", "hourglass", "in line"],
+  "categories": ["status"],
+  "useCases": ["Marks a render waiting in the queue", "Shows that a job has not started"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

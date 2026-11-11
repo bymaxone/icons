@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "tags": ["locked", "private", "secure", "padlock"],
+  "categories": ["status"],
+  "useCases": ["Marks a private project", "Locks a layer against edits"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

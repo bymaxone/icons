@@ -1,10 +1,10 @@
 # Phase P3: visual-tooling
 
-> **Status**: 👀 Review · **Progress**: 5 / 6 tasks · **Last updated**: 2026-11-10
+> **Status**: ✅ Done · **Progress**: 6 / 6 tasks · **Last updated**: 2026-11-11
 > **Source roadmap**: [`../development_plan.md`](../development_plan.md) §5 (P3)
 > **Source spec**: [`../technical_specification.md`](../technical_specification.md) §3.4, §12, §16
 >
-> The tools are in place and the B0 batch is measured with them. Task 4.6, the phase pull request, is open.
+> The tools are in place and the B0 batch is measured with them. The phase merged via PR #8, and the preview was proven on PR #9.
 
 ---
 
@@ -122,14 +122,14 @@ summary, passes, and uploads nothing.
 
 ## Task index
 
-| ID  | Task                                 | Status    | Priority | Size | Depends on |
-| --- | ------------------------------------ | --------- | -------- | ---- | ---------- |
-| 4.1 | Visual regression and its baselines  | ✅ Done   | P0       | M    | none       |
-| 4.2 | Similarity check and its calibration | ✅ Done   | P0       | L    | none       |
-| 4.3 | Family sheet                         | ✅ Done   | P1       | S    | none       |
-| 4.4 | Pull-request preview workflows       | ✅ Done   | P0       | L    | 4.2        |
-| 4.5 | Documentation and CI                 | ✅ Done   | P1       | S    | 4.1 to 4.4 |
-| 4.6 | Phase commit and pull request        | 👀 Review | P0       | S    | 4.5        |
+| ID  | Task                                 | Status  | Priority | Size | Depends on |
+| --- | ------------------------------------ | ------- | -------- | ---- | ---------- |
+| 4.1 | Visual regression and its baselines  | ✅ Done | P0       | M    | none       |
+| 4.2 | Similarity check and its calibration | ✅ Done | P0       | L    | none       |
+| 4.3 | Family sheet                         | ✅ Done | P1       | S    | none       |
+| 4.4 | Pull-request preview workflows       | ✅ Done | P0       | L    | 4.2        |
+| 4.5 | Documentation and CI                 | ✅ Done | P1       | S    | 4.1 to 4.4 |
+| 4.6 | Phase commit and pull request        | ✅ Done | P0       | S    | 4.5        |
 
 ---
 
@@ -229,7 +229,7 @@ Verification:
 
 - [x] The unprivileged workflow lints before it renders, and a drawing that references a file is refused before rendering (a test proves it).
 - [x] The privileged workflow validates the artifact, the pull request and its commit before it stores an image or writes the comment, with the least permission per job.
-- [ ] A changed drawing on a pull request produces a visual diff, a similarity entry and a preview comment. This is proven on the first pull request after this phase merges, B0.1, because `workflow_run` runs only the default branch's file.
+- [x] A changed drawing on a pull request produces a visual diff, a similarity entry and a preview comment. This is proven on the first pull request after this phase merges, B0.1, because `workflow_run` runs only the default branch's file: [the preview comment on pull request #9](https://github.com/bymaxone/icons/pull/9#issuecomment-6788043037).
 
 #### Agent prompt
 
@@ -273,15 +273,15 @@ Document the visual tools where a contributor and an agent look for them, and ad
 
 ### Task 4.6: Phase commit and pull request
 
-- **Status**: 👀 Review
+- **Status**: ✅ Done
 - **Priority**: P0
 - **Size**: S
 - **Depends on**: 4.5
 
 #### Acceptance criteria
 
-- [ ] The full gate, `mutation:full` on the new modules and the bounded review pass.
-- [ ] Merged with CI green, the Codex review approved and no open review thread, checked after every push, before the merge and after it.
+- [x] The full gate, `mutation:full` on the new modules and the bounded review pass.
+- [x] Merged with CI green, the Codex review approved and no open review thread, checked after every push, before the merge and after it.
 
 #### Agent prompt
 
@@ -304,3 +304,4 @@ and merge once CI is green, the Codex review is approved and no thread is open.
 - 4.3 ✅ 2026-11-10 `pnpm family-sheet` by category on both pages, with the batch outlined.
 - 4.4 ✅ 2026-11-10 Two preview workflows: an unprivileged build that lints before it renders, and a privileged publish that validates the artifact and holds one write permission per job.
 - 4.5 ✅ 2026-11-10 Contributor docs, spec §3.4 and the CI verify job updated.
+- 4.6 ✅ 2026-11-11 Phase merged via PR #8 (squash `72800e0`); `mutation:full` 100.00, Codex review approved, no open thread. The preview was proven on PR #9 (B0.1).

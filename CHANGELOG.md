@@ -19,6 +19,14 @@ and deprecated, each rename with the alias that keeps the old name working.
   `./icons/<name>`), with their raw SVG files, sprite symbols and metadata. Their
   signature is a 1.5 px cut that keeps distinct parts from touching: the door of `home`,
   the handle of `search`, the head of `user`, the crease of `file`.
+- The navigation, action and status icons, 44 drawings in the same language. Navigation:
+  `dashboard`, `folder-stack`, `library`, `templates`, `menu`, `sidebar`, `chevron-up`,
+  `chevron-down`, `chevron-left`, `chevron-right`, `arrow-left`, `arrow-right` and
+  `arrow-up-right`. Actions: `pencil`, `trash` (alias `delete`), `copy`, `duplicate`,
+  `download`, `upload`, `share`, `link`, `more-horizontal`, `more-vertical`, `undo`, `redo`,
+  `refresh`, `filter`, `sort`, `grip` and `pin`. Status: `check-circle`, `alert-triangle`
+  (alias `warning`), `alert-circle`, `info`, `loader`, `clock`, `cloud-check`, `lock`,
+  `eye`, `eye-off`, `history`, `queued`, `repair` and `version`.
 - Repository scaffold: package manifest with the `.` and `./meta` exports map,
   build tooling, lint and test configuration, mutation testing configuration,
   commit governance, the open-source baseline files and the package-integrity

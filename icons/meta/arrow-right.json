@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "tags": ["forward", "next", "right", "continue"],
+  "categories": ["navigation"],
+  "useCases": ["Moves to the next step of a flow", "Marks a call to action that continues"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

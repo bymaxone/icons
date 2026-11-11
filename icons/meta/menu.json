@@ -1,0 +1,12 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "tags": ["hamburger", "navigation", "lines", "open menu"],
+  "categories": ["navigation"],
+  "useCases": [
+    "Opens the navigation drawer on a small screen",
+    "Shows the menu button of a toolbar"
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

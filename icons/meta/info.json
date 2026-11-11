@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "tags": ["information", "details", "about", "help"],
+  "categories": ["status"],
+  "useCases": ["Shows a hint beside a setting", "Opens the details of an item"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

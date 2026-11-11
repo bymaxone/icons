@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "tags": ["visible", "show", "view", "preview"],
+  "categories": ["status"],
+  "useCases": ["Shows a hidden layer", "Reveals a password"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

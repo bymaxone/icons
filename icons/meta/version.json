@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "tags": ["versions", "revision", "stack", "snapshot"],
+  "categories": ["status"],
+  "useCases": ["Shows the version of a project", "Links to earlier versions of a file"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

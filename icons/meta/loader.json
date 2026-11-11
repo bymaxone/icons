@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "tags": ["loading", "spinner", "progress", "busy"],
+  "categories": ["status"],
+  "useCases": ["Shows that content is loading", "Marks a button that is busy"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

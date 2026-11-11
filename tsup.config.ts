@@ -1,4 +1,4 @@
-import { readdirSync } from 'node:fs'
+import { mkdirSync, readdirSync, rmSync, writeFileSync } from 'node:fs'
 
 import { defineConfig } from 'tsup'
 import type { Options } from 'tsup'
@@ -35,11 +35,26 @@ const shared: Options = {
 // One entry per generated icon, `./icons/<name>`, emitted as `dist/icons/<name>/index.*`
 // so the comment strip that runs on every `index.mjs` and `index.cjs` covers it. The list
 // is read from the generated directory, which holds one subdirectory per icon.
+//
+// Each entry is a one-line re-export written to a single directory, ENTRIES_DIR, rather
+// than the icon's own `index.ts`. The declaration bundler starts a new TypeScript program
+// whenever an entry's directory differs from the previous entry's, and each program costs
+// about 125 MB, so one directory per icon would mean one program per icon and a build whose
+// memory grows with the set. From one directory the icons share one program. `pnpm clean`
+// removes the directory.
 const ICONS_DIR = 'src/icons/generated'
+const ENTRIES_DIR = '.tsup-entries'
+const iconNames = readdirSync(ICONS_DIR, { withFileTypes: true })
+  .filter((entry) => entry.isDirectory())
+  .map((entry) => entry.name)
+rmSync(ENTRIES_DIR, { recursive: true, force: true })
+if (iconNames.length > 0) mkdirSync(ENTRIES_DIR)
 const iconEntries = Object.fromEntries(
-  readdirSync(ICONS_DIR, { withFileTypes: true })
-    .filter((entry) => entry.isDirectory())
-    .map((entry) => [`icons/${entry.name}/index`, `${ICONS_DIR}/${entry.name}/index.ts`])
+  iconNames.map((name) => {
+    const file = `${ENTRIES_DIR}/${name}.ts`
+    writeFileSync(file, `export * from '../${ICONS_DIR}/${name}/index'\n`)
+    return [`icons/${name}/index`, file]
+  })
 )
 
 export default defineConfig([

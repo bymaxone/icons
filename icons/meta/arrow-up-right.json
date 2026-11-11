@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "tags": ["external", "open", "outbound", "new tab"],
+  "categories": ["navigation"],
+  "useCases": ["Marks a link that leaves the app", "Opens an item in a new tab"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

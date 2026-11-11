@@ -109,6 +109,8 @@ These rules are the identity of the set. They are applied to every icon and chec
 - A 20 px circle, an 18 px square and a 21 px-tall triangle read as the same size.
 - Asymmetric icons are centred by visual mass, not by bounding box.
 - Every icon passes a blur test at 16 px: the silhouette must still read.
+- Ink ceiling: no drawing covers more than 21.5% of the 24 × 24 canvas, measured with its stroke. A heavier drawing turns into a block in the blur test and outweighs its neighbours in a row.
+- No part reads as a digit or a letter at 16 or 24 px. A narrow upright closed shape is the usual culprit: a stadium reads as a zero, two stacked ones as an eight. Such a part takes a small corner, or the composition avoids it.
 
 ### 2.6 Filled variant
 
@@ -131,7 +133,7 @@ The reason the package exists is that its drawings are not someone else's. The p
 2. **Attestation.** Every pull request that adds or changes a drawing carries a checkbox: "This drawing is an original Bymax work." The PR template makes it mandatory.
 3. **Process evidence.** Each drawing batch keeps its contact sheets (section 16) in the repository history, so the evolution of every icon is traceable.
 4. **Similarity check in CI.** Each new or changed icon is rasterised and compared against every icon of Lucide, Tabler, Phosphor and Heroicons, not only the ones of the same name (all MIT or ISC, installed as dev dependencies for this purpose only). Both drawings are normalised first: the ink's bounds are scaled to one size and centred, and stroked drawings are redrawn with one stroke, so a moved, rescaled or reweighted copy still lines up. A pair is flagged when its symmetric chamfer distance is at most the threshold that [`similarity/calibration.md`](./similarity/calibration.md) sets from known pairs, and independent redesigns of the same concept are flagged too, which is why a flag asks for human review and never fails a build. The positives are moved and rescaled copies, so the calibration proves the check against those; a copy whose shape was also edited (a node moved, a corner changed) can lie above the threshold. The pull-request preview comment shows each changed icon beside its nearest matches.
-5. **Primitive glyphs.** Plus, close, chevrons and arrows will inevitably coincide with every other set. That is expected; the check matters for composite pictograms.
+5. **Primitive glyphs.** Plus, close, chevrons and arrows will inevitably coincide with every other set, and so will the glyphs and signs that are conventions rather than drawings: three lines (`menu`), three dots (`more-horizontal`, `more-vertical`), the dot grid (`grip`), the general warning sign of ISO 7010 (W001, `alert-triangle`), and a character in a circle in the manner of the ISO 7001 information sign (`info`, `alert-circle`). Redrawing these to stand apart costs recognition. A flag on them is expected; the check matters for composite pictograms.
 
 ---
 

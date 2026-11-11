@@ -1,0 +1,12 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "tags": ["overview", "panels", "tiles", "home screen"],
+  "categories": ["navigation"],
+  "useCases": [
+    "Links to the overview page of an app",
+    "Marks the dashboard tab of a navigation bar"
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

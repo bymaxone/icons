@@ -1,6 +1,6 @@
 # Development Tasks: @bymax-one/icons
 
-> **Last updated:** 2026-11-10
+> **Last updated:** 2026-11-11
 > **Source roadmap:** [`../development_plan.md`](../development_plan.md) · **Spec:** [`../technical_specification.md`](../technical_specification.md)
 
 Tasks live **one file per phase** in this folder (`phase-NN-<slug>.md`, numbered in execution order; a drawing batch is a phase like any other, so B0 is `phase-03-keystone-icons.md`). Each phase file is self-contained: context, rules-of-phase, reference docs, a task index, the tasks (each with an executable **Agent prompt**), and a completion log. Phase files are scaffolded one phase at a time, when the previous phase closes.
@@ -11,21 +11,21 @@ Tasks live **one file per phase** in this folder (`phase-NN-<slug>.md`, numbered
 
 ## Phase files (folder index)
 
-| Phase | File                                                                   | Tasks       | Status         |
-| ----- | ---------------------------------------------------------------------- | ----------- | -------------- |
-| P0    | [`phase-00-repository-scaffold.md`](./phase-00-repository-scaffold.md) | 0 / 7       | 🔄 In Progress |
-| P1    | [`phase-01-runtime.md`](./phase-01-runtime.md)                         | 7 / 8       | ✅ Done        |
-| P2    | [`phase-02-pipeline.md`](./phase-02-pipeline.md)                       | 10 / 10     | ✅ Done        |
-| B0    | [`phase-03-keystone-icons.md`](./phase-03-keystone-icons.md)           | 4 / 4       | ✅ Done        |
-| P3    | [`phase-04-visual-tooling.md`](./phase-04-visual-tooling.md)           | 5 / 6       | 👀 Review      |
-| B1    | not scaffolded yet                                                     | n/a         | 📋 ToDo        |
-| B2    | not scaffolded yet                                                     | n/a         | 📋 ToDo        |
-| B3    | not scaffolded yet                                                     | n/a         | 📋 ToDo        |
-| B4    | not scaffolded yet                                                     | n/a         | 📋 ToDo        |
-| P4    | not scaffolded yet                                                     | n/a         | 📋 ToDo        |
-| P5    | not scaffolded yet                                                     | n/a         | 📋 ToDo        |
-| P6    | not scaffolded yet                                                     | n/a         | 📋 ToDo        |
-|       | **Total**                                                              | **26 / 35** | 🔄 In Progress |
+| Phase | File                                                                               | Tasks       | Status         |
+| ----- | ---------------------------------------------------------------------------------- | ----------- | -------------- |
+| P0    | [`phase-00-repository-scaffold.md`](./phase-00-repository-scaffold.md)             | 0 / 7       | 🔄 In Progress |
+| P1    | [`phase-01-runtime.md`](./phase-01-runtime.md)                                     | 7 / 8       | ✅ Done        |
+| P2    | [`phase-02-pipeline.md`](./phase-02-pipeline.md)                                   | 10 / 10     | ✅ Done        |
+| B0    | [`phase-03-keystone-icons.md`](./phase-03-keystone-icons.md)                       | 4 / 4       | ✅ Done        |
+| P3    | [`phase-04-visual-tooling.md`](./phase-04-visual-tooling.md)                       | 6 / 6       | ✅ Done        |
+| B1    | [`phase-05-navigation-actions-status.md`](./phase-05-navigation-actions-status.md) | 5 / 6       | 👀 Review      |
+| B2    | not scaffolded yet                                                                 | n/a         | 📋 ToDo        |
+| B3    | not scaffolded yet                                                                 | n/a         | 📋 ToDo        |
+| B4    | not scaffolded yet                                                                 | n/a         | 📋 ToDo        |
+| P4    | not scaffolded yet                                                                 | n/a         | 📋 ToDo        |
+| P5    | not scaffolded yet                                                                 | n/a         | 📋 ToDo        |
+| P6    | not scaffolded yet                                                                 | n/a         | 📋 ToDo        |
+|       | **Total**                                                                          | **32 / 41** | 🔄 In Progress |
 
 ---
 

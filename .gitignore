@@ -32,6 +32,8 @@ secrets/
 dist/
 build/
 *.tgz
+# The one-line icon entries tsup.config.ts writes for the declaration build
+.tsup-entries/
 
 # ============================================
 # TypeScript
