@@ -16,6 +16,27 @@ const OLDER = 'b'.repeat(40)
 const ROOT = `/repos/${REPO}/contents/pr-12`
 const MESSAGE = 'Drop an earlier preview of pull request 12'
 
+/** Every call that prunes two earlier commits, one with two images and one with one. */
+function pruneCalls(): unknown[] {
+  /** The read of an image's sha, then its deletion. */
+  const removal = (commit: string, file: string): unknown[] => [
+    { method: 'GET', path: `${ROOT}/${commit}/${file}?ref=icons-preview`, body: undefined },
+    {
+      method: 'DELETE',
+      path: `${ROOT}/${commit}/${file}`,
+      body: { message: MESSAGE, sha: `sha-of-${file}?ref=icons-preview`, branch: 'icons-preview' }
+    }
+  ]
+  return [
+    { method: 'GET', path: `${ROOT}?ref=icons-preview`, body: undefined },
+    { method: 'GET', path: `${ROOT}/${OLD}?ref=icons-preview`, body: undefined },
+    ...removal(OLD, 'preview.png'),
+    ...removal(OLD, 'family.png'),
+    { method: 'GET', path: `${ROOT}/${OLDER}?ref=icons-preview`, body: undefined },
+    ...removal(OLDER, 'preview.png')
+  ]
+}
+
 describe('pruneEarlierPreviews', () => {
   const manifest = manifestOf({ images: ['preview.png'] })
 
@@ -38,41 +59,7 @@ describe('pruneEarlierPreviews', () => {
       return respond(200)
     })
     expect(await pruneEarlierPreviews(request, REPO, manifest)).toBe(3)
-    expect(calls).toStrictEqual([
-      { method: 'GET', path: `${ROOT}?ref=icons-preview`, body: undefined },
-      { method: 'GET', path: `${ROOT}/${OLD}?ref=icons-preview`, body: undefined },
-      { method: 'GET', path: `${ROOT}/${OLD}/preview.png?ref=icons-preview`, body: undefined },
-      {
-        method: 'DELETE',
-        path: `${ROOT}/${OLD}/preview.png`,
-        body: {
-          message: MESSAGE,
-          sha: 'sha-of-preview.png?ref=icons-preview',
-          branch: 'icons-preview'
-        }
-      },
-      { method: 'GET', path: `${ROOT}/${OLD}/family.png?ref=icons-preview`, body: undefined },
-      {
-        method: 'DELETE',
-        path: `${ROOT}/${OLD}/family.png`,
-        body: {
-          message: MESSAGE,
-          sha: 'sha-of-family.png?ref=icons-preview',
-          branch: 'icons-preview'
-        }
-      },
-      { method: 'GET', path: `${ROOT}/${OLDER}?ref=icons-preview`, body: undefined },
-      { method: 'GET', path: `${ROOT}/${OLDER}/preview.png?ref=icons-preview`, body: undefined },
-      {
-        method: 'DELETE',
-        path: `${ROOT}/${OLDER}/preview.png`,
-        body: {
-          message: MESSAGE,
-          sha: 'sha-of-preview.png?ref=icons-preview',
-          branch: 'icons-preview'
-        }
-      }
-    ])
+    expect(calls).toStrictEqual(pruneCalls())
   })
 
   it('does nothing when the pull request has no directory yet', async () => {
