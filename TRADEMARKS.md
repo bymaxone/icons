@@ -44,6 +44,21 @@ drawing format does not allow.
 
 ## Marks in the package
 
+- **Apple** (`apple`): [brand guidelines](https://www.apple.com/legal/intellectual-property/guidelinesfor3rdparties.html)
+- **Discord** (`discord`): [brand guidelines](https://discord.com/branding)
+- **Facebook** (`facebook`): [brand guidelines](https://about.meta.com/brand/resources/facebook/logo)
+- **GitHub** (`github`): [brand guidelines](https://github.com/logos)
+- **Google** (`google`): [brand guidelines](https://about.google/brand-resource-center/brand-elements/)
+- **Instagram** (`instagram`): [brand guidelines](https://about.meta.com/brand/resources/instagram)
+- **Pinterest** (`pinterest`): [brand guidelines](https://business.pinterest.com/en/brand-guidelines)
+- **Spotify** (`spotify`): [brand guidelines](https://developer.spotify.com/documentation/general/design-and-branding/#using-our-logo)
+- **Threads** (`threads`): [brand guidelines](https://www.meta.com/brand/resources/instagram/threads)
+- **TikTok** (`tiktok`): [brand guidelines](https://www.tiktok.com/brand)
+- **Vimeo** (`vimeo`): [brand guidelines](https://press.vimeo.com/brand-guidelines)
+- **WhatsApp** (`whatsapp`): [brand guidelines](https://about.meta.com/brand/resources/whatsapp/whatsapp-brand)
+- **X** (`x`): [brand guidelines](https://about.x.com/en/who-we-are/brand-toolkit)
+- **YouTube** (`youtube`): [brand guidelines](https://www.youtube.com/howyoutubeworks/resources/brand-resources/#logos-icons-and-colors)
+
 Microsoft and LinkedIn are not included: Simple Icons removed them at their owners'
 request, and no other source with a clear licence exists. They return when one does.
 

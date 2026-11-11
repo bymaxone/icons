@@ -43,4 +43,16 @@ describe('brand provenance', () => {
       true
     )
   })
+
+  it.each(BRAND_NAMES)('lists %s in TRADEMARKS.md with its guidelines', (name) => {
+    /**
+     * Scenario: every shipped brand has a line in TRADEMARKS.md (AGENTS.md, "Brand marks are
+     * official geometry"), naming the mark and linking the owner's guidelines.
+     */
+    const trademarks = readFileSync(join(ROOT, 'TRADEMARKS.md'), 'utf8')
+    const meta = BRAND_METADATA[name]
+    expect(trademarks).toContain(
+      `- **${meta.title}** (\`${name}\`): [brand guidelines](${meta.guidelines})`
+    )
+  })
 })
