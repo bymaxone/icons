@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Prompt",
   "tags": ["input", "command", "instruction", "terminal"],
   "categories": ["ai-agent"],
   "useCases": ["Opens the prompt field", "Shows the prompt of a generation"],

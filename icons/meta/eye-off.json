@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Hide",
   "tags": ["hidden", "hide", "invisible", "conceal"],
   "categories": ["status"],
   "useCases": ["Hides a layer", "Masks a password"],

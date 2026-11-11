@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "More options",
   "tags": ["ellipsis", "overflow", "options", "dots"],
   "categories": ["actions"],
   "useCases": ["Opens the overflow menu of a row", "Shows more actions of a card"],

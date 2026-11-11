@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Zoom out",
   "tags": ["shrink", "reduce", "minus", "scale down"],
   "categories": ["editor-canvas"],
   "useCases": ["Zooms out of the canvas", "Zooms out of the timeline"],

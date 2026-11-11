@@ -60,6 +60,7 @@ const build = (): ReturnType<typeof lintSources> =>
   ))
 
 const RING_RECORD = {
+  label: 'Ring',
   tags: ['circle'],
   categories: ['system'],
   useCases: ['First use', 'Second use'],

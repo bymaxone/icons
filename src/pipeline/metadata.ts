@@ -28,6 +28,7 @@ export type IconVariantName = 'line' | 'filled' | 'sm'
 /** `icons/meta/<name>.json` of a non-brand icon. */
 export interface IconMetaSource {
   readonly $schema: string
+  readonly label: string
   readonly tags: readonly string[]
   readonly categories: readonly string[]
   readonly useCases: readonly string[]

@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Information",
   "tags": ["information", "details", "about", "help"],
   "categories": ["status"],
   "useCases": [

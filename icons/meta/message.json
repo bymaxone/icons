@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Messages",
   "tags": ["chat", "comment", "speech bubble", "conversation"],
   "categories": ["system"],
   "useCases": ["Opens the chat", "Adds a comment", "Filled: unread messages"],

@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Settings",
   "tags": ["gear", "cog", "preferences", "configuration"],
   "categories": ["navigation"],
   "useCases": [

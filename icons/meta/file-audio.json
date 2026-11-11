@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Audio file",
   "tags": ["audio file", "sound file", "music file", "media"],
   "categories": ["files"],
   "useCases": ["Marks an audio file", "Uploads a sound"],

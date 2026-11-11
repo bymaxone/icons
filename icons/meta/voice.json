@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Voice",
   "tags": ["speech", "voice over", "talk", "speaking"],
   "categories": ["audio-voice"],
   "useCases": ["Picks a voice for a character", "Generates a voice line"],

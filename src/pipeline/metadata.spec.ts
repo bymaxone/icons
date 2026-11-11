@@ -64,7 +64,9 @@ describe('icon schema', () => {
       'a deprecated alias without a reason',
       { aliases: [{ name: 'old', deprecated: true, toBeRemovedInVersion: '10.20.30' }] }
     ],
-    ['every variant', { variants: ['line', 'filled', 'sm'], opticalSizes: [24, 16] }]
+    ['every variant', { variants: ['line', 'filled', 'sm'], opticalSizes: [24, 16] }],
+    ['a label of several words with punctuation', { label: 'Square, 1:1' }],
+    ['a label starting with a digit, 32 characters long', { label: '3' + 'd'.repeat(31) }]
   ])('accepts %s', (_label, overrides) => {
     /**
      * Scenario: the metadata of spec section 6.2 in every legitimate shape.
@@ -87,6 +89,22 @@ describe('icon schema', () => {
       '/categories/0 must match pattern "^[a-z][a-z0-9]*(-[a-z0-9]+)*$"'
     ],
     ['a single use case', { useCases: ['Only one'] }, '/useCases must NOT have fewer than 2 items'],
+    [
+      'a label in lower case',
+      { label: 'delete' },
+      '/label must match pattern "^[A-Z0-9](.*\\S)?$"'
+    ],
+    [
+      'a label with trailing space',
+      { label: 'Delete ' },
+      '/label must match pattern "^[A-Z0-9](.*\\S)?$"'
+    ],
+    ['an empty label', { label: '' }, '/label must match pattern "^[A-Z0-9](.*\\S)?$"'],
+    [
+      'a label over 32 characters',
+      { label: 'A'.repeat(33) },
+      '/label must NOT have more than 32 characters'
+    ],
     [
       'no line variant',
       { variants: ['filled'] },
@@ -128,21 +146,25 @@ describe('icon schema', () => {
     expect(validationErrors(validators.icon)).toContain(message)
   })
 
-  it.each(['tags', 'categories', 'useCases', 'variants', 'opticalSizes', 'since', '$schema'])(
-    'requires %p',
-    (field) => {
-      /**
-       * Scenario: tags, categories and use cases are required by the spec; the variants,
-       * the optical sizes and the version are what the outputs are generated from.
-       */
-      const value = icon()
-      Reflect.deleteProperty(value as object, field)
-      expect(validators.icon(value)).toBe(false)
-      expect(validationErrors(validators.icon)).toContain(
-        `/ must have required property '${field}'`
-      )
-    }
-  )
+  it.each([
+    'label',
+    'tags',
+    'categories',
+    'useCases',
+    'variants',
+    'opticalSizes',
+    'since',
+    '$schema'
+  ])('requires %p', (field) => {
+    /**
+     * Scenario: the label, tags, categories and use cases are required by the spec; the variants,
+     * the optical sizes and the version are what the outputs are generated from.
+     */
+    const value = icon()
+    Reflect.deleteProperty(value as object, field)
+    expect(validators.icon(value)).toBe(false)
+    expect(validationErrors(validators.icon)).toContain(`/ must have required property '${field}'`)
+  })
 
   it.each([
     ['a deprecated alias without the version that removes it', { name: 'old', deprecated: true }],

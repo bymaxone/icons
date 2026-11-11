@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Scene",
   "tags": ["clapperboard", "take", "episode", "film"],
   "categories": ["media-video"],
   "useCases": [

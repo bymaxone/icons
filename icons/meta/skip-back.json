@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Skip back",
   "tags": ["previous", "rewind", "media control", "start"],
   "categories": ["media-video"],
   "useCases": ["Jumps to the previous clip", "Returns to the start of the timeline"],

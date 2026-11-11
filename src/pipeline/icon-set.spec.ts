@@ -16,6 +16,7 @@ const icon = (drawings: IconEntry['drawings']): IconEntry => ({
   metaPath: 'icons/meta/a.json',
   meta: {
     $schema: '../../schemas/icon.schema.json',
+    label: 'A',
     tags: ['a'],
     categories: ['system'],
     useCases: ['one', 'two'],

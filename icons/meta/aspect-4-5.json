@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Portrait, 4:5",
   "tags": ["portrait", "ratio", "feed", "tall"],
   "categories": ["formats"],
   "useCases": ["Sets a 4:5 video format", "Labels a tall feed format"],

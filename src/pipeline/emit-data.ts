@@ -25,8 +25,9 @@ function aliasRecord(alias: AliasSource): AliasSource {
 
 /** One icon's published record: its metadata without `$schema`, in a fixed key order. */
 function iconRecord(meta: IconMetaSource): Record<string, unknown> {
-  const { tags, categories, useCases, aliases = [], variants, opticalSizes, since } = meta
+  const { label, tags, categories, useCases, aliases = [], variants, opticalSizes, since } = meta
   return {
+    label,
     tags,
     categories,
     useCases,

@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Billing",
   "tags": ["balance", "money", "funds", "purse"],
   "categories": ["credits-billing"],
   "useCases": [

@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Exit full screen",
   "tags": ["exit full screen", "shrink", "collapse", "corners"],
   "categories": ["media-video"],
   "useCases": ["Leaves full screen", "Shrinks a preview back to its place"],

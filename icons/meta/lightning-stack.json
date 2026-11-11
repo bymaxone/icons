@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Credit packs",
   "tags": ["credits", "bundle", "top up", "pack"],
   "categories": ["credits-billing"],
   "useCases": [

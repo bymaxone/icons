@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Share",
   "tags": ["send", "network", "nodes", "social"],
   "categories": ["actions"],
   "useCases": ["Opens the share dialog", "Shares a project with a link"],

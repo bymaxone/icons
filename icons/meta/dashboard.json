@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Dashboard",
   "tags": ["overview", "panels", "tiles", "home screen"],
   "categories": ["navigation"],
   "useCases": [

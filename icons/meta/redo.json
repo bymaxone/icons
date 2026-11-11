@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Redo",
   "tags": ["forward", "repeat", "history", "u-turn"],
   "categories": ["actions"],
   "useCases": ["Redoes the last undone change", "Reapplies an edit in the editor"],

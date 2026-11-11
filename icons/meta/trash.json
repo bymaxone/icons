@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Delete",
   "tags": ["delete", "remove", "bin", "discard"],
   "categories": ["actions"],
   "useCases": ["Deletes an item", "Links to the deleted items"],

@@ -218,6 +218,7 @@ docs/                      specification, plan, tasks, design guidelines
 ```json
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Credits",
   "tags": ["energy", "power", "credit", "balance"],
   "categories": ["credits-billing"],
   "useCases": ["Credit balance pill in the top bar", "Cost shown before a generation"],
@@ -228,7 +229,9 @@ docs/                      specification, plan, tasks, design guidelines
 }
 ```
 
-- `tags`, `categories` and `useCases` are required. At least two real use cases per icon.
+- `label`, `tags`, `categories` and `useCases` are required. At least two real use cases per
+  icon, written for any product: an internal product name belongs in an alias, not in a use
+  case. `label` is the short accessible name for a standalone use, at most 32 characters.
 - Aliases follow Lucide's shape: `{ name, deprecated, deprecationReason?, toBeRemovedInVersion? }`.
 - The schemas are validated with ajv in CI.
 

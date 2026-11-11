@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Agent",
   "tags": ["assistant", "bot", "automation", "ai agent"],
   "categories": ["ai-agent"],
   "useCases": ["Opens the agent panel", "Marks a task run by the agent"],

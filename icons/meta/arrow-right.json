@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Forward",
   "tags": ["forward", "next", "right", "continue"],
   "categories": ["navigation"],
   "useCases": ["Moves to the next step of a flow", "Marks a call to action that continues"],

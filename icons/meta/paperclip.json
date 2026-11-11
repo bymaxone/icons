@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Attach",
   "tags": ["attach", "attachment", "clip", "file"],
   "categories": ["files"],
   "useCases": ["Attaches a file", "Shows the attachments of an item"],

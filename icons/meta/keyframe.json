@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Keyframe",
   "tags": ["diamond", "animation", "key", "point"],
   "categories": ["media-video"],
   "useCases": ["Adds a keyframe at the playhead", "Marks an animated property"],

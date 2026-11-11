@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Storyboard",
   "tags": ["panels", "frames", "sequence", "plan"],
   "categories": ["ai-agent"],
   "useCases": ["Opens the storyboard", "Generates a storyboard from a script"],

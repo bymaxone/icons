@@ -29,6 +29,8 @@ export interface CatalogEntry {
   readonly kind: 'icon' | 'brand'
   /** The name to show: the icon's name, or the brand's own title. */
   readonly title: string
+  /** The accessible name for a standalone use: the icon's label, or the brand's title. */
+  readonly label: string
   readonly drawings: readonly CatalogDrawing[]
   /** Category names; a brand mark belongs to `brands`. */
   readonly categories: readonly string[]
@@ -36,7 +38,7 @@ export interface CatalogEntry {
   readonly aliases: readonly IconAlias[]
   readonly useCases: readonly string[]
   readonly since: string
-  /** What the search matches: the name, the title, the tags and the aliases, lower case. */
+  /** What the search matches: the name, the label, the tags and the aliases, lower case. */
   readonly words: string
 }
 
@@ -71,14 +73,14 @@ export function escapeHtml(text: string): string {
     .replaceAll("'", '&#39;')
 }
 
-/** The search words of an entry: its name, title, tags and alias names, lower case. */
+/** The search words of an entry: its name, label, tags and alias names, lower case. */
 function wordsOf(
   name: string,
-  title: string,
+  label: string,
   tags: readonly string[],
   aliases: readonly IconAlias[]
 ): string {
-  return [name, title, ...tags, ...aliases.map((alias) => alias.name)].join(' ').toLowerCase()
+  return [name, label, ...tags, ...aliases.map((alias) => alias.name)].join(' ').toLowerCase()
 }
 
 /**
@@ -95,6 +97,7 @@ export function catalogFrom(metadata: BuiltMetadata): Catalog {
       name,
       kind: 'icon',
       title: name,
+      label: icon.label,
       drawings: icon.variants.map((variant) => ({
         variant,
         component: componentName(name, variant)
@@ -104,7 +107,7 @@ export function catalogFrom(metadata: BuiltMetadata): Catalog {
       aliases: icon.aliases,
       useCases: icon.useCases,
       since: icon.since,
-      words: wordsOf(name, name, icon.tags, icon.aliases)
+      words: wordsOf(name, icon.label, icon.tags, icon.aliases)
     }))
   const brands = Object.entries(metadata.brands)
     .sort(([a], [b]) => a.localeCompare(b))
@@ -112,6 +115,7 @@ export function catalogFrom(metadata: BuiltMetadata): Catalog {
       name,
       kind: 'brand',
       title: brand.title,
+      label: brand.title,
       drawings: [{ variant: 'brand', component: componentName(name, 'brand') }],
       categories: [BRAND_CATEGORY.name],
       tags: brand.tags,

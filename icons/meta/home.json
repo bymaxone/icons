@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Home",
   "tags": ["house", "start", "main page", "dashboard home"],
   "categories": ["navigation"],
   "useCases": [

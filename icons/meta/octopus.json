@@ -1,11 +1,12 @@
 {
   "$schema": "../../schemas/icon.schema.json",
-  "tags": ["octopus", "mascot", "agent avatar", "polvi"],
+  "label": "Agent",
+  "tags": ["octopus", "mascot", "agent avatar"],
   "categories": ["ai-agent"],
   "useCases": [
-    "Shows the avatar of the Studio agent",
+    "Shows the avatar of an AI agent",
     "Marks a message from the agent",
-    "Filled: Polvi while it is active"
+    "Filled: the agent while it is active"
   ],
   "aliases": [
     {

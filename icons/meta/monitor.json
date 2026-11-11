@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Monitor",
   "tags": ["screen", "display", "desktop", "system theme"],
   "categories": ["system"],
   "useCases": ["Follows the system theme", "Labels a desktop preview"],

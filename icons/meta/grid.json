@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Grid view",
   "tags": ["lattice", "guides", "hash", "layout grid"],
   "categories": ["editor-canvas"],
   "useCases": ["Shows the canvas grid", "Snaps layers to the grid"],

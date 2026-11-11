@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Script",
   "tags": ["screenplay", "document", "text", "dialogue"],
   "categories": ["ai-agent"],
   "useCases": ["Opens the script editor", "Generates a script"],

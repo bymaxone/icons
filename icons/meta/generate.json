@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Generate",
   "tags": ["magic wand", "create", "make", "ai"],
   "categories": ["ai-agent"],
   "useCases": ["Generates a video from a prompt", "Creates content with AI"],

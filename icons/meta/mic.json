@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Microphone",
   "tags": ["microphone", "record", "audio input", "voice"],
   "categories": ["audio-voice"],
   "useCases": [

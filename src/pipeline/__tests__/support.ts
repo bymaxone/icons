@@ -40,6 +40,7 @@ export const CIRCLE = '<circle cx="12" cy="12" r="7.25"/>'
 export function iconMeta(overrides: Record<string, unknown> = {}): string {
   return JSON.stringify({
     $schema: '../../schemas/icon.schema.json',
+    label: 'Ring',
     tags: ['circle'],
     categories: ['system'],
     useCases: ['First use', 'Second use'],

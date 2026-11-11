@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Search",
   "tags": ["magnifier", "find", "lookup", "query"],
   "categories": ["navigation"],
   "useCases": ["Opens a search field", "Labels a search input"],

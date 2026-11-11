@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Repair",
   "tags": ["wrench", "fix", "maintenance", "tool"],
   "categories": ["status"],
   "useCases": ["Marks an item being repaired", "Starts an automatic fix"],

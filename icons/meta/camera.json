@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Camera",
   "tags": ["photo", "capture", "snapshot", "picture"],
   "categories": ["media-video"],
   "useCases": [

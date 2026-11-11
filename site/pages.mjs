@@ -293,7 +293,7 @@ function usage(entry, render) {
       ${snippet(`import { ${first} } from '${subpath}'`, 'Copy the import', render)}
       ${snippet(`<${first} size={20} />`, 'Copy the decorative use', render)}
       <p class="note">Decorative by default, beside a text that says the same. When the icon stands alone, give it a name with <code>title</code>; it then has <code>role="img"</code>:</p>
-      ${snippet(`<${first} size={20} title="${label(entry.name)}" />`, 'Copy the labelled use', render)}
+      ${snippet(`<${first} size={20} title="${entry.label}" />`, 'Copy the labelled use', render)}
     </section>`
 }
 

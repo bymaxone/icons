@@ -22,8 +22,8 @@ A directory with no file yet does not exist; there is no placeholder. The icon l
    [`../docs/technical_specification.md`](../docs/technical_specification.md) section 2).
    `<name>` is kebab-case American English and names what is depicted.
 2. Write `meta/<name>.json` against [`../schemas/icon.schema.json`](../schemas/icon.schema.json):
-   `tags`, `categories` (from [`../categories.json`](../categories.json)), at least two
-   `useCases`, `variants`, `opticalSizes`, `since`, and any `aliases`. A brand mark uses
+   a short `label` (the accessible name when the icon stands alone), `tags`, `categories`
+   (from [`../categories.json`](../categories.json)), at least two `useCases`, `variants`, `opticalSizes`, `since`, and any `aliases`. A brand mark uses
    [`../schemas/brand.schema.json`](../schemas/brand.schema.json) instead.
 3. Add `filled/<name>.svg` or `sm/<name>.svg` only when the metadata declares that variant.
 4. Run `pnpm generate`. It rewrites each SVG into its normalised form (the fixed root

@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Spending cap",
   "tags": ["limit", "budget", "gauge", "cap"],
   "categories": ["credits-billing"],
   "useCases": ["Sets a monthly spending cap", "Warns when the cap is near"],

@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Dark theme",
   "tags": ["dark mode", "night", "theme", "crescent"],
   "categories": ["system"],
   "useCases": [

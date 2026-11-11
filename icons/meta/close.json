@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Close",
   "tags": ["x", "cross", "dismiss", "cancel"],
   "categories": ["actions"],
   "useCases": ["Closes a dialog or panel", "Removes a chip or tag"],

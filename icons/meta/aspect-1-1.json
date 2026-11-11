@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Square, 1:1",
   "tags": ["square", "ratio", "feed", "equal"],
   "categories": ["formats"],
   "useCases": ["Sets a square video format", "Labels a format for feeds"],

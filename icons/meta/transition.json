@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Transition",
   "tags": ["crossfade", "wipe", "cut", "bowtie"],
   "categories": ["media-video"],
   "useCases": ["Adds a transition between two clips", "Marks a transition on the timeline"],

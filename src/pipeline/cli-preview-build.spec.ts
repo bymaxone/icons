@@ -150,6 +150,7 @@ describe('runPreviewBuild', () => {
       'icons/line/ring.svg': drawing('line', SMALL_CIRCLE),
       'icons/meta/ring.json': JSON.stringify({
         $schema: '../../schemas/icon.schema.json',
+        label: 'Ring',
         tags: ['circle'],
         categories: ['system'],
         useCases: ['First use', 'Second use'],

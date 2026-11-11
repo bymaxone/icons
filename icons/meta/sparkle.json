@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "AI",
   "tags": ["ai", "magic", "generated", "star"],
   "categories": ["ai-agent"],
   "useCases": [

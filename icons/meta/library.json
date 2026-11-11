@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Library",
   "tags": ["books", "shelf", "assets", "collection"],
   "categories": ["navigation"],
   "useCases": [

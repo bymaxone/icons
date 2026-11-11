@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Skip forward",
   "tags": ["next", "forward", "media control", "end"],
   "categories": ["media-video"],
   "useCases": ["Jumps to the next clip", "Moves to the end of the timeline"],

@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Saved",
   "tags": ["saved", "synced", "backup", "cloud"],
   "categories": ["status"],
   "useCases": [

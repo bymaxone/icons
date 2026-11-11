@@ -25,9 +25,9 @@ Tasks live **one file per phase** in this folder (`phase-NN-<slug>.md`, numbered
 | B4b   | [`phase-09-filled-variants.md`](./phase-09-filled-variants.md)                     | 4 / 4       | ✅ Done        |
 | B4c   | [`phase-10-sixteen-px-masters.md`](./phase-10-sixteen-px-masters.md)               | 4 / 4       | ✅ Done        |
 | P4    | [`phase-11-catalog-site.md`](./phase-11-catalog-site.md)                           | 3 / 4       | ✅ Done        |
-| P5    | not scaffolded yet                                                                 | n/a         | 📋 ToDo        |
+| P5    | [`phase-12-hardening-release.md`](./phase-12-hardening-release.md)                 | 0 / 9       | 🔄 In Progress |
 | P6    | not scaffolded yet                                                                 | n/a         | 📋 ToDo        |
-|       | **Total**                                                                          | **60 / 69** | 🔄 In Progress |
+|       | **Total**                                                                          | **60 / 78** | 🔄 In Progress |
 
 ---
 

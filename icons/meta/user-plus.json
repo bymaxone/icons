@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Invite a user",
   "tags": ["add user", "invite", "new member", "person plus"],
   "categories": ["people-roles"],
   "useCases": ["Adds a member to the team", "Invites a collaborator"],

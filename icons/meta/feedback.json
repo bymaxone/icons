@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Feedback",
   "tags": ["review", "rating", "comment", "suggestion"],
   "categories": ["system"],
   "useCases": ["Sends feedback", "Rates a result"],

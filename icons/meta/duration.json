@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Duration",
   "tags": ["length", "time span", "measure", "runtime"],
   "categories": ["formats"],
   "useCases": ["Sets the length of a video", "Shows the duration of a clip"],

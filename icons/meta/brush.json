@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Brush",
   "tags": ["paint", "draw", "stroke", "retouch"],
   "categories": ["editor-canvas"],
   "useCases": ["Selects the brush tool", "Paints a mask"],

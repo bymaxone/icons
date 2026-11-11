@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Warning",
   "tags": ["warning", "caution", "danger", "exclamation"],
   "categories": ["status"],
   "useCases": [

@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Undo",
   "tags": ["back", "revert", "history", "u-turn"],
   "categories": ["actions"],
   "useCases": ["Undoes the last change", "Reverts an edit in the editor"],

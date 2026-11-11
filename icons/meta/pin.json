@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Pin",
   "tags": ["pushpin", "keep", "stick", "favourite"],
   "categories": ["actions"],
   "useCases": [

@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Clock",
   "tags": ["time", "duration", "schedule", "pending"],
   "categories": ["status"],
   "useCases": [

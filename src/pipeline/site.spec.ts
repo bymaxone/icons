@@ -13,6 +13,7 @@ import { BRAND_CATEGORY, catalogFrom, escapeHtml, inCategory, matchesQuery } fro
 import type { BuiltMetadata } from './site.ts'
 
 const ICON: IconMetadata = {
+  label: 'Loop',
   tags: ['Ring', 'loop'],
   categories: ['status'],
   useCases: ['Marks a loop', 'Filled: a loop that runs'],
@@ -87,13 +88,15 @@ describe('catalogFrom', () => {
 
   it('describes an icon with its drawings, metadata and search words', () => {
     /**
-     * Scenario: each drawn variant names the component that renders it; the search words
-     * hold the name, the tags and the alias names in lower case.
+     * Scenario: each drawn variant names the component that renders it; the label is the
+     * metadata's; the search words hold the name, the label, the tags and the alias names in
+     * lower case.
      */
     expect(catalog.entries[0]).toEqual({
       name: 'ring',
       kind: 'icon',
       title: 'ring',
+      label: 'Loop',
       drawings: [
         { variant: 'line', component: 'RingIcon' },
         { variant: 'filled', component: 'RingFilledIcon' }
@@ -103,19 +106,20 @@ describe('catalogFrom', () => {
       aliases: [{ name: 'circle', deprecated: false }],
       useCases: ['Marks a loop', 'Filled: a loop that runs'],
       since: '0.1.0',
-      words: 'ring ring ring loop circle'
+      words: 'ring loop ring loop circle'
     })
   })
 
   it('describes a brand mark under the brands category, with its title', () => {
     /**
      * Scenario: a brand mark has one drawing, its brand component, is listed under Brands,
-     * shows its owner's title and is found by it.
+     * shows its owner's title, takes it as its label and is found by it.
      */
     expect(catalog.entries[2]).toEqual({
       name: 'acme',
       kind: 'brand',
       title: 'Acme Corp',
+      label: 'Acme Corp',
       drawings: [{ variant: 'brand', component: 'AcmeBrandIcon' }],
       categories: ['brands'],
       tags: ['acme'],

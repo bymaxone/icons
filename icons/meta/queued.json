@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Queued",
   "tags": ["waiting", "pending", "hourglass", "in line"],
   "categories": ["status"],
   "useCases": ["Marks a render waiting in the queue", "Shows that a job has not started"],

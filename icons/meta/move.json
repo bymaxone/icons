@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Move",
   "tags": ["drag", "pan", "arrows", "position"],
   "categories": ["editor-canvas"],
   "useCases": ["Moves the selected layer", "Pans the canvas"],

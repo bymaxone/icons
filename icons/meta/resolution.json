@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Resolution",
   "tags": ["size", "quality", "pixels", "scale"],
   "categories": ["formats"],
   "useCases": ["Sets the output resolution", "Shows the quality of a render"],
