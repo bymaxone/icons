@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Document",
+  "tags": ["file", "document", "text", "pdf"],
+  "categories": ["files"],
+  "useCases": ["Opens a document", "Attaches a text file"],
+  "aliases": [
+    {
+      "name": "pdf",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

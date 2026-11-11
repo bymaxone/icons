@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Download from cloud",
+  "tags": ["cloud", "download", "sync", "restore"],
+  "categories": ["files"],
+  "useCases": ["Downloads files from the cloud", "Restores a backup"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

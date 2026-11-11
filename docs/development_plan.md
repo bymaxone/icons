@@ -47,7 +47,7 @@
 | B4  | filled-variants-sm-masters-brands | ✅     | 100%     | L    | 2026-11-11   |
 | P4  | catalog-site                      | ✅     | 100%     | M    | 2026-11-11   |
 | R1  | aesthetic-redraw                  | ✅     | 100%     | M    | 2026-11-11   |
-| B5  | general-icons                     | 🔄     | 34%      | L    | 2026-11-11   |
+| B5  | general-icons                     | 🔄     | 57%      | L    | 2026-11-11   |
 | P5  | hardening-release                 | 🔄     | 25%      | M    | 2026-11-11   |
 | P6  | react-native                      | 📋     | 0%       | M    | 2026-11-08   |
 
@@ -389,6 +389,7 @@ These rules apply to every phase. Phase sections only add rules specific to them
 - **Definition of Done:** the five sub-batches are merged, each approved by the auditor; then the release pull request of P5 is refreshed and merged.
 - **B5a ✅ (2026-11-11):** 25 icons and 6 filled variants, approved by the delegated auditor on behalf of the founder.
 - **B5b ✅ (2026-11-11):** 11 icons and a filled `shield-check`, approved by the delegated auditor on behalf of the founder.
+- **B5c ✅ (2026-11-11):** 24 icons, approved by the delegated auditor on behalf of the founder.
 - **Size:** L
 
 ### P5: hardening-release

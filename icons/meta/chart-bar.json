@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Bar chart",
+  "tags": ["chart", "bars", "statistics", "report"],
+  "categories": ["data-charts"],
+  "useCases": ["Shows a report as bars", "Opens the statistics of a project"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

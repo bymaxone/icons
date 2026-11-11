@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Open folder",
+  "tags": ["folder", "open", "browse", "directory"],
+  "categories": ["files"],
+  "useCases": ["Opens a folder", "Shows the current folder"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

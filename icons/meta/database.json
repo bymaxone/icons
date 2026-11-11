@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Database",
+  "tags": ["database", "storage", "data", "records"],
+  "categories": ["data-charts"],
+  "useCases": ["Opens the data source", "Shows the storage of a project"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

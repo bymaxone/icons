@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Board",
+  "tags": ["kanban", "board", "columns", "tasks"],
+  "categories": ["data-charts"],
+  "useCases": ["Switches a view to a board", "Opens the task board"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

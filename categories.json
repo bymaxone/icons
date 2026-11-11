@@ -56,6 +56,10 @@
     {
       "name": "places-devices",
       "title": "Places and devices"
+    },
+    {
+      "name": "data-charts",
+      "title": "Data and charts"
     }
   ]
 }

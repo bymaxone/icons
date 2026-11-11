@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Table",
+  "tags": ["table", "grid", "rows", "spreadsheet"],
+  "categories": ["data-charts"],
+  "useCases": ["Shows data as a table", "Switches a view to rows and columns"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

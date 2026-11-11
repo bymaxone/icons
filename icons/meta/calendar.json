@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Calendar",
+  "tags": ["calendar", "date", "schedule", "events"],
+  "categories": ["status"],
+  "useCases": ["Opens the calendar", "Picks a date"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}
