@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Branch",
+  "tags": ["branch", "git", "version", "fork"],
+  "categories": ["dev"],
+  "useCases": ["Creates a branch", "Shows the branch of a version"],
+  "aliases": [
+    {
+      "name": "git-branch",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -68,6 +68,10 @@
     {
       "name": "communication",
       "title": "Communication"
+    },
+    {
+      "name": "dev",
+      "title": "Development"
     }
   ]
 }

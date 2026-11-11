@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { PromptIcon } from './line'
+export { PromptIcon, TerminalIcon } from './line'

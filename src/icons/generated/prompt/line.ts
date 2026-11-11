@@ -21,3 +21,6 @@ export const PromptIcon = /* @__PURE__ */ createIcon('prompt', [
   ['path', { d: 'm6.75 9.75 2.5 2.5-2.5 2.5' }],
   ['path', { d: 'M12.25 14.75h5.5' }]
 ])
+
+/** `terminal`: an alias of {@link PromptIcon}. */
+export const TerminalIcon = PromptIcon

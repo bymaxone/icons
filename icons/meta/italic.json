@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Italic",
+  "tags": ["italic", "text", "format", "emphasis"],
+  "categories": ["editor-canvas"],
+  "useCases": ["Makes the selected text italic", "Shows the italic style of a text"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

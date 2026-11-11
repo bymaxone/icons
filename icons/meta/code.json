@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Code",
+  "tags": ["code", "source", "developer", "embed"],
+  "categories": ["dev"],
+  "useCases": ["Shows the source of a page", "Opens the embed code"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Justify",
+  "tags": ["align", "justify", "text", "paragraph"],
+  "categories": ["editor-canvas"],
+  "useCases": ["Justifies a text", "Shows the justified alignment of a block"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}
