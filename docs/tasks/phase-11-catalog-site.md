@@ -12,7 +12,7 @@ The catalog is a static site in `site/`, built by `pnpm site` from the package's
 
 - `src/pipeline/site.ts` holds the logic a wrong value could turn into markup: the escaping of every text a page writes, the catalog built from `dist/metadata.json`, and the search and category matching. It is tested like the rest of the pipeline.
 - `site/pages.mjs` holds the page templates: the home page with the construction specimen, the controls and the grid; one page per icon and brand mark; the not-found page.
-- `site/client.mjs` is the browser script: search, category, variant, size, stroke, theme and colour, and the copy buttons. It reads and writes attributes and text only.
+- `site/client.mjs` is the browser script: search, category, variant, size, stroke, theme and colour, and the copy buttons. It never writes markup.
 - `site/build.mjs` writes `.site/`: the pages, the raw SVG files, the 16 px renders of the line icons and their masters, the stylesheet and the bundled script.
 - The pages carry a Content Security Policy that allows scripts and styles from the site only.
 
