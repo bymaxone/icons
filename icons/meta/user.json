@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "tags": ["person", "account", "profile", "avatar"],
+  "categories": ["people-roles"],
+  "useCases": ["Links to the user profile", "Stands in for a missing avatar"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

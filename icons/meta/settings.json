@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "tags": ["gear", "cog", "preferences", "configuration"],
+  "categories": ["navigation"],
+  "useCases": ["Opens the settings page", "Shows configuration options of an item"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

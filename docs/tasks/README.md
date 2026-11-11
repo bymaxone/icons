@@ -1,6 +1,6 @@
 # Development Tasks: @bymax-one/icons
 
-> **Last updated:** 2026-11-08
+> **Last updated:** 2026-11-10
 > **Source roadmap:** [`../development_plan.md`](../development_plan.md) · **Spec:** [`../technical_specification.md`](../technical_specification.md)
 
 Tasks live **one file per phase** in this folder (`phase-NN-<slug>.md`, numbered in execution order; a drawing batch is a phase like any other, so B0 is `phase-03-keystone-icons.md`). Each phase file is self-contained: context, rules-of-phase, reference docs, a task index, the tasks (each with an executable **Agent prompt**), and a completion log. Phase files are scaffolded one phase at a time, when the previous phase closes.
@@ -15,8 +15,8 @@ Tasks live **one file per phase** in this folder (`phase-NN-<slug>.md`, numbered
 | ----- | ---------------------------------------------------------------------- | ----------- | -------------- |
 | P0    | [`phase-00-repository-scaffold.md`](./phase-00-repository-scaffold.md) | 0 / 7       | 🔄 In Progress |
 | P1    | [`phase-01-runtime.md`](./phase-01-runtime.md)                         | 7 / 8       | ✅ Done        |
-| P2    | [`phase-02-pipeline.md`](./phase-02-pipeline.md)                       | 9 / 10      | 👀 Review      |
-| B0    | not scaffolded yet                                                     | n/a         | 📋 ToDo        |
+| P2    | [`phase-02-pipeline.md`](./phase-02-pipeline.md)                       | 10 / 10     | ✅ Done        |
+| B0    | [`phase-03-keystone-icons.md`](./phase-03-keystone-icons.md)           | 3 / 4       | 👀 Review      |
 | P3    | not scaffolded yet                                                     | n/a         | 📋 ToDo        |
 | B1    | not scaffolded yet                                                     | n/a         | 📋 ToDo        |
 | B2    | not scaffolded yet                                                     | n/a         | 📋 ToDo        |
@@ -25,7 +25,7 @@ Tasks live **one file per phase** in this folder (`phase-NN-<slug>.md`, numbered
 | P4    | not scaffolded yet                                                     | n/a         | 📋 ToDo        |
 | P5    | not scaffolded yet                                                     | n/a         | 📋 ToDo        |
 | P6    | not scaffolded yet                                                     | n/a         | 📋 ToDo        |
-|       | **Total**                                                              | **16 / 25** | 🔄 In Progress |
+|       | **Total**                                                              | **20 / 29** | 🔄 In Progress |
 
 ---
 
@@ -63,7 +63,7 @@ Task sizes: **S** (< ~100 LoC), **M** (~100 to 250), **L** (~250+). Priorities: 
 
 ### Phase execution mode
 
-Resolve the phase's tasks in dependency order (the `Depends on` column), execute sequentially, and after each task confirm its Status was applied. The phase closes when all its tasks are done, the roadmap's Definition of Done holds, and the phase PR is merged. A drawing batch also needs the founder's recorded approval.
+Resolve the phase's tasks in dependency order (the `Depends on` column), execute sequentially, and after each task confirm its Status was applied. The phase closes when all its tasks are done, the roadmap's Definition of Done holds, and the phase PR is merged. A drawing batch also needs its recorded design approval: the founder's, or the delegated auditor's on the founder's behalf.
 
 ### Self-update protocol (mandatory at the end of each task)
 

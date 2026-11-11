@@ -1,10 +1,10 @@
 # Phase 2: pipeline
 
-> **Status**: 👀 Review · **Progress**: 9 / 10 tasks · **Last updated**: 2026-11-08
+> **Status**: ✅ Done · **Progress**: 10 / 10 tasks · **Last updated**: 2026-11-10
 > **Source roadmap**: [`../development_plan.md`](../development_plan.md) §5 (P2)
 > **Source spec**: [`../technical_specification.md`](../technical_specification.md) §2, §5, §6, §7, §8.1, §8.2, §11, §12
 >
-> Every Definition of Done item of P2 is verified in the working tree (see the completion log). Task 2.10, the phase pull request, waits for the owner's go-ahead.
+> Every Definition of Done item of P2 is verified and the phase is merged (see the completion log).
 
 ---
 
@@ -81,7 +81,7 @@ What it delivers:
 | 2.7  | Contact sheet (open question 1)                       | ✅ Done | P1       | S    | 2.4                 |
 | 2.8  | Documentation                                         | ✅ Done | P1       | S    | 2.6, 2.7            |
 | 2.9  | Phase close: `mutation:full`, full gate, dashboards   | ✅ Done | P0       | S    | 2.1 to 2.8          |
-| 2.10 | Phase commit and pull request with Copilot review     | 📋 ToDo | P0       | S    | 2.9, owner go-ahead |
+| 2.10 | Phase commit and pull request with Copilot review     | ✅ Done | P0       | S    | 2.9, owner go-ahead |
 
 ---
 
@@ -612,17 +612,17 @@ Completion Protocol (after you finish):
 
 ### Task 2.10: Phase commit and pull request with Copilot review
 
-- **Status**: 📋 ToDo
+- **Status**: ✅ Done
 - **Priority**: P0
 - **Size**: S
 - **Depends on**: 2.9, and the owner's go-ahead to commit and open the pull request
 
 #### Acceptance criteria
 
-- [ ] The change set is committed on `feat/svg-pipeline` with Conventional Commits (scopes `build`, `meta`, `runtime`, `deps`), no attribution trailer.
-- [ ] The PR is opened to `main` with the template filled in (no drawing, so no originality attestation) and the gate output of task 2.9 in the body.
-- [ ] GitHub Copilot code review requested; every thread answered with what was measured and resolved; `reviewThreads` checked with `isResolved == false` after every push, before the merge and after it.
-- [ ] Merged with `CI passed` green; branch deleted; P2 ✅ in the plan, this file and the folder index.
+- [x] The change set is committed on `feat/svg-pipeline` with Conventional Commits (scopes `build`, `meta`, `runtime`, `deps`), no attribution trailer.
+- [x] The PR is opened to `main` with the template filled in (no drawing, so no originality attestation) and the gate output of task 2.9 in the body.
+- [x] GitHub Copilot code review requested; every thread answered with what was measured and resolved; `reviewThreads` checked with `isResolved == false` after every push, before the merge and after it. The review came from the Codex connector, which the repository uses in place of Copilot (no paid seat); it reported no finding.
+- [x] Merged with `CI passed` green; branch deleted; P2 ✅ in the plan, this file and the folder index.
 
 #### Files to create / modify
 
@@ -683,3 +683,4 @@ Completion Protocol (after you finish):
 - 2.7 ✅ 2026-11-08 `pnpm contact-sheet` with the Studio pages and accents; open question 1 resolved.
 - 2.8 ✅ 2026-11-08 README, CONTRIBUTING, CLAUDE.md, AGENTS.md and CHANGELOG updated to the pipeline.
 - 2.9 ✅ 2026-11-08 mutation:full 100.00; full local gate and `check:fixtures` green; dashboards at P2 👀.
+- 2.10 ✅ 2026-11-08 phase merged via PR #5 (squash `deb3bb7`); Codex review clean, no open thread.

@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "tags": ["tick", "done", "confirm", "success"],
+  "categories": ["actions"],
+  "useCases": ["Confirms an action", "Marks an item as done"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

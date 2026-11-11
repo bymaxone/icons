@@ -1,8 +1,8 @@
 # Development Plan: @bymax-one/icons
 
 > **Version:** 1.0.0
-> **Last updated:** 2026-11-08
-> **Status:** Approved spec, execution under way (P1 done; P2 in review; P0 awaits its GitHub settings)
+> **Last updated:** 2026-11-10
+> **Status:** Approved spec, execution under way (P1 and P2 done; B0 approved and in review; P0 awaits its GitHub settings)
 > **Source spec:** [`technical_specification.md`](./technical_specification.md)
 > **Derived documents:** per-phase task files under `docs/tasks/` (one file per phase, scaffolded one phase at a time)
 
@@ -23,9 +23,9 @@
 
 ## 1. Progress Dashboard
 
-> **Overall progress: 1 / 12 phases (8%)**
-> **Active phase:** P2 (pipeline: implemented and verified locally, awaiting its pull request);
-> P0 still has the GitHub settings of task 0.6; B0 is next
+> **Overall progress: 2 / 12 phases (17%)**
+> **Active phase:** B0 (keystone icons: design language approved, pull request in review);
+> P0 still has the GitHub settings of task 0.6; P3 is next
 > **Blocked phases:** none
 >
 > Engineering phases are `P0` to `P6`; drawing batches are `B0` to `B4`. Every drawing batch
@@ -38,8 +38,8 @@
 | --- | --------------------------------- | ------ | -------- | ---- | ------------ |
 | P0  | repository-governance             | 🔄     | 0%       | M    | 2026-11-08   |
 | P1  | runtime                           | ✅     | 100%     | M    | 2026-11-08   |
-| P2  | pipeline                          | 👀     | 90%      | L    | 2026-11-08   |
-| B0  | keystone-icons                    | 📋     | 0%       | M    | 2026-11-08   |
+| P2  | pipeline                          | ✅     | 100%     | L    | 2026-11-10   |
+| B0  | keystone-icons                    | 👀     | 90%      | M    | 2026-11-10   |
 | P3  | visual-tooling                    | 📋     | 0%       | L    | 2026-11-08   |
 | B1  | navigation-actions-status         | 📋     | 0%       | L    | 2026-11-08   |
 | B2  | media-audio-files-editor          | 📋     | 0%       | L    | 2026-11-08   |
@@ -242,6 +242,12 @@ These rules apply to every phase. Phase sections only add rules specific to them
 - **Rules-of-phase:** drawn as code on the grid (decision D1); originality attestation on the
   pull request.
 - **References:** spec §2, §3, §4.1, §16, §17 (D1, D2).
+- **Approval:** design language approved by the delegated auditor on behalf of the founder,
+  2026-11-10: signature A (the 1.5 px cut between distinct parts, spec §2.4), drawing
+  round v3.1. The founder delegated the approval of B0 and of every later drawing batch to
+  a senior auditor and reviews the finished set. The evidence is in
+  [`tasks/phase-03-keystone-icons.md`](./tasks/phase-03-keystone-icons.md) and
+  [`contact-sheets/b0/`](./contact-sheets/b0/).
 - **Size:** M
 
 ### P3: visual-tooling
