@@ -1,7 +1,8 @@
 /**
  * @fileoverview The similarity check of spec §3.4: every drawing is compared with every
- * icon of four third-party sets, so a traced, rescaled or renamed copy is flagged for a
- * human to review. Both drawings are normalised before they are compared: the ink's
+ * icon of four third-party sets, so a copy that was moved, rescaled, reweighted or renamed
+ * is flagged for a human to review. A copy whose shape was also edited can fall outside
+ * the threshold; the check supports the originality review, it does not replace it. Both drawings are normalised before they are compared: the ink's
  * bounds are scaled to one size and centred, and a stroked drawing is redrawn with one
  * stroke width, so neither position, size nor stroke weight hides a copy. The check flags;
  * it never fails a build.

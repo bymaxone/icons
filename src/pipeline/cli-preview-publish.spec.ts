@@ -38,7 +38,9 @@ describe('runPreviewPublish', () => {
   const ENV = {
     GITHUB_REPOSITORY: 'bymaxone/icons',
     GITHUB_TOKEN: 'tok',
-    RUN_HEAD_SHA: HEAD
+    RUN_HEAD_SHA: HEAD,
+    RUN_HEAD_REPOSITORY: 'contributor/icons',
+    RUN_HEAD_BRANCH: 'new-icons'
   }
 
   beforeEach(() => {
@@ -76,7 +78,12 @@ describe('runPreviewPublish', () => {
         const custom = overrides(method, path)
         if (custom !== undefined) return Promise.resolve(custom)
         if (path.endsWith('/pulls/12')) {
-          return Promise.resolve(respond(200, { state: 'open', head: { sha: HEAD } }))
+          return Promise.resolve(
+            respond(200, {
+              state: 'open',
+              head: { sha: HEAD, ref: 'new-icons', repo: { full_name: 'contributor/icons' } }
+            })
+          )
         }
         if (path.includes('/git/ref/')) return Promise.resolve(respond(200))
         if (method === 'GET' && path.includes('/contents/')) return Promise.resolve(respond(404))
@@ -175,7 +182,17 @@ describe('runPreviewPublish', () => {
     ['RUN_HEAD_SHA', 'C'.repeat(40)],
     ['RUN_HEAD_SHA', `${'c'.repeat(40)}\n`],
     ['RUN_HEAD_SHA', `x${'c'.repeat(40)}`],
-    ['RUN_HEAD_SHA', 'main']
+    ['RUN_HEAD_SHA', 'main'],
+    ['RUN_HEAD_REPOSITORY', undefined],
+    ['RUN_HEAD_REPOSITORY', ''],
+    ['RUN_HEAD_REPOSITORY', 'icons'],
+    ['RUN_HEAD_REPOSITORY', 'a/b/c'],
+    ['RUN_HEAD_REPOSITORY', 'a b/c'],
+    ['RUN_HEAD_REPOSITORY', 'a/b\n'],
+    ['RUN_HEAD_BRANCH', undefined],
+    ['RUN_HEAD_BRANCH', ''],
+    ['RUN_HEAD_BRANCH', 'two words'],
+    ['RUN_HEAD_BRANCH', 'branch\n']
   ])('rejects %s set to %s', async (name, value) => {
     /**
      * Scenario: a missing or malformed environment value fails with its name before any

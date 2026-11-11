@@ -49,7 +49,7 @@ At 0.25 px every perturbed copy is flagged. So are about a quarter of the indepe
   - It uploads the images and a manifest as an artifact.
 - **`icons-preview-publish.yml`** (`workflow_run`, from the default branch):
   - It never checks out pull-request code and installs nothing: the publish script imports no parser or renderer.
-  - It treats the artifact as hostile. The manifest is validated field by field and rebuilt from its checked fields. Every image must be a PNG of bounded size, named by a strict pattern. The pull request must be open on the commit the run built.
+  - It treats the artifact as hostile. The manifest is validated field by field and rebuilt from its checked fields. Every image must be a PNG of bounded size, named by a strict pattern. The pull request must be open on the commit the run built, from the run's head repository and branch, so a manifest that names another pull request's number is refused.
   - The `images` job alone holds `contents: write`. It stores the images on the `icons-preview` branch, which shares no history with `main`. The `comment` job alone holds `pull-requests: write`. It writes the comment from validated fields only.
   - Every checkout sets `persist-credentials: false`, and no value from the pull request reaches a `run:` line other than through the environment.
 

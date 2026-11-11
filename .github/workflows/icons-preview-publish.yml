@@ -5,9 +5,9 @@
 # no dependency (the publish script imports nothing that parses or renders a drawing), and
 # treats the artifact as hostile. The manifest is validated field by field, every image
 # must be a PNG of bounded size named by a strict pattern, and the pull request must be
-# open on the commit the run built. Each job holds only the permission its own write
-# needs: `contents: write` to store the images on the `icons-preview` branch, which shares
-# no history with `main`, and `pull-requests: write` to write the comment.
+# open on the commit, repository and branch the run built. Each job holds only the write
+# its own step needs: `contents: write` to store the images on the `icons-preview` branch,
+# which shares no history with `main`, and `pull-requests: write` to write the comment.
 name: Icon preview publish
 
 on:
@@ -20,18 +20,19 @@ on:
 
 permissions: {}
 
-# One publish at a time per pull-request branch, so two runs cannot interleave their
-# writes to the same comment; the newer run replaces the older one.
-concurrency:
-  group: icons-preview-publish-${{ github.event.workflow_run.head_repository.full_name }}-${{ github.event.workflow_run.head_branch }}
-  cancel-in-progress: true
-
 jobs:
   images:
     name: Store the preview images
     if: github.event.workflow_run.event == 'pull_request' && github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    # One publish at a time per pull-request branch. The group sits on the job, not the
+    # workflow: a run whose jobs are skipped never joins it, so it cannot cancel a publish
+    # that is running. Publishes of different pull requests share the icons-preview branch;
+    # the publish script retries a write that loses that race.
+    concurrency:
+      group: icons-preview-images-${{ github.event.workflow_run.head_repository.full_name }}-${{ github.event.workflow_run.head_branch }}
+      cancel-in-progress: false
     permissions:
       actions: read # downloads the artifact of the run that built it
       contents: write # stores the images on the icons-preview branch
@@ -52,6 +53,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
           RUN_HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
+          RUN_HEAD_REPOSITORY: ${{ github.event.workflow_run.head_repository.full_name }}
+          RUN_HEAD_BRANCH: ${{ github.event.workflow_run.head_branch }}
         run: node scripts/icons-preview-publish.mjs publish --dir "$RUNNER_TEMP/icons-preview"
 
   comment:
@@ -59,8 +62,12 @@ jobs:
     needs: images
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    concurrency:
+      group: icons-preview-comment-${{ github.event.workflow_run.head_repository.full_name }}-${{ github.event.workflow_run.head_branch }}
+      cancel-in-progress: false
     permissions:
       actions: read # downloads the artifact of the run that built it
+      contents: read # checks out the default branch
       pull-requests: write # writes the preview comment
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -79,4 +86,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
           RUN_HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
+          RUN_HEAD_REPOSITORY: ${{ github.event.workflow_run.head_repository.full_name }}
+          RUN_HEAD_BRANCH: ${{ github.event.workflow_run.head_branch }}
         run: node scripts/icons-preview-publish.mjs comment --dir "$RUNNER_TEMP/icons-preview"

@@ -2,9 +2,9 @@
  * @fileoverview The privileged half of the pull-request preview. It runs with write access,
  * so it treats the artifact of the unprivileged half as hostile: the manifest is validated
  * field by field, every image must be a PNG of bounded size named by a strict pattern, the
- * pull request must be open with the commit the artifact claims, and the images are stored
- * under paths built from validated numbers and hashes only. It never checks out or runs
- * pull-request code.
+ * pull request must be open on the commit, the repository and the branch the run built,
+ * and the images are stored under paths built from validated numbers and hashes only. It
+ * never checks out or runs pull-request code.
  * @layer Pipeline
  */
 
@@ -39,6 +39,16 @@ const REPOSITORY = /^[A-Za-z0-9-]+\/[A-Za-z0-9._-]+$/
 const COMMIT = /^[0-9a-f]{40}$/
 /** The most pages of comments read while looking for the preview comment. */
 const MAX_COMMENT_PAGES = 20
+
+/** The workflow run that built an artifact, as its `workflow_run` event names it. */
+export interface WorkflowRun {
+  /** The head commit the run built. */
+  readonly head: string
+  /** The `owner/name` of the repository the head commit came from (a fork, for one). */
+  readonly repository: string
+  /** The branch of that repository. */
+  readonly branch: string
+}
 
 /** A validated artifact: the manifest and the bytes of each image it lists. */
 export interface PreviewArtifact {
@@ -80,31 +90,39 @@ export function readArtifact(directory: string): PreviewArtifact {
 }
 
 /**
- * Checks the repository name and that the pull request is open on the commit the workflow
- * run built and the manifest claims, so a forged manifest cannot aim the comment at
- * another pull request.
+ * Checks the repository name and that the pull request the manifest names is the one the
+ * workflow run built: open, on the run's head commit, and from the run's head repository
+ * and branch. The number comes from the artifact, so it is not trusted: two pull requests
+ * can share a head commit (a fork can push anyone's), but not a head repository and branch.
  *
  * @param request - The REST call.
- * @param repository - `owner/name`.
+ * @param repository - `owner/name` of this repository.
  * @param manifest - The validated manifest.
- * @param runHead - The head commit of the workflow run that built the artifact.
+ * @param run - The workflow run that built the artifact.
  * @throws {Error} When anything does not match.
  */
 export async function verifyPullRequest(
   request: GitHubRequest,
   repository: string,
   manifest: PreviewManifest,
-  runHead: string
+  run: WorkflowRun
 ): Promise<void> {
   if (!REPOSITORY.test(repository)) throw new Error('invalid repository')
-  if (!COMMIT.test(runHead) || runHead !== manifest.head) {
+  if (!COMMIT.test(run.head) || run.head !== manifest.head) {
     throw new Error('the manifest does not belong to this workflow run')
   }
   const response = await request('GET', `/repos/${repository}/pulls/${manifest.pr}`)
   if (response.status !== 200) unexpected('pull request', response)
   if (read(response.body, 'state') !== 'open') throw new Error('the pull request is not open')
-  if (read(read(response.body, 'head'), 'sha') !== runHead) {
+  const head = read(response.body, 'head')
+  if (read(head, 'sha') !== run.head) {
     throw new Error('the pull request has moved past this commit')
+  }
+  if (
+    read(read(head, 'repo'), 'full_name') !== run.repository ||
+    read(head, 'ref') !== run.branch
+  ) {
+    throw new Error('the pull request was not built by this workflow run')
   }
 }
 
@@ -146,12 +164,44 @@ async function ensureBranch(request: GitHubRequest, repository: string): Promise
     ref: `refs/heads/${PREVIEW_BRANCH}`,
     sha: read(commit.body, 'sha')
   })
-  if (created.status !== 201) unexpected('preview branch creation', created)
+  // 422: another publish created the branch first, which is what this call wanted.
+  if (created.status !== 201 && created.status !== 422) {
+    unexpected('preview branch creation', created)
+  }
+}
+
+/** How many times an image write is tried when another publish moved the branch under it. */
+const WRITE_ATTEMPTS = 3
+
+/** Writes one image, reading its current sha first and trying again on a conflict. */
+async function writeImage(
+  request: GitHubRequest,
+  path: string,
+  content: string,
+  message: string
+): Promise<void> {
+  for (let attempt = 1; ; attempt++) {
+    const existing = await request('GET', `${path}?ref=${PREVIEW_BRANCH}`)
+    if (existing.status !== 200 && existing.status !== 404) unexpected('preview image', existing)
+    const sha = existing.status === 200 ? read(existing.body, 'sha') : undefined
+    const written = await request('PUT', path, {
+      message,
+      content,
+      branch: PREVIEW_BRANCH,
+      ...(sha === undefined ? {} : { sha })
+    })
+    if (written.status === 200 || written.status === 201) return
+    // 409: the branch moved between the read and the write; read again and retry.
+    if (written.status !== 409 || attempt === WRITE_ATTEMPTS) {
+      unexpected('preview image write', written)
+    }
+  }
 }
 
 /**
  * Stores every image of a validated artifact on the preview branch, replacing an image of
- * the same commit when the workflow runs again.
+ * the same commit when the workflow runs again. Publishes of different pull requests run at
+ * the same time, so a write that loses a race to another one is read again and retried.
  *
  * @param request - The REST call.
  * @param repository - `owner/name`.
@@ -165,17 +215,12 @@ export async function publishImages(
 ): Promise<void> {
   await ensureBranch(request, repository)
   for (const [file, bytes] of artifact.images) {
-    const path = `/repos/${repository}/contents/${imagePath(artifact.manifest, file)}`
-    const existing = await request('GET', `${path}?ref=${PREVIEW_BRANCH}`)
-    if (existing.status !== 200 && existing.status !== 404) unexpected('preview image', existing)
-    const sha = existing.status === 200 ? read(existing.body, 'sha') : undefined
-    const written = await request('PUT', path, {
-      message: `Preview of pull request ${artifact.manifest.pr}`,
-      content: Buffer.from(bytes).toString('base64'),
-      branch: PREVIEW_BRANCH,
-      ...(sha === undefined ? {} : { sha })
-    })
-    if (written.status !== 200 && written.status !== 201) unexpected('preview image write', written)
+    await writeImage(
+      request,
+      `/repos/${repository}/contents/${imagePath(artifact.manifest, file)}`,
+      Buffer.from(bytes).toString('base64'),
+      `Preview of pull request ${artifact.manifest.pr}`
+    )
   }
 }
 

@@ -29,6 +29,8 @@ import type { GitHubRequest, GitHubResponse, PreviewArtifact } from './preview-p
 
 const HEAD = 'c'.repeat(40)
 const REPO = 'bymaxone/icons'
+/** The run that built the artifact: its head commit, head repository and head branch. */
+const RUN = { head: HEAD, repository: 'contributor/icons', branch: 'new-icons' }
 const PNG = Uint8Array.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a, 7, 8, 9])
 
 const manifestJson = (overrides: Record<string, unknown> = {}): Record<string, unknown> => ({
@@ -167,14 +169,17 @@ describe('readArtifact', () => {
 
 describe('verifyPullRequest', () => {
   const open = (sha: string = HEAD, state: unknown = 'open'): GitHubResponse =>
-    respond(200, { state, head: { sha } })
+    respond(200, {
+      state,
+      head: { sha, ref: RUN.branch, repo: { full_name: RUN.repository } }
+    })
 
   it('asks for the pull request and accepts an open one on the built commit', async () => {
     /**
      * Scenario: the manifest's pull request is open on the run's commit.
      */
     const { request, calls } = fakeRequest(() => open())
-    await expect(verifyPullRequest(request, REPO, manifestOf(), HEAD)).resolves.toBeUndefined()
+    await expect(verifyPullRequest(request, REPO, manifestOf(), RUN)).resolves.toBeUndefined()
     expect(calls).toStrictEqual([
       { method: 'GET', path: '/repos/bymaxone/icons/pulls/12', body: undefined }
     ])
@@ -195,7 +200,7 @@ describe('verifyPullRequest', () => {
      * Scenario: a repository that is not `owner/name` is refused and nothing is requested.
      */
     const { request, calls } = fakeRequest(() => open())
-    await expect(verifyPullRequest(request, repository, manifestOf(), HEAD)).rejects.toThrow(
+    await expect(verifyPullRequest(request, repository, manifestOf(), RUN)).rejects.toThrow(
       'invalid repository'
     )
     expect(calls).toStrictEqual([])
@@ -207,7 +212,7 @@ describe('verifyPullRequest', () => {
      */
     const { request } = fakeRequest(() => open())
     await expect(
-      verifyPullRequest(request, 'My-Org1/my.repo_x-1', manifestOf(), HEAD)
+      verifyPullRequest(request, 'My-Org1/my.repo_x-1', manifestOf(), RUN)
     ).resolves.toBeUndefined()
   })
 
@@ -221,7 +226,7 @@ describe('verifyPullRequest', () => {
      */
     const { request, calls } = fakeRequest(() => open(head))
     const forged: PreviewManifest = { ...manifestOf(), head }
-    await expect(verifyPullRequest(request, REPO, forged, head)).rejects.toThrow(
+    await expect(verifyPullRequest(request, REPO, forged, { ...RUN, head })).rejects.toThrow(
       'the manifest does not belong to this workflow run'
     )
     expect(calls).toStrictEqual([])
@@ -241,9 +246,9 @@ describe('verifyPullRequest', () => {
      * the manifest names the same text.
      */
     const { request, calls } = fakeRequest(() => open())
-    await expect(verifyPullRequest(request, REPO, manifestOf(), runHead)).rejects.toThrow(
-      'the manifest does not belong to this workflow run'
-    )
+    await expect(
+      verifyPullRequest(request, REPO, manifestOf(), { ...RUN, head: runHead })
+    ).rejects.toThrow('the manifest does not belong to this workflow run')
     expect(calls).toStrictEqual([])
   })
 
@@ -252,9 +257,9 @@ describe('verifyPullRequest', () => {
      * Scenario: a forged manifest naming another commit is refused before any request.
      */
     const { request, calls } = fakeRequest(() => open())
-    await expect(verifyPullRequest(request, REPO, manifestOf(), 'd'.repeat(40))).rejects.toThrow(
-      'the manifest does not belong to this workflow run'
-    )
+    await expect(
+      verifyPullRequest(request, REPO, manifestOf(), { ...RUN, head: 'd'.repeat(40) })
+    ).rejects.toThrow('the manifest does not belong to this workflow run')
     expect(calls).toStrictEqual([])
   })
 
@@ -263,7 +268,7 @@ describe('verifyPullRequest', () => {
      * Scenario: an API error, even one with a body that looks open, is refused.
      */
     const { request } = fakeRequest(() => respond(404, { state: 'open', head: { sha: HEAD } }))
-    await expect(verifyPullRequest(request, REPO, manifestOf(), HEAD)).rejects.toThrow(
+    await expect(verifyPullRequest(request, REPO, manifestOf(), RUN)).rejects.toThrow(
       'pull request: unexpected response 404'
     )
   })
@@ -278,7 +283,7 @@ describe('verifyPullRequest', () => {
      * Scenario: only a pull request whose state is `open` is accepted.
      */
     const { request } = fakeRequest(() => response)
-    await expect(verifyPullRequest(request, REPO, manifestOf(), HEAD)).rejects.toThrow(
+    await expect(verifyPullRequest(request, REPO, manifestOf(), RUN)).rejects.toThrow(
       'the pull request is not open'
     )
   })
@@ -292,10 +297,35 @@ describe('verifyPullRequest', () => {
      * Scenario: the pull request's head must be exactly the commit the run built.
      */
     const { request } = fakeRequest(() => response)
-    await expect(verifyPullRequest(request, REPO, manifestOf(), HEAD)).rejects.toThrow(
+    await expect(verifyPullRequest(request, REPO, manifestOf(), RUN)).rejects.toThrow(
       'the pull request has moved past this commit'
     )
   })
+
+  it.each([
+    [
+      'another repository',
+      { sha: HEAD, ref: RUN.branch, repo: { full_name: 'someone-else/icons' } }
+    ],
+    ['another branch', { sha: HEAD, ref: 'other', repo: { full_name: RUN.repository } }],
+    ['no repository', { sha: HEAD, ref: RUN.branch }],
+    ['a repository that is not an object', { sha: HEAD, ref: RUN.branch, repo: 'x' }],
+    ['no branch', { sha: HEAD, repo: { full_name: RUN.repository } }]
+  ])(
+    'rejects a pull request on the same commit from %s, the forged-number case',
+    async (_what, head) => {
+      /**
+       * Scenario: the pull request number comes from the artifact, which the author of the
+       * pull request controls. A fork can push the head commit of someone else's pull
+       * request and name that number; the head repository and branch still differ from the
+       * run's, so the manifest is refused and nothing is written to the other pull request.
+       */
+      const { request } = fakeRequest(() => respond(200, { state: 'open', head }))
+      await expect(verifyPullRequest(request, REPO, manifestOf(), RUN)).rejects.toThrow(
+        'the pull request was not built by this workflow run'
+      )
+    }
+  )
 })
 
 describe('imageUrl', () => {
@@ -377,7 +407,7 @@ describe('publishImages', () => {
     ['the branch lookup', 'ref', 500, 'preview branch: unexpected response 500'],
     ['the tree', 'trees', 422, 'preview tree: unexpected response 422'],
     ['the commit', 'commits', 200, 'preview commit: unexpected response 200'],
-    ['the ref', 'refs', 422, 'preview branch creation: unexpected response 422']
+    ['the ref', 'refs', 500, 'preview branch creation: unexpected response 500']
   ])('fails on an unexpected status from %s', async (_what, step, status, message) => {
     /**
      * Scenario: each step of creating the branch fails on any status but the expected one,
@@ -395,6 +425,73 @@ describe('publishImages', () => {
     expect(calls.some(({ method, path }) => method === 'PUT' && path.includes('/contents/'))).toBe(
       false
     )
+  })
+
+  it('carries on when another publish created the branch first', async () => {
+    /**
+     * Scenario: two pull requests publish at once and both find no branch; the loser's ref
+     * creation answers 422 because the branch now exists, which is what it wanted, so it
+     * goes on to write its images.
+     */
+    const { request, calls } = fakeRequest(({ method, path }) => {
+      if (path === refPath) return respond(404)
+      if (path.endsWith('/git/trees')) return respond(201, { sha: 't' })
+      if (path.endsWith('/git/commits')) return respond(201, { sha: 'c' })
+      if (path.endsWith('/git/refs')) return respond(422)
+      return respond(method === 'GET' ? 404 : 201)
+    })
+    await publishImages(request, REPO, artifact())
+    expect(calls.filter(({ method }) => method === 'PUT')).toHaveLength(1)
+  })
+
+  it('reads the image again and retries a write that lost a race', async () => {
+    /**
+     * Scenario: another publish moved the branch between the read and the write (409); the
+     * write is retried with the sha read again, and the second attempt succeeds.
+     */
+    let puts = 0
+    let gets = 0
+    const { request, calls } = fakeRequest(({ method, path }) => {
+      if (path === refPath) return respond(200)
+      if (method === 'GET') return respond(200, { sha: `sha-${++gets}` })
+      return respond(++puts === 1 ? 409 : 200)
+    })
+    await publishImages(request, REPO, artifact())
+    const writes = calls.filter(({ method }) => method === 'PUT')
+    expect(writes.map(({ body }) => (body as { sha: string }).sha)).toStrictEqual([
+      'sha-1',
+      'sha-2'
+    ])
+  })
+
+  it('does not retry a write refused for another reason', async () => {
+    /**
+     * Scenario: only a conflict (409) is a lost race worth retrying; any other refusal fails
+     * on the first attempt.
+     */
+    const { request, calls } = fakeRequest(({ method, path }) => {
+      if (path === refPath) return respond(200)
+      return respond(method === 'GET' ? 404 : 422)
+    })
+    await expect(publishImages(request, REPO, artifact())).rejects.toThrow(
+      'preview image write: unexpected response 422'
+    )
+    expect(calls.filter(({ method }) => method === 'PUT')).toHaveLength(1)
+  })
+
+  it('gives up after three conflicting writes', async () => {
+    /**
+     * Scenario: a write that keeps losing the race fails after three attempts rather than
+     * looping, with the status of the last one.
+     */
+    const { request, calls } = fakeRequest(({ method, path }) => {
+      if (path === refPath) return respond(200)
+      return respond(method === 'GET' ? 404 : 409)
+    })
+    await expect(publishImages(request, REPO, artifact())).rejects.toThrow(
+      'preview image write: unexpected response 409'
+    )
+    expect(calls.filter(({ method }) => method === 'PUT')).toHaveLength(3)
   })
 
   it('updates an existing image with its sha', async () => {
