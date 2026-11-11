@@ -21,8 +21,8 @@ The drawings are written as code on the 24 unit grid (decision D1): a script com
 The drawings went through three rounds:
 
 1. **v2.** Clean on the grid, but the founder's bar is a set that is "premium, custom, not the default of AI or of other packages" and "shows authority". The audit found the archetypes universal and the one signature, the squircle corner, invisible at 16 to 24 px. It asked for a signature that reads at those sizes, applied the same way everywhere.
-2. **v3.** Two signatures on the same drawings, side by side. **A, the cut**: distinct parts never touch and stop 1.5 px short of each other. **B, the open corner**: every closed outline opens once at its top-right. B read as a rendering defect at 16 px (an open hub or head reads as "refresh") and was rejected; A was approved for ten of the twelve icons.
-3. **v3.1.** `settings` got a smaller hub and shallower teeth, so the hub no longer fuses with the tooth root at 16 px and the ink falls to 21.2%. `user` got a bust drawn as a container, with squircle shoulders that rhyme with `file`, `folder` and `home`, instead of the half-ellipse every set draws.
+2. **v3.** Two signatures on the same drawings, side by side. **A, the cut**: distinct parts never touch and stop 1.5 px short of each other. **B, the open corner**: every closed outline opens once at its top-right. B read as a rendering defect at 16 px (an open hub or head reads as "refresh") and was rejected; A was approved.
+3. **v3.1.** `settings` got a smaller hub and shallower teeth, so the hub no longer fuses with the tooth root at 16 px. `user` got a bust drawn as a container, with squircle shoulders that rhyme with `file`, `folder` and `home`, instead of the half-ellipse every set draws.
 
 ### Decisions
 
@@ -32,9 +32,9 @@ The rules below were added to spec §2 with this batch.
 
 **The primitive axis (spec §2.2).** `plus` sits on 12.25, the axis the `.25` rule gives its straight strokes, and `close` shares that centre, so the two line up in a toolbar. `close` spans 13 units against 14.5 for `plus`, a ratio of 0.9, so the diagonal cross carries the same visual mass as the upright one.
 
-**Small details take radius 0 (spec §2.3).** The tooth corners of `settings` are drawn sharp and rounded by the round join of the stroke. With a squircle corner on each tooth the module measured 0.51 KiB brotli, and 1.58 KiB with the runtime, over the 1.5 KiB budget. Drawn sharp, it measures 0.32 KiB, and 1.36 KiB with the runtime. At 48 px the difference does not show.
+**Small details take radius 0 (spec §2.3).** The tooth corners of `settings` are drawn sharp and rounded by the round join of the stroke. With a squircle corner on each tooth the module with the runtime went over its size budget; drawn sharp it fits (figures in the header of `scripts/check-size.mjs`). At 48 px the difference does not show.
 
-**Size budgets.** The per-icon target of the specification (0.6 KiB brotli) and the runtime-with-one-icon target (1.5 KiB brotli) hold as budgets: the largest module, `scene`, measures 0.33 KiB, and the largest pair 1.37 KiB. `./meta` grows by about 50 bytes brotli per record. With the twelve records it measures 1.13 KiB, so its budget moves from 1 KiB to 1.5 KiB, and each batch recalibrates it. The figures are in the header of `scripts/check-size.mjs`.
+**Size budgets.** The per-icon target of the specification (0.6 KiB brotli) and the runtime-with-one-icon target (1.5 KiB brotli) hold as budgets. `./meta` grows with every record, so its budget moves from 1 KiB to 1.5 KiB, and each batch recalibrates it. The figures are in the header of `scripts/check-size.mjs`.
 
 ### Measurements
 
@@ -63,7 +63,7 @@ Measured with resvg at 20x zoom. The bounding box includes the stroke, the centr
 
 ### Notes for the 16 px masters (B2)
 
-The 24 px masters scale to 16 px with two details below the 1 px floor of the 16 master: the crease of `file` collapses to a dot, and the door of `home` measures about 3.7 px. Both are candidates for the hand-tuned 16 px masters whose list B2 fixes.
+The 24 px masters scale to 16 px with two details that do not survive: the crease of `file` collapses to a dot, and the door of `home` shrinks to a few pixels. Both are candidates for the hand-tuned 16 px masters whose list B2 fixes.
 
 ---
 
@@ -222,5 +222,5 @@ Verification:
 <!-- Append one line per completed task: - <id> ✅ YYYY-MM-DD <summary> -->
 
 - 3.1 ✅ 2026-11-10 Twelve keystone icons drawn as code on the grid in three rounds (v2, v3, v3.1); lint clean.
-- 3.2 ✅ 2026-11-10 Size budgets calibrated: every icon at most 0.33 KiB brotli, every runtime-with-icon pair at most 1.37 KiB; `./meta` budget 1.5 KiB.
+- 3.2 ✅ 2026-11-10 Size budgets calibrated; the figures are in the header of `scripts/check-size.mjs`.
 - 3.3 ✅ 2026-11-10 Contact and family sheets committed; design language approved by the delegated auditor on behalf of the founder (signature A, v3.1); spec §2 gains the cut, the primitive axis and radius 0 on small details.
