@@ -37,9 +37,8 @@ const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 //     accessibility rules, measured at 3228 bytes raw and 1114 bytes brotli. The headroom
 //     fits a small fix, while an inlined dependency such as React fails.
 //   - meta, 6 KiB brotli: the grid, the deep freeze and the twelve categories, measured at
-//     497 bytes brotli with no record, at 1.13 KiB brotli with the records of the twelve
-//     keystone icons, and at 3057 bytes with 56 records and 5125 bytes with 106, about
-//     44 bytes brotli per record. The headroom fits about twenty records or a tag edit; every drawing
+//     497 bytes brotli with no record and at 5058 bytes with 106 records, about 43 bytes
+//     brotli per record. The headroom fits about twenty records or a tag edit; every drawing
 //     batch adds records, so each one recalibrates it.
 //   - brands, 0.25 KiB brotli: the entry is empty until a brand mark exists (5 bytes
 //     brotli); the budget is a floor that catches an accidental inline of the runtime.
