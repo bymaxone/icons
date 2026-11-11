@@ -12,7 +12,7 @@ Each 16 px master is a separate drawing of its icon, made for 16 px: it sits on 
 ## What changed against the line drawing
 
 - **Removed at 16 px:** the crease of `file`, `file-audio`, `file-video` and `script`, which fuses with the page; the capsule of the `search` handle, now a single stroke; the clasp of `wallet`, now a short mark.
-- **Simplified:** `share` draws its nodes as solid dots; `timeline` draws its clips as bars; `frame` draws its perforations as short dashes along its top and bottom edges, its sides and edges between two pixel columns so that the dashes keep their gap; `octopus` keeps its mantle and arms in one outline; `eye` has a smaller pupil ring; `more-horizontal` and `more-vertical` draw their dots on pixel corners; `duplicate` enlarges its front square to fit its plus.
+- **Simplified:** `share` draws its nodes as solid dots; `timeline` draws its clips as bars; `frame` draws its perforations as short dashes along its top and bottom edges; `octopus` keeps its mantle and arms in one outline; `eye` has a smaller pupil ring; `more-horizontal` and `more-vertical` draw their dots on pixel corners; `duplicate` enlarges its front square to fit its plus.
 - **`eye-off`** keeps the whole almond and crosses it with a slash that passes beyond both lids, with no cut: a cut on each side of a diagonal slash costs a large share of each lid at 16 px, and the eye no longer reads.
 - **`alert-triangle`** keeps the bar and the dot of "!": a bar of 2.5 px and a dot at a 1 px cut, the only placement inside the triangle that keeps both clear of its sides.
 
