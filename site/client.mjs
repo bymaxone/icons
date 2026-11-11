@@ -1,8 +1,7 @@
 /**
  * @fileoverview The catalog's browser script: the search and the category filter over the
- * grid, the variant, size, stroke, theme and colour controls, and the copy buttons. It reads
- * and writes only attributes and text, never markup, and keeps the reader's theme and colour
- * in local storage.
+ * grid, the variant, size, stroke, theme and colour controls, and the copy buttons. It never
+ * writes markup, and keeps the reader's theme and colour in local storage.
  * @layer site
  */
 
