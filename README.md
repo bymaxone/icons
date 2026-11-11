@@ -205,13 +205,14 @@ An icon inside a labelled button is silent (`aria-hidden="true"`), because the b
 the name; `title` makes an icon a named image of its own. `createIcon` makes a component from
 any drawing held as data, the same way the generated icons are made:
 
-````tsx
+```tsx
 import { createIcon } from '@bymax-one/icons'
 
 const MinusIcon = createIcon('minus', [['line', { x1: 4.75, y1: 12.25, x2: 19.25, y2: 12.25 }]])
-``` See
-[Example Integration](./docs/technical_specification.md#15-example-integration) in the
-specification for the intended usage once icons ship.
+```
+
+See [Example Integration](./docs/technical_specification.md#15-example-integration) in the
+specification for a complete integration.
 
 ---
 
@@ -286,8 +287,7 @@ The pipeline runs from `pnpm generate` (the sources to `src/**/generated`, commi
 at 100% coverage and mutation like the runtime; the scripts in `scripts/` are thin entries,
 which Node 24 runs directly with its native type stripping.
 
-````
-
+```
           icons/line/<name>.svg          icons/meta/<name>.json
           icons/filled/  sm/  brands/    (tags, categories, aliases)
                        │                          │
@@ -317,8 +317,7 @@ which Node 24 runs directly with its native type stripping.
                 ▼
          Server Components and client components alike:
          no hooks, no context, no 'use client'
-
-````
+```
 
 Generated modules are rebuilt from source in CI and compared with the committed copy, so a
 stale copy fails the build. The org package checks then run on the packed tarball.
@@ -445,7 +444,7 @@ pnpm lint          # ESLint
 pnpm lint:icons    # the icon lint over icons/
 pnpm generate      # format the sources and write src/**/generated
 pnpm contact-sheet # render every drawing to reports/contact-sheet.png
-````
+```
 
 ---
 
