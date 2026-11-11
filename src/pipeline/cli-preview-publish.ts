@@ -1,6 +1,7 @@
 /**
  * @fileoverview `scripts/icons-preview-publish.mjs`, the command the privileged preview jobs
- * run: `publish` stores the images, `comment` writes the comment. It imports nothing that
+ * run: `publish` stores the images and drops those of the pull request's earlier commits,
+ * `comment` writes the comment. It imports nothing that
  * parses or renders a drawing, so the privileged jobs install no dependency, and every value
  * from the command line or the environment is validated before it reaches a path or the API.
  * @layer Pipeline
@@ -10,6 +11,7 @@ import type { Output } from './cli.ts'
 import {
   gitHubRequest,
   publishImages,
+  pruneEarlierPreviews,
   readArtifact,
   upsertComment,
   verifyPullRequest
@@ -60,7 +62,10 @@ export async function runPreviewPublish(
     await verifyPullRequest(call, repository, artifact.manifest, run)
     if (command === 'publish') {
       await publishImages(call, repository, artifact)
-      output.log(`published ${artifact.images.size} image(s) for #${artifact.manifest.pr}`)
+      const pruned = await pruneEarlierPreviews(call, repository, artifact.manifest)
+      output.log(
+        `published ${artifact.images.size} image(s) for #${artifact.manifest.pr}, removed ${pruned} of earlier commits`
+      )
     } else {
       const result = await upsertComment(call, repository, artifact.manifest)
       output.log(`${result} the preview comment on #${artifact.manifest.pr}`)

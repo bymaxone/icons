@@ -264,6 +264,31 @@ export function previousVersion(published, current) {
     .at(-1)
 }
 
+/**
+ * The versions the registry lists for a package, from the result of
+ * `npm view <name> versions --json`. A package that was never published answers E404, which
+ * means there is no earlier version: an empty list, so the first release has nothing to
+ * compare against. Any other failure is thrown, so a registry outage never passes as "new".
+ *
+ * @param {{ status: number | null, stdout: string | null, stderr: string | null, error?: Error }} result -
+ *   The npm run, as `spawnSync` returns it.
+ * @returns {string[]} Every published version.
+ */
+export function publishedVersions(result) {
+  if (result.status === 0) {
+    const published = JSON.parse(result.stdout)
+    return Array.isArray(published) ? published : [published]
+  }
+  let code
+  try {
+    code = JSON.parse(result.stdout ?? '')?.error?.code
+  } catch {
+    code = undefined
+  }
+  if (code === 'E404') return []
+  throw new Error(`npm view failed: ${result.stderr || result.error || result.stdout}`)
+}
+
 /** Declaration files under `root`, as paths relative to it, in a stable order. */
 function declarationFiles(root) {
   const found = []
@@ -369,8 +394,10 @@ function resolvePrevious(name, current, against) {
     if (statSync(path).isDirectory()) return { dist: join(path, 'dist'), label: path }
     return { dist: unpack(path), label: path }
   }
-  const published = JSON.parse(run('npm', ['view', name, 'versions', '--json']))
-  const previous = previousVersion(Array.isArray(published) ? published : [published], current)
+  const published = publishedVersions(
+    spawnSync('npm', ['view', name, 'versions', '--json'], { encoding: 'utf8' })
+  )
+  const previous = previousVersion(published, current)
   if (previous === undefined) return undefined
   const scratch = mkdtempSync(join(tmpdir(), 'api-surface-pack-'))
   const packed = JSON.parse(

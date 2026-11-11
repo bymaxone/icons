@@ -424,6 +424,91 @@ describe('check-api-surface', () => {
     expect(run.stdout).toContain('removed')
   })
 
+  describe('the versions the registry lists', () => {
+    /** Calls `publishedVersions` on a spawnSync-shaped result and prints what it gives. */
+    const published = (result: object): string => {
+      const run = spawnSync(
+        'node',
+        [
+          '--input-type=module',
+          '-e',
+          `import { publishedVersions } from ${JSON.stringify(`file://${SCRIPT}`)}
+try { console.log(JSON.stringify(publishedVersions(${JSON.stringify(result)}))) }
+catch (error) { console.log('threw: ' + error.message) }`
+        ],
+        { encoding: 'utf8' }
+      )
+      return run.stdout.trim()
+    }
+
+    it('reads a list of versions, and a single version as a list of one', () => {
+      /*
+       * Scenario: npm prints an array for a package with several versions and a bare string
+       * for a package with exactly one.
+       */
+      expect(published({ status: 0, stdout: '["1.0.0","1.1.0"]', stderr: '' })).toBe(
+        '["1.0.0","1.1.0"]'
+      )
+      expect(published({ status: 0, stdout: '"1.0.0"', stderr: '' })).toBe('["1.0.0"]')
+    })
+
+    it('reads E404, a package never published, as no version at all', () => {
+      /*
+       * Scenario: before the first publish npm exits 1 and prints an E404 error object; the
+       * first release then has nothing to compare against instead of stopping the gate.
+       */
+      const notFound = JSON.stringify({ error: { code: 'E404', summary: 'Not Found' } })
+      expect(published({ status: 1, stdout: notFound, stderr: 'npm error code E404' })).toBe('[]')
+    })
+
+    it.each([
+      [
+        'another registry error',
+        { status: 1, stdout: '{"error":{"code":"ETIMEDOUT"}}', stderr: 'timed out' },
+        'timed out'
+      ],
+      [
+        'an error object without a code',
+        { status: 1, stdout: '{"error":{}}', stderr: 'odd' },
+        'odd'
+      ],
+      ['output that is not JSON', { status: 1, stdout: 'npm error', stderr: '' }, 'npm error'],
+      [
+        'npm that could not start',
+        { status: null, stdout: null, stderr: null, error: 'spawn npm ENOENT' },
+        'spawn npm ENOENT'
+      ]
+    ])('throws on %s', (_name, result, message) => {
+      /*
+       * Scenario: only E404 means "never published". An outage, a malformed answer or a
+       * missing npm must stop the gate, never let a changed API through as a first release.
+       */
+      expect(published(result)).toBe(`threw: npm view failed: ${message}`)
+    })
+  })
+
+  it('passes a first release when npm finds no published version', () => {
+    /*
+     * Scenario: the gate runs without --against on a package npm has never seen; npm (a stub
+     * first on PATH) answers E404 the way the registry does, and the gate exits 0.
+     */
+    const bin = mkdtempSync(join(tmpdir(), 'api-surface-npm-'))
+    roots.push(bin)
+    writeFileSync(
+      join(bin, 'npm'),
+      '#!/bin/sh\necho \'{"error":{"code":"E404","summary":"Not Found"}}\'\necho "npm error code E404" >&2\nexit 1\n',
+      { mode: 0o755 }
+    )
+    const current = layout('1.0.0', BASE)
+    const run = spawnSync('node', [SCRIPT], {
+      cwd: current,
+      encoding: 'utf8',
+      env: { ...process.env, PATH: `${bin}:${process.env.PATH ?? ''}` }
+    })
+    expect(run.status).toBe(0)
+    expect(run.stdout).toContain('No earlier published version of fixture-lib')
+  })
+
   it('picks the highest stable version below the current one', () => {
     /*
      * Scenario: the registry lists prereleases and versions above the one being released
