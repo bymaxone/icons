@@ -12,7 +12,7 @@ The second sub-batch of B5. [`b5b.png`](./b5b.png) shows the 11 line drawings at
 
 ## Similarity
 
-`shield` (d = 0.23) and `shield-check` (0.26) draw the shield's universal shape, accepted as a convention as `heart` and `power` are in B5a. Every other drawing has d > 0.30.
+`shield` (d = 0.23) and `shield-check` (0.26) draw the shield's universal shape, accepted as a convention, as in B5a. Every other drawing has d > 0.30.
 
 ## Measures
 

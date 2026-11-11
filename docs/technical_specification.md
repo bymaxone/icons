@@ -145,7 +145,7 @@ The reason the package exists is that its drawings are not someone else's. The p
 
 ### 4.1 Version 1.0
 
-About 125 non-brand icons, roughly 85 common concepts (C) and 40 Studio concepts (S), plus 16 brands, and the general-purpose icons of B5 marked (B5a) to (B5e), 105 more, which the first set, drawn around the Studio, did not cover.
+About 125 non-brand icons, roughly 85 common concepts (C) and 40 Studio concepts (S), plus 16 brands, and the general-purpose icons of B5 marked (B5a) to (B5e), which the first set, drawn around the Studio, did not cover.
 
 | Category            | Icons                                                                                                                                                                                                                                                                                                                                                                                                        |
 | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
