@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "tags": ["pushpin", "keep", "stick", "favourite"],
+  "categories": ["actions"],
+  "useCases": ["Pins an item to the top of a list", "Keeps a panel open"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "tags": ["send", "network", "nodes", "social"],
+  "categories": ["actions"],
+  "useCases": ["Opens the share dialog", "Shares a project with a link"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

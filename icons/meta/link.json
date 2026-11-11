@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "tags": ["chain", "url", "hyperlink", "attach link"],
+  "categories": ["actions"],
+  "useCases": ["Inserts a link", "Copies the link to an item"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "tags": ["drag", "handle", "reorder", "dots"],
+  "categories": ["actions"],
+  "useCases": ["Marks the drag handle of a row", "Reorders the items of a list"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

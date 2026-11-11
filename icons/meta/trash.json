@@ -1,0 +1,15 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "tags": ["delete", "remove", "bin", "discard"],
+  "categories": ["actions"],
+  "useCases": ["Deletes an item", "Links to the deleted items"],
+  "aliases": [
+    {
+      "name": "delete",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

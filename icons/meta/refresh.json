@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "tags": ["reload", "sync", "retry", "rotate"],
+  "categories": ["actions"],
+  "useCases": ["Reloads a list", "Retries a failed request"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

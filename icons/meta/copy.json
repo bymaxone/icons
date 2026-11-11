@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "tags": ["clipboard", "copy to clipboard", "cards"],
+  "categories": ["actions"],
+  "useCases": ["Copies a value to the clipboard", "Copies a link or a prompt"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

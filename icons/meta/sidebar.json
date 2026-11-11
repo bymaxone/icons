@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "tags": ["panel", "layout", "drawer", "toggle sidebar"],
+  "categories": ["navigation"],
+  "useCases": ["Shows or hides the side panel", "Switches the layout to one with a sidebar"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}
