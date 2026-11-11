@@ -25,7 +25,7 @@ The conventional glyphs of the batch (`stop`, `pause`, `move`, `text`, `grid`) j
 
 ### Where the language shows
 
-- **The cut.** The box and the cone of `volume` and `volume-off` are two parts; the stand of `mic` stops a cut above its base; the hump of `camera` is part of the body while the lens stands free; the arrow of `extend` and the tracks of `timeline` keep a cut; the perforations of `frame` stand a cut inside the film edge; `transition` is two clips meeting point to point.
+- **The cut.** The box and the cone of `volume` and `volume-off` are two parts; the stand of `mic` stops a cut above its base; the hump of `camera` is part of the body while the lens stands free; the arrow of `extend` and the tracks of `timeline` keep a cut; the perforations of `frame` stand a cut inside the film edge; `transition` is two clips facing point to point.
 - **The knockout.** The blade behind in `scissors`, the slash over `mic-off`, the playhead through the clip of `split`, and the square behind the circle of `mask`; the rails of `grid` pass under one post and over the other.
 - **No digit or letter.** The bars of `pause` take small corners, and the clip of `extend` and `split` is wider than tall, so none reads as a zero.
 
