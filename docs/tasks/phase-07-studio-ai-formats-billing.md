@@ -14,13 +14,13 @@ B3 draws the Credits and billing, People and roles, Formats, AI and agent and Sy
 
 ### Approval
 
-**Batch approved by the delegated auditor on behalf of the founder, 2026-11-11**, after one round that redrew six themes, each chosen among two variants:
+**Batch approved by the delegated auditor on behalf of the founder, 2026-11-11**, after a round of redraws:
 
-- **`aspect-16-9`, `aspect-9-16`, `aspect-1-1`, `aspect-4-5`.** Corner marks made `aspect-1-1` the same glyph as `fullscreen`. Each is now the outline at its exact ratio with the diagonal of that ratio, a cut short of both corners: the slope of the diagonal states the ratio, and the four tell apart at 16 px.
+- **`aspect-16-9`, `aspect-9-16`, `aspect-1-1`, `aspect-4-5`.** Corner marks made `aspect-1-1` the same glyph as `fullscreen`. Each is now the outline at its exact ratio with the diagonal of that ratio, short of both corners: the slope of the diagonal states the ratio, and the four tell apart at 16 px.
 - **`character`.** A bust with a badge read as `user-plus`. It is now a mask, a persona rather than a user.
 - **`storyboard`.** Two equal panels read as "00". It is now a wide panel and a narrow one, with their captions.
 - **`globe`.** Every alternative read as a beetle or a "no" sign, so the ring with a meridian and the equator stays, as a convention (spec §3 item 5).
-- **`octopus`** (alias `polvi`, the agent of the Studio). A bulbous mantle narrowing down, four arms that open outward and hook at their ends, and two solid eyes low on the mantle. It stands far from the GitHub marks: the nearest, `brand-github-copilot`, lies at 1.87.
+- **`octopus`** (alias `polvi`, the agent of the Studio). A bulbous mantle narrowing down, four arms and two solid eyes.
 - **`feedback`.** A four-point star is the AI motif of the set; a five-point rating star replaces it.
 
 `users` was centred again and the highlight of `accent` shortened so it keeps a clear pixel at 16 px. Following the naming rule of spec §4.3, the mascot is named for what it depicts, `octopus`, with the product name `polvi` as its alias.
@@ -28,7 +28,7 @@ B3 draws the Credits and billing, People and roles, Formats, AI and agent and Sy
 ### Where the language shows
 
 - **AI marks.** The four-point star belongs to the AI icons only: `sparkle`, `generate`, `regenerate`, `agent`, `variations`, and the moon's companion star.
-- **The cut and the knockout.** The arrow of `log-in` and `log-out` passes through the open side of the door; the lid and the box of `gift` stand a cut apart; the ceiling mark of `spending-cap` cuts its gauge; the caption lines of `storyboard` stand a cut below the panels; the plus of `user-plus` and `mail-invite` cuts what it overlaps.
+- **The cut and the knockout.** The arrow of `log-in` and `log-out` passes through the open side of the door; the lid and the box of `gift` stand a cut apart; the ceiling mark of `spending-cap` cuts its gauge; the caption lines of `storyboard` sit below the panels; the plus of `user-plus` and `mail-invite` cuts what it overlaps.
 
 ### Similarity
 
@@ -305,4 +305,4 @@ Verification:
 - 7.2 ✅ 2026-11-11 The 16 format and AI icons drawn, with their metadata.
 - 7.3 ✅ 2026-11-11 The 11 system icons drawn, with their metadata.
 - 7.4 ✅ 2026-11-11 Sheets, similarity report, alternatives and the 16 px check committed; spec §4.2 lists 45 masters; budgets recalibrated.
-- 7.5 ✅ 2026-11-11 Batch approved by the delegated auditor on behalf of the founder after one round on six themes.
+- 7.5 ✅ 2026-11-11 Batch approved by the delegated auditor on behalf of the founder.

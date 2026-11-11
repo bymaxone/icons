@@ -4,7 +4,7 @@ The check of [`../b2/sixteen-px.md`](../b2/sixteen-px.md), run on all 148 drawin
 
 ## The list of 16 px masters after B3
 
-The audit of B3 added `users` and `wallet` by their role in the Studio shell, `script` by the crease it shares with `file`, and `octopus`, whose eyes touch the mantle at 16 px. The list stays at 45 or fewer: `menu` leaves it, the item that entered by role alone and measures best at 16 px. Its three lines keep 3.00 clear pixels between them, the largest smallest-gap of the role-only items, and it has no closed part whose interior could fill. The single-stroke glyphs (`plus`, `close`, `check`, `lightning`) have no pair of parts for the first test, so the choice rests on the items the test measures.
+The audit of B3 added `users` and `wallet` by their role in the Studio shell, `script` by the crease it shares with `file`, and `octopus`, whose eyes touch the mantle at 16 px. The list stays at 45 or fewer: `menu` leaves it, the item that entered by role alone and measures among the best at 16 px. Its three lines keep 3.00 clear pixels between them, among the largest smallest-gaps of the role-only items, and it has no closed part whose interior could fill. The single-stroke glyphs (`plus`, `close`, `check`, `lightning`) have no pair of parts for the first test, so the choice rests on the items the test measures.
 
 | Role-only item                       | Smallest gap at 16 px (clear px) |
 | ------------------------------------ | -------------------------------- |
