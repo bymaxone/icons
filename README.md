@@ -212,7 +212,7 @@ const MinusIcon = createIcon('minus', [['line', { x1: 4.75, y1: 12.25, x2: 19.25
 ```
 
 See [Example Integration](./docs/technical_specification.md#15-example-integration) in the
-specification for a complete integration.
+specification for an example.
 
 ---
 
