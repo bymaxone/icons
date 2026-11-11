@@ -305,8 +305,8 @@ These rules apply to every phase. Phase sections only add rules specific to them
   of spec §4.1, with metadata; the 16 px master list from real usage in the Studio replica.
 - **Definition of Done:** the batch gate of section 4, rule 11; the 16 px master list recorded
   in the specification's section 4.2.
-- **16 px list from role and measurement (2026-11-11):** the Studio has no application yet
-  (no `package.json`), so the list cannot come from real usage. It is the union of the icons
+- **16 px list from role and measurement (2026-11-11):** the Studio has no application yet,
+  so the list cannot come from real usage. It is the union of the icons
   the Studio shell shows at 16 px by role (spec §4.2) and the drawings whose 16 px render
   fails a measured check (a fused cut or a closed interior), capped near 40 with the measured
   failures first. Usage becomes a criterion again when the Studio has an application, with

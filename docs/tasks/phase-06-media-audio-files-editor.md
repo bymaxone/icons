@@ -18,16 +18,16 @@ The drawings follow spec §2 as amended by the B1 audit: the cut between distinc
 
 **Batch approved by the delegated auditor on behalf of the founder, 2026-11-11**, with two corrections made in one round:
 
-- **The live area.** Eleven drawings reached past the 2 to 22 guide with their stroke, which spec §2.1 allows only for large round shapes: `brush`, `camera-motion`, `captions`, `eraser`, `frame`, `lip-sync`, `narration`, `render`, `split`, `volume` and `volume-off`. Each moved or narrowed inside the guide without a change to its drawing; every drawing of the set now lies inside it.
+- **The live area.** Eleven drawings reached past the 2 to 22 guide with their stroke, which spec §2.1 allows only for large round shapes: `brush`, `camera-motion`, `captions`, `eraser`, `frame`, `lip-sync`, `narration`, `render`, `split`, `volume` and `volume-off`. Each now lies inside the guide, as does every drawing of the set.
 - **The file family.** `file-audio` and `file-video` take the outline and the crease of `file` as drawn in B0, so the three read as one family; the note and the play sit a cut inside them.
 
 The conventional glyphs of the batch (`stop`, `pause`, `move`, `text`, `grid`) join the list in spec §3 item 5, and the list of 16 px masters is approved.
 
 ### Where the language shows
 
-- **The cut.** The box and the cone of `volume` and `volume-off` are two parts; the stand of `mic` stops a cut above its base; the hump of `camera` is part of the body while the lens stands free; the arrow of `extend` and the tracks of `timeline` keep a cut; the perforations of `frame` stand a cut inside the film edge; `transition` is two clips meeting point to point, a cut apart.
+- **The cut.** The box and the cone of `volume` and `volume-off` are two parts; the stand of `mic` stops a cut above its base; the hump of `camera` is part of the body while the lens stands free; the arrow of `extend` and the tracks of `timeline` keep a cut; the perforations of `frame` stand a cut inside the film edge; `transition` is two clips meeting point to point.
 - **The knockout.** The blade behind in `scissors`, the slash over `mic-off`, the playhead through the clip of `split`, and the square behind the circle of `mask`; the rails of `grid` pass under one post and over the other.
-- **No digit or letter.** The bars of `pause` and the box of `volume` take small corners, and the clip of `extend` and `split` is wider than tall, so none reads as a zero.
+- **No digit or letter.** The bars of `pause` take small corners, and the clip of `extend` and `split` is wider than tall, so none reads as a zero.
 
 ### Similarity
 
