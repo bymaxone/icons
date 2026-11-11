@@ -7,7 +7,7 @@
 import { createIcon } from '@bymax-one/icons/runtime'
 
 /**
- * The Facebook brand mark, from https://about.meta.com/brand/resources/facebook/logo (CC0-1.0, retrieved 2026-11-11).
+ * The Facebook brand mark, from https://github.com/simple-icons/simple-icons/blob/16.37.0/icons/facebook.svg (CC0-1.0, retrieved 2026-11-11).
  * The mark belongs to its owner and is not covered by the MIT grant; see TRADEMARKS.md and https://about.meta.com/brand/resources/facebook/logo.
  *
  * @since 0.1.0

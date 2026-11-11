@@ -7,7 +7,7 @@
 import { createIcon } from '@bymax-one/icons/runtime'
 
 /**
- * The YouTube brand mark, from https://www.youtube.com/howyoutubeworks/resources/brand-resources/#logos-icons-and-colors (CC0-1.0, retrieved 2026-11-11).
+ * The YouTube brand mark, from https://github.com/simple-icons/simple-icons/blob/16.37.0/icons/youtube.svg (CC0-1.0, retrieved 2026-11-11).
  * The mark belongs to its owner and is not covered by the MIT grant; see TRADEMARKS.md and https://www.youtube.com/howyoutubeworks/resources/brand-resources/#logos-icons-and-colors.
  *
  * @since 0.1.0

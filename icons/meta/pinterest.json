@@ -1,7 +1,7 @@
 {
   "$schema": "../../schemas/brand.schema.json",
   "title": "Pinterest",
-  "source": "https://business.pinterest.com/en/brand-guidelines",
+  "source": "https://github.com/simple-icons/simple-icons/blob/16.37.0/icons/pinterest.svg",
   "guidelines": "https://business.pinterest.com/en/brand-guidelines",
   "license": "CC0-1.0",
   "retrievedAt": "2026-11-11",

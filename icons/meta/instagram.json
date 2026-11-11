@@ -1,7 +1,7 @@
 {
   "$schema": "../../schemas/brand.schema.json",
   "title": "Instagram",
-  "source": "https://about.meta.com/brand/resources/instagram",
+  "source": "https://github.com/simple-icons/simple-icons/blob/16.37.0/icons/instagram.svg",
   "guidelines": "https://about.meta.com/brand/resources/instagram",
   "license": "CC0-1.0",
   "retrievedAt": "2026-11-11",

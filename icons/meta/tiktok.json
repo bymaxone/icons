@@ -1,7 +1,7 @@
 {
   "$schema": "../../schemas/brand.schema.json",
   "title": "TikTok",
-  "source": "https://tiktok.com",
+  "source": "https://github.com/simple-icons/simple-icons/blob/16.37.0/icons/tiktok.svg",
   "guidelines": "https://www.tiktok.com/brand",
   "license": "CC0-1.0",
   "retrievedAt": "2026-11-11",

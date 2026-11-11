@@ -1,7 +1,7 @@
 {
   "$schema": "../../schemas/brand.schema.json",
   "title": "Spotify",
-  "source": "https://developer.spotify.com/documentation/general/design-and-branding/#using-our-logo",
+  "source": "https://github.com/simple-icons/simple-icons/blob/16.37.0/icons/spotify.svg",
   "guidelines": "https://developer.spotify.com/documentation/general/design-and-branding/#using-our-logo",
   "license": "CC0-1.0",
   "retrievedAt": "2026-11-11",

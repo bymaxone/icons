@@ -1,7 +1,7 @@
 {
   "$schema": "../../schemas/brand.schema.json",
   "title": "Apple",
-  "source": "https://www.apple.com",
+  "source": "https://github.com/simple-icons/simple-icons/blob/16.37.0/icons/apple.svg",
   "guidelines": "https://www.apple.com/legal/intellectual-property/guidelinesfor3rdparties.html",
   "license": "CC0-1.0",
   "retrievedAt": "2026-11-11",

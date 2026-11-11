@@ -1,7 +1,7 @@
 {
   "$schema": "../../schemas/brand.schema.json",
   "title": "Threads",
-  "source": "https://www.meta.com/brand/resources/instagram/threads",
+  "source": "https://github.com/simple-icons/simple-icons/blob/16.37.0/icons/threads.svg",
   "guidelines": "https://www.meta.com/brand/resources/instagram/threads",
   "license": "CC0-1.0",
   "retrievedAt": "2026-11-11",

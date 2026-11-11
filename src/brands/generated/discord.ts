@@ -7,7 +7,7 @@
 import { createIcon } from '@bymax-one/icons/runtime'
 
 /**
- * The Discord brand mark, from https://discord.com/branding (CC0-1.0, retrieved 2026-11-11).
+ * The Discord brand mark, from https://github.com/simple-icons/simple-icons/blob/16.37.0/icons/discord.svg (CC0-1.0, retrieved 2026-11-11).
  * The mark belongs to its owner and is not covered by the MIT grant; see TRADEMARKS.md and https://discord.com/branding.
  *
  * @since 0.1.0
