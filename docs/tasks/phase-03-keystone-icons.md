@@ -45,15 +45,37 @@ Measured with resvg at 20x zoom. The bounding box includes the stroke, the centr
 | `check`     | 16.75 x 12.75 | 12.19, 12.90 | 6.1%  |
 | `close`     | 13.00 x 13.00 | 12.22, 12.22 | 8.7%  |
 | `file`      | 15.00 x 20.00 | 11.83, 11.99 | 16.3% |
-| `folder`    | 20.00 x 17.00 | 11.54, 12.52 | 16.1% |
+| `folder`    | 19.00 x 17.00 | 11.19, 12.40 | 17.4% |
 | `home`      | 17.00 x 18.00 | 11.97, 12.60 | 17.1% |
-| `lightning` | 13.80 x 18.70 | 11.97, 11.97 | 12.5% |
+| `lightning` | 10.40 x 20.00 | 11.98, 11.98 | 11.9% |
 | `play`      | 14.45 x 18.30 | 11.83, 11.97 | 12.3% |
 | `plus`      | 14.50 x 14.50 | 12.22, 12.22 | 7.0%  |
 | `scene`     | 18.80 x 17.80 | 11.56, 12.15 | 22.1% |
-| `search`    | 17.75 x 17.75 | 11.33, 11.33 | 11.8% |
-| `settings`  | 18.20 x 19.00 | 11.97, 11.97 | 21.2% |
+| `search`    | 19.50 x 19.50 | 12.21, 12.21 | 14.8% |
+| `settings`  | 19.00 x 18.65 | 11.97, 11.98 | 21.0% |
 | `user`      | 15.40 x 17.50 | 11.97, 12.76 | 14.9% |
+
+### B0.1: four drawings redrawn
+
+The similarity check of P3 measured the batch against 9,382 third-party icons. Four
+composites lay between 0.15 and 0.23 px from the archetype another set draws, so the
+auditor reopened them. The rule for the redraw: above 0.30 px from every reference, still
+reading as its concept at 16 px, in the set's language. Each got two variants, and these
+were approved by the delegated auditor on behalf of the founder, 2026-11-11:
+
+- **`folder` (f5).** The folder is two parts: a front panel, and a back panel whose tab
+  peeks above it and stops a cut short of it.
+- **`search` (q1).** The handle is a capsule outline, heavy by its mass and not by its
+  stroke, a cut away from the lens.
+- **`settings` (s9).** Seven narrow teeth (18 degrees at the tip, 26 at the root), a
+  proportion none of the four sets draws, around a hub that stands free of the root.
+- **`lightning` (a1).** One piece, narrow and steep, with a short horizontal landing and
+  sharp tips. A bolt split in two was rejected: it applies the cut to a single part, and
+  it reads as a broken bolt.
+
+The measurements above are the redrawn ones. The similarity report of the whole batch is in
+[`../contact-sheets/b0.1/similarity.md`](../contact-sheets/b0.1/similarity.md): only
+`plus`, `close` and `check`, the primitives of spec §3.5, are flagged.
 
 ### Evidence
 
@@ -225,3 +247,4 @@ Verification:
 - 3.2 ✅ 2026-11-10 Size budgets calibrated; the figures are in the header of `scripts/check-size.mjs`.
 - 3.3 ✅ 2026-11-10 Contact and family sheets committed; design language approved by the delegated auditor on behalf of the founder (signature A, v3.1); spec §2 gains the cut, the primitive axis and radius 0 on small details.
 - 3.4 ✅ 2026-11-10 phase merged via PR #7 (squash `e4f110b`); Codex review approved, no open thread.
+- B0.1 ✅ 2026-11-11 `folder`, `search`, `settings` and `lightning` redrawn and approved by the delegated auditor on behalf of the founder; no composite of the batch is flagged by the similarity check.
