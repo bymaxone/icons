@@ -5,3 +5,4 @@
  */
 
 export { LayersIcon } from './line'
+export { LayersFilledIcon } from './filled'

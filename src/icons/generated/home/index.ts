@@ -5,3 +5,4 @@
  */
 
 export { HomeIcon } from './line'
+export { HomeFilledIcon } from './filled'

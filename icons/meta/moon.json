@@ -2,8 +2,12 @@
   "$schema": "../../schemas/icon.schema.json",
   "tags": ["dark mode", "night", "theme", "crescent"],
   "categories": ["system"],
-  "useCases": ["Switches to the dark theme", "Shows the dark mode option"],
-  "variants": ["line"],
+  "useCases": [
+    "Switches to the dark theme",
+    "Shows the dark mode option",
+    "Filled: the dark theme while it is active"
+  ],
+  "variants": ["line", "filled"],
   "opticalSizes": [24],
   "since": "0.1.0"
 }

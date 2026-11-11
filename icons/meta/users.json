@@ -2,8 +2,12 @@
   "$schema": "../../schemas/icon.schema.json",
   "tags": ["team", "people", "members", "group"],
   "categories": ["people-roles"],
-  "useCases": ["Links to the team members", "Shows how many people share a project"],
-  "variants": ["line"],
+  "useCases": [
+    "Links to the team members",
+    "Shows how many people share a project",
+    "Filled: the team section while it is open"
+  ],
+  "variants": ["line", "filled"],
   "opticalSizes": [24],
   "since": "0.1.0"
 }

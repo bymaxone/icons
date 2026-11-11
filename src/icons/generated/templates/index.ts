@@ -5,3 +5,4 @@
  */
 
 export { TemplatesIcon } from './line'
+export { TemplatesFilledIcon } from './filled'

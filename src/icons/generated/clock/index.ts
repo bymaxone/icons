@@ -5,3 +5,4 @@
  */
 
 export { ClockIcon } from './line'
+export { ClockFilledIcon } from './filled'

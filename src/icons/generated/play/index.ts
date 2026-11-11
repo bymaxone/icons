@@ -5,3 +5,4 @@
  */
 
 export { PlayIcon } from './line'
+export { PlayFilledIcon } from './filled'

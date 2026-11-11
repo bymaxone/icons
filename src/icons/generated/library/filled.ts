@@ -1,0 +1,26 @@
+/**
+ * @fileoverview The `library` icon, filled variant.
+ * Written by `pnpm generate` from icons/filled/library.svg: edit the source, never this file.
+ * @layer Generated
+ */
+
+import { createIcon } from '@bymax-one/icons/runtime'
+
+/**
+ * The `library` icon, filled variant: books, shelf, assets, collection.
+ *
+ * @since 0.1.0
+ */
+export const LibraryFilledIcon = /* @__PURE__ */ createIcon(
+  'library-filled',
+  [
+    [
+      'path',
+      {
+        fillRule: 'evenodd',
+        d: 'm13.23 15.02 2.9-8.94q.49-1.47 1.96-1l2.28.75q.76.24 1 .72.24.47 0 1.23l-2.91 8.94q-.25.76-.72 1t-1.23 0l-2.28-.75q-.76-.24-1-.72-.25-.47 0-1.23M5.05 5h3.4Q10 5 10 6.55v9.9Q10 18 8.45 18h-3.4Q3.5 18 3.5 16.45v-9.9Q3.5 5 5.05 5m-1.8 14.5h18l.15.01.14.05.13.07.11.09.1.11.06.13.05.14q.02.07.01.15t-.01.15-.05.14-.07.13-.09.11l-.11.1-.13.06-.14.05q-.07.02-.15.01h-18l-.15-.01-.14-.05-.13-.07-.11-.09-.1-.11-.06-.13-.05-.14q-.02-.07-.01-.15t.01-.15.05-.14.07-.13.09-.11l.11-.1.13-.06.14-.05q.07-.02.15-.01'
+      }
+    ]
+  ],
+  { paint: 'fill' }
+)

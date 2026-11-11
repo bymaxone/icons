@@ -5,3 +5,4 @@
  */
 
 export { CrownIcon } from './line'
+export { CrownFilledIcon } from './filled'

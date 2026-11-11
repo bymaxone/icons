@@ -1,0 +1,25 @@
+/**
+ * @fileoverview The `settings` icon, filled variant.
+ * Written by `pnpm generate` from icons/filled/settings.svg: edit the source, never this file.
+ * @layer Generated
+ */
+
+import { createIcon } from '@bymax-one/icons/runtime'
+
+/**
+ * The `settings` icon, filled variant: gear, cog, preferences, configuration.
+ *
+ * @since 0.1.0
+ */
+export const SettingsFilledIcon = /* @__PURE__ */ createIcon(
+  'settings-filled',
+  [
+    [
+      'path',
+      {
+        d: 'm9.63 4.81.26-1.57a.75.75 0 0 1 .62-.62 10 10 0 0 1 2.98 0 .75.75 0 0 1 .62.62l.18 1.1a8 8 0 0 1 2.27 1.09l.98-.54a.75.75 0 0 1 .87.1 10 10 0 0 1 1.85 2.32.75.75 0 0 1-.1.87l-.74.83a8 8 0 0 1 .56 2.46l1.03.43a.75.75 0 0 1 .47.74 10 10 0 0 1-.66 2.9.75.75 0 0 1-.74.47l-1.12-.07a8 8 0 0 1-1.57 1.97l.31 1.07a.75.75 0 0 1-.3.83 10 10 0 0 1-2.67 1.29.75.75 0 0 1-.83-.29l-.64-.91a8 8 0 0 1-2.52 0l-.64.91a.75.75 0 0 1-.83.29 10 10 0 0 1-2.68-1.29.75.75 0 0 1-.3-.83l.32-1.07a8 8 0 0 1-1.57-1.97l-1.12.07a.75.75 0 0 1-.74-.47 10 10 0 0 1-.66-2.9.75.75 0 0 1 .47-.74l1.03-.43a8 8 0 0 1 .56-2.46l-.75-.83a.75.75 0 0 1-.1-.87A10 10 0 0 1 5.6 5a.75.75 0 0 1 .87-.1l.98.54a8 8 0 0 1 2.27-1.1ZM15.5 12a3.5 3.5 0 0 0-7 0 3.5 3.5 0 0 0 7 0M14 12a2 2 0 0 1-4 0 2 2 0 0 1 4 0'
+      }
+    ]
+  ],
+  { paint: 'fill' }
+)

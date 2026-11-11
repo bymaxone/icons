@@ -5,3 +5,4 @@
  */
 
 export { MoonIcon } from './line'
+export { MoonFilledIcon } from './filled'

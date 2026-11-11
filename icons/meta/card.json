@@ -2,8 +2,12 @@
   "$schema": "../../schemas/icon.schema.json",
   "tags": ["credit card", "payment", "debit", "billing"],
   "categories": ["credits-billing"],
-  "useCases": ["Adds a payment method", "Shows the saved card"],
-  "variants": ["line"],
+  "useCases": [
+    "Adds a payment method",
+    "Shows the saved card",
+    "Filled: the default payment method"
+  ],
+  "variants": ["line", "filled"],
   "opticalSizes": [24],
   "since": "0.1.0"
 }

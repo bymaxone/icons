@@ -2,8 +2,12 @@
   "$schema": "../../schemas/icon.schema.json",
   "tags": ["layout", "starter", "blueprint", "preset"],
   "categories": ["navigation"],
-  "useCases": ["Links to the template gallery", "Starts a new project from a template"],
-  "variants": ["line"],
+  "useCases": [
+    "Links to the template gallery",
+    "Starts a new project from a template",
+    "Filled: the templates tab while it is active"
+  ],
+  "variants": ["line", "filled"],
   "opticalSizes": [24],
   "since": "0.1.0"
 }

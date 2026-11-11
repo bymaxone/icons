@@ -109,13 +109,15 @@ These rules are the identity of the set. They are applied to every icon and chec
 - A 20 px circle, an 18 px square and a 21 px-tall triangle read as the same size.
 - Asymmetric icons are centred by visual mass, not by bounding box.
 - Every icon passes a blur test at 16 px: the silhouette must still read.
-- Ink ceiling: no drawing covers more than 21.5% of the 24 × 24 canvas, measured with its stroke. A heavier drawing turns into a block in the blur test and outweighs its neighbours in a row.
+- Ink ceiling: no line or 16 px drawing covers more than 21.5% of the 24 × 24 canvas, measured with its stroke. A heavier drawing turns into a block in the blur test and outweighs its neighbours in a row. A filled drawing is solid by design, so the ceiling does not apply to it; section 2.6 holds it to its line icon instead.
 - No part reads as a digit or a letter at 16 or 24 px. A narrow upright closed shape is the usual culprit: a stadium reads as a zero, two stacked ones as an eight. Such a part takes a small corner, or the composition avoids it.
 
 ### 2.6 Filled variant
 
-- Same outer silhouette as the line icon, so switching causes no size jump.
-- Interior details are knocked out at 1.5 px.
+- Same outer silhouette as the line icon, so switching causes no size jump: the line drawing's closed parts filled together with their stroke, its open parts kept as stroke, and the same bounding box.
+- Interior details are knocked out at 1.5 px, and no knockout is narrower than 1.5 units at 24 px.
+- The silhouette reads in the blur test at 16 px. A knockout that closes at 16 px is measured and reported with the batch, not hidden.
+- Each path is written at the lowest precision that keeps every pixel within 32 of 255 of the three-decimal path at 1x, at 24 and at 16 px, and adds no knockout and narrows none.
 - Drawn only for icons with a stateful meaning (active tab, selected item, favourite, playing). Expected count about 40.
 
 ### 2.7 Theme behaviour

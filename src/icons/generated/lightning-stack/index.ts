@@ -5,3 +5,4 @@
  */
 
 export { CreditPackIcon, LightningStackIcon } from './line'
+export { CreditPackFilledIcon, LightningStackFilledIcon } from './filled'

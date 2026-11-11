@@ -5,3 +5,4 @@
  */
 
 export { BellIcon } from './line'
+export { BellFilledIcon } from './filled'

@@ -2,8 +2,12 @@
   "$schema": "../../schemas/icon.schema.json",
   "tags": ["stack", "levels", "arrange", "sheets"],
   "categories": ["editor-canvas"],
-  "useCases": ["Opens the layers panel", "Arranges the order of layers"],
-  "variants": ["line"],
+  "useCases": [
+    "Opens the layers panel",
+    "Arranges the order of layers",
+    "Filled: the layers panel while it is open"
+  ],
+  "variants": ["line", "filled"],
   "opticalSizes": [24],
   "since": "0.1.0"
 }

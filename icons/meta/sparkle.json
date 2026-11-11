@@ -2,8 +2,12 @@
   "$schema": "../../schemas/icon.schema.json",
   "tags": ["ai", "magic", "generated", "star"],
   "categories": ["ai-agent"],
-  "useCases": ["Marks an AI feature", "Labels generated content"],
-  "variants": ["line"],
+  "useCases": [
+    "Marks an AI feature",
+    "Labels generated content",
+    "Filled: an AI feature that is turned on"
+  ],
+  "variants": ["line", "filled"],
   "opticalSizes": [24],
   "since": "0.1.0"
 }

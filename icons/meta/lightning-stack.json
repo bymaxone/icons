@@ -2,14 +2,18 @@
   "$schema": "../../schemas/icon.schema.json",
   "tags": ["credits", "bundle", "top up", "pack"],
   "categories": ["credits-billing"],
-  "useCases": ["Buys a pack of credits", "Shows the credits of a bundle"],
+  "useCases": [
+    "Buys a pack of credits",
+    "Shows the credits of a bundle",
+    "Filled: the selected credit pack"
+  ],
   "aliases": [
     {
       "name": "credit-pack",
       "deprecated": false
     }
   ],
-  "variants": ["line"],
+  "variants": ["line", "filled"],
   "opticalSizes": [24],
   "since": "0.1.0"
 }

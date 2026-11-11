@@ -43,6 +43,16 @@ and deprecated, each rename with the alias that keeps the old name working.
   `octopus` (alias `polvi`), `agent`, `prompt`, `generate`, `regenerate`, `variations`,
   `storyboard`, `script` and `style`. System: `bell`, `message`, `help`, `feedback`, `sun`,
   `moon`, `monitor`, `globe`, `keyboard`, `command` and `accent`.
+- Filled variants of 40 icons with a stateful meaning, each the silhouette of its line icon
+  made solid with its interior details knocked out at 1.5 px (`HomeFilledIcon` to
+  `MoonFilledIcon`, from the root and from `./icons/<name>`, aliases included, such as
+  `PolviFilledIcon`), with their raw SVG files under `svg/filled/`, sprite symbols and
+  metadata: `home`, `dashboard`, `folder`, `folder-stack`, `library`, `templates`,
+  `settings`, `user`, `users`, `file`, `play`, `pause`, `scene`, `video`, `camera`, `mic`,
+  `volume`, `image`, `layers`, `bell`, `message`, `lock`, `eye`, `pin`, `check-circle`,
+  `alert-circle`, `alert-triangle`, `info`, `cloud-check`, `clock`, `lightning`,
+  `lightning-stack`, `wallet`, `card`, `crown`, `sparkle`, `octopus`, `character`, `sun`
+  and `moon`.
 - The brand marks, in their owners' geometry from Simple Icons, filled with
   `currentColor` (`GoogleBrandIcon` and the others, from `./brands`). Microsoft and
   LinkedIn are not included, and the colour `google-color` mark is deferred.

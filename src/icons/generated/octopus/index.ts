@@ -5,3 +5,4 @@
  */
 
 export { OctopusIcon, PolviIcon } from './line'
+export { OctopusFilledIcon, PolviFilledIcon } from './filled'

@@ -2,14 +2,18 @@
   "$schema": "../../schemas/icon.schema.json",
   "tags": ["octopus", "mascot", "agent avatar", "polvi"],
   "categories": ["ai-agent"],
-  "useCases": ["Shows the avatar of the Studio agent", "Marks a message from the agent"],
+  "useCases": [
+    "Shows the avatar of the Studio agent",
+    "Marks a message from the agent",
+    "Filled: Polvi while it is active"
+  ],
   "aliases": [
     {
       "name": "polvi",
       "deprecated": false
     }
   ],
-  "variants": ["line"],
+  "variants": ["line", "filled"],
   "opticalSizes": [24],
   "since": "0.1.0"
 }

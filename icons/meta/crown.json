@@ -2,8 +2,12 @@
   "$schema": "../../schemas/icon.schema.json",
   "tags": ["owner", "premium", "admin", "king"],
   "categories": ["people-roles"],
-  "useCases": ["Marks the owner of a workspace", "Labels a premium feature"],
-  "variants": ["line"],
+  "useCases": [
+    "Marks the owner of a workspace",
+    "Labels a premium feature",
+    "Filled: the plan the account is on"
+  ],
+  "variants": ["line", "filled"],
   "opticalSizes": [24],
   "since": "0.1.0"
 }

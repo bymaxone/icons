@@ -2,8 +2,12 @@
   "$schema": "../../schemas/icon.schema.json",
   "tags": ["microphone", "record", "audio input", "voice"],
   "categories": ["audio-voice"],
-  "useCases": ["Starts a voice recording", "Selects the audio input"],
-  "variants": ["line"],
+  "useCases": [
+    "Starts a voice recording",
+    "Selects the audio input",
+    "Filled: the microphone while it records"
+  ],
+  "variants": ["line", "filled"],
   "opticalSizes": [24],
   "since": "0.1.0"
 }

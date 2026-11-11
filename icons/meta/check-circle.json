@@ -2,8 +2,12 @@
   "$schema": "../../schemas/icon.schema.json",
   "tags": ["success", "done", "complete", "approved"],
   "categories": ["status"],
-  "useCases": ["Shows that a task finished", "Marks a step as complete"],
-  "variants": ["line"],
+  "useCases": [
+    "Shows that a task finished",
+    "Marks a step as complete",
+    "Filled: a step that is complete"
+  ],
+  "variants": ["line", "filled"],
   "opticalSizes": [24],
   "since": "0.1.0"
 }

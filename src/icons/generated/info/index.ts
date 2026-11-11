@@ -5,3 +5,4 @@
  */
 
 export { InfoIcon } from './line'
+export { InfoFilledIcon } from './filled'

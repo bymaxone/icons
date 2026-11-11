@@ -5,3 +5,4 @@
  */
 
 export { CloudCheckIcon } from './line'
+export { CloudCheckFilledIcon } from './filled'

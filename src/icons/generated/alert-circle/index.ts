@@ -5,3 +5,4 @@
  */
 
 export { AlertCircleIcon } from './line'
+export { AlertCircleFilledIcon } from './filled'

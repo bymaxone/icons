@@ -4,9 +4,10 @@
   "categories": ["navigation"],
   "useCases": [
     "Links to the overview page of an app",
-    "Marks the dashboard tab of a navigation bar"
+    "Marks the dashboard tab of a navigation bar",
+    "Filled: the dashboard tab while it is active"
   ],
-  "variants": ["line"],
+  "variants": ["line", "filled"],
   "opticalSizes": [24],
   "since": "0.1.0"
 }

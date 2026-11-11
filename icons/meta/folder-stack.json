@@ -2,8 +2,12 @@
   "$schema": "../../schemas/icon.schema.json",
   "tags": ["folders", "projects", "collection", "all files"],
   "categories": ["navigation"],
-  "useCases": ["Links to the list of every project", "Labels a group of folders"],
-  "variants": ["line"],
+  "useCases": [
+    "Links to the list of every project",
+    "Labels a group of folders",
+    "Filled: the selected collection"
+  ],
+  "variants": ["line", "filled"],
   "opticalSizes": [24],
   "since": "0.1.0"
 }

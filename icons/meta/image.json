@@ -2,8 +2,8 @@
   "$schema": "../../schemas/icon.schema.json",
   "tags": ["picture", "photo", "landscape", "media"],
   "categories": ["files"],
-  "useCases": ["Inserts an image", "Marks an image file"],
-  "variants": ["line"],
+  "useCases": ["Inserts an image", "Marks an image file", "Filled: the selected image"],
+  "variants": ["line", "filled"],
   "opticalSizes": [24],
   "since": "0.1.0"
 }

@@ -2,8 +2,12 @@
   "$schema": "../../schemas/icon.schema.json",
   "tags": ["speaker", "sound", "audio", "loud"],
   "categories": ["audio-voice"],
-  "useCases": ["Sets the playback volume", "Shows that sound is on"],
-  "variants": ["line"],
+  "useCases": [
+    "Sets the playback volume",
+    "Shows that sound is on",
+    "Filled: the sound while it is on"
+  ],
+  "variants": ["line", "filled"],
   "opticalSizes": [24],
   "since": "0.1.0"
 }

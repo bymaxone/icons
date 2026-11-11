@@ -5,3 +5,4 @@
  */
 
 export { LibraryIcon } from './line'
+export { LibraryFilledIcon } from './filled'

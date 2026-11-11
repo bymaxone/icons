@@ -2,8 +2,12 @@
   "$schema": "../../schemas/icon.schema.json",
   "tags": ["books", "shelf", "assets", "collection"],
   "categories": ["navigation"],
-  "useCases": ["Links to the asset library", "Opens a collection of saved items"],
-  "variants": ["line"],
+  "useCases": [
+    "Links to the asset library",
+    "Opens a collection of saved items",
+    "Filled: the library section while it is open"
+  ],
+  "variants": ["line", "filled"],
   "opticalSizes": [24],
   "since": "0.1.0"
 }

@@ -2,8 +2,8 @@
   "$schema": "../../schemas/icon.schema.json",
   "tags": ["chat", "comment", "speech bubble", "conversation"],
   "categories": ["system"],
-  "useCases": ["Opens the chat", "Adds a comment"],
-  "variants": ["line"],
+  "useCases": ["Opens the chat", "Adds a comment", "Filled: unread messages"],
+  "variants": ["line", "filled"],
   "opticalSizes": [24],
   "since": "0.1.0"
 }

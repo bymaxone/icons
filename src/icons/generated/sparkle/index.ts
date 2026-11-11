@@ -5,3 +5,4 @@
  */
 
 export { SparkleIcon } from './line'
+export { SparkleFilledIcon } from './filled'
