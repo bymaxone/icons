@@ -14,7 +14,7 @@ Knockouts are measured at 480 px (20 px per unit). The analytic drawings are com
 
 ## Measures
 
-Sizes are brotli bytes of the component bundled alone by `scripts/check-component-size.mjs` and with the runtime, each against its budget in that script. The bounding box is compared with the line icon's, both rendered at 960 px. A knockout of 1.5 units measures 1.46 to 1.52 at this resolution. "Closes at 16 px" counts the knockouts that keep fewer than 2 clear pixels at 16 px 1x: the dots of `alert-circle`, `alert-triangle` and `info`, each a disc 1.5 units across.
+Sizes are brotli bytes of the component bundled alone by `scripts/check-component-size.mjs` and with the runtime, each against its budget in that script. The bounding box is compared with the line icon's, both rendered at 960 px. A knockout of 1.5 units measures 1.46 to 1.52 at this resolution. "Closes at 16 px" counts the knockouts that keep fewer than 2 clear pixels at 16 px 1x; the table shows which icons.
 
 | Icon              | Construction                 | Precision | Max diff at 1x (of 255) | Alone (B) | With runtime (B) | Bbox vs line (units) | Knockouts | Narrowest knockout (units) | Closes at 16 px |
 | ----------------- | ---------------------------- | --------- | ----------------------- | --------- | ---------------- | -------------------- | --------- | -------------------------- | --------------- |
