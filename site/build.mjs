@@ -83,7 +83,12 @@ for (const entry of catalog.entries.filter((item) =>
     writeFileSync(join(out, 'px', variant, `${entry.name}.png`), png)
   }
 }
-cpSync(join(root, 'site', 'style.css'), join(out, 'assets', 'style.css'))
+writeFileSync(
+  join(out, 'assets', 'style.css'),
+  ['base', 'home', 'entry']
+    .map((part) => readFileSync(join(root, 'site', 'styles', `${part}.css`), 'utf8'))
+    .join('\n')
+)
 writeFileSync(
   join(out, 'assets', 'favicon.svg'),
   readFileSync(join(root, 'dist', 'svg', 'filled', 'lightning.svg'), 'utf8')

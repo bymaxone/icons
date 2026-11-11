@@ -1,0 +1,216 @@
+/* The catalog's base styles: the Studio's page and ink tokens, its six accents in both themes,
+   and the page header. Layer: site. The build joins base.css, home.css and entry.css, in that
+   order, into one stylesheet. */
+
+:root {
+  --page: #f4f6f8;
+  --surface: #ffffff;
+  --sunk: #e9eff3;
+  --ink: #0d1b24;
+  --muted: #5a6872;
+  --line: #d7dee4;
+  --ring: #2450b8;
+  --accent: var(--ink);
+  --icon: 24px;
+  --stroke: 1.5;
+  --radius: 14px;
+  --font:
+    ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --mono: ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;
+  color-scheme: light;
+}
+
+[data-theme='dark'] {
+  --page: #0b1117;
+  --surface: #121a21;
+  --sunk: #0f161c;
+  --ink: #ecf3f7;
+  --muted: #93a2ad;
+  --line: #22303a;
+  --ring: #7fa6ff;
+  color-scheme: dark;
+}
+
+[data-accent='yellow'] {
+  --accent: #b38f00;
+}
+[data-accent='orange'] {
+  --accent: #c2461c;
+}
+[data-accent='red'] {
+  --accent: #c0283a;
+}
+[data-accent='green'] {
+  --accent: #2f5a24;
+}
+[data-accent='blue'] {
+  --accent: #2450b8;
+}
+[data-accent='lilac'] {
+  --accent: #5e3fb0;
+}
+[data-theme='dark'][data-accent='yellow'] {
+  --accent: #ffd84d;
+}
+[data-theme='dark'][data-accent='orange'] {
+  --accent: #ff8a5c;
+}
+[data-theme='dark'][data-accent='red'] {
+  --accent: #ff6b78;
+}
+[data-theme='dark'][data-accent='green'] {
+  --accent: #8fd67a;
+}
+[data-theme='dark'][data-accent='blue'] {
+  --accent: #7fa6ff;
+}
+[data-theme='dark'][data-accent='lilac'] {
+  --accent: #c2a4ff;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--page);
+  color: var(--ink);
+  font: 15px/1.55 var(--font);
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex: 1;
+  width: min(1180px, 100% - 48px);
+  margin: 0 auto;
+}
+a {
+  color: inherit;
+  text-decoration-color: var(--line);
+  text-underline-offset: 3px;
+}
+a:hover {
+  text-decoration-color: currentColor;
+}
+code {
+  font: 0.86em/1.5 var(--mono);
+}
+button,
+input,
+select {
+  font: inherit;
+  color: inherit;
+}
+:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+.sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.skip {
+  position: absolute;
+  left: 12px;
+  top: -48px;
+  padding: 8px 12px;
+  background: var(--surface);
+  border-radius: 8px;
+}
+.skip:focus {
+  top: 12px;
+}
+svg {
+  flex: none;
+}
+
+/* Header */
+.top {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: color-mix(in srgb, var(--page) 86%, transparent);
+  backdrop-filter: saturate(1.4) blur(12px);
+  border-bottom: 1px solid var(--line);
+}
+.top-in {
+  width: min(1180px, 100% - 48px);
+  margin: 0 auto;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.mark {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  font-size: 16px;
+  letter-spacing: -0.01em;
+}
+.mark svg {
+  color: var(--accent);
+}
+.mark b {
+  font-weight: 650;
+}
+.links {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  color: var(--muted);
+}
+.links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+}
+.links a:hover {
+  color: var(--ink);
+}
+.links svg {
+  width: 18px;
+  height: 18px;
+}
+.soon {
+  font-size: 13px;
+  opacity: 0.7;
+}
+.ver {
+  font: 12px var(--mono);
+  padding: 3px 8px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+}
+.theme {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface);
+  cursor: pointer;
+}
+.theme svg {
+  width: 18px;
+  height: 18px;
+}
+[data-theme='light'] .theme .bx-icon-sun,
+[data-theme='dark'] .theme .bx-icon-moon {
+  display: none;
+}

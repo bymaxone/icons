@@ -107,6 +107,8 @@ setTheme(prefs.theme ?? (matchMedia('(prefers-color-scheme: dark)').matches ? 'd
 root.dataset.accent = prefs.accent ?? 'ink'
 
 document.addEventListener('DOMContentLoaded', () => {
+  // The theme is set above, before the first paint; its toggle exists only now, so label it.
+  setTheme(root.dataset.theme)
   press('accent', root.dataset.accent)
   const requested = new URLSearchParams(location.search).get('variant')
   if (document.querySelector('.grid'))
