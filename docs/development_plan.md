@@ -23,8 +23,8 @@
 
 ## 1. Progress Dashboard
 
-> **Overall progress: 9 / 12 phases (75%)**
-> **Active phase:** P5 (hardening and release); P0 still has
+> **Overall progress: 9 / 14 phases (64%)**
+> **Active phase:** R1 (aesthetic redraw), then B5 (general icons), before the release of P5; P0 still has
 > the GitHub settings of task 0.6
 > **Blocked phases:** none
 >
@@ -46,6 +46,8 @@
 | B3  | studio-ai-formats-billing         | ✅     | 100%     | L    | 2026-11-11   |
 | B4  | filled-variants-sm-masters-brands | ✅     | 100%     | L    | 2026-11-11   |
 | P4  | catalog-site                      | ✅     | 100%     | M    | 2026-11-11   |
+| R1  | aesthetic-redraw                  | 🔄     | 33%      | M    | 2026-11-11   |
+| B5  | general-icons                     | 📋     | 0%       | L    | 2026-11-11   |
 | P5  | hardening-release                 | 🔄     | 25%      | M    | 2026-11-11   |
 | P6  | react-native                      | 📋     | 0%       | M    | 2026-11-08   |
 
@@ -364,6 +366,26 @@ These rules apply to every phase. Phase sections only add rules specific to them
 - **Pending (2026-11-11):** the DNS record of `icons.bymax.one` (a CNAME to
   `bymaxone.github.io`) is the founder's to create; until then the site is served at
   `bymaxone.github.io/icons`.
+
+### R1: aesthetic-redraw
+
+- **Goal:** Redraw the 21 drawings that are not understood at a glance at 24 px on the dark page, or that are not beautiful, before the set is published.
+- **Why:** the founder, on the catalog: an icon must be beautiful and read at once, not only pass the rules. The delegated auditor audited all 148 drawings again on dark sheets and listed 18 items.
+- **Scope (in):** octopus, gift, globe, brush, crop, lock; version, plan, style, hand, eraser, repair; lip-sync, folder-stack, agent, the four aspect formats, extend, library. Their filled and 16 px drawings are redrawn with them.
+- **Process:** two or three variants per item on one sheet, the current drawing first: the line drawing at 48 on the dark page, at 24 and 16 px 1x, at 48 on the light page, and blurred. The auditor chooses; the same rules apply (the cut, the ink ceiling, G, similarity d > 0.30). One pull request per group of six, in the order above.
+- **Definition of Done:** the three groups are merged, each approved by the auditor.
+- **Group 1 ✅ (2026-11-11):** octopus, gift, globe, brush, crop and lock, approved by the delegated auditor on behalf of the founder.
+- **Size:** M
+
+### B5: general-icons
+
+- **Goal:** Add the icons every product needs, which the first 148, drawn around the Studio, do not cover: 106 drawings in five sub-batches.
+- **Why:** a founder decision of 2026-11-11, before 1.0. The names come from the coverage of a general-purpose set; Feather's list of names was read for coverage only, never its drawings, and Feather joins the similarity comparison set.
+- **Sub-batches:** B5a actions, status and controls (25); B5b people and security (11); B5c data, time and files (25); B5d commerce, communication, places and devices (35); B5e text and development (10).
+- **Naming:** each name says what is drawn, and product meanings are aliases (`save` for `floppy-disk`, `team` for `users`, `terminal` for `prompt`). New categories: `security`, `data-charts`, `commerce`, `communication`, `places-devices` and `dev`. `bold`, `italic` and `underline` are the one accepted exception to "no part reads as a letter" (spec section 3.5).
+- **Variants:** 11 filled drawings for stateful icons; 16 px masters only where a measurement at 16 px shows a failure.
+- **Definition of Done:** the five sub-batches are merged, each approved by the auditor; then the release pull request of P5 is refreshed and merged.
+- **Size:** L
 
 ### P5: hardening-release
 

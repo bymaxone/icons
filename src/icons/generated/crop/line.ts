@@ -12,6 +12,6 @@ import { createIcon } from '@bymax-one/icons/runtime'
  * @since 0.1.0
  */
 export const CropIcon = /* @__PURE__ */ createIcon('crop', [
-  ['path', { d: 'M6.75 2.75v14.5h7.5' }],
-  ['path', { d: 'M9.75 6.75h7.5v14.5' }]
+  ['path', { d: 'M7.75 2.75v11.5a2 2 0 0 0 2 2h11.5' }],
+  ['path', { d: 'M2.75 7.75h2m6 0h3.5a2 2 0 0 1 2 2v3.5m0 6v2' }]
 ])
