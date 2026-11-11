@@ -102,7 +102,7 @@ These rules are the identity of the set. They are applied to every icon and chec
 1. **Overlap knockout.** Where a modifier (plus, slash, badge, check) overlaps a base shape, the base is cut with a uniform 1.5 px gap. Modifiers always sit in the bottom-right 10 × 10 quadrant.
 2. **Spark dot.** A 2 px filled dot is the only fill allowed in a line icon. It marks "generated", "AI" or "new", and always sits at the same top-right position.
 3. **Recessed terminals.** Open strokes stop 0.5 px short of the live-area edge.
-4. **The cut.** Distinct parts never touch. Where one part would meet another (a door and the floor line, a handle and its lens, a head and the shoulders, a crease and its page), it stops short by a 1.5 px gap, which is 3 units between the two centrelines, everywhere in the set. Parts that are attached, such as a clapper arm on its hinge, share a corner with radius 0 instead. The cut is the signature that still reads at 24 px; at 16 px the gap is 1 px, the minimum the 16 master allows.
+4. **The cut.** Distinct parts never touch. Where one part would meet another (a door and the floor line, a handle and its lens, a head and the shoulders, a crease and its page), it stops short by a 1.5 px gap, which is 3 units between the two centrelines, everywhere in the set. Parts that are attached, such as a clapper arm on its hinge, share a corner with radius 0 instead. The cut is the signature that still reads at 24 px; at 16 px the gap is 1 px, the minimum the 16 master allows. The 16 px master of `eye-off` is the exception: its slash crosses the lids with no cut, because a cut on each side of a diagonal slash leaves too little of each lid at 16 px for the eye to read.
 
 ### 2.5 Optical balance
 

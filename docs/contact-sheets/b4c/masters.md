@@ -12,8 +12,8 @@ Each 16 px master is a separate drawing of its icon, made for 16 px: it sits on 
 ## What changed against the line drawing
 
 - **Removed at 16 px:** the crease of `file`, `file-audio`, `file-video` and `script`, which fuses with the page; the capsule of the `search` handle, now a single stroke; the clasp of `wallet`, now a short mark.
-- **Simplified:** `share` draws its nodes as solid dots; `timeline` draws its clips as bars; `frame` draws its perforations as rows of holes along its edges; `octopus` keeps its mantle and arms in one outline; `eye` has a smaller pupil ring; `more-horizontal` and `more-vertical` draw their dots on pixel corners; `duplicate` enlarges its front square to fit its plus.
-- **`eye-off`** keeps the whole almond and crosses it with a slash that meets both lids: a cut on each side of a diagonal slash costs a large share of each lid at 16 px, and the eye no longer reads.
+- **Simplified:** `share` draws its nodes as solid dots; `timeline` draws its clips as bars; `frame` draws its perforations as short dashes along its top and bottom edges; `octopus` keeps its mantle and arms in one outline; `eye` has a smaller pupil ring; `more-horizontal` and `more-vertical` draw their dots on pixel corners; `duplicate` enlarges its front square to fit its plus.
+- **`eye-off`** keeps the whole almond and crosses it with a slash that passes beyond both lids, with no cut: a cut on each side of a diagonal slash costs a large share of each lid at 16 px, and the eye no longer reads.
 - **`alert-triangle`** keeps the bar and the dot of "!": a bar of 2.5 px and a dot at a 1 px cut, the only placement inside the triangle that keeps both clear of its sides.
 
 ## Measures
@@ -47,25 +47,25 @@ Ink is coverage at the size given, with the stroke. G and the parts it is measur
 | `filter`          | 16.4          | 11.6            | 1.41  | 0          | -                 | 4.5, 3, 21, 21        | 12.75, 8.24      | 219       | 1034             | lucide/split                 | 0.99 |
 | `check-circle`    | 22.4          | 17.5            | 1.28  | 0.25       | path 1 / path 2   | 4.5, 4.5, 21, 21      | 12.6, 12.89      | 177       | 1003             | lucide/check-circle          | 0.36 |
 | `alert-triangle`  | 23            | 15.9            | 1.45  | 0.25       | path 2 / path 3   | 3, 3, 22.5, 21        | 12.74, 14.54     | 176       | 1008             | lucide/baseline              | 0.52 |
-| `alert-circle`    | 21.8          | 15.6            | 1.40  | 0.25       | path 2 / path 3   | 3, 3, 22.5, 21        | 12.75, 12.25     | 177       | 996              | tabler/alert-circle          | 0.18 |
+| `alert-circle`    | 21.8          | 15.6            | 1.40  | 0.25       | circle 1 / path 3 | 3, 3, 22.5, 21        | 12.75, 12.25     | 177       | 996              | tabler/alert-circle          | 0.18 |
 | `info`            | 21.8          | 15.6            | 1.40  | 0.25       | path 2 / path 3   | 3, 3, 22.5, 21        | 12.75, 12.37     | 169       | 991              | lucide/badge-info            | 0.21 |
 | `loader`          | 10.8          | 8.5             | 1.27  | 0          | -                 | 4.5, 4.5, 21, 21      | 14.7, 13.13      | 195       | 1024             | tabler/border-sides          | 2.53 |
 | `lock`            | 24.1          | 16.3            | 1.48  | 0.25       | path 1 / path 3   | 4.5, 3, 21, 21        | 12.76, 13.39     | 211       | 1039             | lucide/lock                  | 0.50 |
 | `eye`             | 21.5          | 14.6            | 1.47  | 0          | -                 | 4.5, 4.5, 21, 21      | 12.71, 12.76     | 200       | 1020             | tabler/gradienter            | 0.24 |
-| `eye-off`         | 20.8          | 13.9            | 1.50  | 0          | -                 | 4.5, 6, 21, 19.5      | 12.74, 12.73     | 165       | 990              | phosphor/cloud-slash         | 0.85 |
+| `eye-off`         | 20.2          | 13.9            | 1.45  | 0          | -                 | 4.5, 4.5, 21, 21      | 12.73, 12.74     | 184       | 1007             | tabler/planet-off            | 0.49 |
 | `lightning`       | 17.1          | 11.9            | 1.44  | 0          | -                 | 6, 1.5, 18, 22.5      | 12, 12.01        | 178       | 1019             | tabler/clef                  | 0.94 |
 | `wallet`          | 26.1          | 20.2            | 1.29  | 0.25       | path 2 / path 3   | 3, 3, 21, 21          | 12.05, 12.52     | 201       | 1026             | phosphor/bag                 | 0.51 |
 | `users`           | 26.1          | 19.4            | 1.35  | 0.25       | circle 1 / path 2 | 3, 4.5, 21, 21        | 12.13, 12.58     | 208       | 1031             | heroicons/users              | 1.07 |
 | `bell`            | 19.9          | 13.8            | 1.44  | 0.25       | path 1 / path 2   | 4.5, 4.5, 21, 21      | 12.74, 13.12     | 231       | 1069             | lucide/bell                  | 0.31 |
-| `duplicate`       | 29.4          | 20.3            | 1.45  | 0.25       | path 2 / path 3   | 3, 3, 21, 21          | 12.16, 12.17     | 223       | 1053             | lucide/copy-minus            | 0.38 |
+| `duplicate`       | 29.4          | 20.3            | 1.45  | 0.25       | path 1 / path 3   | 3, 3, 21, 21          | 12.16, 12.17     | 223       | 1053             | lucide/copy-minus            | 0.38 |
 | `file`            | 21.1          | 16.1            | 1.31  | 0          | -                 | 4.5, 3, 19.5, 21      | 11.6, 12.46      | 193       | 1000             | tabler/file                  | 0.48 |
 | `file-audio`      | 25.5          | 21              | 1.21  | 0.13       | path 1 / circle 2 | 4.5, 3, 19.5, 21      | 11.68, 12.62     | 219       | 1039             | tabler/file-function         | 0.49 |
 | `file-video`      | 26.6          | 19.8            | 1.34  | 0.25       | path 1 / path 2   | 4.5, 3, 19.5, 21      | 11.65, 12.6      | 202       | 1025             | tabler/file-unknown          | 0.50 |
 | `script`          | 26.5          | 19.6            | 1.35  | 0.25       | path 2 / path 3   | 4.5, 3, 19.5, 21      | 11.56, 12.69     | 196       | 1022             | tabler/file-lambda           | 0.56 |
-| `frame`           | 30.1          | 21.1            | 1.43  | 0.25       | path 6 / path 7   | 1.5, 3, 22.5, 21      | 12.11, 12        | 214       | 1046             | heroicons/window             | 0.51 |
+| `frame`           | 30.9          | 21.1            | 1.46  | 0.19       | path 1 / path 2   | 1.5, 3, 22.5, 21      | 11.96, 11.99     | 235       | 1063             | lucide/dock                  | 0.40 |
 | `timeline`        | 12.9          | 21.2            | 0.61  | 0          | -                 | 3, 4.5, 21, 21        | 11.91, 13.44     | 162       | 990              | tabler/corner-left-up-double | 2.42 |
 | `volume`          | 22.5          | 17.7            | 1.27  | 0.25       | path 2 / path 3   | 3, 4.5, 21, 21        | 11.37, 12.75     | 199       | 1020             | tabler/volume                | 0.49 |
-| `octopus`         | 24.6          | 20.9            | 1.18  | 0.25       | path 2 / path 3   | 3, 1.5, 22.5, 21      | 12.71, 11.73     | 251       | 1092             | phosphor/linux-logo          | 0.90 |
+| `octopus`         | 24.6          | 20.9            | 1.18  | 0.25       | path 1 / path 3   | 3, 1.5, 22.5, 21      | 12.71, 11.73     | 251       | 1092             | phosphor/linux-logo          | 0.90 |
 | `share`           | 11.7          | 14.8            | 0.79  | 0          | -                 | 4.5, 3, 21, 22.5      | 14.11, 12.75     | 183       | 1013             | tabler/math-lower            | 1.17 |
 
 ## Similarity
