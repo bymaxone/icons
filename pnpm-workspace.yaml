@@ -37,8 +37,7 @@ overrides:
   'brace-expansion@5': '^5.0.12'
   # esbuild is pinned exactly rather than floored: pnpm applies an override to the
   # direct devDependency too, and the size gate (scripts/check-component-size.mjs)
-  # must bundle with the same esbuild tsup builds dist/ with. 0.28.2 is above the
-  # 0.28.1 floor the caret set.
+  # must bundle with the same esbuild tsup builds dist/ with.
   'esbuild': '0.28.2'
   # Host confusion and server-side request forgery advisories, all fixed in 3.1.6;
   # floored on the same reasoning as above.
