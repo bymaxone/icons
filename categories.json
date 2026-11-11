@@ -1,17 +1,61 @@
 {
   "$schema": "./schemas/category.schema.json",
   "categories": [
-    { "name": "navigation", "title": "Navigation" },
-    { "name": "actions", "title": "Actions" },
-    { "name": "media-video", "title": "Media and video" },
-    { "name": "audio-voice", "title": "Audio and voice" },
-    { "name": "files", "title": "Files" },
-    { "name": "status", "title": "Status" },
-    { "name": "credits-billing", "title": "Credits and billing" },
-    { "name": "people-roles", "title": "People and roles" },
-    { "name": "formats", "title": "Formats" },
-    { "name": "editor-canvas", "title": "Editor and canvas" },
-    { "name": "ai-agent", "title": "AI and agent" },
-    { "name": "system", "title": "System" }
+    {
+      "name": "navigation",
+      "title": "Navigation"
+    },
+    {
+      "name": "actions",
+      "title": "Actions"
+    },
+    {
+      "name": "media-video",
+      "title": "Media and video"
+    },
+    {
+      "name": "audio-voice",
+      "title": "Audio and voice"
+    },
+    {
+      "name": "files",
+      "title": "Files"
+    },
+    {
+      "name": "status",
+      "title": "Status"
+    },
+    {
+      "name": "credits-billing",
+      "title": "Credits and billing"
+    },
+    {
+      "name": "people-roles",
+      "title": "People and roles"
+    },
+    {
+      "name": "formats",
+      "title": "Formats"
+    },
+    {
+      "name": "editor-canvas",
+      "title": "Editor and canvas"
+    },
+    {
+      "name": "ai-agent",
+      "title": "AI and agent"
+    },
+    {
+      "name": "system",
+      "title": "System"
+    },
+    {
+      "name": "security",
+      "title": "Security"
+    },
+    {
+      "name": "places-devices",
+      "title": "Places and devices"
+    }
   ]
 }

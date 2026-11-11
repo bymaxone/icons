@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Verified user",
+  "tags": ["user", "verified", "approved", "check"],
+  "categories": ["people-roles"],
+  "useCases": ["Marks a verified account", "Approves a member request"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

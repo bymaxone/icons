@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Fingerprint",
+  "tags": ["fingerprint", "biometric", "identity", "touch id"],
+  "categories": ["security"],
+  "useCases": ["Signs in with a fingerprint", "Confirms an action with biometrics"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

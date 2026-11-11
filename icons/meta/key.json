@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Key",
+  "tags": ["key", "password", "access", "credential"],
+  "categories": ["security"],
+  "useCases": ["Manages API keys", "Changes a password"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}
