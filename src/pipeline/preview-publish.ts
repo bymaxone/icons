@@ -92,8 +92,9 @@ export function readArtifact(directory: string): PreviewArtifact {
 /**
  * Checks the repository name and that the pull request the manifest names is the one the
  * workflow run built: open, on the run's head commit, and from the run's head repository
- * and branch. The number comes from the artifact, so it is not trusted: two pull requests
- * can share a head commit (a fork can push anyone's), but not a head repository and branch.
+ * and branch. The number comes from the artifact, so it is not trusted: anyone's fork can
+ * push another pull request's head commit, but a manifest that passes can only name a pull
+ * request opened from the run's own head branch, which its author already controls.
  *
  * @param request - The REST call.
  * @param repository - `owner/name` of this repository.
