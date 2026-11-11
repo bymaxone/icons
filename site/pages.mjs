@@ -150,28 +150,11 @@ function toggles(name, setting, options, current) {
   return `<div class="seg" role="group" aria-label="${name}">${buttons}</div>`
 }
 
-/**
- * The home page: the specimen, the controls and the grid of every icon and brand mark.
- *
- * @param {import('../src/pipeline/site.ts').Catalog} catalog
- * @param {(component: string) => string} render
- * @param {string} version
- * @returns {string} The document.
- */
-export function homePage(catalog, render, version) {
-  const icons = catalog.entries.filter((entry) => entry.kind === 'icon')
+/** The introduction: the claim, the install command and the counts. */
+function intro(icons, brands, render) {
   const count = (variant) =>
     icons.filter((entry) => entry.drawings.some((d) => d.variant === variant)).length
-  const brands = catalog.entries.length - icons.length
-  const options = catalog.categories
-    .map((category) => `<option value="${e(category.name)}">${e(category.title)}</option>`)
-    .join('')
-  const accents = ACCENTS.map(
-    (accent) =>
-      `<button type="button" class="sw sw-${accent}" data-set-accent="${accent}" aria-pressed="${accent === 'ink'}" aria-label="${label(accent)}" title="${label(accent)}"></button>`
-  ).join('')
-  const body = `<section class="hero">
-  <div class="hero-text">
+  return `<div class="hero-text">
     <p class="eyebrow">An original icon set for React and the web</p>
     <h1>One grid.<br>One stroke.<br>Every part apart.</h1>
     <p class="lede">${icons.length} icons and ${brands} brand marks, drawn on a 24 px grid with a 1.5 px stroke and a cut that keeps every part clear of the next. With filled variants, hand-tuned 16 px masters, React components that render in Server Components, raw SVG, a sprite and typed metadata.</p>
@@ -182,11 +165,19 @@ export function homePage(catalog, render, version) {
       <div><dt>${count('sm')}</dt><dd>16 px masters</dd></div>
       <div><dt>${brands}</dt><dd>brand marks</dd></div>
     </dl>
-  </div>
-  ${specimen(render)}
-</section>
-<section class="browse" aria-label="Browse">
-  <div class="bar">
+  </div>`
+}
+
+/** The controls bar: search and category, then variant, size, stroke and colour. */
+function controls(catalog, render) {
+  const options = catalog.categories
+    .map((category) => `<option value="${e(category.name)}">${e(category.title)}</option>`)
+    .join('')
+  const accents = ACCENTS.map(
+    (accent) =>
+      `<button type="button" class="sw sw-${accent}" data-set-accent="${accent}" aria-pressed="${accent === 'ink'}" aria-label="${label(accent)}" title="${label(accent)}"></button>`
+  ).join('')
+  return `<div class="bar">
     <div class="row">
       <label class="search">${render('SearchIcon')}<span class="sr">Search</span><input id="q" type="search" placeholder="Search icons" autocomplete="off" spellcheck="false"></label>
       <label class="cat"><span class="sr">Category</span><select id="category"><option value="">All categories</option>${options}</select></label>
@@ -202,7 +193,26 @@ export function homePage(catalog, render, version) {
       <label class="stroke"><span>Stroke</span><input id="stroke" type="range" min="1" max="2.5" step="0.25" value="1.5"><output for="stroke">1.5</output></label>
       <div class="seg sws" role="group" aria-label="Colour">${accents}</div>
     </div>
-  </div>
+  </div>`
+}
+
+/**
+ * The home page: the specimen, the controls and the grid of every icon and brand mark.
+ *
+ * @param {import('../src/pipeline/site.ts').Catalog} catalog
+ * @param {(component: string) => string} render
+ * @param {string} version
+ * @returns {string} The document.
+ */
+export function homePage(catalog, render, version) {
+  const icons = catalog.entries.filter((entry) => entry.kind === 'icon')
+  const brands = catalog.entries.length - icons.length
+  const body = `<section class="hero">
+  ${intro(icons, brands, render)}
+  ${specimen(render)}
+</section>
+<section class="browse" aria-label="Browse">
+  ${controls(catalog, render)}
   <p class="count" aria-live="polite">Showing <span id="shown-icons">${icons.length}</span> of ${icons.length} icons and <span id="shown-brands">${brands}</span> of ${brands} brand marks</p>
   <ul class="grid">
 ${catalog.entries.map((entry) => cell(entry, render)).join('\n')}
@@ -274,6 +284,60 @@ function relatedTo(entry, catalog) {
     .map(({ other }) => other)
 }
 
+/** How to use an entry: its import, a decorative use and a labelled one. */
+function usage(entry, render) {
+  const subpath = entry.kind === 'brand' ? '@bymax-one/icons/brands' : '@bymax-one/icons'
+  const first = entry.drawings[0].component
+  return `<section class="use">
+      <h2>Use it</h2>
+      ${snippet(`import { ${first} } from '${subpath}'`, 'Copy the import', render)}
+      ${snippet(`<${first} size={20} />`, 'Copy the decorative use', render)}
+      <p class="note">Decorative by default, beside a text that says the same. When the icon stands alone, give it a name with <code>title</code>; it then has <code>role="img"</code>:</p>
+      ${snippet(`<${first} size={20} title="${label(entry.name)}" />`, 'Copy the labelled use', render)}
+    </section>`
+}
+
+/** What the metadata says about an entry: its name, tags, aliases and first version. */
+function details(entry, render) {
+  const aliases = entry.aliases.length
+    ? `<dt>Aliases</dt><dd><ul class="chips">${entry.aliases
+        .map(
+          (alias) =>
+            `<li><code>${e(alias.name)}</code>${alias.deprecated ? ` <em>deprecated, removed in ${e(alias.toBeRemovedInVersion)}</em>` : ''}</li>`
+        )
+        .join('')}</ul></dd>`
+    : ''
+  return `<section class="meta">
+      <h2>Details</h2>
+      <dl>
+        <dt>Name</dt><dd><code>${e(entry.name)}</code> <button type="button" class="copy" data-copy-text="${e(entry.name)}" aria-label="Copy the name">${render('CopyIcon')}</button></dd>
+        <dt>Tags</dt><dd><ul class="chips">${entry.tags.map((tag) => `<li>${e(tag)}</li>`).join('')}</ul></dd>
+        ${aliases}
+        <dt>Since</dt><dd>v${e(entry.since)}</dd>
+      </dl>
+    </section>`
+}
+
+/** The use cases of an entry, or nothing when it has none. */
+function useCasesOf(entry) {
+  return entry.useCases.length
+    ? `<section class="uses"><h2>Use it for</h2><ul>${entry.useCases.map((use) => `<li>${e(use)}</li>`).join('')}</ul></section>`
+    : ''
+}
+
+/** The related entries as a small grid, or nothing when none is related. */
+function relatedSection(entry, catalog, render) {
+  const related = relatedTo(entry, catalog)
+  return related.length
+    ? `<section class="rel"><h2>Related</h2><ul class="grid small">${related
+        .map(
+          (other) =>
+            `<li class="cell"><a href="../../${folder(other)}/${e(other.name)}/" title="${e(other.title)}"><span class="d">${render(other.drawings[0].component)}</span><span class="n">${e(other.title)}</span></a></li>`
+        )
+        .join('')}</ul></section>`
+    : ''
+}
+
 /**
  * The page of one icon or brand mark: its drawings, how to use it, and what the metadata
  * says about it.
@@ -285,7 +349,6 @@ function relatedTo(entry, catalog) {
  * @returns {string} The document.
  */
 export function entryPage(entry, catalog, render, version) {
-  const subpath = entry.kind === 'brand' ? '@bymax-one/icons/brands' : '@bymax-one/icons'
   const titles = new Map(catalog.categories.map((category) => [category.name, category.title]))
   const cards = entry.drawings
     .map((drawing) =>
@@ -294,27 +357,6 @@ export function entryPage(entry, catalog, render, version) {
         : drawingCard(entry, drawing, render)
     )
     .join('\n')
-  const aliases = entry.aliases.length
-    ? `<dt>Aliases</dt><dd><ul class="chips">${entry.aliases
-        .map(
-          (alias) =>
-            `<li><code>${e(alias.name)}</code>${alias.deprecated ? ` <em>deprecated, removed in ${e(alias.toBeRemovedInVersion)}</em>` : ''}</li>`
-        )
-        .join('')}</ul></dd>`
-    : ''
-  const useCases = entry.useCases.length
-    ? `<section class="uses"><h2>Use it for</h2><ul>${entry.useCases.map((use) => `<li>${e(use)}</li>`).join('')}</ul></section>`
-    : ''
-  const related = relatedTo(entry, catalog)
-  const relatedList = related.length
-    ? `<section class="rel"><h2>Related</h2><ul class="grid small">${related
-        .map(
-          (other) =>
-            `<li class="cell"><a href="../../${folder(other)}/${e(other.name)}/" title="${e(other.title)}"><span class="d">${render(other.drawings[0].component)}</span><span class="n">${e(other.title)}</span></a></li>`
-        )
-        .join('')}</ul></section>`
-    : ''
-  const first = entry.drawings[0].component
   const body = `<nav class="crumbs" aria-label="Breadcrumb"><a href="../../">${render('ArrowLeftIcon')}All icons</a></nav>
 <section class="entry">
   <header class="entry-h">
@@ -325,25 +367,11 @@ export function entryPage(entry, catalog, render, version) {
 ${cards}
   </div>
   <div class="cols">
-    <section class="use">
-      <h2>Use it</h2>
-      ${snippet(`import { ${first} } from '${subpath}'`, 'Copy the import', render)}
-      ${snippet(`<${first} size={20} />`, 'Copy the decorative use', render)}
-      <p class="note">Decorative by default, beside a text that says the same. When the icon stands alone, give it a name with <code>title</code>; it then has <code>role="img"</code>:</p>
-      ${snippet(`<${first} size={20} title="${label(entry.name)}" />`, 'Copy the labelled use', render)}
-    </section>
-    <section class="meta">
-      <h2>Details</h2>
-      <dl>
-        <dt>Name</dt><dd><code>${e(entry.name)}</code> <button type="button" class="copy" data-copy-text="${e(entry.name)}" aria-label="Copy the name">${render('CopyIcon')}</button></dd>
-        <dt>Tags</dt><dd><ul class="chips">${entry.tags.map((tag) => `<li>${e(tag)}</li>`).join('')}</ul></dd>
-        ${aliases}
-        <dt>Since</dt><dd>v${e(entry.since)}</dd>
-      </dl>
-    </section>
+    ${usage(entry, render)}
+    ${details(entry, render)}
   </div>
-  ${useCases}
-  ${relatedList}
+  ${useCasesOf(entry)}
+  ${relatedSection(entry, catalog, render)}
 </section>`
   return layout({
     title: `${entry.title}: Bymax Icons`,
