@@ -31,7 +31,7 @@ const VARIANT = /^(?:line|filled|sm)$/
 /** A reference id, `<set>/<name>`. */
 const REFERENCE_ID = /^[a-z]+\/[a-z0-9]+(?:-[a-z0-9]+)*$/
 /** An image the preview publishes. */
-const IMAGE = /^[a-z0-9]+(?:-[a-z0-9]+)*\.png$/
+export const IMAGE = /^[a-z0-9]+(?:-[a-z0-9]+)*\.png$/
 
 /** The most icons a manifest may list. */
 export const MAX_ICONS = 200

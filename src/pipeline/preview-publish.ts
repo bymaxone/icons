@@ -14,6 +14,7 @@ import { join } from 'node:path'
 import {
   COMMENT_MARKER,
   commentBody,
+  IMAGE,
   isPublishablePng,
   MAX_IMAGE_BYTES,
   validateManifest
@@ -28,7 +29,7 @@ export interface GitHubResponse {
 
 /** One GitHub REST call, injected so the publishing is testable without the network. */
 export type GitHubRequest = (
-  method: 'GET' | 'POST' | 'PUT' | 'PATCH',
+  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',
   path: string,
   body?: unknown
 ) => Promise<GitHubResponse>
@@ -257,6 +258,74 @@ export async function publishImages(
       `Preview of pull request ${artifact.manifest.pr}`
     )
   }
+}
+
+/** The entries of a directory of the preview branch, or none when it does not exist. */
+async function listing(request: GitHubRequest, path: string): Promise<readonly unknown[]> {
+  const response = await request('GET', `${path}?ref=${PREVIEW_BRANCH}`)
+  // Stryker disable next-line ArrayDeclaration: every entry is checked by name before it is used, so a placeholder entry is skipped like an empty listing.
+  if (response.status === 404) return []
+  if (response.status !== 200 || !Array.isArray(response.body)) {
+    unexpected('preview listing', response)
+  }
+  return response.body
+}
+
+/** Deletes one file of the preview branch, reading its sha again when the branch moved. */
+async function removeFile(request: GitHubRequest, path: string, message: string): Promise<void> {
+  for (let attempt = 1; ; attempt++) {
+    const existing = await request('GET', `${path}?ref=${PREVIEW_BRANCH}`)
+    // 404: another publish removed it first, which is what this call wanted.
+    if (existing.status === 404) return
+    if (existing.status !== 200) unexpected('preview image', existing)
+    const removed = await request('DELETE', path, {
+      message,
+      sha: read(existing.body, 'sha'),
+      branch: PREVIEW_BRANCH
+    })
+    // 404: removed by another publish between the read and the delete; gone either way.
+    if (removed.status === 200 || removed.status === 404) return
+    // 409: the branch moved between the read and the delete; read again and retry.
+    if (removed.status !== 409 || attempt === WRITE_ATTEMPTS) {
+      unexpected('preview image removal', removed)
+    }
+  }
+}
+
+/**
+ * Removes the images of a pull request's earlier commits from the preview branch, keeping
+ * the commit just published. The preview comment shows only the latest commit, so the branch
+ * then holds one set of images per pull request instead of one per push. Only names a publish
+ * writes are acted on: a commit directory and an image file name; anything else is left.
+ *
+ * @param request - The REST call.
+ * @param repository - `owner/name`.
+ * @param manifest - The validated manifest of the commit just published.
+ * @returns How many images were removed.
+ * @throws {Error} When the API refuses a listing or a removal.
+ */
+export async function pruneEarlierPreviews(
+  request: GitHubRequest,
+  repository: string,
+  manifest: PreviewManifest
+): Promise<number> {
+  const root = `/repos/${repository}/contents/pr-${manifest.pr}`
+  let removed = 0
+  for (const entry of await listing(request, root)) {
+    const commit = String(read(entry, 'name'))
+    if (commit === manifest.head || !COMMIT.test(commit)) continue
+    for (const file of await listing(request, `${root}/${commit}`)) {
+      const name = String(read(file, 'name'))
+      if (!IMAGE.test(name)) continue
+      await removeFile(
+        request,
+        `${root}/${commit}/${name}`,
+        `Drop an earlier preview of pull request ${manifest.pr}`
+      )
+      removed += 1
+    }
+  }
+  return removed
 }
 
 /** The id of the existing preview comment, or `undefined`. */

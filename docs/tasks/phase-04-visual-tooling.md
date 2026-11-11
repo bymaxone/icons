@@ -93,9 +93,8 @@ summary, passes, and uploads nothing.
 
 ### Later (P5)
 
-- The `icons-preview` branch keeps every preview it is given (`pr-<n>/<sha>/`). Cleaning a
-  pull request's directory when it closes, or keeping only its latest commit, belongs to
-  the hardening phase.
+- The `icons-preview` branch kept every preview it was given (`pr-<n>/<sha>/`). Since P5 the
+  publish keeps only a pull request's latest commit, the one its comment shows (task 12.2).
 
 ### Deviations from the specification
 

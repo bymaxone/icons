@@ -99,21 +99,24 @@ describe('runPreviewPublish', () => {
   it('verifies the pull request, then stores the images', async () => {
     /**
      * Scenario: `publish` reads the artifact, checks the pull request, writes the image
-     * to the preview branch, prints a summary and returns 0; the token is the one from the
-     * environment.
+     * to the preview branch, looks for earlier commits of the pull request to drop, prints a
+     * summary and returns 0; the token is the one from the environment.
      */
     const output = capture()
     const { factory, calls, tokens } = github()
     const code = await runPreviewPublish(['publish', '--dir', directory], ENV, output, factory)
     expect(code).toBe(0)
-    expect(output.logs).toStrictEqual(['published 1 image(s) for #12'])
+    expect(output.logs).toStrictEqual([
+      'published 1 image(s) for #12, removed 0 of earlier commits'
+    ])
     expect(output.errors).toStrictEqual([])
     expect(tokens).toStrictEqual(['tok'])
     expect(calls).toStrictEqual([
       'GET /repos/bymaxone/icons/pulls/12',
       'GET /repos/bymaxone/icons/git/ref/heads/icons-preview',
       `GET /repos/bymaxone/icons/contents/pr-12/${HEAD}/preview.png?ref=icons-preview`,
-      `PUT /repos/bymaxone/icons/contents/pr-12/${HEAD}/preview.png`
+      `PUT /repos/bymaxone/icons/contents/pr-12/${HEAD}/preview.png`,
+      'GET /repos/bymaxone/icons/contents/pr-12?ref=icons-preview'
     ])
   })
 
