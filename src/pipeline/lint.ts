@@ -7,6 +7,7 @@
 
 import { byName } from './icon-set.ts'
 import type { BrandEntry, Drawing, IconEntry, IconSet } from './icon-set.ts'
+import { inkIssues } from './lint-ink.ts'
 import type { LintIssue } from './lint-issue.ts'
 import {
   brandScopeIssues,
@@ -194,5 +195,11 @@ export function lintSources(sources: IconSources): LintResult {
     ...categoryIssues(catalog),
     ...uniquenessIssues(catalog)
   )
+  // Ink is measured only on drawings that pass every rule of their own file: one that does
+  // not may not render.
+  const flawed = new Set(issues.map((issue) => issue.file))
+  const sound = (kind: ReadonlyMap<string, Drawing>): Map<string, Drawing> =>
+    new Map([...kind].filter(([, drawing]) => !flawed.has(drawing.path)))
+  issues.push(...inkIssues(sound(drawings.line), sound(drawings.sm)))
   return { issues, set: buildSet(catalog, drawings, categories) }
 }
