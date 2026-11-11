@@ -143,8 +143,8 @@ describe('metadataModule', () => {
         '/** Every brand name, in name order. */\nexport const BRAND_NAMES = [] as const\n',
         '/** Every category name, in the order of categories.json. */\nexport const CATEGORY_NAMES = ["a"] as const\n',
         '/** The categories, in the order of categories.json. */\nexport const CATEGORIES = [{"name":"a","title":"A"}] as const\n',
-        '/** The metadata of every icon, keyed by name. */\nexport const ICONS = {} as const\n',
-        '/** The metadata of every brand mark, keyed by name. */\nexport const BRANDS = {} as const\n'
+        '/** The metadata of every icon, keyed by name. */\n// prettier-ignore\nexport const ICONS = {} as const\n',
+        '/** The metadata of every brand mark, keyed by name. */\n// prettier-ignore\nexport const BRANDS = {} as const\n'
       ].join('\n')
     )
   })
@@ -157,8 +157,34 @@ describe('metadataModule', () => {
     const records = metadataRecords(build().set)
     expect(text).toContain('export const ICON_NAMES = ["dot","ring"] as const\n')
     expect(text).toContain('export const BRAND_NAMES = ["acme","beta"] as const\n')
-    expect(text).toContain(`export const ICONS = ${JSON.stringify(records.icons)} as const\n`)
-    expect(text).toContain(`export const BRANDS = ${JSON.stringify(records.brands)} as const\n`)
+    const keyed = (records: Record<string, unknown>): string =>
+      `{\n${Object.entries(records)
+        .map(([key, record]) => `  ${JSON.stringify(key)}: ${JSON.stringify(record)},\n`)
+        .join('')}}`
+    expect(text).toContain(
+      `// prettier-ignore\nexport const ICONS = ${keyed(records.icons)} as const\n`
+    )
+    expect(text).toContain(
+      `// prettier-ignore\nexport const BRANDS = ${keyed(records.brands)} as const\n`
+    )
+  })
+
+  it('writes one record per line, so the module grows by a line per icon', () => {
+    /**
+     * Scenario: the generated module stays under the repository's file-length limit at the
+     * size of the full set; each record is one line, whatever its tags and use cases hold.
+     */
+    const text = metadataModule(build().set)
+    const icons = text.slice(
+      text.indexOf('export const ICONS'),
+      text.indexOf('/** The metadata of every brand')
+    )
+    expect(icons.trimEnd().split('\n')).toHaveLength(
+      2 + Object.keys(metadataRecords(build().set).icons).length
+    )
+    expect(icons).toMatch(
+      /^export const ICONS = \{\n {2}"dot": \{.*\},\n {2}"ring": \{.*\},\n\} as const\n/
+    )
   })
 })
 
