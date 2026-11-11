@@ -1,6 +1,6 @@
 # Filled variants: construction and measures
 
-Each filled drawing is its line icon's silhouette made solid: every closed part of the line drawing is filled together with its stroke, every open part keeps its stroke, and a part that lies inside another is knocked out at the stroke width, 1.5 units, under `fill-rule="evenodd"`. Thirty-seven drawings are built that way with Skia's path operations (CanvasKit). Three are written from their geometry instead, as arcs and offset curves, because the Skia outline did not fit the per-component budget at a precision that kept the drawing: `eye`, `octopus` and `settings` (see [Analytic drawings](#analytic-drawings)). Two are built from the line drawing's own outline: `cloud-check`, whose open cloud is closed by its chord so the filled drawing keeps the line icon's bounding box, and `scene`, whose clapper stripes touch the arm's edges and are cut through it.
+Each filled drawing is its line icon's silhouette made solid: every closed part of the line drawing is filled together with its stroke, every open part keeps its stroke, and a part that lies inside another is knocked out at the stroke width, 1.5 units, under `fill-rule="evenodd"`. Most drawings are built that way with Skia's path operations (CanvasKit); the Construction column says which. Some are written from their geometry instead, as arcs and offset curves, because the Skia outline did not fit the per-component budget at a precision that kept the drawing (see [Analytic drawings](#analytic-drawings)). Two are built from the line drawing's own outline: `cloud-check`, whose open cloud is closed by its chord so the filled drawing keeps the line icon's bounding box, and `scene`, whose clapper stripes touch the arm's edges and are cut through it.
 
 ## Precision
 
@@ -77,4 +77,4 @@ Sizes are brotli bytes of the component bundled alone by `scripts/check-componen
 
 ## Sheets
 
-[`filled-pairs-1.png`](./filled-pairs-1.png) to [`filled-pairs-4.png`](./filled-pairs-4.png) show, for each icon, the line and the filled drawing at 48 px on the light page, the filled drawing at 48 px on the dark page, both at 24 and 16 px 1x, enlarged four times, and the filled drawing at 16 px blurred (Gaussian, 1 px) for the silhouette test.
+The `filled-pairs-*.png` sheets in this folder show, for each icon, the line and the filled drawing at 48 px on the light page, the filled drawing at 48 px on the dark page, both at 24 and 16 px 1x, enlarged four times, and the filled drawing at 16 px blurred (Gaussian, 1 px) for the silhouette test.

@@ -16,7 +16,7 @@ The forty: `home`, `dashboard`, `folder`, `folder-stack`, `library`, `templates`
 
 ### Construction and evidence
 
-[`../contact-sheets/b4b/filled.md`](../contact-sheets/b4b/filled.md) records how each drawing is built, the precision rule, and per icon its precision, size, bounding box against the line icon and knockouts, with the line and filled sheets and the comparison of the three analytic drawings (`eye`, `octopus`, `settings`) with their Skia outlines.
+[`../contact-sheets/b4b/filled.md`](../contact-sheets/b4b/filled.md) records how each drawing is built, the precision rule, and per icon its precision, size, bounding box against the line icon and knockouts, with the line and filled sheets and the comparison of the analytic drawings with their Skia outlines.
 
 ### Rules of the phase
 
@@ -40,5 +40,5 @@ The forty: `home`, `dashboard`, `folder`, `folder-stack`, `library`, `templates`
 
 <!-- Append one line per completed task: - <id> ✅ YYYY-MM-DD <summary> -->
 
-- 9.1 ✅ 2026-11-11 Forty filled drawings with their metadata; `eye`, `octopus` and `settings` written from their geometry.
+- 9.1 ✅ 2026-11-11 The filled drawings with their metadata, some written from their geometry.
 - 9.2 ✅ 2026-11-11 Sheets, per-icon measures, the precision rule, and spec §2.5 and §2.6 updated.
