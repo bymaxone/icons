@@ -212,6 +212,36 @@ export default [
     }
   },
 
+  // The catalog site: its build and page templates run in Node, its client script in the
+  // browser. Plain ESM, like the scripts.
+  {
+    files: ['site/**/*.mjs'],
+    languageOptions: {
+      ecmaVersion: 2022,
+      sourceType: 'module',
+      globals: {
+        ...globals.node
+      }
+    },
+    plugins: {
+      security
+    },
+    rules: {
+      'no-eval': 'error',
+      'no-new-func': 'error',
+      'no-restricted-imports': ['error', { paths: deniedImports }],
+      'security/detect-object-injection': 'warn'
+    }
+  },
+  {
+    files: ['site/client.mjs'],
+    languageOptions: {
+      globals: {
+        ...globals.browser
+      }
+    }
+  },
+
   // Config files (tsup.config.ts, jest.config.ts, etc.): TS parser, no type-aware project.
   {
     files: ['*.config.ts', '*.config.mjs', '*.config.js'],

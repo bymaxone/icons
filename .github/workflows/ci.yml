@@ -93,6 +93,10 @@ jobs:
         run: pnpm check:visual
       - name: Build all subpaths
         run: pnpm build
+      - name: Catalog site builds
+        # Renders every page of the catalog with the built components, imported by package
+        # name as a consumer imports them, so a component the site cannot render fails here.
+        run: pnpm site
       - name: Verify build output integrity
         # Confirms every declared subpath produced both ESM and CJS bundles plus
         # type declarations, and that the static outputs exist. A missing artifact
