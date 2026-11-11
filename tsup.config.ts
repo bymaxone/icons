@@ -1,4 +1,4 @@
-import { readdirSync } from 'node:fs'
+import { mkdirSync, readdirSync, rmSync, writeFileSync } from 'node:fs'
 
 import { defineConfig } from 'tsup'
 import type { Options } from 'tsup'
@@ -35,11 +35,27 @@ const shared: Options = {
 // One entry per generated icon, `./icons/<name>`, emitted as `dist/icons/<name>/index.*`
 // so the comment strip that runs on every `index.mjs` and `index.cjs` covers it. The list
 // is read from the generated directory, which holds one subdirectory per icon.
+//
+// Each entry is a one-line re-export written to a single directory, ENTRIES_DIR, rather
+// than the icon's own `index.ts`. The declaration bundler (rollup-plugin-dts 6.5.1, inside
+// tsup 9.0.0) starts a new TypeScript program whenever an entry's directory differs from
+// the previous entry's, so one directory per icon meant one program per icon: about
+// 125 MB each, and the build of 56 icons ran out of memory. From one directory the icons
+// share one program, and the built files are byte-identical (compared on ten icons). `pnpm
+// clean` removes the directory.
 const ICONS_DIR = 'src/icons/generated'
+const ENTRIES_DIR = '.tsup-entries'
+const iconNames = readdirSync(ICONS_DIR, { withFileTypes: true })
+  .filter((entry) => entry.isDirectory())
+  .map((entry) => entry.name)
+rmSync(ENTRIES_DIR, { recursive: true, force: true })
+if (iconNames.length > 0) mkdirSync(ENTRIES_DIR)
 const iconEntries = Object.fromEntries(
-  readdirSync(ICONS_DIR, { withFileTypes: true })
-    .filter((entry) => entry.isDirectory())
-    .map((entry) => [`icons/${entry.name}/index`, `${ICONS_DIR}/${entry.name}/index.ts`])
+  iconNames.map((name) => {
+    const file = `${ENTRIES_DIR}/${name}.ts`
+    writeFileSync(file, `export * from '../${ICONS_DIR}/${name}/index'\n`)
+    return [`icons/${name}/index`, file]
+  })
 )
 
 export default defineConfig([
