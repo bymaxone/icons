@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Coins",
+  "tags": ["coins", "money", "balance", "payment"],
+  "categories": ["commerce"],
+  "useCases": ["Shows a balance", "Opens the payments"],
+  "aliases": [
+    {
+      "name": "money",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

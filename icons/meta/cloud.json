@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Cloud",
+  "tags": ["cloud", "storage", "online", "sync"],
+  "categories": ["places-devices"],
+  "useCases": ["Shows cloud storage", "Marks a synced item"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

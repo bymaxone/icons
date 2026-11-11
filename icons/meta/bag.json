@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Shopping bag",
+  "tags": ["bag", "shopping", "purchase", "order"],
+  "categories": ["commerce"],
+  "useCases": ["Shows the orders of an account", "Opens the shop"],
+  "aliases": [
+    {
+      "name": "shopping-bag",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

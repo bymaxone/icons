@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Percent",
+  "tags": ["percent", "discount", "rate", "sale"],
+  "categories": ["commerce"],
+  "useCases": ["Marks a discount", "Shows a rate"],
+  "aliases": [
+    {
+      "name": "discount",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

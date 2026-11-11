@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Tablet",
+  "tags": ["tablet", "device", "ipad", "screen"],
+  "categories": ["places-devices"],
+  "useCases": ["Shows the tablet preview", "Marks a tablet device"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

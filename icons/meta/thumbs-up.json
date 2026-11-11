@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Like",
+  "tags": ["like", "approve", "upvote", "thumbs up"],
+  "categories": ["communication"],
+  "useCases": ["Likes an item", "Approves a result"],
+  "aliases": [
+    {
+      "name": "like",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line", "filled"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

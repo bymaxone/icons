@@ -16,10 +16,7 @@ export const PlayFilledIcon = /* @__PURE__ */ createIcon(
   [
     [
       'path',
-      {
-        fillRule: 'evenodd',
-        d: 'M11 4Q8.6 2.6 7.5 3q-1 .6-1 3.5v11q0 2.9 1 3.4t3.5-1l7.6-5q2.3-1.6 2.3-2.9t-2.3-2.8z'
-      }
+      { d: 'M11 4Q8.6 2.6 7.5 3q-1 .6-1 3.5v11q0 2.9 1 3.4t3.5-1l7.6-5q2.3-1.6 2.3-2.9t-2.3-2.8z' }
     ]
   ],
   { paint: 'fill' }

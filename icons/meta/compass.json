@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Explore",
+  "tags": ["compass", "explore", "navigate", "discover"],
+  "categories": ["places-devices"],
+  "useCases": ["Opens the explore page", "Shows a direction"],
+  "aliases": [
+    {
+      "name": "explore",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

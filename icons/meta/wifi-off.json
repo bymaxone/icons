@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Offline",
+  "tags": ["wifi", "offline", "disconnected", "network"],
+  "categories": ["places-devices"],
+  "useCases": ["Marks the app as offline", "Shows a lost connection"],
+  "aliases": [
+    {
+      "name": "offline",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

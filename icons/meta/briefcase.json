@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Business",
+  "tags": ["briefcase", "work", "business", "job"],
+  "categories": ["commerce"],
+  "useCases": ["Opens the workspace of a business", "Marks a work account"],
+  "aliases": [
+    {
+      "name": "work",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

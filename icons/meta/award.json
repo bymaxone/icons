@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Award",
+  "tags": ["award", "badge", "achievement", "prize"],
+  "categories": ["commerce"],
+  "useCases": ["Shows an achievement", "Marks a featured item"],
+  "aliases": [
+    {
+      "name": "badge",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

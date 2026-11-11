@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Laptop",
+  "tags": ["laptop", "computer", "device", "desktop"],
+  "categories": ["places-devices"],
+  "useCases": ["Shows the desktop preview", "Marks a computer"],
+  "aliases": [
+    {
+      "name": "computer",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

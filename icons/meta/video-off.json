@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Camera off",
+  "tags": ["video", "camera", "off", "disabled"],
+  "categories": ["media-video"],
+  "useCases": ["Turns the camera off in a call", "Shows a disabled video feed"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

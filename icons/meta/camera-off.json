@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Photos off",
+  "tags": ["camera", "photo", "off", "disabled"],
+  "categories": ["media-video"],
+  "useCases": ["Turns off photo capture", "Shows a blocked camera"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

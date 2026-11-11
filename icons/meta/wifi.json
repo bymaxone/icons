@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Wi-Fi",
+  "tags": ["wifi", "wireless", "network", "connection"],
+  "categories": ["places-devices"],
+  "useCases": ["Shows the network status", "Opens the connection settings"],
+  "aliases": [
+    {
+      "name": "wireless",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

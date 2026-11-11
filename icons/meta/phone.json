@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Call",
+  "tags": ["phone", "call", "telephone", "contact"],
+  "categories": ["communication"],
+  "useCases": ["Starts a call", "Shows a phone number"],
+  "aliases": [
+    {
+      "name": "call",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

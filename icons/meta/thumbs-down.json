@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Dislike",
+  "tags": ["dislike", "reject", "downvote", "thumbs down"],
+  "categories": ["communication"],
+  "useCases": ["Dislikes an item", "Reports a poor result"],
+  "aliases": [
+    {
+      "name": "dislike",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line", "filled"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}
