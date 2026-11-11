@@ -35,7 +35,11 @@ overrides:
   'js-yaml@4': '^4.3.2'
   'brace-expansion@2': '^2.1.7'
   'brace-expansion@5': '^5.0.12'
-  'esbuild': '^0.28.1'
+  # esbuild is pinned exactly rather than floored: pnpm applies an override to the
+  # direct devDependency too, and the size gate (scripts/check-component-size.mjs)
+  # must bundle with the same esbuild tsup builds dist/ with. 0.28.2 is above the
+  # 0.28.1 floor the caret set.
+  'esbuild': '0.28.2'
   # Host confusion and server-side request forgery advisories, all fixed in 3.1.6;
   # floored on the same reasoning as above.
   'fast-uri': '^3.1.9'
