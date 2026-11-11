@@ -43,6 +43,9 @@ and deprecated, each rename with the alias that keeps the old name working.
   `octopus` (alias `polvi`), `agent`, `prompt`, `generate`, `regenerate`, `variations`,
   `storyboard`, `script` and `style`. System: `bell`, `message`, `help`, `feedback`, `sun`,
   `moon`, `monitor`, `globe`, `keyboard`, `command` and `accent`.
+- The brand marks, in their owners' geometry from Simple Icons, filled with
+  `currentColor` (`GoogleBrandIcon` and the others, from `./brands`). Microsoft and
+  LinkedIn are not included, and the colour `google-color` mark is deferred.
 - Repository scaffold: package manifest with the `.` and `./meta` exports map,
   build tooling, lint and test configuration, mutation testing configuration,
   commit governance, the open-source baseline files and the package-integrity

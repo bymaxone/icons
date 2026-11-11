@@ -1,10 +1,10 @@
 # Phase B3: studio-ai-formats-billing
 
-> **Status**: 👀 Review · **Progress**: 5 / 6 tasks · **Last updated**: 2026-11-11
+> **Status**: ✅ Done · **Progress**: 6 / 6 tasks · **Last updated**: 2026-11-11
 > **Source roadmap**: [`../development_plan.md`](../development_plan.md) §5 (B3)
 > **Source spec**: [`../technical_specification.md`](../technical_specification.md) §2, §3, §4.1, §4.2, §4.3, §16
 >
-> The 42 drawings are approved by the delegated auditor on behalf of the founder, 2026-11-11; the phase pull request is open.
+> The drawings are approved by the delegated auditor on behalf of the founder, 2026-11-11; the batch merged via PR #13.
 
 ---
 
@@ -125,14 +125,14 @@ The root and `meta` size budgets are recalibrated in the header of `scripts/chec
 
 ## Task index
 
-| ID  | Task                                            | Status    | Priority | Size | Depends on |
-| --- | ----------------------------------------------- | --------- | -------- | ---- | ---------- |
-| 7.1 | Draw the credit, billing, people and role icons | ✅ Done   | P0       | M    | none       |
-| 7.2 | Draw the format and AI icons                    | ✅ Done   | P0       | M    | none       |
-| 7.3 | Draw the system icons                           | ✅ Done   | P0       | M    | none       |
-| 7.4 | Evidence, the 16 px list and size budgets       | ✅ Done   | P0       | S    | 7.1 to 7.3 |
-| 7.5 | Batch approval                                  | ✅ Done   | P0       | S    | 7.4        |
-| 7.6 | Phase commit and pull request                   | 👀 Review | P0       | S    | 7.5        |
+| ID  | Task                                            | Status  | Priority | Size | Depends on |
+| --- | ----------------------------------------------- | ------- | -------- | ---- | ---------- |
+| 7.1 | Draw the credit, billing, people and role icons | ✅ Done | P0       | M    | none       |
+| 7.2 | Draw the format and AI icons                    | ✅ Done | P0       | M    | none       |
+| 7.3 | Draw the system icons                           | ✅ Done | P0       | M    | none       |
+| 7.4 | Evidence, the 16 px list and size budgets       | ✅ Done | P0       | S    | 7.1 to 7.3 |
+| 7.5 | Batch approval                                  | ✅ Done | P0       | S    | 7.4        |
+| 7.6 | Phase commit and pull request                   | ✅ Done | P0       | S    | 7.5        |
 
 ---
 
@@ -271,15 +271,15 @@ Verification:
 
 ### Task 7.6: Phase commit and pull request
 
-- **Status**: 👀 Review
+- **Status**: ✅ Done
 - **Priority**: P0
 - **Size**: M
 - **Depends on**: 7.5
 
 #### Acceptance criteria
 
-- [ ] The full gate and the bounded review pass.
-- [ ] Merged with CI green, the Codex review approved and no open review thread, checked after every push, before the merge and after it.
+- [x] The full gate and the bounded review pass.
+- [x] Merged with CI green, the Codex review approved and no open review thread, checked after every push, before the merge and after it.
 
 #### Agent prompt
 
@@ -306,3 +306,4 @@ Verification:
 - 7.3 ✅ 2026-11-11 The 11 system icons drawn, with their metadata.
 - 7.4 ✅ 2026-11-11 Sheets, similarity report, alternatives and the 16 px check committed; spec §4.2 lists 45 masters; budgets recalibrated.
 - 7.5 ✅ 2026-11-11 Batch approved by the delegated auditor on behalf of the founder.
+- 7.6 ✅ 2026-11-11 Phase merged via PR #13 (squash `a67fe7b`); Codex review approved, no open thread.

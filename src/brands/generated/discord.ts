@@ -1,0 +1,26 @@
+/**
+ * @fileoverview The Discord brand mark.
+ * Written by `pnpm generate` from icons/brands/discord.svg: edit the source, never this file.
+ * @layer Generated
+ */
+
+import { createIcon } from '@bymax-one/icons/runtime'
+
+/**
+ * The Discord brand mark, from https://github.com/simple-icons/simple-icons/blob/16.37.0/icons/discord.svg (CC0-1.0, retrieved 2026-11-11).
+ * The mark belongs to its owner and is not covered by the MIT grant; see TRADEMARKS.md and https://discord.com/branding.
+ *
+ * @since 0.1.0
+ */
+export const DiscordBrandIcon = /* @__PURE__ */ createIcon(
+  'discord-brand',
+  [
+    [
+      'path',
+      {
+        d: 'M18.93 5.641a16.5 16.5 0 0 0-4.07-1.262.06.06 0 0 0-.066.03 12 12 0 0 0-.506 1.042 15.2 15.2 0 0 0-4.573 0A11 11 0 0 0 9.2 4.41a.06.06 0 0 0-.065-.031 16.5 16.5 0 0 0-4.07 1.262.06.06 0 0 0-.028.023c-2.593 3.874-3.303 7.653-2.954 11.384a.07.07 0 0 0 .026.047 16.6 16.6 0 0 0 4.994 2.524.07.07 0 0 0 .07-.023q.579-.788 1.022-1.661a.063.063 0 0 0-.035-.089 11 11 0 0 1-1.56-.743.064.064 0 0 1-.007-.107 9 9 0 0 0 .31-.242.06.06 0 0 1 .065-.01c3.273 1.495 6.817 1.495 10.051 0a.06.06 0 0 1 .065.009q.151.124.311.243a.064.064 0 0 1-.005.107 10 10 0 0 1-1.561.743.064.064 0 0 0-.034.089c.3.581.643 1.135 1.02 1.66a.06.06 0 0 0 .07.024 16.5 16.5 0 0 0 5.003-2.524.06.06 0 0 0 .026-.046c.417-4.314-.699-8.062-2.957-11.384a.05.05 0 0 0-.026-.024M8.684 14.776c-.985 0-1.797-.905-1.797-2.016s.796-2.016 1.797-2.016c1.01 0 1.813.913 1.798 2.016 0 1.111-.797 2.016-1.798 2.016m6.646 0c-.985 0-1.797-.905-1.797-2.016s.796-2.016 1.797-2.016c1.009 0 1.813.913 1.797 2.016 0 1.111-.788 2.016-1.797 2.016'
+      }
+    ]
+  ],
+  { paint: 'fill' }
+)

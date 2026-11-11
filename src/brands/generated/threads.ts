@@ -1,0 +1,26 @@
+/**
+ * @fileoverview The Threads brand mark.
+ * Written by `pnpm generate` from icons/brands/threads.svg: edit the source, never this file.
+ * @layer Generated
+ */
+
+import { createIcon } from '@bymax-one/icons/runtime'
+
+/**
+ * The Threads brand mark, from https://github.com/simple-icons/simple-icons/blob/16.37.0/icons/threads.svg (CC0-1.0, retrieved 2026-11-11).
+ * The mark belongs to its owner and is not covered by the MIT grant; see TRADEMARKS.md and https://www.meta.com/brand/resources/instagram/threads.
+ *
+ * @since 0.1.0
+ */
+export const ThreadsBrandIcon = /* @__PURE__ */ createIcon(
+  'threads-brand',
+  [
+    [
+      'path',
+      {
+        d: 'M17.22 11.247c-.026-2.905-1.6-4.655-4.26-4.655-1.775 0-3.268.803-4.053 2.083l1.719 1.198c.446-.702 1.06-1.286 2.19-1.286 1.273 0 1.931.709 2.12 2.026a12.5 12.5 0 0 0-1.864-.144c-3.437 0-5.056 1.556-5.056 3.613s1.619 3.325 4.003 3.325c2.616 0 4.178-1.762 4.818-3.945.665.3 1.123 1.003 1.123 2.058 0 2.822-3.256 4.36-6.017 4.36-4.07 0-6.73-2.673-6.73-7.02 0-5.327 3.519-8.74 8.25-8.74 3.173 0 4.741 1.393 5.808 3.262l1.756-1.229C19.867 3.732 17.276 2 13.386 2 7.189 2 2.973 6.397 2.973 12.778 2.973 18.612 7.101 22 12.02 22c4.065 0 8.174-2.372 8.174-6.43 0-2.12-1.217-3.526-2.974-4.323m-5.275 4.046c-.898 0-1.688-.426-1.688-1.21 0-1.236 1.518-1.612 3.005-1.612.565 0 1.116.037 1.605.144-.351 1.606-1.392 2.68-2.923 2.678Z'
+      }
+    ]
+  ],
+  { paint: 'fill' }
+)

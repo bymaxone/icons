@@ -3,7 +3,7 @@
 > **Type:** npm public library (NOT an application)
 > **Package:** `@bymax-one/icons` — original Bymax icon set: React 19 components, raw SVG, an SVG sprite and typed metadata on one 24 px grid with a 1.5 px stroke
 > **Runtime:** any React 19 renderer, including Server Components | Tooling on Node.js 24+ | Zero direct dependencies (`react` is the only peer)
-> **Status:** 0.1.0, pre-1.0 and unpublished. The repository scaffold and gates, the runtime (`Icon`, `createIcon` and their types, on `./runtime` and the root) and the build pipeline (`pnpm generate`, the icon lint, the static outputs) are in place, with 148 icons: the twelve keystone icons that fix the design language (spec §2, including the 1.5 px cut between distinct parts) and the icons of batches B1 to B3. The phase order is in [docs/development_plan.md](./docs/development_plan.md).
+> **Status:** 0.1.0, pre-1.0 and unpublished. The repository scaffold and gates, the runtime (`Icon`, `createIcon` and their types, on `./runtime` and the root) and the build pipeline (`pnpm generate`, the icon lint, the static outputs) are in place, with the twelve keystone icons that fix the design language (spec §2, including the 1.5 px cut between distinct parts), the icons of batches B1 to B3 and the brand marks. The phase order is in [docs/development_plan.md](./docs/development_plan.md).
 
 ---
 
@@ -66,12 +66,12 @@
 | `./runtime`       | The `Icon` base, `createIcon` and their types            | React 19  | Ready   |
 | `./meta`          | Typed metadata and the `IconName` union, no React import | None      | Ready   |
 | `./icons/<name>`  | One icon's components                                    | React 19  | Partial |
-| `./brands`        | Brand components                                         | React 19  | Empty   |
+| `./brands`        | Brand components                                         | React 19  | Partial |
 | `./svg/*`         | Raw SVG files                                            | None      | Partial |
 | `./sprite.svg`    | The sprite                                               | None      | Partial |
 | `./metadata.json` | Merged metadata                                          | None      | Partial |
 
-Every subpath is built, exported and gated; **Partial** ones hold the drawings so far, **Empty** ones nothing until their first drawing. The runtime has its own entry because each icon module imports `createIcon` and the root re-exports every icon; inside the root the two would import each other. The gates read the icon subpaths from the built `dist/metadata.json` (`scripts/package-expectations.mjs`), so a new icon needs no gate edit.
+Every subpath is built, exported and gated; **Partial** ones hold the drawings so far. The runtime has its own entry because each icon module imports `createIcon` and the root re-exports every icon; inside the root the two would import each other. The gates read the icon subpaths from the built `dist/metadata.json` (`scripts/package-expectations.mjs`), so a new icon needs no gate edit.
 
 ---
 
