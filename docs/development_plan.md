@@ -46,7 +46,7 @@
 | B3  | studio-ai-formats-billing         | ✅     | 100%     | L    | 2026-11-11   |
 | B4  | filled-variants-sm-masters-brands | ✅     | 100%     | L    | 2026-11-11   |
 | P4  | catalog-site                      | ✅     | 100%     | M    | 2026-11-11   |
-| P5  | hardening-release                 | 🔄     | 5%       | M    | 2026-11-11   |
+| P5  | hardening-release                 | 🔄     | 25%      | M    | 2026-11-11   |
 | P6  | react-native                      | 📋     | 0%       | M    | 2026-11-08   |
 
 ---
@@ -377,12 +377,11 @@ These rules apply to every phase. Phase sections only add rules specific to them
   without internal product names (the `octopus` cases name the Studio and Polvi; product
   meanings stay in aliases), and add a short action label to the metadata for the labelled
   `title` example of each icon page.
-- **Known blocker to clear first:** `scripts/check-api-surface.mjs`, byte-identical with the
-  family, stops with an error when the package has never been published, because
-  `npm view <name> versions` answers E404 instead of an empty list. The `api-surface` check on
-  the `1.0.0` release pull request fails for that reason alone. Fix it in the family's
-  canonical copy (an E404 means "no earlier published version") and re-copy it before that
-  pull request opens.
+- **API surface check on a first release (cleared 2026-11-11):** `scripts/check-api-surface.mjs`
+  stopped with an error on a package never published, because `npm view <name> versions`
+  answers E404 instead of an empty list. It now reads E404 as "no earlier published version"
+  and still stops on any other npm failure. The family's copies carry the same defect, which
+  only a library's first release reaches; the fix is written to be copied as it is.
 - **Definition of Done:**
   - Every gate of spec §12 is green, and `pnpm prepublishOnly` passes.
   - `@bymax-one/icons@1.0.0` is on npm; the published tarball matches a local pack.
