@@ -5,3 +5,4 @@
  */
 
 export { ChevronRightIcon } from './line'
+export { ChevronRightSmIcon } from './sm'

@@ -7,7 +7,7 @@
     "Starts a new project from a template",
     "Filled: the templates tab while it is active"
   ],
-  "variants": ["line", "filled"],
-  "opticalSizes": [24],
+  "variants": ["line", "filled", "sm"],
+  "opticalSizes": [24, 16],
   "since": "0.1.0"
 }

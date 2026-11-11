@@ -5,3 +5,4 @@
  */
 
 export { SidebarIcon } from './line'
+export { SidebarSmIcon } from './sm'

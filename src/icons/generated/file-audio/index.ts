@@ -5,3 +5,4 @@
  */
 
 export { FileAudioIcon } from './line'
+export { FileAudioSmIcon } from './sm'

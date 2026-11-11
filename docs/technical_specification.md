@@ -109,7 +109,9 @@ These rules are the identity of the set. They are applied to every icon and chec
 - A 20 px circle, an 18 px square and a 21 px-tall triangle read as the same size.
 - Asymmetric icons are centred by visual mass, not by bounding box.
 - Every icon passes a blur test at 16 px: the silhouette must still read.
-- Ink ceiling: no line or 16 px drawing covers more than 21.5% of the 24 × 24 canvas, measured with its stroke. A heavier drawing turns into a block in the blur test and outweighs its neighbours in a row. A filled drawing is solid by design, so the ceiling does not apply to it; section 2.6 holds it to its line icon instead.
+- Ink ceiling: no line drawing covers more than 21.5% of the 24 × 24 canvas, measured with its stroke. A heavier drawing turns into a block in the blur test and outweighs its neighbours in a row. A filled drawing is solid by design, so the ceiling does not apply to it; section 2.6 holds it to its line icon instead.
+- A 16 px master is held to the same weight, measured at 16 px: its 1.5 px stroke covers 24 / 16 times more of a 16 px canvas, so it covers at most 32.25% (21.5% × 24 / 16), and at most 1.5 times the ink of its line icon at 24 px, because a master simplifies and never adds geometry.
+- Between two distinct strokes of a 16 px master, the lightest path at 16 px and 1x, rendered by resvg, crosses no pixel darker than 0.25: one stroke's antialiased fringe. Two fringes on one pixel (0.5) are a cut that has closed. A fully clear pixel is the target where there is room; between two crisp 1.5 px strokes it needs 4 px between their axes. Straight strokes stay crisp, on the centres of the 16 px pixels.
 - No part reads as a digit or a letter at 16 or 24 px. A narrow upright closed shape is the usual culprit: a stadium reads as a zero, two stacked ones as an eight. Such a part takes a small corner, or the composition avoids it.
 
 ### 2.6 Filled variant

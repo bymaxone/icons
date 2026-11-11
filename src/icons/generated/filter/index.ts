@@ -5,3 +5,4 @@
  */
 
 export { FilterIcon } from './line'
+export { FilterSmIcon } from './sm'

@@ -3,7 +3,7 @@
   "tags": ["clone", "copy", "make a copy", "cards plus"],
   "categories": ["actions"],
   "useCases": ["Duplicates a scene or a project", "Creates a copy of the selected item"],
-  "variants": ["line"],
-  "opticalSizes": [24],
+  "variants": ["line", "sm"],
+  "opticalSizes": [24, 16],
   "since": "0.1.0"
 }

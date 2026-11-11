@@ -5,3 +5,4 @@
  */
 
 export { MoreVerticalIcon } from './line'
+export { MoreVerticalSmIcon } from './sm'

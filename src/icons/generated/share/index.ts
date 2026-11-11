@@ -5,3 +5,4 @@
  */
 
 export { ShareIcon } from './line'
+export { ShareSmIcon } from './sm'

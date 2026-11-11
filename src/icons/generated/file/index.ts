@@ -6,3 +6,4 @@
 
 export { FileIcon } from './line'
 export { FileFilledIcon } from './filled'
+export { FileSmIcon } from './sm'

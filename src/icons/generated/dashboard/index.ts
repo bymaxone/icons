@@ -6,3 +6,4 @@
 
 export { DashboardIcon } from './line'
 export { DashboardFilledIcon } from './filled'
+export { DashboardSmIcon } from './sm'

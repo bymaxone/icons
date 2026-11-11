@@ -6,3 +6,4 @@
 
 export { WalletIcon } from './line'
 export { WalletFilledIcon } from './filled'
+export { WalletSmIcon } from './sm'

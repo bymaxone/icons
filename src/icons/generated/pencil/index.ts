@@ -5,3 +5,4 @@
  */
 
 export { PencilIcon } from './line'
+export { PencilSmIcon } from './sm'

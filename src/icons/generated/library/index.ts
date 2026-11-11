@@ -6,3 +6,4 @@
 
 export { LibraryIcon } from './line'
 export { LibraryFilledIcon } from './filled'
+export { LibrarySmIcon } from './sm'

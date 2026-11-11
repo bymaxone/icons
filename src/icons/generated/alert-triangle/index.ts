@@ -6,3 +6,4 @@
 
 export { AlertTriangleIcon, WarningIcon } from './line'
 export { AlertTriangleFilledIcon, WarningFilledIcon } from './filled'
+export { AlertTriangleSmIcon, WarningSmIcon } from './sm'

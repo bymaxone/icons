@@ -5,3 +5,4 @@
  */
 
 export { DownloadIcon } from './line'
+export { DownloadSmIcon } from './sm'

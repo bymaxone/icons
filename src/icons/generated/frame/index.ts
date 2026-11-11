@@ -5,3 +5,4 @@
  */
 
 export { FrameIcon } from './line'
+export { FrameSmIcon } from './sm'

@@ -5,3 +5,4 @@
  */
 
 export { EyeOffIcon } from './line'
+export { EyeOffSmIcon } from './sm'

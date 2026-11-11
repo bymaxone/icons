@@ -5,3 +5,4 @@
  */
 
 export { FileVideoIcon } from './line'
+export { FileVideoSmIcon } from './sm'

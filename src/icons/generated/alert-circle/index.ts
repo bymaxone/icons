@@ -6,3 +6,4 @@
 
 export { AlertCircleIcon } from './line'
 export { AlertCircleFilledIcon } from './filled'
+export { AlertCircleSmIcon } from './sm'

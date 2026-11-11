@@ -6,3 +6,4 @@
 
 export { LightningIcon } from './line'
 export { LightningFilledIcon } from './filled'
+export { LightningSmIcon } from './sm'

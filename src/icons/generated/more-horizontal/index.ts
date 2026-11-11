@@ -5,3 +5,4 @@
  */
 
 export { MoreHorizontalIcon } from './line'
+export { MoreHorizontalSmIcon } from './sm'

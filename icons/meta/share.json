@@ -3,7 +3,7 @@
   "tags": ["send", "network", "nodes", "social"],
   "categories": ["actions"],
   "useCases": ["Opens the share dialog", "Shares a project with a link"],
-  "variants": ["line"],
-  "opticalSizes": [24],
+  "variants": ["line", "sm"],
+  "opticalSizes": [24, 16],
   "since": "0.1.0"
 }

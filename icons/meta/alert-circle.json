@@ -7,7 +7,7 @@
     "Marks a failed item",
     "Filled: an error that needs attention"
   ],
-  "variants": ["line", "filled"],
-  "opticalSizes": [24],
+  "variants": ["line", "filled", "sm"],
+  "opticalSizes": [24, 16],
   "since": "0.1.0"
 }

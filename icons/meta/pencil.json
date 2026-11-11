@@ -3,7 +3,7 @@
   "tags": ["edit", "write", "rename", "modify"],
   "categories": ["actions"],
   "useCases": ["Starts editing a field or an item", "Renames a project"],
-  "variants": ["line"],
-  "opticalSizes": [24],
+  "variants": ["line", "sm"],
+  "opticalSizes": [24, 16],
   "since": "0.1.0"
 }

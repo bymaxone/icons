@@ -6,3 +6,4 @@
 
 export { SettingsIcon } from './line'
 export { SettingsFilledIcon } from './filled'
+export { SettingsSmIcon } from './sm'

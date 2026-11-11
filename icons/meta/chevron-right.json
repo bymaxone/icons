@@ -3,7 +3,7 @@
   "tags": ["caret", "forward", "next", "right"],
   "categories": ["navigation"],
   "useCases": ["Opens a nested menu item", "Moves a carousel to the next item"],
-  "variants": ["line"],
-  "opticalSizes": [24],
+  "variants": ["line", "sm"],
+  "opticalSizes": [24, 16],
   "since": "0.1.0"
 }

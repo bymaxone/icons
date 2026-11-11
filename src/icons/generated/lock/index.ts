@@ -6,3 +6,4 @@
 
 export { LockIcon } from './line'
 export { LockFilledIcon } from './filled'
+export { LockSmIcon } from './sm'

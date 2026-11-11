@@ -6,3 +6,4 @@
 
 export { UsersIcon } from './line'
 export { UsersFilledIcon } from './filled'
+export { UsersSmIcon } from './sm'

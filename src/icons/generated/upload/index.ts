@@ -5,3 +5,4 @@
  */
 
 export { UploadIcon } from './line'
+export { UploadSmIcon } from './sm'

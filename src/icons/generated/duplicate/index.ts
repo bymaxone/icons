@@ -5,3 +5,4 @@
  */
 
 export { DuplicateIcon } from './line'
+export { DuplicateSmIcon } from './sm'

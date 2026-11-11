@@ -3,7 +3,7 @@
   "tags": ["caret", "expand", "down", "dropdown"],
   "categories": ["navigation"],
   "useCases": ["Opens a dropdown menu", "Expands a collapsed section"],
-  "variants": ["line"],
-  "opticalSizes": [24],
+  "variants": ["line", "sm"],
+  "opticalSizes": [24, 16],
   "since": "0.1.0"
 }
