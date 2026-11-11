@@ -18,14 +18,14 @@ Tasks live **one file per phase** in this folder (`phase-NN-<slug>.md`, numbered
 | P2    | [`phase-02-pipeline.md`](./phase-02-pipeline.md)                                   | 10 / 10     | ✅ Done        |
 | B0    | [`phase-03-keystone-icons.md`](./phase-03-keystone-icons.md)                       | 4 / 4       | ✅ Done        |
 | P3    | [`phase-04-visual-tooling.md`](./phase-04-visual-tooling.md)                       | 6 / 6       | ✅ Done        |
-| B1    | [`phase-05-navigation-actions-status.md`](./phase-05-navigation-actions-status.md) | 5 / 6       | 👀 Review      |
-| B2    | not scaffolded yet                                                                 | n/a         | 📋 ToDo        |
+| B1    | [`phase-05-navigation-actions-status.md`](./phase-05-navigation-actions-status.md) | 6 / 6       | ✅ Done        |
+| B2    | [`phase-06-media-audio-files-editor.md`](./phase-06-media-audio-files-editor.md)   | 4 / 6       | 👀 Review      |
 | B3    | not scaffolded yet                                                                 | n/a         | 📋 ToDo        |
 | B4    | not scaffolded yet                                                                 | n/a         | 📋 ToDo        |
 | P4    | not scaffolded yet                                                                 | n/a         | 📋 ToDo        |
 | P5    | not scaffolded yet                                                                 | n/a         | 📋 ToDo        |
 | P6    | not scaffolded yet                                                                 | n/a         | 📋 ToDo        |
-|       | **Total**                                                                          | **32 / 41** | 🔄 In Progress |
+|       | **Total**                                                                          | **37 / 47** | 🔄 In Progress |
 
 ---
 

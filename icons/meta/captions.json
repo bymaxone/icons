@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "tags": ["subtitles", "transcript", "text track", "closed captions"],
+  "categories": ["audio-voice"],
+  "useCases": ["Turns captions on", "Opens the subtitle editor"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

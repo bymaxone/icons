@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "tags": ["mouth", "lips", "dub", "speech"],
+  "categories": ["audio-voice"],
+  "useCases": ["Syncs the lips of a character to a voice", "Marks a lip-synced clip"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

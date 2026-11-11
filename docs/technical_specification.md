@@ -160,7 +160,12 @@ About 125 non-brand icons, roughly 85 common concepts (C) and 40 Studio concepts
 
 ### 4.2 16 px masters
 
-The icons that appear at 16 px in the Studio shell: navigation, the most common actions, status, the credit lightning and the bell. The exact list is fixed at the end of batch B2 from real usage in the Studio replica.
+The icons that appear at 16 px in the Studio shell, and the icons whose 24 px drawing fails at 16 px. The list is the union of two parts, about 40 in all:
+
+1. **By role in the shell:** navigation (`home`, `dashboard`, `folder-stack`, `library`, `templates`, `menu`, `sidebar`, the four chevrons, `search`, `settings`), the most common actions (`plus`, `close`, `check`, `pencil`, `trash`, `copy`, `download`, `upload`, `more-horizontal`, `more-vertical`, `filter`), status (`check-circle`, `alert-triangle`, `alert-circle`, `info`, `loader`, `lock`, `eye`, `eye-off`), the credit `lightning` and the `bell`.
+2. **By measurement:** every drawing whose render at 16 px and 1x fuses two of its parts or closes an interior that must stay open: `copy`, `duplicate`, `file`, `frame`, `lock`, `timeline` and `volume` fuse a cut, and the small nodes of `share` close. The check and its table are in [`contact-sheets/b2/sixteen-px.md`](./contact-sheets/b2/sixteen-px.md).
+
+`arrow-left` and `arrow-right` render cleanly at 16 px and stay with the 24 px drawing, which keeps the list at 40. The list comes from the role of each icon and from the measurement, not from usage measured in the Studio, which has no application yet; usage becomes a criterion again when it does.
 
 ### 4.3 Naming
 

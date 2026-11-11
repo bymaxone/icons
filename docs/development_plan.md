@@ -2,7 +2,7 @@
 
 > **Version:** 1.0.0
 > **Last updated:** 2026-11-11
-> **Status:** Approved spec, execution under way (P1, P2, B0 and P3 done; B1 in review; P0 awaits its GitHub settings)
+> **Status:** Approved spec, execution under way (P1, P2, B0, P3 and B1 done; B2 in review; P0 awaits its GitHub settings)
 > **Source spec:** [`technical_specification.md`](./technical_specification.md)
 > **Derived documents:** per-phase task files under `docs/tasks/` (one file per phase, scaffolded one phase at a time)
 
@@ -23,8 +23,8 @@
 
 ## 1. Progress Dashboard
 
-> **Overall progress: 4 / 12 phases (33%)**
-> **Active phase:** B1 (navigation, actions and status, pull request in review); P0 still has
+> **Overall progress: 5 / 12 phases (42%)**
+> **Active phase:** B2 (media, audio, files and editor, pull request in review); P0 still has
 > the GitHub settings of task 0.6
 > **Blocked phases:** none
 >
@@ -41,8 +41,8 @@
 | P2  | pipeline                          | ✅     | 100%     | L    | 2026-11-10   |
 | B0  | keystone-icons                    | ✅     | 100%     | M    | 2026-11-10   |
 | P3  | visual-tooling                    | ✅     | 100%     | L    | 2026-11-11   |
-| B1  | navigation-actions-status         | 👀     | 90%      | L    | 2026-11-11   |
-| B2  | media-audio-files-editor          | 📋     | 0%       | L    | 2026-11-08   |
+| B1  | navigation-actions-status         | ✅     | 100%     | L    | 2026-11-11   |
+| B2  | media-audio-files-editor          | 👀     | 90%      | L    | 2026-11-11   |
 | B3  | studio-ai-formats-billing         | 📋     | 0%       | L    | 2026-11-08   |
 | B4  | filled-variants-sm-masters-brands | 📋     | 0%       | L    | 2026-11-08   |
 | P4  | catalog-site                      | 📋     | 0%       | M    | 2026-11-08   |
@@ -305,6 +305,12 @@ These rules apply to every phase. Phase sections only add rules specific to them
   of spec §4.1, with metadata; the 16 px master list from real usage in the Studio replica.
 - **Definition of Done:** the batch gate of section 4, rule 11; the 16 px master list recorded
   in the specification's section 4.2.
+- **16 px list from role and measurement (2026-11-11):** the Studio has no application yet
+  (no `package.json`), so the list cannot come from real usage. It is the union of the icons
+  the Studio shell shows at 16 px by role (spec §4.2) and the drawings whose 16 px render
+  fails a measured check (a fused cut or a closed interior), capped near 40 with the measured
+  failures first. Usage becomes a criterion again when the Studio has an application, with
+  the adoption deferred in B1.
 - **Context / preconditions:** B1 approved.
 - **References:** spec §4.1, §4.2, §16.
 - **Size:** L

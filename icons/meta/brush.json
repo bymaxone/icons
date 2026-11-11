@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "tags": ["paint", "draw", "stroke", "retouch"],
+  "categories": ["editor-canvas"],
+  "useCases": ["Selects the brush tool", "Paints a mask"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

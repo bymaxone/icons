@@ -1,10 +1,10 @@
 # Phase B1: navigation-actions-status
 
-> **Status**: 👀 Review · **Progress**: 5 / 6 tasks · **Last updated**: 2026-11-11
+> **Status**: ✅ Done · **Progress**: 6 / 6 tasks · **Last updated**: 2026-11-11
 > **Source roadmap**: [`../development_plan.md`](../development_plan.md) §5 (B1)
 > **Source spec**: [`../technical_specification.md`](../technical_specification.md) §2, §3, §4.1, §16, §17 (D5)
 >
-> The 44 drawings are approved by the delegated auditor on behalf of the founder, 2026-11-11; the phase pull request is open.
+> The 44 drawings are approved by the delegated auditor on behalf of the founder, 2026-11-11; the batch merged via PR #10.
 
 ---
 
@@ -138,14 +138,14 @@ The declaration build ran out of memory with 56 icons: the bundler inside tsup 9
 
 ## Task index
 
-| ID  | Task                                         | Status    | Priority | Size | Depends on |
-| --- | -------------------------------------------- | --------- | -------- | ---- | ---------- |
-| 5.1 | Draw the navigation icons and their metadata | ✅ Done   | P0       | M    | none       |
-| 5.2 | Draw the action icons and their metadata     | ✅ Done   | P0       | M    | none       |
-| 5.3 | Draw the status icons and their metadata     | ✅ Done   | P0       | M    | none       |
-| 5.4 | Evidence, similarity and size budgets        | ✅ Done   | P0       | S    | 5.1 to 5.3 |
-| 5.5 | Batch approval                               | ✅ Done   | P0       | S    | 5.4        |
-| 5.6 | Phase commit and pull request                | 👀 Review | P0       | S    | 5.5        |
+| ID  | Task                                         | Status  | Priority | Size | Depends on |
+| --- | -------------------------------------------- | ------- | -------- | ---- | ---------- |
+| 5.1 | Draw the navigation icons and their metadata | ✅ Done | P0       | M    | none       |
+| 5.2 | Draw the action icons and their metadata     | ✅ Done | P0       | M    | none       |
+| 5.3 | Draw the status icons and their metadata     | ✅ Done | P0       | M    | none       |
+| 5.4 | Evidence, similarity and size budgets        | ✅ Done | P0       | S    | 5.1 to 5.3 |
+| 5.5 | Batch approval                               | ✅ Done | P0       | S    | 5.4        |
+| 5.6 | Phase commit and pull request                | ✅ Done | P0       | S    | 5.5        |
 
 ---
 
@@ -286,15 +286,15 @@ approval with its date.
 
 ### Task 5.6: Phase commit and pull request
 
-- **Status**: 👀 Review
+- **Status**: ✅ Done
 - **Priority**: P0
 - **Size**: S
 - **Depends on**: 5.5
 
 #### Acceptance criteria
 
-- [ ] The full gate and the bounded review pass.
-- [ ] Merged with CI green, the Codex review approved and no open review thread, checked after every push, before the merge and after it.
+- [x] The full gate and the bounded review pass.
+- [x] Merged with CI green, the Codex review approved and no open review thread, checked after every push, before the merge and after it.
 
 #### Agent prompt
 
@@ -318,3 +318,4 @@ the batch is approved and no thread is open.
 - 5.3 ✅ 2026-11-11 The 14 status icons drawn, with their metadata.
 - 5.4 ✅ 2026-11-11 Sheets, similarity report, alternatives and baselines committed; the declaration build fixed and the size budgets recalibrated.
 - 5.5 ✅ 2026-11-11 Batch approved by the delegated auditor on behalf of the founder after one round: `dashboard`, `library` and `templates` redrawn, seven adjustments; spec §2.5 gains the ink ceiling and the digit-or-letter rule.
+- 5.6 ✅ 2026-11-11 Phase merged via PR #10 (squash `fe97ee1`); Codex review approved, no open thread.

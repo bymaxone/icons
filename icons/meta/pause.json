@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "tags": ["pause", "hold", "media control", "bars"],
+  "categories": ["media-video"],
+  "useCases": ["Pauses the playback of a clip", "Pauses a running render"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "tags": ["maximize", "expand", "enlarge", "corners"],
+  "categories": ["media-video"],
+  "useCases": ["Opens the player in full screen", "Enlarges a preview"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "tags": ["narrator", "voice over", "storyteller", "speaker"],
+  "categories": ["audio-voice"],
+  "useCases": ["Adds a narration track", "Picks the narrator of a video"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

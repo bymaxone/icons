@@ -78,7 +78,9 @@ and is not built yet.
   `plus`, `close`, `check`, `settings`, `user`, `file`, `folder`, `lightning`, `scene`) fix
   the signature of the set, a 1.5 px cut that keeps distinct parts from touching
 - ✅ **Navigation, actions and status**: 44 more icons in the same language, from
-  `dashboard` and the chevrons to `trash`, `eye-off` and `cloud-check`, 56 in all
+  `dashboard` and the chevrons to `trash`, `eye-off` and `cloud-check`
+- ✅ **Media, audio, files and editor**: 50 more icons, from `pause` and `timeline` to
+  `mic`, `lip-sync`, `layers` and `mask`, 106 in all
 - 📋 **About 125 original icons**: common concepts plus the Studio's own (scene, shot,
   keyframe, credit, spending cap, lip-sync, version)
 - 📋 **Filled variants** for the icons with a stateful meaning, with the same silhouette as
@@ -129,7 +131,7 @@ and is not built yet.
 | `./metadata.json` | Merged metadata of every icon and brand                         | Partial |
 
 Every subpath is built, exported and checked on every pull request. **Partial** ones hold
-the 56 icons drawn so far; **Empty** ones hold nothing until their first drawing.
+the 106 icons drawn so far; **Empty** ones hold nothing until their first drawing.
 
 ```
 @bymax-one/icons ──► @bymax-one/icons/icons/<name> ──► @bymax-one/icons/runtime ──► react (peer)

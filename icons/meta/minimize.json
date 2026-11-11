@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "tags": ["exit full screen", "shrink", "collapse", "corners"],
+  "categories": ["media-video"],
+  "useCases": ["Leaves full screen", "Shrinks a preview back to its place"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "tags": ["lengthen", "continue", "duration", "arrow right"],
+  "categories": ["media-video"],
+  "useCases": ["Extends a clip with generated footage", "Lengthens a shot"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

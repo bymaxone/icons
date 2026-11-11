@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "tags": ["pan", "dolly", "tracking", "move camera"],
+  "categories": ["media-video"],
+  "useCases": ["Sets the motion of the camera in a shot", "Labels a camera movement preset"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

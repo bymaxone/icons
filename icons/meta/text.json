@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "tags": ["type", "letter t", "font", "title"],
+  "categories": ["editor-canvas"],
+  "useCases": ["Adds a text layer", "Selects the text tool"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "tags": ["cube", "resource", "package", "media asset"],
+  "categories": ["files"],
+  "useCases": ["Links to the assets of a project", "Marks an item as a reusable asset"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}
