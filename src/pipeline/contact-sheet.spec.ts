@@ -62,7 +62,8 @@ describe('the sheet constants', () => {
           ['green', '#2f5a24'],
           ['blue', '#2450b8'],
           ['lilac', '#5e3fb0']
-        ]
+        ],
+        outline: '#2450b8'
       },
       {
         name: 'dark',
@@ -75,7 +76,8 @@ describe('the sheet constants', () => {
           ['green', '#8fd67a'],
           ['blue', '#7fa6ff'],
           ['lilac', '#c2a4ff']
-        ]
+        ],
+        outline: '#7fa6ff'
       }
     ])
   })

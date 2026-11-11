@@ -23,8 +23,13 @@ export interface SheetTheme {
   readonly name: string
   readonly background: string
   /** The colour name, then its value: the ink first, then the six accents. */
-  readonly colours: readonly (readonly [name: string, value: string])[]
+  readonly colours: readonly [ink: SheetColour, ...accents: SheetColour[]]
+  /** The colour a drawing under review is outlined in on the family sheet. */
+  readonly outline: string
 }
+
+/** A colour's name and value. */
+export type SheetColour = readonly [name: string, value: string]
 
 /**
  * The Studio's two pages and the colours drawn on each, from the Studio design system
@@ -44,7 +49,8 @@ export const SHEET_THEMES: readonly SheetTheme[] = [
       ['green', '#2f5a24'],
       ['blue', '#2450b8'],
       ['lilac', '#5e3fb0']
-    ]
+    ],
+    outline: '#2450b8'
   },
   {
     name: 'dark',
@@ -57,7 +63,8 @@ export const SHEET_THEMES: readonly SheetTheme[] = [
       ['green', '#8fd67a'],
       ['blue', '#7fa6ff'],
       ['lilac', '#c2a4ff']
-    ]
+    ],
+    outline: '#7fa6ff'
   }
 ]
 
@@ -120,12 +127,25 @@ function panels(height: number): string[] {
 }
 
 /**
- * One drawing at one size and colour, centred in its cell: a group moved into place and
- * scaled from the 24 px master, which scales the stroke as a rendered icon does. A group
- * rather than a nested `<svg>`: resvg aborts the whole process, instead of throwing, on a
- * nested `<svg>` that lies outside the sheet.
+ * One drawing at one size and colour, centred in a `CELL` square: a group moved into place
+ * and scaled from the 24 px master, which scales the stroke as a rendered icon does. A
+ * group rather than a nested `<svg>`: resvg aborts the whole process, instead of throwing,
+ * on a nested `<svg>` that lies outside the sheet.
+ *
+ * @param row - The drawing.
+ * @param x - The cell's left edge.
+ * @param y - The cell's top edge.
+ * @param size - The size the drawing is shown at, in px.
+ * @param colour - The colour it is painted in.
+ * @returns The group's SVG text.
  */
-function drawing(row: SheetRow, x: number, y: number, size: number, colour: string): string {
+export function placedDrawing(
+  row: SheetRow,
+  x: number,
+  y: number,
+  size: number,
+  colour: string
+): string {
   const {
     xmlns: _xmlns,
     width: _width,
@@ -157,7 +177,7 @@ export function composeContactSheet(rows: readonly SheetRow[]): string {
       text(8, y + CELL / 2 + 4, '#0d1b24', row.label),
       ...SHEET_THEMES.flatMap((theme, t) =>
         theme.colours.flatMap(([, value], c) =>
-          SHEET_SIZES.map((size, s) => drawing(row, cellX(t, c, s), y, size, value))
+          SHEET_SIZES.map((size, s) => placedDrawing(row, cellX(t, c, s), y, size, value))
         )
       )
     ]

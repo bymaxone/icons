@@ -1,7 +1,8 @@
 /**
  * @fileoverview The commands behind `pnpm generate`, `pnpm check:generated`,
- * `pnpm lint:icons` and `pnpm contact-sheet`. Each returns an exit code and prints through
- * the output it is given, so the scripts in `scripts/` are one call each.
+ * `pnpm lint:icons` and `pnpm contact-sheet`, and the option parsing every command shares.
+ * Each returns an exit code and prints through the output it is given, so the scripts in
+ * `scripts/` are one call each.
  * @layer Pipeline
  */
 
@@ -29,7 +30,7 @@ export interface Output {
 }
 
 /** The options every command reads from its arguments. */
-interface Options {
+export interface Options {
   readonly layout: SourceLayout
   readonly flags: ReadonlySet<string>
   readonly out: string | undefined
@@ -39,7 +40,7 @@ interface Options {
  * Reads `--icons <dir>` (the icons directory, `icons` by default), `--out <path>` and the
  * other flags.
  */
-function parseOptions(args: readonly string[], root: string): Options {
+export function parseOptions(args: readonly string[], root: string): Options {
   const value = (name: string): string | undefined => {
     const index = args.indexOf(name)
     return index === -1 ? undefined : args[index + 1]
@@ -52,7 +53,7 @@ function parseOptions(args: readonly string[], root: string): Options {
 }
 
 /** Lints the sources and prints every issue; the result is usable only when it is clean. */
-function lintAndReport(layout: SourceLayout, output: Output): LintResult {
+export function lintAndReport(layout: SourceLayout, output: Output): LintResult {
   const result = lintSources(readSources(layout))
   for (const issue of result.issues) output.error(formatIssue(issue))
   if (result.issues.length > 0) output.error(`${result.issues.length} icon lint issue(s).`)
