@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Edit",
   "tags": ["edit", "write", "rename", "modify"],
   "categories": ["actions"],
   "useCases": ["Starts editing a field or an item", "Renames a project"],

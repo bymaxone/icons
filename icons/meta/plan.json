@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Plan",
   "tags": ["tier", "subscription", "pricing", "levels"],
   "categories": ["credits-billing"],
   "useCases": ["Links to the plans", "Shows the current plan"],

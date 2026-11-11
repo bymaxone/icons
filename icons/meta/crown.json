@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Premium",
   "tags": ["owner", "premium", "admin", "king"],
   "categories": ["people-roles"],
   "useCases": [

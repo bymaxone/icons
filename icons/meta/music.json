@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Music",
   "tags": ["note", "soundtrack", "song", "audio"],
   "categories": ["audio-voice"],
   "useCases": ["Adds a music track", "Labels the soundtrack of a project"],

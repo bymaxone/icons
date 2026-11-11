@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Enter full screen",
   "tags": ["maximize", "expand", "enlarge", "corners"],
   "categories": ["media-video"],
   "useCases": ["Opens the player in full screen", "Enlarges a preview"],

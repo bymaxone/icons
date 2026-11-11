@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Volume",
   "tags": ["speaker", "sound", "audio", "loud"],
   "categories": ["audio-voice"],
   "useCases": [

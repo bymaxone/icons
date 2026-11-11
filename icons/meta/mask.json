@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Mask",
   "tags": ["clip", "matte", "stencil", "reveal"],
   "categories": ["editor-canvas"],
   "useCases": ["Adds a mask to a layer", "Edits the mask of a shot"],

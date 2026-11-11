@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Locked",
   "tags": ["locked", "private", "secure", "padlock"],
   "categories": ["status"],
   "useCases": [

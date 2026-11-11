@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Upload",
   "tags": ["import", "send", "tray", "arrow up"],
   "categories": ["actions"],
   "useCases": ["Uploads a file", "Imports media into a project"],

@@ -36,10 +36,11 @@ const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 //   - runtime, 1.25 KiB brotli: the `Icon` base, `createIcon`, the stroke maths and the
 //     accessibility rules, measured at 3228 bytes raw and 1114 bytes brotli. The headroom
 //     fits a small fix, while an inlined dependency such as React fails.
-//   - meta, 8 KiB brotli: the grid, the deep freeze and the twelve categories, measured at
-//     497 bytes brotli with no record and at 7466 bytes with 148 icon and 14 brand records,
-//     about 43 bytes brotli per record. The headroom fits about fifteen records or a tag edit; every drawing
-//     batch adds records, so each one recalibrates it.
+//   - meta, 9 KiB brotli: the grid, the deep freeze and the twelve categories, measured at
+//     497 bytes brotli with no record and at 8421 bytes with 148 icon and 14 brand records,
+//     about 49 bytes brotli per record, the icon's `label` included. The headroom fits about
+//     fifteen records or a tag edit; every drawing batch adds records, so each one
+//     recalibrates it.
 //   - brands, 5 KiB brotli: the entry holds every brand mark, measured at 5 bytes brotli
 //     with no mark and at 4015 bytes with 14 marks, about 290 bytes per mark, most of it the
 //     path data of the owner's geometry. The headroom fits three more marks; an inline of
@@ -61,7 +62,7 @@ const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 const BUDGETS = [
   { name: 'root (re-exports)', path: 'dist/index.mjs', brotli: 1.75 * 1024 },
   { name: 'runtime (Icon base)', path: 'dist/runtime/index.mjs', brotli: 1.25 * 1024 },
-  { name: 'meta (typed metadata)', path: 'dist/meta/index.mjs', brotli: 8 * 1024 },
+  { name: 'meta (typed metadata)', path: 'dist/meta/index.mjs', brotli: 9 * 1024 },
   { name: 'brands (brand marks)', path: 'dist/brands/index.mjs', brotli: 5 * 1024 }
 ]
 const MODULE_BUDGET = 1.5 * 1024

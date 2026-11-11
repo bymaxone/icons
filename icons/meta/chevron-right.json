@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Next",
   "tags": ["caret", "forward", "next", "right"],
   "categories": ["navigation"],
   "useCases": ["Opens a nested menu item", "Moves a carousel to the next item"],

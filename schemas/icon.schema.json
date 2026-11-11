@@ -5,10 +5,25 @@
   "description": "The metadata of one non-brand icon: icons/meta/<name>.json, beside icons/line/<name>.svg.",
   "type": "object",
   "additionalProperties": false,
-  "required": ["$schema", "tags", "categories", "useCases", "variants", "opticalSizes", "since"],
+  "required": [
+    "$schema",
+    "label",
+    "tags",
+    "categories",
+    "useCases",
+    "variants",
+    "opticalSizes",
+    "since"
+  ],
   "properties": {
     "$schema": {
       "const": "../../schemas/icon.schema.json"
+    },
+    "label": {
+      "description": "The short accessible name the icon most often takes when it stands alone, such as \"Delete\" for trash; a consumer passes it, or its own, as title.",
+      "type": "string",
+      "maxLength": 32,
+      "pattern": "^[A-Z0-9](.*\\S)?$"
     },
     "tags": {
       "description": "Search terms: what the icon depicts and what it is used for.",

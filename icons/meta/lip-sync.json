@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Lip sync",
   "tags": ["mouth", "lips", "dub", "speech"],
   "categories": ["audio-voice"],
   "useCases": ["Syncs the lips of a character to a voice", "Marks a lip-synced clip"],

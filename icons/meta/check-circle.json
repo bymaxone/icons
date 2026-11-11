@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Done",
   "tags": ["success", "done", "complete", "approved"],
   "categories": ["status"],
   "useCases": [

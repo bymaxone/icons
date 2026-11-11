@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Eraser",
   "tags": ["erase", "remove", "clean", "rubber"],
   "categories": ["editor-canvas"],
   "useCases": ["Selects the eraser tool", "Erases part of a mask"],

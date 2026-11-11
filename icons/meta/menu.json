@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Menu",
   "tags": ["hamburger", "navigation", "lines", "open menu"],
   "categories": ["navigation"],
   "useCases": [

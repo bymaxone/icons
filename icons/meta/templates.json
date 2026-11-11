@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Templates",
   "tags": ["layout", "starter", "blueprint", "preset"],
   "categories": ["navigation"],
   "useCases": [

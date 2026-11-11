@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Accent",
   "tags": ["colour", "drop", "theme colour", "tint"],
   "categories": ["system"],
   "useCases": ["Changes the accent colour", "Shows the current accent"],

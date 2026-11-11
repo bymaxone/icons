@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Notifications",
   "tags": ["notifications", "alerts", "alarm", "ring"],
   "categories": ["system"],
   "useCases": ["Opens the notifications", "Shows unread alerts", "Filled: unread notifications"],

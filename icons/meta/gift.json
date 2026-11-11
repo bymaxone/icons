@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Gift",
   "tags": ["present", "reward", "bonus", "promo"],
   "categories": ["credits-billing"],
   "useCases": ["Shows bonus credits", "Redeems a promo code"],

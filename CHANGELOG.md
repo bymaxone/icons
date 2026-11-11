@@ -70,6 +70,10 @@ and deprecated, each rename with the alias that keeps the old name working.
   those files and the sprite symbols carry `stroke-width="2.25"`. Apply to a consumer: nothing changes
   for the line and filled icons; on a 16 px master, `strokeWidth` is in px at 16, and
   `absoluteStrokeWidth` still writes `strokeWidth * 24 / size`.
+- A `label` on every icon's metadata, in `./meta` and `metadata.json`: the short accessible
+  name the icon most often takes when it stands alone, such as "Delete" for `trash` and
+  "Back" for `arrow-left`. Pass it, or a name of your own, as `title`. Required by the
+  schema: at most 32 characters, starting with a capital letter or a digit.
 - The brand marks, in their owners' geometry from Simple Icons, filled with
   `currentColor` (`GoogleBrandIcon` and the others, from `./brands`). Microsoft and
   LinkedIn are not included, and the colour `google-color` mark is deferred.

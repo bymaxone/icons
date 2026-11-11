@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Back",
   "tags": ["back", "previous", "left", "return"],
   "categories": ["navigation"],
   "useCases": ["Goes back to the previous screen", "Moves to the previous step of a flow"],

@@ -42,6 +42,11 @@ export type IconAlias =
 
 /** The metadata of one non-brand icon. */
 export interface IconMetadata {
+  /**
+   * The short accessible name the icon most often takes when it stands alone, such as
+   * "Delete" for `trash`; pass it, or a name of your own, as `title`.
+   */
+  readonly label: string
   /** Search terms: what the icon depicts and what it is used for. */
   readonly tags: readonly string[]
   readonly categories: readonly IconCategoryName[]

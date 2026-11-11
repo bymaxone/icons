@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Regenerate",
   "tags": ["retry", "redo", "reroll", "ai"],
   "categories": ["ai-agent"],
   "useCases": ["Generates a new take", "Rerolls a result"],

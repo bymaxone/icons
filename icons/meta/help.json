@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Help",
   "tags": ["question", "support", "faq", "how to"],
   "categories": ["system"],
   "useCases": ["Opens the help center", "Shows a hint"],

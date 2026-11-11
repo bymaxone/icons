@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Variations",
   "tags": ["options", "alternatives", "shapes", "versions"],
   "categories": ["ai-agent"],
   "useCases": ["Shows the variations of a result", "Generates alternatives"],

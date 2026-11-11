@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Receipt",
   "tags": ["invoice", "bill", "purchase", "statement"],
   "categories": ["credits-billing"],
   "useCases": ["Links to the invoices", "Shows a past payment"],

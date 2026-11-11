@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Credits",
   "tags": ["bolt", "credit", "energy", "power"],
   "categories": ["credits-billing"],
   "useCases": [

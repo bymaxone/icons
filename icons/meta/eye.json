@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Show",
   "tags": ["visible", "show", "view", "preview"],
   "categories": ["status"],
   "useCases": ["Shows a hidden layer", "Reveals a password", "Filled: a layer that is visible"],

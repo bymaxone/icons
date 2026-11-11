@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Split",
   "tags": ["cut clip", "razor", "divide", "playhead"],
   "categories": ["editor-canvas"],
   "useCases": ["Splits a clip at the playhead", "Divides a scene in two"],

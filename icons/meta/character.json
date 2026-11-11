@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Character",
   "tags": ["persona", "cast", "avatar", "generated person"],
   "categories": ["people-roles"],
   "useCases": [

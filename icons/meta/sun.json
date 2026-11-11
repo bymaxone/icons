@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Light theme",
   "tags": ["light mode", "day", "brightness", "theme"],
   "categories": ["system"],
   "useCases": [

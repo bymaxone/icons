@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Loop",
   "tags": ["repeat", "cycle", "replay", "loop playback"],
   "categories": ["media-video"],
   "useCases": ["Plays a clip in a loop", "Repeats a section of the timeline"],

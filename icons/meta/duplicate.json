@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Duplicate",
   "tags": ["clone", "copy", "make a copy", "cards plus"],
   "categories": ["actions"],
   "useCases": ["Duplicates a scene or a project", "Creates a copy of the selected item"],

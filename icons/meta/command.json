@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Command menu",
   "tags": ["command key", "shortcut", "cmd", "place of interest"],
   "categories": ["system"],
   "useCases": ["Opens the command palette", "Labels a shortcut"],

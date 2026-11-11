@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Filter",
   "tags": ["funnel", "narrow", "refine", "query"],
   "categories": ["actions"],
   "useCases": ["Opens the filters of a list", "Shows that a filter is applied"],

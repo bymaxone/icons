@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "More options",
   "tags": ["kebab", "overflow", "options", "dots"],
   "categories": ["actions"],
   "useCases": ["Opens the overflow menu of a list item", "Shows more actions in a header"],

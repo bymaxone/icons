@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Square",
   "tags": ["placeholder", "square", "test fixture"],
   "categories": ["system"],
   "useCases": [
@@ -7,7 +8,10 @@
     "Proves aliases are exported"
   ],
   "aliases": [
-    { "name": "fixture-box", "deprecated": false },
+    {
+      "name": "fixture-box",
+      "deprecated": false
+    },
     {
       "name": "fixture-old-square",
       "deprecated": true,

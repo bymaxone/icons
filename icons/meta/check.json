@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Confirm",
   "tags": ["tick", "done", "confirm", "success"],
   "categories": ["actions"],
   "useCases": ["Confirms an action", "Marks an item as done"],

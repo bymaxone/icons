@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Pan",
   "tags": ["pan", "grab", "drag canvas", "palm"],
   "categories": ["editor-canvas"],
   "useCases": ["Pans the canvas", "Selects the hand tool"],

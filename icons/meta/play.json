@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Play",
   "tags": ["start", "media", "video", "resume"],
   "categories": ["media-video"],
   "useCases": [

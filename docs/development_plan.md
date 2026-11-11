@@ -46,7 +46,7 @@
 | B3  | studio-ai-formats-billing         | ✅     | 100%     | L    | 2026-11-11   |
 | B4  | filled-variants-sm-masters-brands | ✅     | 100%     | L    | 2026-11-11   |
 | P4  | catalog-site                      | ✅     | 100%     | M    | 2026-11-11   |
-| P5  | hardening-release                 | 📋     | 0%       | M    | 2026-11-08   |
+| P5  | hardening-release                 | 🔄     | 5%       | M    | 2026-11-11   |
 | P6  | react-native                      | 📋     | 0%       | M    | 2026-11-08   |
 
 ---

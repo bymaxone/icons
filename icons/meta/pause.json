@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Pause",
   "tags": ["pause", "hold", "media control", "bars"],
   "categories": ["media-video"],
   "useCases": [

@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Stop",
   "tags": ["stop", "halt", "media control", "square"],
   "categories": ["media-video"],
   "useCases": ["Stops the playback", "Stops a recording"],

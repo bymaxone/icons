@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Download",
   "tags": ["save", "export", "tray", "arrow down"],
   "categories": ["actions"],
   "useCases": ["Downloads a file", "Saves a render to the device"],

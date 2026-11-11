@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Video file",
   "tags": ["video file", "movie file", "clip", "media"],
   "categories": ["files"],
   "useCases": ["Marks a video file", "Uploads a video"],

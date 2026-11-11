@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Drag to reorder",
   "tags": ["drag", "handle", "reorder", "dots"],
   "categories": ["actions"],
   "useCases": ["Marks the drag handle of a row", "Reorders the items of a list"],

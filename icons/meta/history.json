@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "History",
   "tags": ["past", "recent", "activity", "clock arrow"],
   "categories": ["status"],
   "useCases": ["Links to the version history", "Shows recent activity"],

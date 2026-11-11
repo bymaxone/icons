@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Render",
   "tags": ["export", "process", "progress", "output"],
   "categories": ["media-video"],
   "useCases": ["Starts the render of a project", "Shows the progress of a render"],

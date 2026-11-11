@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Dot",
   "tags": ["placeholder", "circle", "spark dot", "test fixture"],
   "categories": ["system", "status"],
   "useCases": [

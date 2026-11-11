@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Layers",
   "tags": ["stack", "levels", "arrange", "sheets"],
   "categories": ["editor-canvas"],
   "useCases": [

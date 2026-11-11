@@ -1,5 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
+  "label": "Globe",
   "tags": ["language", "world", "web", "international"],
   "categories": ["system"],
   "useCases": ["Changes the language", "Marks a public link"],
