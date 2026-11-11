@@ -37,12 +37,11 @@ const shared: Options = {
 // is read from the generated directory, which holds one subdirectory per icon.
 //
 // Each entry is a one-line re-export written to a single directory, ENTRIES_DIR, rather
-// than the icon's own `index.ts`. The declaration bundler (rollup-plugin-dts 6.5.1, inside
-// tsup 9.0.0) starts a new TypeScript program whenever an entry's directory differs from
-// the previous entry's, so one directory per icon meant one program per icon: about
-// 125 MB each, and the build of 56 icons ran out of memory. From one directory the icons
-// share one program, and the built files are byte-identical (compared on ten icons). `pnpm
-// clean` removes the directory.
+// than the icon's own `index.ts`. The declaration bundler starts a new TypeScript program
+// whenever an entry's directory differs from the previous entry's, and each program costs
+// about 125 MB, so one directory per icon would mean one program per icon and a build whose
+// memory grows with the set. From one directory the icons share one program. `pnpm clean`
+// removes the directory.
 const ICONS_DIR = 'src/icons/generated'
 const ENTRIES_DIR = '.tsup-entries'
 const iconNames = readdirSync(ICONS_DIR, { withFileTypes: true })
