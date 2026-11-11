@@ -86,6 +86,10 @@ export function metadataRecords(set: IconSet): {
  * The module behind the typed metadata of `./meta`: the records as `as const` data, with
  * no import, so the entry stays free of React and of every other module.
  *
+ * The records are written one per line and kept from Prettier, which would spread each
+ * over about nine lines: the module then grows by a line per icon and stays inside the
+ * file-length limit of the repository at the size of the full set.
+ *
  * @param set - The icon set.
  * @returns The module's unformatted text.
  */
@@ -93,6 +97,13 @@ export function metadataModule(set: IconSet): string {
   const { icons, brands, categories } = metadataRecords(set)
   const constant = (doc: string, name: string, value: unknown): string =>
     `/** ${doc} */\nexport const ${name} = ${JSON.stringify(value)} as const\n`
+  const keyed = (doc: string, name: string, value: Record<string, unknown>): string => {
+    const lines = Object.entries(value).map(
+      ([key, record]) => `  ${JSON.stringify(key)}: ${JSON.stringify(record)},\n`
+    )
+    const body = lines.length === 0 ? '{}' : `{\n${lines.join('')}}`
+    return `/** ${doc} */\n// prettier-ignore\nexport const ${name} = ${body} as const\n`
+  }
   return [
     '/**',
     ' * @fileoverview The metadata of every icon and brand mark, as data.',
@@ -108,8 +119,8 @@ export function metadataModule(set: IconSet): string {
       categories.map((category) => category.name)
     ),
     constant('The categories, in the order of categories.json.', 'CATEGORIES', categories),
-    constant('The metadata of every icon, keyed by name.', 'ICONS', icons),
-    constant('The metadata of every brand mark, keyed by name.', 'BRANDS', brands)
+    keyed('The metadata of every icon, keyed by name.', 'ICONS', icons),
+    keyed('The metadata of every brand mark, keyed by name.', 'BRANDS', brands)
   ].join('\n')
 }
 
