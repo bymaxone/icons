@@ -24,7 +24,7 @@
 ## 1. Progress Dashboard
 
 > **Overall progress: 7 / 12 phases (58%)**
-> **Active phase:** B4a (the brand marks of B4, pull request in review); P0 still has
+> **Active phase:** B4a (the brand marks of B4); P0 still has
 > the GitHub settings of task 0.6
 > **Blocked phases:** none
 >

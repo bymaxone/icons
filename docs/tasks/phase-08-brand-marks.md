@@ -4,7 +4,7 @@
 > **Source roadmap**: [`../development_plan.md`](../development_plan.md) §5 (B4)
 > **Source spec**: [`../technical_specification.md`](../technical_specification.md) §5, §17 (D3)
 >
-> The marks are approved by the delegated auditor on behalf of the founder, 2026-11-11; the phase pull request is open.
+> The marks are approved by the delegated auditor on behalf of the founder, 2026-11-11.
 
 ---
 
@@ -18,11 +18,11 @@ B4 lands as three pull requests (see the plan). B4a ships the brand marks of spe
 
 ### Placement
 
-SVGO's `convertPathData` with `applyTransforms` applies `translate(2 2) scale(5/6)` to the path, at three decimals; `pnpm generate` then normalises it. A first converter written for the task differed from the source by up to 64 of 255 in coverage at the edges and was dropped for SVGO. [`../contact-sheets/b4a/brands.md`](../contact-sheets/b4a/brands.md) records, for every mark, the largest difference against the source drawn under the same transform.
+SVGO's `convertPathData` with `applyTransforms` applies `translate(2 2) scale(5/6)` to the path, at three decimals; `pnpm generate` then normalises it. [`../contact-sheets/b4a/brands.md`](../contact-sheets/b4a/brands.md) records, for every mark, the largest difference against the source drawn under the same transform.
 
 ### Metadata
 
-Each mark records `source` and `guidelines` from the Simple Icons data, `license` CC0-1.0 and `retrievedAt` 2026-11-11. Simple Icons gives no guidelines for two marks, so they point at the owners' own pages.
+Each mark records `source` and `guidelines` from the Simple Icons data, `license` CC0-1.0 and `retrievedAt` 2026-11-11. Where Simple Icons gives no guidelines, `guidelines` points at the owner's own page.
 
 ### Not in 1.0
 
