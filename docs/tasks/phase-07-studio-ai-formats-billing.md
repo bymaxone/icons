@@ -4,7 +4,7 @@
 > **Source roadmap**: [`../development_plan.md`](../development_plan.md) §5 (B3)
 > **Source spec**: [`../technical_specification.md`](../technical_specification.md) §2, §3, §4.1, §4.2, §4.3, §16
 >
-> The 42 drawings are approved by the delegated auditor on behalf of the founder, 2026-11-11; the batch merged via PR #13.
+> The drawings are approved by the delegated auditor on behalf of the founder, 2026-11-11; the batch merged via PR #13.
 
 ---
 

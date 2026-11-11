@@ -338,7 +338,7 @@ These rules apply to every phase. Phase sections only add rules specific to them
 - **References:** spec §2.1, §2.2, §2.6, §5, §17 (D3).
 - **Size:** L
 - **Split (2026-11-11):** B4 lands as three pull requests, each with its own audit: **B4a**,
-  the 14 brand marks; **B4b**, the filled variants; **B4c**, the 16 px masters, after an
+  the brand marks; **B4b**, the filled variants; **B4c**, the 16 px masters, after an
   engineering pull request that gives the `sm` kind a 1.5 px stroke at 16 px by default.
   Microsoft, LinkedIn and `google-color` are not in 1.0 (spec §5).
 

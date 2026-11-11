@@ -89,7 +89,7 @@ and is not built yet.
   the line icon so switching causes no size jump
 - 📋 **Hand-tuned 16 px masters** for the icons used in dense UI, drawn separately rather
   than scaled
-- ✅ **Brand marks**: 14 marks in their owners' geometry from Simple Icons, monochrome
+- ✅ **Brand marks**: in their owners' geometry from Simple Icons, monochrome
   `currentColor`, excluded from the MIT grant (see [`TRADEMARKS.md`](./TRADEMARKS.md))
 
 ### ⚛️ React
@@ -133,7 +133,7 @@ and is not built yet.
 | `./metadata.json` | Merged metadata of every icon and brand                         | Partial |
 
 Every subpath is built, exported and checked on every pull request. **Partial** ones hold
-the 148 icons and 14 brand marks so far.
+the drawings so far.
 
 ```
 @bymax-one/icons ──► @bymax-one/icons/icons/<name> ──► @bymax-one/icons/runtime ──► react (peer)

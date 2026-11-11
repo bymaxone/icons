@@ -26,9 +26,8 @@ owner's published rules.
 ## Source and credit
 
 Path data comes from [Simple Icons](https://simpleicons.org/) 16.37.0, a pinned
-development dependency. Each path is placed in the live area by SVGO's `convertPathData`
-with `applyTransforms`, from `translate(2 2) scale(5/6)`, which moves and scales it as a
-whole without redrawing any part.
+development dependency. Each path is placed in the live area as a whole, by a translation
+and a uniform scale, without redrawing any part.
 Simple Icons publishes its data under [CC0-1.0](https://creativecommons.org/publicdomain/zero/1.0/),
 which asks for no credit; it is credited here anyway. CC0 covers the path data as a
 file. It does not license the trademark the path depicts.
@@ -44,9 +43,6 @@ built with a mask, filters and a `foreignObject` conic gradient, which the packa
 drawing format does not allow.
 
 ## Marks in the package
-
-google, apple, github; youtube, tiktok, instagram, facebook, x, threads, pinterest,
-vimeo; whatsapp, spotify, discord.
 
 Microsoft and LinkedIn are not included: Simple Icons removed them at their owners'
 request, and no other source with a clear licence exists. They return when one does.
