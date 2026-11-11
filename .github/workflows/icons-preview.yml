@@ -1,9 +1,9 @@
 # Icon preview, the unprivileged half. It runs on `pull_request`, so it gets a read-only
 # token and no secret, even for a pull request from a fork.
 #
-# It checks out the BASE commit and runs the base branch's code; the pull request's
-# drawings are read as plain text with `git show` into a copy of `icons/` and linted by the
-# base branch's lint first. Only drawings that pass are rendered: the lint admits nothing
+# It checks out the BASE commit and runs the base branch's code; the drawings of GitHub's
+# synthetic merge of the pull request are read as plain text with `git show` into a copy of
+# `icons/` and linted by the base branch's lint first. Only drawings that pass are rendered: the lint admits nothing
 # but the seven geometry elements, so no image, link or external reference ever reaches
 # the renderer. The images and a manifest go up as an artifact; the privileged half
 # (icons-preview-publish.yml) validates them before it publishes anything.
@@ -27,26 +27,44 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     permissions:
-      contents: read
+      contents: read # reads the repository; the pull request's commit is fetched as data
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           ref: ${{ github.event.pull_request.base.sha }}
           persist-credentials: false
-      - uses: bymaxone/.github/.github/actions/setup-node-pnpm@v1
-      - name: Fetch the pull request's commit as data
+      - uses: pnpm/action-setup@73e46992e05b19abd31f2f3c20e0e7370d762115 # v6.1.1
+        with:
+          run_install: false
+      # No dependency cache: a pull request's job could otherwise seed one.
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 24
+          package-manager-cache: false
+      - name: Install the base branch's dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Fetch the pull request's commits as data
         env:
           PR_NUMBER: ${{ github.event.pull_request.number }}
           HEAD_SHA: ${{ github.event.pull_request.head.sha }}
         run: |
-          git fetch --no-tags --depth=1 origin "+refs/pull/${PR_NUMBER}/head:refs/remotes/pull/head"
+          # The head is what the pull request claims; GitHub's synthetic merge of it into the
+          # base is what the drawings would be after the merge, so a pull request that is
+          # behind main does not show main's newer drawings as its own changes.
+          git fetch --no-tags --depth=1 origin \
+            "+refs/pull/${PR_NUMBER}/head:refs/remotes/pull/head" \
+            "+refs/pull/${PR_NUMBER}/merge:refs/remotes/pull/merge"
           test "$(git rev-parse refs/remotes/pull/head)" = "$HEAD_SHA"
       - name: Lint and render
         env:
           BASE_SHA: ${{ github.event.pull_request.base.sha }}
           HEAD_SHA: ${{ github.event.pull_request.head.sha }}
           PR_NUMBER: ${{ github.event.pull_request.number }}
-        run: node scripts/icons-preview-build.mjs --base "$BASE_SHA" --head "$HEAD_SHA" --pr "$PR_NUMBER" --out "$RUNNER_TEMP/icons-preview"
+        run: |
+          # The build checks that the merge's parents are the base and the head.
+          MERGE_SHA="$(git rev-parse refs/remotes/pull/merge)"
+          node scripts/icons-preview-build.mjs --base "$BASE_SHA" --head "$HEAD_SHA" \
+            --merge "$MERGE_SHA" --pr "$PR_NUMBER" --out "$RUNNER_TEMP/icons-preview"
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: icons-preview

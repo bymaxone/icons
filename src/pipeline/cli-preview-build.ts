@@ -19,13 +19,32 @@ const MAX_GIT_OUTPUT = 64 * 1024 * 1024
 /** A git object name. */
 const COMMIT = /^[0-9a-f]{40}$/
 
+/**
+ * The parents named in the header of a raw commit object (`git cat-file -p`), in order.
+ * The header ends at the first blank line; the message after it is author text and is not
+ * read.
+ *
+ * @param object - The raw commit object.
+ * @returns The parent commits.
+ */
+export function commitParents(object: string): string[] {
+  const parents: string[] = []
+  for (const line of object.split('\n')) {
+    if (line === '') break
+    const parent = /^parent ([0-9a-f]{40})$/.exec(line)?.[1]
+    if (parent !== undefined) parents.push(parent)
+  }
+  return parents
+}
+
 /** Git through `execFileSync`, run in the repository root. */
 export function repositoryGit(root: string): PreviewGit {
   const run = (args: string[]): string =>
     execFileSync('git', args, { cwd: root, encoding: 'utf8', maxBuffer: MAX_GIT_OUTPUT })
   return {
     diff: (base, head) => run(['diff', '--name-status', '--no-renames', base, head, '--', 'icons']),
-    show: (head, path) => run(['show', `${head}:${path}`])
+    show: (commit, path) => run(['show', `${commit}:${path}`]),
+    parents: (commit) => commitParents(run(['cat-file', '-p', commit]))
   }
 }
 
@@ -43,7 +62,7 @@ function required(args: readonly string[], name: string, pattern: RegExp): strin
 }
 
 /**
- * Builds the preview of a pull request's drawings: `--base <sha> --head <sha> --pr <n>
+ * Builds the preview of a pull request's drawings: `--base <sha> --head <sha> --merge <sha> --pr <n>
  * --out <dir>`.
  *
  * @param args - The flags.
@@ -66,6 +85,7 @@ export function runPreviewBuild(
         root,
         base: required(args, '--base', COMMIT),
         head: required(args, '--head', COMMIT),
+        merge: required(args, '--merge', COMMIT),
         pr: Number(required(args, '--pr', /^[1-9][0-9]{0,9}$/)),
         out: resolve(root, required(args, '--out', /^[\w./-]+$/))
       },

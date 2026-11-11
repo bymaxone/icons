@@ -266,6 +266,22 @@ describe('lintSvg: svg-attribute', () => {
       )
     ).toStrictEqual(['<line> may not carry d', '<path> may not carry r'])
   })
+
+  it('reports a namespaced reference and still measures the geometry', () => {
+    /**
+     * Scenario: an `xlink:href` on an allowed element is an attribute issue, not a crash.
+     * The live area is measured from the geometry attributes alone, so nothing else the
+     * file carries reaches the renderer: a hostile attribute is reported, never rendered.
+     */
+    const text = raw(
+      '<path d="M4 12h16" xlink:href="file:///etc/hosts" href="file:///etc/hosts"/>'
+    ).replace('<svg ', '<svg xmlns:xlink="http://www.w3.org/1999/xlink" ')
+    expect(messages(text, 'svg-attribute')).toStrictEqual([
+      '<path> may not carry xlink:href',
+      '<path> may not carry href'
+    ])
+    expect(messages(text, 'svg-live-area')).toStrictEqual([])
+  })
 })
 
 describe('lintSvg: svg-fill', () => {

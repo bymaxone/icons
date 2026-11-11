@@ -30,7 +30,9 @@ A directory with no file yet does not exist; there is no placeholder. The icon l
    attributes, three decimals, one element per line), runs the icon lint, and writes the
    generated modules. Commit the sources and the generated modules together.
 5. Run `pnpm contact-sheet` and review `reports/contact-sheet.png` at every size, on both
-   pages and in every accent.
+   pages and in every accent; `pnpm family-sheet --highlight <names>` shows the drawing
+   beside the whole set, and `pnpm similarity --names <names>` its nearest third-party icons.
+6. Run `pnpm check:visual --update` and commit the baselines it writes under `../visual/`.
 
 ## What a drawing may hold
 

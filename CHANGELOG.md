@@ -55,3 +55,9 @@ and deprecated, each rename with the alias that keeps the old name working.
   brand names only in `icons/brands`.
 - `pnpm contact-sheet`: every drawing at 16, 20, 24 and 48 px on the light and dark Studio
   pages, in the ink and the six accents, rendered to `reports/contact-sheet.png`.
+- The visual tools every drawing batch is reviewed with: `pnpm check:visual` compares every
+  drawing at 16, 20, 24 and 48 px, light and dark, with committed baselines;
+  `pnpm similarity` compares every drawing, normalised for position, size and stroke, with
+  Lucide, Tabler, Phosphor and Heroicons and flags close matches for review;
+  `pnpm family-sheet` renders the whole set by category; and a pull request that changes a
+  drawing gets a preview comment with its render and its nearest matches.

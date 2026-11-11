@@ -30,15 +30,20 @@ import type { VisualTarget } from './visual.ts'
 export interface PreviewGit {
   /** `git diff --name-status --no-renames <base> <head> -- icons`. */
   readonly diff: (base: string, head: string) => string
-  /** `git show <head>:<path>`: a file as the pull request has it. */
-  readonly show: (head: string, path: string) => string
+  /** `git show <commit>:<path>`: a file as the commit has it. */
+  readonly show: (commit: string, path: string) => string
+  /** The parents of a commit, in order. */
+  readonly parents: (commit: string) => readonly string[]
 }
 
 /** What the build is asked to preview. */
 export interface PreviewRequest {
   readonly root: string
   readonly base: string
+  /** The pull request's head commit, recorded in the manifest. */
   readonly head: string
+  /** GitHub's merge commit of the base and the head; the diff and the files come from it. */
+  readonly merge: string
   readonly pr: number
   /** The directory the images, the manifest and the scratch copy are written to. */
   readonly out: string
@@ -55,14 +60,14 @@ function applyChanges(
   const icons = join(request.out, 'icons')
   rmSync(icons, { recursive: true, force: true })
   cpSync(join(request.root, 'icons'), icons, { recursive: true })
-  const changes = parseChanges(git.diff(request.base, request.head))
+  const changes = parseChanges(git.diff(request.base, request.merge))
   for (const change of changes) {
     const file = join(request.out, change.path)
     if (change.status === 'deleted') {
       rmSync(file, { force: true })
     } else {
       mkdirSync(dirname(file), { recursive: true })
-      writeFileSync(file, git.show(request.head, change.path))
+      writeFileSync(file, git.show(request.merge, change.path))
     }
   }
   return { icons, names: new Set(changes.map((change) => change.name)) }
@@ -161,7 +166,8 @@ function manifestIcon(entry: SimilarityEntry): PreviewIcon {
 }
 
 /**
- * Builds the preview: lints the changed drawings and, when they pass, renders the
+ * Builds the preview from GitHub's merge commit, so a pull request that is behind the base
+ * branch is not shown as reverting what landed there. It lints the changed drawings and, when they pass, renders the
  * before-and-after sheet and the similarity sheet, then writes `manifest.json`.
  *
  * @param request - The commits, the pull request and the output directory.
@@ -176,6 +182,10 @@ export function buildPreview(
   references: () => readonly Reference[],
   output: Output
 ): PreviewManifest {
+  const parents = git.parents(request.merge)
+  if (parents.length !== 2 || parents[0] !== request.base || parents[1] !== request.head) {
+    throw new Error('the merge commit is not the merge of the base and the head')
+  }
   mkdirSync(request.out, { recursive: true })
   const { icons, names } = applyChanges(request, git)
   const lint = lintSources(

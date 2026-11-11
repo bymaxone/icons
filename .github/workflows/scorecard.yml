@@ -21,14 +21,17 @@ concurrency:
   group: scorecard-${{ github.ref }}
   cancel-in-progress: true
 
-# Default to read-only. Specific permissions are widened at the job level.
-permissions: read-all
+# Nothing at the workflow level; each job declares what it needs.
+permissions: {}
 
 jobs:
   visibility:
     name: Repository visibility
     runs-on: ubuntu-latest
     timeout-minutes: 5
+    permissions:
+      # Reads the repository's metadata, which any token may read.
+      contents: read
     outputs:
       public: ${{ steps.check.outputs.public }}
     steps:

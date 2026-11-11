@@ -72,11 +72,12 @@ export const FLAG_DISTANCE = 0.25
  */
 export function readDrawing(text: string, paint: Paint): SvgDrawing {
   const root = /<svg\b[^>]*>/.exec(text)?.[0] ?? ''
-  const box = /\bviewBox="([^"]*)"/.exec(root)?.[1] ?? '0 0 24 24'
-  const [x = 0, y = 0, width = 24, height = 24] = box
-    .trim()
-    .split(/[\s,]+/)
-    .map(Number)
+  // Stryker disable next-line StringLiteral: an empty viewBox reads as the same four defaults
+  const box = /\sviewBox="([^"]*)"/.exec(root)?.[1] ?? '0 0 24 24'
+  const parts = box.trim().split(/[\s,]+/)
+  // `split` always returns one part, so the first number needs no default.
+  const x = Number(parts[0])
+  const [, y = 0, width = 24, height = 24] = parts.map(Number)
   const start = text.indexOf(root) + root.length
   const end = text.lastIndexOf('</svg>')
   return {
@@ -96,7 +97,8 @@ function documentOf(
   const paint =
     drawing.paint === 'stroke'
       ? `fill="none" stroke="currentColor" stroke-width="${strokeWidth}" stroke-linecap="round" stroke-linejoin="round"`
-      : 'fill="currentColor"'
+      : // Stryker disable next-line StringLiteral: an SVG paints black unless told otherwise, and the colour is black
+        'fill="currentColor"'
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${side}" height="${side}" viewBox="${viewBox.join(' ')}" color="#000" ${paint}>${drawing.body}</svg>`
 }
 

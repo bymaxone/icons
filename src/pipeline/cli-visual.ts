@@ -160,7 +160,7 @@ export function runFamilySheet(args: readonly string[], root: string, output: Ou
   const { layout, out } = parseOptions(args, root)
   const { issues, set } = lintAndReport(layout, output)
   if (issues.length > 0) return 1
-  const highlight = new Set(flagValue(args, '--highlight')?.split(',') ?? [])
+  const highlight = new Set(flagValue(args, '--highlight')?.split(','))
   const groups = familyGroups(set, highlight)
   const file = resolve(root, out ?? join('reports', 'family-sheet.png'))
   mkdirSync(dirname(file), { recursive: true })

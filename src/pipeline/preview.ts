@@ -15,9 +15,12 @@ export interface DrawingChange {
   readonly status: 'added' | 'modified' | 'deleted'
 }
 
-/** The paths a preview reads: a drawing or a metadata file with a kebab-case name. */
+/**
+ * The paths a preview reads: a drawing (`.svg` in a drawing directory) or a metadata file
+ * (`.json` in `meta`), with a kebab-case name.
+ */
 const SOURCE_PATH =
-  /^icons\/(?:line|filled|sm|brands|meta)\/([a-z0-9]+(?:-[a-z0-9]+)*)\.(?:svg|json)$/
+  /^icons\/(?:(?:line|filled|sm|brands)\/([a-z0-9]+(?:-[a-z0-9]+)*)\.svg|meta\/([a-z0-9]+(?:-[a-z0-9]+)*)\.json)$/
 
 /** A git object name. */
 const COMMIT = /^[0-9a-f]{40}$/
@@ -55,9 +58,11 @@ const STATUS: ReadonlyMap<string, DrawingChange['status']> = new Map([
  */
 export function parseChanges(text: string): DrawingChange[] {
   return text.split('\n').flatMap((line) => {
-    const [letter = '', path = '', ...rest] = line.split('\t')
-    const status = STATUS.get(letter)
-    const name = SOURCE_PATH.exec(path)?.[1]
+    // Stryker disable next-line StringLiteral: a missing path only has to fail SOURCE_PATH, whatever text stands in for it
+    const [letter, path = '', ...rest] = line.split('\t')
+    const status = STATUS.get(String(letter))
+    const match = SOURCE_PATH.exec(path)
+    const name = match?.[1] ?? match?.[2]
     if (status === undefined || name === undefined || rest.length > 0) return []
     return [{ path, name, status }]
   })
@@ -180,6 +185,7 @@ const PNG_SIGNATURE = [0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a] as const
  */
 export function isPublishablePng(bytes: Uint8Array): boolean {
   return (
+    // Stryker disable next-line ConditionalExpression: a buffer shorter than the signature fails the byte comparison below anyway, so this guard is redundant
     bytes.length >= PNG_SIGNATURE.length &&
     bytes.length <= MAX_IMAGE_BYTES &&
     PNG_SIGNATURE.every((byte, index) => bytes.at(index) === byte)

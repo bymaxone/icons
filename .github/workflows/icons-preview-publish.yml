@@ -11,11 +11,20 @@
 name: Icon preview publish
 
 on:
+  # zizmor: ignore[dangerous-triggers] the privileged half of a split preview: this file
+  # runs from the default branch, checks out no pull-request code, runs nothing from the
+  # artifact, and validates every field it reads from it (see the header above).
   workflow_run:
     workflows: [Icon preview]
     types: [completed]
 
 permissions: {}
+
+# One publish at a time per pull-request branch, so two runs cannot interleave their
+# writes to the same comment; the newer run replaces the older one.
+concurrency:
+  group: icons-preview-publish-${{ github.event.workflow_run.head_repository.full_name }}-${{ github.event.workflow_run.head_branch }}
+  cancel-in-progress: true
 
 jobs:
   images:
@@ -24,8 +33,8 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     permissions:
-      actions: read
-      contents: write
+      actions: read # downloads the artifact of the run that built it
+      contents: write # stores the images on the icons-preview branch
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -51,8 +60,8 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     permissions:
-      actions: read
-      pull-requests: write
+      actions: read # downloads the artifact of the run that built it
+      pull-requests: write # writes the preview comment
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:

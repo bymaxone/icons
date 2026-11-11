@@ -145,6 +145,7 @@ export function changedPixels(baseline: RgbaImage, current: RgbaImage): number {
     return Math.max(baseline.width * baseline.height, current.width * current.height)
   }
   let changed = 0
+  // Stryker disable next-line EqualityOperator: reading one pixel past the end gives NaN, which never differs
   for (let pixel = 0; pixel < current.width * current.height; pixel++) {
     if (pixelDiffers(baseline, current, pixel)) changed++
   }

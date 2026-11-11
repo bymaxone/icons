@@ -29,15 +29,17 @@ concurrency:
   group: peer-advisory-drift
   cancel-in-progress: false
 
-# `issues: write` lets the check file and close its own tracking issue.
-# Permissions on a reusable workflow can only narrow what the caller grants, so
-# this has to be declared here as well as there.
-permissions:
-  contents: read
-  issues: write
+# Nothing at the workflow level; the one job declares what it needs.
+permissions: {}
 
 jobs:
   drift:
+    # `issues: write` lets the check file and close its own tracking issue.
+    # Permissions on a reusable workflow can only narrow what the caller grants, so
+    # this has to be declared here as well as there.
+    permissions:
+      contents: read
+      issues: write
     # `workflow_dispatch` can be fired from any branch. Auditing a branch's
     # unmerged manifest and writing the result to the repository-wide tracking
     # issue would report findings that do not describe what this package

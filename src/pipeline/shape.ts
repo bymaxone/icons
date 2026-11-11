@@ -45,6 +45,8 @@ export function blur(grid: Grid): number[][] {
       let count = 0
       for (let dy = -1; dy <= 1; dy++) {
         for (let dx = -1; dx <= 1; dx++) {
+          // The 3 x 3 window is symmetric, so mirrored offsets sum the same cells.
+          // Stryker disable next-line ArithmeticOperator: mirrored offsets of a symmetric window
           const value = grid[y + dy]?.[x + dx]
           if (value !== undefined) {
             sum += value
@@ -80,7 +82,10 @@ export function dilate(mask: Grid, radius: number): number[][] {
     row.map((_, x) => {
       for (let dy = -radius; dy <= radius; dy++) {
         for (let dx = -radius; dx <= radius; dx++) {
-          if (dx * dx + dy * dy <= radius * radius && cell(mask, x + dx, y + dy, 0) === 1) return 1
+          if (dx * dx + dy * dy > radius * radius) continue
+          // The disc is symmetric, so reading at `x - dx` or `y - dy` visits the same cells.
+          // Stryker disable next-line ArithmeticOperator: mirrored offsets of a symmetric disc
+          if (cell(mask, x + dx, y + dy, 0) === 1) return 1
         }
       }
       return 0
@@ -106,10 +111,10 @@ export function distanceToInk(mask: Grid): number[][] {
     row.fill(best, x, x + 1)
   }
   for (const [y, row] of rows) {
-    for (let x = 0; x < row.length; x++) relax(row, x, y, FORWARD)
+    row.forEach((_, x) => relax(row, x, y, FORWARD))
   }
   for (const [y, row] of rows.reverse()) {
-    for (let x = row.length - 1; x >= 0; x--) relax(row, x, y, BACKWARD)
+    for (const x of [...row.keys()].reverse()) relax(row, x, y, BACKWARD)
   }
   return steps.map((row) => row.map((value) => value / 3))
 }
