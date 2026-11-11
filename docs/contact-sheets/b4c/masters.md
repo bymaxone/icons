@@ -18,6 +18,8 @@ Each 16 px master is a separate drawing of its icon, made for 16 px: it sits on 
 
 ## Measures
 
+The masters of `lock` and `octopus` were redrawn in R1; their rows below are those of B4c, and [`../r1/group-1.md`](../r1/group-1.md) holds the current measures.
+
 Ink is coverage at the size given, with the stroke. G and the parts it is measured between come from the production files at 16 px 1x. Sizes are brotli bytes of the component bundled alone by `scripts/check-component-size.mjs`, and with the runtime. The nearest reference and d come from `pnpm similarity`.
 
 | Icon              | Ink sm@16 (%) | Ink line@24 (%) | Ratio | G at 16 px | Parts at G        | Bbox at 16 (units)    | Centroid (units) | Alone (B) | With runtime (B) | Nearest reference            | d    |

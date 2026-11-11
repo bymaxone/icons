@@ -23,7 +23,7 @@ The drawings of this group were not understood at a glance at 24 px on the dark 
 
 ## Measures
 
-The cut is the smallest distance between two parts that do not touch, measured on the line drawing at 240 px. G and the ink are those of the 16 px masters ([`../b4c/masters.md`](../b4c/masters.md)); d is the nearest drawing of Lucide, Tabler, Phosphor and Heroicons.
+The cut is the smallest distance between two parts that do not touch, measured on the line drawing at 240 px. G and the ink are measured as for the 16 px masters ([`../b4c/masters.md`](../b4c/masters.md)); d is the nearest drawing of Lucide, Tabler, Phosphor and Heroicons.
 
 | Icon      | Cut  | Ink at 24 | 16 px master: ink, ratio, G | Nearest (d)                         |
 | --------- | ---- | --------- | --------------------------- | ----------------------------------- |
