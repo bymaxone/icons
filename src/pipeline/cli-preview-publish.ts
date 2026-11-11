@@ -28,8 +28,8 @@ function required(value: string | undefined, pattern: RegExp, what: string): str
 /**
  * Runs `publish --dir <artifact>` or `comment --dir <artifact>`, with `GITHUB_REPOSITORY`,
  * `GITHUB_TOKEN`, and the head commit, head repository and head branch of the run that
- * built the artifact (`RUN_HEAD_SHA`, `RUN_HEAD_REPOSITORY`, `RUN_HEAD_BRANCH`) from the
- * environment.
+ * built the artifact (`RUN_HEAD_SHA`, `RUN_HEAD_REPOSITORY`, `RUN_HEAD_BRANCH`) and the
+ * branch the preview runs for (`DEFAULT_BRANCH`) from the environment.
  *
  * @param args - The command, then its flags.
  * @param env - The environment.
@@ -53,7 +53,8 @@ export async function runPreviewPublish(
     const run = {
       head: required(env['RUN_HEAD_SHA'], COMMIT, 'RUN_HEAD_SHA'),
       repository: required(env['RUN_HEAD_REPOSITORY'], /^[\w.-]+\/[\w.-]+$/, 'RUN_HEAD_REPOSITORY'),
-      branch: required(env['RUN_HEAD_BRANCH'], /^\S+$/, 'RUN_HEAD_BRANCH')
+      branch: required(env['RUN_HEAD_BRANCH'], /^\S+$/, 'RUN_HEAD_BRANCH'),
+      base: required(env['DEFAULT_BRANCH'], /^\S+$/, 'DEFAULT_BRANCH')
     }
     const artifact = readArtifact(required(directory, /^[\w./-]+$/, '--dir'))
     await verifyPullRequest(call, repository, artifact.manifest, run)

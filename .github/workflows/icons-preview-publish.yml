@@ -5,7 +5,7 @@
 # no dependency (the publish script imports nothing that parses or renders a drawing), and
 # treats the artifact as hostile. The manifest is validated field by field, every image
 # must be a PNG of bounded size named by a strict pattern, and the pull request must be
-# open on the commit, repository and branch the run built. Each job holds only the write
+# open on the commit, repository and branch the run built, into the default branch. Each job holds only the write
 # its own step needs: `contents: write` to store the images on the `icons-preview` branch,
 # which shares no history with `main`, and `pull-requests: write` to write the comment.
 name: Icon preview publish
@@ -55,6 +55,7 @@ jobs:
           RUN_HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
           RUN_HEAD_REPOSITORY: ${{ github.event.workflow_run.head_repository.full_name }}
           RUN_HEAD_BRANCH: ${{ github.event.workflow_run.head_branch }}
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
         run: node scripts/icons-preview-publish.mjs publish --dir "$RUNNER_TEMP/icons-preview"
 
   comment:
@@ -88,4 +89,5 @@ jobs:
           RUN_HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
           RUN_HEAD_REPOSITORY: ${{ github.event.workflow_run.head_repository.full_name }}
           RUN_HEAD_BRANCH: ${{ github.event.workflow_run.head_branch }}
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
         run: node scripts/icons-preview-publish.mjs comment --dir "$RUNNER_TEMP/icons-preview"

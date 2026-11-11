@@ -11,7 +11,12 @@ import type { PreviewManifest } from '../preview.ts'
 export const HEAD = 'c'.repeat(40)
 export const REPO = 'bymaxone/icons'
 /** The run that built the artifact: its head commit, head repository and head branch. */
-export const RUN = { head: HEAD, repository: 'contributor/icons', branch: 'new-icons' }
+export const RUN = {
+  head: HEAD,
+  repository: 'contributor/icons',
+  branch: 'new-icons',
+  base: 'main'
+}
 export const PNG = Uint8Array.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a, 7, 8, 9])
 
 export const manifestJson = (overrides: Record<string, unknown> = {}): Record<string, unknown> => ({

@@ -40,7 +40,8 @@ describe('runPreviewPublish', () => {
     GITHUB_TOKEN: 'tok',
     RUN_HEAD_SHA: HEAD,
     RUN_HEAD_REPOSITORY: 'contributor/icons',
-    RUN_HEAD_BRANCH: 'new-icons'
+    RUN_HEAD_BRANCH: 'new-icons',
+    DEFAULT_BRANCH: 'main'
   }
 
   beforeEach(() => {
@@ -81,7 +82,8 @@ describe('runPreviewPublish', () => {
           return Promise.resolve(
             respond(200, {
               state: 'open',
-              head: { sha: HEAD, ref: 'new-icons', repo: { full_name: 'contributor/icons' } }
+              head: { sha: HEAD, ref: 'new-icons', repo: { full_name: 'contributor/icons' } },
+              base: { ref: 'main' }
             })
           )
         }
@@ -192,7 +194,10 @@ describe('runPreviewPublish', () => {
     ['RUN_HEAD_BRANCH', undefined],
     ['RUN_HEAD_BRANCH', ''],
     ['RUN_HEAD_BRANCH', 'two words'],
-    ['RUN_HEAD_BRANCH', 'branch\n']
+    ['RUN_HEAD_BRANCH', 'branch\n'],
+    ['DEFAULT_BRANCH', undefined],
+    ['DEFAULT_BRANCH', ''],
+    ['DEFAULT_BRANCH', 'two words']
   ])('rejects %s set to %s', async (name, value) => {
     /**
      * Scenario: a missing or malformed environment value fails with its name before any

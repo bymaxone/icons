@@ -48,6 +48,8 @@ export interface WorkflowRun {
   readonly repository: string
   /** The branch of that repository. */
   readonly branch: string
+  /** The branch the preview runs for: this repository's default branch. */
+  readonly base: string
 }
 
 /** A validated artifact: the manifest and the bytes of each image it lists. */
@@ -91,10 +93,11 @@ export function readArtifact(directory: string): PreviewArtifact {
 
 /**
  * Checks the repository name and that the pull request the manifest names is the one the
- * workflow run built: open, on the run's head commit, and from the run's head repository
- * and branch. The number comes from the artifact, so it is not trusted: anyone's fork can
- * push another pull request's head commit, but a manifest that passes can only name a pull
- * request opened from the run's own head branch, which its author already controls.
+ * workflow run built: open, on the run's head commit, from the run's head repository and
+ * branch, and into the base branch the preview runs for. The number comes from the
+ * artifact, so it is not trusted: anyone's fork can push another pull request's head
+ * commit, and one branch can back pull requests into several bases, but only one open pull
+ * request joins a given head branch to a given base.
  *
  * @param request - The REST call.
  * @param repository - `owner/name` of this repository.
@@ -119,10 +122,9 @@ export async function verifyPullRequest(
   if (read(head, 'sha') !== run.head) {
     throw new Error('the pull request has moved past this commit')
   }
-  if (
-    read(read(head, 'repo'), 'full_name') !== run.repository ||
-    read(head, 'ref') !== run.branch
-  ) {
+  const sameHead =
+    read(read(head, 'repo'), 'full_name') === run.repository && read(head, 'ref') === run.branch
+  if (!sameHead || read(read(response.body, 'base'), 'ref') !== run.base) {
     throw new Error('the pull request was not built by this workflow run')
   }
 }

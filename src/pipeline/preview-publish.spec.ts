@@ -135,7 +135,8 @@ describe('verifyPullRequest', () => {
   const open = (sha: string = HEAD, state: unknown = 'open'): GitHubResponse =>
     respond(200, {
       state,
-      head: { sha, ref: RUN.branch, repo: { full_name: RUN.repository } }
+      head: { sha, ref: RUN.branch, repo: { full_name: RUN.repository } },
+      base: { ref: RUN.base }
     })
 
   it('asks for the pull request and accepts an open one on the built commit', async () => {
@@ -284,12 +285,32 @@ describe('verifyPullRequest', () => {
        * request and name that number; the head repository and branch still differ from the
        * run's, so the manifest is refused and nothing is written to the other pull request.
        */
-      const { request } = fakeRequest(() => respond(200, { state: 'open', head }))
+      const { request } = fakeRequest(() =>
+        respond(200, { state: 'open', head, base: { ref: RUN.base } })
+      )
       await expect(verifyPullRequest(request, REPO, manifestOf(), RUN)).rejects.toThrow(
         'the pull request was not built by this workflow run'
       )
     }
   )
+
+  it.each([
+    ['another base branch', { ref: 'release' }],
+    ['no base branch', {}],
+    ['a base that is not an object', 'main'],
+    ['no base', undefined]
+  ])('rejects a pull request from the run own head branch into %s', async (_what, base) => {
+    /**
+     * Scenario: one branch can back pull requests into several bases, so the head commit,
+     * repository and branch do not single one out; the preview runs for the default
+     * branch only, and a pull request into any other base is refused.
+     */
+    const head = { sha: HEAD, ref: RUN.branch, repo: { full_name: RUN.repository } }
+    const { request } = fakeRequest(() => respond(200, { state: 'open', head, base }))
+    await expect(verifyPullRequest(request, REPO, manifestOf(), RUN)).rejects.toThrow(
+      'the pull request was not built by this workflow run'
+    )
+  })
 })
 
 describe('imageUrl', () => {
