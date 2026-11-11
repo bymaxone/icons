@@ -18,6 +18,7 @@ The drawings of this group were not understood at a glance at 24 px on the dark 
 - **`crop`.** The usual two crossing corners measure d = 0.02 against Tabler's `crop`: drawn plainly, they are the same drawing. One corner here runs whole and the other passes under it, interrupted by the cut on both sides of each crossing, its ends still reaching past the frame.
 - **`octopus` at 16 px.** Two eyes need about 13.5 units of mantle at their height to keep a clear pixel between each other and the walls, against about 10 in the line drawing, so the master widens the mantle into a dome. What makes it read as an octopus at 16 px is the arms: the outer two splay outward and the inner two are short, kicking outward, as the skirt of the line drawing opens. Straight arms under the same dome read as a jellyfish, and the outer arms' curl fuses with the inner arms at 16 px.
 - **`octopus` filled** is drawn from its geometry: the mantle's outline offset by 0.75, each arm a band 1.5 wide with a round end (the outer arms subdivided once), and the eyes knocked out as discs of r 1.25, wider than the stroke so that they read at 24 px. Against resvg's own stroker it differs by at most 23 of 255 at 24 px and 14 at 16 px, 16x supersampled. Skia's outline of the strokes, at two decimals, measures 1111 bytes brotli, over the component budget, and is itself 0.19 units off on the curve under the mantle.
+- **Ink.** Every drawing stays under the 21.5% ink ceiling of spec section 2.5 at 24 px. The first `gift` measured 23.0% and the first `globe` 23.2%: the gift's bow is now smaller, and the globe is the same drawing at 93% of its size. Cutting the globe's inner lines short of its circle instead read as the letter H in a circle (d = 0.26 against Phosphor's `letter-circle-h`).
 - **`lock`.** The filled drawing keeps the body solid, the keyhole knocked out and the shackle as a band. At 16 px the keyhole becomes a slot, and the master keeps the tall proportion of the line drawing.
 
 ## Measures
@@ -27,8 +28,8 @@ The cut is the smallest distance between two parts that do not touch, measured o
 | Icon      | Cut  | Ink at 24 | 16 px master: ink, ratio, G | Nearest (d)                         |
 | --------- | ---- | --------- | --------------------------- | ----------------------------------- |
 | `octopus` | 1.6  | 16.9%     | 23.0%, 1.36, 0.25           | line 1.02, filled 0.73, master 1.15 |
-| `gift`    | 1.6  | 23.0%     | none                        | 0.57                                |
-| `globe`   | none | 23.2%     | none                        | 0.68                                |
+| `gift`    | 1.6  | 21.0%     | none                        | 0.63                                |
+| `globe`   | none | 21.1%     | none                        | 0.70                                |
 | `brush`   | none | 13.0%     | none                        | 0.39                                |
 | `crop`    | 1.6  | 12.0%     | none                        | 1.13                                |
 | `lock`    | 2.1  | 17.0%     | 23.7%, 1.39, 0.13           | line 0.48, filled 0.44, master 0.52 |
