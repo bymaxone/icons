@@ -12,11 +12,11 @@
 
 B1 draws the rest of the Navigation, Actions and Status categories of spec §4.1: 13 navigation icons, 17 actions and 14 status icons, with their metadata. With the 12 keystone icons the set holds 56 drawings.
 
-The drawings are written as code on the 24 unit grid, as in B0 (decision D1), in the language B0 fixed: the 1.5 px round stroke, squircle corners, and the cut between distinct parts. No third-party set was open while drawing. The similarity check of P3 measured every drawing against the 9,382 icons of the four reference sets, and every composite it placed at 0.30 px or closer was redrawn or carries a justification beside a measured alternative (below).
+The drawings are written as code on the 24 unit grid, as in B0 (decision D1), in the language B0 fixed: the 1.5 px round stroke, squircle corners, and the cut between distinct parts. No third-party set was open while drawing. The similarity check of P3 measured every drawing against the icons of the reference sets, and every composite it placed at 0.30 px or closer was redrawn or carries a justification beside a measured alternative (below).
 
 ### Where the language shows
 
-- **The cut.** The lid of `trash` stands a cut above the can; the stem of `filter` and the needle of `pin` hang a cut below their bodies; the shackle of `lock` stops a cut above the body; the divider of `sidebar` stops a cut short of the frame; the eraser of `pencil` is a part of its own. The two lids of `eye` stop a cut short of each other at the corners, and the two hands of `clock` are two parts, the hour hand a cut away from the minute hand.
+- **The cut.** The lid of `trash` stands a cut above the can; the stem of `filter` and the needle of `pin` hang a cut below their bodies; the shackle of `lock` stops a cut above the body; the divider of `sidebar` stops a cut short of the frame; the eraser of `pencil` is a part of its own. The two hands of `clock` are two parts, the hour hand a cut away from the minute hand.
 - **The knockout (spec §2.4, item 1).** Where one part crosses another, the part behind is cut 1.5 px clear of it: the check of `check-circle` and of `cloud-check` breaks through its outline, the slash of `eye-off` cuts the eye, and the front card of `copy` and `duplicate` hides the back card.
 - **Arrows enter their trays.** The arrow of `download` ends a cut above the floor of its tray, and the arrow of `upload` rises from the same point.
 
@@ -24,15 +24,15 @@ The drawings are written as code on the 24 unit grid, as in B0 (decision D1), in
 
 The report is [`../contact-sheets/b1/similarity.md`](../contact-sheets/b1/similarity.md), and the alternatives are drawn side by side in [`../contact-sheets/b1/alternatives-sheet.png`](../contact-sheets/b1/alternatives-sheet.png). 30 drawings lie above 0.30 px from every reference. The other 14:
 
-| Drawing                                                    | Nearest (d)                       | Why it stays, and the measured alternative                                                                                                                                                                      |
-| ---------------------------------------------------------- | --------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `chevron-*`, `arrow-left`, `arrow-right`, `arrow-up-right` | 0.00 to 0.02                      | Primitive glyphs, expected to coincide (spec §3 item 5).                                                                                                                                                        |
-| `alert-triangle`                                           | phosphor/warning 0.30             | The general warning sign of ISO 7010 (W001). A capsule glyph alternative measures 0.27.                                                                                                                         |
-| `alert-circle`                                             | tabler/alert-circle 0.06          | A character in a circle. Tabler alone draws 48 `circle-letter-*`, `circle-number-*` and `clock-hour-*` icons, so a glyph in a ring lands near one of them. A capsule glyph measures 0.22, a squircle face 0.08. |
-| `info`                                                     | heroicons/information-circle 0.05 | The information mark (ISO 7001), a character in a circle as above. A capsule glyph measures 0.22, a squircle face 0.08.                                                                                         |
-| `menu`                                                     | lucide/align-justify 0.03         | Three equal lines, a typographic glyph. A shorter middle line measures 0.19, two lines 0.24.                                                                                                                    |
-| `more-horizontal`, `more-vertical`                         | 0.01                              | Three dots, a typographic glyph. Dashes measure 0.29 and 0.51.                                                                                                                                                  |
-| `grip`                                                     | lucide/grip-vertical 0.12         | Six dots. Dashes measure 0.68, four dots 1.42.                                                                                                                                                                  |
+| Drawing                                                    | Nearest (d)                       | Why it stays, and the measured alternative                                                                                                                                                             |
+| ---------------------------------------------------------- | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `chevron-*`, `arrow-left`, `arrow-right`, `arrow-up-right` | 0.00 to 0.02                      | Primitive glyphs, expected to coincide (spec §3 item 5).                                                                                                                                               |
+| `alert-triangle`                                           | phosphor/warning 0.30             | The general warning sign of ISO 7010 (W001). A capsule glyph alternative measures 0.27.                                                                                                                |
+| `alert-circle`                                             | tabler/alert-circle 0.06          | A character in a circle. Tabler draws `circle-letter-*`, `circle-number-*` and `clock-hour-*` icons, so a glyph in a ring lands near one of them. A capsule glyph measures 0.22, a squircle face 0.08. |
+| `info`                                                     | heroicons/information-circle 0.05 | The information mark (ISO 7001), a character in a circle as above. A capsule glyph measures 0.22, a squircle face 0.08.                                                                                |
+| `menu`                                                     | lucide/align-justify 0.03         | Three equal lines, a typographic glyph. A shorter middle line measures 0.19, two lines 0.24.                                                                                                           |
+| `more-horizontal`, `more-vertical`                         | 0.01                              | Three dots, a typographic glyph. Dashes measure 0.29 and 0.51.                                                                                                                                         |
+| `grip`                                                     | lucide/grip-vertical 0.12         | Six dots. Dashes measure 0.68, four dots 1.42.                                                                                                                                                         |
 
 ### Measurements
 
@@ -98,7 +98,7 @@ The plan asks that `bymax-studio-web` consume the package through a local link f
 
 ### Build
 
-The declaration build ran out of memory with 56 icons: the bundler inside tsup 9.0.0 (rollup-plugin-dts 6.5.1) starts a TypeScript program for every icon entry that sits in its own directory, about 125 MB each (1.07 GB for 6 entries, 1.81 GB for 12, 3.30 GB for 24). `tsup.config.ts` now points each icon entry at a one-line re-export in a single directory, `.tsup-entries/`, so the icons share one program: the icon build of 56 entries peaks at 619 MB, and its output is byte-identical to the per-directory build (compared on 10 icons). The root and `meta` size budgets are recalibrated in the header of `scripts/check-size.mjs`.
+The declaration build ran out of memory with 56 icons: the bundler inside tsup 9.0.0 starts a TypeScript program for every icon entry that sits in its own directory. `tsup.config.ts` now points each icon entry at a one-line re-export in a single directory, `.tsup-entries/`, so the icons share one program. The root and `meta` size budgets are recalibrated in the header of `scripts/check-size.mjs`.
 
 ---
 
