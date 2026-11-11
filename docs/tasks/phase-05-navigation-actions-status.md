@@ -16,7 +16,7 @@ The drawings are written as code on the 24 unit grid, as in B0 (decision D1), in
 
 ### Approval
 
-**Batch approved by the delegated auditor on behalf of the founder, 2026-11-11.** The first round approved 34 drawings as drawn, sent back `dashboard`, `library` and `templates` for a redraw and asked for seven adjustments; the second round chose among two variants of each and approved the adjustments:
+**Batch approved by the delegated auditor on behalf of the founder, 2026-11-11.** The first round sent back `dashboard`, `library` and `templates` for a redraw and asked for the adjustments below; the second round approved them:
 
 - **`dashboard`** read as "08": a tall stadium is a zero and two stacked capsules an eight. It is now a wide header tile over a square and a narrow tile, all with small corners.
 - **`library`** read as a bar chart inside a frame. It is now an upright book and a leaning one on a shelf, a cut above it, with corners of 0.5 so a narrow book never reads as a zero.

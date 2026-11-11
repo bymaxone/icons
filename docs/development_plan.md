@@ -291,8 +291,8 @@ These rules apply to every phase. Phase sections only add rules specific to them
 - **Studio adoption deferred (2026-11-11):** `bymax-studio-web` is still in its specification
   phase, with documents only and no `package.json`, so it has nothing to link the package
   into. The adoption becomes a criterion again in the first batch that closes after the Studio
-  has a `package.json`, and at the latest in P5, before 1.0. From then on the rule of D5
-  holds: a name the Studio already uses keeps its old name as a deprecated alias.
+  has a `package.json`, and at the latest in P5, before 1.0. From then on the rule of spec
+  §4.3 holds: a name the Studio already uses keeps its old name as a deprecated alias.
 - **Context / preconditions:** P3 done.
 - **References:** spec §4.1, §16, §17 (D5).
 - **Size:** L
