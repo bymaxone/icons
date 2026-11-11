@@ -12,8 +12,8 @@ import { createIcon } from '@bymax-one/icons/runtime'
  * @since 0.1.0
  */
 export const NarrationIcon = /* @__PURE__ */ createIcon('narration', [
-  ['circle', { cx: 8.75, cy: 8.25, r: 3.25 }],
-  ['path', { d: 'M2.75 20.25v-2.5c0-2.031.469-2.5 2.5-2.5h7c2.031 0 2.5.469 2.5 2.5v2.5' }],
-  ['path', { d: 'M14.279 4.378a6.75 6.75 0 0 1 0 7.744' }],
-  ['path', { d: 'M17.41 3.25a10 10 0 0 1 0 10' }]
+  ['circle', { cx: 9.5, cy: 8.75, r: 3.25 }],
+  ['path', { d: 'M3.5 20.75v-2.5c0-2.031.469-2.5 2.5-2.5h7c2.031 0 2.5.469 2.5 2.5v2.5' }],
+  ['path', { d: 'M15.029 4.878a6.75 6.75 0 0 1 0 7.744' }],
+  ['path', { d: 'M18.16 3.75a10 10 0 0 1 0 10' }]
 ])

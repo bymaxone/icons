@@ -18,7 +18,7 @@ The drawings follow spec §2 as amended by the B1 audit: the cut between distinc
 
 **Batch approved by the delegated auditor on behalf of the founder, 2026-11-11**, with two corrections made in one round:
 
-- **The live area.** Eleven drawings reached past the 2 to 22 guide with their stroke, which spec §2.1 allows only for large round shapes: `brush`, `camera-motion`, `captions`, `eraser`, `frame`, `lip-sync`, `narration`, `render`, `split`, `volume` and `volume-off`. Each now lies inside the guide, as does every drawing of the set.
+- **The live area.** Eleven drawings reached past the 2 to 22 guide with their stroke, which spec §2.1 allows only for large round shapes: `brush`, `camera-motion`, `captions`, `eraser`, `frame`, `lip-sync`, `narration`, `render`, `split`, `volume` and `volume-off`. Each now lies inside the guide, as does every drawing of the set. `narration`, pulled in, then sat off centre, and is shifted 0.75 right and 0.5 down: its ink spans x 2.75 to 20.25 and y 3.0 to 21.5, its ink centroid is at 12.15, 11.62, and at 16 px its head and inner wave keep a clear pixel between them.
 - **The file family.** `file-audio` and `file-video` take the outline and the crease of `file` as drawn in B0, so the three read as one family; the note and the play sit a cut inside them.
 
 The conventional glyphs of the batch (`stop`, `pause`, `move`, `text`, `grid`) join the list in spec §3 item 5, and the list of 16 px masters is approved.
@@ -79,7 +79,7 @@ Measured with resvg at 20x zoom. The bounding box includes the stroke, the centr
 | `minimize`       | 17.50 x 17.50 | 12.22, 12.22 | 11.8% |
 | `move`           | 19.50 x 19.50 | 12.22, 12.23 | 12.7% |
 | `music`          | 18.50 x 18.50 | 13.08, 12.26 | 17.9% |
-| `narration`      | 17.50 x 18.50 | 11.40, 11.12 | 16.4% |
+| `narration`      | 17.50 x 18.50 | 12.15, 11.62 | 16.4% |
 | `palette`        | 18.30 x 19.50 | 11.74, 11.58 | 18.6% |
 | `paperclip`      | 14.00 x 17.00 | 12.30, 11.91 | 13.0% |
 | `pause`          | 13.50 x 16.50 | 12.22, 12.22 | 19.0% |
