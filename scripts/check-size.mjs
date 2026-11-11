@@ -45,22 +45,26 @@ const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 //     path data of the owner's geometry. The headroom fits three more marks; an inline of
 //     the runtime still fails.
 //
-// Every icon module under `dist/icons/<name>/` is measured too, against the targets of the
-// specification: each icon at most 0.6 KiB brotli, and the runtime with one icon at most
-// 1.5 KiB brotli (the two files compressed together, as a consumer's bundle would ship
-// them). Against 148 icons the largest module, `variations`, measures 0.42 KiB
-// brotli and the largest pair 1.46 KiB, so the targets hold as budgets. A drawing that breaks them is
+// Each icon component is measured by `scripts/check-component-size.mjs`, against the targets
+// of the specification: the component a consumer imports, bundled and tree-shaken, at most
+// 0.6 KiB brotli alone and 1.5 KiB with the runtime; against 148 icons the largest,
+// `VariationsIcon`, measures 0.36 KiB and 1.12 KiB. A drawing that breaks them is
 // simplified, not budgeted for: a gear whose tooth corners each carried a cubic curve
 // measured 0.51 KiB alone and 1.58 KiB with the runtime, and drawing those corners with
 // the round join of the stroke brought it to 0.32 KiB and 1.36 KiB.
+//
+// The whole module under `dist/icons/<name>/` is measured here as well, at most 1.5 KiB
+// brotli: what a namespace import or a CommonJS consumer without tree-shaking loads, every
+// variant and alias of the icon together. It catches a module that grows while each of its
+// components stays inside its own budget. Against 148 icons the largest module,
+// `variations`, measures 0.42 KiB brotli.
 const BUDGETS = [
   { name: 'root (re-exports)', path: 'dist/index.mjs', brotli: 1.75 * 1024 },
   { name: 'runtime (Icon base)', path: 'dist/runtime/index.mjs', brotli: 1.25 * 1024 },
   { name: 'meta (typed metadata)', path: 'dist/meta/index.mjs', brotli: 8 * 1024 },
   { name: 'brands (brand marks)', path: 'dist/brands/index.mjs', brotli: 5 * 1024 }
 ]
-const ICON_BUDGET = 0.6 * 1024
-const RUNTIME_WITH_ICON_BUDGET = 1.5 * 1024
+const MODULE_BUDGET = 1.5 * 1024
 
 const fmt = (n) => `${(n / 1024).toFixed(2)} kB`
 
@@ -101,11 +105,8 @@ for (const { name, path, brotli: limit } of BUDGETS) measure(name, readArtifact(
 // One directory per icon entry, `dist/icons/<name>/index.mjs`; none before the first drawing.
 const iconsDir = resolve(ROOT, 'dist', 'icons')
 const icons = existsSync(iconsDir) ? readdirSync(iconsDir).sort() : []
-const runtime = readArtifact('dist/runtime/index.mjs')
 for (const icon of icons) {
-  const bundle = readArtifact(`dist/icons/${icon}/index.mjs`)
-  measure(`icon ${icon}`, bundle, ICON_BUDGET)
-  measure(`runtime + ${icon}`, Buffer.concat([runtime, bundle]), RUNTIME_WITH_ICON_BUDGET)
+  measure(`module ${icon}`, readArtifact(`dist/icons/${icon}/index.mjs`), MODULE_BUDGET)
 }
 
 const pad = (s, n) => String(s).padEnd(n)
@@ -123,7 +124,7 @@ for (const r of rows) {
   )
 }
 if (icons.length === 0) {
-  console.log('  No icon module in dist/icons: the per-icon budgets apply once one is built.')
+  console.log('  No icon module in dist/icons: the module budget applies once one is built.')
 }
 console.log('')
 

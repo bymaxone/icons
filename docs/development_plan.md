@@ -237,7 +237,7 @@ These rules apply to every phase. Phase sections only add rules specific to them
 - **Scope (out):** every other icon; filled variants and 16 px masters.
 - **Definition of Done:**
   - The batch gate of section 4, rule 11, is met, and the founder's approval is recorded.
-  - The per-icon budgets of spec §12 are calibrated in `scripts/check-size.mjs`.
+  - The size budgets of spec §12 are calibrated in `scripts/check-size.mjs` (each whole icon module) and `scripts/check-component-size.mjs` (each component, tree-shaken).
 - **Context / preconditions:** P2 done.
 - **Rules-of-phase:** drawn as code on the grid (decision D1); originality attestation on the
   pull request.
