@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "tags": ["directory", "collection", "group", "project"],
+  "categories": ["files"],
+  "useCases": ["Represents a folder in a file tree", "Groups related items"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

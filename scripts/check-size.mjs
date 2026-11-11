@@ -35,21 +35,25 @@ const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 //   - runtime, 1.25 KiB brotli: the `Icon` base, `createIcon`, the stroke maths and the
 //     accessibility rules, measured at 3228 bytes raw and 1114 bytes brotli. The headroom
 //     fits a small fix, while an inlined dependency such as React fails.
-//   - meta, 1 KiB brotli: the grid, the deep freeze and the twelve categories, measured at
-//     497 bytes brotli with no record, and at 0.85 KiB brotli with the records of the
-//     fixture set (two icons, one brand) that `check:fixtures` builds. Every icon's record
-//     adds to it, so the budget is recalibrated with the drawings.
+//   - meta, 1.5 KiB brotli: the grid, the deep freeze and the twelve categories, measured at
+//     497 bytes brotli with no record, and at 1.13 KiB brotli with the records of the twelve
+//     keystone icons, about 50 bytes brotli per record. The headroom fits a handful of
+//     records or a tag edit; every drawing batch adds records, so each one recalibrates it.
 //   - brands, 0.25 KiB brotli: the entry is empty until a brand mark exists (5 bytes
 //     brotli); the budget is a floor that catches an accidental inline of the runtime.
 //
 // Every icon module under `dist/icons/<name>/` is measured too, against the targets of the
 // specification: each icon at most 0.6 KiB brotli, and the runtime with one icon at most
 // 1.5 KiB brotli (the two files compressed together, as a consumer's bundle would ship
-// them). The targets are calibrated against the first drawings.
+// them). Against the twelve keystone icons the largest module measures 0.33 KiB brotli and
+// the largest pair 1.37 KiB, so the targets hold as budgets. A drawing that breaks them is
+// simplified, not budgeted for: a gear whose tooth corners each carried a cubic curve
+// measured 0.51 KiB alone and 1.58 KiB with the runtime, and drawing those corners with
+// the round join of the stroke brought it to 0.32 KiB and 1.36 KiB.
 const BUDGETS = [
   { name: 'root (re-exports)', path: 'dist/index.mjs', brotli: 0.25 * 1024 },
   { name: 'runtime (Icon base)', path: 'dist/runtime/index.mjs', brotli: 1.25 * 1024 },
-  { name: 'meta (typed metadata)', path: 'dist/meta/index.mjs', brotli: 1 * 1024 },
+  { name: 'meta (typed metadata)', path: 'dist/meta/index.mjs', brotli: 1.5 * 1024 },
   { name: 'brands (brand marks)', path: 'dist/brands/index.mjs', brotli: 0.25 * 1024 }
 ]
 const ICON_BUDGET = 0.6 * 1024

@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "tags": ["house", "start", "main page", "dashboard home"],
+  "categories": ["navigation"],
+  "useCases": ["Links to the start page of an app", "Marks the home tab of a navigation bar"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -74,6 +74,9 @@ and is not built yet.
 
 - ✅ **The grid as data**: `ICON_GRID` holds the viewBox, live area, padding and stroke of the
   24 px master, frozen and typed with literal values
+- ✅ **The design language, approved**: the twelve keystone icons (`home`, `search`, `play`,
+  `plus`, `close`, `check`, `settings`, `user`, `file`, `folder`, `lightning`, `scene`) fix
+  the signature of the set, a 1.5 px cut that keeps distinct parts from touching
 - 📋 **About 125 original icons**: common concepts plus the Studio's own (scene, shot,
   keyframe, credit, spending cap, lip-sync, version)
 - 📋 **Filled variants** for the icons with a stateful meaning, with the same silhouette as
@@ -91,8 +94,8 @@ and is not built yet.
   named image
 - ✅ **`ref` as a regular prop** (React 19), no `forwardRef`
 - ✅ **`absoluteStrokeWidth`** keeps the visual stroke constant at every size
-- 📋 **One component per icon** (`LightningIcon`): the generator that writes them ships; the
-  components arrive with the drawings
+- ✅ **One component per icon** (`LightningIcon`), generated from the drawing, from the root or
+  from `./icons/<name>`
 
 ### 🧩 Developer Experience
 
@@ -117,14 +120,14 @@ and is not built yet.
 | `.`               | Every line and filled component, the `Icon` base and the types  | Partial |
 | `./runtime`       | The `Icon` base, `createIcon` and their types                   | Ready   |
 | `./meta`          | Typed metadata and the `IconName` union, with no React import   | Ready   |
-| `./icons/<name>`  | One icon's components, for consumers that avoid barrels         | Empty   |
+| `./icons/<name>`  | One icon's components, for consumers that avoid barrels         | Partial |
 | `./brands`        | Brand components                                                | Empty   |
-| `./svg/*`         | Raw SVG files (`svg/line/<name>.svg`, `filled`, `sm`, `brands`) | Empty   |
-| `./sprite.svg`    | The SVG sprite, one `<symbol>` per drawing                      | Empty   |
-| `./metadata.json` | Merged metadata of every icon and brand                         | Empty   |
+| `./svg/*`         | Raw SVG files (`svg/line/<name>.svg`, `filled`, `sm`, `brands`) | Partial |
+| `./sprite.svg`    | The SVG sprite, one `<symbol>` per drawing                      | Partial |
+| `./metadata.json` | Merged metadata of every icon and brand                         | Partial |
 
-**Empty** subpaths are built, exported and checked on every pull request, and hold nothing
-until the first drawings land.
+Every subpath is built, exported and checked on every pull request. **Partial** ones hold
+the twelve keystone icons so far; **Empty** ones hold nothing until their first drawing.
 
 ```
 @bymax-one/icons ──► @bymax-one/icons/icons/<name> ──► @bymax-one/icons/runtime ──► react (peer)
@@ -180,25 +183,33 @@ const scale = 48 / ICON_GRID.size
 const visualStroke = ICON_GRID.strokeWidth * scale
 ```
 
-The runtime is available now. Until the first icons ship it renders only drawings you pass
-it, as data; the icon components will be made the same way, one `createIcon` call per icon:
+Every icon is a component, from the root or from its own subpath:
 
 ```tsx
-import { createIcon } from '@bymax-one/icons'
+import { SearchIcon } from '@bymax-one/icons'
+import { SettingsIcon } from '@bymax-one/icons/icons/settings'
 
-const MinusIcon = createIcon('minus', [['line', { x1: 4.75, y1: 12, x2: 19.25, y2: 12 }]])
-
-export function ZoomOut() {
+export function Toolbar() {
   return (
-    <button type="button" aria-label="Zoom out">
-      <MinusIcon size={16} />
-    </button>
+    <nav aria-label="Tools">
+      <button type="button" aria-label="Search">
+        <SearchIcon size={20} />
+      </button>
+      <SettingsIcon size={20} title="Settings" />
+    </nav>
   )
 }
 ```
 
-The icon is silent (`aria-hidden="true"`) because the button carries the name; pass `title`
-to make an icon a named image of its own. See
+An icon inside a labelled button is silent (`aria-hidden="true"`), because the button carries
+the name; `title` makes an icon a named image of its own. `createIcon` makes a component from
+any drawing held as data, the same way the generated icons are made:
+
+````tsx
+import { createIcon } from '@bymax-one/icons'
+
+const MinusIcon = createIcon('minus', [['line', { x1: 4.75, y1: 12.25, x2: 19.25, y2: 12.25 }]])
+``` See
 [Example Integration](./docs/technical_specification.md#15-example-integration) in the
 specification for the intended usage once icons ship.
 
@@ -275,7 +286,8 @@ The pipeline runs from `pnpm generate` (the sources to `src/**/generated`, commi
 at 100% coverage and mutation like the runtime; the scripts in `scripts/` are thin entries,
 which Node 24 runs directly with its native type stripping.
 
-```
+````
+
           icons/line/<name>.svg          icons/meta/<name>.json
           icons/filled/  sm/  brands/    (tags, categories, aliases)
                        │                          │
@@ -305,7 +317,8 @@ which Node 24 runs directly with its native type stripping.
                 ▼
          Server Components and client components alike:
          no hooks, no context, no 'use client'
-```
+
+````
 
 Generated modules are rebuilt from source in CI and compared with the committed copy, so a
 stale copy fails the build. The org package checks then run on the packed tarball.
@@ -432,7 +445,7 @@ pnpm lint          # ESLint
 pnpm lint:icons    # the icon lint over icons/
 pnpm generate      # format the sources and write src/**/generated
 pnpm contact-sheet # render every drawing to reports/contact-sheet.png
-```
+````
 
 ---
 

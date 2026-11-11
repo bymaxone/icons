@@ -13,6 +13,12 @@ and deprecated, each rename with the alias that keeps the old name working.
 
 ### Added
 
+- The twelve keystone icons, which fix the design language of the set: `home`, `search`,
+  `play`, `plus`, `close`, `check`, `settings`, `user`, `file`, `folder`, `lightning` and
+  `scene` (components `HomeIcon` to `SceneIcon`, from the root and from
+  `./icons/<name>`), with their raw SVG files, sprite symbols and metadata. Their
+  signature is a 1.5 px cut that keeps distinct parts from touching: the door of `home`,
+  the handle of `search`, the head of `user`, the crease of `file`.
 - Repository scaffold: package manifest with the `.` and `./meta` exports map,
   build tooling, lint and test configuration, mutation testing configuration,
   commit governance, the open-source baseline files and the package-integrity
@@ -37,7 +43,7 @@ and deprecated, each rename with the alias that keeps the old name working.
   adds `dist/svg/{line,filled,sm,brands}/<name>.svg`, `dist/sprite.svg` (one
   `<symbol>` per drawing) and `dist/metadata.json`.
 - The subpaths `./icons/<name>`, `./brands`, `./svg/*`, `./sprite.svg` and
-  `./metadata.json`, empty until the first drawings land.
+  `./metadata.json`.
 - `./meta` exports `ICON_NAMES`, `ICON_METADATA`, `BRAND_NAMES`, `BRAND_METADATA` and
   `ICON_CATEGORIES`, frozen, with the `IconName`, `BrandName` and `IconCategoryName` unions
   and the record types.

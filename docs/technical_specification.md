@@ -1,8 +1,8 @@
 # @bymax-one/icons: Complete Technical Specification
 
 > **Version:** 1.0.0
-> **Last updated:** 2026-11-08
-> **Status:** Approved for implementation (2026-11-08)
+> **Last updated:** 2026-11-10
+> **Status:** Approved for implementation (2026-11-08); design language approved with the keystone batch (2026-11-10)
 > **Type:** Public npm package (`@bymax-one/icons`)
 
 ---
@@ -88,18 +88,21 @@ These rules are the identity of the set. They are applied to every icon and chec
 
 - **1.5 px** at 24 px, round caps, round joins.
 - Straight strokes sit on `.25` / `.75` coordinates so they render sharp at 1x and 2x.
+- A symmetric primitive is centred on 12.25, the axis the previous rule gives its straight strokes; plus and close share that centre, so they line up side by side in a toolbar.
 - The 16 master uses 1.5 px absolute stroke with fewer details and a 1 px minimum gap.
 
 ### 2.3 Corners
 
 - Continuous-curvature (squircle) corners, not circular arcs. This echoes the glass cards of the Estúdio de Vidro design system.
 - Radius 2.5 on shapes 10 px or larger, 1.25 on smaller shapes, 0 where three or more strokes meet.
+- Details smaller than 3 units, such as gear teeth, take radius 0: the round join of the stroke rounds them, and the path stays short enough for the per-icon size budget.
 
 ### 2.4 Signature details
 
 1. **Overlap knockout.** Where a modifier (plus, slash, badge, check) overlaps a base shape, the base is cut with a uniform 1.5 px gap. Modifiers always sit in the bottom-right 10 × 10 quadrant.
 2. **Spark dot.** A 2 px filled dot is the only fill allowed in a line icon. It marks "generated", "AI" or "new", and always sits at the same top-right position.
 3. **Recessed terminals.** Open strokes stop 0.5 px short of the live-area edge.
+4. **The cut.** Distinct parts never touch. Where one part would meet another (a door and the floor line, a handle and its lens, a head and the shoulders, a crease and its page), it stops short by a 1.5 px gap, which is 3 units between the two centrelines, everywhere in the set. Parts that are attached, such as a clapper arm on its hinge, share a corner with radius 0 instead. The cut is the signature that still reads at 24 px; at 16 px the gap is 1 px, the minimum the 16 master allows.
 
 ### 2.5 Optical balance
 
