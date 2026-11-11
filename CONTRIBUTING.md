@@ -67,14 +67,19 @@ metadata file per name:
 3. Run `pnpm generate`: it normalises the SVGs in place, runs the icon lint, and writes
    `src/icons/generated`, `src/brands/generated` and `src/meta/generated`. Never edit those
    directories by hand; `pnpm check:generated` fails when they differ from the sources.
-4. Run `pnpm contact-sheet` and review `reports/contact-sheet.png`.
-5. List the icon under `Unreleased` in `CHANGELOG.md`, and tick the originality
+4. Review the drawing under `reports/`: `pnpm contact-sheet` (every size, page and accent),
+   `pnpm family-sheet --highlight <names>` (beside the whole set) and
+   `pnpm similarity --names <names>` (its nearest third-party icons). A similarity flag
+   asks for a human review; it does not fail anything.
+5. Run `pnpm check:visual --update` to write the drawing's visual baselines under
+   `visual/`, and commit them with the drawing.
+6. List the icon under `Unreleased` in `CHANGELOG.md`, and tick the originality
    attestation in the pull request.
 
 ## Verification, run before every PR
 
 ```bash
-pnpm typecheck && pnpm lint && pnpm format:check && pnpm lint:icons && pnpm check:generated && pnpm test:cov:all && pnpm build && pnpm size && pnpm check:exports && pnpm check:runtime && pnpm check:fixtures
+pnpm typecheck && pnpm lint && pnpm format:check && pnpm lint:icons && pnpm check:generated && pnpm check:visual && pnpm test:cov:all && pnpm build && pnpm size && pnpm check:exports && pnpm check:runtime && pnpm check:fixtures
 ```
 
 All of the following must pass:

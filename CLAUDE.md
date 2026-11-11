@@ -14,7 +14,7 @@
 - Zero direct dependencies (`"dependencies": {}`). `react ^19` is a peer; tooling stays in `devDependencies`.
 - Export the public API from `src/index.ts` and `src/{subpath}/index.ts`. Use `export type` for types, `export` for components and constants.
 - An entry imports a sibling subpath by package specifier (`@bymax-one/icons/meta`, `@bymax-one/icons/runtime`, `@bymax-one/icons/icons/<name>`), never by relative path, so each module exists once in the published package.
-- `src/**/generated` is written by `pnpm generate` from `icons/`; never edit it by hand. `src/pipeline/` holds the generator, the icon lint and the contact sheet (not shipped, tested like the runtime); its relative imports carry the `.ts` extension because Node runs it with native type stripping.
+- `src/**/generated` is written by `pnpm generate` from `icons/`; never edit it by hand. `src/pipeline/` holds the generator, the icon lint and the visual tools: the contact and family sheets, the visual regression, the similarity check and the pull-request preview (not shipped, tested like the runtime); its relative imports carry the `.ts` extension because Node runs it with native type stripping.
 
 **2. English Only**
 
@@ -78,7 +78,7 @@ Every subpath is built, exported and gated; **Partial** ones hold the drawings s
 ## Verification — Run Before Completing Any Task
 
 ```bash
-pnpm typecheck && pnpm lint && pnpm format:check && pnpm lint:icons && pnpm check:generated && pnpm test:cov:all && pnpm build && pnpm size && pnpm check:exports && pnpm check:runtime && pnpm check:fixtures
+pnpm typecheck && pnpm lint && pnpm format:check && pnpm lint:icons && pnpm check:generated && pnpm check:visual && pnpm test:cov:all && pnpm build && pnpm size && pnpm check:exports && pnpm check:runtime && pnpm check:fixtures
 ```
 
 `pnpm check:api` compares the built `.d.ts`/`.d.cts` with the previous published version and always prints what differs. A difference passes only when the CHANGELOG section of the version being released holds an "Apply to a derived backend" (or "Apply to a consumer") note; there is no override. The release workflow runs it before the publish.

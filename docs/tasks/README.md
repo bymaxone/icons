@@ -16,8 +16,8 @@ Tasks live **one file per phase** in this folder (`phase-NN-<slug>.md`, numbered
 | P0    | [`phase-00-repository-scaffold.md`](./phase-00-repository-scaffold.md) | 0 / 7       | 🔄 In Progress |
 | P1    | [`phase-01-runtime.md`](./phase-01-runtime.md)                         | 7 / 8       | ✅ Done        |
 | P2    | [`phase-02-pipeline.md`](./phase-02-pipeline.md)                       | 10 / 10     | ✅ Done        |
-| B0    | [`phase-03-keystone-icons.md`](./phase-03-keystone-icons.md)           | 3 / 4       | 👀 Review      |
-| P3    | not scaffolded yet                                                     | n/a         | 📋 ToDo        |
+| B0    | [`phase-03-keystone-icons.md`](./phase-03-keystone-icons.md)           | 4 / 4       | ✅ Done        |
+| P3    | [`phase-04-visual-tooling.md`](./phase-04-visual-tooling.md)           | 5 / 6       | 👀 Review      |
 | B1    | not scaffolded yet                                                     | n/a         | 📋 ToDo        |
 | B2    | not scaffolded yet                                                     | n/a         | 📋 ToDo        |
 | B3    | not scaffolded yet                                                     | n/a         | 📋 ToDo        |
@@ -25,7 +25,7 @@ Tasks live **one file per phase** in this folder (`phase-NN-<slug>.md`, numbered
 | P4    | not scaffolded yet                                                     | n/a         | 📋 ToDo        |
 | P5    | not scaffolded yet                                                     | n/a         | 📋 ToDo        |
 | P6    | not scaffolded yet                                                     | n/a         | 📋 ToDo        |
-|       | **Total**                                                              | **20 / 29** | 🔄 In Progress |
+|       | **Total**                                                              | **26 / 35** | 🔄 In Progress |
 
 ---
 

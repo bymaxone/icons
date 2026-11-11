@@ -1,10 +1,10 @@
 # Phase B0: keystone-icons
 
-> **Status**: 👀 Review · **Progress**: 3 / 4 tasks · **Last updated**: 2026-11-10
+> **Status**: ✅ Done · **Progress**: 4 / 4 tasks · **Last updated**: 2026-11-10
 > **Source roadmap**: [`../development_plan.md`](../development_plan.md) §5 (B0)
 > **Source spec**: [`../technical_specification.md`](../technical_specification.md) §2, §3, §4.1, §16, §17 (D1, D2)
 >
-> The design language is approved and the twelve drawings are final. Task 3.4, the phase pull request, is open.
+> The design language is approved and the batch is merged. Four of the twelve drawings are reopened as B0.1 (see the plan).
 
 ---
 
@@ -87,12 +87,12 @@ The 24 px masters scale to 16 px with two details that do not survive: the creas
 
 ## Task index
 
-| ID  | Task                                              | Status    | Priority | Size | Depends on |
-| --- | ------------------------------------------------- | --------- | -------- | ---- | ---------- |
-| 3.1 | Draw the twelve keystone icons and their metadata | ✅ Done   | P0       | M    | none       |
-| 3.2 | Calibrate the size budgets                        | ✅ Done   | P0       | S    | 3.1        |
-| 3.3 | Batch evidence, design approval and spec rules    | ✅ Done   | P0       | S    | 3.1, 3.2   |
-| 3.4 | Phase commit and pull request                     | 👀 Review | P0       | S    | 3.3        |
+| ID  | Task                                              | Status  | Priority | Size | Depends on |
+| --- | ------------------------------------------------- | ------- | -------- | ---- | ---------- |
+| 3.1 | Draw the twelve keystone icons and their metadata | ✅ Done | P0       | M    | none       |
+| 3.2 | Calibrate the size budgets                        | ✅ Done | P0       | S    | 3.1        |
+| 3.3 | Batch evidence, design approval and spec rules    | ✅ Done | P0       | S    | 3.1, 3.2   |
+| 3.4 | Phase commit and pull request                     | ✅ Done | P0       | S    | 3.3        |
 
 ---
 
@@ -189,16 +189,16 @@ Verification:
 
 ### Task 3.4: Phase commit and pull request
 
-- **Status**: 👀 Review
+- **Status**: ✅ Done
 - **Priority**: P0
 - **Size**: S
 - **Depends on**: 3.3
 
 #### Acceptance criteria
 
-- [ ] Committed on `feat/keystone-icons` with Conventional Commits, no attribution trailer.
-- [ ] The PR carries the originality attestation, the evidence and the full gate output.
-- [ ] Merged with CI green, the Codex review approved and no open review thread, checked after every push, before the merge and after it.
+- [x] Committed on `feat/keystone-icons` with Conventional Commits, no attribution trailer.
+- [x] The PR carries the originality attestation, the evidence and the full gate output.
+- [x] Merged with CI green, the Codex review approved and no open review thread, checked after every push, before the merge and after it.
 
 #### Agent prompt
 
@@ -224,3 +224,4 @@ Verification:
 - 3.1 ✅ 2026-11-10 Twelve keystone icons drawn as code on the grid in three rounds (v2, v3, v3.1); lint clean.
 - 3.2 ✅ 2026-11-10 Size budgets calibrated; the figures are in the header of `scripts/check-size.mjs`.
 - 3.3 ✅ 2026-11-10 Contact and family sheets committed; design language approved by the delegated auditor on behalf of the founder (signature A, v3.1); spec §2 gains the cut, the primitive axis and radius 0 on small details.
+- 3.4 ✅ 2026-11-10 phase merged via PR #7 (squash `e4f110b`); Codex review approved, no open thread.

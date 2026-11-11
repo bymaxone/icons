@@ -306,7 +306,8 @@ from the family.
 - `src/meta/`: the React-free entry (the grid, the typed metadata, the name unions).
 - `src/icons/generated/`, `src/brands/generated/`, `src/meta/generated/`: written by
   `pnpm generate`, committed, checked by `pnpm check:generated`.
-- `src/pipeline/`: the generator, the icon lint and the contact sheet; not shipped, held to
+- `src/pipeline/`: the generator, the icon lint and the visual tools (contact and family
+  sheets, visual regression, similarity check, pull-request preview); not shipped, held to
   100% coverage and mutation; run by Node's native type stripping through `scripts/*.mjs`.
 - `icons/`, `schemas/`, `categories.json`: the drawing sources and their schemas;
   `fixtures/icons/`: placeholder drawings for tests and `pnpm check:fixtures`. `site/` comes

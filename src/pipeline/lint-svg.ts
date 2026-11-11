@@ -142,6 +142,15 @@ function normalisedMessages(text: string, kind: SvgKind): string[] {
   }
 }
 
+/**
+ * An element with its geometry attributes only. The live area is measured on this, so an
+ * attribute the lint reports, such as a reference to a file, never reaches the renderer.
+ */
+function geometryOnly({ tag, attributes, geometry }: CheckedElement): DrawingElement {
+  const kept = Object.entries(attributes).filter(([name]) => geometry.includes(name))
+  return { tag, attributes: Object.fromEntries(kept) }
+}
+
 /** The root's allowed drawing elements, with the geometry each may carry. */
 function drawingElements(root: SvgElementNode): readonly CheckedElement[] {
   return root.children.flatMap((child) => {
@@ -184,7 +193,7 @@ export function lintSvg(subject: SvgSubject): SvgReport {
     ...attributeMessages(elements).map(at('svg-attribute')),
     ...fillMessages(elements, subject).map(at('svg-fill')),
     ...precisionMessages(elements).map(at('svg-precision')),
-    ...liveAreaMessages(elements).map(at('svg-live-area'))
+    ...liveAreaMessages(elements.map(geometryOnly)).map(at('svg-live-area'))
   ]
   return { issues, elements: elements.map(({ tag, attributes }) => ({ tag, attributes })) }
 }

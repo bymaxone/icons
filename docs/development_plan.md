@@ -2,7 +2,7 @@
 
 > **Version:** 1.0.0
 > **Last updated:** 2026-11-10
-> **Status:** Approved spec, execution under way (P1 and P2 done; B0 approved and in review; P0 awaits its GitHub settings)
+> **Status:** Approved spec, execution under way (P1, P2 and B0 done; P3 in review; P0 awaits its GitHub settings)
 > **Source spec:** [`technical_specification.md`](./technical_specification.md)
 > **Derived documents:** per-phase task files under `docs/tasks/` (one file per phase, scaffolded one phase at a time)
 
@@ -23,9 +23,9 @@
 
 ## 1. Progress Dashboard
 
-> **Overall progress: 2 / 12 phases (17%)**
-> **Active phase:** B0 (keystone icons: design language approved, pull request in review);
-> P0 still has the GitHub settings of task 0.6; P3 is next
+> **Overall progress: 3 / 12 phases (25%)**
+> **Active phase:** P3 (visual tooling, pull request in review); then B0.1, the redraw of four
+> keystone icons the similarity check flagged; P0 still has the GitHub settings of task 0.6
 > **Blocked phases:** none
 >
 > Engineering phases are `P0` to `P6`; drawing batches are `B0` to `B4`. Every drawing batch
@@ -39,8 +39,8 @@
 | P0  | repository-governance             | 🔄     | 0%       | M    | 2026-11-08   |
 | P1  | runtime                           | ✅     | 100%     | M    | 2026-11-08   |
 | P2  | pipeline                          | ✅     | 100%     | L    | 2026-11-10   |
-| B0  | keystone-icons                    | 👀     | 90%      | M    | 2026-11-10   |
-| P3  | visual-tooling                    | 📋     | 0%       | L    | 2026-11-08   |
+| B0  | keystone-icons                    | ✅     | 100%     | M    | 2026-11-10   |
+| P3  | visual-tooling                    | 👀     | 90%      | L    | 2026-11-10   |
 | B1  | navigation-actions-status         | 📋     | 0%       | L    | 2026-11-08   |
 | B2  | media-audio-files-editor          | 📋     | 0%       | L    | 2026-11-08   |
 | B3  | studio-ai-formats-billing         | 📋     | 0%       | L    | 2026-11-08   |
@@ -248,6 +248,12 @@ These rules apply to every phase. Phase sections only add rules specific to them
   a senior auditor and reviews the finished set. The evidence is in
   [`tasks/phase-03-keystone-icons.md`](./tasks/phase-03-keystone-icons.md) and
   [`contact-sheets/b0/`](./contact-sheets/b0/).
+- **Reopened (B0.1):** the similarity check of P3 flagged four composites as close to the
+  archetype other sets draw (`folder`, `lightning`, `search`, `settings`). The auditor kept
+  the other eight and asked for those four to be redrawn, in a pull request of their own
+  after P3 and before B1, until each lies at a chamfer distance above 0.30 px from every
+  reference while still reading as its concept at 16 px. `search` may instead be accepted
+  as a primitive glyph (spec §3.5), with the measurement that justifies it.
 - **Size:** M
 
 ### P3: visual-tooling

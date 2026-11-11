@@ -430,10 +430,11 @@ it is a regression everywhere at once. The suite is held to a bar beyond "the te
   names; `pnpm check:generated` fails when a generated module is stale
 - ✅ **Fixture package**: `pnpm check:fixtures` builds a copy of the package on placeholder
   icons and runs the generator, the smoke test and every package gate on it
-- 📋 **Visual regression**: every icon rendered at 16, 20, 24 and 48 px, light and dark, and
-  compared with committed baselines
-- 📋 **Similarity check**: every new or changed icon compared with other sets and flagged
-  for review
+- ✅ **Visual regression**: `pnpm check:visual` renders every icon at 16, 20, 24 and 48 px,
+  light and dark, and compares it pixel by pixel with committed baselines
+- ✅ **Similarity check**: `pnpm similarity` compares every icon, normalised for position,
+  size and stroke, with Lucide, Tabler, Phosphor and Heroicons, and flags a close match for
+  review; a pull request that changes a drawing gets a rendered preview comment with it
 
 ```bash
 pnpm test          # unit suite
@@ -444,6 +445,9 @@ pnpm lint          # ESLint
 pnpm lint:icons    # the icon lint over icons/
 pnpm generate      # format the sources and write src/**/generated
 pnpm contact-sheet # render every drawing to reports/contact-sheet.png
+pnpm family-sheet  # render the whole set by category to reports/family-sheet.png
+pnpm similarity    # compare every drawing with four open-source sets, under reports/similarity
+pnpm check:visual  # compare every drawing with its baseline under visual/ (--update rewrites)
 ```
 
 ---

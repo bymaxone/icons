@@ -86,6 +86,11 @@ jobs:
         # Regenerates src/**/generated from icons/ and fails when the committed copy
         # differs, so a hand edit or a forgotten `pnpm generate` cannot merge.
         run: pnpm check:generated
+      - name: Drawings match their visual baselines
+        # Renders every drawing at 16, 20, 24 and 48 px on the light and dark pages and
+        # compares it pixel by pixel with visual/, so a drawing cannot change without its
+        # reviewed baseline changing in the same pull request.
+        run: pnpm check:visual
       - name: Build all subpaths
         run: pnpm build
       - name: Verify build output integrity
