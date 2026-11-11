@@ -215,6 +215,46 @@ describe('calibrationMarkdown', () => {
     scores: { distance, overlap, cosine }
   })
 
+  /** The exact calibration document of the small input below. */
+  const SMALL_DOCUMENT = [
+    '# Similarity calibration',
+    '',
+    'Written by `pnpm similarity --calibrate`; do not edit by hand.',
+    '',
+    'A pair is flagged when its chamfer distance is at most 0.25 px on the 48 px normalised canvas.',
+    '',
+    '| Group | Flagged |',
+    '| --- | --- |',
+    '| Copies (must flag) | 2 / 2 (100.0%) |',
+    '| Independent redesigns | 1 / 3 (33.3%) |',
+    '| Related sets (Lucide ~ Tabler) | 0 / 0 (0.0%) |',
+    '',
+    '### distance',
+    '',
+    '| Group | Pairs | min | p1 | p5 | p50 | p95 | p99 | max |',
+    '| --- | --- | --- | --- | --- | --- | --- | --- | --- |',
+    '| Copies (must flag) | 2 | 0.100 | 0.100 | 0.100 | 0.250 | 0.250 | 0.250 | 0.250 |',
+    '| Independent redesigns | 3 | 0.200 | 0.200 | 0.200 | 0.500 | 1.000 | 1.000 | 1.000 |',
+    '| Related sets (Lucide ~ Tabler) | 0 | NaN | NaN | NaN | NaN | NaN | NaN | NaN |',
+    '',
+    '### overlap',
+    '',
+    '| Group | Pairs | min | p1 | p5 | p50 | p95 | p99 | max |',
+    '| --- | --- | --- | --- | --- | --- | --- | --- | --- |',
+    '| Copies (must flag) | 2 | 0.800 | 0.800 | 0.800 | 0.900 | 0.900 | 0.900 | 0.900 |',
+    '| Independent redesigns | 3 | 0.100 | 0.100 | 0.100 | 0.400 | 0.700 | 0.700 | 0.700 |',
+    '| Related sets (Lucide ~ Tabler) | 0 | NaN | NaN | NaN | NaN | NaN | NaN | NaN |',
+    '',
+    '### cosine',
+    '',
+    '| Group | Pairs | min | p1 | p5 | p50 | p95 | p99 | max |',
+    '| --- | --- | --- | --- | --- | --- | --- | --- | --- |',
+    '| Copies (must flag) | 2 | 0.980 | 0.980 | 0.980 | 0.990 | 0.990 | 0.990 | 0.990 |',
+    '| Independent redesigns | 3 | 0.200 | 0.200 | 0.200 | 0.500 | 0.900 | 0.900 | 0.900 |',
+    '| Related sets (Lucide ~ Tabler) | 0 | NaN | NaN | NaN | NaN | NaN | NaN | NaN |',
+    ''
+  ].join('\n')
+
   it('writes the flagged shares and the quantile tables of each score', () => {
     /**
      * Scenario: the exact document for a small input, with each group's share flagged at
@@ -225,46 +265,7 @@ describe('calibrationMarkdown', () => {
       independent: [pair('c', 0.5, 0.4, 0.5), pair('d', 0.2, 0.7, 0.9), pair('e', 1, 0.1, 0.2)],
       related: []
     }
-    expect(calibrationMarkdown(calibration)).toBe(
-      [
-        '# Similarity calibration',
-        '',
-        'Written by `pnpm similarity --calibrate`; do not edit by hand.',
-        '',
-        'A pair is flagged when its chamfer distance is at most 0.25 px on the 48 px normalised canvas.',
-        '',
-        '| Group | Flagged |',
-        '| --- | --- |',
-        '| Copies (must flag) | 2 / 2 (100.0%) |',
-        '| Independent redesigns | 1 / 3 (33.3%) |',
-        '| Related sets (Lucide ~ Tabler) | 0 / 0 (0.0%) |',
-        '',
-        '### distance',
-        '',
-        '| Group | Pairs | min | p1 | p5 | p50 | p95 | p99 | max |',
-        '| --- | --- | --- | --- | --- | --- | --- | --- | --- |',
-        '| Copies (must flag) | 2 | 0.100 | 0.100 | 0.100 | 0.250 | 0.250 | 0.250 | 0.250 |',
-        '| Independent redesigns | 3 | 0.200 | 0.200 | 0.200 | 0.500 | 1.000 | 1.000 | 1.000 |',
-        '| Related sets (Lucide ~ Tabler) | 0 | NaN | NaN | NaN | NaN | NaN | NaN | NaN |',
-        '',
-        '### overlap',
-        '',
-        '| Group | Pairs | min | p1 | p5 | p50 | p95 | p99 | max |',
-        '| --- | --- | --- | --- | --- | --- | --- | --- | --- |',
-        '| Copies (must flag) | 2 | 0.800 | 0.800 | 0.800 | 0.900 | 0.900 | 0.900 | 0.900 |',
-        '| Independent redesigns | 3 | 0.100 | 0.100 | 0.100 | 0.400 | 0.700 | 0.700 | 0.700 |',
-        '| Related sets (Lucide ~ Tabler) | 0 | NaN | NaN | NaN | NaN | NaN | NaN | NaN |',
-        '',
-        '### cosine',
-        '',
-        '| Group | Pairs | min | p1 | p5 | p50 | p95 | p99 | max |',
-        '| --- | --- | --- | --- | --- | --- | --- | --- | --- |',
-        '| Copies (must flag) | 2 | 0.980 | 0.980 | 0.980 | 0.990 | 0.990 | 0.990 | 0.990 |',
-        '| Independent redesigns | 3 | 0.200 | 0.200 | 0.200 | 0.500 | 0.900 | 0.900 | 0.900 |',
-        '| Related sets (Lucide ~ Tabler) | 0 | NaN | NaN | NaN | NaN | NaN | NaN | NaN |',
-        ''
-      ].join('\n')
-    )
+    expect(calibrationMarkdown(calibration)).toBe(SMALL_DOCUMENT)
   })
 
   it('ends with a newline', () => {

@@ -9,7 +9,7 @@
  * Mocks: the REST call is a scripted fake.
  */
 
-import { mkdirSync, mkdtempSync, rmSync, writeFileSync } from 'node:fs'
+import fs, { mkdirSync, mkdtempSync, rmSync, writeFileSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 
@@ -88,6 +88,48 @@ describe('readArtifact', () => {
      */
     writeFileSync(join(directory, 'manifest.json'), 'x'.repeat(1024 * 1024 + 1))
     expect(() => readArtifact(directory)).toThrow('manifest too large')
+  })
+
+  it('fails on a listed image one byte over the limit, before reading it whole', () => {
+    /**
+     * Scenario: an image larger than the publishable size is refused by the size of the
+     * descriptor it is read through, even when it starts like a PNG.
+     */
+    writeManifest(manifestJson())
+    const big = Buffer.alloc(5 * 1024 * 1024 + 1)
+    big.set(PNG)
+    writeFileSync(join(directory, 'preview.png'), big)
+    expect(() => readArtifact(directory)).toThrow('not a publishable PNG: preview.png')
+  })
+
+  it('checks and reads each file through one descriptor, and closes it', () => {
+    /**
+     * Scenario: the size is taken from the open descriptor and the bytes are read from the
+     * same one, so the file cannot be swapped between the check and the read (a
+     * time-of-check to time-of-use race); every descriptor opened is closed.
+     */
+    writeManifest(manifestJson())
+    writeFileSync(join(directory, 'preview.png'), PNG)
+    const opened = jest.spyOn(fs, 'openSync')
+    const checked = jest.spyOn(fs, 'fstatSync')
+    const closed = jest.spyOn(fs, 'closeSync')
+    readArtifact(directory)
+    const descriptors = opened.mock.results.map((result) => result.value as number)
+    expect(descriptors).toHaveLength(2)
+    expect(checked.mock.calls.map(([descriptor]) => descriptor)).toStrictEqual(descriptors)
+    expect(closed.mock.calls.map(([descriptor]) => descriptor)).toStrictEqual(descriptors)
+  })
+
+  it('passes on an error other than a missing file', () => {
+    /**
+     * Scenario: only a missing file reads as missing; any other failure to open, such as a
+     * permission error, is reported as it is.
+     */
+    writeManifest(manifestJson())
+    jest.spyOn(fs, 'openSync').mockImplementation(() => {
+      throw Object.assign(new Error('permission denied'), { code: 'EACCES' })
+    })
+    expect(() => readArtifact(directory)).toThrow('permission denied')
   })
 
   it('fails when the manifest is missing', () => {
@@ -334,6 +376,46 @@ describe('publishImages', () => {
   const refPath = `/repos/${REPO}/git/ref/heads/${PREVIEW_BRANCH}`
   const contentPath = `/repos/${REPO}/contents/pr-12/${HEAD}/preview.png`
 
+  /** Every call that creates the branch from nothing, then writes one image, in order. */
+  const bootstrapCalls = (): unknown[] => [
+    { method: 'GET', path: refPath, body: undefined },
+    {
+      method: 'POST',
+      path: `/repos/${REPO}/git/trees`,
+      body: {
+        tree: [
+          {
+            path: 'README.md',
+            mode: '100644',
+            type: 'blob',
+            content:
+              'Rendered previews of pull requests that change drawings, written by the icon preview workflow. Nothing here is part of the package.\n'
+          }
+        ]
+      }
+    },
+    {
+      method: 'POST',
+      path: `/repos/${REPO}/git/commits`,
+      body: { message: 'Start the icon preview branch', tree: 'tree-sha', parents: [] }
+    },
+    {
+      method: 'POST',
+      path: `/repos/${REPO}/git/refs`,
+      body: { ref: 'refs/heads/icons-preview', sha: 'commit-sha' }
+    },
+    { method: 'GET', path: `${contentPath}?ref=icons-preview`, body: undefined },
+    {
+      method: 'PUT',
+      path: contentPath,
+      body: {
+        message: 'Preview of pull request 12',
+        content: base64,
+        branch: 'icons-preview'
+      }
+    }
+  ]
+
   it('creates the branch from nothing when it does not exist, then writes the image', async () => {
     /**
      * Scenario: a 404 for the preview branch creates it through a tree, a parentless commit
@@ -348,44 +430,7 @@ describe('publishImages', () => {
       return respond(201)
     })
     await publishImages(request, REPO, artifact())
-    expect(calls).toStrictEqual([
-      { method: 'GET', path: refPath, body: undefined },
-      {
-        method: 'POST',
-        path: `/repos/${REPO}/git/trees`,
-        body: {
-          tree: [
-            {
-              path: 'README.md',
-              mode: '100644',
-              type: 'blob',
-              content:
-                'Rendered previews of pull requests that change drawings, written by the icon preview workflow. Nothing here is part of the package.\n'
-            }
-          ]
-        }
-      },
-      {
-        method: 'POST',
-        path: `/repos/${REPO}/git/commits`,
-        body: { message: 'Start the icon preview branch', tree: 'tree-sha', parents: [] }
-      },
-      {
-        method: 'POST',
-        path: `/repos/${REPO}/git/refs`,
-        body: { ref: 'refs/heads/icons-preview', sha: 'commit-sha' }
-      },
-      { method: 'GET', path: `${contentPath}?ref=icons-preview`, body: undefined },
-      {
-        method: 'PUT',
-        path: contentPath,
-        body: {
-          message: 'Preview of pull request 12',
-          content: base64,
-          branch: 'icons-preview'
-        }
-      }
-    ])
+    expect(calls).toStrictEqual(bootstrapCalls())
   })
 
   it.each([

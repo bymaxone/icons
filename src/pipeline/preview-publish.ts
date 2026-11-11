@@ -8,10 +8,16 @@
  * @layer Pipeline
  */
 
-import { existsSync, readFileSync, statSync } from 'node:fs'
+import { closeSync, fstatSync, openSync, readFileSync } from 'node:fs'
 import { join } from 'node:path'
 
-import { COMMENT_MARKER, commentBody, isPublishablePng, validateManifest } from './preview.ts'
+import {
+  COMMENT_MARKER,
+  commentBody,
+  isPublishablePng,
+  MAX_IMAGE_BYTES,
+  validateManifest
+} from './preview.ts'
 import type { PreviewManifest } from './preview.ts'
 
 /** A GitHub REST response: its status and its parsed body. */
@@ -68,6 +74,30 @@ function unexpected(what: string, response: GitHubResponse): never {
   throw new Error(`${what}: unexpected response ${response.status}`)
 }
 
+/** What `readBounded` returns for a file over its limit. */
+const TOO_LARGE = Symbol('too large')
+
+/**
+ * Reads a file through one descriptor, so the size checked is the size read: a file the
+ * unprivileged job left behind cannot be swapped between the check and the read.
+ *
+ * @returns The bytes, `undefined` when the file does not exist, or `TOO_LARGE`.
+ */
+function readBounded(path: string, max: number): Buffer | typeof TOO_LARGE | undefined {
+  let descriptor: number
+  try {
+    descriptor = openSync(path, 'r')
+  } catch (error) {
+    if ((error as NodeJS.ErrnoException).code === 'ENOENT') return undefined
+    throw error
+  }
+  try {
+    return fstatSync(descriptor).size > max ? TOO_LARGE : readFileSync(descriptor)
+  } finally {
+    closeSync(descriptor)
+  }
+}
+
 /**
  * Reads and validates the artifact the unprivileged job uploaded. Files it does not list
  * are ignored; a listed image that is missing, too large or not a PNG fails.
@@ -77,15 +107,17 @@ function unexpected(what: string, response: GitHubResponse): never {
  * @throws {Error} When the manifest or an image does not validate.
  */
 export function readArtifact(directory: string): PreviewArtifact {
-  const manifestFile = join(directory, 'manifest.json')
-  if (statSync(manifestFile).size > MAX_MANIFEST_BYTES) throw new Error('manifest too large')
-  const manifest = validateManifest(JSON.parse(readFileSync(manifestFile, 'utf8')))
+  const text = readBounded(join(directory, 'manifest.json'), MAX_MANIFEST_BYTES)
+  if (text === undefined) throw new Error('missing manifest.json')
+  if (text === TOO_LARGE) throw new Error('manifest too large')
+  const manifest = validateManifest(JSON.parse(text.toString('utf8')))
   const images = new Map<string, Uint8Array>()
   for (const file of manifest.images) {
-    const path = join(directory, file)
-    if (!existsSync(path)) throw new Error(`missing image ${file}`)
-    const bytes = readFileSync(path)
-    if (!isPublishablePng(bytes)) throw new Error(`not a publishable PNG: ${file}`)
+    const bytes = readBounded(join(directory, file), MAX_IMAGE_BYTES)
+    if (bytes === undefined) throw new Error(`missing image ${file}`)
+    if (bytes === TOO_LARGE || !isPublishablePng(bytes)) {
+      throw new Error(`not a publishable PNG: ${file}`)
+    }
     images.set(file, bytes)
   }
   return { manifest, images }
