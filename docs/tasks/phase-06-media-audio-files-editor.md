@@ -18,7 +18,7 @@ The drawings follow spec §2 as amended by the B1 audit: the cut between distinc
 
 **Batch approved by the delegated auditor on behalf of the founder, 2026-11-11**, with two corrections made in one round:
 
-- **The live area.** Eleven drawings reached past the 2 to 22 guide with their stroke, which spec §2.1 allows only for large round shapes: `brush`, `camera-motion`, `captions`, `eraser`, `frame`, `lip-sync`, `narration`, `render`, `split`, `volume` and `volume-off`. Each now lies inside the guide, as does every drawing of the set. `narration`, pulled in, then sat off centre, and is shifted 0.75 right and 0.5 down: its ink spans x 2.75 to 20.25 and y 3.0 to 21.5, its ink centroid is at 12.15, 11.62, and at 16 px its head and inner wave keep a clear pixel between them.
+- **The live area.** Eleven drawings reached past the 2 to 22 guide with their stroke, which spec §2.1 allows only for large round shapes: `brush`, `camera-motion`, `captions`, `eraser`, `frame`, `lip-sync`, `narration`, `render`, `split`, `volume` and `volume-off`. Each now lies inside the guide, as does every drawing of the set. `narration`, pulled in, then sat off centre, so it was moved to centre it in the live area.
 - **The file family.** `file-audio` and `file-video` take the outline and the crease of `file` as drawn in B0, so the three read as one family; the note and the play sit a cut inside them.
 
 The conventional glyphs of the batch (`stop`, `pause`, `move`, `text`, `grid`) join the list in spec §3 item 5, and the list of 16 px masters is approved.
