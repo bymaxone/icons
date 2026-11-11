@@ -369,11 +369,11 @@ These rules apply to every phase. Phase sections only add rules specific to them
 
 ### R1: aesthetic-redraw
 
-- **Goal:** Redraw the 21 drawings that are not understood at a glance at 24 px on the dark page, or that are not beautiful, before the set is published.
-- **Why:** the founder, on the catalog: an icon must be beautiful and read at once, not only pass the rules. The delegated auditor audited all 148 drawings again on dark sheets and listed 18 items.
+- **Goal:** Redraw the drawings that are not understood at a glance at 24 px on the dark page, or that are not beautiful, before the set is published.
+- **Why:** the founder, on the catalog: an icon must be beautiful and read at once, not only pass the rules. The delegated auditor audited every drawing again on dark sheets and listed the items below.
 - **Scope (in):** octopus, gift, globe, brush, crop, lock; version, plan, style, hand, eraser, repair; lip-sync, folder-stack, agent, the four aspect formats, extend, library. Their filled and 16 px drawings are redrawn with them.
-- **Process:** two or three variants per item on one sheet, the current drawing first: the line drawing at 48 on the dark page, at 24 and 16 px 1x, at 48 on the light page, and blurred. The auditor chooses; the same rules apply (the cut, the ink ceiling, G, similarity d > 0.30). One pull request per group of six, in the order above.
-- **Definition of Done:** the three groups are merged, each approved by the auditor.
+- **Process:** two or three variants per item on one sheet, the current drawing first: the line drawing at 48 on the dark page, at 24 and 16 px 1x, at 48 on the light page, and blurred. The auditor chooses; the same rules apply (the cut, the ink ceiling, G, similarity d > 0.30). One pull request per group, in the order above.
+- **Definition of Done:** every group is merged, each approved by the auditor.
 - **Group 1 ✅ (2026-11-11):** octopus, gift, globe, brush, crop and lock, approved by the delegated auditor on behalf of the founder.
 - **Size:** M
 
