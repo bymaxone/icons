@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Delivery",
+  "tags": ["truck", "delivery", "shipping", "transport"],
+  "categories": ["commerce"],
+  "useCases": ["Shows the shipping status", "Opens the delivery options"],
+  "aliases": [
+    {
+      "name": "shipping",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

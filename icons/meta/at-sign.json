@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Mention",
+  "tags": ["at", "mention", "email", "handle"],
+  "categories": ["communication"],
+  "useCases": ["Mentions a person", "Shows an email address"],
+  "aliases": [
+    {
+      "name": "mention",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

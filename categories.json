@@ -60,6 +60,14 @@
     {
       "name": "data-charts",
       "title": "Data and charts"
+    },
+    {
+      "name": "commerce",
+      "title": "Commerce"
+    },
+    {
+      "name": "communication",
+      "title": "Communication"
     }
   ]
 }

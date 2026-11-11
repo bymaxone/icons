@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Print",
+  "tags": ["printer", "print", "paper", "document"],
+  "categories": ["places-devices"],
+  "useCases": ["Prints a page", "Opens the print settings"],
+  "aliases": [
+    {
+      "name": "print",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

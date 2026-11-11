@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Cart",
+  "tags": ["cart", "shopping", "basket", "checkout"],
+  "categories": ["commerce"],
+  "useCases": ["Opens the shopping cart", "Adds an item to the cart"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

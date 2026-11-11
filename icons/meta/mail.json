@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Mail",
+  "tags": ["mail", "email", "message", "envelope"],
+  "categories": ["communication"],
+  "useCases": ["Sends an email", "Opens the inbox of messages"],
+  "aliases": [
+    {
+      "name": "email",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

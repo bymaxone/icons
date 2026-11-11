@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Mute notifications",
+  "tags": ["bell", "mute", "silent", "notifications"],
+  "categories": ["communication"],
+  "useCases": ["Mutes the notifications", "Shows a muted channel"],
+  "aliases": [
+    {
+      "name": "notifications-off",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line", "filled"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

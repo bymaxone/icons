@@ -90,6 +90,13 @@ and deprecated, each rename with the alias that keeps the old name working.
   `calendar`, `alarm-clock` (alias `alarm`), `stopwatch` (alias `timer`), `file-text` (alias
   `pdf`), `file-zip`, `file-plus`, `folder-open`, `folder-plus`, `book-open`, `cloud-upload`,
   `cloud-download`, `cpu` and `hard-drive`, and the category `data-charts`.
+- Commerce, communication, places and devices, 35 drawings (B5d): `cart`, `bag`, `tag`,
+  `percent`, `coins`, `bank`, `truck`, `store`, `package`, `briefcase`, `award`, `mail`, `phone`,
+  `phone-hang-up` (aliases `phone-off`, `end-call`, `hang-up`), `inbox`, `at-sign`, `bell-off`,
+  `thumbs-up`, `thumbs-down`, `smile`, `headphones`, `map-pin`, `map`, `compass`, `smartphone`,
+  `tablet`, `laptop`, `printer`, `wifi`, `wifi-off`, `battery`, `cloud`, `cloud-off`, `video-off`
+  and `camera-off`, with filled `thumbs-up`, `thumbs-down`, `map-pin` and `bell-off`, and the
+  categories `commerce` and `communication`.
 - The brand marks, in their owners' geometry from Simple Icons, filled with
   `currentColor` (`GoogleBrandIcon` and the others, from `./brands`). Microsoft and
   LinkedIn are not included, and the colour `google-color` mark is deferred.

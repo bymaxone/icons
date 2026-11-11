@@ -1,0 +1,24 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "End call",
+  "tags": ["phone", "hang up", "end call", "reject"],
+  "categories": ["communication"],
+  "useCases": ["Ends a call", "Rejects an incoming call"],
+  "aliases": [
+    {
+      "name": "phone-off",
+      "deprecated": false
+    },
+    {
+      "name": "end-call",
+      "deprecated": false
+    },
+    {
+      "name": "hang-up",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

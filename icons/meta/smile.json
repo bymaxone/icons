@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Reaction",
+  "tags": ["smile", "reaction", "emoji", "happy"],
+  "categories": ["communication"],
+  "useCases": ["Adds a reaction", "Opens the emoji picker"],
+  "aliases": [
+    {
+      "name": "emoji",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Location",
+  "tags": ["location", "pin", "place", "address"],
+  "categories": ["places-devices"],
+  "useCases": ["Shows a location", "Picks an address"],
+  "aliases": [
+    {
+      "name": "location",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line", "filled"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Inbox",
+  "tags": ["inbox", "tray", "messages", "incoming"],
+  "categories": ["communication"],
+  "useCases": ["Opens the inbox", "Shows incoming items"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}
