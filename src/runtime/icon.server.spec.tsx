@@ -191,6 +191,61 @@ describe('Icon server render: size, stroke and colour', () => {
   })
 })
 
+describe('Icon server render: a 16 px master', () => {
+  it('renders at 16 px with a 1.5 px stroke by default', () => {
+    /**
+     * Scenario: a drawing made for 16 px is drawn on the 24 grid; with no props it
+     * renders at its master size, and the default 1.5 px stroke is written as 2.25
+     * units, which is 1.5 px at 16.
+     */
+    expect(renderToStaticMarkup(<Icon iconNode={[]} masterSize={16} />)).toBe(
+      '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" ' +
+        'fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" ' +
+        'stroke-linejoin="round" focusable="false" aria-hidden="true"></svg>'
+    )
+  })
+
+  it('reads strokeWidth in px at the master and scales it with the drawing', () => {
+    /**
+     * Scenario: `strokeWidth={2}` on a 16 px master is 2 px at 16, written as 3
+     * units; at 32 px the drawing doubles and so does the stroke, so the written
+     * width does not change with the size.
+     */
+    expect(renderToStaticMarkup(<Icon iconNode={[]} masterSize={16} strokeWidth={2} />)).toContain(
+      'stroke-width="3"'
+    )
+    expect(
+      renderToStaticMarkup(<Icon iconNode={[]} masterSize={16} size={32} strokeWidth={2} />)
+    ).toContain(
+      'width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"'
+    )
+  })
+
+  it('keeps the stroke in px at every size with absoluteStrokeWidth', () => {
+    /**
+     * Scenario: `absoluteStrokeWidth` writes `strokeWidth * 24 / size` on any
+     * master, so the default 1.5 px stays 1.5 px at 32 (1.125 units) and at 16
+     * (2.25 units).
+     */
+    expect(
+      renderToStaticMarkup(<Icon iconNode={[]} masterSize={16} size={32} absoluteStrokeWidth />)
+    ).toContain('stroke-width="1.125"')
+    expect(
+      renderToStaticMarkup(<Icon iconNode={[]} masterSize={16} absoluteStrokeWidth />)
+    ).toContain('stroke-width="2.25"')
+  })
+
+  it('lets an explicit size win over the master size', () => {
+    /**
+     * Scenario: the master size is only the default; a consumer `size` sets the
+     * dimensions as on any icon.
+     */
+    expect(renderToStaticMarkup(<Icon iconNode={[]} masterSize={16} size={20} />)).toContain(
+      'width="20" height="20"'
+    )
+  })
+})
+
 describe('Icon server render: fill paint', () => {
   it('fills a filled icon in the colour and writes no stroke attribute', () => {
     /**

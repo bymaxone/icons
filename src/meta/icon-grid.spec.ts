@@ -43,6 +43,15 @@ describe('ICON_GRID', () => {
     expect(ICON_GRID.strokeLinejoin).toBe('round')
   })
 
+  it('draws the 16 px masters on the same grid, for 16 px', () => {
+    /**
+     * Scenario: a 16 px master is drawn on the 24-unit grid and made for 16 px, so
+     * the stroke it shares with the set, 1.5 px at its size, is 2.25 units.
+     */
+    expect(ICON_GRID.smSize).toBe(16)
+    expect((ICON_GRID.strokeWidth * ICON_GRID.size) / ICON_GRID.smSize).toBe(2.25)
+  })
+
   it('exposes exactly the documented keys', () => {
     /**
      * Scenario: the grid is public data; a key added or dropped by accident is a
@@ -52,6 +61,7 @@ describe('ICON_GRID', () => {
       'liveArea',
       'padding',
       'size',
+      'smSize',
       'strokeLinecap',
       'strokeLinejoin',
       'strokeWidth',

@@ -86,6 +86,17 @@ const STROKE_ROOT: Readonly<Record<string, string>> = {
   'stroke-linejoin': ICON_GRID.strokeLinejoin
 }
 
+/**
+ * A 16 px master: the same grid and paint, made for 16 px. Its stroke is the set's
+ * 1.5 px at that size, written in units of the shared grid.
+ */
+const SM_ROOT: Readonly<Record<string, string>> = {
+  ...STROKE_ROOT,
+  width: String(ICON_GRID.smSize),
+  height: String(ICON_GRID.smSize),
+  'stroke-width': String((ICON_GRID.strokeWidth * ICON_GRID.size) / ICON_GRID.smSize)
+}
+
 const FILL_ROOT: Readonly<Record<string, string>> = { ...CANVAS, fill: 'currentColor' }
 
 /**
@@ -97,5 +108,6 @@ const FILL_ROOT: Readonly<Record<string, string>> = { ...CANVAS, fill: 'currentC
  * @returns The attribute names and values of the `<svg>` element.
  */
 export function rootAttributes(kind: SvgKind): Readonly<Record<string, string>> {
+  if (kind === 'sm') return SM_ROOT
   return isStrokeKind(kind) ? STROKE_ROOT : FILL_ROOT
 }

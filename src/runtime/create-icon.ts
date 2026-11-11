@@ -15,6 +15,12 @@ import type { IconProps } from './icon-props'
 export interface IconOptions {
   /** How the drawing is painted. Default `stroke`; `fill` for filled icons and brand marks. */
   paint?: IconPaint | undefined
+  /**
+   * The px size the drawing is made for: 24 (the default) for the line and filled
+   * icons, 16 for a 16 px master. It is the component's default `size`, and
+   * `strokeWidth` is read in px at this size.
+   */
+  masterSize?: number | undefined
 }
 
 /** A named icon component, as {@link createIcon} returns it. */
@@ -53,7 +59,8 @@ function toComponentName(name: string): string {
  * @param iconNode - The drawing, as data.
  * @param options - How the drawing is painted.
  * @returns The component, with `displayName` set from the name.
- * @throws {TypeError} When `name` is not kebab-case.
+ * @throws {TypeError} When `name` is not kebab-case, or `masterSize` is not a
+ *   positive finite number.
  *
  * @example
  * ```ts
@@ -70,13 +77,17 @@ export function createIcon(
   if (!ICON_NAME.test(name)) {
     throw new TypeError(`Icon name ${JSON.stringify(name)} is not kebab-case.`)
   }
+  const { paint, masterSize } = options
+  if (masterSize !== undefined && !(Number.isFinite(masterSize) && masterSize > 0)) {
+    throw new TypeError(`Icon master size ${String(masterSize)} is not a positive number.`)
+  }
   const iconClassName = `bx-icon bx-icon-${name}`
-  const { paint } = options
   const component = ({ className, ...props }: IconProps): ReactElement =>
     Icon({
       ...props,
       iconNode,
       paint,
+      masterSize,
       className: className ? `${iconClassName} ${className}` : iconClassName
     })
   component.displayName = toComponentName(name)

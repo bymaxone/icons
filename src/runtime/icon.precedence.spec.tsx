@@ -131,12 +131,21 @@ describe('Icon precedence: root attributes', () => {
   it('does not write the runtime props as attributes', () => {
     /**
      * Scenario: `size`, `strokeWidth`, `absoluteStrokeWidth`, `color`, `title`,
-     * `paint` and `iconNode` are inputs to the runtime, never SVG attributes.
+     * `paint`, `masterSize` and `iconNode` are inputs to the runtime, never SVG
+     * attributes.
      */
     const html = render(
-      <Icon iconNode={FIXTURE} paint="stroke" size={20} color="red" title="X" absoluteStrokeWidth />
+      <Icon
+        iconNode={FIXTURE}
+        paint="stroke"
+        size={20}
+        color="red"
+        title="X"
+        masterSize={16}
+        absoluteStrokeWidth
+      />
     )
-    expect(html).not.toMatch(/\s(size|color|title|paint|iconNode|absoluteStrokeWidth)=/i)
+    expect(html).not.toMatch(/\s(size|color|title|paint|iconNode|absoluteStrokeWidth|masterSize)=/i)
   })
 })
 

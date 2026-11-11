@@ -89,7 +89,7 @@ These rules are the identity of the set. They are applied to every icon and chec
 - **1.5 px** at 24 px, round caps, round joins.
 - Straight strokes sit on `.25` / `.75` coordinates so they render sharp at 1x and 2x.
 - A symmetric primitive is centred on 12.25, the axis the previous rule gives its straight strokes; plus and close share that centre, so they line up side by side in a toolbar.
-- The 16 master uses 1.5 px absolute stroke with fewer details and a 1 px minimum gap.
+- The 16 master uses 1.5 px absolute stroke with fewer details and a 1 px minimum gap. It is drawn on the same 24-unit grid and made for 16 px, so its stroke is 2.25 units (1.5 px at 16) and its minimum gap 1.5 units; a component renders at 16 px by default, and its `strokeWidth` is read in px at 16.
 
 ### 2.3 Corners
 
@@ -279,9 +279,9 @@ Generated modules are rebuilt from source in CI and compared with the committed 
 
 ```ts
 interface IconProps extends Omit<SVGProps<SVGSVGElement>, 'ref'> {
-  /** Width and height. Default 24. */
+  /** Width and height. Default the master size: 24, or 16 for a 16 px master. */
   size?: number | string | undefined
-  /** Stroke width at 24 px. Default 1.5. Ignored by filled and brand icons. */
+  /** Stroke width in px at the master size. Default 1.5. Ignored by filled and brand icons. */
   strokeWidth?: number | string | undefined
   /** Keep the visual stroke width constant at every size. */
   absoluteStrokeWidth?: boolean | undefined
@@ -294,7 +294,8 @@ interface IconProps extends Omit<SVGProps<SVGSVGElement>, 'ref'> {
 ```
 
 - Every optional prop also accepts `undefined`, as `SVGProps` does, so consumers on `exactOptionalPropertyTypes` can pass a value that may be absent.
-- `absoluteStrokeWidth` computes `strokeWidth × 24 / size` when both are numeric and the size is positive; otherwise the stroke width is used unchanged.
+- `absoluteStrokeWidth` computes `strokeWidth × 24 / size` when both are numeric and the size is positive; otherwise the stroke scales with the drawing.
+- Without it, a width is written as given on a 24 px master and as `strokeWidth × 24 / 16` on a 16 px master (`createIcon` option `masterSize: 16`); a width that is not a finite number is written unchanged.
 - `ref` is a regular prop (React 19); no `forwardRef`.
 
 ### 8.4 Server Components

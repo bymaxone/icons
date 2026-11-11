@@ -113,10 +113,11 @@ describe('normalizeSvg', () => {
 
   it('treats a 16 px master as stroked', () => {
     /**
-     * Scenario: the sm masters are line drawings, painted like the line icons.
+     * Scenario: the sm masters are line drawings, painted like the line icons, on a
+     * 16 px root whose 1.5 px stroke is written as 2.25 units of the grid.
      */
     expect(normalizeSvg('<svg><path d="M4 12h16" fill="red"/></svg>', 'sm')).toBe(
-      `${STROKE_ROOT}\n  <path d="M4 12h16"/>\n</svg>\n`
+      `${STROKE_ROOT.replace('width="24" height="24"', 'width="16" height="16"').replace('stroke-width="1.5"', 'stroke-width="2.25"')}\n  <path d="M4 12h16"/>\n</svg>\n`
     )
   })
 
