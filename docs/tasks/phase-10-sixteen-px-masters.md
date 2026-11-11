@@ -1,10 +1,10 @@
 # Phase B4c: sixteen-px-masters
 
-> **Status**: 👀 Review · **Progress**: 2 / 4 tasks · **Last updated**: 2026-11-11
+> **Status**: ✅ Done · **Progress**: 4 / 4 tasks · **Last updated**: 2026-11-11
 > **Source roadmap**: [`../development_plan.md`](../development_plan.md) §5 (B4)
 > **Source spec**: [`../technical_specification.md`](../technical_specification.md) §2.2, §2.5, §4.2
 >
-> The drawings wait for the delegated auditor's approval on behalf of the founder.
+> The drawings are approved by the delegated auditor on behalf of the founder, 2026-11-11.
 
 ---
 
@@ -25,12 +25,12 @@ B4c draws the 16 px masters of spec §4.2: the icons used at 16 px in the shell 
 
 ## Task index
 
-| ID   | Task                                      | Status    | Priority | Size | Depends on |
-| ---- | ----------------------------------------- | --------- | -------- | ---- | ---------- |
-| 10.1 | Draw the 16 px masters and their metadata | ✅ Done   | P0       | L    | none       |
-| 10.2 | Evidence, budgets and spec §2.5           | ✅ Done   | P0       | S    | 10.1       |
-| 10.3 | Approval                                  | 👀 Review | P0       | S    | 10.2       |
-| 10.4 | Phase commit and pull request             | 📋 ToDo   | P0       | S    | 10.3       |
+| ID   | Task                                      | Status  | Priority | Size | Depends on |
+| ---- | ----------------------------------------- | ------- | -------- | ---- | ---------- |
+| 10.1 | Draw the 16 px masters and their metadata | ✅ Done | P0       | L    | none       |
+| 10.2 | Evidence, budgets and spec §2.5           | ✅ Done | P0       | S    | 10.1       |
+| 10.3 | Approval                                  | ✅ Done | P0       | S    | 10.2       |
+| 10.4 | Phase commit and pull request             | ✅ Done | P0       | S    | 10.3       |
 
 ---
 
@@ -40,3 +40,5 @@ B4c draws the 16 px masters of spec §4.2: the icons used at 16 px in the shell 
 
 - 10.1 ✅ 2026-11-11 The 16 px masters with their metadata.
 - 10.2 ✅ 2026-11-11 Sheets, per-icon measures, similarity and spec §2.5 updated.
+- 10.3 ✅ 2026-11-11 Approved by the delegated auditor on behalf of the founder, after the redraw of five masters.
+- 10.4 ✅ 2026-11-11 Phase pull request.
