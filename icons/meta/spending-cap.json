@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "tags": ["limit", "budget", "gauge", "cap"],
+  "categories": ["credits-billing"],
+  "useCases": ["Sets a monthly spending cap", "Warns when the cap is near"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

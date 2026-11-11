@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "tags": ["question", "support", "faq", "how to"],
+  "categories": ["system"],
+  "useCases": ["Opens the help center", "Shows a hint"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

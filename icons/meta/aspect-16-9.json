@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "tags": ["landscape", "widescreen", "ratio", "horizontal"],
+  "categories": ["formats"],
+  "useCases": ["Sets a landscape video format", "Labels a widescreen export"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "tags": ["screen", "display", "desktop", "system theme"],
+  "categories": ["system"],
+  "useCases": ["Follows the system theme", "Labels a desktop preview"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

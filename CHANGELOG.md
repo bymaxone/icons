@@ -35,6 +35,14 @@ and deprecated, each rename with the alias that keeps the old name working.
   `file-video`, `file-audio`, `image`, `paperclip`, `reference-card` and `asset`. Editor and
   canvas: `layers`, `crop`, `move`, `zoom-in`, `zoom-out`, `hand`, `cursor`, `text`,
   `align-center`, `grid`, `palette`, `brush`, `eraser`, `split` and `mask`.
+- The Studio, AI, format, billing, people and system icons, 42 drawings. Credits and
+  billing: `wallet`, `card`, `receipt`, `gift`, `lightning-stack` (alias `credit-pack`),
+  `spending-cap` and `plan`. People and roles: `users`, `user-plus`, `crown`, `mail-invite`,
+  `log-in`, `log-out`, `character` and `role`. Formats: `aspect-16-9`, `aspect-9-16`,
+  `aspect-1-1`, `aspect-4-5`, `duration` and `resolution`. AI and agent: `sparkle`,
+  `octopus` (alias `polvi`), `agent`, `prompt`, `generate`, `regenerate`, `variations`,
+  `storyboard`, `script` and `style`. System: `bell`, `message`, `help`, `feedback`, `sun`,
+  `moon`, `monitor`, `globe`, `keyboard`, `command` and `accent`.
 - Repository scaffold: package manifest with the `.` and `./meta` exports map,
   build tooling, lint and test configuration, mutation testing configuration,
   commit governance, the open-source baseline files and the package-integrity

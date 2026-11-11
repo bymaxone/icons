@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "tags": ["length", "time span", "measure", "runtime"],
+  "categories": ["formats"],
+  "useCases": ["Sets the length of a video", "Shows the duration of a clip"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

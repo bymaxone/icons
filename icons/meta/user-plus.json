@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "tags": ["add user", "invite", "new member", "person plus"],
+  "categories": ["people-roles"],
+  "useCases": ["Adds a member to the team", "Invites a collaborator"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

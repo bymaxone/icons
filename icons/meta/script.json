@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "tags": ["screenplay", "document", "text", "dialogue"],
+  "categories": ["ai-agent"],
+  "useCases": ["Opens the script editor", "Generates a script"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "tags": ["colour", "drop", "theme colour", "tint"],
+  "categories": ["system"],
+  "useCases": ["Changes the accent colour", "Shows the current accent"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

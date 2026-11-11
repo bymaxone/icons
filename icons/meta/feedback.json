@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "tags": ["review", "rating", "comment", "suggestion"],
+  "categories": ["system"],
+  "useCases": ["Sends feedback", "Rates a result"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

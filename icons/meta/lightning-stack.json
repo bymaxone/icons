@@ -1,0 +1,15 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "tags": ["credits", "bundle", "top up", "pack"],
+  "categories": ["credits-billing"],
+  "useCases": ["Buys a pack of credits", "Shows the credits of a bundle"],
+  "aliases": [
+    {
+      "name": "credit-pack",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

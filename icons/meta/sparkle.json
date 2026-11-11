@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "tags": ["ai", "magic", "generated", "star"],
+  "categories": ["ai-agent"],
+  "useCases": ["Marks an AI feature", "Labels generated content"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

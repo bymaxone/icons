@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "tags": ["sign in", "enter", "login", "door"],
+  "categories": ["people-roles"],
+  "useCases": ["Signs in", "Links to the sign-in page"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}
