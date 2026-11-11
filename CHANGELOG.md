@@ -57,8 +57,8 @@ and deprecated, each rename with the alias that keeps the old name working.
   takes a `masterSize` option (16 for a `<Name>SmIcon`, 24 by default) and `Icon` a
   `masterSize` prop: it is the default `size`, and `strokeWidth` is read in px at that size,
   so a 16 px master writes its stroke as 2.25 units of the 24 grid. `ICON_GRID.smSize` is
-  `16`, and the raw SVG files and sprite symbols of the 16 px masters carry
-  `width="16" height="16"` and `stroke-width="2.25"`. Apply to a consumer: nothing changes
+  `16`. The raw SVG files of the 16 px masters carry `width="16" height="16"`, and both
+  those files and the sprite symbols carry `stroke-width="2.25"`. Apply to a consumer: nothing changes
   for the line and filled icons; on a 16 px master, `strokeWidth` is in px at 16, and
   `absoluteStrokeWidth` still writes `strokeWidth * 24 / size`.
 - The brand marks, in their owners' geometry from Simple Icons, filled with
