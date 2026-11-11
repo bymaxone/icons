@@ -18,6 +18,7 @@
  *   with `currentColor`, apart from a multicolour mark's own colours.
  * - `svg-precision`: numbers carry at most three decimals and no exponent.
  * - `svg-live-area`: the drawing paints something, inside the live area.
+ * - `svg-ink`: a line drawing and a 16 px master stay under their ink ceilings (spec 2.5).
  * - `meta-json`: a metadata file is JSON.
  * - `meta-schema`: it validates against the schema its `$schema` names.
  * - `meta-pair`: every drawing has metadata and every metadata file its drawing.
@@ -36,6 +37,7 @@ export type RuleId =
   | 'svg-fill'
   | 'svg-precision'
   | 'svg-live-area'
+  | 'svg-ink'
   | 'meta-json'
   | 'meta-schema'
   | 'meta-pair'

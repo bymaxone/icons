@@ -349,3 +349,36 @@ describe('lintSources: the repository', () => {
     expect(lintSources(readSources({ root: REPO_ROOT, icons })).issues).toStrictEqual([])
   })
 })
+
+describe('lintSources: svg-ink', () => {
+  /** Thirteen strokes across the live area: a drawing far over the ink ceiling. */
+  const HEAVY = Array.from(
+    { length: 13 },
+    (_, k) => `<path d="M2.75 ${2.75 + 1.5 * k}h18.5"/>`
+  ).join('')
+
+  it('reports a line drawing over the ink ceiling', () => {
+    /**
+     * Scenario: a drawing that passes every rule of its own file is measured, and one that
+     * covers far more than 21.5% of the canvas is reported against the rule.
+     */
+    const issues = issuesOf(
+      { line: { 'ring.svg': drawing('line', HEAVY) }, meta: { 'ring.json': iconMeta() } },
+      'svg-ink'
+    )
+    expect(issues).toHaveLength(1)
+    expect(issues[0]?.file).toBe('icons/line/ring.svg')
+  })
+
+  it('does not measure a drawing that fails a rule of its own file', () => {
+    /**
+     * Scenario: a drawing with another issue may not render, so its ink is not measured; only
+     * its own issue is reported. A sound drawing under the ceiling raises nothing.
+     */
+    const flawed = drawing('line', HEAVY).replace('<path ', '<path transform="scale(1)" ')
+    const tree = { line: { 'ring.svg': flawed }, meta: { 'ring.json': iconMeta() } }
+    expect(issuesOf(tree, 'svg-ink')).toStrictEqual([])
+    expect(issuesOf(tree, 'svg-attribute').length).toBeGreaterThan(0)
+    expect(issuesOf(ONE_ICON, 'svg-ink')).toStrictEqual([])
+  })
+})
