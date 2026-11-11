@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Checked",
+  "tags": ["checkbox", "checked", "done", "select"],
+  "categories": ["status"],
+  "useCases": ["Marks a task as done", "Selects an item in a list"],
+  "variants": ["line", "filled"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

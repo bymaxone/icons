@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Open in a new window",
+  "tags": ["external link", "open", "new window", "outside"],
+  "categories": ["actions", "navigation"],
+  "useCases": ["Opens a page outside the product", "Marks a link that leaves the app"],
+  "aliases": [
+    {
+      "name": "external-link",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

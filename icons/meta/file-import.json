@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Import",
+  "tags": ["import", "file", "bring in", "upload file"],
+  "categories": ["actions", "files"],
+  "useCases": ["Imports a file into the project", "Brings data in from another tool"],
+  "aliases": [
+    {
+      "name": "import",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Power",
+  "tags": ["power", "turn off", "shut down", "on"],
+  "categories": ["system"],
+  "useCases": ["Turns a device on or off", "Signs a session out of a device"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Clipboard",
+  "tags": ["clipboard", "paste", "notes", "checklist"],
+  "categories": ["actions"],
+  "useCases": ["Pastes from the clipboard", "Opens a list of notes"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

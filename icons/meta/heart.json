@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Like",
+  "tags": ["heart", "like", "love", "favorite"],
+  "categories": ["status"],
+  "useCases": ["Likes a post", "Adds an item to a wish list"],
+  "variants": ["line", "filled"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

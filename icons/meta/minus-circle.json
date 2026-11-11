@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Remove",
+  "tags": ["remove", "minus", "subtract", "circle"],
+  "categories": ["actions"],
+  "useCases": ["Removes an item from a list", "Decreases a value in a form"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

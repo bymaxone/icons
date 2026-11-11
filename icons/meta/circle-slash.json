@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Blocked",
+  "tags": ["ban", "blocked", "forbidden", "not allowed"],
+  "categories": ["status"],
+  "useCases": ["Marks an action that is not allowed", "Shows that a user is blocked"],
+  "aliases": [
+    {
+      "name": "ban",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

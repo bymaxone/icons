@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Save for later",
+  "tags": ["bookmark", "save", "later", "mark"],
+  "categories": ["status"],
+  "useCases": ["Saves an item to read later", "Marks an item the reader kept"],
+  "variants": ["line", "filled"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

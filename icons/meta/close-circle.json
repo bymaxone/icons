@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Clear",
+  "tags": ["close", "clear", "cancel", "remove", "circle"],
+  "categories": ["actions", "status"],
+  "useCases": ["Clears a search field", "Marks an item that failed"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

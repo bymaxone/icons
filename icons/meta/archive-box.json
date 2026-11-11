@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Archive",
+  "tags": ["archive", "box", "store", "put away"],
+  "categories": ["actions"],
+  "useCases": ["Archives a finished project", "Moves a message to the archive"],
+  "aliases": [
+    {
+      "name": "archive",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

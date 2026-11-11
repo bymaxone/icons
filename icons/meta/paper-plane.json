@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Send",
+  "tags": ["send", "paper plane", "submit", "message"],
+  "categories": ["actions"],
+  "useCases": ["Sends a message", "Submits a form"],
+  "aliases": [
+    {
+      "name": "send",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}
