@@ -138,8 +138,14 @@ document.addEventListener('DOMContentLoaded', () => {
       void copy(target, target.dataset.copyText)
     } else if (target.dataset.copySvg) {
       void fetch(target.dataset.copySvg)
-        .then((response) => response.text())
+        .then((response) => {
+          if (!response.ok) throw new Error(`No SVG at ${target.dataset.copySvg}`)
+          return response.text()
+        })
         .then((text) => copy(target, text))
+        .catch(() => {
+          target.dataset.failed = ''
+        })
     }
   })
 })
