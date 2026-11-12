@@ -49,7 +49,7 @@ const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 // Each icon component is measured by `scripts/check-component-size.mjs`, against the targets
 // of the specification: the component a consumer imports, bundled and tree-shaken, at most
 // 0.6 KiB brotli alone and 1.5 KiB with the runtime; against 148 icons the largest,
-// `VariationsIcon`, measures 0.36 KiB and 1.12 KiB. A drawing that breaks them is
+// `ShapesIcon`, measures 0.36 KiB and 1.12 KiB. A drawing that breaks them is
 // simplified, not budgeted for: a gear whose tooth corners each carried a cubic curve
 // measured 0.51 KiB alone and 1.58 KiB with the runtime, and drawing those corners with
 // the round join of the stroke brought it to 0.32 KiB and 1.36 KiB.
@@ -58,7 +58,7 @@ const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 // brotli: what a namespace import or a CommonJS consumer without tree-shaking loads, every
 // variant and alias of the icon together. It catches a module that grows while each of its
 // components stays inside its own budget. Against 148 icons the largest module,
-// `variations`, measures 0.42 KiB brotli.
+// `shapes`, measures 0.42 KiB brotli.
 const BUDGETS = [
   { name: 'root (re-exports)', path: 'dist/index.mjs', brotli: 4.5 * 1024 },
   { name: 'runtime (Icon base)', path: 'dist/runtime/index.mjs', brotli: 1.25 * 1024 },

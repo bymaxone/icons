@@ -1,0 +1,18 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Droplet",
+  "tags": ["droplet", "drop", "water", "colour", "theme colour", "tint"],
+  "categories": ["system"],
+  "useCases": ["Changes the accent colour", "Shows the current accent"],
+  "aliases": [
+    {
+      "name": "accent",
+      "deprecated": true,
+      "deprecationReason": "Renamed to droplet, the object the drawing shows.",
+      "toBeRemovedInVersion": "2.0.0"
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}
