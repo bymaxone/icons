@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Scale",
+  "tags": ["scale", "balance", "justice", "compare"],
+  "categories": ["tools", "commerce"],
+  "useCases": ["Compares two options", "Marks a legal topic"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Podium",
+  "tags": ["podium", "ranking", "winner", "leaderboard"],
+  "categories": ["games", "status"],
+  "useCases": ["Opens the leaderboard", "Shows the top three"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

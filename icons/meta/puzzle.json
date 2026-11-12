@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Puzzle",
+  "tags": ["puzzle", "piece", "plugin", "extension"],
+  "categories": ["games", "dev"],
+  "useCases": ["Opens the extensions", "Shows a puzzle game"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

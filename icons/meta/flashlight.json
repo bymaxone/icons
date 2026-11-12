@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Flashlight",
+  "tags": ["flashlight", "torch", "light", "beam"],
+  "categories": ["devices", "tools"],
+  "useCases": ["Turns on the flashlight", "Lights up a dark area"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

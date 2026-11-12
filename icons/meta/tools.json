@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Tools",
+  "tags": ["tools", "wrench", "screwdriver", "settings"],
+  "categories": ["tools", "system"],
+  "useCases": ["Opens the developer tools", "Shows maintenance"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

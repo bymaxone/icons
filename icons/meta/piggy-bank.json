@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Piggy bank",
+  "tags": ["piggy bank", "savings", "save", "money"],
+  "categories": ["commerce"],
+  "useCases": ["Opens the savings", "Shows a savings goal"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

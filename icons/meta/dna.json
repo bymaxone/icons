@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "DNA",
+  "tags": ["dna", "gene", "biology", "helix"],
+  "categories": ["science", "health"],
+  "useCases": ["Shows genetic data", "Marks a biology topic"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Telescope",
+  "tags": ["telescope", "astronomy", "discover", "observe"],
+  "categories": ["science"],
+  "useCases": ["Explores new content", "Marks an astronomy topic"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

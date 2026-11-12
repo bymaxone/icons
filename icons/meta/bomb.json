@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Bomb",
+  "tags": ["bomb", "explosive", "danger", "destroy"],
+  "categories": ["games", "status"],
+  "useCases": ["Marks a destructive action", "Shows a game hazard"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

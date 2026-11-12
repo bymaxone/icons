@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Flask",
+  "tags": ["flask", "lab", "chemistry", "experiment"],
+  "categories": ["science"],
+  "useCases": ["Marks an experiment", "Opens a lab feature"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

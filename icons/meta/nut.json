@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Nut",
+  "tags": ["nut", "bolt", "hardware", "fastener"],
+  "categories": ["tools"],
+  "useCases": ["Shows hardware settings", "Marks a repair part"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

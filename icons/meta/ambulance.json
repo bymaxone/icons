@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Ambulance",
+  "tags": ["ambulance", "emergency", "medical", "rescue"],
+  "categories": ["health", "transport"],
+  "useCases": ["Calls for emergency help", "Shows a medical service"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

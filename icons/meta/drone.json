@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Drone",
+  "tags": ["drone", "aerial", "quadcopter", "flight"],
+  "categories": ["devices", "transport"],
+  "useCases": ["Shows a drone", "Marks aerial footage"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

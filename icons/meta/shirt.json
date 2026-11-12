@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Shirt",
+  "tags": ["shirt", "clothing", "t-shirt", "apparel"],
+  "categories": ["commerce", "household"],
+  "useCases": ["Shows a clothing item", "Opens the apparel section"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}
