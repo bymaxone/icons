@@ -20,6 +20,8 @@ and deprecated, each rename with the alias that keeps the old name working.
   `transport` and `health` are new, and `data-charts`, `ai-agent`, `editor-canvas`, `people-roles`,
   `media-video` and `audio-voice` are renamed `data`, `ai`, `editing`, `people`, `media` and
   `audio`. An icon may belong to two categories.
+- `queued` is renamed `hourglass`, the object it draws; the alias `queued` keeps the old
+  name working.
 
 ### Added
 
@@ -33,6 +35,11 @@ and deprecated, each rename with the alias that keeps the old name working.
 - The aliases `repeat` (`loop`), `credit-card` (`card`), `shopping-cart` (`cart`), `bar-chart`
   (`chart-bar`), `pie-chart` (`chart-pie`), `cube` (`asset`), `help-circle` (`help`) and
   `wrench` (`repair`).
+- Devices, files and calendar (B6-A2): `tv`, `screen-cast` (aliases `cast`, `airplay`),
+  `speaker`, `mouse`, `watch`, `calculator`, `barcode`, `scan`, `battery-charging`,
+  `battery-full`, `battery-low`, `feed` (alias `rss`), `location-arrow` (alias `navigation`),
+  `usb-plug` (alias `usb`), `folder-minus`, `folder-check`, `file-minus`, `calendar-check`,
+  `calendar-minus`, `commit` (alias `git-commit`), `merge` (alias `git-merge`) and `bug`.
 
 - The twelve keystone icons, which fix the design language of the set: `home`, `search`,
   `play`, `plus`, `close`, `check`, `settings`, `user`, `file`, `folder`, `lightning` and
