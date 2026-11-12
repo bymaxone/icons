@@ -17,13 +17,6 @@ const REPOSITORY = 'https://github.com/bymaxone/icons'
 /** The Studio accents, by name, as the controls list them. */
 export const ACCENTS = ['ink', 'yellow', 'orange', 'red', 'green', 'blue', 'lilac']
 
-/** The variants a reader can show, with their labels. */
-const VARIANTS = [
-  ['line', 'Line'],
-  ['filled', 'Filled'],
-  ['sm', '16 px']
-]
-
 /** The preview sizes, in px. */
 const SIZES = [16, 20, 24, 32]
 
@@ -134,8 +127,8 @@ function cell(entry, render) {
       (drawing) => `<span class="d" data-d="${drawing.variant}">${render(drawing.component)}</span>`
     )
     .join('')
-  return `<li class="cell" data-kind="${entry.kind}" data-words="${e(entry.words)}" data-categories="${e(entry.categories.join(' '))}" data-variants="${entry.drawings.map((d) => d.variant).join(' ')}">
-<a href="${folder(entry)}/${e(entry.name)}/" title="${e(entry.title)}">${drawings}<span class="n">${e(entry.title)}</span></a>
+  return `<li class="cell" data-name="${e(entry.name)}" data-kind="${entry.kind}" data-variants="${entry.drawings.map((d) => d.variant).join(' ')}">
+<a href="${folder(entry)}/${e(entry.name)}/" title="${e(entry.title)}">${drawings}<span class="n" data-title="${e(entry.title)}">${e(entry.title)}</span></a>
 </li>`
 }
 
@@ -168,22 +161,52 @@ function intro(icons, brands, render) {
   </div>`
 }
 
-/** The controls bar: search and category, then variant, size, stroke and colour. */
-function controls(catalog, render) {
-  const options = catalog.categories
-    .map((category) => `<option value="${e(category.name)}">${e(category.title)}</option>`)
-    .join('')
+/**
+ * The Type control: which entries are listed and which of their drawings is shown. All lists
+ * every entry in line; Line every icon in line; Filled and 16 px only the icons that have that
+ * drawing, drawn so; Brand only the brand marks.
+ */
+const TYPES = [
+  ['', 'All'],
+  ['line', 'Line'],
+  ['filled', 'Filled'],
+  ['sm', '16 px'],
+  ['brand', 'Brand']
+]
+
+/** The icons offered when a search finds nothing, so the page is never blank. */
+const POPULAR = [
+  'home',
+  'search',
+  'settings',
+  'user',
+  'plus',
+  'trash',
+  'check',
+  'close',
+  'heart',
+  'star',
+  'bell',
+  'download'
+]
+
+/** The controls bar: the search, then the type, size, stroke and colour, which a narrow screen folds behind a button. */
+function controls(render) {
   const accents = ACCENTS.map(
     (accent) =>
       `<button type="button" class="sw sw-${accent}" data-set-accent="${accent}" aria-pressed="${accent === 'ink'}" aria-label="${label(accent)}" title="${label(accent)}"></button>`
   ).join('')
+  const types = TYPES.map(
+    ([value, text]) =>
+      `<button type="button" data-type="${value}" aria-pressed="${value === ''}">${text}</button>`
+  ).join('')
   return `<div class="bar">
     <div class="row">
-      <label class="search">${render('SearchIcon')}<span class="sr">Search</span><input id="q" type="search" placeholder="Search icons" autocomplete="off" spellcheck="false"></label>
-      <label class="cat"><span class="sr">Category</span><select id="category"><option value="">All categories</option>${options}</select></label>
+      <label class="search">${render('SearchIcon')}<span class="sr">Search</span><input id="q" type="search" placeholder="Search icons · English or Portuguese" autocomplete="off" spellcheck="false" aria-describedby="search-hint"><kbd id="search-hint" title="Press / to search">/</kbd></label>
+      <button type="button" class="more-toggle" aria-expanded="false" aria-controls="more">${render('SlidersIcon')}<span>Filters</span></button>
     </div>
-    <div class="row">
-      ${toggles('Variant', 'variant', VARIANTS, 'line')}
+    <div class="row more" id="more">
+      <div class="seg facet" role="group" aria-labelledby="type-label"><span class="facet-label" id="type-label">Type</span>${types}</div>
       ${toggles(
         'Size',
         'size',
@@ -193,6 +216,59 @@ function controls(catalog, render) {
       <label class="stroke"><span>Stroke</span><input id="stroke" type="range" min="1" max="2.5" step="0.25" value="1.5"><output for="stroke">1.5</output></label>
       <div class="seg sws" role="group" aria-label="Colour">${accents}</div>
     </div>
+  </div>`
+}
+
+/** The entries of one category, in the catalog's order. */
+const membersOf = (catalog, category) =>
+  catalog.entries.filter((entry) => entry.categories.includes(category.name))
+
+/**
+ * The category navigation: each category with its count and a box that filters by it; on a
+ * narrow screen, a list to jump to a category.
+ */
+function categoryNav(catalog, render) {
+  const items = catalog.categories
+    .map((category) => {
+      const count = membersOf(catalog, category).length
+      return `<li><input type="checkbox" id="pick-${e(category.name)}" data-cat="${e(category.name)}" aria-label="Show only ${e(category.title)}"><a href="#cat-${e(category.name)}" data-nav="${e(category.name)}">${e(category.title)}</a><span class="num" data-count-nav="${e(category.name)}">${count}</span></li>`
+    })
+    .join('')
+  const options = catalog.categories
+    .map((category) => `<option value="${e(category.name)}">${e(category.title)}</option>`)
+    .join('')
+  return `<nav class="cats" aria-label="Categories">
+    <p class="cats-title">Categories</p>
+    <ul>${items}</ul>
+  </nav>
+  <label class="cat jump"><span class="sr">Jump to a category</span><select id="jump"><option value="">All categories</option>${options}</select>${render('ChevronDownIcon')}</label>`
+}
+
+/** One category's section: its title, its count and its grid. */
+function categorySection(catalog, category, render) {
+  const members = membersOf(catalog, category)
+  return `<section class="group" id="cat-${e(category.name)}" data-cat="${e(category.name)}" aria-labelledby="h-${e(category.name)}">
+    <h2 id="h-${e(category.name)}">${e(category.title)} <span class="num" data-count="${e(category.name)}">${members.length}</span></h2>
+    <ul class="grid">
+${members.map((entry) => cell(entry, render)).join('\n')}
+    </ul>
+  </section>`
+}
+
+/** What a search that finds nothing shows: suggestions, close categories and popular icons. */
+function emptyState(catalog, render) {
+  const popular = POPULAR.map((name) => catalog.entries.find((entry) => entry.name === name))
+    .filter(Boolean)
+    .map((entry) => cell(entry, render))
+    .join('\n')
+  return `<div class="empty" hidden>
+    <p class="empty-title">Nothing matches.</p>
+    <p class="did" hidden>Did you mean <span id="did"></span>?</p>
+    <p class="near" hidden>Close categories: <span id="near"></span></p>
+    <p class="popular-title">Popular icons</p>
+    <ul class="grid popular">
+${popular}
+    </ul>
   </div>`
 }
 
@@ -212,12 +288,16 @@ export function homePage(catalog, render, version) {
   ${specimen(render)}
 </section>
 <section class="browse" aria-label="Browse">
-  ${controls(catalog, render)}
-  <p class="count" aria-live="polite">Showing <span id="shown-icons">${icons.length}</span> of ${icons.length} icons and <span id="shown-brands">${brands}</span> of ${brands} brand marks</p>
-  <ul class="grid">
-${catalog.entries.map((entry) => cell(entry, render)).join('\n')}
-  </ul>
-  <p class="empty" hidden>Nothing matches. Try a tag such as <q>video</q> or <q>credits</q>.</p>
+  ${controls(render)}
+  <div class="layout">
+    ${categoryNav(catalog, render)}
+    <div class="sections">
+      <p class="active" hidden>Filtered by <span id="active"></span> <button type="button" id="clear">Clear filters</button></p>
+      <p class="count" aria-live="polite">Showing <span id="shown-icons">${icons.length}</span> of ${icons.length} icons and <span id="shown-brands">${brands}</span> of ${brands} brand marks</p>
+      ${catalog.categories.map((category) => categorySection(catalog, category, render)).join('\n')}
+      ${emptyState(catalog, render)}
+    </div>
+  </div>
 </section>`
   return layout({
     title: 'Bymax Icons: an original icon set for React and the web',

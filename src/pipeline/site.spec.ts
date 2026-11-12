@@ -9,7 +9,7 @@
  */
 
 import type { BrandMetadata, IconMetadata } from '../meta/icon-metadata.ts'
-import { BRAND_CATEGORY, catalogFrom, escapeHtml, inCategory, matchesQuery } from './site.ts'
+import { BRAND_CATEGORY, catalogFrom, escapeHtml } from './site.ts'
 import type { BuiltMetadata } from './site.ts'
 
 const ICON: IconMetadata = {
@@ -105,8 +105,7 @@ describe('catalogFrom', () => {
       tags: ['Ring', 'loop'],
       aliases: [{ name: 'circle', deprecated: false }],
       useCases: ['Marks a loop', 'Filled: a loop that runs'],
-      since: '0.1.0',
-      words: 'ring loop ring loop circle'
+      since: '0.1.0'
     })
   })
 
@@ -125,8 +124,7 @@ describe('catalogFrom', () => {
       tags: ['acme'],
       aliases: [],
       useCases: [],
-      since: '0.2.0',
-      words: 'acme acme corp acme'
+      since: '0.2.0'
     })
   })
 
@@ -136,50 +134,5 @@ describe('catalogFrom', () => {
      */
     expect(catalog.categories).toEqual([{ name: 'status', title: 'Status' }, BRAND_CATEGORY])
     expect(BRAND_CATEGORY).toEqual({ name: 'brands', title: 'Brands' })
-  })
-})
-
-describe('matchesQuery', () => {
-  it('matches every entry with an empty or blank query', () => {
-    /**
-     * Scenario: before the reader types, or after clearing the field, nothing is hidden.
-     */
-    expect(matchesQuery('ring loop', '')).toBe(true)
-    expect(matchesQuery('ring loop', '   ')).toBe(true)
-  })
-
-  it('needs every word of the query, in any case and order', () => {
-    /**
-     * Scenario: words narrow the result; case does not matter and extra spaces between
-     * words are ignored.
-     */
-    expect(matchesQuery('ring loop circle', 'LOOP  ring')).toBe(true)
-    expect(matchesQuery('ring loop circle', 'loop square')).toBe(false)
-  })
-
-  it('matches a word inside a longer one', () => {
-    /**
-     * Scenario: typing the start of a word, or part of it, finds the entry.
-     */
-    expect(matchesQuery('lightning-stack credit pack', 'stack')).toBe(true)
-    expect(matchesQuery('lightning-stack credit pack', 'cred')).toBe(true)
-  })
-})
-
-describe('inCategory', () => {
-  it('keeps every entry for the empty category', () => {
-    /**
-     * Scenario: "All categories" is the empty value.
-     */
-    expect(inCategory(['status'], '')).toBe(true)
-    expect(inCategory([], '')).toBe(true)
-  })
-
-  it('keeps an entry only in a category it is listed under', () => {
-    /**
-     * Scenario: an icon may sit in several categories; any one of them selects it.
-     */
-    expect(inCategory(['status', 'actions'], 'actions')).toBe(true)
-    expect(inCategory(['status'], 'files')).toBe(false)
   })
 })

@@ -34,22 +34,23 @@
 
 ### Phase Table
 
-| ID  | Name                              | Status | Progress | Size | Last Updated |
-| --- | --------------------------------- | ------ | -------- | ---- | ------------ |
-| P0  | repository-governance             | 🔄     | 0%       | M    | 2026-11-08   |
-| P1  | runtime                           | ✅     | 100%     | M    | 2026-11-08   |
-| P2  | pipeline                          | ✅     | 100%     | L    | 2026-11-10   |
-| B0  | keystone-icons                    | ✅     | 100%     | M    | 2026-11-10   |
-| P3  | visual-tooling                    | ✅     | 100%     | L    | 2026-11-11   |
-| B1  | navigation-actions-status         | ✅     | 100%     | L    | 2026-11-11   |
-| B2  | media-audio-files-editor          | ✅     | 100%     | L    | 2026-11-11   |
-| B3  | studio-ai-formats-billing         | ✅     | 100%     | L    | 2026-11-11   |
-| B4  | filled-variants-sm-masters-brands | ✅     | 100%     | L    | 2026-11-11   |
-| P4  | catalog-site                      | ✅     | 100%     | M    | 2026-11-11   |
-| R1  | aesthetic-redraw                  | ✅     | 100%     | M    | 2026-11-11   |
-| B5  | general-icons                     | ✅     | 100%     | L    | 2026-11-11   |
-| P5  | hardening-release                 | 🔄     | 25%      | M    | 2026-11-11   |
-| P6  | react-native                      | 📋     | 0%       | M    | 2026-11-08   |
+| ID   | Name                              | Status | Progress | Size | Last Updated |
+| ---- | --------------------------------- | ------ | -------- | ---- | ------------ |
+| P0   | repository-governance             | 🔄     | 0%       | M    | 2026-11-08   |
+| P1   | runtime                           | ✅     | 100%     | M    | 2026-11-08   |
+| P2   | pipeline                          | ✅     | 100%     | L    | 2026-11-10   |
+| B0   | keystone-icons                    | ✅     | 100%     | M    | 2026-11-10   |
+| P3   | visual-tooling                    | ✅     | 100%     | L    | 2026-11-11   |
+| B1   | navigation-actions-status         | ✅     | 100%     | L    | 2026-11-11   |
+| B2   | media-audio-files-editor          | ✅     | 100%     | L    | 2026-11-11   |
+| B3   | studio-ai-formats-billing         | ✅     | 100%     | L    | 2026-11-11   |
+| B4   | filled-variants-sm-masters-brands | ✅     | 100%     | L    | 2026-11-11   |
+| P4   | catalog-site                      | ✅     | 100%     | M    | 2026-11-11   |
+| P4.1 | catalog-categories-search         | 🔄     | 80%      | M    | 2026-11-12   |
+| R1   | aesthetic-redraw                  | ✅     | 100%     | M    | 2026-11-11   |
+| B5   | general-icons                     | ✅     | 100%     | L    | 2026-11-11   |
+| P5   | hardening-release                 | 🔄     | 25%      | M    | 2026-11-11   |
+| P6   | react-native                      | 📋     | 0%       | M    | 2026-11-08   |
 
 ---
 
@@ -366,6 +367,20 @@ These rules apply to every phase. Phase sections only add rules specific to them
 - **Pending (2026-11-11):** the DNS record of `icons.bymax.one` (a CNAME to
   `bymaxone.github.io`) is the founder's to create; until then the site is served at
   `bymaxone.github.io/icons`.
+
+### P4.1: catalog-categories-search
+
+- **Goal:** Keep the catalog usable at 1,500 icons and more, before the B6 waves arrive.
+- **Why:** a founder decision of 2026-11-11: the catalog is browsed by category and searched by name, type and category, and whatever the reader types helps them find the icon, in English or Portuguese.
+- **Scope (in):**
+  - **Browsing:** one section per category, with a navigation that counts and follows; a jump list on a narrow screen.
+  - **Search:** a build-time index, ranked and typo-tolerant, with highlights, a "did you mean", close categories and popular icons when nothing matches.
+  - **Facets and address:** type and category facets in the address; the keyboard.
+  - **Portuguese:** the Brazilian Portuguese terms of the site only, with their test.
+  - **Fixes:** the category list draws the set's chevron; the global focus ring keeps each control's own radius; the accent colours the construction specimen and its trio while the annotations keep their own colour.
+- **Definition of Done:** the search module at 100% coverage and mutation; every entry has a Portuguese term; the measured script, index and page sizes and search times reported; the auditor's screenshots approved.
+- **References:** spec §9.
+- **Size:** M
 
 ### R1: aesthetic-redraw
 

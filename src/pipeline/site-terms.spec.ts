@@ -1,0 +1,68 @@
+/**
+ * The Portuguese search terms of the catalog site, checked against the set itself: every icon
+ * and brand mark has at least one, so a drawing added without its translation fails here, and
+ * the real searches a Brazilian reader types find what they mean.
+ *
+ * Layer: integration.
+ * Goal: hold `site/terms-pt.json` to the set's names, and the search to real cases.
+ * Mocks: none; the terms file and the generated metadata are read as they are.
+ */
+
+import { readFileSync } from 'node:fs'
+import { join } from 'node:path'
+
+import { BRANDS, CATEGORIES, ICONS } from '../meta/generated/metadata.ts'
+import { search, searchIndex } from './site-search.ts'
+import { catalogFrom } from './site.ts'
+
+const terms = JSON.parse(
+  readFileSync(join(__dirname, '..', '..', 'site', 'terms-pt.json'), 'utf8')
+) as Record<string, string[]>
+const catalog = catalogFrom({ icons: ICONS, brands: BRANDS, categories: CATEGORIES })
+const docs = searchIndex(catalog, terms)
+
+/** The names a query finds first, best first. */
+const top = (query: string, count = 1): string[] =>
+  search(docs, query, { types: [], categories: [] })
+    .slice(0, count)
+    .map((hit) => hit.name)
+
+describe('site/terms-pt.json', () => {
+  it('names exactly the icons and brand marks of the set', () => {
+    // Scenario: a new drawing without terms, or terms left behind by a rename, fail here.
+    const names = catalog.entries.map((entry) => entry.name).sort()
+    expect(Object.keys(terms).sort()).toStrictEqual(names)
+  })
+
+  it('gives every entry at least one lower-case term', () => {
+    // Scenario: an empty list or a blank or capitalised term fails.
+    const faulty = Object.entries(terms).filter(
+      ([, list]) =>
+        list.length === 0 || list.some((term) => term.trim() === '' || term !== term.toLowerCase())
+    )
+    expect(faulty).toStrictEqual([])
+  })
+})
+
+describe('the search over the real set', () => {
+  it('finds the icon a Portuguese word names, with or without its accents', () => {
+    // Scenario: the founder's examples: "lixeira" is trash, "engrenagem" and
+    // "configurações" (typed with or without accents) are settings, "início" is home.
+    expect(top('lixeira')).toStrictEqual(['trash'])
+    expect(top('engrenagem')).toStrictEqual(['settings'])
+    expect(top('configurações')).toStrictEqual(['settings'])
+    expect(top('configuracoes')).toStrictEqual(['settings'])
+    expect(top('inicio')).toStrictEqual(['home'])
+  })
+
+  it('finds an icon by its alias, a misspelling, its category and its type', () => {
+    // Scenario: trash's label ("delete"), a typo of settings, the security category and the
+    // filled type, which finds every filled drawing.
+    expect(top('delete')).toStrictEqual(['trash'])
+    expect(top('setings')).toContain('settings')
+    expect(top('security', 7)).toContain('lock')
+    expect(search(docs, 'filled', { types: [], categories: [] }).length).toBe(
+      catalog.entries.filter((entry) => entry.drawings.some((d) => d.variant === 'filled')).length
+    )
+  })
+})
