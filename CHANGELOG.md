@@ -20,8 +20,10 @@ and deprecated, each rename with the alias that keeps the old name working.
   `transport` and `health` are new, and `data-charts`, `ai-agent`, `editor-canvas`, `people-roles`,
   `media-video` and `audio-voice` are renamed `data`, `ai`, `editing`, `people`, `media` and
   `audio`. An icon may belong to two categories.
-- `queued` is renamed `hourglass`, the object it draws; the alias `queued` keeps the old
-  name working.
+- `queued` is renamed `hourglass`, the object it draws. `queued` stays a deprecated alias,
+  removed in 2.0.0: `QueuedIcon` still renders the hourglass.
+  Apply to a consumer: import `HourglassIcon`, or the subpath `./icons/hourglass`, instead
+  of `QueuedIcon`.
 
 ### Added
 

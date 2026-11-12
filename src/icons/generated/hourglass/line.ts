@@ -22,5 +22,5 @@ export const HourglassIcon = /* @__PURE__ */ createIcon('hourglass', [
   ['path', { d: 'M5.25 20.75h14' }]
 ])
 
-/** `queued`: an alias of {@link HourglassIcon}. */
+/** @deprecated `queued` is a deprecated alias of `hourglass`, removed in 2.0.0. Renamed to hourglass, the object the drawing shows. Use {@link HourglassIcon}. */
 export const QueuedIcon = HourglassIcon

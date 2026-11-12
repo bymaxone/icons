@@ -7,7 +7,9 @@
   "aliases": [
     {
       "name": "queued",
-      "deprecated": false
+      "deprecated": true,
+      "deprecationReason": "Renamed to hourglass, the object the drawing shows.",
+      "toBeRemovedInVersion": "2.0.0"
     }
   ],
   "variants": ["line"],
