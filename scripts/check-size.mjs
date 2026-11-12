@@ -13,6 +13,14 @@ import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { brotliCompressSync, constants } from 'node:zlib'
 
+import {
+  META_BASE_BYTES,
+  META_CAP_BYTES,
+  META_RECORD_BYTES,
+  metaLimit,
+  recordCost
+} from '../src/pipeline/meta-budget.ts'
+
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 
 // Budgets are in bytes (KiB units, `n * 1024`, matching the table's /1024
@@ -34,13 +42,17 @@ const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 //     icon and at 5409 bytes with 545 icons, about 10 bytes per icon. Each
 //     icon adds one re-export line, so every drawing batch recalibrates the budget.
 //   - runtime, 1.25 KiB brotli: the `Icon` base, `createIcon`, the stroke maths and the
-//     accessibility rules, measured at 3228 bytes raw and 1114 bytes brotli. The headroom
+//     accessibility rules, measured at 3614 bytes raw and 1206 bytes brotli. The headroom
 //     fits a small fix, while an inlined dependency such as React fails.
-//   - meta, 29 KiB brotli: the grid, the deep freeze and the categories, measured at
-//     497 bytes brotli with no record and at 24809 bytes with 545 icon and 14 brand records,
-//     about 44 bytes brotli per record, the icon's `label` included. The headroom fits about
-//     a hundred records or a tag edit; every drawing batch adds records, so each one
-//     recalibrates it.
+//   - meta, a budget per record, not a total: `dist/meta/index.mjs` grows with every icon and
+//     brand, so a fixed total was raised by hand each batch. The fixed part (the grid, the deep
+//     freeze, the categories and the empty tables) measures 707 bytes brotli with every
+//     icon name and record taken out; the tree measures 24837 bytes with 559 records (545
+//     icon and 14 brand), (24837 - 707) / 559 = 43.2 bytes brotli a record, the icon's `label`
+//     included. The budget is 52 bytes a record, about 20% of headroom for records with longer
+//     tags and use cases, so the limit is 707 + 52 * records and follows the set instead of
+//     being recalibrated. A sanity cap of 112 KiB holds whatever the records, room for about
+//     2,000 of them at the measured cost; the arithmetic is `src/pipeline/meta-budget.ts`.
 //   - brands, 5 KiB brotli: the entry holds every brand mark, measured at 5 bytes brotli
 //     with no mark and at 4015 bytes with 14 marks, about 290 bytes per mark, most of it the
 //     path data of the owner's geometry. The headroom fits three more marks; an inline of
@@ -48,8 +60,8 @@ const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 //
 // Each icon component is measured by `scripts/check-component-size.mjs`, against the targets
 // of the specification: the component a consumer imports, bundled and tree-shaken, at most
-// 0.6 KiB brotli alone and 1.5 KiB with the runtime; against 148 icons the largest,
-// `ShapesIcon`, measures 0.36 KiB and 1.12 KiB. A drawing that breaks them is
+// 0.6 KiB brotli alone and 1.5 KiB with the runtime; against 545 icons the largest of 813
+// components, `SunFilledIcon`, measures 0.60 KiB and 1.42 KiB. A drawing that breaks them is
 // simplified, not budgeted for: a gear whose tooth corners each carried a cubic curve
 // measured 0.51 KiB alone and 1.58 KiB with the runtime, and drawing those corners with
 // the round join of the stroke brought it to 0.32 KiB and 1.36 KiB.
@@ -57,12 +69,11 @@ const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 // The whole module under `dist/icons/<name>/` is measured here as well, at most 1.5 KiB
 // brotli: what a namespace import or a CommonJS consumer without tree-shaking loads, every
 // variant and alias of the icon together. It catches a module that grows while each of its
-// components stays inside its own budget. Against 148 icons the largest module,
-// `shapes`, measures 0.42 KiB brotli.
+// components stays inside its own budget. Against 545 icons the largest module,
+// `octopus`, measures 0.90 KiB brotli.
 const BUDGETS = [
   { name: 'root (re-exports)', path: 'dist/index.mjs', brotli: 6 * 1024 },
   { name: 'runtime (Icon base)', path: 'dist/runtime/index.mjs', brotli: 1.25 * 1024 },
-  { name: 'meta (typed metadata)', path: 'dist/meta/index.mjs', brotli: 29 * 1024 },
   { name: 'brands (brand marks)', path: 'dist/brands/index.mjs', brotli: 5 * 1024 }
 ]
 const MODULE_BUDGET = 1.5 * 1024
@@ -103,6 +114,13 @@ function measure(name, raw, limit) {
 
 for (const { name, path, brotli: limit } of BUDGETS) measure(name, readArtifact(path), limit)
 
+// The meta bundle is budgeted per record: icons and brands in the merged metadata.
+const merged = JSON.parse(readArtifact('dist/metadata.json').toString('utf8'))
+const records = Object.keys(merged.icons).length + Object.keys(merged.brands).length
+const metaBundle = readArtifact('dist/meta/index.mjs')
+measure('meta (typed metadata)', metaBundle, metaLimit(records))
+const metaCost = recordCost(brotliCompressSync(metaBundle, BROTLI_OPTS).length, records)
+
 // One directory per icon entry, `dist/icons/<name>/index.mjs`; none before the first drawing.
 const iconsDir = resolve(ROOT, 'dist', 'icons')
 const icons = existsSync(iconsDir) ? readdirSync(iconsDir).sort() : []
@@ -127,6 +145,10 @@ for (const r of rows) {
 if (icons.length === 0) {
   console.log('  No icon module in dist/icons: the module budget applies once one is built.')
 }
+console.log(
+  `  meta: ${metaCost.toFixed(1)} bytes brotli per record over ${records} records ` +
+    `(budget ${META_RECORD_BYTES} above a base of ${META_BASE_BYTES}, cap ${fmt(META_CAP_BYTES)})`
+)
 console.log('')
 
 if (failed > 0) {
