@@ -13,4 +13,4 @@ A pull request may change a drawing that already exists, or its visual baseline 
 
 - **What counts:** only the manifests the pull request adds or changes. One listed name allows every variant of that icon: line, filled, 16 px master, brand, and their baselines.
 
-The gate exists because a normaliser run over a whole folder once rewrote existing drawings and regenerated their baselines from the damage, so every other gate passed.
+The visual check compares a drawing with its committed baseline, so a drawing rewritten together with a baseline regenerated from it passes there. This gate is what refuses it.

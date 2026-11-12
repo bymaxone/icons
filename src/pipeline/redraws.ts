@@ -1,9 +1,8 @@
 /**
  * @fileoverview The redraw gate: a pull request may change a drawing that already exists, or
- * its visual baseline, only when a redraw manifest under `docs/redraws/` names it. A batch
- * that adds icons touches no existing drawing, so a slip that rewrites one (a normaliser run
- * over a whole folder, a baseline regenerated from the damage) fails here rather than in
- * review.
+ * its visual baseline, only when a redraw manifest under `docs/redraws/` names it. The visual
+ * check compares a drawing with its committed baseline, so a drawing rewritten together with a
+ * baseline regenerated from it passes there; this gate is what refuses it.
  * @layer Pipeline
  */
 

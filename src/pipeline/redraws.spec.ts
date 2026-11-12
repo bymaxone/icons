@@ -4,8 +4,8 @@
  * names.
  *
  * Layer: unit.
- * Goal: pin which changes the gate refuses, with the case that motivated it: a batch that
- * rewrote existing filled drawings and regenerated their baselines.
+ * Goal: pin which changes the gate refuses, among them an existing drawing rewritten together
+ * with a baseline regenerated from it, which the visual check alone lets through.
  * Mocks: none.
  */
 
@@ -85,8 +85,8 @@ describe('manifestNames', () => {
 
 describe('unlistedChanges', () => {
   it('refuses a modified, deleted, renamed or retyped drawing or baseline no manifest names', () => {
-    // Scenario: the B5d slip: an existing filled source rewritten and its baseline
-    // regenerated, a deleted one, a renamed one (its old path), a type change.
+    // Scenario: an existing filled source rewritten and its baseline regenerated, a deleted
+    // one, a renamed one (its old path), a type change.
     const changes = parseNameStatus(
       [
         'M\ticons/filled/info.svg',
