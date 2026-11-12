@@ -147,7 +147,7 @@ The reason the package exists is that its drawings are not someone else's. The p
 
 ### 4.1 Version 1.0
 
-The set's icons and brand marks, by category, in the taxonomy fixed before the B6 expansion (founder decision, 2026-11-12, delegated to the auditor). An icon belonging to two categories is listed under both; the batch that drew each icon is in the development plan.
+The set's icons and brand marks, by category, in the taxonomy fixed before the B6 expansion (founder decision, 2026-11-12, delegated to the auditor). An icon belonging to two categories is listed under both.
 
 | Category               | Icons                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
