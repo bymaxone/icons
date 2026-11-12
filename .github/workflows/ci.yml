@@ -91,6 +91,11 @@ jobs:
         # compares it pixel by pixel with visual/, so a drawing cannot change without its
         # reviewed baseline changing in the same pull request.
         run: pnpm check:visual
+      - name: No drawing fuses at 16 px without a justification
+        # Renders each part of every drawing alone at 16 px and fails when two parts fuse and
+        # the icon is not on scripts/sixteen-allowlist.json with its written justification;
+        # an entry that no longer fuses fails too, so the list stays honest.
+        run: pnpm check:sixteen
       - name: Existing drawings change only through a redraw manifest
         # A pull request may change a drawing that already exists, or its baseline, only
         # when a manifest under docs/redraws/ names it; a batch that adds icons touches none.
