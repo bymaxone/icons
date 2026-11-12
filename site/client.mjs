@@ -59,7 +59,6 @@ function showVariant(variant) {
   for (const button of document.querySelectorAll('[data-set-size]'))
     button.disabled = variant === 'sm'
   if (variant === 'sm') setSize('16')
-  press('variant', variant)
 }
 
 /** Sets the size of the icons in the grid. */
@@ -193,12 +192,14 @@ function setQuery(query, show = true) {
   if (show) filter()
 }
 
-/** Sets a facet's list, and marks its controls. */
+/** Sets a facet's list, and marks its controls; the Type control also picks the drawing shown. */
 function setFacet(facet, values, scroll = false) {
   finder.state = { ...finder.state, [facet]: values }
+  const type = finder.state.types[0] ?? ''
   for (const button of document.querySelectorAll('[data-type]')) {
-    button.setAttribute('aria-pressed', String(finder.state.types.includes(button.dataset.type)))
+    button.setAttribute('aria-pressed', String(button.dataset.type === type))
   }
+  showVariant(type === 'filled' || type === 'sm' ? type : 'line')
   for (const box of document.querySelectorAll('[data-cat]')) {
     if (box instanceof HTMLInputElement)
       box.checked = finder.state.categories.includes(box.dataset.cat)
@@ -261,9 +262,15 @@ function startSearch() {
   box.addEventListener('input', () => setQuery(box.value))
   for (const button of document.querySelectorAll('[data-type]')) {
     button.addEventListener('click', () =>
-      toggleFacet('types', button.dataset.type, button.getAttribute('aria-pressed') !== 'true')
+      setFacet('types', button.dataset.type === '' ? [] : [button.dataset.type])
     )
   }
+  const toggle = document.querySelector('.more-toggle')
+  toggle?.addEventListener('click', () => {
+    const open = toggle.getAttribute('aria-expanded') !== 'true'
+    toggle.setAttribute('aria-expanded', String(open))
+    document.querySelector('.bar')?.toggleAttribute('data-open', open)
+  })
   for (const pick of document.querySelectorAll('input[data-cat]')) {
     pick.addEventListener('change', () => toggleFacet('categories', pick.dataset.cat, pick.checked))
   }
@@ -330,9 +337,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // The theme is set above, before the first paint; its toggle exists only now, so label it.
   setTheme(root.dataset.theme)
   press('accent', root.dataset.accent)
-  const requested = new URLSearchParams(location.search).get('variant')
-  if (document.querySelector('.grid'))
-    showVariant(['filled', 'sm'].includes(requested) ? requested : 'line')
+  // A page with a grid and no search (an entry's related icons) shows the line drawings.
+  if (!document.getElementById('q') && document.querySelector('.grid')) showVariant('line')
   startSearch()
   const stroke = document.getElementById('stroke')
   stroke?.addEventListener('input', () => {
@@ -347,8 +353,6 @@ document.addEventListener('DOMContentLoaded', () => {
       const theme = root.dataset.theme === 'dark' ? 'light' : 'dark'
       setTheme(theme)
       savePref('theme', theme)
-    } else if (target.dataset.setVariant) {
-      showVariant(target.dataset.setVariant)
     } else if (target.dataset.setSize) {
       setSize(target.dataset.setSize)
     } else if (target.dataset.setAccent) {

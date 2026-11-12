@@ -295,17 +295,23 @@ export function highlight(text: string, query: string): HighlightRun[] {
 /** The values of a list parameter: comma separated, empty ones dropped. */
 const listOf = (value: string | null): string[] => (value ?? '').split(',').filter(Boolean)
 
+/** The types an address from before the Type control named as `?variant=`. */
+const LEGACY_VARIANTS = ['filled', 'sm']
+
 /**
- * Reads the search state from an address's query string.
+ * Reads the search state from an address's query string. An older address that names a
+ * `variant` and no `type` is read as that type, so a shared link keeps showing what it did.
  *
  * @param query - The query string, such as `?q=home&type=filled`.
  * @returns The query, the types and the categories, empty when absent.
  */
 export function readState(query: string): SearchState {
   const params = new URLSearchParams(query)
+  const legacy = LEGACY_VARIANTS.find((variant) => variant === params.get('variant'))
+  const types = listOf(params.get('type'))
   return {
     q: params.get('q') ?? '',
-    types: listOf(params.get('type')),
+    types: types.length === 0 && legacy !== undefined ? [legacy] : types,
     categories: listOf(params.get('cat'))
   }
 }
@@ -325,14 +331,14 @@ export function writeState(state: SearchState): string {
   return text === '' ? '' : `?${text}`
 }
 
-/** The parameters of the address the search owns; every other one is the page's. */
-const OWN = ['q', 'type', 'cat']
+/** The parameters of the address the search owns, `variant` being the older name of `type`. */
+const OWN = ['q', 'type', 'cat', 'variant']
 
 /**
  * Updates an address's query string with the search state, keeping every parameter the
- * search does not own, such as the variant the page shows.
+ * search does not own and dropping the older `variant`, which `readState` has already read.
  *
- * @param current - The current query string, such as `?variant=filled&q=home`.
+ * @param current - The current query string, such as `?ref=docs&q=home`.
  * @param state - The search state to write.
  * @returns The query string with its `?`, or the empty string when nothing is left.
  */

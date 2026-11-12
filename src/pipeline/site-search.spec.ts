@@ -362,6 +362,16 @@ describe('readState and writeState', () => {
     expect(readState('')).toStrictEqual({ q: '', types: [], categories: [] })
   })
 
+  it('reads an older variant address as its type, unless a type is given', () => {
+    // Scenario: ?variant=filled and ?variant=sm become the type; ?variant=line (every
+    // entry, drawn in line) and an unknown variant name no type; an explicit type wins.
+    expect(readState('?variant=filled').types).toStrictEqual(['filled'])
+    expect(readState('?variant=sm&q=a').types).toStrictEqual(['sm'])
+    expect(readState('?variant=line').types).toStrictEqual([])
+    expect(readState('?variant=bold').types).toStrictEqual([])
+    expect(readState('?variant=filled&type=brand').types).toStrictEqual(['brand'])
+  })
+
   it('writes only what is set, and nothing for an empty state', () => {
     // Scenario: each part alone, all together, and none.
     expect(writeState({ q: 'home', types: [], categories: [] })).toBe('?q=home')
@@ -374,11 +384,12 @@ describe('readState and writeState', () => {
   })
 
   it('keeps every parameter of the page the search does not own', () => {
-    // Scenario: the variant the page shows survives a search; the search's own parameters
-    // are replaced, or removed when empty; nothing left gives an empty string.
+    // Scenario: a parameter of the page survives a search; the search's own parameters are
+    // replaced, or removed when empty, and the older variant is dropped once read; nothing
+    // left gives an empty string.
     expect(
-      mergeState('?variant=filled&q=old&cat=x', { q: 'home', types: [], categories: [] })
-    ).toBe('?variant=filled&q=home')
+      mergeState('?ref=docs&variant=filled&q=old&cat=x', { q: 'home', types: [], categories: [] })
+    ).toBe('?ref=docs&q=home')
     expect(mergeState('?type=line', { q: '', types: [], categories: ['a'] })).toBe('?cat=a')
     expect(mergeState('?q=a', { q: '', types: [], categories: [] })).toBe('')
   })

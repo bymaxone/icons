@@ -17,13 +17,6 @@ const REPOSITORY = 'https://github.com/bymaxone/icons'
 /** The Studio accents, by name, as the controls list them. */
 export const ACCENTS = ['ink', 'yellow', 'orange', 'red', 'green', 'blue', 'lilac']
 
-/** The variants a reader can show, with their labels. */
-const VARIANTS = [
-  ['line', 'Line'],
-  ['filled', 'Filled'],
-  ['sm', '16 px']
-]
-
 /** The preview sizes, in px. */
 const SIZES = [16, 20, 24, 32]
 
@@ -168,8 +161,13 @@ function intro(icons, brands, render) {
   </div>`
 }
 
-/** The types a reader can filter by, with their labels. */
+/**
+ * The Type control: which entries are listed and which of their drawings is shown. All lists
+ * every entry in line; Line every icon in line; Filled and 16 px only the icons that have that
+ * drawing, drawn so; Brand only the brand marks.
+ */
 const TYPES = [
+  ['', 'All'],
   ['line', 'Line'],
   ['filled', 'Filled'],
   ['sm', '16 px'],
@@ -192,7 +190,7 @@ const POPULAR = [
   'download'
 ]
 
-/** The controls bar: the search and the type facet, then variant, size, stroke and colour. */
+/** The controls bar: the search, then the type, size, stroke and colour, which a narrow screen folds behind a button. */
 function controls(render) {
   const accents = ACCENTS.map(
     (accent) =>
@@ -200,15 +198,15 @@ function controls(render) {
   ).join('')
   const types = TYPES.map(
     ([value, text]) =>
-      `<button type="button" data-type="${value}" aria-pressed="false">${text}</button>`
+      `<button type="button" data-type="${value}" aria-pressed="${value === ''}">${text}</button>`
   ).join('')
   return `<div class="bar">
     <div class="row">
       <label class="search">${render('SearchIcon')}<span class="sr">Search</span><input id="q" type="search" placeholder="Search icons · English or Portuguese" autocomplete="off" spellcheck="false" aria-describedby="search-hint"><kbd id="search-hint" title="Press / to search">/</kbd></label>
-      <div class="seg facet" role="group" aria-labelledby="type-label"><span class="facet-label" id="type-label">Type</span>${types}</div>
+      <button type="button" class="more-toggle" aria-expanded="false" aria-controls="more">${render('SlidersIcon')}<span>Filters</span></button>
     </div>
-    <div class="row">
-      ${toggles('Variant', 'variant', VARIANTS, 'line')}
+    <div class="row more" id="more">
+      <div class="seg facet" role="group" aria-labelledby="type-label"><span class="facet-label" id="type-label">Type</span>${types}</div>
       ${toggles(
         'Size',
         'size',
