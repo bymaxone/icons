@@ -23,7 +23,7 @@ and deprecated, each rename with the alias that keeps the old name working.
 
 ### Added
 
-- Shapes, arrows and media, 27 drawings (B6-A1): `square`, `circle`, `triangle`, `diamond`,
+- Shapes, arrows and media (B6-A1): `square`, `circle`, `triangle`, `diamond`,
   `pentagon`, `hexagon`, `octagon`, `star-half`, `asterisk`, `infinity`, `divide`,
   `copyright`, `arrow-up-left`, `arrow-down-left`, `arrow-down-right`, `arrow-up-circle`,
   `arrow-down-circle`, `arrow-left-circle`, `arrow-right-circle`, `shuffle`, `forward`,

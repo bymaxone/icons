@@ -146,7 +146,7 @@ The reason the package exists is that its drawings are not someone else's. The p
 
 ### 4.1 Version 1.0
 
-The set's 280 icons and 14 brand marks, by category, in the taxonomy fixed before the B6 expansion (founder decision, 2026-11-12, delegated to the auditor). An icon belonging to two categories is listed under both; the batch that drew each icon is in the development plan. Science and education, Food and drink, and Home and living join the list with their first icons in B6.
+The set's icons and brand marks, by category, in the taxonomy fixed before the B6 expansion (founder decision, 2026-11-12, delegated to the auditor). An icon belonging to two categories is listed under both; the batch that drew each icon is in the development plan. Science and education, Food and drink, and Home and living join the list with their first icons in B6.
 
 | Category               | Icons                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
