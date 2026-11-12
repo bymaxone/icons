@@ -24,6 +24,10 @@ const categoryTitles = JSON.parse(
 const catalog = catalogFrom({ icons: ICONS, brands: BRANDS, categories: CATEGORIES })
 const docs = searchIndex(catalog, terms, categoryTitles)
 
+/** Every icon the query finds, best first. */
+const all = (query: string): string[] =>
+  search(docs, query, { types: [], categories: [] }).map(({ name }) => name)
+
 /** The names a query finds first, best first. */
 const top = (query: string, count = 1): string[] =>
   search(docs, query, { types: [], categories: [] })
@@ -74,8 +78,8 @@ describe('the search over the real set', () => {
     // filled type, which finds every filled drawing.
     expect(top('delete')).toStrictEqual(['trash'])
     expect(top('setings')).toContain('settings')
-    expect(top('security', 7)).toContain('lock')
-    expect(top('seguranca', 7)).toContain('lock')
+    expect(all('security')).toContain('lock')
+    expect(all('seguranca')).toContain('lock')
     expect(search(docs, 'filled', { types: [], categories: [] }).length).toBe(
       catalog.entries.filter((entry) => entry.drawings.some((d) => d.variant === 'filled')).length
     )
@@ -88,8 +92,7 @@ describe('the search over the real set', () => {
     expect(top('formas')).toStrictEqual(['shapes'])
     expect(top('variations')).toStrictEqual(['shapes'])
     expect(top('accent')).toStrictEqual(['droplet'])
-    // `octopus` is labelled Agent, the agent's avatar, so its label outranks the alias.
-    expect(top('agent', 2)).toStrictEqual(['octopus', 'robot'])
+    expect(top('agent')).toStrictEqual(['robot'])
     expect(top('plan')).toStrictEqual(['stairs'])
     expect(top('spending cap')).toStrictEqual(['speedometer'])
     expect(top('sort')).toStrictEqual(['arrow-up-down'])

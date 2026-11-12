@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Desk",
+  "tags": ["desk", "table", "workspace", "office"],
+  "categories": ["household"],
+  "useCases": ["Opens the workspace", "Books a desk"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

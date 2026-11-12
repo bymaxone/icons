@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Glasses",
+  "tags": ["glasses", "eyewear", "read", "vision"],
+  "categories": ["health", "people"],
+  "useCases": ["Turns on the reading mode", "Shows an eyewear product"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

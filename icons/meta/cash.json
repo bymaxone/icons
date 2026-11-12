@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Cash",
+  "tags": ["cash", "money", "banknote", "payment"],
+  "categories": ["commerce"],
+  "useCases": ["Pays in cash", "Shows a cash balance"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Lightbulb",
+  "tags": ["lightbulb", "idea", "light", "tip"],
+  "categories": ["household", "status"],
+  "useCases": ["Shows a tip or an idea", "Turns a light on or off"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Weight",
+  "tags": ["weight", "kilogram", "heavy", "mass"],
+  "categories": ["health", "tools"],
+  "useCases": ["Shows a weight", "Records body weight"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

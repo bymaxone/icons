@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Ear",
+  "tags": ["ear", "hearing", "listen", "audio"],
+  "categories": ["health", "audio"],
+  "useCases": ["Turns on listening mode", "Marks a hearing setting"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Backpack",
+  "tags": ["backpack", "bag", "school", "travel"],
+  "categories": ["household", "transport"],
+  "useCases": ["Shows school supplies", "Marks a travel kit"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

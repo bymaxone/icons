@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Lamp",
+  "tags": ["lamp", "light", "desk lamp", "lighting"],
+  "categories": ["household"],
+  "useCases": ["Turns on a light", "Shows a lighting product"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

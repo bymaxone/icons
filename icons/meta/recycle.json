@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Recycle",
+  "tags": ["recycle", "reuse", "environment", "waste"],
+  "categories": ["nature", "actions"],
+  "useCases": ["Marks a recyclable item", "Moves an item to recycling"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Lifebuoy",
+  "tags": ["lifebuoy", "help", "support", "rescue"],
+  "categories": ["communication", "status"],
+  "useCases": ["Opens the help centre", "Contacts support"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

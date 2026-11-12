@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Stethoscope",
+  "tags": ["stethoscope", "doctor", "checkup", "medical"],
+  "categories": ["health"],
+  "useCases": ["Books a medical appointment", "Marks a checkup"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

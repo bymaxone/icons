@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Beaker",
+  "tags": ["beaker", "lab", "measure", "liquid"],
+  "categories": ["science"],
+  "useCases": ["Measures a liquid", "Marks a lab test"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

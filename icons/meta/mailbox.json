@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Mailbox",
+  "tags": ["mailbox", "post", "letter", "delivery"],
+  "categories": ["communication", "household"],
+  "useCases": ["Opens the inbox of letters", "Shows a postal address"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

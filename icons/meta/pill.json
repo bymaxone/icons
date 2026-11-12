@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Pill",
+  "tags": ["pill", "medicine", "capsule", "dose"],
+  "categories": ["health"],
+  "useCases": ["Reminds the user of a dose", "Shows a medication"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

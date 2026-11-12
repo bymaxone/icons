@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Virus",
+  "tags": ["virus", "germ", "infection", "malware"],
+  "categories": ["health", "security"],
+  "useCases": ["Marks an infection", "Flags malware"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

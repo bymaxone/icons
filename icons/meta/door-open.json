@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Open door",
+  "tags": ["door", "open", "enter", "exit"],
+  "categories": ["household", "navigation"],
+  "useCases": ["Enters a room", "Leaves the session"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

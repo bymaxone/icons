@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Luggage",
+  "tags": ["luggage", "suitcase", "travel", "trip"],
+  "categories": ["transport"],
+  "useCases": ["Shows a trip", "Adds checked luggage"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -7,7 +7,7 @@
 import { createIcon } from '@bymax-one/icons/runtime'
 
 /**
- * The `octopus` icon, line variant: octopus, mascot, agent avatar.
+ * The `octopus` icon, line variant: octopus, mascot, agent avatar, agent.
  *
  * @since 0.1.0
  */
