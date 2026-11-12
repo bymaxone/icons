@@ -252,6 +252,15 @@ describe('sixteenIssues', () => {
     ])
   })
 
+  it('names each pair exactly as the allowlist must spell it', () => {
+    /** Scenario: the pairs read back from the messages, once listed, clear every issue. */
+    const named = sixteenIssues(drawings, fusing, {}).map(
+      (issue) => /^a: pair (\d+-\d+) fuses/.exec(issue)?.[1] ?? issue
+    )
+    expect(named).toEqual(['0-1', '0-2'])
+    expect(sixteenIssues(drawings, fusing, { a: { pairs: named, why: 'it reads' } })).toEqual([])
+  })
+
   it('names a new pair of an icon that is already listed', () => {
     /** Scenario: `a` is listed for 0-1 only, and has begun to fuse on 0-2. */
     expect(sixteenIssues(drawings, fusing, { a: { pairs: ['0-1'], why: 'it reads' } })).toEqual([
