@@ -12,6 +12,10 @@
     {
       "name": "stars",
       "deprecated": false
+    },
+    {
+      "name": "sparkles",
+      "deprecated": false
     }
   ],
   "variants": ["line", "filled"],

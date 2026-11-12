@@ -4,6 +4,12 @@
   "tags": ["airplane", "flight", "travel", "plane"],
   "categories": ["transport"],
   "useCases": ["Books a flight", "Turns on flight mode"],
+  "aliases": [
+    {
+      "name": "plane",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

@@ -18,3 +18,6 @@ export const ChartBarIcon = /* @__PURE__ */ createIcon('chart-bar', [
 
 /** `bar-chart`: an alias of {@link ChartBarIcon}. */
 export const BarChartIcon = ChartBarIcon
+
+/** `chart`: an alias of {@link ChartBarIcon}. */
+export const ChartIcon = ChartBarIcon

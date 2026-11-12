@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Reply all",
+  "tags": ["reply all", "respond", "answer", "message"],
+  "categories": ["communication", "arrows"],
+  "useCases": ["Replies to everyone", "Answers a group thread"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Quote",
+  "tags": ["quote", "citation", "blockquote", "text"],
+  "categories": ["text"],
+  "useCases": ["Formats a quotation", "Quotes a message"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

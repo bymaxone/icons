@@ -4,6 +4,12 @@
   "tags": ["subtitles", "transcript", "text track", "closed captions"],
   "categories": ["audio"],
   "useCases": ["Turns captions on", "Opens the subtitle editor"],
+  "aliases": [
+    {
+      "name": "subtitles",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

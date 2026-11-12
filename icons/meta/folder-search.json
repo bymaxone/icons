@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Search folders",
+  "tags": ["folder", "search", "find", "browse"],
+  "categories": ["files", "actions"],
+  "useCases": ["Searches in a folder", "Finds a folder"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

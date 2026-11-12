@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Corner down right",
+  "tags": ["corner", "arrow", "down", "right"],
+  "categories": ["arrows"],
+  "useCases": ["Points down then right", "Shows a turn in a flow"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

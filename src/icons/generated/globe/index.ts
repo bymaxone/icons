@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { GlobeIcon, LanguageIcon } from './line'
+export { EarthIcon, GlobeIcon, LanguageIcon } from './line'

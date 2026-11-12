@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Text cursor",
+  "tags": ["cursor", "text", "caret", "i-beam"],
+  "categories": ["text", "editing"],
+  "useCases": ["Places the text cursor", "Selects text"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

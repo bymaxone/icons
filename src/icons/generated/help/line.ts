@@ -19,3 +19,6 @@ export const HelpIcon = /* @__PURE__ */ createIcon('help', [
 
 /** `help-circle`: an alias of {@link HelpIcon}. */
 export const HelpCircleIcon = HelpIcon
+
+/** `question-mark`: an alias of {@link HelpIcon}. */
+export const QuestionMarkIcon = HelpIcon

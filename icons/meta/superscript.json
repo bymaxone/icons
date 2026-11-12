@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Superscript",
+  "tags": ["superscript", "text", "format", "raise"],
+  "categories": ["text"],
+  "useCases": ["Raises the selected text", "Formats an exponent"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Add task",
+  "tags": ["clipboard", "plus", "add", "checklist"],
+  "categories": ["actions"],
+  "useCases": ["Adds a task", "Creates a checklist item"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

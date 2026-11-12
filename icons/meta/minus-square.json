@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Collapse",
+  "tags": ["minus", "square", "collapse", "remove"],
+  "categories": ["actions"],
+  "useCases": ["Collapses a section", "Removes one item"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

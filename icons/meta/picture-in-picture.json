@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Picture in picture",
+  "tags": ["picture in picture", "pip", "video", "mini player"],
+  "categories": ["media"],
+  "useCases": ["Opens the mini player", "Pins a video"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

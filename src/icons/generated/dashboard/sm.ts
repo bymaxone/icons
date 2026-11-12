@@ -35,3 +35,6 @@ export const DashboardSmIcon = /* @__PURE__ */ createIcon(
   ],
   { masterSize: 16 }
 )
+
+/** `layout-grid`: an alias of {@link DashboardSmIcon}. */
+export const LayoutGridSmIcon = DashboardSmIcon

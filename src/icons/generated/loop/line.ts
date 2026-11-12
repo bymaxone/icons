@@ -18,3 +18,6 @@ export const LoopIcon = /* @__PURE__ */ createIcon('loop', [
 
 /** `repeat`: an alias of {@link LoopIcon}. */
 export const RepeatIcon = LoopIcon
+
+/** `replay`: an alias of {@link LoopIcon}. */
+export const ReplayIcon = LoopIcon

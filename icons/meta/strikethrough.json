@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Strikethrough",
+  "tags": ["strikethrough", "strike", "text", "format"],
+  "categories": ["text"],
+  "useCases": ["Strikes the text through", "Marks removed text"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

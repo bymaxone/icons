@@ -8,6 +8,10 @@
     {
       "name": "repeat",
       "deprecated": false
+    },
+    {
+      "name": "replay",
+      "deprecated": false
     }
   ],
   "variants": ["line"],

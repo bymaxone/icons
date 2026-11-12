@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Bookmarks",
+  "tags": ["bookmarks", "saved", "collection", "reading list"],
+  "categories": ["files", "status"],
+  "useCases": ["Opens the saved items", "Shows a reading list"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

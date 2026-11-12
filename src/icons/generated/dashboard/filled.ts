@@ -24,3 +24,6 @@ export const DashboardFilledIcon = /* @__PURE__ */ createIcon(
   ],
   { paint: 'fill' }
 )
+
+/** `layout-grid`: an alias of {@link DashboardFilledIcon}. */
+export const LayoutGridFilledIcon = DashboardFilledIcon

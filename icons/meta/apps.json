@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Apps",
+  "tags": ["apps", "grid", "launcher", "menu"],
+  "categories": ["navigation", "system"],
+  "useCases": ["Opens the app launcher", "Shows all the apps"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Search data",
+  "tags": ["database", "search", "query", "lookup"],
+  "categories": ["data", "dev"],
+  "useCases": ["Runs a query", "Searches the records"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

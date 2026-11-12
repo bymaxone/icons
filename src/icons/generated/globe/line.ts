@@ -24,3 +24,6 @@ export const GlobeIcon = /* @__PURE__ */ createIcon('globe', [
 
 /** `language`: an alias of {@link GlobeIcon}. */
 export const LanguageIcon = GlobeIcon
+
+/** `earth`: an alias of {@link GlobeIcon}. */
+export const EarthIcon = GlobeIcon

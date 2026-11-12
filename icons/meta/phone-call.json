@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Calling",
+  "tags": ["phone", "call", "ringing", "active call"],
+  "categories": ["communication"],
+  "useCases": ["Shows an active call", "Starts a call"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

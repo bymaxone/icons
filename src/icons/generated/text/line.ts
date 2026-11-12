@@ -15,3 +15,6 @@ export const TextIcon = /* @__PURE__ */ createIcon('text', [
   ['path', { d: 'M4.75 4.75h15' }],
   ['path', { d: 'M12.25 7.75v12' }]
 ])
+
+/** `type`: an alias of {@link TextIcon}. */
+export const TypeIcon = TextIcon

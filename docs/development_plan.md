@@ -429,6 +429,7 @@ These rules apply to every phase. Phase sections only add rules specific to them
 - **B6 renames (2026-11-12):** `accent`, `agent`, `variations`, `plan`, `spending-cap` and `sort` are renamed `droplet`, `robot`, `shapes`, `stairs`, `speedometer` and `arrow-up-down`, the objects they draw, each keeping its old name as a deprecated alias.
 - **B6-B2 ✅ (2026-11-12):** approved by the delegated auditor on behalf of the founder; `passport` is deferred to the category fill.
 - **B6-B3 ✅ (2026-11-12):** approved by the delegated auditor on behalf of the founder; `football` is deferred to the category fill.
+- **B6-C1 ✅ (2026-11-12):** approved by the delegated auditor on behalf of the founder.
 - **Size:** XL
 
 ### B7: brand-marks

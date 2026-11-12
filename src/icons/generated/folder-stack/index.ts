@@ -4,6 +4,6 @@
  * @layer Generated
  */
 
-export { FolderStackIcon } from './line'
-export { FolderStackFilledIcon } from './filled'
-export { FolderStackSmIcon } from './sm'
+export { FolderStackIcon, FoldersIcon } from './line'
+export { FolderStackFilledIcon, FoldersFilledIcon } from './filled'
+export { FolderStackSmIcon, FoldersSmIcon } from './sm'

@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { LogInIcon } from './line'
+export { LogInIcon, LoginIcon } from './line'

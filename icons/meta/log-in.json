@@ -4,6 +4,12 @@
   "tags": ["sign in", "enter", "login", "door"],
   "categories": ["people"],
   "useCases": ["Signs in", "Links to the sign-in page"],
+  "aliases": [
+    {
+      "name": "login",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

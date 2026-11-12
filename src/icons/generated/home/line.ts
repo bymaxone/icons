@@ -20,3 +20,6 @@ export const HomeIcon = /* @__PURE__ */ createIcon('home', [
   ],
   ['path', { d: 'M9.25 16.25V14.5c0-1.422.328-1.75 1.75-1.75h2c1.422 0 1.75.328 1.75 1.75v1.75' }]
 ])
+
+/** `house`: an alias of {@link HomeIcon}. */
+export const HouseIcon = HomeIcon

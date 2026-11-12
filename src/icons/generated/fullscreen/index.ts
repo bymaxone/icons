@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { FullscreenIcon, MaximizeIcon } from './line'
+export { ExpandIcon, FullscreenIcon, MaximizeIcon } from './line'

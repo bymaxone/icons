@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Playlist",
+  "tags": ["playlist", "queue", "music", "list"],
+  "categories": ["audio", "media"],
+  "useCases": ["Opens the playlist", "Adds to the queue"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

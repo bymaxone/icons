@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { LocationArrowIcon, NavigationIcon } from './line'
+export { GpsIcon, LocationArrowIcon, NavigationIcon } from './line'

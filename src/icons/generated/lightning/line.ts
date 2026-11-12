@@ -19,3 +19,9 @@ export const LightningIcon = /* @__PURE__ */ createIcon('lightning', [
     }
   ]
 ])
+
+/** `bolt`: an alias of {@link LightningIcon}. */
+export const BoltIcon = LightningIcon
+
+/** `flash`: an alias of {@link LightningIcon}. */
+export const FlashIcon = LightningIcon

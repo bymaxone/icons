@@ -4,6 +4,6 @@
  * @layer Generated
  */
 
-export { LightningIcon } from './line'
-export { LightningFilledIcon } from './filled'
-export { LightningSmIcon } from './sm'
+export { BoltIcon, FlashIcon, LightningIcon } from './line'
+export { BoltFilledIcon, FlashFilledIcon, LightningFilledIcon } from './filled'
+export { BoltSmIcon, FlashSmIcon, LightningSmIcon } from './sm'

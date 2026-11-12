@@ -19,3 +19,6 @@ export const AirplaneIcon = /* @__PURE__ */ createIcon('airplane', [
     }
   ]
 ])
+
+/** `plane`: an alias of {@link AirplaneIcon}. */
+export const PlaneIcon = AirplaneIcon

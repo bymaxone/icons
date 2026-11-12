@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Window",
+  "tags": ["window", "browser", "app", "frame"],
+  "categories": ["system"],
+  "useCases": ["Opens a new window", "Shows an app window"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

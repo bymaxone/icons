@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Read mail",
+  "tags": ["mail", "open", "read", "envelope"],
+  "categories": ["communication"],
+  "useCases": ["Marks a message as read", "Opens a letter"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

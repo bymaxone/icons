@@ -4,6 +4,6 @@
  * @layer Generated
  */
 
-export { AlertTriangleIcon, WarningIcon } from './line'
-export { AlertTriangleFilledIcon, WarningFilledIcon } from './filled'
-export { AlertTriangleSmIcon, WarningSmIcon } from './sm'
+export { AlertIcon, AlertTriangleIcon, WarningIcon } from './line'
+export { AlertFilledIcon, AlertTriangleFilledIcon, WarningFilledIcon } from './filled'
+export { AlertSmIcon, AlertTriangleSmIcon, WarningSmIcon } from './sm'

@@ -8,6 +8,10 @@
     {
       "name": "language",
       "deprecated": false
+    },
+    {
+      "name": "earth",
+      "deprecated": false
     }
   ],
   "variants": ["line"],

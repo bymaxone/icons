@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { ActivityIcon } from './line'
+export { ActivityIcon, PulseIcon } from './line'

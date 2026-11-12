@@ -22,3 +22,6 @@ export const CaptionsIcon = /* @__PURE__ */ createIcon('captions', [
   ['path', { d: 'M14.25 12.75h4' }],
   ['path', { d: 'M6.25 15.75h9' }]
 ])
+
+/** `subtitles`: an alias of {@link CaptionsIcon}. */
+export const SubtitlesIcon = CaptionsIcon

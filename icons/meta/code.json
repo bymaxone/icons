@@ -4,6 +4,12 @@
   "tags": ["code", "source", "developer", "embed"],
   "categories": ["dev"],
   "useCases": ["Shows the source of a page", "Opens the embed code"],
+  "aliases": [
+    {
+      "name": "html",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

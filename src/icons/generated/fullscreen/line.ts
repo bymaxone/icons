@@ -20,3 +20,6 @@ export const FullscreenIcon = /* @__PURE__ */ createIcon('fullscreen', [
 
 /** `maximize`: an alias of {@link FullscreenIcon}. */
 export const MaximizeIcon = FullscreenIcon
+
+/** `expand`: an alias of {@link FullscreenIcon}. */
+export const ExpandIcon = FullscreenIcon

@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { TextIcon } from './line'
+export { TextIcon, TypeIcon } from './line'

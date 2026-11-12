@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Download file",
+  "tags": ["file", "download", "save", "export"],
+  "categories": ["files", "actions"],
+  "useCases": ["Downloads a file", "Saves a document"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

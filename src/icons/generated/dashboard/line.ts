@@ -31,3 +31,6 @@ export const DashboardIcon = /* @__PURE__ */ createIcon('dashboard', [
     }
   ]
 ])
+
+/** `layout-grid`: an alias of {@link DashboardIcon}. */
+export const LayoutGridIcon = DashboardIcon

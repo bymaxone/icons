@@ -12,6 +12,10 @@
     {
       "name": "warning",
       "deprecated": false
+    },
+    {
+      "name": "alert",
+      "deprecated": false
     }
   ],
   "variants": ["line", "filled", "sm"],

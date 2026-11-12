@@ -24,3 +24,6 @@ export const AlertTriangleIcon = /* @__PURE__ */ createIcon('alert-triangle', [
 
 /** `warning`: an alias of {@link AlertTriangleIcon}. */
 export const WarningIcon = AlertTriangleIcon
+
+/** `alert`: an alias of {@link AlertTriangleIcon}. */
+export const AlertIcon = AlertTriangleIcon

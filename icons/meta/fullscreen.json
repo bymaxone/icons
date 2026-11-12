@@ -8,6 +8,10 @@
     {
       "name": "maximize",
       "deprecated": false
+    },
+    {
+      "name": "expand",
+      "deprecated": false
     }
   ],
   "variants": ["line"],
