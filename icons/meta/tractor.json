@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Tractor",
+  "tags": ["tractor", "farm", "agriculture", "vehicle"],
+  "categories": ["transport", "nature"],
+  "useCases": ["Shows farm work", "Marks agriculture"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

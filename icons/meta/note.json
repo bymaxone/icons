@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Note",
+  "tags": ["note", "sticky note", "memo", "reminder"],
+  "categories": ["text", "files"],
+  "useCases": ["Adds a note", "Shows a memo"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

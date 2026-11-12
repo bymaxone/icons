@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Solar panel",
+  "tags": ["solar panel", "energy", "renewable", "sun"],
+  "categories": ["nature", "devices"],
+  "useCases": ["Shows solar energy", "Marks a renewable source"],
+  "aliases": [
+    {
+      "name": "solar-power",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -68,9 +68,21 @@
       "pairs": ["0-1"],
       "why": "the axis meets the triangles; it still reads as mirroring"
     },
+    "fridge": {
+      "pairs": ["0-2"],
+      "why": "the handle touches the outline; without it the drawing is a cabinet, and it still reads as a fridge"
+    },
     "lightbulb": {
       "pairs": ["0-1"],
       "why": "still reads as the object in the blur"
+    },
+    "podcast": {
+      "pairs": ["1-2"],
+      "why": "the two broadcast arcs touch; it still reads as a podcast"
+    },
+    "snail": {
+      "pairs": ["1-2"],
+      "why": "the centre of the spiral touches the shell ring; the spiral draws the shell, and it still reads as a snail"
     },
     "window": {
       "pairs": ["0-2"],

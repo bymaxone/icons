@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Helicopter",
+  "tags": ["helicopter", "flight", "aviation", "rescue"],
+  "categories": ["transport"],
+  "useCases": ["Books a helicopter flight", "Marks an air rescue"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

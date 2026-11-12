@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Motorbike",
+  "tags": ["motorbike", "motorcycle", "ride", "delivery"],
+  "categories": ["transport"],
+  "useCases": ["Shows a motorbike", "Marks a delivery by bike"],
+  "aliases": [
+    {
+      "name": "moped",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

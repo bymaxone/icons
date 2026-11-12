@@ -430,6 +430,8 @@ These rules apply to every phase. Phase sections only add rules specific to them
 - **B6-B2 ✅ (2026-11-12):** approved by the delegated auditor on behalf of the founder; `passport` is deferred to the category fill.
 - **B6-B3 ✅ (2026-11-12):** approved by the delegated auditor on behalf of the founder; `football` is deferred to the category fill.
 - **B6-C1 ✅ (2026-11-12):** approved by the delegated auditor on behalf of the founder.
+- **B6-C2 ✅ (2026-11-12):** approved by the delegated auditor on behalf of the founder; `engine` is deferred to the category fill.
+- **B6-C3 ✅ (2026-11-12):** approved by the delegated auditor on behalf of the founder; `baseball` is deferred to the category fill.
 - **Size:** XL
 
 ### B7: brand-marks

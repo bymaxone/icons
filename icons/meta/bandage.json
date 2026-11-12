@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Bandage",
+  "tags": ["bandage", "plaster", "first aid", "wound"],
+  "categories": ["health"],
+  "useCases": ["Shows first aid", "Marks a minor injury"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Rectangle",
+  "tags": ["rectangle", "shape", "box", "geometry"],
+  "categories": ["shapes"],
+  "useCases": ["Draws a rectangle", "Marks a frame shape"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

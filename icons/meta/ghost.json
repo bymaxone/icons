@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Ghost",
+  "tags": ["ghost", "spooky", "hidden", "halloween"],
+  "categories": ["emotions", "games"],
+  "useCases": ["Marks a hidden item", "Shows a spooky theme"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

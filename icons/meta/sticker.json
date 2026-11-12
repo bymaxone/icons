@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Sticker",
+  "tags": ["sticker", "label", "decal", "peel"],
+  "categories": ["emotions", "editing"],
+  "useCases": ["Adds a sticker", "Opens the stickers"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

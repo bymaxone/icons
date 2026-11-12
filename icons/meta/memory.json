@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Memory",
+  "tags": ["memory", "ram", "chip", "module"],
+  "categories": ["devices", "dev"],
+  "useCases": ["Shows the memory use", "Marks a hardware module"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

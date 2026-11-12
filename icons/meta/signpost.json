@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Signpost",
+  "tags": ["signpost", "directions", "sign", "way"],
+  "categories": ["maps", "navigation"],
+  "useCases": ["Shows directions", "Marks a crossroads"],
+  "aliases": [
+    {
+      "name": "directions",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

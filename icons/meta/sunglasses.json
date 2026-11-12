@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Sunglasses",
+  "tags": ["sunglasses", "summer", "cool", "eyewear"],
+  "categories": ["people", "household"],
+  "useCases": ["Shows a summer theme", "Marks an eyewear product"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

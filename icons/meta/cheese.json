@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Cheese",
+  "tags": ["cheese", "dairy", "food", "snack"],
+  "categories": ["food"],
+  "useCases": ["Shows a dairy product", "Marks a cheese option"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

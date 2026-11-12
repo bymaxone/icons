@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Cone",
+  "tags": ["cone", "3d", "shape", "geometry"],
+  "categories": ["shapes"],
+  "useCases": ["Draws a cone", "Marks a 3D shape"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

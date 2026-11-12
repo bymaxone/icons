@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Lungs",
+  "tags": ["lungs", "breath", "respiratory", "health"],
+  "categories": ["health"],
+  "useCases": ["Shows breathing health", "Marks a respiratory topic"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

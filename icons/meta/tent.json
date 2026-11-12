@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Tent",
+  "tags": ["tent", "camping", "outdoor", "travel"],
+  "categories": ["nature", "transport"],
+  "useCases": ["Shows a campsite", "Marks an outdoor stay"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

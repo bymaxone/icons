@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Garage",
+  "tags": ["garage", "parking", "car", "building"],
+  "categories": ["household", "transport"],
+  "useCases": ["Shows the garage", "Marks a parking space"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Beer",
+  "tags": ["beer", "drink", "pub", "mug"],
+  "categories": ["food"],
+  "useCases": ["Shows a drink", "Marks a bar or pub"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

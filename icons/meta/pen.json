@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Pen",
+  "tags": ["pen", "write", "fountain pen", "sign"],
+  "categories": ["editing", "text"],
+  "useCases": ["Writes a note", "Signs a form"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

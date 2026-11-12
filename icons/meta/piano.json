@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Piano",
+  "tags": ["piano", "keys", "music", "instrument"],
+  "categories": ["audio"],
+  "useCases": ["Opens the instruments", "Marks a piano track"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

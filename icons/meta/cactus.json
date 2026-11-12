@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Cactus",
+  "tags": ["cactus", "desert", "plant", "succulent"],
+  "categories": ["nature"],
+  "useCases": ["Shows a desert plant", "Marks a dry climate"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

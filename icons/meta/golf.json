@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Golf",
+  "tags": ["golf", "flag", "sport", "course"],
+  "categories": ["games", "health"],
+  "useCases": ["Shows a golf course", "Marks a sports activity"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}
