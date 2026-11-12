@@ -364,11 +364,13 @@
   grid-template-columns: repeat(auto-fill, minmax(92px, 1fr));
   gap: 6px;
 }
+/* Every cell lays out from the top: the drawing in a fixed band, the name in a two-line band
+   below it, so the drawings of a row share one line whatever the length of their names. */
 .cell a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 8px;
   height: 100%;
   min-height: 92px;
@@ -406,6 +408,7 @@
 /* A name is what a developer copies, so it is never cut: it breaks after a hyphen, on two
    lines at most, balanced. */
 .cell .n {
+  min-height: calc(2 * 1.3em);
   max-width: 100%;
   overflow-wrap: anywhere;
   text-wrap: balance;
