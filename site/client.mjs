@@ -9,11 +9,11 @@
 
 import {
   highlight,
+  mergeState,
   nearCategories,
   readState,
   search,
-  suggestions,
-  writeState
+  suggestions
 } from '../src/pipeline/site-search.ts'
 
 const root = document.documentElement
@@ -94,7 +94,11 @@ function offer(holder, words, act) {
     const button = document.createElement('button')
     button.type = 'button'
     button.textContent = word.text
-    button.addEventListener('click', () => act(word.value))
+    button.addEventListener('click', () => {
+      act(word.value)
+      // The button goes with the empty state; the search keeps the focus.
+      document.getElementById('q')?.focus()
+    })
     holder.append(button)
   }
   holder.parentElement.hidden = words.length === 0
@@ -105,7 +109,8 @@ function showEmpty(empty, nothing) {
   empty.hidden = !nothing
   if (!nothing) return
   const { q } = finder.state
-  document.getElementById('empty-q').textContent = q
+  document.querySelector('.empty-title').textContent =
+    q === '' ? 'Nothing matches the selected filters.' : `Nothing matches “${q}”.`
   offer(
     document.getElementById('did'),
     suggestions(finder.docs, q).map((word) => ({ text: word, value: word })),
@@ -115,8 +120,29 @@ function showEmpty(empty, nothing) {
   offer(
     document.getElementById('near'),
     nearCategories(finder.categories, q).map((name) => ({ text: titles.get(name), value: name })),
-    (name) => setFacet('categories', [name], true)
+    (name) => {
+      // The query found nothing in any category, so a close category is shown without it.
+      setQuery('', false)
+      setFacet('categories', [name], true)
+    }
   )
+}
+
+/** The line that names the active facets, with a button that clears them. */
+function showActive() {
+  const { types, categories } = finder.state
+  const line = document.querySelector('.active')
+  if (!line) return
+  const titles = new Map(finder.categories.map((category) => [category.name, category.title]))
+  const typeLabels = new Map(
+    [...document.querySelectorAll('[data-type]')].map((b) => [b.dataset.type, b.textContent])
+  )
+  const names = [
+    ...types.map((t) => typeLabels.get(t) ?? t),
+    ...categories.map((c) => titles.get(c) ?? c)
+  ]
+  line.hidden = names.length === 0
+  document.getElementById('active').textContent = names.join(', ')
 }
 
 /** Shows the cells the search and the facets keep, ranked, and counts them by section. */
@@ -151,15 +177,20 @@ function filter() {
   document.getElementById('shown-icons').textContent = String(shown.icon.size)
   document.getElementById('shown-brands').textContent = String(shown.brand.size)
   showEmpty(document.querySelector('.empty'), shown.icon.size + shown.brand.size === 0)
-  history.replaceState(null, '', `${location.pathname}${writeState(state)}${location.hash}`)
+  showActive()
+  history.replaceState(
+    null,
+    '',
+    `${location.pathname}${mergeState(location.search, state)}${location.hash}`
+  )
 }
 
-/** Sets the query, in the search box and in the state. */
-function setQuery(query) {
+/** Sets the query, in the search box and in the state, and shows the result unless told not to. */
+function setQuery(query, show = true) {
   finder.state = { ...finder.state, q: query }
   const box = document.getElementById('q')
   if (box) box.value = query
-  filter()
+  if (show) filter()
 }
 
 /** Sets a facet's list, and marks its controls. */
@@ -236,6 +267,11 @@ function startSearch() {
   for (const pick of document.querySelectorAll('input[data-cat]')) {
     pick.addEventListener('change', () => toggleFacet('categories', pick.dataset.cat, pick.checked))
   }
+  document.getElementById('clear')?.addEventListener('click', () => {
+    finder.state = { ...finder.state, types: [], categories: [] }
+    setFacet('types', [])
+    box.focus()
+  })
   document.getElementById('jump')?.addEventListener('change', (event) => {
     const name = event.target.value
     if (name) document.getElementById(`cat-${name}`)?.scrollIntoView({ block: 'start' })
@@ -250,10 +286,18 @@ function startSearch() {
   })
   spy()
   void fetch('assets/search.json')
-    .then((response) => response.json())
+    .then((response) => {
+      if (!response.ok) throw new Error(`The search index answered ${response.status}`)
+      return response.json()
+    })
     .then((docs) => {
       finder.docs = docs
       filter()
+    })
+    .catch(() => {
+      // Every icon stays listed; the reader is told the search cannot run.
+      box.disabled = true
+      box.placeholder = 'Search is unavailable; every icon is listed below'
     })
 }
 

@@ -264,7 +264,7 @@ function emptyState(catalog, render) {
     .map((entry) => cell(entry, render))
     .join('\n')
   return `<div class="empty" hidden>
-    <p class="empty-title">Nothing matches <q id="empty-q"></q>.</p>
+    <p class="empty-title">Nothing matches.</p>
     <p class="did" hidden>Did you mean <span id="did"></span>?</p>
     <p class="near" hidden>Close categories: <span id="near"></span></p>
     <p class="popular-title">Popular icons</p>
@@ -294,6 +294,7 @@ export function homePage(catalog, render, version) {
   <div class="layout">
     ${categoryNav(catalog, render)}
     <div class="sections">
+      <p class="active" hidden>Filtered by <span id="active"></span> <button type="button" id="clear">Clear filters</button></p>
       <p class="count" aria-live="polite">Showing <span id="shown-icons">${icons.length}</span> of ${icons.length} icons and <span id="shown-brands">${brands}</span> of ${brands} brand marks</p>
       ${catalog.categories.map((category) => categorySection(catalog, category, render)).join('\n')}
       ${emptyState(catalog, render)}

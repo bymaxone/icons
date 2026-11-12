@@ -14,6 +14,7 @@ import {
   editDistance,
   fold,
   highlight,
+  mergeState,
   nearCategories,
   passes,
   readState,
@@ -285,6 +286,19 @@ describe('suggestions', () => {
     expect(suggestions(docs, 'zzzzzzzz')).toStrictEqual([])
     expect(suggestions([doc('d', [['tag', 'date']])], 'date')).toStrictEqual([])
   })
+
+  it('offers nothing for a query with no word', () => {
+    // Scenario: facets alone left nothing, so the query is empty; one-letter words of the
+    // index must not be offered as if one edit from it.
+    const short = [
+      doc('x', [
+        ['name', 'x'],
+        ['tag', 'a 2']
+      ])
+    ]
+    expect(suggestions(short, '')).toStrictEqual([])
+    expect(suggestions(short, ' - ')).toStrictEqual([])
+  })
 })
 
 describe('nearCategories', () => {
@@ -357,6 +371,16 @@ describe('readState and writeState', () => {
       '?q=a+b&type=line&cat=x%2Cy'
     )
     expect(writeState({ q: '', types: [], categories: [] })).toBe('')
+  })
+
+  it('keeps every parameter of the page the search does not own', () => {
+    // Scenario: the variant the page shows survives a search; the search's own parameters
+    // are replaced, or removed when empty; nothing left gives an empty string.
+    expect(
+      mergeState('?variant=filled&q=old&cat=x', { q: 'home', types: [], categories: [] })
+    ).toBe('?variant=filled&q=home')
+    expect(mergeState('?type=line', { q: '', types: [], categories: ['a'] })).toBe('?cat=a')
+    expect(mergeState('?q=a', { q: '', types: [], categories: [] })).toBe('')
   })
 })
 

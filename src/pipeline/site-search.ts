@@ -230,7 +230,7 @@ export function suggestions(docs: readonly SearchDoc[], query: string, limit = 3
     }
   }
   const scored: [string, number][] = []
-  for (const word of fold(query).split(' ')) {
+  for (const word of fold(query).split(' ').filter(Boolean)) {
     const limit = allowedEdits(word) + 1
     for (const candidate of words) {
       const edits = editDistance(word, candidate, limit)
@@ -321,6 +321,25 @@ export function writeState(state: SearchState): string {
   if (state.q !== '') params.set('q', state.q)
   if (state.types.length > 0) params.set('type', state.types.join(','))
   if (state.categories.length > 0) params.set('cat', state.categories.join(','))
+  const text = params.toString()
+  return text === '' ? '' : `?${text}`
+}
+
+/** The parameters of the address the search owns; every other one is the page's. */
+const OWN = ['q', 'type', 'cat']
+
+/**
+ * Updates an address's query string with the search state, keeping every parameter the
+ * search does not own, such as the variant the page shows.
+ *
+ * @param current - The current query string, such as `?variant=filled&q=home`.
+ * @param state - The search state to write.
+ * @returns The query string with its `?`, or the empty string when nothing is left.
+ */
+export function mergeState(current: string, state: SearchState): string {
+  const params = new URLSearchParams(current)
+  for (const key of OWN) params.delete(key)
+  for (const [key, value] of new URLSearchParams(writeState(state))) params.set(key, value)
   const text = params.toString()
   return text === '' ? '' : `?${text}`
 }
