@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Commit",
+  "tags": ["commit", "git", "version", "change"],
+  "categories": ["dev"],
+  "useCases": ["Shows a commit", "Marks a saved change in history"],
+  "aliases": [
+    {
+      "name": "git-commit",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,20 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Cast to screen",
+  "tags": ["cast", "airplay", "mirror", "screen"],
+  "categories": ["devices", "connectivity", "media"],
+  "useCases": ["Sends the video to another screen", "Mirrors the display to a television"],
+  "aliases": [
+    {
+      "name": "cast",
+      "deprecated": false
+    },
+    {
+      "name": "airplay",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

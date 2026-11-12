@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Speaker",
+  "tags": ["speaker", "loudspeaker", "audio device", "sound"],
+  "categories": ["devices", "audio"],
+  "useCases": ["Picks the audio output", "Marks a connected speaker"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

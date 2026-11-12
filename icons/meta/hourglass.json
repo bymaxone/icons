@@ -1,0 +1,18 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Hourglass",
+  "tags": ["hourglass", "waiting", "pending", "queued"],
+  "categories": ["status", "time"],
+  "useCases": ["Marks a render waiting in the queue", "Shows that a job has not started"],
+  "aliases": [
+    {
+      "name": "queued",
+      "deprecated": true,
+      "deprecationReason": "Renamed to hourglass, the object the drawing shows.",
+      "toBeRemovedInVersion": "2.0.0"
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

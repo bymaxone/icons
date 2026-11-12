@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Merge",
+  "tags": ["merge", "git", "join", "combine"],
+  "categories": ["dev"],
+  "useCases": ["Merges a branch", "Combines two versions"],
+  "aliases": [
+    {
+      "name": "git-merge",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

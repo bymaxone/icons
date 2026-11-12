@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Calculator",
+  "tags": ["calculator", "calculate", "math", "sum"],
+  "categories": ["devices", "math"],
+  "useCases": ["Opens the calculator", "Estimates a total"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

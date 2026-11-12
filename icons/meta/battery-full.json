@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Battery full",
+  "tags": ["battery", "full", "charged", "power"],
+  "categories": ["devices", "status"],
+  "useCases": ["Shows a full battery", "Marks a charged device"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

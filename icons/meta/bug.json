@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Bug",
+  "tags": ["bug", "issue", "defect", "debug"],
+  "categories": ["dev"],
+  "useCases": ["Reports a bug", "Opens the debugger"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

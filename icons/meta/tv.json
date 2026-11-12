@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Television",
+  "tags": ["tv", "television", "screen", "broadcast"],
+  "categories": ["devices", "media"],
+  "useCases": ["Opens the TV app", "Marks a show to watch on a television"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Remove file",
+  "tags": ["file", "remove", "minus", "delete file"],
+  "categories": ["files"],
+  "useCases": ["Removes a file", "Takes a page out of a document"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

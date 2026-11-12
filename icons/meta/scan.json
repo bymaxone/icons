@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Scan",
+  "tags": ["scan", "scanner", "capture", "viewfinder"],
+  "categories": ["devices", "actions"],
+  "useCases": ["Starts a scan", "Reads a code with the camera"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Barcode",
+  "tags": ["barcode", "sku", "product code", "scan"],
+  "categories": ["commerce"],
+  "useCases": ["Shows a product code", "Scans an item at checkout"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}
