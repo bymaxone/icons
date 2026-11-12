@@ -416,7 +416,7 @@
   "tools": ["ferramentas", "chave", "manutenção"],
   "tornado": ["tornado", "tempestade", "redemoinho"],
   "train": ["trem", "metrô", "ferrovia"],
-  "tram": ["bonde", "VLT", "transporte"],
+  "tram": ["bonde", "vlt", "transporte"],
   "transition": ["transição", "efeito de passagem", "fusão", "corte entre cenas"],
   "translate": ["traduzir", "tradução", "idioma"],
   "trash": ["lixeira", "excluir", "apagar", "remover"],
