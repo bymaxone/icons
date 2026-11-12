@@ -15,6 +15,7 @@ import {
   TOUCH_ALPHA,
   fusedPairs,
   fusingIcons,
+  pairKey,
   rendersFuse,
   rendersTouch,
   sixteenDrawings,
@@ -218,56 +219,113 @@ describe('sixteenDrawings', () => {
   })
 })
 
+describe('pairKey', () => {
+  it('writes a pair as the allowlist does', () => {
+    /** Scenario: the element positions are joined by a hyphen, counted from 0. */
+    expect(pairKey([0, 2])).toBe('0-2')
+  })
+})
+
 describe('sixteenIssues', () => {
   const drawings = ['a', 'b'].map((name) => ({ ...lineDrawing(), name }))
-  const fusing = new Map<string, [number, number][]>([['a', [[0, 2]]]])
-
-  it('is quiet when every fusion is justified', () => {
-    /** Scenario: `a` fuses and is listed with a reason. */
-    expect(sixteenIssues(drawings, fusing, { a: 'it reads' })).toEqual([])
-  })
-
-  it('names an icon that fuses without being listed, with its pair', () => {
-    /** Scenario: `a` fuses and the allowlist is empty; elements are counted from 1. */
-    expect(sixteenIssues(drawings, fusing, {})).toEqual([
-      'a: elements 1 and 3 fuse at 16 px. Redraw it, or list it in scripts/sixteen-allowlist.json with a justification.'
-    ])
-  })
-
-  it('lists every pair of an icon that fuses', () => {
-    /** Scenario: two pairs are joined by a comma. */
-    const two = new Map<string, [number, number][]>([
+  const fusing = new Map<string, [number, number][]>([
+    [
+      'a',
       [
-        'a',
-        [
-          [0, 1],
-          [1, 2]
-        ]
+        [0, 1],
+        [0, 2]
       ]
+    ]
+  ])
+  const both = { a: { pairs: ['0-1', '0-2'], why: 'it reads' } }
+
+  it('is quiet when every fused pair is justified', () => {
+    /** Scenario: `a` fuses on two pairs and both are listed with a reason. */
+    expect(sixteenIssues(drawings, fusing, both)).toEqual([])
+  })
+
+  it('names an icon that fuses without being listed, once for each pair', () => {
+    /** Scenario: the allowlist is empty; pairs are written as the allowlist writes them. */
+    expect(sixteenIssues(drawings, fusing, {})).toEqual([
+      'a: pair 0-1 fuses at 16 px. Redraw it, or list the pair in scripts/sixteen-allowlist.json with a justification.',
+      'a: pair 0-2 fuses at 16 px. Redraw it, or list the pair in scripts/sixteen-allowlist.json with a justification.'
     ])
-    expect(sixteenIssues(drawings, two, {})[0]).toContain('elements 1 and 2, 2 and 3 fuse')
+  })
+
+  it('names each pair exactly as the allowlist must spell it', () => {
+    /** Scenario: the pairs read back from the messages, once listed, clear every issue. */
+    const named = sixteenIssues(drawings, fusing, {}).map(
+      (issue) => /^a: pair (\d+-\d+) fuses/.exec(issue)?.[1] ?? issue
+    )
+    expect(named).toEqual(['0-1', '0-2'])
+    expect(sixteenIssues(drawings, fusing, { a: { pairs: named, why: 'it reads' } })).toEqual([])
+  })
+
+  it('names a new pair of an icon that is already listed', () => {
+    /** Scenario: `a` is listed for 0-1 only, and has begun to fuse on 0-2. */
+    expect(sixteenIssues(drawings, fusing, { a: { pairs: ['0-1'], why: 'it reads' } })).toEqual([
+      'a: pair 0-2 fuses at 16 px. Redraw it, or list the pair in scripts/sixteen-allowlist.json with a justification.'
+    ])
+  })
+
+  it('fails a listed pair that no longer fuses', () => {
+    /** Scenario: `a` still fuses on 0-1 and 0-2, and is listed for 1-2 as well. */
+    const listed = { a: { pairs: ['0-1', '0-2', '1-2'], why: 'it reads' } }
+    expect(sixteenIssues(drawings, fusing, listed)).toEqual([
+      'a: pair 1-2 is on the allowlist but no longer fuses at 16 px. Remove it.'
+    ])
   })
 
   it('fails an entry whose icon no longer fuses', () => {
     /** Scenario: `b` is listed but is clean. */
-    expect(sixteenIssues(drawings, fusing, { a: 'it reads', b: 'it reads' })).toEqual([
+    expect(sixteenIssues(drawings, fusing, { ...both, b: { pairs: ['0-1'], why: 'x' } })).toEqual([
       'b: on the allowlist but no longer fuses at 16 px. Remove its entry.'
     ])
   })
 
   it('fails an entry whose icon does not exist', () => {
     /** Scenario: `gone` names no drawing. */
-    expect(sixteenIssues(drawings, fusing, { a: 'it reads', gone: 'it reads' })).toEqual([
-      'gone: on the allowlist but there is no such icon. Remove its entry.'
-    ])
+    expect(
+      sixteenIssues(drawings, fusing, { ...both, gone: { pairs: ['0-1'], why: 'x' } })
+    ).toEqual(['gone: on the allowlist but there is no such icon. Remove its entry.'])
+  })
+
+  it('fails an entry with no pairs', () => {
+    /** Scenario: `a` has an empty list, so every pair it fuses on is unlisted too. */
+    const issues = sixteenIssues(drawings, fusing, { a: { pairs: [], why: 'it reads' } })
+    expect(issues).toContain(
+      'a: on the allowlist without any pair. Remove its entry or list the pairs.'
+    )
+    expect(issues).toHaveLength(3)
   })
 
   it('fails an entry with an empty or blank justification', () => {
-    /** Scenario: `a` is listed with an empty text, and `b` with spaces, and `b` is clean too. */
-    expect(sixteenIssues(drawings, fusing, { a: '', b: '  ' })).toEqual([
+    /** Scenario: `a` has an empty text and is listed on its pairs; `b` has spaces and is clean. */
+    const listed = { a: { pairs: ['0-1', '0-2'], why: '' }, b: { pairs: ['0-1'], why: '  ' } }
+    expect(sixteenIssues(drawings, fusing, listed)).toEqual([
       'a: on the allowlist without a justification.',
       'b: on the allowlist but no longer fuses at 16 px. Remove its entry.',
       'b: on the allowlist without a justification.'
+    ])
+  })
+
+  it.each(['0', '1-0', '1-1', 'a-b', '0-1-2', '01-2', ' 0-1', '0-1 ', '-1-2', ''])(
+    'fails the malformed pair %j',
+    (pair) => {
+      /** Scenario: a pair must be two indices with the first below the second, no padding. */
+      const listed = { a: { pairs: ['0-1', '0-2', pair], why: 'it reads' } }
+      expect(sixteenIssues(drawings, fusing, listed)).toEqual([
+        `a: the pair ${JSON.stringify(pair)} is malformed. Write it as "i-j" with i below j, counted from 0.`
+      ])
+    }
+  )
+
+  it('accepts pairs of several digits as well formed', () => {
+    /** Scenario: 9-10 and 10-12 are canonical; they do not fuse, so they are stale and not malformed. */
+    const listed = { a: { pairs: ['0-1', '0-2', '9-10', '10-12'], why: 'it reads' } }
+    expect(sixteenIssues(drawings, fusing, listed)).toEqual([
+      'a: pair 9-10 is on the allowlist but no longer fuses at 16 px. Remove it.',
+      'a: pair 10-12 is on the allowlist but no longer fuses at 16 px. Remove it.'
     ])
   })
 

@@ -10,32 +10,45 @@ import { join } from 'node:path'
 
 import { lintAndReport, parseOptions } from './cli.ts'
 import type { Output } from './cli.ts'
+import type { AllowedFusion } from './sixteen.ts'
 import { fusingIcons, sixteenDrawings, sixteenIssues } from './sixteen.ts'
 
 /** Where the allowlist is committed, from the repository root. */
 export const ALLOWLIST_PATH = 'scripts/sixteen-allowlist.json'
 
-/** Reads the allowlist's `icons` table; throws when the file is not `{ "icons": { name: text } }`. */
-function readAllowlist(root: string): Record<string, string> {
+const SHAPE = `${ALLOWLIST_PATH}: expected { "icons": { "<name>": { "pairs": ["<i-j>"], "why": "<justification>" } } }`
+
+/** Whether a value is an entry `{ pairs: string[], why: string }`. */
+function isEntry(value: unknown): value is AllowedFusion {
+  const { pairs, why } = (value ?? {}) as { pairs?: unknown; why?: unknown }
+  return (
+    typeof why === 'string' &&
+    Array.isArray(pairs) &&
+    pairs.every((pair) => typeof pair === 'string')
+  )
+}
+
+/** Reads the allowlist's `icons` table; throws when the file does not have the documented shape. */
+function readAllowlist(root: string): Record<string, AllowedFusion> {
   const parsed = JSON.parse(readFileSync(join(root, ALLOWLIST_PATH), 'utf8')) as {
-    icons?: Record<string, unknown>
+    icons?: unknown
   } | null
   const icons = parsed?.icons
   const entries = typeof icons === 'object' && icons !== null ? Object.entries(icons) : undefined
   if (
     Array.isArray(icons) ||
     entries === undefined ||
-    entries.some(([, justification]) => typeof justification !== 'string')
+    !entries.every(([, entry]) => isEntry(entry))
   ) {
-    throw new Error(`${ALLOWLIST_PATH}: expected { "icons": { "<name>": "<justification>" } }`)
+    throw new Error(SHAPE)
   }
-  return Object.fromEntries(entries) as Record<string, string>
+  return Object.fromEntries(entries) as Record<string, AllowedFusion>
 }
 
 /**
  * `pnpm check:sixteen`: measures every non-brand icon at 16 px, on its 16 px master or else
  * its line drawing, and fails on a fusion the allowlist does not justify, on an entry that
- * no longer fuses or names no icon, and on an entry without a justification.
+ * no longer fuses or names no icon, and on a fused pair the entry does not list.
  *
  * @param args - The command-line arguments.
  * @param root - The repository root.
