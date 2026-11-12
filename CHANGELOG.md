@@ -63,6 +63,7 @@ and deprecated, each rename with the alias that keeps the old name working.
   `rocket` (alias `launch`), `anchor`, `hospital`, `bed`, `umbrella`, `leaf`, `flower`,
   `feather`, `skull`, `dice` (alias `random`), `cake` (alias `birthday`), `cookie` and `egg`,
   and the categories `science`, `food` and `household`.
+- Food, nature, transport and currencies (B6-B3): `blender`, `chef-hat`, `coffee`, `ice-cream`, `pizza`, `fish`, `fire`, `tree`, `snowflake`, `cloud-snow`, `wind`, `tornado`, `rainbow`, `sunrise`, `sunset`, `planet`, `airplane`, `bicycle`, `scooter`, `tram`, `balloon`, `basketball`, `school`, `route`, `currency-dollar`, `currency-euro`, `currency-pound`, `currency-rupee` and `currency-real`.
 - Objects, science and health (B6-B2): `backpack`, `brain`, `cash`, `dna`, `drone`, `flask`, `beaker`, `test-tube`, `glasses`, `lamp`, `lightbulb`, `piggy-bank`, `puzzle`, `recycle`, `scale`, `weight`, `stethoscope`, `virus`, `ambulance`, `pill`, `lifebuoy`, `luggage`, `mailbox`, `nut`, `safe`, `shirt`, `telescope`, `tools`, `plug`, `door-open`, `desk`, `sofa`, `podium`, `ear`, `flashlight`, `bomb`, `sword` and `certificate`.
 - Interface, files and editing (B6-B1): `file-check`, `file-code`, `file-search`, `file-lock`,
   `files` (alias `documents`), `folder-lock`, `calendar-plus`, `calendar-heart`,
