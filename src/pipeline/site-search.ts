@@ -312,13 +312,13 @@ const KNOWN_TYPES = ['line', 'filled', 'sm', 'brand']
 export function readState(query: string): SearchState {
   const params = new URLSearchParams(query)
   const legacy = LEGACY_VARIANTS.find((variant) => variant === params.get('variant'))
-  // The Type control picks one type, so an address keeps its first known one.
-  const types = listOf(params.get('type'))
-    .filter((type) => KNOWN_TYPES.includes(type))
-    .slice(0, 1)
+  // The Type control picks one type, so an address keeps its first known one; a named type,
+  // even an unknown one, keeps the older variant from being read.
+  const named = listOf(params.get('type'))
+  const types = named.filter((type) => KNOWN_TYPES.includes(type)).slice(0, 1)
   return {
     q: params.get('q') ?? '',
-    types: types.length === 0 && legacy !== undefined ? [legacy] : types,
+    types: named.length === 0 && legacy !== undefined ? [legacy] : types,
     categories: listOf(params.get('cat'))
   }
 }

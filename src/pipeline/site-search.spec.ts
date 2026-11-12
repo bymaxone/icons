@@ -378,6 +378,8 @@ describe('readState and writeState', () => {
     expect(readState('?variant=line').types).toStrictEqual([])
     expect(readState('?variant=bold').types).toStrictEqual([])
     expect(readState('?variant=filled&type=brand').types).toStrictEqual(['brand'])
+    // A named type wins even when it is unknown: the variant is not read back in.
+    expect(readState('?variant=filled&type=bogus').types).toStrictEqual([])
   })
 
   it('writes only what is set, and nothing for an empty state', () => {
