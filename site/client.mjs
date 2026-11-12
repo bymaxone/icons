@@ -249,12 +249,8 @@ function arrows(event) {
   }
 }
 
-/** Wires the search, the facets, the navigation and the keyboard on the home page. */
-function startSearch() {
-  const box = document.getElementById('q')
-  if (!box) return
-  box.value = finder.state.q
-  // A narrow box cannot hold the full hint, so it reads only "Search icons" there.
+/** Fits the search box's hint to its width: a narrow box reads only "Search icons". */
+function fitPlaceholder(box) {
   const narrow = matchMedia('(max-width: 820px)')
   const full = box.placeholder
   const fit = () => {
@@ -262,12 +258,10 @@ function startSearch() {
   }
   fit()
   narrow.addEventListener('change', fit)
-  finder.categories = [...document.querySelectorAll('.group')].map((section) => ({
-    name: section.dataset.cat,
-    title: section.querySelector('h2').firstChild.textContent.trim()
-  }))
-  setFacet('types', finder.state.types)
-  box.addEventListener('input', () => setQuery(box.value))
+}
+
+/** Wires the Type control, the filters drawer, the category boxes, the clear button and the jump list. */
+function wireFacets(box) {
   for (const button of document.querySelectorAll('[data-type]')) {
     button.addEventListener('click', () =>
       setFacet('types', button.dataset.type === '' ? [] : [button.dataset.type])
@@ -291,6 +285,10 @@ function startSearch() {
     const name = event.target.value
     if (name) document.getElementById(`cat-${name}`)?.scrollIntoView({ block: 'start' })
   })
+}
+
+/** Wires the keyboard: `/` focuses the search unless a field has the focus; arrows move between results. */
+function wireKeys(box) {
   document.addEventListener('keydown', (event) => {
     const typing =
       event.target instanceof HTMLInputElement || event.target instanceof HTMLSelectElement
@@ -299,7 +297,10 @@ function startSearch() {
       box.focus()
     } else arrows(event)
   })
-  spy()
+}
+
+/** Loads the search index, then applies the state; on failure, says the search cannot run. */
+function loadIndex(box) {
   void fetch('assets/search.json')
     .then((response) => {
       if (!response.ok) throw new Error(`The search index answered ${response.status}`)
@@ -314,6 +315,24 @@ function startSearch() {
       box.disabled = true
       box.placeholder = 'Search is unavailable; every icon is listed below'
     })
+}
+
+/** Wires the search, the facets, the navigation and the keyboard on the home page. */
+function startSearch() {
+  const box = document.getElementById('q')
+  if (!box) return
+  box.value = finder.state.q
+  fitPlaceholder(box)
+  finder.categories = [...document.querySelectorAll('.group')].map((section) => ({
+    name: section.dataset.cat,
+    title: section.querySelector('h2').firstChild.textContent.trim()
+  }))
+  setFacet('types', finder.state.types)
+  box.addEventListener('input', () => setQuery(box.value))
+  wireFacets(box)
+  wireKeys(box)
+  spy()
+  loadIndex(box)
 }
 
 /** Applies the theme and labels the toggle with the theme it switches to. */
