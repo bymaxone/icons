@@ -239,8 +239,8 @@ function arrows(event) {
   const grid = from.closest('.grid')
   const links = [...grid.querySelectorAll('.cell:not([hidden]) a')]
   links.sort((a, b) => Number(a.parentElement.style.order) - Number(b.parentElement.style.order))
-  const top = from.getBoundingClientRect().top
-  const columns = links.filter((link) => link.getBoundingClientRect().top === top).length
+  // The grid's own column count, so a short last row does not shorten the step up or down.
+  const columns = getComputedStyle(grid).gridTemplateColumns.split(' ').length
   const step = { ArrowLeft: -1, ArrowRight: 1, ArrowUp: -columns, ArrowDown: columns }[event.key]
   const next = links[links.indexOf(from) + step]
   if (step !== undefined && next) {
@@ -254,6 +254,14 @@ function startSearch() {
   const box = document.getElementById('q')
   if (!box) return
   box.value = finder.state.q
+  // A narrow box cannot hold the full hint, so it reads only "Search icons" there.
+  const narrow = matchMedia('(max-width: 820px)')
+  const full = box.placeholder
+  const fit = () => {
+    if (!box.disabled) box.placeholder = narrow.matches ? 'Search icons' : full
+  }
+  fit()
+  narrow.addEventListener('change', fit)
   finder.categories = [...document.querySelectorAll('.group')].map((section) => ({
     name: section.dataset.cat,
     title: section.querySelector('h2').firstChild.textContent.trim()
