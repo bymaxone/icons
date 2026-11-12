@@ -367,6 +367,9 @@ describe('lintSvg: svg-fill', () => {
         issues('star.svg', '<path d="M4 12h16"/><path d="M4 4h4v4z" fill="currentColor"/>')
       ).toStrictEqual([`<path> ${STROKED}`])
       expect(PARTIAL_FILLS.get('star-half')).toBe('the filled half is a half rating')
+      expect(PARTIAL_FILLS.get('contrast')).toBe(
+        'the filled half is the contrast between two tones'
+      )
     }
   )
 
