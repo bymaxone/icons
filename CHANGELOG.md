@@ -42,6 +42,12 @@ and deprecated, each rename with the alias that keeps the old name working.
   `battery-full`, `battery-low`, `feed` (alias `rss`), `location-arrow` (alias `navigation`),
   `usb-plug` (alias `usb`), `folder-minus`, `folder-check`, `file-minus`, `calendar-check`,
   `calendar-minus`, `commit` (alias `git-commit`), `merge` (alias `git-merge`) and `bug`.
+- Objects, science, transport and nature (B6-A3): `book`, `newspaper` (alias `news`),
+  `megaphone` (alias `announcement`), `ticket`, `trophy`, `medal`, `hammer`, `ruler`, `magnet`,
+  `microscope`, `atom`, `binoculars`, `thermometer` (alias `temperature`), `car`, `bus`, `train`,
+  `rocket` (alias `launch`), `anchor`, `hospital`, `bed`, `umbrella`, `leaf`, `flower`,
+  `feather`, `skull`, `dice` (alias `random`), `cake` (alias `birthday`), `cookie` and `egg`,
+  and the categories `science`, `food` and `household`.
 
 - The twelve keystone icons, which fix the design language of the set: `home`, `search`,
   `play`, `plus`, `close`, `check`, `settings`, `user`, `file`, `folder`, `lightning` and

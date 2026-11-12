@@ -424,6 +424,7 @@ These rules apply to every phase. Phase sections only add rules specific to them
 - **Definition of Done:** 1,500 icons or more, merged, every sub-batch approved by the auditor.
 - **B6-A1 ✅ (2026-11-12):** approved by the delegated auditor on behalf of the founder.
 - **B6-A2 ✅ (2026-11-12):** approved by the delegated auditor on behalf of the founder; `queued` renamed `hourglass`.
+- **B6-A3 ✅ (2026-11-12):** approved by the delegated auditor on behalf of the founder.
 - **Size:** XL
 
 ### B7: brand-marks
