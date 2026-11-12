@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Arrow right in a circle",
+  "tags": ["arrow", "right", "circle", "next"],
+  "categories": ["arrows"],
+  "useCases": ["Goes to the next step", "Shows the next item"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

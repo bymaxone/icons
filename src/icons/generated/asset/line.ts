@@ -31,3 +31,6 @@ export const AssetIcon = /* @__PURE__ */ createIcon('asset', [
     }
   ]
 ])
+
+/** `cube`: an alias of {@link AssetIcon}. */
+export const CubeIcon = AssetIcon

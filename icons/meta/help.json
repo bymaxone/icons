@@ -4,6 +4,12 @@
   "tags": ["question", "support", "faq", "how to"],
   "categories": ["system"],
   "useCases": ["Opens the help center", "Shows a hint"],
+  "aliases": [
+    {
+      "name": "help-circle",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

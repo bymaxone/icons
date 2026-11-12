@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Arrow down right",
+  "tags": ["arrow", "down", "right", "diagonal"],
+  "categories": ["arrows"],
+  "useCases": ["Points down and to the right", "Moves an item toward the bottom right"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

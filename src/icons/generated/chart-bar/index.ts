@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { ChartBarIcon } from './line'
+export { BarChartIcon, ChartBarIcon } from './line'

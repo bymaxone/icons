@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Square",
+  "tags": ["square", "shape", "box", "rectangle"],
+  "categories": ["shapes"],
+  "useCases": ["Inserts a square shape", "Marks a square option"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

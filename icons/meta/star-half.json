@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Half star",
+  "tags": ["star", "half", "rating", "review"],
+  "categories": ["shapes", "status"],
+  "useCases": ["Shows a half-star rating", "Rates an item by halves"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

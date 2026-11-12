@@ -19,3 +19,6 @@ export const RepairIcon = /* @__PURE__ */ createIcon('repair', [
     }
   ]
 ])
+
+/** `wrench`: an alias of {@link RepairIcon}. */
+export const WrenchIcon = RepairIcon

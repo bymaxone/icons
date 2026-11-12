@@ -8,6 +8,12 @@
     "Shows the saved card",
     "Filled: the default payment method"
   ],
+  "aliases": [
+    {
+      "name": "credit-card",
+      "deprecated": false
+    }
+  ],
   "variants": ["line", "filled"],
   "opticalSizes": [24],
   "since": "0.1.0"

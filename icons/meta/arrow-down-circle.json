@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Arrow down in a circle",
+  "tags": ["arrow", "down", "circle", "download"],
+  "categories": ["arrows"],
+  "useCases": ["Scrolls to the bottom", "Downloads an item"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

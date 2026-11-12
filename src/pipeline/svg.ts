@@ -80,7 +80,7 @@ export function svgRoot(nodes: readonly SvgNode[]): SvgElementNode | undefined {
 }
 
 /**
- * Whether an element is the spark dot: the one filled detail a line icon may carry, a
+ * Whether an element is the spark dot: the filled detail any line icon may carry, a
  * `circle` of radius 1 filled with `currentColor`.
  *
  * @param name - The element's tag name.
@@ -108,7 +108,7 @@ function setRootPlugin(kind: SvgKind): CustomPlugin {
 
 /**
  * Removes the paint the root owns from every drawing element: every `stroke*` attribute,
- * and on a stroked kind every fill control except the spark dot's `fill`.
+ * and on a stroked kind every fill control except a `fill` of `currentColor`.
  */
 function stripPaintPlugin(kind: SvgKind): CustomPlugin {
   const stroked = isStrokeKind(kind)
@@ -119,10 +119,12 @@ function stripPaintPlugin(kind: SvgKind): CustomPlugin {
       element: {
         // The root is stripped too; the plugin that runs after this one rewrites it whole.
         enter: (node: XastElement): void => {
-          const dot = isSparkDot(node.name, node.attributes)
+          // A fill of currentColor is kept for the lint to judge: the spark dot and a partial
+          // state may carry it, and the lint refuses it anywhere else.
+          const ownColour = node.attributes['fill'] === 'currentColor'
           for (const name of Object.keys(node.attributes)) {
             const fillControl =
-              name === 'fill' ? !dot : name === 'fill-rule' || name === 'clip-rule'
+              name === 'fill' ? !ownColour : name === 'fill-rule' || name === 'clip-rule'
             if (name.startsWith('stroke') || (stroked && fillControl)) {
               Reflect.deleteProperty(node.attributes, name)
             }

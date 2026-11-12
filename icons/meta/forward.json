@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Forward",
+  "tags": ["forward", "send on", "share", "arrow"],
+  "categories": ["media", "communication"],
+  "useCases": ["Forwards a message", "Sends an item on"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

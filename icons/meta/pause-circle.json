@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Pause in a circle",
+  "tags": ["pause", "hold", "video", "circle"],
+  "categories": ["media"],
+  "useCases": ["Pauses the playback", "Holds a running task"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

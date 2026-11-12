@@ -98,16 +98,16 @@ describe('isSparkDot', () => {
 })
 
 describe('normalizeSvg', () => {
-  it('writes the stroked root and strips paint from a line icon, keeping the spark dot', () => {
+  it('writes the stroked root and strips paint from a line icon, keeping a currentColor fill', () => {
     /**
      * Scenario: the root owns the stroke, so every stroke attribute and every fill
-     * control of an element goes, except the spark dot's fill; the author's root
-     * attributes are replaced by the fixed set.
+     * control of an element goes, except a fill of currentColor, which the lint judges
+     * (the spark dot, a partial state); the author's root attributes are replaced.
      */
     const source =
-      '<svg viewBox="0 0 48 48" fill="red"><path d="M 4 12 L 20 12" stroke="red" stroke-width="3" fill="blue" fill-rule="evenodd" clip-rule="evenodd"/><circle cx="19" cy="5" r="1" fill="currentColor" fill-rule="evenodd"/></svg>'
+      '<svg viewBox="0 0 48 48" fill="red"><path d="M 4 12 L 20 12" stroke="red" stroke-width="3" fill="blue" fill-rule="evenodd" clip-rule="evenodd"/><circle cx="19" cy="5" r="1" fill="currentColor" fill-rule="evenodd"/><path d="M4 4h4v4z" fill="currentColor"/></svg>'
     expect(normalizeSvg(source, 'line')).toBe(
-      `${STROKE_ROOT}\n  <path d="M4 12h16"/>\n  <circle cx="19" cy="5" r="1" fill="currentColor"/>\n</svg>\n`
+      `${STROKE_ROOT}\n  <path d="M4 12h16"/>\n  <circle cx="19" cy="5" r="1" fill="currentColor"/>\n  <path fill="currentColor" d="M4 4h4v4z"/>\n</svg>\n`
     )
   })
 

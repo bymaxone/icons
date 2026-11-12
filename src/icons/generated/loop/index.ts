@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { LoopIcon } from './line'
+export { LoopIcon, RepeatIcon } from './line'

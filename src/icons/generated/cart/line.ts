@@ -21,3 +21,6 @@ export const CartIcon = /* @__PURE__ */ createIcon('cart', [
   ['circle', { cx: 9, cy: 19.5, r: 1.5 }],
   ['circle', { cx: 16.75, cy: 19.5, r: 1.5 }]
 ])
+
+/** `shopping-cart`: an alias of {@link CartIcon}. */
+export const ShoppingCartIcon = CartIcon

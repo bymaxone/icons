@@ -35,6 +35,14 @@ interface CheckedElement extends DrawingElement {
 /** The attributes that decide how an element is filled. */
 const FILL_CONTROLS = ['fill', 'fill-rule', 'clip-rule']
 
+/**
+ * The line icons whose meaning is a partial state, which may fill the region that shows it
+ * with `currentColor` (spec section 2.5): there the fill is the state. Each carries its reason.
+ */
+export const PARTIAL_FILLS: ReadonlyMap<string, string> = new Map([
+  ['star-half', 'the filled half is a half rating']
+])
+
 /** A colour a multicolour brand mark may fill with besides `currentColor`. */
 const HEX_COLOUR = /^#[0-9a-f]{6}$/
 
@@ -86,14 +94,26 @@ function attributeMessages(elements: readonly CheckedElement[]): string[] {
   )
 }
 
+/**
+ * The one element of a stroked icon in PARTIAL_FILLS that may draw its partial state: the
+ * first one filled with `currentColor` that is not the spark dot. -1 for any other icon.
+ */
+function partialRegion(elements: readonly DrawingElement[], subject: SvgSubject): number {
+  if (!PARTIAL_FILLS.has(subject.file.fileName.slice(0, -'.svg'.length))) return -1
+  return elements.findIndex(
+    ({ tag, attributes }) => attributes['fill'] === 'currentColor' && !isSparkDot(tag, attributes)
+  )
+}
+
 /** How the elements are filled, per the kind's paint. */
 function fillMessages(elements: readonly DrawingElement[], subject: SvgSubject): string[] {
-  return elements.flatMap(({ tag, attributes }) => {
+  const region = partialRegion(elements, subject)
+  return elements.flatMap(({ tag, attributes }, index) => {
     if (isStrokeKind(subject.kind)) {
-      const dot = isSparkDot(tag, attributes)
-      return FILL_CONTROLS.filter((name) => name in attributes && !(dot && name === 'fill')).map(
+      const exempt = index === region || isSparkDot(tag, attributes)
+      return FILL_CONTROLS.filter((name) => name in attributes && !(exempt && name === 'fill')).map(
         (name) =>
-          `<${tag}> carries ${name}: a stroked drawing fills only the spark dot (a circle with r="1" and fill="currentColor")`
+          `<${tag}> carries ${name}: a stroked drawing fills only the spark dot (a circle with r="1" and fill="currentColor") and one region, the partial state of an icon in PARTIAL_FILLS`
       )
     }
     const fill = attributes['fill']

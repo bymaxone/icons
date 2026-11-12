@@ -4,6 +4,12 @@
   "tags": ["repeat", "cycle", "replay", "loop playback"],
   "categories": ["media"],
   "useCases": ["Plays a clip in a loop", "Repeats a section of the timeline"],
+  "aliases": [
+    {
+      "name": "repeat",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

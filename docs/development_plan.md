@@ -420,7 +420,9 @@ These rules apply to every phase. Phase sections only add rules specific to them
 - **Taxonomy (2026-11-12):** one taxonomy of 32 categories, fixed before the waves, with English and Portuguese titles; a category joins `categories.json` with its first icon.
 - **Variants:** a `-circle` or `-square` form only where its meaning differs and the reference sets widely draw it; filled drawings only for a state; 16 px masters only on a measured failure.
 - **Waves:** sub-batches of 25 to 40 icons by family, each with the audit package of B5 and the same bar.
+- **Inventory file:** `docs/b6/coverage-inventory.csv` (concept, how many sets name it, tier, which sets, their categories), names only.
 - **Definition of Done:** 1,500 icons or more, merged, every sub-batch approved by the auditor.
+- **B6-A1 ✅ (2026-11-12):** approved by the delegated auditor on behalf of the founder.
 - **Size:** XL
 
 ### B7: brand-marks

@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { ChartPieIcon } from './line'
+export { ChartPieIcon, PieChartIcon } from './line'

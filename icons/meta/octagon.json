@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Octagon",
+  "tags": ["octagon", "shape", "polygon", "stop sign"],
+  "categories": ["shapes"],
+  "useCases": ["Inserts an octagon shape", "Marks an eight-sided shape"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

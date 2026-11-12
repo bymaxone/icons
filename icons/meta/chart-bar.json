@@ -4,6 +4,12 @@
   "tags": ["chart", "bars", "statistics", "report"],
   "categories": ["data"],
   "useCases": ["Shows a report as bars", "Opens the statistics of a project"],
+  "aliases": [
+    {
+      "name": "bar-chart",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"
