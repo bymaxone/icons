@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Binoculars",
+  "tags": ["binoculars", "explore", "look ahead", "watch"],
+  "categories": ["science", "tools"],
+  "useCases": ["Explores ahead", "Watches for changes"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Leaf",
+  "tags": ["leaf", "eco", "green", "plant"],
+  "categories": ["nature"],
+  "useCases": ["Marks an eco option", "Shows a plant"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

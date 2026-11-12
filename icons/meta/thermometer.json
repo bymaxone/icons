@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Thermometer",
+  "tags": ["thermometer", "temperature", "fever", "heat"],
+  "categories": ["science", "health", "nature"],
+  "useCases": ["Shows the temperature", "Records a fever"],
+  "aliases": [
+    {
+      "name": "temperature",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

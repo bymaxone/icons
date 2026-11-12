@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Magnet",
+  "tags": ["magnet", "attract", "snap", "magnetic"],
+  "categories": ["science", "tools"],
+  "useCases": ["Turns snapping on", "Marks an attraction"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

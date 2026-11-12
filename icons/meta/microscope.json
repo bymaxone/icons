@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Microscope",
+  "tags": ["microscope", "lab", "research", "science"],
+  "categories": ["science", "health"],
+  "useCases": ["Opens a lab result", "Marks research"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

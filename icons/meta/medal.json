@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Medal",
+  "tags": ["medal", "achievement", "rank", "prize"],
+  "categories": ["games", "status"],
+  "useCases": ["Awards a medal", "Shows a ranking"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

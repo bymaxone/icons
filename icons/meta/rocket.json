@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Rocket",
+  "tags": ["rocket", "launch", "space", "boost"],
+  "categories": ["transport", "actions"],
+  "useCases": ["Launches a project", "Boosts a post"],
+  "aliases": [
+    {
+      "name": "launch",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

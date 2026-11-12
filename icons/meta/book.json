@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Book",
+  "tags": ["book", "read", "novel", "library"],
+  "categories": ["files", "science"],
+  "useCases": ["Opens a book", "Marks reading material"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

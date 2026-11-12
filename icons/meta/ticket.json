@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Ticket",
+  "tags": ["ticket", "pass", "event", "admission"],
+  "categories": ["commerce"],
+  "useCases": ["Shows an event ticket", "Opens a support ticket"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

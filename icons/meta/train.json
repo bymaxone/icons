@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Train",
+  "tags": ["train", "rail", "metro", "transit"],
+  "categories": ["transport"],
+  "useCases": ["Shows a train trip", "Marks a station"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

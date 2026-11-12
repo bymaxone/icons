@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Bus",
+  "tags": ["bus", "public transport", "transit", "coach"],
+  "categories": ["transport"],
+  "useCases": ["Shows a bus route", "Marks a bus stop"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

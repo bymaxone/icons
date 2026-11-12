@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Cookie",
+  "tags": ["cookie", "biscuit", "browser cookie", "consent"],
+  "categories": ["food", "security"],
+  "useCases": ["Opens the cookie settings", "Shows a snack"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

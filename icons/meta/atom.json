@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Atom",
+  "tags": ["atom", "science", "physics", "nucleus"],
+  "categories": ["science"],
+  "useCases": ["Marks a science topic", "Opens physics content"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

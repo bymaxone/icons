@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Egg",
+  "tags": ["egg", "food", "easter", "hatch"],
+  "categories": ["food", "nature"],
+  "useCases": ["Marks an ingredient", "Shows something about to hatch"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

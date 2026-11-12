@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Ruler",
+  "tags": ["ruler", "measure", "length", "scale"],
+  "categories": ["tools", "editing"],
+  "useCases": ["Shows the rulers", "Measures a length"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}
