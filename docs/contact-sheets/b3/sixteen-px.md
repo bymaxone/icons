@@ -149,4 +149,4 @@ The audit of B3 added `users` and `wallet` by their role in the Studio shell, `s
 | `sort`            | 3.47                             | no                  | 0-1  |
 | `log-out`         | 4.00                             | no                  | 0-1  |
 
-The four `aspect` rows above describe the drawings as they were in B3, before the aspect formats were redrawn. Measured on the current drawings with `pnpm check:sixteen`, `aspect-16-9` and `aspect-9-16` still fuse the pair 0-1: pixels of the two parts with an alpha of 0.35 or more sit side by side, so their ink joins. They share no pixel. The pair 0-1 of each is on `scripts/sixteen-allowlist.json` with its justification. `aspect-1-1` and `aspect-4-5` no longer fuse and are not on it.
+The `aspect` rows above describe the drawings as they were in B3, before the aspect formats were redrawn. Measured on the current drawings with `pnpm check:sixteen`, `aspect-16-9` and `aspect-9-16` still fuse the pair 0-1. The pair 0-1 of each is on `scripts/sixteen-allowlist.json` with its justification. `aspect-1-1` and `aspect-4-5` no longer fuse and are not on it.
