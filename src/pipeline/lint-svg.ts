@@ -94,17 +94,26 @@ function attributeMessages(elements: readonly CheckedElement[]): string[] {
   )
 }
 
+/**
+ * The one element of a stroked icon in PARTIAL_FILLS that may draw its partial state: the
+ * first one filled with `currentColor` that is not the spark dot. -1 for any other icon.
+ */
+function partialRegion(elements: readonly DrawingElement[], subject: SvgSubject): number {
+  if (!PARTIAL_FILLS.has(subject.file.fileName.slice(0, -'.svg'.length))) return -1
+  return elements.findIndex(
+    ({ tag, attributes }) => attributes['fill'] === 'currentColor' && !isSparkDot(tag, attributes)
+  )
+}
+
 /** How the elements are filled, per the kind's paint. */
 function fillMessages(elements: readonly DrawingElement[], subject: SvgSubject): string[] {
-  return elements.flatMap(({ tag, attributes }) => {
+  const region = partialRegion(elements, subject)
+  return elements.flatMap(({ tag, attributes }, index) => {
     if (isStrokeKind(subject.kind)) {
-      const partial =
-        PARTIAL_FILLS.has(subject.file.fileName.slice(0, -'.svg'.length)) &&
-        attributes['fill'] === 'currentColor'
-      const exempt = partial || isSparkDot(tag, attributes)
+      const exempt = index === region || isSparkDot(tag, attributes)
       return FILL_CONTROLS.filter((name) => name in attributes && !(exempt && name === 'fill')).map(
         (name) =>
-          `<${tag}> carries ${name}: a stroked drawing fills only the spark dot (a circle with r="1" and fill="currentColor") and the partial state of an icon in PARTIAL_FILLS`
+          `<${tag}> carries ${name}: a stroked drawing fills only the spark dot (a circle with r="1" and fill="currentColor") and one region, the partial state of an icon in PARTIAL_FILLS`
       )
     }
     const fill = attributes['fill']
