@@ -1,0 +1,23 @@
+{
+  "icons": {
+    "aspect-16-9": "aspect family: the frame's proportion carries the meaning; at 16 px the inner corner marks meet the frame on the short side and the ratio still reads, wide or tall, in the blur",
+    "aspect-9-16": "aspect family: the frame's proportion carries the meaning; at 16 px the inner corner marks meet the frame on the short side and the ratio still reads, wide or tall, in the blur",
+    "book-open": "still reads as the object in the blur",
+    "file-check": "the crease fuses with the outline at the family's cut; the silhouette still reads as a document",
+    "file-code": "the crease fuses with the outline at the family's cut; the silhouette still reads as a document",
+    "file-download": "the crease fuses with the outline at the family's cut; the silhouette still reads as a document",
+    "file-image": "the crease fuses with the outline at the family's cut; the silhouette still reads as a document",
+    "file-lock": "the crease fuses with the outline at the family's cut; the silhouette still reads as a document",
+    "file-minus": "the crease fuses with the outline at the family's cut; the silhouette still reads as a document",
+    "file-plus": "the crease fuses with the outline at the family's cut; the silhouette still reads as a document",
+    "file-search": "the crease fuses with the outline at the family's cut; the silhouette still reads as a document",
+    "file-text": "the crease fuses with the outline at the family's cut; the silhouette still reads as a document",
+    "file-x": "the crease fuses with the outline at the family's cut; the silhouette still reads as a document",
+    "file-zip": "the crease fuses with the outline at the family's cut; the silhouette still reads as a document",
+    "files": "the crease fuses with the outline at the family's cut; the silhouette still reads as a document",
+    "flip-horizontal": "the axis meets the triangles; it still reads as mirroring",
+    "flip-vertical": "the axis meets the triangles; it still reads as mirroring",
+    "lightbulb": "still reads as the object in the blur",
+    "window": "the title-bar dot touches the frame; it still reads as a window"
+  }
+}
