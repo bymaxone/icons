@@ -1,6 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
-  "label": "Saved",
+  "label": "Bookmarked",
   "tags": ["bookmark", "check", "saved", "read later"],
   "categories": ["status"],
   "useCases": ["Shows that an item is saved", "Marks a bookmark as read"],

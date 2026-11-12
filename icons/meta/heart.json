@@ -1,6 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
-  "label": "Like",
+  "label": "Love",
   "tags": ["heart", "like", "love", "favorite"],
   "categories": ["status"],
   "useCases": ["Likes a post", "Adds an item to a wish list"],
