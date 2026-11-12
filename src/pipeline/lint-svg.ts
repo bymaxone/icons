@@ -99,7 +99,7 @@ function fillMessages(elements: readonly DrawingElement[], subject: SvgSubject):
   return elements.flatMap(({ tag, attributes }) => {
     if (isStrokeKind(subject.kind)) {
       const partial =
-        PARTIAL_FILLS.has(subject.file.fileName.replace(/\.svg$/, '')) &&
+        PARTIAL_FILLS.has(subject.file.fileName.slice(0, -'.svg'.length)) &&
         attributes['fill'] === 'currentColor'
       const exempt = partial || isSparkDot(tag, attributes)
       return FILL_CONTROLS.filter((name) => name in attributes && !(exempt && name === 'fill')).map(
