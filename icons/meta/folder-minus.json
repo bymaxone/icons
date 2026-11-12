@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Remove folder",
+  "tags": ["folder", "remove", "minus", "delete folder"],
+  "categories": ["files"],
+  "useCases": ["Removes a folder", "Takes an item out of a folder"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

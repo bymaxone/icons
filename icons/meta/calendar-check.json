@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Event confirmed",
+  "tags": ["calendar", "check", "confirmed", "attending"],
+  "categories": ["time", "status"],
+  "useCases": ["Confirms an event", "Marks a booking as accepted"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

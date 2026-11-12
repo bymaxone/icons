@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Mouse",
+  "tags": ["mouse", "pointer device", "click", "peripheral"],
+  "categories": ["devices"],
+  "useCases": ["Shows mouse settings", "Marks a click action"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

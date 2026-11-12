@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "USB plug",
+  "tags": ["usb", "plug", "connector", "cable"],
+  "categories": ["devices", "connectivity"],
+  "useCases": ["Marks a wired connection", "Shows a USB device"],
+  "aliases": [
+    {
+      "name": "usb",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

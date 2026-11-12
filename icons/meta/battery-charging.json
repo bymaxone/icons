@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Battery charging",
+  "tags": ["battery", "charging", "power", "energy"],
+  "categories": ["devices", "status"],
+  "useCases": ["Shows that the device is charging", "Marks a charging state"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}
