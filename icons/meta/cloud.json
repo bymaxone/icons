@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Cloud",
   "tags": ["cloud", "storage", "online", "sync"],
-  "categories": ["places-devices"],
+  "categories": ["connectivity", "nature"],
   "useCases": ["Shows cloud storage", "Marks a synced item"],
   "variants": ["line"],
   "opticalSizes": [24],

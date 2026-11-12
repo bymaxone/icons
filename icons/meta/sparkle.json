@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "AI",
   "tags": ["ai", "magic", "generated", "star"],
-  "categories": ["ai-agent"],
+  "categories": ["ai"],
   "useCases": [
     "Marks an AI feature",
     "Labels generated content",

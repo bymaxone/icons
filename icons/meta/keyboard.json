@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Keyboard shortcuts",
   "tags": ["shortcuts", "keys", "typing", "input"],
-  "categories": ["system"],
+  "categories": ["devices", "system"],
   "useCases": ["Shows the keyboard shortcuts", "Opens the shortcut list"],
   "variants": ["line"],
   "opticalSizes": [24],

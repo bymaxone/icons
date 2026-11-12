@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Previous",
   "tags": ["caret", "back", "previous", "left"],
-  "categories": ["navigation"],
+  "categories": ["arrows"],
   "useCases": ["Goes back to the previous page", "Moves a carousel to the previous item"],
   "variants": ["line", "sm"],
   "opticalSizes": [24, 16],

@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Video",
   "tags": ["camera", "record", "clip", "movie"],
-  "categories": ["media-video"],
+  "categories": ["media"],
   "useCases": [
     "Marks a video clip",
     "Starts a video recording",

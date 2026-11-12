@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Laptop",
   "tags": ["laptop", "computer", "device", "desktop"],
-  "categories": ["places-devices"],
+  "categories": ["devices"],
   "useCases": ["Shows the desktop preview", "Marks a computer"],
   "aliases": [
     {

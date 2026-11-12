@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Support",
   "tags": ["headphones", "audio", "support", "listen"],
-  "categories": ["communication"],
+  "categories": ["audio", "communication"],
   "useCases": ["Opens the support", "Plays the audio"],
   "aliases": [
     {

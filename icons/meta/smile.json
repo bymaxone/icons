@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Reaction",
   "tags": ["smile", "reaction", "emoji", "happy"],
-  "categories": ["communication"],
+  "categories": ["emotions", "communication"],
   "useCases": ["Adds a reaction", "Opens the emoji picker"],
   "aliases": [
     {

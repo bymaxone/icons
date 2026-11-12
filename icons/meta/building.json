@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Organization",
   "tags": ["building", "company", "office", "organization"],
-  "categories": ["places-devices"],
+  "categories": ["maps"],
   "useCases": ["Switches between organizations", "Shows a company's details"],
   "aliases": [
     {

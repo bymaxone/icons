@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Stop",
   "tags": ["stop", "halt", "media control", "square"],
-  "categories": ["media-video"],
+  "categories": ["media"],
   "useCases": ["Stops the playback", "Stops a recording"],
   "variants": ["line"],
   "opticalSizes": [24],

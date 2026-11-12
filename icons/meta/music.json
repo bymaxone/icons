@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Music",
   "tags": ["note", "soundtrack", "song", "audio"],
-  "categories": ["audio-voice"],
+  "categories": ["audio"],
   "useCases": ["Adds a music track", "Labels the soundtrack of a project"],
   "variants": ["line"],
   "opticalSizes": [24],

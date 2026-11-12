@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Zoom in",
   "tags": ["magnify", "enlarge", "plus", "scale up"],
-  "categories": ["editor-canvas"],
+  "categories": ["editing"],
   "useCases": ["Zooms in on the canvas", "Zooms in on the timeline"],
   "variants": ["line"],
   "opticalSizes": [24],

@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Pause",
   "tags": ["pause", "hold", "media control", "bars"],
-  "categories": ["media-video"],
+  "categories": ["media"],
   "useCases": [
     "Pauses the playback of a clip",
     "Pauses a running render",

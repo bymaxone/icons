@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Server",
   "tags": ["server", "rack", "host", "infrastructure"],
-  "categories": ["data-charts"],
+  "categories": ["data", "dev"],
   "useCases": ["Shows the servers of a deployment", "Opens the infrastructure settings"],
   "variants": ["line"],
   "opticalSizes": [24],

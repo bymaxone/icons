@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Move",
   "tags": ["drag", "pan", "arrows", "position"],
-  "categories": ["editor-canvas"],
+  "categories": ["editing"],
   "useCases": ["Moves the selected layer", "Pans the canvas"],
   "variants": ["line"],
   "opticalSizes": [24],

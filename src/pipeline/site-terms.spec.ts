@@ -18,8 +18,11 @@ import { catalogFrom } from './site.ts'
 const terms = JSON.parse(
   readFileSync(join(__dirname, '..', '..', 'site', 'terms-pt.json'), 'utf8')
 ) as Record<string, string[]>
+const categoryTitles = JSON.parse(
+  readFileSync(join(__dirname, '..', '..', 'site', 'categories-pt.json'), 'utf8')
+) as Record<string, string>
 const catalog = catalogFrom({ icons: ICONS, brands: BRANDS, categories: CATEGORIES })
-const docs = searchIndex(catalog, terms)
+const docs = searchIndex(catalog, terms, categoryTitles)
 
 /** The names a query finds first, best first. */
 const top = (query: string, count = 1): string[] =>
@@ -44,6 +47,17 @@ describe('site/terms-pt.json', () => {
   })
 })
 
+describe('site/categories-pt.json', () => {
+  it('titles exactly the categories of the catalog, brands included', () => {
+    // Scenario: a new category without its Portuguese title, or a title left behind by a
+    // removed one, fails here; no title is blank.
+    expect(Object.keys(categoryTitles).sort()).toStrictEqual(
+      catalog.categories.map((category) => category.name).sort()
+    )
+    expect(Object.values(categoryTitles).filter((title) => title.trim() === '')).toStrictEqual([])
+  })
+})
+
 describe('the search over the real set', () => {
   it('finds the icon a Portuguese word names, with or without its accents', () => {
     // Scenario: the founder's examples: "lixeira" is trash, "engrenagem" and
@@ -61,6 +75,7 @@ describe('the search over the real set', () => {
     expect(top('delete')).toStrictEqual(['trash'])
     expect(top('setings')).toContain('settings')
     expect(top('security', 7)).toContain('lock')
+    expect(top('seguranca', 7)).toContain('lock')
     expect(search(docs, 'filled', { types: [], categories: [] }).length).toBe(
       catalog.entries.filter((entry) => entry.drawings.some((d) => d.variant === 'filled')).length
     )

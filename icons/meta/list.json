@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "List view",
   "tags": ["list", "items", "bullets", "view"],
-  "categories": ["data-charts"],
+  "categories": ["data"],
   "useCases": ["Switches a view to a list", "Shows the items of a collection"],
   "variants": ["line"],
   "opticalSizes": [24],

@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Credit packs",
   "tags": ["credits", "bundle", "top up", "pack"],
-  "categories": ["credits-billing"],
+  "categories": ["commerce"],
   "useCases": [
     "Buys a pack of credits",
     "Shows the credits of a bundle",

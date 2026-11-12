@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Image",
   "tags": ["picture", "photo", "landscape", "media"],
-  "categories": ["files"],
+  "categories": ["files", "media"],
   "useCases": ["Inserts an image", "Marks an image file", "Filled: the selected image"],
   "variants": ["line", "filled"],
   "opticalSizes": [24],

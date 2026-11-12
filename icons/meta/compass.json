@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Explore",
   "tags": ["compass", "explore", "navigate", "discover"],
-  "categories": ["places-devices"],
+  "categories": ["maps"],
   "useCases": ["Opens the explore page", "Shows a direction"],
   "aliases": [
     {

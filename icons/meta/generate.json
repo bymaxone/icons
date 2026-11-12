@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Generate",
   "tags": ["magic wand", "create", "make", "ai"],
-  "categories": ["ai-agent"],
+  "categories": ["ai"],
   "useCases": ["Generates a video from a prompt", "Creates content with AI"],
   "variants": ["line"],
   "opticalSizes": [24],

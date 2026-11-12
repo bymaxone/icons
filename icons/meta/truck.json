@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Delivery",
   "tags": ["truck", "delivery", "shipping", "transport"],
-  "categories": ["commerce"],
+  "categories": ["commerce", "transport"],
   "useCases": ["Shows the shipping status", "Opens the delivery options"],
   "aliases": [
     {

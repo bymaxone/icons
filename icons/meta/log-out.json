@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Sign out",
   "tags": ["sign out", "exit", "logout", "door"],
-  "categories": ["people-roles"],
+  "categories": ["people"],
   "useCases": ["Signs out", "Leaves the workspace"],
   "variants": ["line"],
   "opticalSizes": [24],

@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Percent",
   "tags": ["percent", "discount", "rate", "sale"],
-  "categories": ["commerce"],
+  "categories": ["commerce", "math"],
   "useCases": ["Marks a discount", "Shows a rate"],
   "aliases": [
     {

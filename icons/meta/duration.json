@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Duration",
   "tags": ["length", "time span", "measure", "runtime"],
-  "categories": ["formats"],
+  "categories": ["media"],
   "useCases": ["Sets the length of a video", "Shows the duration of a clip"],
   "variants": ["line"],
   "opticalSizes": [24],

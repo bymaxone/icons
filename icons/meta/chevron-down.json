@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Expand",
   "tags": ["caret", "expand", "down", "dropdown"],
-  "categories": ["navigation"],
+  "categories": ["arrows"],
   "useCases": ["Opens a dropdown menu", "Expands a collapsed section"],
   "variants": ["line", "sm"],
   "opticalSizes": [24, 16],

@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Receipt",
   "tags": ["invoice", "bill", "purchase", "statement"],
-  "categories": ["credits-billing"],
+  "categories": ["commerce"],
   "useCases": ["Links to the invoices", "Shows a past payment"],
   "variants": ["line"],
   "opticalSizes": [24],

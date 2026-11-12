@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Align center",
   "tags": ["center", "alignment", "text align", "justify"],
-  "categories": ["editor-canvas"],
+  "categories": ["text"],
   "useCases": ["Centers the selected text", "Aligns layers on their centre"],
   "variants": ["line"],
   "opticalSizes": [24],

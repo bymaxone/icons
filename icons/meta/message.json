@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Messages",
   "tags": ["chat", "comment", "speech bubble", "conversation"],
-  "categories": ["system"],
+  "categories": ["communication"],
   "useCases": ["Opens the chat", "Adds a comment", "Filled: unread messages"],
   "variants": ["line", "filled"],
   "opticalSizes": [24],

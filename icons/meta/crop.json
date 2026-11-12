@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Crop",
   "tags": ["trim", "frame", "cut", "resize"],
-  "categories": ["editor-canvas"],
+  "categories": ["editing"],
   "useCases": ["Crops an image or a frame", "Changes the framing of a clip"],
   "variants": ["line"],
   "opticalSizes": [24],

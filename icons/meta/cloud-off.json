@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Not synced",
   "tags": ["cloud", "offline", "unsynced", "disconnected"],
-  "categories": ["places-devices"],
+  "categories": ["connectivity"],
   "useCases": ["Marks an item as not synced", "Shows a cloud outage"],
   "variants": ["line"],
   "opticalSizes": [24],

@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Captions",
   "tags": ["subtitles", "transcript", "text track", "closed captions"],
-  "categories": ["audio-voice"],
+  "categories": ["audio"],
   "useCases": ["Turns captions on", "Opens the subtitle editor"],
   "variants": ["line"],
   "opticalSizes": [24],

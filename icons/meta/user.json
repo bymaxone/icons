@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Profile",
   "tags": ["person", "account", "profile", "avatar"],
-  "categories": ["people-roles"],
+  "categories": ["people"],
   "useCases": [
     "Links to the user profile",
     "Stands in for a missing avatar",

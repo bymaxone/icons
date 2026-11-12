@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Timer",
   "tags": ["stopwatch", "timer", "duration", "measure"],
-  "categories": ["status"],
+  "categories": ["time"],
   "useCases": ["Starts a timer", "Shows how long a task took"],
   "aliases": [
     {

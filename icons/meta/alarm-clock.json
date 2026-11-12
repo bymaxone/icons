@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Reminder",
   "tags": ["alarm", "clock", "reminder", "wake"],
-  "categories": ["status"],
+  "categories": ["time"],
   "useCases": ["Sets a reminder", "Shows a scheduled alert"],
   "aliases": [
     {

@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Award",
   "tags": ["award", "badge", "achievement", "prize"],
-  "categories": ["commerce"],
+  "categories": ["commerce", "games"],
   "useCases": ["Shows an achievement", "Marks a featured item"],
   "aliases": [
     {

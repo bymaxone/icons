@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Sign in",
   "tags": ["sign in", "enter", "login", "door"],
-  "categories": ["people-roles"],
+  "categories": ["people"],
   "useCases": ["Signs in", "Links to the sign-in page"],
   "variants": ["line"],
   "opticalSizes": [24],

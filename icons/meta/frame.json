@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Frame",
   "tags": ["film frame", "still", "perforation", "picture"],
-  "categories": ["media-video"],
+  "categories": ["media"],
   "useCases": ["Marks a single frame of a clip", "Exports the current frame"],
   "variants": ["line", "sm"],
   "opticalSizes": [24, 16],

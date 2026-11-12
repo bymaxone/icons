@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "QR code",
   "tags": ["qr code", "scan", "share", "code"],
-  "categories": ["system"],
+  "categories": ["system", "commerce"],
   "useCases": ["Shares a link as a code to scan", "Opens the scanner"],
   "variants": ["line"],
   "opticalSizes": [24],

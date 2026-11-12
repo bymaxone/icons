@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Role",
   "tags": ["permission", "access", "badge", "member role"],
-  "categories": ["people-roles"],
+  "categories": ["people"],
   "useCases": ["Changes the role of a member", "Shows the permissions of a role"],
   "variants": ["line"],
   "opticalSizes": [24],

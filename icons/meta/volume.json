@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Volume",
   "tags": ["speaker", "sound", "audio", "loud"],
-  "categories": ["audio-voice"],
+  "categories": ["audio"],
   "useCases": [
     "Sets the playback volume",
     "Shows that sound is on",

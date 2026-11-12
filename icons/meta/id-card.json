@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "ID card",
   "tags": ["id", "card", "identity", "badge", "profile"],
-  "categories": ["people-roles"],
+  "categories": ["people"],
   "useCases": ["Shows a profile card", "Verifies a person's identity"],
   "variants": ["line"],
   "opticalSizes": [24],

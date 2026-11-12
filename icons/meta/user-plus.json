@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Invite a user",
   "tags": ["add user", "invite", "new member", "person plus"],
-  "categories": ["people-roles"],
+  "categories": ["people"],
   "useCases": ["Adds a member to the team", "Invites a collaborator"],
   "variants": ["line"],
   "opticalSizes": [24],

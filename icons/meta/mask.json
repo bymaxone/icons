@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Mask",
   "tags": ["clip", "matte", "stencil", "reveal"],
-  "categories": ["editor-canvas"],
+  "categories": ["editing"],
   "useCases": ["Adds a mask to a layer", "Edits the mask of a shot"],
   "variants": ["line"],
   "opticalSizes": [24],

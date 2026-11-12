@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Render",
   "tags": ["export", "process", "progress", "output"],
-  "categories": ["media-video"],
+  "categories": ["media"],
   "useCases": ["Starts the render of a project", "Shows the progress of a render"],
   "variants": ["line"],
   "opticalSizes": [24],

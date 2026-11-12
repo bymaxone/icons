@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Pie chart",
   "tags": ["chart", "pie", "share", "breakdown"],
-  "categories": ["data-charts"],
+  "categories": ["data"],
   "useCases": ["Shows a breakdown by share", "Opens the usage summary"],
   "variants": ["line"],
   "opticalSizes": [24],

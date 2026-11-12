@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Script",
   "tags": ["screenplay", "document", "text", "dialogue"],
-  "categories": ["ai-agent"],
+  "categories": ["ai"],
   "useCases": ["Opens the script editor", "Generates a script"],
   "variants": ["line", "sm"],
   "opticalSizes": [24, 16],

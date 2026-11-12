@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Smartphone",
   "tags": ["phone", "mobile", "device", "smartphone"],
-  "categories": ["places-devices"],
+  "categories": ["devices"],
   "useCases": ["Shows the mobile preview", "Marks a mobile device"],
   "aliases": [
     {

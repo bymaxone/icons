@@ -353,13 +353,21 @@ describe('highlight', () => {
 describe('readState and writeState', () => {
   it('reads the query and the comma-separated facets, empty when absent', () => {
     // Scenario: a full address, one with empty list items, and a bare one.
-    expect(readState('?q=arrow%20up&type=filled,sm&cat=actions')).toStrictEqual({
+    expect(readState('?q=arrow%20up&type=filled&cat=actions')).toStrictEqual({
       q: 'arrow up',
-      types: ['filled', 'sm'],
+      types: ['filled'],
       categories: ['actions']
     })
     expect(readState('?type=,line,&cat=')).toStrictEqual({ q: '', types: ['line'], categories: [] })
     expect(readState('')).toStrictEqual({ q: '', types: [], categories: [] })
+  })
+
+  it('keeps the first known type, as the Type control picks one', () => {
+    // Scenario: a hand-edited address with two types keeps the first; an unknown one is
+    // skipped for the next known one, or leaves no type.
+    expect(readState('?type=filled,brand').types).toStrictEqual(['filled'])
+    expect(readState('?type=bogus,sm').types).toStrictEqual(['sm'])
+    expect(readState('?type=bogus').types).toStrictEqual([])
   })
 
   it('reads an older variant address as its type, unless a type is given', () => {
@@ -434,6 +442,13 @@ describe('searchIndex', () => {
       ],
       categories: [{ name: 'actions', title: 'Actions & Status' }]
     }
+    expect(
+      searchIndex(
+        catalog,
+        { 'arrow-up': ['Seta para cima'] },
+        { actions: 'Ações e Estado' }
+      )[0]?.texts.find((text) => text.field === 'category')
+    ).toStrictEqual({ field: 'category', text: 'actions actions status acoes e estado' })
     expect(searchIndex(catalog, { 'arrow-up': ['Seta para cima'] })).toStrictEqual([
       {
         name: 'arrow-up',

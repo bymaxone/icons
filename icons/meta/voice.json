@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Voice",
   "tags": ["speech", "voice over", "talk", "speaking"],
-  "categories": ["audio-voice"],
+  "categories": ["audio"],
   "useCases": ["Picks a voice for a character", "Generates a voice line"],
   "variants": ["line"],
   "opticalSizes": [24],

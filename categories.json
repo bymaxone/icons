@@ -2,76 +2,116 @@
   "$schema": "./schemas/category.schema.json",
   "categories": [
     {
+      "name": "arrows",
+      "title": "Arrows"
+    },
+    {
       "name": "navigation",
-      "title": "Navigation"
+      "title": "Navigation and layout"
     },
     {
       "name": "actions",
       "title": "Actions"
     },
     {
-      "name": "media-video",
+      "name": "editing",
+      "title": "Editing and design"
+    },
+    {
+      "name": "text",
+      "title": "Text and formatting"
+    },
+    {
+      "name": "media",
       "title": "Media and video"
     },
     {
-      "name": "audio-voice",
-      "title": "Audio and voice"
+      "name": "audio",
+      "title": "Audio and music"
     },
     {
       "name": "files",
-      "title": "Files"
-    },
-    {
-      "name": "status",
-      "title": "Status"
-    },
-    {
-      "name": "credits-billing",
-      "title": "Credits and billing"
-    },
-    {
-      "name": "people-roles",
-      "title": "People and roles"
-    },
-    {
-      "name": "formats",
-      "title": "Formats"
-    },
-    {
-      "name": "editor-canvas",
-      "title": "Editor and canvas"
-    },
-    {
-      "name": "ai-agent",
-      "title": "AI and agent"
-    },
-    {
-      "name": "system",
-      "title": "System"
-    },
-    {
-      "name": "security",
-      "title": "Security"
-    },
-    {
-      "name": "places-devices",
-      "title": "Places and devices"
-    },
-    {
-      "name": "data-charts",
-      "title": "Data and charts"
-    },
-    {
-      "name": "commerce",
-      "title": "Commerce"
+      "title": "Files and folders"
     },
     {
       "name": "communication",
       "title": "Communication"
     },
     {
+      "name": "emotions",
+      "title": "Emotions and gestures"
+    },
+    {
+      "name": "status",
+      "title": "Status and alerts"
+    },
+    {
+      "name": "time",
+      "title": "Time and calendar"
+    },
+    {
+      "name": "people",
+      "title": "People and accounts"
+    },
+    {
+      "name": "security",
+      "title": "Security"
+    },
+    {
+      "name": "commerce",
+      "title": "Commerce and finance"
+    },
+    {
+      "name": "data",
+      "title": "Data and charts"
+    },
+    {
       "name": "dev",
       "title": "Development"
+    },
+    {
+      "name": "devices",
+      "title": "Devices and hardware"
+    },
+    {
+      "name": "connectivity",
+      "title": "Connectivity and cloud"
+    },
+    {
+      "name": "system",
+      "title": "System and settings"
+    },
+    {
+      "name": "ai",
+      "title": "AI and agents"
+    },
+    {
+      "name": "maps",
+      "title": "Maps and places"
+    },
+    {
+      "name": "transport",
+      "title": "Transport"
+    },
+    {
+      "name": "math",
+      "title": "Math"
+    },
+    {
+      "name": "tools",
+      "title": "Tools"
+    },
+    {
+      "name": "nature",
+      "title": "Nature and weather"
+    },
+    {
+      "name": "games",
+      "title": "Sports and games"
+    },
+    {
+      "name": "health",
+      "title": "Health"
     }
   ]
 }

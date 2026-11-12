@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Tablet",
   "tags": ["tablet", "device", "ipad", "screen"],
-  "categories": ["places-devices"],
+  "categories": ["devices"],
   "useCases": ["Shows the tablet preview", "Marks a tablet device"],
   "variants": ["line"],
   "opticalSizes": [24],

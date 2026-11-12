@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Verified user",
   "tags": ["user", "verified", "approved", "check"],
-  "categories": ["people-roles"],
+  "categories": ["people"],
   "useCases": ["Marks a verified account", "Approves a member request"],
   "variants": ["line"],
   "opticalSizes": [24],

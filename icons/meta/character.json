@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Character",
   "tags": ["persona", "cast", "avatar", "generated person"],
-  "categories": ["people-roles"],
+  "categories": ["people"],
   "useCases": [
     "Adds a character to a story",
     "Opens the character library",

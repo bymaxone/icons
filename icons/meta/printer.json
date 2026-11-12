@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Print",
   "tags": ["printer", "print", "paper", "document"],
-  "categories": ["places-devices"],
+  "categories": ["devices"],
   "useCases": ["Prints a page", "Opens the print settings"],
   "aliases": [
     {

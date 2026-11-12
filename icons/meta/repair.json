@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Repair",
   "tags": ["wrench", "fix", "maintenance", "tool"],
-  "categories": ["status"],
+  "categories": ["tools"],
   "useCases": ["Marks an item being repaired", "Starts an automatic fix"],
   "variants": ["line"],
   "opticalSizes": [24],
