@@ -1,17 +1,17 @@
 /**
- * @fileoverview The `queued` icon, line variant.
- * Written by `pnpm generate` from icons/line/queued.svg: edit the source, never this file.
+ * @fileoverview The `hourglass` icon, line variant.
+ * Written by `pnpm generate` from icons/line/hourglass.svg: edit the source, never this file.
  * @layer Generated
  */
 
 import { createIcon } from '@bymax-one/icons/runtime'
 
 /**
- * The `queued` icon, line variant: waiting, pending, hourglass, in line.
+ * The `hourglass` icon, line variant: hourglass, waiting, pending, queued.
  *
  * @since 0.1.0
  */
-export const QueuedIcon = /* @__PURE__ */ createIcon('queued', [
+export const HourglassIcon = /* @__PURE__ */ createIcon('hourglass', [
   ['path', { d: 'M5.25 3.75h14' }],
   [
     'path',
@@ -21,3 +21,6 @@ export const QueuedIcon = /* @__PURE__ */ createIcon('queued', [
   ],
   ['path', { d: 'M5.25 20.75h14' }]
 ])
+
+/** `queued`: an alias of {@link HourglassIcon}. */
+export const QueuedIcon = HourglassIcon
