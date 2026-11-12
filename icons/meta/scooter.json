@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Kick scooter",
+  "tags": ["scooter", "kick scooter", "ride", "micromobility"],
+  "categories": ["transport"],
+  "useCases": ["Rents a scooter", "Shows a micromobility option"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

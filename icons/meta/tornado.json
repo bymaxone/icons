@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Tornado",
+  "tags": ["tornado", "storm", "whirlwind", "weather"],
+  "categories": ["nature", "status"],
+  "useCases": ["Warns of a storm", "Shows severe weather"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

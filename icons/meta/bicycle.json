@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Bicycle",
+  "tags": ["bicycle", "bike", "cycling", "ride"],
+  "categories": ["transport"],
+  "useCases": ["Shows a bike route", "Marks a cycling activity"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

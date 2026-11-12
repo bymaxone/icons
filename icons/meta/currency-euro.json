@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Euro",
+  "tags": ["euro", "currency", "money", "eur"],
+  "categories": ["commerce"],
+  "useCases": ["Shows a price in euros", "Switches the currency to euros"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

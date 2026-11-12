@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Fire",
+  "tags": ["fire", "flame", "hot", "trending"],
+  "categories": ["nature", "status"],
+  "useCases": ["Marks a trending item", "Shows heat or a fire"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

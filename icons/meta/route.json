@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Route",
+  "tags": ["route", "path", "directions", "trip"],
+  "categories": ["maps", "navigation"],
+  "useCases": ["Shows a route", "Plans a trip between two points"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

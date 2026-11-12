@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Fish",
+  "tags": ["fish", "sea", "seafood", "aquarium"],
+  "categories": ["nature", "food"],
+  "useCases": ["Shows seafood", "Marks a marine topic"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

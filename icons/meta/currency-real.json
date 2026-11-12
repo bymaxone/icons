@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Real",
+  "tags": ["real", "currency", "money", "brl"],
+  "categories": ["commerce"],
+  "useCases": ["Shows a price in reais", "Switches the currency to reais"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

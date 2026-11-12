@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Wind",
+  "tags": ["wind", "breeze", "air", "weather"],
+  "categories": ["nature"],
+  "useCases": ["Shows the wind speed", "Marks a windy forecast"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

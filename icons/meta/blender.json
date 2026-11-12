@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Blender",
+  "tags": ["blender", "kitchen", "smoothie", "mix"],
+  "categories": ["food", "household"],
+  "useCases": ["Shows a kitchen appliance", "Marks a smoothie recipe"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

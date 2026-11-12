@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Dollar",
+  "tags": ["dollar", "currency", "money", "usd"],
+  "categories": ["commerce"],
+  "useCases": ["Shows a price in dollars", "Switches the currency to dollars"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

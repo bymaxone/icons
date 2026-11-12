@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Rainbow",
+  "tags": ["rainbow", "colors", "after rain", "pride"],
+  "categories": ["nature"],
+  "useCases": ["Shows a rainbow", "Marks a colourful theme"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

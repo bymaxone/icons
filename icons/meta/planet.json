@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Planet",
+  "tags": ["planet", "saturn", "space", "orbit"],
+  "categories": ["science", "nature"],
+  "useCases": ["Shows a space topic", "Marks an astronomy lesson"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

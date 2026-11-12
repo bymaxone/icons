@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Airplane",
+  "tags": ["airplane", "flight", "travel", "plane"],
+  "categories": ["transport"],
+  "useCases": ["Books a flight", "Turns on flight mode"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

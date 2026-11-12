@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Balloon",
+  "tags": ["balloon", "party", "celebrate", "birthday"],
+  "categories": ["games", "emotions"],
+  "useCases": ["Celebrates an event", "Marks a birthday"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

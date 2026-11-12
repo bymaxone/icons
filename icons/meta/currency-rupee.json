@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Rupee",
+  "tags": ["rupee", "currency", "money", "inr"],
+  "categories": ["commerce"],
+  "useCases": ["Shows a price in rupees", "Switches the currency to rupees"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}
