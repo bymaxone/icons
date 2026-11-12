@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Tree",
+  "tags": ["tree", "pine", "forest", "nature"],
+  "categories": ["nature"],
+  "useCases": ["Shows a park or forest", "Marks an outdoor place"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

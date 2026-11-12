@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Chef hat",
+  "tags": ["chef", "cook", "kitchen", "recipe"],
+  "categories": ["food", "people"],
+  "useCases": ["Opens the recipes", "Marks a cooking class"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

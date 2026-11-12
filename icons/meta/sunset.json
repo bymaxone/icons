@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Sunset",
+  "tags": ["sunset", "evening", "dusk", "sun"],
+  "categories": ["nature", "time"],
+  "useCases": ["Shows the sunset time", "Marks the evening"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

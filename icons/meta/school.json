@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "School",
+  "tags": ["school", "education", "building", "class"],
+  "categories": ["science", "maps"],
+  "useCases": ["Shows a school", "Opens the courses"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

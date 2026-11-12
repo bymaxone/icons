@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Snowflake",
+  "tags": ["snowflake", "snow", "cold", "winter"],
+  "categories": ["nature"],
+  "useCases": ["Shows cold weather", "Turns on a cooling mode"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Snow",
+  "tags": ["cloud", "snow", "weather", "winter"],
+  "categories": ["nature"],
+  "useCases": ["Shows a snow forecast", "Marks winter weather"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

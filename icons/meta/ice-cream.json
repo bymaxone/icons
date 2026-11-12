@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Ice cream",
+  "tags": ["ice cream", "dessert", "sweet", "summer"],
+  "categories": ["food"],
+  "useCases": ["Shows a dessert", "Marks a sweet treat"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

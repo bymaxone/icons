@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Sunrise",
+  "tags": ["sunrise", "morning", "dawn", "sun"],
+  "categories": ["nature", "time"],
+  "useCases": ["Shows the sunrise time", "Marks the morning"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

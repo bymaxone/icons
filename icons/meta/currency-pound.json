@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Pound",
+  "tags": ["pound", "currency", "money", "gbp"],
+  "categories": ["commerce"],
+  "useCases": ["Shows a price in pounds", "Switches the currency to pounds"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}
