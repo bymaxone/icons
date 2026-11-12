@@ -24,9 +24,12 @@
   "transport": "Transporte",
   "shapes": "Formas e símbolos",
   "math": "Matemática",
+  "science": "Ciência e educação",
   "tools": "Ferramentas",
   "nature": "Natureza e clima",
+  "food": "Comida e bebida",
   "games": "Esportes e jogos",
   "health": "Saúde",
+  "household": "Casa",
   "brands": "Marcas"
 }

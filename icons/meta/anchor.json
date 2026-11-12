@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Anchor",
+  "tags": ["anchor", "harbor", "ship", "link anchor"],
+  "categories": ["transport", "maps"],
+  "useCases": ["Marks a harbor", "Anchors a link"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

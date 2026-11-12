@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Megaphone",
+  "tags": ["megaphone", "announce", "broadcast", "campaign"],
+  "categories": ["communication"],
+  "useCases": ["Makes an announcement", "Starts a campaign"],
+  "aliases": [
+    {
+      "name": "announcement",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

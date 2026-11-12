@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Feather",
+  "tags": ["feather", "light", "quill", "write"],
+  "categories": ["nature", "text"],
+  "useCases": ["Marks a light option", "Opens writing mode"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

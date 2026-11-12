@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Umbrella",
+  "tags": ["umbrella", "rain", "insurance", "cover"],
+  "categories": ["nature"],
+  "useCases": ["Shows rain", "Marks insurance cover"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

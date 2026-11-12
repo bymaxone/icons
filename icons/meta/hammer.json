@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Hammer",
+  "tags": ["hammer", "build", "tool", "construct"],
+  "categories": ["tools"],
+  "useCases": ["Starts a build", "Marks construction work"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

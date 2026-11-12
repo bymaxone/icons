@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Dice",
+  "tags": ["dice", "random", "game", "chance"],
+  "categories": ["games"],
+  "useCases": ["Picks at random", "Opens a board game"],
+  "aliases": [
+    {
+      "name": "random",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

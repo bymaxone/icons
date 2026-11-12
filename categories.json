@@ -102,6 +102,10 @@
       "title": "Math"
     },
     {
+      "name": "science",
+      "title": "Science and education"
+    },
+    {
       "name": "tools",
       "title": "Tools"
     },
@@ -110,12 +114,20 @@
       "title": "Nature and weather"
     },
     {
+      "name": "food",
+      "title": "Food and drink"
+    },
+    {
       "name": "games",
       "title": "Sports and games"
     },
     {
       "name": "health",
       "title": "Health"
+    },
+    {
+      "name": "household",
+      "title": "Home and living"
     }
   ]
 }

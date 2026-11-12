@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Trophy",
+  "tags": ["trophy", "winner", "prize", "cup"],
+  "categories": ["games", "status"],
+  "useCases": ["Shows a winner", "Marks a top result"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

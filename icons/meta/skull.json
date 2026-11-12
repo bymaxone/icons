@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Skull",
+  "tags": ["skull", "danger", "poison", "halloween"],
+  "categories": ["status", "emotions"],
+  "useCases": ["Warns of danger", "Marks a destructive action"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Car",
+  "tags": ["car", "vehicle", "drive", "auto"],
+  "categories": ["transport"],
+  "useCases": ["Chooses a car trip", "Marks parking"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}
