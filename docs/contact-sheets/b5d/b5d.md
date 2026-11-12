@@ -10,7 +10,7 @@ The fourth sub-batch of B5. [`b5d-1.png`](./b5d-1.png) to [`b5d-4.png`](./b5d-4.
 - **`cart` and `bag`** stay apart: the cart in profile with a handle and two wheels, the bag from the front with arched handles. `bank` has no letter and `coins` no digit.
 - **`smartphone`, `tablet` and `laptop`** are one family, with the camera at the top of each screen.
 - **`smile`** opens its ring by the cut and closes its eyes in a laugh.
-- **No 16 px master.** None fuses at 16 px.
+- **At 16 px.** Measured with `pnpm check:sixteen`: none of the batch fuses, so no 16 px master is drawn.
 
 ## Similarity
 

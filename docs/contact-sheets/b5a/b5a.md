@@ -8,7 +8,7 @@ The first sub-batch of B5, the general-purpose icons the first 148 drawings, dra
 - **`check-square`** opens its square at a corner for the check to leave through, as `check-circle` opens its circle; filled, the square is solid and the check knocked out.
 - **`file-import` and `file-export`** draw the page of `file`, with its folded corner, and the arrow crosses the page's edge through the cut. Without the fold they read as `log-in` and `log-out`.
 - **`toggle`** is off in its line drawing, the knob on the left, and on in its filled one, the pill solid and the knob knocked out as a disc on the right.
-- **No 16 px master.** None fuses at 16 px, so none needs one.
+- **At 16 px.** Measured with `pnpm check:sixteen`: none of the batch fuses, so no 16 px master is drawn.
 
 ## Similarity
 

@@ -9,7 +9,7 @@ The last sub-batch of B5. [`b5e-1.png`](./b5e-1.png) shows the 10 line drawings 
 - **`columns`** is the frame of `sidebar` with a full divider in the middle; a loose divider reads as the letter I.
 - **`code`** sets a short slash between two angle brackets, apart from them by the cut; `prompt` is a frame with a chevron and a cursor.
 - **`branch` and `pull-request`** draw the git family as a graph of rings, each apart from its lines by the cut.
-- **No 16 px master.** None fuses at 16 px.
+- **At 16 px.** Measured with `pnpm check:sixteen`: none of the batch fuses, so no 16 px master is drawn.
 
 ## Similarity
 
