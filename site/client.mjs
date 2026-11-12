@@ -1,11 +1,20 @@
 /**
- * @fileoverview The catalog's browser script: the search and the category filter over the
- * grid, the variant, size, stroke, theme and colour controls, and the copy buttons. It never
- * writes markup, and keeps the reader's theme and colour in local storage.
+ * @fileoverview The catalog's browser script: the search over the index the build writes, the
+ * type and category facets kept in the address, the category navigation, the keyboard, the
+ * variant, size, stroke, theme and colour controls, and the copy buttons. It never writes
+ * markup: matched words are marked with elements it creates and fills as text. It keeps the
+ * reader's theme and colour in local storage.
  * @layer site
  */
 
-import { inCategory, matchesQuery } from '../src/pipeline/site.ts'
+import {
+  highlight,
+  nearCategories,
+  readState,
+  search,
+  suggestions,
+  writeState
+} from '../src/pipeline/site-search.ts'
 
 const root = document.documentElement
 const KEY = 'bx-icons-prefs'
@@ -59,26 +68,193 @@ function setSize(size) {
   press('size', size)
 }
 
-/** Hides the cells that do not match the search and the category, and counts the rest by kind. */
-function filter() {
-  const query = document.getElementById('q')?.value ?? ''
-  const category = document.getElementById('category')?.value ?? ''
-  let icons = 0
-  let brands = 0
-  for (const cell of document.querySelectorAll('.cell[data-words]')) {
-    const visible =
-      matchesQuery(cell.dataset.words, query) &&
-      inCategory(cell.dataset.categories.split(' '), category)
-    cell.hidden = !visible
-    if (visible && cell.dataset.kind === 'brand') brands += 1
-    else if (visible) icons += 1
+/** The search: the index once loaded, the categories as the page lists them, and the state. */
+const finder = { docs: null, categories: [], state: readState(location.search) }
+
+/** Writes a cell's name, marking the letters a word of the query matched. */
+function markName(name, query) {
+  const title = name.dataset.title
+  if (query === '' && !name.hasAttribute('data-marked')) return
+  name.toggleAttribute('data-marked', query !== '')
+  name.replaceChildren()
+  for (const run of highlight(title, query)) {
+    if (!run.hit) name.append(run.text)
+    else {
+      const mark = document.createElement('mark')
+      mark.textContent = run.text
+      name.append(mark)
+    }
   }
-  const iconCount = document.getElementById('shown-icons')
-  if (iconCount) iconCount.textContent = String(icons)
-  const brandCount = document.getElementById('shown-brands')
-  if (brandCount) brandCount.textContent = String(brands)
-  const empty = document.querySelector('.empty')
-  if (empty) empty.hidden = icons + brands > 0
+}
+
+/** Fills a list of buttons, one per word, that run a search or pick a category. */
+function offer(holder, words, act) {
+  holder.replaceChildren()
+  for (const word of words) {
+    const button = document.createElement('button')
+    button.type = 'button'
+    button.textContent = word.text
+    button.addEventListener('click', () => act(word.value))
+    holder.append(button)
+  }
+  holder.parentElement.hidden = words.length === 0
+}
+
+/** The empty state: the query, the words it might have meant and the close categories. */
+function showEmpty(empty, nothing) {
+  empty.hidden = !nothing
+  if (!nothing) return
+  const { q } = finder.state
+  document.getElementById('empty-q').textContent = q
+  offer(
+    document.getElementById('did'),
+    suggestions(finder.docs, q).map((word) => ({ text: word, value: word })),
+    (word) => setQuery(word)
+  )
+  const titles = new Map(finder.categories.map((category) => [category.name, category.title]))
+  offer(
+    document.getElementById('near'),
+    nearCategories(finder.categories, q).map((name) => ({ text: titles.get(name), value: name })),
+    (name) => setFacet('categories', [name], true)
+  )
+}
+
+/** Shows the cells the search and the facets keep, ranked, and counts them by section. */
+function filter() {
+  if (!finder.docs) return
+  const { state } = finder
+  const ranked = search(finder.docs, state.q, state)
+  const rank = new Map(ranked.map((hit, index) => [hit.name, index]))
+  const shown = { icon: new Set(), brand: new Set() }
+  for (const section of document.querySelectorAll('.group')) {
+    const picked = state.categories.length === 0 || state.categories.includes(section.dataset.cat)
+    let count = 0
+    for (const cell of section.querySelectorAll('.cell')) {
+      const at = rank.get(cell.dataset.name)
+      const visible = picked && at !== undefined
+      cell.hidden = !visible
+      cell.style.order = visible && state.q ? String(at) : ''
+      if (visible) markName(cell.querySelector('.n'), state.q)
+      if (visible) {
+        count += 1
+        shown[cell.dataset.kind].add(cell.dataset.name)
+      }
+    }
+    section.hidden = count === 0
+    section.querySelector('[data-count]').textContent = String(count)
+    const nav = document.querySelector(`[data-count-nav="${section.dataset.cat}"]`)
+    if (nav) {
+      nav.textContent = String(count)
+      nav.parentElement.toggleAttribute('data-zero', count === 0)
+    }
+  }
+  document.getElementById('shown-icons').textContent = String(shown.icon.size)
+  document.getElementById('shown-brands').textContent = String(shown.brand.size)
+  showEmpty(document.querySelector('.empty'), shown.icon.size + shown.brand.size === 0)
+  history.replaceState(null, '', `${location.pathname}${writeState(state)}${location.hash}`)
+}
+
+/** Sets the query, in the search box and in the state. */
+function setQuery(query) {
+  finder.state = { ...finder.state, q: query }
+  const box = document.getElementById('q')
+  if (box) box.value = query
+  filter()
+}
+
+/** Sets a facet's list, and marks its controls. */
+function setFacet(facet, values, scroll = false) {
+  finder.state = { ...finder.state, [facet]: values }
+  for (const button of document.querySelectorAll('[data-type]')) {
+    button.setAttribute('aria-pressed', String(finder.state.types.includes(button.dataset.type)))
+  }
+  for (const box of document.querySelectorAll('[data-cat]')) {
+    if (box instanceof HTMLInputElement)
+      box.checked = finder.state.categories.includes(box.dataset.cat)
+  }
+  filter()
+  if (scroll) document.querySelector('.sections')?.scrollIntoView({ block: 'start' })
+}
+
+/** Toggles one value of a facet. */
+function toggleFacet(facet, value, on) {
+  const rest = finder.state[facet].filter((item) => item !== value)
+  setFacet(facet, on ? [...rest, value] : rest)
+}
+
+/** Marks the category the reader is reading in the navigation. */
+function spy() {
+  const links = new Map(
+    [...document.querySelectorAll('[data-nav]')].map((link) => [link.dataset.nav, link])
+  )
+  const observer = new IntersectionObserver(
+    (seen) => {
+      for (const item of seen) {
+        if (!item.isIntersecting) continue
+        for (const link of links.values()) link.removeAttribute('aria-current')
+        links.get(item.target.dataset.cat)?.setAttribute('aria-current', 'true')
+      }
+    },
+    { rootMargin: '-140px 0px -70% 0px' }
+  )
+  for (const section of document.querySelectorAll('.group')) observer.observe(section)
+}
+
+/** Moves the focus between the visible cells with the arrow keys. */
+function arrows(event) {
+  const from = event.target instanceof Element ? event.target.closest('.cell a') : null
+  if (!from || !event.key.startsWith('Arrow')) return
+  const grid = from.closest('.grid')
+  const links = [...grid.querySelectorAll('.cell:not([hidden]) a')]
+  links.sort((a, b) => Number(a.parentElement.style.order) - Number(b.parentElement.style.order))
+  const top = from.getBoundingClientRect().top
+  const columns = links.filter((link) => link.getBoundingClientRect().top === top).length
+  const step = { ArrowLeft: -1, ArrowRight: 1, ArrowUp: -columns, ArrowDown: columns }[event.key]
+  const next = links[links.indexOf(from) + step]
+  if (step !== undefined && next) {
+    event.preventDefault()
+    next.focus()
+  }
+}
+
+/** Wires the search, the facets, the navigation and the keyboard on the home page. */
+function startSearch() {
+  const box = document.getElementById('q')
+  if (!box) return
+  box.value = finder.state.q
+  finder.categories = [...document.querySelectorAll('.group')].map((section) => ({
+    name: section.dataset.cat,
+    title: section.querySelector('h2').firstChild.textContent.trim()
+  }))
+  setFacet('types', finder.state.types)
+  box.addEventListener('input', () => setQuery(box.value))
+  for (const button of document.querySelectorAll('[data-type]')) {
+    button.addEventListener('click', () =>
+      toggleFacet('types', button.dataset.type, button.getAttribute('aria-pressed') !== 'true')
+    )
+  }
+  for (const pick of document.querySelectorAll('input[data-cat]')) {
+    pick.addEventListener('change', () => toggleFacet('categories', pick.dataset.cat, pick.checked))
+  }
+  document.getElementById('jump')?.addEventListener('change', (event) => {
+    const name = event.target.value
+    if (name) document.getElementById(`cat-${name}`)?.scrollIntoView({ block: 'start' })
+  })
+  document.addEventListener('keydown', (event) => {
+    const typing =
+      event.target instanceof HTMLInputElement || event.target instanceof HTMLSelectElement
+    if (event.key === '/' && !typing) {
+      event.preventDefault()
+      box.focus()
+    } else arrows(event)
+  })
+  spy()
+  void fetch('assets/search.json')
+    .then((response) => response.json())
+    .then((docs) => {
+      finder.docs = docs
+      filter()
+    })
 }
 
 /** Applies the theme and labels the toggle with the theme it switches to. */
@@ -113,8 +289,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const requested = new URLSearchParams(location.search).get('variant')
   if (document.querySelector('.grid'))
     showVariant(['filled', 'sm'].includes(requested) ? requested : 'line')
-  document.getElementById('q')?.addEventListener('input', filter)
-  document.getElementById('category')?.addEventListener('change', filter)
+  startSearch()
   const stroke = document.getElementById('stroke')
   stroke?.addEventListener('input', () => {
     root.style.setProperty('--stroke', stroke.value)

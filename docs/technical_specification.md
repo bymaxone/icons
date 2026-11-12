@@ -326,8 +326,12 @@ Components are pure functions with no hooks, no context and no `'use client'` di
 
 A static site in `site/` that is part of the repository and its CI:
 
-- Search over name, tags and aliases, filtered by category.
-- Controls for size (16, 20, 24, 32), stroke, variant, light and dark theme, and the six Studio accents.
+- The home page lists the set by category: one section per category with its count, a navigation of every category with its count that follows the reader's place, and a list to jump to a category on a narrow screen. Brand marks are a category of their own.
+- The search runs over an index the build writes (`assets/search.json`, from `src/pipeline/site-search.ts`): name, label, aliases, tags, categories, use cases, type (line, filled, 16 px, brand) and Brazilian Portuguese terms. Text is compared folded, so accents and case do not matter. A misspelt word one or two edits away still matches. Matches rank whole-query equality first, then the name, then aliases, the label and the Portuguese terms, then tags, categories, types and use cases, then misspellings. The matched letters are marked, and the results stay grouped by category.
+- A search that finds nothing offers the nearest words ("did you mean"), the close categories and a row of popular icons.
+- Facets for type and category (several at once) combine with the search. The query and the facets live in the address (`?q=&type=&cat=`), so a search can be shared. `/` focuses the search, the arrow keys move between results, and Enter opens one.
+- Portuguese search terms (founder decision, 2026-11-11): the site searches in English and in Brazilian Portuguese. The Portuguese terms live in `site/terms-pt.json`, used only by the site and never shipped: the package's metadata stays in English. A test fails when an icon or brand mark has no Portuguese term.
+- Controls for size (16, 20, 24, 32), stroke, variant, light and dark theme, and the six Studio accents. The accent colours the drawings, including the construction specimen; its annotations keep one colour of their own.
 - Copy SVG, copy JSX, copy name.
 - Each icon page lists its use cases and aliases.
 - It uses the package's own build output, so it doubles as a consumer test.

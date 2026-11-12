@@ -1,8 +1,8 @@
 /**
- * @fileoverview The catalog site's model and the two rules its pages depend on: every text a
- * page writes is escaped, and the search matches a query against an entry's words. The page
- * templates and the browser script under `site/` build on these; they hold no logic of
- * their own that a wrong value could turn into markup.
+ * @fileoverview The catalog site's model and the rule its pages depend on: every text a page
+ * writes is escaped. The search is in `site-search.ts`. The page templates and the browser
+ * script under `site/` build on these; they hold no logic of their own that a wrong value
+ * could turn into markup.
  * @layer Pipeline
  */
 
@@ -38,8 +38,6 @@ export interface CatalogEntry {
   readonly aliases: readonly IconAlias[]
   readonly useCases: readonly string[]
   readonly since: string
-  /** What the search matches: the name, the label, the tags and the aliases, lower case. */
-  readonly words: string
 }
 
 /** A category the catalog filters by: the set's categories and the brands. */
@@ -73,16 +71,6 @@ export function escapeHtml(text: string): string {
     .replaceAll("'", '&#39;')
 }
 
-/** The search words of an entry: its name, label, tags and alias names, lower case. */
-function wordsOf(
-  name: string,
-  label: string,
-  tags: readonly string[],
-  aliases: readonly IconAlias[]
-): string {
-  return [name, label, ...tags, ...aliases.map((alias) => alias.name)].join(' ').toLowerCase()
-}
-
 /**
  * Builds the catalog from the built metadata.
  *
@@ -106,8 +94,7 @@ export function catalogFrom(metadata: BuiltMetadata): Catalog {
       tags: icon.tags,
       aliases: icon.aliases,
       useCases: icon.useCases,
-      since: icon.since,
-      words: wordsOf(name, icon.label, icon.tags, icon.aliases)
+      since: icon.since
     }))
   const brands = Object.entries(metadata.brands)
     .sort(([a], [b]) => a.localeCompare(b))
@@ -121,36 +108,7 @@ export function catalogFrom(metadata: BuiltMetadata): Catalog {
       tags: brand.tags,
       aliases: brand.aliases,
       useCases: [],
-      since: brand.since,
-      words: wordsOf(name, brand.title, brand.tags, brand.aliases)
+      since: brand.since
     }))
   return { entries: [...icons, ...brands], categories: [...metadata.categories, BRAND_CATEGORY] }
-}
-
-/**
- * Whether an entry's words match a search query: every word of the query, split on white
- * space and compared in lower case, appears in them. Splitting leaves empty words where
- * spaces repeat or the query is blank; an empty word is in every text, so an empty query
- * matches every entry.
- *
- * @param words - The entry's search words, lower case.
- * @param query - What the reader typed.
- * @returns True when every word of the query is found.
- */
-export function matchesQuery(words: string, query: string): boolean {
-  return query
-    .toLowerCase()
-    .split(/\s/)
-    .every((word) => words.includes(word))
-}
-
-/**
- * Whether an entry is in the chosen category. The empty category is every category.
- *
- * @param categories - The entry's categories.
- * @param category - The chosen category name, or the empty string.
- * @returns True when the entry is listed under it.
- */
-export function inCategory(categories: readonly string[], category: string): boolean {
-  return category === '' || categories.includes(category)
 }

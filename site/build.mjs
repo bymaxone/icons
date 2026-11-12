@@ -18,6 +18,7 @@ import { build } from 'esbuild'
 import { createElement } from 'react'
 import { renderToStaticMarkup } from 'react-dom/server'
 
+import { searchIndex } from '../src/pipeline/site-search.ts'
 import { catalogFrom } from '../src/pipeline/site.ts'
 import { ORIGIN, entryPage, homePage, notFoundPage } from './pages.mjs'
 
@@ -89,6 +90,10 @@ writeFileSync(
     .map((part) => readFileSync(join(root, 'site', 'styles', `${part}.css`), 'utf8'))
     .join('\n')
 )
+// The search index, with the Portuguese terms the site keeps beside the package (spec §9):
+// the build fails when an entry has none.
+const terms = JSON.parse(readFileSync(join(root, 'site', 'terms-pt.json'), 'utf8'))
+writeFileSync(join(out, 'assets', 'search.json'), JSON.stringify(searchIndex(catalog, terms)))
 writeFileSync(
   join(out, 'assets', 'favicon.svg'),
   readFileSync(join(root, 'dist', 'svg', 'filled', 'lightning.svg'), 'utf8')
