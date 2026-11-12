@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Circle",
+  "tags": ["circle", "shape", "round", "dot"],
+  "categories": ["shapes"],
+  "useCases": ["Inserts a circle shape", "Marks an unselected option"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

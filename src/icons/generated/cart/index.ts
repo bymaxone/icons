@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { CartIcon } from './line'
+export { CartIcon, ShoppingCartIcon } from './line'

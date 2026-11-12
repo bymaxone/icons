@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Pentagon",
+  "tags": ["pentagon", "shape", "polygon", "five sides"],
+  "categories": ["shapes"],
+  "useCases": ["Inserts a pentagon shape", "Marks a five-sided shape"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

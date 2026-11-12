@@ -4,6 +4,12 @@
   "tags": ["cart", "shopping", "basket", "checkout"],
   "categories": ["commerce"],
   "useCases": ["Opens the shopping cart", "Adds an item to the cart"],
+  "aliases": [
+    {
+      "name": "shopping-cart",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

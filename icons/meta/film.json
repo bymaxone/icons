@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Film",
+  "tags": ["film", "movie", "cinema", "strip"],
+  "categories": ["media"],
+  "useCases": ["Opens the films", "Marks a movie"],
+  "aliases": [
+    {
+      "name": "movie",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

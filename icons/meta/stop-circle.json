@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Stop in a circle",
+  "tags": ["stop", "end", "record", "circle"],
+  "categories": ["media"],
+  "useCases": ["Stops a recording", "Ends the playback"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

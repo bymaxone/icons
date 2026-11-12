@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Diamond",
+  "tags": ["diamond", "rhombus", "shape", "gem"],
+  "categories": ["shapes"],
+  "useCases": ["Inserts a diamond shape", "Marks a decision point"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

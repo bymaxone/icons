@@ -4,6 +4,12 @@
   "tags": ["wrench", "fix", "maintenance", "tool"],
   "categories": ["tools"],
   "useCases": ["Marks an item being repaired", "Starts an automatic fix"],
+  "aliases": [
+    {
+      "name": "wrench",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

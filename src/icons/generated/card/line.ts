@@ -21,3 +21,6 @@ export const CardIcon = /* @__PURE__ */ createIcon('card', [
   ['path', { d: 'M5.75 9.25h12.5' }],
   ['path', { d: 'M5.75 15.25h4' }]
 ])
+
+/** `credit-card`: an alias of {@link CardIcon}. */
+export const CreditCardIcon = CardIcon

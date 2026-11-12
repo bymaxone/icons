@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Shuffle",
+  "tags": ["shuffle", "random", "mix", "playlist"],
+  "categories": ["media"],
+  "useCases": ["Plays the list in random order", "Mixes the order of items"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

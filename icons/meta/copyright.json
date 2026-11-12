@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Copyright",
+  "tags": ["copyright", "license", "rights", "legal"],
+  "categories": ["shapes"],
+  "useCases": ["Marks copyrighted content", "Shows the license of a work"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

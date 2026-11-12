@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Radio",
+  "tags": ["radio", "broadcast", "station", "fm"],
+  "categories": ["media", "audio"],
+  "useCases": ["Opens the radio", "Tunes into a station"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

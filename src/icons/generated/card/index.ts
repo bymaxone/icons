@@ -4,5 +4,5 @@
  * @layer Generated
  */
 
-export { CardIcon } from './line'
-export { CardFilledIcon } from './filled'
+export { CardIcon, CreditCardIcon } from './line'
+export { CardFilledIcon, CreditCardFilledIcon } from './filled'

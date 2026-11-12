@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Hexagon",
+  "tags": ["hexagon", "shape", "polygon", "six sides"],
+  "categories": ["shapes"],
+  "useCases": ["Inserts a hexagon shape", "Marks a six-sided shape"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

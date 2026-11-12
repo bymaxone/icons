@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Triangle",
+  "tags": ["triangle", "shape", "delta", "polygon"],
+  "categories": ["shapes"],
+  "useCases": ["Inserts a triangle shape", "Marks a three-sided shape"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

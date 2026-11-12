@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Asterisk",
+  "tags": ["asterisk", "required", "footnote", "star"],
+  "categories": ["shapes"],
+  "useCases": ["Marks a required field", "Points to a footnote"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

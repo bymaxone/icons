@@ -15,3 +15,6 @@ export const ChartBarIcon = /* @__PURE__ */ createIcon('chart-bar', [
   ['path', { d: 'M3.75 3.75v16.5h16.5' }],
   ['path', { d: 'M8.25 17.25v-5m4.5 5v-10m4.5 10v-7' }]
 ])
+
+/** `bar-chart`: an alias of {@link ChartBarIcon}. */
+export const BarChartIcon = ChartBarIcon

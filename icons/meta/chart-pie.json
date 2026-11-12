@@ -4,6 +4,12 @@
   "tags": ["chart", "pie", "share", "breakdown"],
   "categories": ["data"],
   "useCases": ["Shows a breakdown by share", "Opens the usage summary"],
+  "aliases": [
+    {
+      "name": "pie-chart",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

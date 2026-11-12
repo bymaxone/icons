@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { RepairIcon } from './line'
+export { RepairIcon, WrenchIcon } from './line'

@@ -24,3 +24,6 @@ export const CardFilledIcon = /* @__PURE__ */ createIcon(
   ],
   { paint: 'fill' }
 )
+
+/** `credit-card`: an alias of {@link CardFilledIcon}. */
+export const CreditCardFilledIcon = CardFilledIcon

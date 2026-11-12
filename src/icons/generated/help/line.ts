@@ -16,3 +16,6 @@ export const HelpIcon = /* @__PURE__ */ createIcon('help', [
   ['path', { d: 'M9.25 9.75v-.5m0 0a3 3 0 1 1 5.121 2.121m0 0L12.25 13.25' }],
   ['circle', { cx: 12.25, cy: 17.25, r: 0.75 }]
 ])
+
+/** `help-circle`: an alias of {@link HelpIcon}. */
+export const HelpCircleIcon = HelpIcon
