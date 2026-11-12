@@ -111,6 +111,7 @@
     "check:fixtures": "node scripts/check-fixture-package.mjs",
     "check:generated": "node scripts/generate.mjs --check",
     "check:lint-graph": "node scripts/check-lint-graph-rules.mjs",
+    "check:meta": "node scripts/check-meta.mjs",
     "check:meta-react": "node scripts/check-meta-react-free.mjs",
     "check:mutants": "node scripts/check-mutation-directives.mjs",
     "check:published": "node scripts/check-published-surface.mjs",

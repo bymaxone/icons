@@ -96,6 +96,11 @@ jobs:
         # the pair is not on scripts/sixteen-allowlist.json with its written justification;
         # a listed pair or entry that no longer fuses fails too, so the list stays honest.
         run: pnpm check:sixteen
+      - name: Metadata is written per icon
+        # Fails on a placeholder label, a label two icons share that is not a justified group
+        # of scripts/meta-allowlist.json, and empty or repeated useCases, so a record that
+        # was overwritten or copied from another icon cannot merge.
+        run: pnpm check:meta
       - name: Existing drawings change only through a redraw manifest
         # A pull request may change a drawing that already exists, or its baseline, only
         # when a manifest under docs/redraws/ names it; a batch that adds icons touches none.

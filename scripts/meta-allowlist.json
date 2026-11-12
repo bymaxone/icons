@@ -1,0 +1,12 @@
+{
+  "labels": {
+    "Add": {
+      "icons": ["plus", "plus-circle"],
+      "why": "the same action drawn two ways, bare and in a circle"
+    },
+    "More options": {
+      "icons": ["more-vertical", "more-horizontal"],
+      "why": "the same control in two orientations"
+    }
+  }
+}
