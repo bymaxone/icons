@@ -24,6 +24,18 @@ and deprecated, each rename with the alias that keeps the old name working.
   removed in 2.0.0: `QueuedIcon` still renders the hourglass.
   Apply to a consumer: import `HourglassIcon`, or the subpath `./icons/hourglass`, instead
   of `QueuedIcon`.
+- Six icons are renamed to the object each draws; the drawings are unchanged. Each old name stays
+  a deprecated alias, removed in 2.0.0, whose component still renders the drawing:
+  - `accent` is renamed `droplet`;
+  - `agent` is renamed `robot`;
+  - `variations` is renamed `shapes`, which also joins the `shapes` category;
+  - `plan` is renamed `stairs`;
+  - `spending-cap` is renamed `speedometer`;
+  - `sort` is renamed `arrow-up-down`, which also joins the `arrows` category.
+
+  Apply to a consumer: import `DropletIcon`, `RobotIcon`, `ShapesIcon`, `StairsIcon`,
+  `SpeedometerIcon` and `ArrowUpDownIcon`, or their `./icons/<name>` subpaths, instead of
+  `AccentIcon`, `AgentIcon`, `VariationsIcon`, `PlanIcon`, `SpendingCapIcon` and `SortIcon`.
 
 ### Added
 

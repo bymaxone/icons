@@ -1,0 +1,18 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Shapes",
+  "tags": ["shapes", "circle", "square", "triangle", "options", "alternatives"],
+  "categories": ["shapes", "ai"],
+  "useCases": ["Shows the variations of a result", "Generates alternatives"],
+  "aliases": [
+    {
+      "name": "variations",
+      "deprecated": true,
+      "deprecationReason": "Renamed to shapes, the object the drawing shows.",
+      "toBeRemovedInVersion": "2.0.0"
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

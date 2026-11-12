@@ -1,0 +1,18 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Arrow up and down",
+  "tags": ["arrow up down", "swap vertical", "order", "arrange", "ascending", "descending"],
+  "categories": ["arrows", "actions"],
+  "useCases": ["Changes the sort order of a list", "Sorts a table column"],
+  "aliases": [
+    {
+      "name": "sort",
+      "deprecated": true,
+      "deprecationReason": "Renamed to arrow-up-down, the object the drawing shows.",
+      "toBeRemovedInVersion": "2.0.0"
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

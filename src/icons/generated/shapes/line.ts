@@ -1,17 +1,17 @@
 /**
- * @fileoverview The `variations` icon, line variant.
- * Written by `pnpm generate` from icons/line/variations.svg: edit the source, never this file.
+ * @fileoverview The `shapes` icon, line variant.
+ * Written by `pnpm generate` from icons/line/shapes.svg: edit the source, never this file.
  * @layer Generated
  */
 
 import { createIcon } from '@bymax-one/icons/runtime'
 
 /**
- * The `variations` icon, line variant: options, alternatives, shapes, versions.
+ * The `shapes` icon, line variant: shapes, circle, square, triangle, options, alternatives.
  *
  * @since 0.1.0
  */
-export const VariationsIcon = /* @__PURE__ */ createIcon('variations', [
+export const ShapesIcon = /* @__PURE__ */ createIcon('shapes', [
   ['circle', { cx: 7.75, cy: 7.25, r: 3 }],
   [
     'path',
@@ -32,3 +32,6 @@ export const VariationsIcon = /* @__PURE__ */ createIcon('variations', [
     }
   ]
 ])
+
+/** @deprecated `variations` is a deprecated alias of `shapes`, removed in 2.0.0. Renamed to shapes, the object the drawing shows. Use {@link ShapesIcon}. */
+export const VariationsIcon = ShapesIcon

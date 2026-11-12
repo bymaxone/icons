@@ -1,0 +1,18 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Stairs",
+  "tags": ["stairs", "steps", "levels", "tier", "subscription", "pricing"],
+  "categories": ["commerce"],
+  "useCases": ["Links to the plans", "Shows the current plan"],
+  "aliases": [
+    {
+      "name": "plan",
+      "deprecated": true,
+      "deprecationReason": "Renamed to stairs, the object the drawing shows.",
+      "toBeRemovedInVersion": "2.0.0"
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

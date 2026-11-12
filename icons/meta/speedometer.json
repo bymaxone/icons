@@ -1,0 +1,18 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Speedometer",
+  "tags": ["speedometer", "gauge", "dial", "limit", "budget", "cap"],
+  "categories": ["commerce"],
+  "useCases": ["Sets a monthly spending cap", "Warns when the cap is near"],
+  "aliases": [
+    {
+      "name": "spending-cap",
+      "deprecated": true,
+      "deprecationReason": "Renamed to speedometer, the object the drawing shows.",
+      "toBeRemovedInVersion": "2.0.0"
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -80,4 +80,18 @@ describe('the search over the real set', () => {
       catalog.entries.filter((entry) => entry.drawings.some((d) => d.variant === 'filled')).length
     )
   })
+
+  it('ranks a renamed icon first by its name and by its old name', () => {
+    // Scenario: the icon `shapes` shares its name with the `shapes` category, whose every icon
+    // matches the word too, and each renamed icon is still found by the name it replaced.
+    expect(top('shapes')).toStrictEqual(['shapes'])
+    expect(top('formas')).toStrictEqual(['shapes'])
+    expect(top('variations')).toStrictEqual(['shapes'])
+    expect(top('accent')).toStrictEqual(['droplet'])
+    // `octopus` is labelled Agent, the agent's avatar, so its label outranks the alias.
+    expect(top('agent', 2)).toStrictEqual(['octopus', 'robot'])
+    expect(top('plan')).toStrictEqual(['stairs'])
+    expect(top('spending cap')).toStrictEqual(['speedometer'])
+    expect(top('sort')).toStrictEqual(['arrow-up-down'])
+  })
 })

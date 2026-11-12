@@ -1,0 +1,18 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Robot",
+  "tags": ["robot", "bot", "assistant", "automation", "ai agent"],
+  "categories": ["ai"],
+  "useCases": ["Opens the agent panel", "Marks a task run by the agent"],
+  "aliases": [
+    {
+      "name": "agent",
+      "deprecated": true,
+      "deprecationReason": "Renamed to robot, the object the drawing shows.",
+      "toBeRemovedInVersion": "2.0.0"
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}
