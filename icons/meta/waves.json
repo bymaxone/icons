@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Waves",
+  "tags": ["waves", "sea", "water", "ocean"],
+  "categories": ["nature"],
+  "useCases": ["Shows the sea", "Marks water activities"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

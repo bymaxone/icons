@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Joystick",
+  "tags": ["joystick", "arcade", "game", "stick"],
+  "categories": ["games", "devices"],
+  "useCases": ["Opens the arcade", "Moves a character"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

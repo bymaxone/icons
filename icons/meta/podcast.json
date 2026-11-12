@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Podcast",
+  "tags": ["podcast", "microphone", "audio", "show"],
+  "categories": ["audio", "media"],
+  "useCases": ["Opens the podcasts", "Records an episode"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

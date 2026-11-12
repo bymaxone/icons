@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Wheelchair",
+  "tags": ["wheelchair", "accessible", "mobility", "disability"],
+  "categories": ["health", "people"],
+  "useCases": ["Marks an accessible place", "Shows mobility support"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

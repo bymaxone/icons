@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Rain",
+  "tags": ["cloud", "rain", "weather", "shower"],
+  "categories": ["nature"],
+  "useCases": ["Shows a rain forecast", "Marks wet weather"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

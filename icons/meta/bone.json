@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Bone",
+  "tags": ["bone", "dog", "pet", "skeleton"],
+  "categories": ["nature", "health"],
+  "useCases": ["Shows a pet treat", "Marks a bone topic"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Orbit",
+  "tags": ["orbit", "planet", "space", "satellite"],
+  "categories": ["science"],
+  "useCases": ["Shows an orbit", "Marks a space topic"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

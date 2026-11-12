@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Factory",
+  "tags": ["factory", "industry", "production", "plant"],
+  "categories": ["maps", "commerce"],
+  "useCases": ["Shows a production site", "Marks an industry"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

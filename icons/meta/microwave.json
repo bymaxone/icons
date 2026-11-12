@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Microwave",
+  "tags": ["microwave", "oven", "kitchen", "heat"],
+  "categories": ["household", "food"],
+  "useCases": ["Heats a meal", "Marks a kitchen appliance"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

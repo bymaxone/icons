@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Chess knight",
+  "tags": ["chess", "knight", "strategy", "game"],
+  "categories": ["games"],
+  "useCases": ["Opens a strategy game", "Marks a move"],
+  "aliases": [
+    {
+      "name": "strategy",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

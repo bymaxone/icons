@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Gavel",
+  "tags": ["gavel", "law", "auction", "judge"],
+  "categories": ["tools", "commerce"],
+  "useCases": ["Places a bid", "Marks a legal decision"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

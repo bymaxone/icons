@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Design tools",
+  "tags": ["pencil", "ruler", "design", "draft"],
+  "categories": ["editing", "tools"],
+  "useCases": ["Opens the design tools", "Marks a drafting task"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

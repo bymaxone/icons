@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Caravan",
+  "tags": ["caravan", "camper", "trailer", "trip"],
+  "categories": ["transport"],
+  "useCases": ["Shows a road trip", "Marks a camper stay"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Door",
+  "tags": ["door", "entrance", "exit", "room"],
+  "categories": ["household", "navigation"],
+  "useCases": ["Shows an entrance", "Marks a room"],
+  "aliases": [
+    {
+      "name": "door-closed",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

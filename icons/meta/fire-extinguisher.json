@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Fire extinguisher",
+  "tags": ["fire extinguisher", "safety", "emergency", "fire"],
+  "categories": ["security", "household"],
+  "useCases": ["Shows a fire safety point", "Marks an emergency kit"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

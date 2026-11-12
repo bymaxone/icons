@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Fridge",
+  "tags": ["fridge", "refrigerator", "kitchen", "cold"],
+  "categories": ["household", "food"],
+  "useCases": ["Shows the kitchen", "Marks a cold item"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

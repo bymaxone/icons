@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Projector",
+  "tags": ["projector", "presentation", "screen", "beam"],
+  "categories": ["devices", "media"],
+  "useCases": ["Starts a projection", "Shows a presentation room"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

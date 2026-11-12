@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Gamepad",
+  "tags": ["gamepad", "controller", "game", "console"],
+  "categories": ["games", "devices"],
+  "useCases": ["Opens the games", "Connects a controller"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

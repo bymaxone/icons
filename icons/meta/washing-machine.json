@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Washing machine",
+  "tags": ["washing machine", "laundry", "wash", "clothes"],
+  "categories": ["household"],
+  "useCases": ["Starts the laundry", "Marks a washing service"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

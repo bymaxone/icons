@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Road",
+  "tags": ["road", "street", "highway", "route"],
+  "categories": ["maps", "transport"],
+  "useCases": ["Shows a road", "Marks a route"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Satellite dish",
+  "tags": ["satellite", "dish", "antenna", "signal"],
+  "categories": ["connectivity", "devices"],
+  "useCases": ["Shows a satellite link", "Marks a broadcast signal"],
+  "aliases": [
+    {
+      "name": "satellite",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

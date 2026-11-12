@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Carrot",
+  "tags": ["carrot", "vegetable", "food", "healthy"],
+  "categories": ["food"],
+  "useCases": ["Shows a vegetable", "Marks a healthy option"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

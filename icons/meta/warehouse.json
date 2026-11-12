@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Warehouse",
+  "tags": ["warehouse", "storage", "stock", "logistics"],
+  "categories": ["commerce", "maps"],
+  "useCases": ["Shows the stock", "Marks a storage site"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

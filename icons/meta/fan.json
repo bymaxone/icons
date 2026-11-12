@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Fan",
+  "tags": ["fan", "cooling", "air", "ventilation"],
+  "categories": ["household", "devices"],
+  "useCases": ["Turns on cooling", "Shows the fan speed"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}
