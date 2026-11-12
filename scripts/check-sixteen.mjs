@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * @fileoverview `pnpm check:sixteen`: renders the parts of every drawing at 16 px and fails
- * when two of them fuse and the icon is not on `scripts/sixteen-allowlist.json` with a
+ * when two of them fuse and that pair is not on `scripts/sixteen-allowlist.json` with a
  * justification. A thin entry over `src/pipeline/cli-sixteen.ts`.
  * @layer scripts
  *

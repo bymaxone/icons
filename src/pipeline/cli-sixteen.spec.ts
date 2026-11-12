@@ -25,6 +25,10 @@ const FUSED = '<path d="M4 8.25h16"/><path d="M4 9.75h16"/>'
 const CLEAN = '<path d="M4 6h16"/><path d="M4 18h16"/>'
 
 const allowlist = (icons: unknown): string => JSON.stringify({ icons })
+const entry = (pair: string, why = 'it reads'): { pairs: string[]; why: string } => ({
+  pairs: [pair],
+  why
+})
 
 /** A scratch repository with a fusing icon, a clean one and an allowlist. */
 function repository(list: string, prefix = 'icons'): string {
@@ -51,7 +55,7 @@ describe('runSixteen', () => {
 
   it('passes when every fusion is on the allowlist, and says how many', () => {
     /** Scenario: `fused` fuses and is listed with a reason; `clean` does not. */
-    root = repository(allowlist({ fused: 'it still reads' }))
+    root = repository(allowlist({ fused: entry('0-1', 'it still reads') }))
     const output = capture()
     expect(runSixteen([], root, output)).toBe(0)
     expect(output.errors).toStrictEqual([])
@@ -61,12 +65,12 @@ describe('runSixteen', () => {
   })
 
   it('fails on a fusion that is not listed, naming the icon and the parts', () => {
-    /** Scenario: the allowlist is empty. */
+    /** Scenario: the allowlist is empty; the pair is named by its element positions from 0. */
     root = repository(allowlist({}))
     const output = capture()
     expect(runSixteen([], root, output)).toBe(1)
     expect(output.errors).toStrictEqual([
-      'fused: elements 1 and 2 fuse at 16 px. Redraw it, or list it in scripts/sixteen-allowlist.json with a justification.',
+      'fused: pair 0-1 fuses at 16 px. Redraw it, or list the pair in scripts/sixteen-allowlist.json with a justification.',
       '1 16 px problem(s).'
     ])
     expect(output.logs).toStrictEqual([])
@@ -74,7 +78,7 @@ describe('runSixteen', () => {
 
   it('fails on an entry that no longer fuses', () => {
     /** Scenario: `clean` is listed. */
-    root = repository(allowlist({ fused: 'it reads', clean: 'it reads' }))
+    root = repository(allowlist({ fused: entry('0-1'), clean: entry('0-1') }))
     const output = capture()
     expect(runSixteen([], root, output)).toBe(1)
     expect(output.errors[0]).toBe(
@@ -84,7 +88,7 @@ describe('runSixteen', () => {
 
   it('fails on an entry whose icon is gone, and on one without a justification', () => {
     /** Scenario: `gone` names no icon and `fused` has an empty text. */
-    root = repository(allowlist({ fused: '', gone: 'it reads' }))
+    root = repository(allowlist({ fused: entry('0-1', ''), gone: entry('0-1') }))
     const output = capture()
     expect(runSixteen([], root, output)).toBe(1)
     expect(output.errors).toStrictEqual([
@@ -96,7 +100,7 @@ describe('runSixteen', () => {
 
   it('reads the icons directory given by --icons', () => {
     /** Scenario: the drawings live under `fixtures/icons`, not `icons`. */
-    root = repository(allowlist({ fused: 'it reads' }), 'fixtures/icons')
+    root = repository(allowlist({ fused: entry('0-1') }), 'fixtures/icons')
     const output = capture()
     expect(runSixteen(['--icons', 'fixtures/icons'], root, output)).toBe(0)
     expect(output.logs).toHaveLength(1)
@@ -110,6 +114,18 @@ describe('runSixteen', () => {
     expect(output.errors.at(-1)).toMatch(/icon lint issue\(s\)\.$/)
   })
 
+  it('fails on a new pair of a listed icon and on a listed pair that does not fuse', () => {
+    /** Scenario: `fused` is listed for 1-2, which does not fuse, so 0-1 is unlisted. */
+    root = repository(allowlist({ fused: entry('1-2') }))
+    const output = capture()
+    expect(runSixteen([], root, output)).toBe(1)
+    expect(output.errors).toStrictEqual([
+      'fused: pair 0-1 fuses at 16 px. Redraw it, or list the pair in scripts/sixteen-allowlist.json with a justification.',
+      'fused: pair 1-2 is on the allowlist but no longer fuses at 16 px. Remove it.',
+      '2 16 px problem(s).'
+    ])
+  })
+
   it.each([
     ['an array', '[]'],
     ['null', 'null'],
@@ -117,12 +133,19 @@ describe('runSixteen', () => {
     ['icons as an array', allowlist([])],
     ['icons as null', allowlist(null)],
     ['icons as a string', allowlist('fused')],
-    ['a justification that is not text', allowlist({ fused: 3 })]
+    ['an entry that is a string', allowlist({ fused: 'it reads' })],
+    ['an entry that is null', allowlist({ fused: null })],
+    ['an entry without pairs', allowlist({ fused: { why: 'it reads' } })],
+    ['pairs that are not a list', allowlist({ fused: { pairs: '0-1', why: 'x' } })],
+    ['a pair that is not text', allowlist({ fused: { pairs: [1], why: 'x' } })],
+    ['one pair in two that is not text', allowlist({ fused: { pairs: ['0-1', 1], why: 'x' } })],
+    ['a justification that is not text', allowlist({ fused: { pairs: ['0-1'], why: 3 } })],
+    ['an entry without a justification', allowlist({ fused: { pairs: ['0-1'] } })]
   ])('rejects an allowlist that is %s', (_label, text) => {
-    /** Scenario: the file does not have the shape `{ "icons": { "<name>": "<text>" } }`. */
+    /** Scenario: the file does not have the shape `{ "icons": { "<name>": { "pairs", "why" } } }`. */
     root = repository(text)
     expect(() => runSixteen([], root, capture())).toThrow(
-      `${ALLOWLIST_PATH}: expected { "icons": { "<name>": "<justification>" } }`
+      `${ALLOWLIST_PATH}: expected { "icons": { "<name>": { "pairs": ["<i-j>"], "why": "<justification>" } } }`
     )
   })
 })
