@@ -13,11 +13,11 @@ and deprecated, each rename with the alias that keeps the old name working.
 
 ### Changed
 
-- The categories follow one taxonomy, fixed before the set grows: 28 categories from
-  `arrows` to `health`, replacing the Studio's grouping. `credits-billing` joins `commerce`,
+- The categories follow one taxonomy, fixed before the set grows: 28 categories,
+  replacing the Studio's grouping. `credits-billing` joins `commerce`,
   `formats` joins `media`, and `places-devices` splits into `devices`, `maps` and
-  `connectivity`; `arrows`, `text`, `time`, `emotions`, `tools`, `nature`, `games`, `math` and
-  `transport` are new, and `data-charts`, `ai-agent`, `editor-canvas`, `people-roles`,
+  `connectivity`; `arrows`, `text`, `time`, `emotions`, `tools`, `nature`, `games`, `math`,
+  `transport` and `health` are new, and `data-charts`, `ai-agent`, `editor-canvas`, `people-roles`,
   `media-video` and `audio-voice` are renamed `data`, `ai`, `editing`, `people`, `media` and
   `audio`. An icon may belong to two categories.
 
