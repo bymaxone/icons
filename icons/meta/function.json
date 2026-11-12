@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Function",
+  "tags": ["function", "formula", "math", "fx"],
+  "categories": ["math", "dev"],
+  "useCases": ["Inserts a formula", "Opens a function"],
+  "aliases": [
+    {
+      "name": "formula",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

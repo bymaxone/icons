@@ -20,3 +20,6 @@ export const FilterIcon = /* @__PURE__ */ createIcon('filter', [
   ],
   ['path', { d: 'M12.25 15.75v4.5' }]
 ])
+
+/** `funnel`: an alias of {@link FilterIcon}. */
+export const FunnelIcon = FilterIcon

@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { DatabaseIcon } from './line'
+export { CylinderIcon, DatabaseIcon } from './line'

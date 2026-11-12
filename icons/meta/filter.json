@@ -4,6 +4,12 @@
   "tags": ["funnel", "narrow", "refine", "query"],
   "categories": ["actions"],
   "useCases": ["Opens the filters of a list", "Shows that a filter is applied"],
+  "aliases": [
+    {
+      "name": "funnel",
+      "deprecated": false
+    }
+  ],
   "variants": ["line", "sm"],
   "opticalSizes": [24, 16],
   "since": "0.1.0"

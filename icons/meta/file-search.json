@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Search files",
+  "tags": ["file", "search", "find", "lookup"],
+  "categories": ["files", "actions"],
+  "useCases": ["Searches inside documents", "Finds a file"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

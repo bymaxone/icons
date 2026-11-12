@@ -4,5 +4,5 @@
  * @layer Generated
  */
 
-export { LayersIcon } from './line'
-export { LayersFilledIcon } from './filled'
+export { LayersIcon, StackIcon } from './line'
+export { LayersFilledIcon, StackFilledIcon } from './filled'

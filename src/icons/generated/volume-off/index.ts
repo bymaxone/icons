@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { VolumeOffIcon } from './line'
+export { VolumeMuteIcon, VolumeOffIcon } from './line'

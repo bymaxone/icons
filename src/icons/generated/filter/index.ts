@@ -4,5 +4,5 @@
  * @layer Generated
  */
 
-export { FilterIcon } from './line'
-export { FilterSmIcon } from './sm'
+export { FilterIcon, FunnelIcon } from './line'
+export { FilterSmIcon, FunnelSmIcon } from './sm'

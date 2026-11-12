@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Contrast",
+  "tags": ["contrast", "theme", "tone", "brightness"],
+  "categories": ["editing", "system"],
+  "useCases": ["Adjusts the contrast", "Switches to high contrast"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

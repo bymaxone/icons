@@ -4,6 +4,12 @@
   "tags": ["size", "quality", "pixels", "scale"],
   "categories": ["media"],
   "useCases": ["Sets the output resolution", "Shows the quality of a render"],
+  "aliases": [
+    {
+      "name": "resize",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

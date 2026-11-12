@@ -8,6 +8,12 @@
     "Shows how many people share a project",
     "Filled: the team section while it is open"
   ],
+  "aliases": [
+    {
+      "name": "group",
+      "deprecated": false
+    }
+  ],
   "variants": ["line", "filled", "sm"],
   "opticalSizes": [24, 16],
   "since": "0.1.0"

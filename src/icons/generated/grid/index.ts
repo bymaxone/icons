@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { GridIcon } from './line'
+export { GridIcon, HashIcon } from './line'

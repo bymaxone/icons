@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { MusicIcon } from './line'
+export { MusicIcon, MusicNoteIcon } from './line'

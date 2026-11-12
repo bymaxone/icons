@@ -20,3 +20,6 @@ export const ResolutionIcon = /* @__PURE__ */ createIcon('resolution', [
   ],
   ['path', { d: 'm8.25 15.75 8-7m-3 0h3v3m-8 1v3h3' }]
 ])
+
+/** `resize`: an alias of {@link ResolutionIcon}. */
+export const ResizeIcon = ResolutionIcon

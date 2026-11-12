@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Top border",
+  "tags": ["border", "top", "table", "cell"],
+  "categories": ["editing", "text"],
+  "useCases": ["Adds a top border", "Formats a cell edge"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -24,3 +24,6 @@ export const LayersFilledIcon = /* @__PURE__ */ createIcon(
   ],
   { paint: 'fill' }
 )
+
+/** `stack`: an alias of {@link LayersFilledIcon}. */
+export const StackFilledIcon = LayersFilledIcon

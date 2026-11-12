@@ -20,3 +20,6 @@ export const BranchIcon = /* @__PURE__ */ createIcon('branch', [
 
 /** `git-branch`: an alias of {@link BranchIcon}. */
 export const GitBranchIcon = BranchIcon
+
+/** `git-fork`: an alias of {@link BranchIcon}. */
+export const GitForkIcon = BranchIcon

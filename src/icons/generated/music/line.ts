@@ -16,3 +16,6 @@ export const MusicIcon = /* @__PURE__ */ createIcon('music', [
   ['circle', { cx: 6.25, cy: 17.25, r: 3 }],
   ['circle', { cx: 17.25, cy: 15.25, r: 3 }]
 ])
+
+/** `music-note`: an alias of {@link MusicIcon}. */
+export const MusicNoteIcon = MusicIcon

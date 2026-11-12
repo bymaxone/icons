@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Add protection",
+  "tags": ["shield", "plus", "protection", "insurance"],
+  "categories": ["security"],
+  "useCases": ["Adds a protection plan", "Turns on a safeguard"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

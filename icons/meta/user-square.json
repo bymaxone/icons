@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Contact",
+  "tags": ["user", "contact", "card", "profile"],
+  "categories": ["people"],
+  "useCases": ["Shows a contact", "Opens a profile card"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

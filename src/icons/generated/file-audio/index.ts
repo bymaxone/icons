@@ -4,5 +4,5 @@
  * @layer Generated
  */
 
-export { FileAudioIcon } from './line'
-export { FileAudioSmIcon } from './sm'
+export { FileAudioIcon, FileMusicIcon } from './line'
+export { FileAudioSmIcon, FileMusicSmIcon } from './sm'

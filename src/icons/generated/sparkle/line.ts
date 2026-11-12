@@ -25,3 +25,6 @@ export const SparkleIcon = /* @__PURE__ */ createIcon('sparkle', [
     }
   ]
 ])
+
+/** `stars`: an alias of {@link SparkleIcon}. */
+export const StarsIcon = SparkleIcon

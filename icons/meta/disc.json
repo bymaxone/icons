@@ -8,6 +8,10 @@
     {
       "name": "cd",
       "deprecated": false
+    },
+    {
+      "name": "album",
+      "deprecated": false
     }
   ],
   "variants": ["line"],

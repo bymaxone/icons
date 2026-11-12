@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Radar",
+  "tags": ["radar", "scan", "detect", "nearby"],
+  "categories": ["maps", "science"],
+  "useCases": ["Scans for nearby devices", "Shows detection"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Checklist done",
+  "tags": ["clipboard", "check", "task done", "checklist"],
+  "categories": ["actions", "status"],
+  "useCases": ["Completes a checklist", "Marks a task as done"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

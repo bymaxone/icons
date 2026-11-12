@@ -17,3 +17,6 @@ export const GridIcon = /* @__PURE__ */ createIcon('grid', [
   ['path', { d: 'M3.25 8.25h10m6 0h2' }],
   ['path', { d: 'M3.25 16.25h2m6 0h10' }]
 ])
+
+/** `hash`: an alias of {@link GridIcon}. */
+export const HashIcon = GridIcon

@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Equal",
+  "tags": ["equal", "equals", "math", "same"],
+  "categories": ["math"],
+  "useCases": ["Inserts an equals sign", "Compares two values"],
+  "aliases": [
+    {
+      "name": "equals",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

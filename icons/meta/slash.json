@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Slash",
+  "tags": ["slash", "divide", "command", "path"],
+  "categories": ["math", "text"],
+  "useCases": ["Opens slash commands", "Separates a path"],
+  "aliases": [
+    {
+      "name": "line",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

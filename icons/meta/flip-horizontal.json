@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Flip horizontally",
+  "tags": ["flip", "mirror", "horizontal", "reflect"],
+  "categories": ["editing"],
+  "useCases": ["Mirrors the image left to right", "Flips a layer"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

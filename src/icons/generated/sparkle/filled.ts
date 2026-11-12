@@ -24,3 +24,6 @@ export const SparkleFilledIcon = /* @__PURE__ */ createIcon(
   ],
   { paint: 'fill' }
 )
+
+/** `stars`: an alias of {@link SparkleFilledIcon}. */
+export const StarsFilledIcon = SparkleFilledIcon

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Variable",
+  "tags": ["variable", "value", "placeholder", "x"],
+  "categories": ["math", "dev"],
+  "useCases": ["Inserts a variable", "Opens the variables"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

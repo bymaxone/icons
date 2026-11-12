@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Router",
+  "tags": ["router", "wifi", "modem", "internet"],
+  "categories": ["devices", "connectivity"],
+  "useCases": ["Shows the router status", "Sets up the internet connection"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -4,6 +4,12 @@
   "tags": ["landscape", "widescreen", "ratio", "horizontal"],
   "categories": ["media"],
   "useCases": ["Sets a landscape video format", "Labels a widescreen export"],
+  "aliases": [
+    {
+      "name": "aspect-ratio",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

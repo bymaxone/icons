@@ -8,6 +8,12 @@
     "Selects the audio input",
     "Filled: the microphone while it records"
   ],
+  "aliases": [
+    {
+      "name": "microphone",
+      "deprecated": false
+    }
+  ],
   "variants": ["line", "filled"],
   "opticalSizes": [24],
   "since": "0.1.0"

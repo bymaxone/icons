@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { ResolutionIcon } from './line'
+export { ResizeIcon, ResolutionIcon } from './line'

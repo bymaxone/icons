@@ -4,5 +4,5 @@
  * @layer Generated
  */
 
-export { MicIcon } from './line'
-export { MicFilledIcon } from './filled'
+export { MicIcon, MicrophoneIcon } from './line'
+export { MicFilledIcon, MicrophoneFilledIcon } from './filled'

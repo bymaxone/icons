@@ -8,6 +8,12 @@
     "Labels generated content",
     "Filled: an AI feature that is turned on"
   ],
+  "aliases": [
+    {
+      "name": "stars",
+      "deprecated": false
+    }
+  ],
   "variants": ["line", "filled"],
   "opticalSizes": [24],
   "since": "0.1.0"

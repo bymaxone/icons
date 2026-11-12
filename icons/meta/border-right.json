@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Right border",
+  "tags": ["border", "right", "table", "cell"],
+  "categories": ["editing", "text"],
+  "useCases": ["Adds a right border", "Formats a cell edge"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

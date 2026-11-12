@@ -20,3 +20,6 @@ export const DatabaseIcon = /* @__PURE__ */ createIcon('database', [
   ],
   ['path', { d: 'M5.75 12.25c0 1.375 2.875 2.5 6.5 2.5s6.5-1.125 6.5-2.5' }]
 ])
+
+/** `cylinder`: an alias of {@link DatabaseIcon}. */
+export const CylinderIcon = DatabaseIcon

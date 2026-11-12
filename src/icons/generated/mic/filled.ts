@@ -24,3 +24,6 @@ export const MicFilledIcon = /* @__PURE__ */ createIcon(
   ],
   { paint: 'fill' }
 )
+
+/** `microphone`: an alias of {@link MicFilledIcon}. */
+export const MicrophoneFilledIcon = MicFilledIcon

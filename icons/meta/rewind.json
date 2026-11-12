@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Rewind",
+  "tags": ["rewind", "back", "media", "replay"],
+  "categories": ["media"],
+  "useCases": ["Rewinds the playback", "Goes back a few seconds"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

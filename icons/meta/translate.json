@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Translate",
+  "tags": ["translate", "language", "localize", "i18n"],
+  "categories": ["text", "communication"],
+  "useCases": ["Translates the text", "Changes the language"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

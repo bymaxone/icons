@@ -21,3 +21,6 @@ export const GlobeIcon = /* @__PURE__ */ createIcon('globe', [
   ],
   ['path', { d: 'M5.275 11.32c1.86 1.628 4.418 2.325 6.975 2.325s5.115-.698 6.975-2.325' }]
 ])
+
+/** `language`: an alias of {@link GlobeIcon}. */
+export const LanguageIcon = GlobeIcon

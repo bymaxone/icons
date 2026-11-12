@@ -4,6 +4,12 @@
   "tags": ["note", "soundtrack", "song", "audio"],
   "categories": ["audio"],
   "useCases": ["Adds a music track", "Labels the soundtrack of a project"],
+  "aliases": [
+    {
+      "name": "music-note",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

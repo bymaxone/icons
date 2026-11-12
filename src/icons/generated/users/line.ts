@@ -22,3 +22,6 @@ export const UsersIcon = /* @__PURE__ */ createIcon('users', [
   ['circle', { cx: 17.25, cy: 6.5, r: 2.75 }],
   ['path', { d: 'M15.5 12.25H17c1.219 0 1.583.269 1.941 1.434L20.5 18.75' }]
 ])
+
+/** `group`: an alias of {@link UsersIcon}. */
+export const GroupIcon = UsersIcon
