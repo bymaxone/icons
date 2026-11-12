@@ -31,15 +31,15 @@ const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 // What the budgets rest on, measured on a build that holds no drawing:
 //   - root, 5 KiB brotli: the entry re-exports the grid, the runtime and every icon by
 //     package specifier and holds no code of its own, measured at 85 bytes brotli with no
-//     icon and at 4232 bytes with 415 icons, about 10 bytes per icon. Each
+//     icon and at 4460 bytes with 444 icons, about 10 bytes per icon. Each
 //     icon adds one re-export line, so every drawing batch recalibrates the budget.
 //   - runtime, 1.25 KiB brotli: the `Icon` base, `createIcon`, the stroke maths and the
 //     accessibility rules, measured at 3228 bytes raw and 1114 bytes brotli. The headroom
 //     fits a small fix, while an inlined dependency such as React fails.
-//   - meta, 22 KiB brotli: the grid, the deep freeze and the categories, measured at
-//     497 bytes brotli with no record and at 19917 bytes with 415 icon and 14 brand records,
+//   - meta, 24 KiB brotli: the grid, the deep freeze and the categories, measured at
+//     497 bytes brotli with no record and at 21077 bytes with 444 icon and 14 brand records,
 //     about 45 bytes brotli per record, the icon's `label` included. The headroom fits about
-//     fifty records or a tag edit; every drawing batch adds records, so each one
+//     seventy-five records or a tag edit; every drawing batch adds records, so each one
 //     recalibrates it.
 //   - brands, 5 KiB brotli: the entry holds every brand mark, measured at 5 bytes brotli
 //     with no mark and at 4015 bytes with 14 marks, about 290 bytes per mark, most of it the
@@ -62,7 +62,7 @@ const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 const BUDGETS = [
   { name: 'root (re-exports)', path: 'dist/index.mjs', brotli: 5 * 1024 },
   { name: 'runtime (Icon base)', path: 'dist/runtime/index.mjs', brotli: 1.25 * 1024 },
-  { name: 'meta (typed metadata)', path: 'dist/meta/index.mjs', brotli: 22 * 1024 },
+  { name: 'meta (typed metadata)', path: 'dist/meta/index.mjs', brotli: 24 * 1024 },
   { name: 'brands (brand marks)', path: 'dist/brands/index.mjs', brotli: 5 * 1024 }
 ]
 const MODULE_BUDGET = 1.5 * 1024
