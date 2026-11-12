@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Wi-Fi",
   "tags": ["wifi", "wireless", "network", "connection"],
-  "categories": ["places-devices"],
+  "categories": ["connectivity"],
   "useCases": ["Shows the network status", "Opens the connection settings"],
   "aliases": [
     {

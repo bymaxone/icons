@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Keyframe",
   "tags": ["diamond", "animation", "key", "point"],
-  "categories": ["media-video"],
+  "categories": ["media"],
   "useCases": ["Adds a keyframe at the playhead", "Marks an animated property"],
   "variants": ["line"],
   "opticalSizes": [24],

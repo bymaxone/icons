@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Gift",
   "tags": ["present", "reward", "bonus", "promo"],
-  "categories": ["credits-billing"],
+  "categories": ["commerce", "games"],
   "useCases": ["Shows bonus credits", "Redeems a promo code"],
   "variants": ["line"],
   "opticalSizes": [24],

@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Skip back",
   "tags": ["previous", "rewind", "media control", "start"],
-  "categories": ["media-video"],
+  "categories": ["media"],
   "useCases": ["Jumps to the previous clip", "Returns to the start of the timeline"],
   "variants": ["line"],
   "opticalSizes": [24],

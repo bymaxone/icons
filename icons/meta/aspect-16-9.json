@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Landscape, 16:9",
   "tags": ["landscape", "widescreen", "ratio", "horizontal"],
-  "categories": ["formats"],
+  "categories": ["media"],
   "useCases": ["Sets a landscape video format", "Labels a widescreen export"],
   "variants": ["line"],
   "opticalSizes": [24],

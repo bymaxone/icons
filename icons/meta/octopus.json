@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Agent",
   "tags": ["octopus", "mascot", "agent avatar"],
-  "categories": ["ai-agent"],
+  "categories": ["ai"],
   "useCases": [
     "Shows the avatar of an AI agent",
     "Marks a message from the agent",

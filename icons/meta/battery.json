@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Battery",
   "tags": ["battery", "power", "charge", "energy"],
-  "categories": ["places-devices"],
+  "categories": ["devices"],
   "useCases": ["Shows the battery level", "Opens the power settings"],
   "variants": ["line"],
   "opticalSizes": [24],

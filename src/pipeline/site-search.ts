@@ -298,9 +298,13 @@ const listOf = (value: string | null): string[] => (value ?? '').split(',').filt
 /** The types an address from before the Type control named as `?variant=`. */
 const LEGACY_VARIANTS = ['filled', 'sm']
 
+/** The types the Type control can pick, one at a time. */
+const KNOWN_TYPES = ['line', 'filled', 'sm', 'brand']
+
 /**
- * Reads the search state from an address's query string. An older address that names a
- * `variant` and no `type` is read as that type, so a shared link keeps showing what it did.
+ * Reads the search state from an address's query string. Of the types, the first known one
+ * is kept, as the Type control picks one. An older address that names a `variant` and no
+ * `type` is read as that type, so a shared link keeps showing what it did.
  *
  * @param query - The query string, such as `?q=home&type=filled`.
  * @returns The query, the types and the categories, empty when absent.
@@ -308,10 +312,13 @@ const LEGACY_VARIANTS = ['filled', 'sm']
 export function readState(query: string): SearchState {
   const params = new URLSearchParams(query)
   const legacy = LEGACY_VARIANTS.find((variant) => variant === params.get('variant'))
-  const types = listOf(params.get('type'))
+  // The Type control picks one type, so an address keeps its first known one; a named type,
+  // even an unknown one, keeps the older variant from being read.
+  const named = listOf(params.get('type'))
+  const types = named.filter((type) => KNOWN_TYPES.includes(type)).slice(0, 1)
   return {
     q: params.get('q') ?? '',
-    types: types.length === 0 && legacy !== undefined ? [legacy] : types,
+    types: named.length === 0 && legacy !== undefined ? [legacy] : types,
     categories: listOf(params.get('cat'))
   }
 }
@@ -381,17 +388,26 @@ function textsOf(
  *
  * @param catalog - The catalog.
  * @param terms - Brazilian Portuguese terms by entry name.
+ * @param categoryTitles - Brazilian Portuguese titles by category name, searched with the
+ *   English ones.
  * @returns One document per entry, in the catalog's order.
  * @throws Error naming every entry that has no Portuguese term.
  */
 export function searchIndex(
   catalog: Catalog,
-  terms: Readonly<Record<string, readonly string[]>>
+  terms: Readonly<Record<string, readonly string[]>>,
+  categoryTitles: Readonly<Record<string, string>> = {}
 ): SearchDoc[] {
   const listed = catalog.entries.map((entry) => ({ entry, pt: terms[entry.name] ?? [] }))
   const missing = listed.filter(({ pt }) => pt.length === 0).map(({ entry }) => entry.name)
   if (missing.length > 0) throw new Error(`No Portuguese search term for: ${missing.join(', ')}`)
-  const titles = new Map(catalog.categories.map((category) => [category.name, category.title]))
+  // A category reads as its slug, its English title and its Portuguese title.
+  const titles = new Map(
+    catalog.categories.map((category) => [
+      category.name,
+      `${category.title} ${categoryTitles[category.name] ?? ''}`
+    ])
+  )
   return listed.map(({ entry, pt }) => ({
     name: entry.name,
     types: entry.drawings.map(({ variant }) => variant),

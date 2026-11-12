@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Location",
   "tags": ["location", "pin", "place", "address"],
-  "categories": ["places-devices"],
+  "categories": ["maps"],
   "useCases": ["Shows a location", "Picks an address"],
   "aliases": [
     {

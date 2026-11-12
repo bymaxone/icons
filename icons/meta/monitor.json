@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Monitor",
   "tags": ["screen", "display", "desktop", "system theme"],
-  "categories": ["system"],
+  "categories": ["devices"],
   "useCases": ["Follows the system theme", "Labels a desktop preview"],
   "variants": ["line"],
   "opticalSizes": [24],

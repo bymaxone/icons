@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Back",
   "tags": ["back", "previous", "left", "return"],
-  "categories": ["navigation"],
+  "categories": ["arrows"],
   "useCases": ["Goes back to the previous screen", "Moves to the previous step of a flow"],
   "variants": ["line"],
   "opticalSizes": [24],

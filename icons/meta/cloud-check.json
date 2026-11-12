@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Saved",
   "tags": ["saved", "synced", "backup", "cloud"],
-  "categories": ["status"],
+  "categories": ["connectivity", "status"],
   "useCases": [
     "Shows that changes are saved",
     "Marks a project as synced",

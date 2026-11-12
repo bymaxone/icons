@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Map",
   "tags": ["map", "directions", "area", "route"],
-  "categories": ["places-devices"],
+  "categories": ["maps"],
   "useCases": ["Opens the map", "Shows a region"],
   "variants": ["line"],
   "opticalSizes": [24],

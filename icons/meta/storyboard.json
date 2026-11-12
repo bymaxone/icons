@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Storyboard",
   "tags": ["panels", "frames", "sequence", "plan"],
-  "categories": ["ai-agent"],
+  "categories": ["ai"],
   "useCases": ["Opens the storyboard", "Generates a storyboard from a script"],
   "variants": ["line"],
   "opticalSizes": [24],

@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Vertical, 9:16",
   "tags": ["portrait", "vertical", "ratio", "stories"],
-  "categories": ["formats"],
+  "categories": ["media"],
   "useCases": ["Sets a vertical video format", "Labels a format for short videos"],
   "variants": ["line"],
   "opticalSizes": [24],

@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Remove from team",
   "tags": ["user", "remove", "minus", "member"],
-  "categories": ["people-roles"],
+  "categories": ["people"],
   "useCases": ["Removes a member from a team", "Takes a person off a project"],
   "variants": ["line"],
   "opticalSizes": [24],

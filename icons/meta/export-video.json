@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Export video",
   "tags": ["export", "share video", "download video", "publish"],
-  "categories": ["media-video"],
+  "categories": ["media"],
   "useCases": ["Exports the final video", "Sends a render out of the app"],
   "variants": ["line"],
   "opticalSizes": [24],

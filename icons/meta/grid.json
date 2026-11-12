@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Grid view",
   "tags": ["lattice", "guides", "hash", "layout grid"],
-  "categories": ["editor-canvas"],
+  "categories": ["editing"],
   "useCases": ["Shows the canvas grid", "Snaps layers to the grid"],
   "variants": ["line"],
   "opticalSizes": [24],

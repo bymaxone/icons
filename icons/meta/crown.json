@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Premium",
   "tags": ["owner", "premium", "admin", "king"],
-  "categories": ["people-roles"],
+  "categories": ["people"],
   "useCases": [
     "Marks the owner of a workspace",
     "Labels a premium feature",

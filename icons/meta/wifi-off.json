@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Offline",
   "tags": ["wifi", "offline", "disconnected", "network"],
-  "categories": ["places-devices"],
+  "categories": ["connectivity"],
   "useCases": ["Marks the app as offline", "Shows a lost connection"],
   "aliases": [
     {

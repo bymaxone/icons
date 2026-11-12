@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Underline",
   "tags": ["underline", "text", "format", "emphasis"],
-  "categories": ["editor-canvas"],
+  "categories": ["text"],
   "useCases": ["Underlines the selected text", "Shows the underline style of a text"],
   "variants": ["line"],
   "opticalSizes": [24],

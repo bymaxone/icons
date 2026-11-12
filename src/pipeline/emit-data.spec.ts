@@ -120,8 +120,8 @@ describe('metadataRecords', () => {
         }
       })
     )
-    expect(records.categories[0]).toStrictEqual({ name: 'navigation', title: 'Navigation' })
-    expect(records.categories).toHaveLength(18)
+    expect(records.categories[0]).toStrictEqual({ name: 'arrows', title: 'Arrows' })
+    expect(records.categories).toHaveLength(28)
   })
 })
 

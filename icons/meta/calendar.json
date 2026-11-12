@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Calendar",
   "tags": ["calendar", "date", "schedule", "events"],
-  "categories": ["status"],
+  "categories": ["time"],
   "useCases": ["Opens the calendar", "Picks a date"],
   "variants": ["line"],
   "opticalSizes": [24],

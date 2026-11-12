@@ -93,7 +93,11 @@ writeFileSync(
 // The search index, with the Portuguese terms the site keeps beside the package (spec §9):
 // the build fails when an entry has none.
 const terms = JSON.parse(readFileSync(join(root, 'site', 'terms-pt.json'), 'utf8'))
-writeFileSync(join(out, 'assets', 'search.json'), JSON.stringify(searchIndex(catalog, terms)))
+const categoryTitles = JSON.parse(readFileSync(join(root, 'site', 'categories-pt.json'), 'utf8'))
+writeFileSync(
+  join(out, 'assets', 'search.json'),
+  JSON.stringify(searchIndex(catalog, terms, categoryTitles))
+)
 writeFileSync(
   join(out, 'assets', 'favicon.svg'),
   readFileSync(join(root, 'dist', 'svg', 'filled', 'lightning.svg'), 'utf8')

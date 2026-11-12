@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Microphone off",
   "tags": ["mute microphone", "muted", "audio input off", "silence"],
-  "categories": ["audio-voice"],
+  "categories": ["audio"],
   "useCases": ["Mutes the microphone", "Shows that recording is off"],
   "variants": ["line"],
   "opticalSizes": [24],

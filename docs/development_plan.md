@@ -49,6 +49,9 @@
 | P4.1 | catalog-categories-search         | 🔄     | 80%      | M    | 2026-11-12   |
 | R1   | aesthetic-redraw                  | ✅     | 100%     | M    | 2026-11-11   |
 | B5   | general-icons                     | ✅     | 100%     | L    | 2026-11-11   |
+| B6   | icon-expansion                    | 🔄     | 2%       | XL   | 2026-11-12   |
+| B7   | brand-marks                       | 📋     | 0%       | L    | 2026-11-12   |
+| B8   | country-flags                     | 📋     | 0%       | L    | 2026-11-12   |
 | P5   | hardening-release                 | 🔄     | 25%      | M    | 2026-11-11   |
 | P6   | react-native                      | 📋     | 0%       | M    | 2026-11-08   |
 
@@ -407,6 +410,29 @@ These rules apply to every phase. Phase sections only add rules specific to them
 - **B5c ✅ (2026-11-11):** 24 icons, approved by the delegated auditor on behalf of the founder.
 - **B5d ✅ (2026-11-11):** 35 icons and four filled drawings, approved by the delegated auditor on behalf of the founder. `phone-off` became `phone-hang-up`: the middle of the handset is its grip, so a bar across it hid the phone; the hang-up handset alone reads as "end call", and `phone-off` is its alias.
 - **B5e ✅ (2026-11-11):** 10 icons, approved by the delegated auditor on behalf of the founder. `branch` and `pull-request` set the node language of the git family: rings apart from their lines by the cut.
+- **Size:** L
+
+### B6: icon-expansion
+
+- **Goal:** A reference set of 1,500 icons and more, on the level of the largest open sets, before 1.0.
+- **Why:** a founder decision of 2026-11-11: the set, the brand marks and the country flags all reach their size before the first publish.
+- **Inventory:** the concepts that at least three of fourteen open sets name and this set lacks, by name only: their drawings are never opened (spec section 3). The concepts are grouped into tiers by how many sets name them: A (eight or more), B (six or seven), C (five), D (four) and E (three). A category fill follows, until each category has real coverage.
+- **Taxonomy (2026-11-12):** one taxonomy of 32 categories, fixed before the waves, with English and Portuguese titles; a category joins `categories.json` with its first icon.
+- **Variants:** a `-circle` or `-square` form only where its meaning differs and the reference sets widely draw it; filled drawings only for a state; 16 px masters only on a measured failure.
+- **Waves:** sub-batches of 25 to 40 icons by family, each with the audit package of B5 and the same bar.
+- **Definition of Done:** 1,500 icons or more, merged, every sub-batch approved by the auditor.
+- **Size:** XL
+
+### B7: brand-marks
+
+- **Goal:** From 14 brand marks to about 200, through the pipeline of B4a: the owners' geometry from Simple Icons, a TRADEMARKS line per brand, the provenance test.
+- **Selection:** by real use: social networks, messaging, developer and cloud tools, payments, AI providers, design tools, operating systems and browsers, stores and streaming. A brand with no source or a restrictive policy is left out, with the reason recorded.
+- **Size:** L
+
+### B8: country-flags
+
+- **Goal:** A `./flags` subpath with the country flags in 3:2 and in colour, from `country-flag-icons` (MIT), with its attribution and a provenance note per flag.
+- **Rules:** flags are official geometry, like brand marks; they have a lint profile of their own (several solid fills; no gradient, transform, mask, filter, `use` or `id`). The API and names are decided with the auditor before the first flag.
 - **Size:** L
 
 ### P5: hardening-release

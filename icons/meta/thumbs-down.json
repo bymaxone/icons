@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Dislike",
   "tags": ["dislike", "reject", "downvote", "thumbs down"],
-  "categories": ["communication"],
+  "categories": ["emotions", "communication"],
   "useCases": ["Dislikes an item", "Reports a poor result"],
   "aliases": [
     {

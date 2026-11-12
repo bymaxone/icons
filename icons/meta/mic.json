@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Microphone",
   "tags": ["microphone", "record", "audio input", "voice"],
-  "categories": ["audio-voice"],
+  "categories": ["audio"],
   "useCases": [
     "Starts a voice recording",
     "Selects the audio input",

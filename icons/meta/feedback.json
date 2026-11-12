@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Feedback",
   "tags": ["review", "rating", "comment", "suggestion"],
-  "categories": ["system"],
+  "categories": ["communication"],
   "useCases": ["Sends feedback", "Rates a result"],
   "variants": ["line"],
   "opticalSizes": [24],

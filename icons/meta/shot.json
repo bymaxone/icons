@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Shot",
   "tags": ["framing", "viewfinder", "subject", "take"],
-  "categories": ["media-video"],
+  "categories": ["media"],
   "useCases": ["Marks a single shot of a scene", "Opens the framing of a shot"],
   "variants": ["line"],
   "opticalSizes": [24],

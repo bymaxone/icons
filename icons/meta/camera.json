@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Camera",
   "tags": ["photo", "capture", "snapshot", "picture"],
-  "categories": ["media-video"],
+  "categories": ["media"],
   "useCases": [
     "Takes a snapshot of a frame",
     "Opens the camera to capture a reference",

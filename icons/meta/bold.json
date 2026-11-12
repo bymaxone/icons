@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Bold",
   "tags": ["bold", "text", "format", "strong"],
-  "categories": ["editor-canvas"],
+  "categories": ["text"],
   "useCases": ["Makes the selected text bold", "Shows the bold style of a text"],
   "variants": ["line"],
   "opticalSizes": [24],

@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Activity",
   "tags": ["activity", "pulse", "monitoring", "health"],
-  "categories": ["data-charts"],
+  "categories": ["data", "health"],
   "useCases": ["Opens the activity of a service", "Shows the health of a system"],
   "variants": ["line"],
   "opticalSizes": [24],

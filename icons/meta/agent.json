@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Agent",
   "tags": ["assistant", "bot", "automation", "ai agent"],
-  "categories": ["ai-agent"],
+  "categories": ["ai"],
   "useCases": ["Opens the agent panel", "Marks a task run by the agent"],
   "variants": ["line"],
   "opticalSizes": [24],

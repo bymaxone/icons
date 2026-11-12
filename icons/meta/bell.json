@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Notifications",
   "tags": ["notifications", "alerts", "alarm", "ring"],
-  "categories": ["system"],
+  "categories": ["status", "communication"],
   "useCases": ["Opens the notifications", "Shows unread alerts", "Filled: unread notifications"],
   "variants": ["line", "filled", "sm"],
   "opticalSizes": [24, 16],

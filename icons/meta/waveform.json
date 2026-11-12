@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Waveform",
   "tags": ["audio", "sound wave", "levels", "signal"],
-  "categories": ["audio-voice"],
+  "categories": ["audio"],
   "useCases": ["Shows an audio track", "Labels a sound clip"],
   "variants": ["line"],
   "opticalSizes": [24],

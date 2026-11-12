@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Text",
   "tags": ["type", "letter t", "font", "title"],
-  "categories": ["editor-canvas"],
+  "categories": ["text"],
   "useCases": ["Adds a text layer", "Selects the text tool"],
   "variants": ["line"],
   "opticalSizes": [24],

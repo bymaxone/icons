@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Storage",
   "tags": ["hard drive", "disk", "storage", "drive"],
-  "categories": ["system"],
+  "categories": ["devices"],
   "useCases": ["Shows the storage in use", "Opens the disk settings"],
   "variants": ["line"],
   "opticalSizes": [24],

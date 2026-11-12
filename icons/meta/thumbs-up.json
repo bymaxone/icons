@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Like",
   "tags": ["like", "approve", "upvote", "thumbs up"],
-  "categories": ["communication"],
+  "categories": ["emotions", "communication"],
   "useCases": ["Likes an item", "Approves a result"],
   "aliases": [
     {

@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Processor",
   "tags": ["cpu", "chip", "processor", "compute"],
-  "categories": ["system"],
+  "categories": ["devices"],
   "useCases": ["Shows the compute in use", "Opens the hardware settings"],
   "variants": ["line"],
   "opticalSizes": [24],

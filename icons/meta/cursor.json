@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Select",
   "tags": ["pointer", "select", "arrow", "mouse"],
-  "categories": ["editor-canvas"],
+  "categories": ["editing"],
   "useCases": ["Selects the selection tool", "Marks a click target"],
   "variants": ["line"],
   "opticalSizes": [24],

@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Dark theme",
   "tags": ["dark mode", "night", "theme", "crescent"],
-  "categories": ["system"],
+  "categories": ["system", "nature"],
   "useCases": [
     "Switches to the dark theme",
     "Shows the dark mode option",

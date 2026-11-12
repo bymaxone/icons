@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Palette",
   "tags": ["colours", "paint", "theme", "swatches"],
-  "categories": ["editor-canvas"],
+  "categories": ["editing"],
   "useCases": ["Opens the colour picker", "Changes the accent colour"],
   "variants": ["line"],
   "opticalSizes": [24],

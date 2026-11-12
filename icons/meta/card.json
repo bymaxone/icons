@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Card",
   "tags": ["credit card", "payment", "debit", "billing"],
-  "categories": ["credits-billing"],
+  "categories": ["commerce"],
   "useCases": [
     "Adds a payment method",
     "Shows the saved card",

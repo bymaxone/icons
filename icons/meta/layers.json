@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Layers",
   "tags": ["stack", "levels", "arrange", "sheets"],
-  "categories": ["editor-canvas"],
+  "categories": ["editing"],
   "useCases": [
     "Opens the layers panel",
     "Arranges the order of layers",

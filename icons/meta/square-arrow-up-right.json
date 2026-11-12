@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Open in a new window",
   "tags": ["external link", "open", "new window", "outside"],
-  "categories": ["actions", "navigation"],
+  "categories": ["actions", "arrows"],
   "useCases": ["Opens a page outside the product", "Marks a link that leaves the app"],
   "aliases": [
     {

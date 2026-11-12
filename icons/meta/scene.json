@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Scene",
   "tags": ["clapperboard", "take", "episode", "film"],
-  "categories": ["media-video"],
+  "categories": ["media"],
   "useCases": [
     "Represents a scene of an episode",
     "Opens the scene editor",

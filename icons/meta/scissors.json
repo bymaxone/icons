@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Scissors",
   "tags": ["cut", "trim", "clip", "shears"],
-  "categories": ["media-video"],
+  "categories": ["media", "tools"],
   "useCases": ["Trims a clip", "Cuts a selection"],
   "variants": ["line"],
   "opticalSizes": [24],

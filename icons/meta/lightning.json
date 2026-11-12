@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Credits",
   "tags": ["bolt", "credit", "energy", "power"],
-  "categories": ["credits-billing"],
+  "categories": ["commerce", "nature"],
   "useCases": [
     "Shows a credit balance",
     "Marks an action that spends credits",

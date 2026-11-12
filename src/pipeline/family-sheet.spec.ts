@@ -49,7 +49,11 @@ describe('familyGroups', () => {
      * not place the icon again; categories with no drawing do not appear; brands are last.
      */
     const groups = familyGroups(set, new Set())
-    expect(groups.map((group) => group.title)).toStrictEqual(['Navigation', 'System', 'Brands'])
+    expect(groups.map((group) => group.title)).toStrictEqual([
+      'Navigation and layout',
+      'System and settings',
+      'Brands'
+    ])
     expect(groups.map((group) => group.members.map((member) => member.label))).toStrictEqual([
       ['arrow'],
       ['gear', 'ring', 'ring (filled)'],

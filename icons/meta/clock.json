@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Clock",
   "tags": ["time", "duration", "schedule", "pending"],
-  "categories": ["status"],
+  "categories": ["time", "status"],
   "useCases": [
     "Shows a time or a duration",
     "Marks an item that is scheduled",

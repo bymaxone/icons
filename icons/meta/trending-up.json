@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Trending up",
   "tags": ["trend", "up", "growth", "increase"],
-  "categories": ["data-charts"],
+  "categories": ["data"],
   "useCases": ["Marks a metric that grows", "Shows a rising value"],
   "variants": ["line"],
   "opticalSizes": [24],

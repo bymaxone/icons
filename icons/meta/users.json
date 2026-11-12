@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Team",
   "tags": ["team", "people", "members", "group"],
-  "categories": ["people-roles"],
+  "categories": ["people"],
   "useCases": [
     "Links to the team members",
     "Shows how many people share a project",

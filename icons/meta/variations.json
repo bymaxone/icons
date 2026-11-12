@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Variations",
   "tags": ["options", "alternatives", "shapes", "versions"],
-  "categories": ["ai-agent"],
+  "categories": ["ai"],
   "useCases": ["Shows the variations of a result", "Generates alternatives"],
   "variants": ["line"],
   "opticalSizes": [24],
