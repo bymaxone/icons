@@ -10,7 +10,7 @@
  */
 
 import { CIRCLE, drawing } from './__tests__/support.ts'
-import { lintSvg } from './lint-svg.ts'
+import { lintSvg, PARTIAL_FILLS } from './lint-svg.ts'
 import type { SvgKind } from './svg-kind.ts'
 
 const PATH = 'icons/line/a.svg'
@@ -286,7 +286,7 @@ describe('lintSvg: svg-attribute', () => {
 
 describe('lintSvg: svg-fill', () => {
   const STROKED =
-    'carries fill: a stroked drawing fills only the spark dot (a circle with r="1" and fill="currentColor")'
+    'carries fill: a stroked drawing fills only the spark dot (a circle with r="1" and fill="currentColor") and the partial state of an icon in PARTIAL_FILLS'
 
   it.each(['line', 'sm'] as const)('reports every fill control on a %s drawing', (kind) => {
     /**
@@ -333,6 +333,38 @@ describe('lintSvg: svg-fill', () => {
      */
     expect(messages(raw(body), 'svg-fill')).toStrictEqual([`${tag} ${STROKED}`])
   })
+
+  it.each(['line', 'sm'] as const)(
+    'lets an icon in PARTIAL_FILLS fill its partial state with currentColor on a %s drawing',
+    (kind) => {
+      /**
+       * Scenario: star-half fills the half that is its rating (spec section 2.5); another
+       * colour or a fill rule on it is still reported, and the same fill on an icon outside
+       * the list is a fill.
+       */
+      const body =
+        '<path d="M4 12h16"/><path d="M4 4h4v4z" fill="currentColor"/><path d="M8 8h4v4z" fill="#000000"/><path d="M2 2h4v4z" fill="currentColor" fill-rule="evenodd"/>'
+      const issues = (name: string) =>
+        lintSvg({
+          file: { fileName: name, path: `icons/${kind}/${name}`, text: raw(body) },
+          kind,
+          multicolor: false
+        })
+          .issues.filter((issue) => issue.rule === 'svg-fill')
+          .map((issue) => issue.message)
+      expect(issues('star-half.svg')).toStrictEqual([
+        `<path> ${STROKED}`,
+        `<path> ${STROKED.replace('carries fill', 'carries fill-rule')}`
+      ])
+      expect(issues('star.svg')).toStrictEqual([
+        `<path> ${STROKED}`,
+        `<path> ${STROKED}`,
+        `<path> ${STROKED}`,
+        `<path> ${STROKED.replace('carries fill', 'carries fill-rule')}`
+      ])
+      expect(PARTIAL_FILLS.get('star-half')).toBe('the filled half is a half rating')
+    }
+  )
 
   it.each(['filled', 'brands'] as const)('holds a %s drawing to currentColor', (kind) => {
     /**
