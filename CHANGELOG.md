@@ -37,8 +37,8 @@ and deprecated, each rename with the alias that keeps the old name working.
   `SpeedometerIcon` and `ArrowUpDownIcon`, or their `./icons/<name>` subpaths, instead of
   `AccentIcon`, `AgentIcon`, `VariationsIcon`, `PlanIcon`, `SpendingCapIcon` and `SortIcon`.
 
-- `octopus` is labelled Octopus, the animal it draws, instead of Agent; `agent` stays one of its
-  tags, and a search for "agent" finds `robot` first.
+- `octopus` is labelled Octopus, the animal it draws, instead of Agent; `agent` is one of its
+  tags.
 
 ### Added
 
