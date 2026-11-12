@@ -29,17 +29,17 @@ const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 // artifact shrinks.
 //
 // What the budgets rest on, measured on a build that holds no drawing:
-//   - root, 3 KiB brotli: the entry re-exports the grid, the runtime and every icon by
+//   - root, 3.5 KiB brotli: the entry re-exports the grid, the runtime and every icon by
 //     package specifier and holds no code of its own, measured at 85 bytes brotli with no
-//     icon and at 2698 bytes with 253 icons, about 10 bytes per icon. Each
+//     icon and at 2944 bytes with 280 icons, about 10 bytes per icon. Each
 //     icon adds one re-export line, so every drawing batch recalibrates the budget.
 //   - runtime, 1.25 KiB brotli: the `Icon` base, `createIcon`, the stroke maths and the
 //     accessibility rules, measured at 3228 bytes raw and 1114 bytes brotli. The headroom
 //     fits a small fix, while an inlined dependency such as React fails.
-//   - meta, 13.5 KiB brotli: the grid, the deep freeze and the categories, measured at
-//     497 bytes brotli with no record and at 12925 bytes with 253 icon and 14 brand records,
+//   - meta, 15.5 KiB brotli: the grid, the deep freeze and the categories, measured at
+//     497 bytes brotli with no record and at 14117 bytes with 280 icon and 14 brand records,
 //     about 49 bytes brotli per record, the icon's `label` included. The headroom fits about
-//     eighteen records or a tag edit; every drawing batch adds records, so each one
+//     thirty-five records or a tag edit; every drawing batch adds records, so each one
 //     recalibrates it.
 //   - brands, 5 KiB brotli: the entry holds every brand mark, measured at 5 bytes brotli
 //     with no mark and at 4015 bytes with 14 marks, about 290 bytes per mark, most of it the
@@ -60,9 +60,9 @@ const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 // components stays inside its own budget. Against 148 icons the largest module,
 // `variations`, measures 0.42 KiB brotli.
 const BUDGETS = [
-  { name: 'root (re-exports)', path: 'dist/index.mjs', brotli: 3 * 1024 },
+  { name: 'root (re-exports)', path: 'dist/index.mjs', brotli: 3.5 * 1024 },
   { name: 'runtime (Icon base)', path: 'dist/runtime/index.mjs', brotli: 1.25 * 1024 },
-  { name: 'meta (typed metadata)', path: 'dist/meta/index.mjs', brotli: 13.5 * 1024 },
+  { name: 'meta (typed metadata)', path: 'dist/meta/index.mjs', brotli: 15.5 * 1024 },
   { name: 'brands (brand marks)', path: 'dist/brands/index.mjs', brotli: 5 * 1024 }
 ]
 const MODULE_BUDGET = 1.5 * 1024

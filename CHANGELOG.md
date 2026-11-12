@@ -23,6 +23,17 @@ and deprecated, each rename with the alias that keeps the old name working.
 
 ### Added
 
+- Shapes, arrows and media, 27 drawings (B6-A1): `square`, `circle`, `triangle`, `diamond`,
+  `pentagon`, `hexagon`, `octagon`, `star-half`, `asterisk`, `infinity`, `divide`,
+  `copyright`, `arrow-up-left`, `arrow-down-left`, `arrow-down-right`, `arrow-up-circle`,
+  `arrow-down-circle`, `arrow-left-circle`, `arrow-right-circle`, `shuffle`, `forward`,
+  `play-circle`, `pause-circle`, `stop-circle`, `disc` (alias `cd`), `radio` and `film`
+  (alias `movie`), and the category `shapes`. `star-half` is the first line icon to fill a
+  partial state.
+- The aliases `repeat` (`loop`), `credit-card` (`card`), `shopping-cart` (`cart`), `bar-chart`
+  (`chart-bar`), `pie-chart` (`chart-pie`), `cube` (`asset`), `help-circle` (`help`) and
+  `wrench` (`repair`).
+
 - The twelve keystone icons, which fix the design language of the set: `home`, `search`,
   `play`, `plus`, `close`, `check`, `settings`, `user`, `file`, `folder`, `lightning` and
   `scene` (components `HomeIcon` to `SceneIcon`, from the root and from
