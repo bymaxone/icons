@@ -24,3 +24,9 @@ export const LightningFilledIcon = /* @__PURE__ */ createIcon(
   ],
   { paint: 'fill' }
 )
+
+/** `bolt`: an alias of {@link LightningFilledIcon}. */
+export const BoltFilledIcon = LightningFilledIcon
+
+/** `flash`: an alias of {@link LightningFilledIcon}. */
+export const FlashFilledIcon = LightningFilledIcon

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Remove bookmark",
+  "tags": ["bookmark", "minus", "unsave", "remove"],
+  "categories": ["status", "actions"],
+  "useCases": ["Removes a saved item", "Unsaves an article"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -4,6 +4,12 @@
   "tags": ["exit full screen", "shrink", "collapse", "corners"],
   "categories": ["media"],
   "useCases": ["Leaves full screen", "Shrinks a preview back to its place"],
+  "aliases": [
+    {
+      "name": "fullscreen-exit",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

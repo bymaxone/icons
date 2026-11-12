@@ -8,6 +8,12 @@
     "Marks the home tab of a navigation bar",
     "Filled: the current page in the navigation"
   ],
+  "aliases": [
+    {
+      "name": "house",
+      "deprecated": false
+    }
+  ],
   "variants": ["line", "filled", "sm"],
   "opticalSizes": [24, 16],
   "since": "0.1.0"

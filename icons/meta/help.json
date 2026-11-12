@@ -8,6 +8,10 @@
     {
       "name": "help-circle",
       "deprecated": false
+    },
+    {
+      "name": "question-mark",
+      "deprecated": false
     }
   ],
   "variants": ["line"],

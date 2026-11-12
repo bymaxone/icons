@@ -8,6 +8,10 @@
     {
       "name": "navigation",
       "deprecated": false
+    },
+    {
+      "name": "gps",
+      "deprecated": false
     }
   ],
   "variants": ["line"],

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "All borders",
+  "tags": ["border", "all", "table", "cell"],
+  "categories": ["editing", "text"],
+  "useCases": ["Adds every border to a cell", "Formats a table"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

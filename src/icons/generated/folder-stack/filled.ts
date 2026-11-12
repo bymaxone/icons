@@ -24,3 +24,6 @@ export const FolderStackFilledIcon = /* @__PURE__ */ createIcon(
   ],
   { paint: 'fill' }
 )
+
+/** `folders`: an alias of {@link FolderStackFilledIcon}. */
+export const FoldersFilledIcon = FolderStackFilledIcon

@@ -18,3 +18,6 @@ export const BagIcon = /* @__PURE__ */ createIcon('bag', [
 
 /** `shopping-bag`: an alias of {@link BagIcon}. */
 export const ShoppingBagIcon = BagIcon
+
+/** `handbag`: an alias of {@link BagIcon}. */
+export const HandbagIcon = BagIcon

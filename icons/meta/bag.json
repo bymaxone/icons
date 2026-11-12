@@ -8,6 +8,10 @@
     {
       "name": "shopping-bag",
       "deprecated": false
+    },
+    {
+      "name": "handbag",
+      "deprecated": false
     }
   ],
   "variants": ["line"],

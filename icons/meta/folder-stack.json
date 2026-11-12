@@ -8,6 +8,12 @@
     "Labels a group of folders",
     "Filled: the selected collection"
   ],
+  "aliases": [
+    {
+      "name": "folders",
+      "deprecated": false
+    }
+  ],
   "variants": ["line", "filled", "sm"],
   "opticalSizes": [24, 16],
   "since": "0.1.0"

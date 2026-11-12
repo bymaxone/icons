@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Stop alert",
+  "tags": ["alert", "octagon", "stop", "error"],
+  "categories": ["status"],
+  "useCases": ["Shows a blocking error", "Stops an action"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

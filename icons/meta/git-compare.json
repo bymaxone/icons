@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Compare",
+  "tags": ["git", "compare", "diff", "branches"],
+  "categories": ["dev"],
+  "useCases": ["Compares two branches", "Opens a diff"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

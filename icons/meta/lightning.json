@@ -8,6 +8,16 @@
     "Marks an action that spends credits",
     "Filled: a boost that is turned on"
   ],
+  "aliases": [
+    {
+      "name": "bolt",
+      "deprecated": false
+    },
+    {
+      "name": "flash",
+      "deprecated": false
+    }
+  ],
   "variants": ["line", "filled", "sm"],
   "opticalSizes": [24, 16],
   "since": "0.1.0"

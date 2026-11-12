@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Accessibility",
+  "tags": ["accessibility", "a11y", "inclusive", "person"],
+  "categories": ["people", "system"],
+  "useCases": ["Opens the accessibility settings", "Marks an accessible option"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

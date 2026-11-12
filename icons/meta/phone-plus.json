@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Add call",
+  "tags": ["phone", "plus", "add contact", "new call"],
+  "categories": ["communication"],
+  "useCases": ["Adds a participant to a call", "Adds a phone number"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

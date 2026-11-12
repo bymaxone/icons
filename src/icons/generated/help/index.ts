@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { HelpCircleIcon, HelpIcon } from './line'
+export { HelpCircleIcon, HelpIcon, QuestionMarkIcon } from './line'

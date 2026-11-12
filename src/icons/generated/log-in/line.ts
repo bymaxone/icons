@@ -18,3 +18,6 @@ export const LogInIcon = /* @__PURE__ */ createIcon('log-in', [
   ],
   ['path', { d: 'M3.25 12.25h11m-3.182-3.182 3.182 3.182-3.182 3.182' }]
 ])
+
+/** `login`: an alias of {@link LogInIcon}. */
+export const LoginIcon = LogInIcon

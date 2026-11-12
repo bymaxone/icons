@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { PriceTagIcon, TagIcon } from './line'
+export { LabelIcon, PriceTagIcon, TagIcon } from './line'

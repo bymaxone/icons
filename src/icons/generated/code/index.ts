@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { CodeIcon } from './line'
+export { CodeIcon, HtmlIcon } from './line'

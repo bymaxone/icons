@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Inner borders",
+  "tags": ["border", "inner", "table", "grid"],
+  "categories": ["editing", "text"],
+  "useCases": ["Adds the inner borders", "Formats a table grid"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

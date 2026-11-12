@@ -14,3 +14,6 @@ import { createIcon } from '@bymax-one/icons/runtime'
 export const ActivityIcon = /* @__PURE__ */ createIcon('activity', [
   ['path', { d: 'M3.25 12.25h3.5l2.5-5.75 5 11.5 2.5-5.75h4' }]
 ])
+
+/** `pulse`: an alias of {@link ActivityIcon}. */
+export const PulseIcon = ActivityIcon

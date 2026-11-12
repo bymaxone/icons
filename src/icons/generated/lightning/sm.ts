@@ -23,3 +23,9 @@ export const LightningSmIcon = /* @__PURE__ */ createIcon(
   ],
   { masterSize: 16 }
 )
+
+/** `bolt`: an alias of {@link LightningSmIcon}. */
+export const BoltSmIcon = LightningSmIcon
+
+/** `flash`: an alias of {@link LightningSmIcon}. */
+export const FlashSmIcon = LightningSmIcon

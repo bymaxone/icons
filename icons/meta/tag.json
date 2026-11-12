@@ -8,6 +8,10 @@
     {
       "name": "price-tag",
       "deprecated": false
+    },
+    {
+      "name": "label",
+      "deprecated": false
     }
   ],
   "variants": ["line"],

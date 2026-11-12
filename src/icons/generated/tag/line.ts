@@ -23,3 +23,6 @@ export const TagIcon = /* @__PURE__ */ createIcon('tag', [
 
 /** `price-tag`: an alias of {@link TagIcon}. */
 export const PriceTagIcon = TagIcon
+
+/** `label`: an alias of {@link TagIcon}. */
+export const LabelIcon = TagIcon

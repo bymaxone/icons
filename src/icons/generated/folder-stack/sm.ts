@@ -24,3 +24,6 @@ export const FolderStackSmIcon = /* @__PURE__ */ createIcon(
   ],
   { masterSize: 16 }
 )
+
+/** `folders`: an alias of {@link FolderStackSmIcon}. */
+export const FoldersSmIcon = FolderStackSmIcon

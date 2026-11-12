@@ -4,6 +4,6 @@
  * @layer Generated
  */
 
-export { HomeIcon } from './line'
-export { HomeFilledIcon } from './filled'
-export { HomeSmIcon } from './sm'
+export { HomeIcon, HouseIcon } from './line'
+export { HomeFilledIcon, HouseFilledIcon } from './filled'
+export { HomeSmIcon, HouseSmIcon } from './sm'

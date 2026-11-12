@@ -8,6 +8,10 @@
     {
       "name": "bar-chart",
       "deprecated": false
+    },
+    {
+      "name": "chart",
+      "deprecated": false
     }
   ],
   "variants": ["line"],

@@ -4,6 +4,6 @@
  * @layer Generated
  */
 
-export { DashboardIcon } from './line'
-export { DashboardFilledIcon } from './filled'
-export { DashboardSmIcon } from './sm'
+export { DashboardIcon, LayoutGridIcon } from './line'
+export { DashboardFilledIcon, LayoutGridFilledIcon } from './filled'
+export { DashboardSmIcon, LayoutGridSmIcon } from './sm'

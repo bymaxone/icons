@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { AirplaneIcon } from './line'
+export { AirplaneIcon, PlaneIcon } from './line'

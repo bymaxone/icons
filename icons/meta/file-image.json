@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Image file",
+  "tags": ["file", "image", "picture", "photo"],
+  "categories": ["files", "media"],
+  "useCases": ["Opens an image file", "Marks a picture attachment"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Option key",
+  "tags": ["option", "key", "alt", "modifier"],
+  "categories": ["devices", "system"],
+  "useCases": ["Shows the option key", "Lists a keyboard shortcut"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

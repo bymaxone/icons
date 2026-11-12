@@ -24,3 +24,6 @@ export const HomeSmIcon = /* @__PURE__ */ createIcon(
   ],
   { masterSize: 16 }
 )
+
+/** `house`: an alias of {@link HomeSmIcon}. */
+export const HouseSmIcon = HomeSmIcon

@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { MinimizeIcon } from './line'
+export { FullscreenExitIcon, MinimizeIcon } from './line'

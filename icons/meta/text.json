@@ -4,6 +4,12 @@
   "tags": ["type", "letter t", "font", "title"],
   "categories": ["text"],
   "useCases": ["Adds a text layer", "Selects the text tool"],
+  "aliases": [
+    {
+      "name": "type",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

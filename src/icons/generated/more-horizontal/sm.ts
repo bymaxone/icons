@@ -20,3 +20,6 @@ export const MoreHorizontalSmIcon = /* @__PURE__ */ createIcon(
   ],
   { masterSize: 16 }
 )
+
+/** `more`: an alias of {@link MoreHorizontalSmIcon}. */
+export const MoreSmIcon = MoreHorizontalSmIcon

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Closed eye",
+  "tags": ["eye", "closed", "sleep", "lashes"],
+  "categories": ["status", "emotions"],
+  "useCases": ["Marks a hidden or resting state", "Shows that the eyes are closed"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

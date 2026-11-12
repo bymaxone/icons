@@ -4,5 +4,5 @@
  * @layer Generated
  */
 
-export { MoreHorizontalIcon } from './line'
-export { MoreHorizontalSmIcon } from './sm'
+export { MoreHorizontalIcon, MoreIcon } from './line'
+export { MoreHorizontalSmIcon, MoreSmIcon } from './sm'

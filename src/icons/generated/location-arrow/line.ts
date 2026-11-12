@@ -17,3 +17,6 @@ export const LocationArrowIcon = /* @__PURE__ */ createIcon('location-arrow', [
 
 /** `navigation`: an alias of {@link LocationArrowIcon}. */
 export const NavigationIcon = LocationArrowIcon
+
+/** `gps`: an alias of {@link LocationArrowIcon}. */
+export const GpsIcon = LocationArrowIcon

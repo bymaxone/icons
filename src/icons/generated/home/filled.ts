@@ -24,3 +24,6 @@ export const HomeFilledIcon = /* @__PURE__ */ createIcon(
   ],
   { paint: 'fill' }
 )
+
+/** `house`: an alias of {@link HomeFilledIcon}. */
+export const HouseFilledIcon = HomeFilledIcon

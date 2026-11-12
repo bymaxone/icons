@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Secured",
+  "tags": ["shield", "lock", "secure", "privacy"],
+  "categories": ["security"],
+  "useCases": ["Shows a secured account", "Turns on privacy protection"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

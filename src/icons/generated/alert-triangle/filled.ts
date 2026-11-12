@@ -27,3 +27,6 @@ export const AlertTriangleFilledIcon = /* @__PURE__ */ createIcon(
 
 /** `warning`: an alias of {@link AlertTriangleFilledIcon}. */
 export const WarningFilledIcon = AlertTriangleFilledIcon
+
+/** `alert`: an alias of {@link AlertTriangleFilledIcon}. */
+export const AlertFilledIcon = AlertTriangleFilledIcon

@@ -20,3 +20,6 @@ export const FolderStackIcon = /* @__PURE__ */ createIcon('folder-stack', [
   ],
   ['path', { d: 'M6.75 5.75v-.5a2 2 0 0 1 2-2h2.75l1.5 1.5h5.75a2 2 0 0 1 2 2v9.5' }]
 ])
+
+/** `folders`: an alias of {@link FolderStackIcon}. */
+export const FoldersIcon = FolderStackIcon
