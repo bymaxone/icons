@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { Aspect169Icon } from './line'
+export { Aspect169Icon, AspectRatioIcon } from './line'

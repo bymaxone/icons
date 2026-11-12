@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { AtSignIcon, MentionIcon } from './line'
+export { AtIcon, AtSignIcon, MentionIcon } from './line'

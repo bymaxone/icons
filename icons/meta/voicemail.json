@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Voicemail",
+  "tags": ["voicemail", "message", "recording", "tape"],
+  "categories": ["communication", "audio"],
+  "useCases": ["Plays a voicemail", "Opens the voice messages"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

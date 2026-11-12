@@ -4,6 +4,12 @@
   "tags": ["maximize", "expand", "enlarge", "corners"],
   "categories": ["media"],
   "useCases": ["Opens the player in full screen", "Enlarges a preview"],
+  "aliases": [
+    {
+      "name": "maximize",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

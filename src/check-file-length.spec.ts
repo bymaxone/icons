@@ -100,6 +100,19 @@ describe('check-file-length', () => {
     expect(run(repo({ [path]: lines(2000) })).status).toBe(0)
   })
 
+  it.each(['src/meta/generated/metadata.ts', 'src/generated/a.ts'])('ignores the generated module %s', (path) => {
+    // pnpm generate writes these from the icon sources and check:generated compares them byte for byte.
+    expect(run(repo({ [path]: lines(2000) })).status).toBe(0)
+  })
+
+  it.each(['src/generated.ts', 'src/generated-names.ts', 'scripts/generated/a.mjs', 'test/src/generated/a.ts'])(
+    'checks %s, which is not a module under a generated directory of src',
+    (path) => {
+      // Only a generated directory inside src is exempt; a name that merely contains the word is not.
+      expect(run(repo({ [path]: lines(900) })).status).toBe(1)
+    },
+  )
+
   it('ignores an untracked file', () => {
     const root = repo({ 'src/a.ts': lines(3) })
     writeFileSync(join(root, 'src', 'untracked.ts'), lines(2000))

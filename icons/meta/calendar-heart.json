@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Saved date",
+  "tags": ["calendar", "heart", "favorite date", "anniversary"],
+  "categories": ["time", "emotions"],
+  "useCases": ["Saves a special date", "Marks an anniversary"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

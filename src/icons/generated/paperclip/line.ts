@@ -19,3 +19,6 @@ export const PaperclipIcon = /* @__PURE__ */ createIcon('paperclip', [
     }
   ]
 ])
+
+/** `attachment`: an alias of {@link PaperclipIcon}. */
+export const AttachmentIcon = PaperclipIcon

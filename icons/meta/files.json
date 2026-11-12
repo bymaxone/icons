@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Files",
+  "tags": ["files", "documents", "pages", "several files"],
+  "categories": ["files"],
+  "useCases": ["Opens all files", "Selects several documents"],
+  "aliases": [
+    {
+      "name": "documents",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

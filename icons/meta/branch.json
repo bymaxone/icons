@@ -8,6 +8,10 @@
     {
       "name": "git-branch",
       "deprecated": false
+    },
+    {
+      "name": "git-fork",
+      "deprecated": false
     }
   ],
   "variants": ["line"],

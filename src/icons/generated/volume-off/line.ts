@@ -21,3 +21,6 @@ export const VolumeOffIcon = /* @__PURE__ */ createIcon('volume-off', [
   ],
   ['path', { d: 'm16.25 9.75 5 5m0-5-5 5' }]
 ])
+
+/** `volume-mute`: an alias of {@link VolumeOffIcon}. */
+export const VolumeMuteIcon = VolumeOffIcon

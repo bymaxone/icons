@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { PaperclipIcon } from './line'
+export { AttachmentIcon, PaperclipIcon } from './line'

@@ -4,6 +4,12 @@
   "tags": ["lattice", "guides", "hash", "layout grid"],
   "categories": ["editing"],
   "useCases": ["Shows the canvas grid", "Snaps layers to the grid"],
+  "aliases": [
+    {
+      "name": "hash",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

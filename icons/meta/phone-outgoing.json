@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Outgoing call",
+  "tags": ["phone", "outgoing", "call", "dialed"],
+  "categories": ["communication"],
+  "useCases": ["Shows an outgoing call", "Lists dialed calls"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

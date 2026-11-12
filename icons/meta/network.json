@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Network",
+  "tags": ["network", "topology", "nodes", "infrastructure"],
+  "categories": ["connectivity", "dev"],
+  "useCases": ["Shows the network", "Maps connected services"],
+  "aliases": [
+    {
+      "name": "sitemap",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

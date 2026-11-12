@@ -24,3 +24,6 @@ export const FilterSmIcon = /* @__PURE__ */ createIcon(
   ],
   { masterSize: 16 }
 )
+
+/** `funnel`: an alias of {@link FilterSmIcon}. */
+export const FunnelSmIcon = FilterSmIcon

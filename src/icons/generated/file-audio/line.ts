@@ -22,3 +22,6 @@ export const FileAudioIcon = /* @__PURE__ */ createIcon('file-audio', [
   ['path', { d: 'M12 16.5v-5.25l3.25 1' }],
   ['circle', { cx: 10.25, cy: 16.5, r: 1.75 }]
 ])
+
+/** `file-music`: an alias of {@link FileAudioIcon}. */
+export const FileMusicIcon = FileAudioIcon

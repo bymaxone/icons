@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Add item",
+  "tags": ["plus", "square", "add", "new"],
+  "categories": ["actions"],
+  "useCases": ["Adds an item", "Creates an entry in a grid"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

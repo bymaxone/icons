@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Swap",
+  "tags": ["swap", "exchange", "left right", "transfer"],
+  "categories": ["arrows", "actions"],
+  "useCases": ["Swaps two values", "Transfers between accounts"],
+  "aliases": [
+    {
+      "name": "swap",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

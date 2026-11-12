@@ -23,3 +23,6 @@ export const FileAudioSmIcon = /* @__PURE__ */ createIcon(
   ],
   { masterSize: 16 }
 )
+
+/** `file-music`: an alias of {@link FileAudioSmIcon}. */
+export const FileMusicSmIcon = FileAudioSmIcon

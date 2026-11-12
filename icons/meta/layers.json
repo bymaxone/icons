@@ -8,6 +8,12 @@
     "Arranges the order of layers",
     "Filled: the layers panel while it is open"
   ],
+  "aliases": [
+    {
+      "name": "stack",
+      "deprecated": false
+    }
+  ],
   "variants": ["line", "filled"],
   "opticalSizes": [24],
   "since": "0.1.0"

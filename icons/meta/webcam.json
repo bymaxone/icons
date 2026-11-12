@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Webcam",
+  "tags": ["webcam", "camera", "video call", "stream"],
+  "categories": ["devices", "media"],
+  "useCases": ["Turns on the webcam", "Starts a video call"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

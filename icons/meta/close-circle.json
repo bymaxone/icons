@@ -4,6 +4,12 @@
   "tags": ["close", "clear", "cancel", "remove", "circle"],
   "categories": ["actions", "status"],
   "useCases": ["Clears a search field", "Marks an item that failed"],
+  "aliases": [
+    {
+      "name": "x-circle",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

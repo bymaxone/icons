@@ -8,6 +8,10 @@
     {
       "name": "mention",
       "deprecated": false
+    },
+    {
+      "name": "at",
+      "deprecated": false
     }
   ],
   "variants": ["line"],

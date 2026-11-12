@@ -4,6 +4,12 @@
   "tags": ["audio file", "sound file", "music file", "media"],
   "categories": ["files"],
   "useCases": ["Marks an audio file", "Uploads a sound"],
+  "aliases": [
+    {
+      "name": "file-music",
+      "deprecated": false
+    }
+  ],
   "variants": ["line", "sm"],
   "opticalSizes": [24, 16],
   "since": "0.1.0"

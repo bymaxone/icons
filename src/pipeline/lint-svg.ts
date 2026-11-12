@@ -40,6 +40,7 @@ const FILL_CONTROLS = ['fill', 'fill-rule', 'clip-rule']
  * with `currentColor` (spec section 2.5): there the fill is the state. Each carries its reason.
  */
 export const PARTIAL_FILLS: ReadonlyMap<string, string> = new Map([
+  ['contrast', 'the filled half is the contrast between two tones'],
   ['star-half', 'the filled half is a half rating']
 ])
 

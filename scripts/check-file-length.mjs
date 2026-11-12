@@ -19,6 +19,8 @@
  * entry the base did not have, or one above the base's length, fails. A base revision without a
  * baseline file imposes nothing, which is the change that introduces it.
  *
+ * Modules under a `generated` directory of `src` are not checked: the generator writes them.
+ *
  * Plain Node with no dependencies: copy this file and `file-length-baseline.json` as they are.
  *
  * Usage: node scripts/check-file-length.mjs [--root <dir>] [--baseline <file>] [--base <ref>]
@@ -37,6 +39,13 @@ const LIMIT = 800
 /** Tracked files with these extensions are source. Markdown, JSON and lockfiles are out of scope. */
 const SOURCE_EXTENSION = /\.(?:[cm]?[jt]s|[jt]sx)$/
 
+/**
+ * Modules under a `generated` directory of `src/` are written by `pnpm generate`, never by hand, and
+ * grow by a line per icon. `check:generated` compares them with the generator's output, so the length
+ * limit, which asks a person to split a file, does not apply to them.
+ */
+const GENERATED = /^src\/(?:[^/]+\/)*generated\//
+
 /** Reads `--name value` from the arguments, or returns the fallback. */
 function option(name, fallback) {
   const index = process.argv.indexOf(name)
@@ -53,7 +62,9 @@ function lineCount(text) {
 /** Paths of the tracked source files, relative to the root. */
 function trackedSources(root) {
   const listing = execFileSync('git', ['ls-files', '-z'], { cwd: root, encoding: 'utf8' })
-  return listing.split('\0').filter((path) => path !== '' && SOURCE_EXTENSION.test(path))
+  return listing
+    .split('\0')
+    .filter((path) => path !== '' && SOURCE_EXTENSION.test(path) && !GENERATED.test(path))
 }
 
 /** Lengths of the tracked source files over the limit, keyed by path. */

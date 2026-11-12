@@ -19,3 +19,6 @@ export const MicIcon = /* @__PURE__ */ createIcon('mic', [
   ['path', { d: 'M19.25 10.25a7 7 0 0 1-14 0m7 7v1' }],
   ['path', { d: 'M8.25 21.25h8' }]
 ])
+
+/** `microphone`: an alias of {@link MicIcon}. */
+export const MicrophoneIcon = MicIcon

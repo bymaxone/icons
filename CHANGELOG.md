@@ -48,6 +48,22 @@ and deprecated, each rename with the alias that keeps the old name working.
   `rocket` (alias `launch`), `anchor`, `hospital`, `bed`, `umbrella`, `leaf`, `flower`,
   `feather`, `skull`, `dice` (alias `random`), `cake` (alias `birthday`), `cookie` and `egg`,
   and the categories `science`, `food` and `household`.
+- Interface, files and editing (B6-B1): `file-check`, `file-code`, `file-search`, `file-lock`,
+  `files` (alias `documents`), `folder-lock`, `calendar-plus`, `calendar-heart`,
+  `clipboard-check`, `bookmark-check`, `shield-plus`, `plus-square`, `user-circle`, `user-square`,
+  `phone-incoming`, `phone-outgoing`, `webcam`, `router`, `network` (alias `sitemap`), `radar`,
+  `signal`, `webhook`, `translate`, `presentation` (alias `slides`), `function` (alias `formula`),
+  `variable`, `subscript`, `equal` (alias `equals`), `slash` (alias `line`), `border-top`,
+  `border-bottom`, `border-left`, `border-right`, `flip-horizontal`, `flip-vertical`, `contrast`,
+  `lightning-off` (alias `flash-off`), `voicemail`, `signature` (alias `sign`), `backspace`
+  (alias `delete-left`), `eject`, `fast-forward`, `rewind`, `arrow-left-right` (alias `swap`),
+  `reply` and `crosshair` (alias `locate`).
+- The aliases `at` (`at-sign`), `attachment` (`paperclip`), `funnel` (`filter`), `maximize`
+  (`fullscreen`), `microphone` (`mic`), `music-note` (`music`), `group` (`users`), `chat`
+  (`message`), `volume-mute` (`volume-off`), `x-circle` (`close-circle`), `git-fork` (`branch`),
+  `stack` (`layers`), `file-music` (`file-audio`), `stars` (`sparkle`), `hash` (`grid`),
+  `cylinder` (`database`), `resize` (`resolution`), `aspect-ratio` (`aspect-16-9`), `language`
+  (`globe`) and `album` (`disc`).
 
 - The twelve keystone icons, which fix the design language of the set: `home`, `search`,
   `play`, `plus`, `close`, `check`, `settings`, `user`, `file`, `folder`, `lightning` and

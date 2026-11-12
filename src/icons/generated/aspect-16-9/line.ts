@@ -21,3 +21,6 @@ export const Aspect169Icon = /* @__PURE__ */ createIcon('aspect-16-9', [
   ['path', { d: 'M6 12v-2h2' }],
   ['path', { d: 'M18.5 12.5v2h-2' }]
 ])
+
+/** `aspect-ratio`: an alias of {@link Aspect169Icon}. */
+export const AspectRatioIcon = Aspect169Icon

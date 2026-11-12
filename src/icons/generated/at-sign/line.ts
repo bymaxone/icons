@@ -18,3 +18,6 @@ export const AtSignIcon = /* @__PURE__ */ createIcon('at-sign', [
 
 /** `mention`: an alias of {@link AtSignIcon}. */
 export const MentionIcon = AtSignIcon
+
+/** `at`: an alias of {@link AtSignIcon}. */
+export const AtIcon = AtSignIcon

@@ -15,3 +15,6 @@ export const CloseCircleIcon = /* @__PURE__ */ createIcon('close-circle', [
   ['circle', { cx: 12.25, cy: 12.25, r: 8.5 }],
   ['path', { d: 'm9.75 9.75 5 5m0-5-5 5' }]
 ])
+
+/** `x-circle`: an alias of {@link CloseCircleIcon}. */
+export const XCircleIcon = CloseCircleIcon

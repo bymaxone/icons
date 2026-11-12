@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { BranchIcon, GitBranchIcon } from './line'
+export { BranchIcon, GitBranchIcon, GitForkIcon } from './line'

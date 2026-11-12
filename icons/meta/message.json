@@ -4,6 +4,12 @@
   "tags": ["chat", "comment", "speech bubble", "conversation"],
   "categories": ["communication"],
   "useCases": ["Opens the chat", "Adds a comment", "Filled: unread messages"],
+  "aliases": [
+    {
+      "name": "chat",
+      "deprecated": false
+    }
+  ],
   "variants": ["line", "filled"],
   "opticalSizes": [24],
   "since": "0.1.0"

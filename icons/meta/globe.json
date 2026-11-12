@@ -4,6 +4,12 @@
   "tags": ["language", "world", "web", "international"],
   "categories": ["connectivity", "maps"],
   "useCases": ["Changes the language", "Marks a public link"],
+  "aliases": [
+    {
+      "name": "language",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

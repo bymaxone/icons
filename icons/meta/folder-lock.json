@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Locked folder",
+  "tags": ["folder", "lock", "private", "protected"],
+  "categories": ["files", "security"],
+  "useCases": ["Marks a folder as private", "Protects a folder"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

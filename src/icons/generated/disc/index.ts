@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { CdIcon, DiscIcon } from './line'
+export { AlbumIcon, CdIcon, DiscIcon } from './line'

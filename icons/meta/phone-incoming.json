@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Incoming call",
+  "tags": ["phone", "incoming", "call", "received"],
+  "categories": ["communication"],
+  "useCases": ["Shows an incoming call", "Lists received calls"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

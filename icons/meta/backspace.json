@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Backspace",
+  "tags": ["backspace", "delete left", "erase", "key"],
+  "categories": ["actions", "text"],
+  "useCases": ["Deletes the character before the cursor", "Clears the last entry"],
+  "aliases": [
+    {
+      "name": "delete-left",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

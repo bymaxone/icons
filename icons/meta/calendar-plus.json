@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "New event",
+  "tags": ["calendar", "plus", "add event", "schedule"],
+  "categories": ["time", "actions"],
+  "useCases": ["Adds an event", "Schedules a meeting"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

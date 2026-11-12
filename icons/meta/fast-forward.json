@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Fast forward",
+  "tags": ["fast forward", "skip ahead", "media", "speed"],
+  "categories": ["media"],
+  "useCases": ["Speeds up playback", "Skips ahead"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -4,5 +4,5 @@
  * @layer Generated
  */
 
-export { SparkleIcon } from './line'
-export { SparkleFilledIcon } from './filled'
+export { SparkleIcon, StarsIcon } from './line'
+export { SparkleFilledIcon, StarsFilledIcon } from './filled'

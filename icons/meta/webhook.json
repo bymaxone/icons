@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Webhook",
+  "tags": ["webhook", "integration", "callback", "api"],
+  "categories": ["dev", "connectivity"],
+  "useCases": ["Sets up a webhook", "Connects an integration"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

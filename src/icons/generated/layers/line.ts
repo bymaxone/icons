@@ -21,3 +21,6 @@ export const LayersIcon = /* @__PURE__ */ createIcon('layers', [
   ['path', { d: 'm3.25 11.75 5.503 3.057c2.841 1.579 4.153 1.579 6.994 0l5.503-3.057' }],
   ['path', { d: 'm3.25 15.25 5.503 3.057c2.841 1.579 4.153 1.579 6.994 0l5.503-3.057' }]
 ])
+
+/** `stack`: an alias of {@link LayersIcon}. */
+export const StackIcon = LayersIcon

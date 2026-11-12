@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "File approved",
+  "tags": ["file", "check", "approved", "done"],
+  "categories": ["files", "status"],
+  "useCases": ["Marks a file as approved", "Shows a reviewed document"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

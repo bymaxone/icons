@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Code file",
+  "tags": ["file", "code", "source", "script"],
+  "categories": ["files", "dev"],
+  "useCases": ["Opens a source file", "Marks a code attachment"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Crosshair",
+  "tags": ["crosshair", "target", "aim", "locate"],
+  "categories": ["maps", "editing"],
+  "useCases": ["Centres the map on a point", "Aims at a position"],
+  "aliases": [
+    {
+      "name": "locate",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -24,3 +24,6 @@ export const UsersFilledIcon = /* @__PURE__ */ createIcon(
   ],
   { paint: 'fill' }
 )
+
+/** `group`: an alias of {@link UsersFilledIcon}. */
+export const GroupFilledIcon = UsersFilledIcon

@@ -19,3 +19,6 @@ export const DiscIcon = /* @__PURE__ */ createIcon('disc', [
 
 /** `cd`: an alias of {@link DiscIcon}. */
 export const CdIcon = DiscIcon
+
+/** `album`: an alias of {@link DiscIcon}. */
+export const AlbumIcon = DiscIcon

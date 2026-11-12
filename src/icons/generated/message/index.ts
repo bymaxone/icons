@@ -4,5 +4,5 @@
  * @layer Generated
  */
 
-export { MessageIcon } from './line'
-export { MessageFilledIcon } from './filled'
+export { ChatIcon, MessageIcon } from './line'
+export { ChatFilledIcon, MessageFilledIcon } from './filled'

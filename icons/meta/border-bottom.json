@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Bottom border",
+  "tags": ["border", "bottom", "table", "cell"],
+  "categories": ["editing", "text"],
+  "useCases": ["Adds a bottom border", "Underlines a cell"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

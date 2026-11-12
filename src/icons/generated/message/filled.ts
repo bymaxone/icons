@@ -24,3 +24,6 @@ export const MessageFilledIcon = /* @__PURE__ */ createIcon(
   ],
   { paint: 'fill' }
 )
+
+/** `chat`: an alias of {@link MessageFilledIcon}. */
+export const ChatFilledIcon = MessageFilledIcon

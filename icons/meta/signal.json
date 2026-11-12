@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Signal",
+  "tags": ["signal", "bars", "reception", "strength"],
+  "categories": ["connectivity", "status"],
+  "useCases": ["Shows the signal strength", "Marks the connection quality"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}
