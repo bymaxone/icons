@@ -19,3 +19,6 @@ export const CursorIcon = /* @__PURE__ */ createIcon('cursor', [
     }
   ]
 ])
+
+/** `select`: an alias of {@link CursorIcon}. */
+export const SelectIcon = CursorIcon

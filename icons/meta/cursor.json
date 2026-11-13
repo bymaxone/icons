@@ -4,6 +4,12 @@
   "tags": ["pointer", "select", "arrow", "mouse"],
   "categories": ["editing"],
   "useCases": ["Selects the selection tool", "Marks a click target"],
+  "aliases": [
+    {
+      "name": "select",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

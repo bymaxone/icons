@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Zipped folder",
+  "tags": ["folder zip", "compressed", "archive", "package"],
+  "categories": ["files"],
+  "useCases": ["Compresses a folder into one archive", "Shows a packed bundle of files"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

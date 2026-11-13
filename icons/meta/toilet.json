@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Toilet",
+  "tags": ["toilet", "restroom", "wc", "bathroom"],
+  "categories": ["household", "maps"],
+  "useCases": ["Marks a public restroom", "Shows where the toilets are"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

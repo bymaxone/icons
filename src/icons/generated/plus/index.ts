@@ -4,5 +4,5 @@
  * @layer Generated
  */
 
-export { PlusIcon } from './line'
-export { PlusSmIcon } from './sm'
+export { AddIcon, PlusIcon } from './line'
+export { AddSmIcon, PlusSmIcon } from './sm'

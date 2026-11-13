@@ -4,6 +4,12 @@
   "tags": ["caret", "collapse", "up", "expand less"],
   "categories": ["arrows"],
   "useCases": ["Collapses an open section", "Moves a selection up a list"],
+  "aliases": [
+    {
+      "name": "caret-up",
+      "deprecated": false
+    }
+  ],
   "variants": ["line", "sm"],
   "opticalSizes": [24, 16],
   "since": "0.1.0"

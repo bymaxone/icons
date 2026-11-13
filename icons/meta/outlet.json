@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Power outlet",
+  "tags": ["outlet", "socket", "power", "electricity"],
+  "categories": ["devices", "household"],
+  "useCases": ["Marks a place to plug in", "Shows a wall socket"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

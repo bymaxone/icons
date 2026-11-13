@@ -4,6 +4,6 @@
  * @layer Generated
  */
 
-export { VolumeIcon } from './line'
-export { VolumeFilledIcon } from './filled'
-export { VolumeSmIcon } from './sm'
+export { VolumeIcon, VolumeUpIcon } from './line'
+export { VolumeFilledIcon, VolumeUpFilledIcon } from './filled'
+export { VolumeSmIcon, VolumeUpSmIcon } from './sm'

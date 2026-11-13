@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Shield with a question",
+  "tags": ["shield question", "unknown", "verify", "security"],
+  "categories": ["security", "status"],
+  "useCases": ["Marks a security state that is unknown", "Asks for a protection check"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

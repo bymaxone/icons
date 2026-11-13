@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Forklift",
+  "tags": ["forklift", "warehouse", "pallet", "logistics"],
+  "categories": ["transport", "commerce"],
+  "useCases": ["Shows warehouse handling", "Marks moving pallets of goods"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Half shield",
+  "tags": ["shield half", "partial", "protection", "coverage"],
+  "categories": ["security"],
+  "useCases": ["Shows partial protection", "Marks a half-secured setup"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

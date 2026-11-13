@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Help box",
+  "tags": ["help square", "question", "support", "faq"],
+  "categories": ["status"],
+  "useCases": ["Opens the help center", "Shows a boxed question mark"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

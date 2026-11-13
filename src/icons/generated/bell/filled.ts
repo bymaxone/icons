@@ -24,3 +24,6 @@ export const BellFilledIcon = /* @__PURE__ */ createIcon(
   ],
   { paint: 'fill' }
 )
+
+/** `notification`: an alias of {@link BellFilledIcon}. */
+export const NotificationFilledIcon = BellFilledIcon

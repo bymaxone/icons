@@ -4,6 +4,12 @@
   "tags": ["invoice", "bill", "purchase", "statement"],
   "categories": ["commerce"],
   "useCases": ["Links to the invoices", "Shows a past payment"],
+  "aliases": [
+    {
+      "name": "invoice",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

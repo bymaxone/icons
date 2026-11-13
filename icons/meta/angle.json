@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Angle",
+  "tags": ["angle", "degrees", "geometry", "corner"],
+  "categories": ["math", "shapes"],
+  "useCases": ["Measures the angle between two lines", "Sets a rotation in degrees"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

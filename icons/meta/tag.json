@@ -12,6 +12,10 @@
     {
       "name": "label",
       "deprecated": false
+    },
+    {
+      "name": "tags",
+      "deprecated": false
     }
   ],
   "variants": ["line"],

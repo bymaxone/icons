@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Chess king",
+  "tags": ["chess king", "king", "chess", "checkmate"],
+  "categories": ["games"],
+  "useCases": ["Shows the chess piece that must be protected", "Marks the end of a match"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

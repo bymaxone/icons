@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Chess queen",
+  "tags": ["chess queen", "queen", "chess", "strongest"],
+  "categories": ["games"],
+  "useCases": ["Shows the most powerful chess piece", "Marks a leading player"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

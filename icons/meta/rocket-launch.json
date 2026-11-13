@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Rocket launch",
+  "tags": ["rocket launch", "liftoff", "space", "start"],
+  "categories": ["transport", "science"],
+  "useCases": ["Marks the launch of a project", "Shows a rocket leaving the ground"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

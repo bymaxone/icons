@@ -24,3 +24,6 @@ export const CalendarIcon = /* @__PURE__ */ createIcon('calendar', [
   ['path', { d: 'M12.25 15h.01' }],
   ['path', { d: 'M16.25 15h.01' }]
 ])
+
+/** `calendar-month`: an alias of {@link CalendarIcon}. */
+export const CalendarMonthIcon = CalendarIcon

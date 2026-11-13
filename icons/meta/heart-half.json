@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Half heart",
+  "tags": ["heart half", "partial", "rating", "health"],
+  "categories": ["emotions", "health"],
+  "useCases": ["Shows half of a health bar", "Marks a partial rating"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

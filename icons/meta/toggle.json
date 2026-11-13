@@ -4,6 +4,12 @@
   "tags": ["toggle", "switch", "on", "off"],
   "categories": ["system"],
   "useCases": ["Turns a setting on or off", "Shows the state of an option"],
+  "aliases": [
+    {
+      "name": "switch",
+      "deprecated": false
+    }
+  ],
   "variants": ["line", "filled"],
   "opticalSizes": [24],
   "since": "0.1.0"

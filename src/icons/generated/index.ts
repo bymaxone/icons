@@ -25,15 +25,21 @@ export {
   WarningIcon,
   WarningSmIcon
 } from '@bymax-one/icons/icons/alert-triangle'
+export { AlignBottomIcon } from '@bymax-one/icons/icons/align-bottom'
 export { AlignCenterIcon } from '@bymax-one/icons/icons/align-center'
 export { AlignJustifyIcon } from '@bymax-one/icons/icons/align-justify'
 export { AlignLeftIcon } from '@bymax-one/icons/icons/align-left'
 export { AlignRightIcon } from '@bymax-one/icons/icons/align-right'
+export { AlignTopIcon } from '@bymax-one/icons/icons/align-top'
+export { AlignVerticalCenterIcon } from '@bymax-one/icons/icons/align-vertical-center'
 export { AmbulanceIcon } from '@bymax-one/icons/icons/ambulance'
 export { AnchorIcon } from '@bymax-one/icons/icons/anchor'
+export { AngleIcon } from '@bymax-one/icons/icons/angle'
+export { AntennaIcon } from '@bymax-one/icons/icons/antenna'
 export { ApertureIcon } from '@bymax-one/icons/icons/aperture'
 export { AppsIcon } from '@bymax-one/icons/icons/apps'
 export { ArchiveBoxIcon, ArchiveIcon } from '@bymax-one/icons/icons/archive-box'
+export { ArmchairIcon } from '@bymax-one/icons/icons/armchair'
 export { ArrowDownIcon } from '@bymax-one/icons/icons/arrow-down'
 export { ArrowDownCircleIcon } from '@bymax-one/icons/icons/arrow-down-circle'
 export { ArrowDownLeftIcon } from '@bymax-one/icons/icons/arrow-down-left'
@@ -66,20 +72,33 @@ export { BankIcon } from '@bymax-one/icons/icons/bank'
 export { BarcodeIcon } from '@bymax-one/icons/icons/barcode'
 export { BasketIcon } from '@bymax-one/icons/icons/basket'
 export { BasketballIcon } from '@bymax-one/icons/icons/basketball'
+export { BathtubIcon } from '@bymax-one/icons/icons/bathtub'
 export { BatteryIcon } from '@bymax-one/icons/icons/battery'
 export { BatteryChargingIcon } from '@bymax-one/icons/icons/battery-charging'
+export { BatteryEmptyIcon } from '@bymax-one/icons/icons/battery-empty'
 export { BatteryFullIcon } from '@bymax-one/icons/icons/battery-full'
 export { BatteryLowIcon } from '@bymax-one/icons/icons/battery-low'
+export { BatteryMediumIcon } from '@bymax-one/icons/icons/battery-medium'
+export { BatteryPlusIcon } from '@bymax-one/icons/icons/battery-plus'
 export { BeakerIcon } from '@bymax-one/icons/icons/beaker'
 export { BedIcon } from '@bymax-one/icons/icons/bed'
 export { BeerIcon } from '@bymax-one/icons/icons/beer'
-export { BellFilledIcon, BellIcon, BellSmIcon } from '@bymax-one/icons/icons/bell'
+export {
+  BellFilledIcon,
+  BellIcon,
+  BellSmIcon,
+  NotificationFilledIcon,
+  NotificationIcon,
+  NotificationSmIcon
+} from '@bymax-one/icons/icons/bell'
+export { BellMinusIcon } from '@bymax-one/icons/icons/bell-minus'
 export {
   BellOffFilledIcon,
   BellOffIcon,
   NotificationsOffFilledIcon,
   NotificationsOffIcon
 } from '@bymax-one/icons/icons/bell-off'
+export { BellPlusIcon } from '@bymax-one/icons/icons/bell-plus'
 export { BicycleIcon } from '@bymax-one/icons/icons/bicycle'
 export { BinocularsIcon } from '@bymax-one/icons/icons/binoculars'
 export { BlenderIcon } from '@bymax-one/icons/icons/blender'
@@ -91,33 +110,47 @@ export { BookOpenIcon } from '@bymax-one/icons/icons/book-open'
 export { BookmarkFilledIcon, BookmarkIcon } from '@bymax-one/icons/icons/bookmark'
 export { BookmarkCheckIcon } from '@bymax-one/icons/icons/bookmark-check'
 export { BookmarkMinusIcon } from '@bymax-one/icons/icons/bookmark-minus'
+export { BookmarkOffIcon } from '@bymax-one/icons/icons/bookmark-off'
+export { BookmarkPlusIcon } from '@bymax-one/icons/icons/bookmark-plus'
 export { BookmarksIcon } from '@bymax-one/icons/icons/bookmarks'
 export { BorderAllIcon } from '@bymax-one/icons/icons/border-all'
 export { BorderBottomIcon } from '@bymax-one/icons/icons/border-bottom'
+export { BorderHorizontalIcon } from '@bymax-one/icons/icons/border-horizontal'
 export { BorderInnerIcon } from '@bymax-one/icons/icons/border-inner'
 export { BorderLeftIcon } from '@bymax-one/icons/icons/border-left'
 export { BorderRightIcon } from '@bymax-one/icons/icons/border-right'
+export { BorderStyleIcon } from '@bymax-one/icons/icons/border-style'
 export { BorderTopIcon } from '@bymax-one/icons/icons/border-top'
+export { BorderVerticalIcon } from '@bymax-one/icons/icons/border-vertical'
+export { BracesIcon } from '@bymax-one/icons/icons/braces'
+export { BracketsIcon } from '@bymax-one/icons/icons/brackets'
 export { BrainIcon } from '@bymax-one/icons/icons/brain'
 export { BranchIcon, GitBranchIcon, GitForkIcon } from '@bymax-one/icons/icons/branch'
+export { BridgeIcon } from '@bymax-one/icons/icons/bridge'
 export { BriefcaseIcon, WorkIcon } from '@bymax-one/icons/icons/briefcase'
 export { BroadcastIcon } from '@bymax-one/icons/icons/broadcast'
-export { BrushIcon } from '@bymax-one/icons/icons/brush'
+export { BrushIcon, PaintBrushIcon } from '@bymax-one/icons/icons/brush'
+export { BucketIcon } from '@bymax-one/icons/icons/bucket'
 export { BugIcon } from '@bymax-one/icons/icons/bug'
 export { BuildingIcon, CompanyIcon, OrganizationIcon } from '@bymax-one/icons/icons/building'
 export { BusIcon } from '@bymax-one/icons/icons/bus'
+export { CableCarIcon } from '@bymax-one/icons/icons/cable-car'
 export { CactusIcon } from '@bymax-one/icons/icons/cactus'
 export { BirthdayIcon, CakeIcon } from '@bymax-one/icons/icons/cake'
 export { CalculatorIcon } from '@bymax-one/icons/icons/calculator'
-export { CalendarIcon } from '@bymax-one/icons/icons/calendar'
+export { CalendarIcon, CalendarMonthIcon } from '@bymax-one/icons/icons/calendar'
 export { CalendarCheckIcon } from '@bymax-one/icons/icons/calendar-check'
+export { CalendarClockIcon } from '@bymax-one/icons/icons/calendar-clock'
 export { CalendarHeartIcon } from '@bymax-one/icons/icons/calendar-heart'
 export { CalendarMinusIcon } from '@bymax-one/icons/icons/calendar-minus'
 export { CalendarPlusIcon } from '@bymax-one/icons/icons/calendar-plus'
+export { CalendarXIcon } from '@bymax-one/icons/icons/calendar-x'
 export { CameraFilledIcon, CameraIcon } from '@bymax-one/icons/icons/camera'
 export { CameraMotionIcon } from '@bymax-one/icons/icons/camera-motion'
 export { CameraOffIcon } from '@bymax-one/icons/icons/camera-off'
-export { CaptionsIcon, SubtitlesIcon } from '@bymax-one/icons/icons/captions'
+export { CameraPlusIcon } from '@bymax-one/icons/icons/camera-plus'
+export { CandleIcon } from '@bymax-one/icons/icons/candle'
+export { CaptionsIcon, ClosedCaptionIcon, SubtitlesIcon } from '@bymax-one/icons/icons/captions'
 export { CarIcon } from '@bymax-one/icons/icons/car'
 export { CaravanIcon } from '@bymax-one/icons/icons/caravan'
 export {
@@ -127,12 +160,13 @@ export {
   CreditCardIcon
 } from '@bymax-one/icons/icons/card'
 export { CarrotIcon } from '@bymax-one/icons/icons/carrot'
-export { CartIcon, ShoppingCartIcon } from '@bymax-one/icons/icons/cart'
+export { CartIcon, ShoppingCartIcon, TrolleyIcon } from '@bymax-one/icons/icons/cart'
 export { CashIcon } from '@bymax-one/icons/icons/cash'
+export { CastleIcon } from '@bymax-one/icons/icons/castle'
 export { CertificateIcon } from '@bymax-one/icons/icons/certificate'
 export { CharacterFilledIcon, CharacterIcon } from '@bymax-one/icons/icons/character'
 export { BarChartIcon, ChartBarIcon, ChartIcon } from '@bymax-one/icons/icons/chart-bar'
-export { ChartLineIcon } from '@bymax-one/icons/icons/chart-line'
+export { ChartLineIcon, GraphIcon } from '@bymax-one/icons/icons/chart-line'
 export { ChartPieIcon, PieChartIcon } from '@bymax-one/icons/icons/chart-pie'
 export { CheckIcon, CheckSmIcon } from '@bymax-one/icons/icons/check'
 export {
@@ -140,39 +174,79 @@ export {
   CheckCircleIcon,
   CheckCircleSmIcon
 } from '@bymax-one/icons/icons/check-circle'
-export { CheckSquareFilledIcon, CheckSquareIcon } from '@bymax-one/icons/icons/check-square'
+export {
+  CheckSquareFilledIcon,
+  CheckSquareIcon,
+  CheckboxFilledIcon,
+  CheckboxIcon
+} from '@bymax-one/icons/icons/check-square'
 export { CheeseIcon } from '@bymax-one/icons/icons/cheese'
 export { ChefHatIcon } from '@bymax-one/icons/icons/chef-hat'
+export { ChessBishopIcon } from '@bymax-one/icons/icons/chess-bishop'
+export { ChessKingIcon } from '@bymax-one/icons/icons/chess-king'
 export { ChessKnightIcon, StrategyIcon } from '@bymax-one/icons/icons/chess-knight'
-export { ChevronDownIcon, ChevronDownSmIcon } from '@bymax-one/icons/icons/chevron-down'
+export { ChessPawnIcon } from '@bymax-one/icons/icons/chess-pawn'
+export { ChessQueenIcon } from '@bymax-one/icons/icons/chess-queen'
+export { ChessRookIcon } from '@bymax-one/icons/icons/chess-rook'
+export {
+  CaretDownIcon,
+  CaretDownSmIcon,
+  ChevronDownIcon,
+  ChevronDownSmIcon
+} from '@bymax-one/icons/icons/chevron-down'
 export { ChevronLeftIcon, ChevronLeftSmIcon } from '@bymax-one/icons/icons/chevron-left'
 export { ChevronRightIcon, ChevronRightSmIcon } from '@bymax-one/icons/icons/chevron-right'
-export { ChevronUpIcon, ChevronUpSmIcon } from '@bymax-one/icons/icons/chevron-up'
+export {
+  CaretUpIcon,
+  CaretUpSmIcon,
+  ChevronUpIcon,
+  ChevronUpSmIcon
+} from '@bymax-one/icons/icons/chevron-up'
 export { ChevronsUpDownIcon } from '@bymax-one/icons/icons/chevrons-up-down'
 export { CircleIcon } from '@bymax-one/icons/icons/circle'
 export { BanIcon, CircleSlashIcon } from '@bymax-one/icons/icons/circle-slash'
+export { CityIcon } from '@bymax-one/icons/icons/city'
 export { ClipboardIcon } from '@bymax-one/icons/icons/clipboard'
 export { ClipboardCheckIcon } from '@bymax-one/icons/icons/clipboard-check'
+export { ClipboardMinusIcon } from '@bymax-one/icons/icons/clipboard-minus'
 export { ClipboardPlusIcon } from '@bymax-one/icons/icons/clipboard-plus'
-export { ClockFilledIcon, ClockIcon } from '@bymax-one/icons/icons/clock'
+export { ClipboardXIcon } from '@bymax-one/icons/icons/clipboard-x'
+export { ClockFilledIcon, ClockIcon, TimeFilledIcon, TimeIcon } from '@bymax-one/icons/icons/clock'
+export { ClockCheckIcon } from '@bymax-one/icons/icons/clock-check'
+export { ClockPlusIcon } from '@bymax-one/icons/icons/clock-plus'
 export { CloseIcon, CloseSmIcon } from '@bymax-one/icons/icons/close'
-export { CloseCircleIcon, XCircleIcon } from '@bymax-one/icons/icons/close-circle'
+export { CancelIcon, CloseCircleIcon, XCircleIcon } from '@bymax-one/icons/icons/close-circle'
 export { CloudIcon } from '@bymax-one/icons/icons/cloud'
 export { CloudCheckFilledIcon, CloudCheckIcon } from '@bymax-one/icons/icons/cloud-check'
-export { CloudDownloadIcon } from '@bymax-one/icons/icons/cloud-download'
+export {
+  CloudArrowDownIcon,
+  CloudDownloadIcon,
+  DownloadCloudIcon
+} from '@bymax-one/icons/icons/cloud-download'
+export { CloudFogIcon } from '@bymax-one/icons/icons/cloud-fog'
 export { CloudLightningIcon } from '@bymax-one/icons/icons/cloud-lightning'
+export { CloudMoonIcon } from '@bymax-one/icons/icons/cloud-moon'
 export { CloudOffIcon } from '@bymax-one/icons/icons/cloud-off'
 export { CloudRainIcon } from '@bymax-one/icons/icons/cloud-rain'
 export { CloudSnowIcon } from '@bymax-one/icons/icons/cloud-snow'
-export { CloudUploadIcon } from '@bymax-one/icons/icons/cloud-upload'
-export { CodeIcon, HtmlIcon } from '@bymax-one/icons/icons/code'
+export { CloudSunIcon } from '@bymax-one/icons/icons/cloud-sun'
+export { CloudSyncIcon } from '@bymax-one/icons/icons/cloud-sync'
+export {
+  CloudArrowUpIcon,
+  CloudUploadIcon,
+  UploadCloudIcon
+} from '@bymax-one/icons/icons/cloud-upload'
+export { CloudyIcon } from '@bymax-one/icons/icons/cloudy'
+export { ClubIcon } from '@bymax-one/icons/icons/club'
+export { ApiIcon, CodeIcon, HtmlIcon } from '@bymax-one/icons/icons/code'
 export { CoffeeIcon } from '@bymax-one/icons/icons/coffee'
-export { CoinsIcon, MoneyIcon } from '@bymax-one/icons/icons/coins'
+export { CoinIcon, CoinsIcon, MoneyIcon } from '@bymax-one/icons/icons/coins'
 export { ColumnsIcon, LayoutIcon } from '@bymax-one/icons/icons/columns'
 export { CommandIcon } from '@bymax-one/icons/icons/command'
 export { CommitIcon, GitCommitIcon } from '@bymax-one/icons/icons/commit'
 export { CompassIcon, ExploreIcon } from '@bymax-one/icons/icons/compass'
 export { ConeIcon } from '@bymax-one/icons/icons/cone'
+export { ContractIcon } from '@bymax-one/icons/icons/contract'
 export { ContrastIcon } from '@bymax-one/icons/icons/contrast'
 export { CookieIcon } from '@bymax-one/icons/icons/cookie'
 export { CopyIcon, CopySmIcon } from '@bymax-one/icons/icons/copy'
@@ -187,15 +261,17 @@ export { CornerRightUpIcon } from '@bymax-one/icons/icons/corner-right-up'
 export { CornerUpLeftIcon } from '@bymax-one/icons/icons/corner-up-left'
 export { CornerUpRightIcon } from '@bymax-one/icons/icons/corner-up-right'
 export { CpuIcon } from '@bymax-one/icons/icons/cpu'
+export { CraneIcon } from '@bymax-one/icons/icons/crane'
 export { CropIcon } from '@bymax-one/icons/icons/crop'
 export { CrosshairIcon, LocateIcon } from '@bymax-one/icons/icons/crosshair'
 export { CrownFilledIcon, CrownIcon } from '@bymax-one/icons/icons/crown'
+export { CurrencyBitcoinIcon } from '@bymax-one/icons/icons/currency-bitcoin'
 export { CurrencyDollarIcon } from '@bymax-one/icons/icons/currency-dollar'
 export { CurrencyEuroIcon } from '@bymax-one/icons/icons/currency-euro'
 export { CurrencyPoundIcon } from '@bymax-one/icons/icons/currency-pound'
 export { CurrencyRealIcon } from '@bymax-one/icons/icons/currency-real'
 export { CurrencyRupeeIcon } from '@bymax-one/icons/icons/currency-rupee'
-export { CursorIcon } from '@bymax-one/icons/icons/cursor'
+export { CursorIcon, SelectIcon } from '@bymax-one/icons/icons/cursor'
 export { CursorTextIcon } from '@bymax-one/icons/icons/cursor-text'
 export {
   DashboardFilledIcon,
@@ -206,9 +282,14 @@ export {
   LayoutGridSmIcon
 } from '@bymax-one/icons/icons/dashboard'
 export { CylinderIcon, DatabaseIcon } from '@bymax-one/icons/icons/database'
+export { DatabaseCheckIcon } from '@bymax-one/icons/icons/database-check'
+export { DatabaseExportIcon } from '@bymax-one/icons/icons/database-export'
 export { DatabaseSearchIcon } from '@bymax-one/icons/icons/database-search'
 export { DeskIcon } from '@bymax-one/icons/icons/desk'
-export { DiamondIcon } from '@bymax-one/icons/icons/diamond'
+export { DevicesIcon } from '@bymax-one/icons/icons/devices'
+export { DialpadIcon } from '@bymax-one/icons/icons/dialpad'
+export { DiameterIcon } from '@bymax-one/icons/icons/diameter'
+export { DiamondIcon, DiamondSuitIcon } from '@bymax-one/icons/icons/diamond'
 export { DiceIcon, RandomIcon } from '@bymax-one/icons/icons/dice'
 export { AlbumIcon, CdIcon, DiscIcon } from '@bymax-one/icons/icons/disc'
 export { DivideIcon } from '@bymax-one/icons/icons/divide'
@@ -221,22 +302,34 @@ export { AccentIcon, DropletIcon } from '@bymax-one/icons/icons/droplet'
 export { DuplicateIcon, DuplicateSmIcon } from '@bymax-one/icons/icons/duplicate'
 export { DurationIcon } from '@bymax-one/icons/icons/duration'
 export { EarIcon } from '@bymax-one/icons/icons/ear'
+export { EarbudsIcon } from '@bymax-one/icons/icons/earbuds'
 export { EggIcon } from '@bymax-one/icons/icons/egg'
 export { EjectIcon } from '@bymax-one/icons/icons/eject'
 export { ElevatorIcon } from '@bymax-one/icons/icons/elevator'
 export { EqualIcon, EqualsIcon } from '@bymax-one/icons/icons/equal'
+export { EqualizerIcon } from '@bymax-one/icons/icons/equalizer'
 export { EraserIcon } from '@bymax-one/icons/icons/eraser'
+export { EvStationIcon } from '@bymax-one/icons/icons/ev-station'
 export { ExportVideoIcon } from '@bymax-one/icons/icons/export-video'
 export { ExtendIcon } from '@bymax-one/icons/icons/extend'
-export { EyeFilledIcon, EyeIcon, EyeSmIcon } from '@bymax-one/icons/icons/eye'
+export {
+  EyeFilledIcon,
+  EyeIcon,
+  EyeSmIcon,
+  ViewFilledIcon,
+  ViewIcon,
+  ViewSmIcon
+} from '@bymax-one/icons/icons/eye'
 export { EyeClosedIcon } from '@bymax-one/icons/icons/eye-closed'
 export { EyeOffIcon, EyeOffSmIcon } from '@bymax-one/icons/icons/eye-off'
+export { FaceIdIcon } from '@bymax-one/icons/icons/face-id'
 export { FactoryIcon } from '@bymax-one/icons/icons/factory'
 export { FanIcon } from '@bymax-one/icons/icons/fan'
 export { FastForwardIcon } from '@bymax-one/icons/icons/fast-forward'
 export { FeatherIcon } from '@bymax-one/icons/icons/feather'
 export { FeedIcon, RssIcon } from '@bymax-one/icons/icons/feed'
 export { FeedbackIcon } from '@bymax-one/icons/icons/feedback'
+export { FenceIcon } from '@bymax-one/icons/icons/fence'
 export { FileFilledIcon, FileIcon, FileSmIcon } from '@bymax-one/icons/icons/file'
 export {
   FileAudioIcon,
@@ -244,9 +337,12 @@ export {
   FileMusicIcon,
   FileMusicSmIcon
 } from '@bymax-one/icons/icons/file-audio'
+export { FileChartIcon } from '@bymax-one/icons/icons/file-chart'
 export { FileCheckIcon } from '@bymax-one/icons/icons/file-check'
+export { FileCloudIcon } from '@bymax-one/icons/icons/file-cloud'
 export { FileCodeIcon } from '@bymax-one/icons/icons/file-code'
 export { FileDownloadIcon } from '@bymax-one/icons/icons/file-download'
+export { FileEditIcon } from '@bymax-one/icons/icons/file-edit'
 export { ExportIcon, FileExportIcon } from '@bymax-one/icons/icons/file-export'
 export { FileImageIcon } from '@bymax-one/icons/icons/file-image'
 export { FileImportIcon, ImportIcon } from '@bymax-one/icons/icons/file-import'
@@ -254,7 +350,8 @@ export { FileLockIcon } from '@bymax-one/icons/icons/file-lock'
 export { FileMinusIcon } from '@bymax-one/icons/icons/file-minus'
 export { FilePlusIcon } from '@bymax-one/icons/icons/file-plus'
 export { FileSearchIcon } from '@bymax-one/icons/icons/file-search'
-export { FileTextIcon, PdfIcon } from '@bymax-one/icons/icons/file-text'
+export { ArticleIcon, FileTextIcon, PdfIcon, PostIcon } from '@bymax-one/icons/icons/file-text'
+export { FileUploadIcon } from '@bymax-one/icons/icons/file-upload'
 export { FileVideoIcon, FileVideoSmIcon } from '@bymax-one/icons/icons/file-video'
 export { FileXIcon } from '@bymax-one/icons/icons/file-x'
 export { FileZipIcon } from '@bymax-one/icons/icons/file-zip'
@@ -266,6 +363,7 @@ export { FireIcon } from '@bymax-one/icons/icons/fire'
 export { FireExtinguisherIcon } from '@bymax-one/icons/icons/fire-extinguisher'
 export { FishIcon } from '@bymax-one/icons/icons/fish'
 export { FlagFilledIcon, FlagIcon } from '@bymax-one/icons/icons/flag'
+export { FlagOffIcon } from '@bymax-one/icons/icons/flag-off'
 export { FlashlightIcon } from '@bymax-one/icons/icons/flashlight'
 export { FlaskIcon } from '@bymax-one/icons/icons/flask'
 export { FlipHorizontalIcon } from '@bymax-one/icons/icons/flip-horizontal'
@@ -274,8 +372,11 @@ export { FloppyDiskIcon, SaveIcon } from '@bymax-one/icons/icons/floppy-disk'
 export { FlowerIcon } from '@bymax-one/icons/icons/flower'
 export { FolderFilledIcon, FolderIcon } from '@bymax-one/icons/icons/folder'
 export { FolderCheckIcon } from '@bymax-one/icons/icons/folder-check'
+export { FolderCodeIcon } from '@bymax-one/icons/icons/folder-code'
+export { FolderDownloadIcon } from '@bymax-one/icons/icons/folder-download'
 export { FolderLockIcon } from '@bymax-one/icons/icons/folder-lock'
 export { FolderMinusIcon } from '@bymax-one/icons/icons/folder-minus'
+export { FolderOffIcon } from '@bymax-one/icons/icons/folder-off'
 export { FolderOpenIcon } from '@bymax-one/icons/icons/folder-open'
 export { FolderPlusIcon } from '@bymax-one/icons/icons/folder-plus'
 export { FolderSearchIcon } from '@bymax-one/icons/icons/folder-search'
@@ -287,6 +388,10 @@ export {
   FoldersIcon,
   FoldersSmIcon
 } from '@bymax-one/icons/icons/folder-stack'
+export { FolderUserIcon } from '@bymax-one/icons/icons/folder-user'
+export { FolderXIcon } from '@bymax-one/icons/icons/folder-x'
+export { FolderZipIcon } from '@bymax-one/icons/icons/folder-zip'
+export { ForkliftIcon } from '@bymax-one/icons/icons/forklift'
 export { ForwardIcon } from '@bymax-one/icons/icons/forward'
 export { FrameIcon, FrameSmIcon } from '@bymax-one/icons/icons/frame'
 export { FridgeIcon } from '@bymax-one/icons/icons/fridge'
@@ -295,11 +400,12 @@ export { FormulaIcon, FunctionIcon } from '@bymax-one/icons/icons/function'
 export { GamepadIcon } from '@bymax-one/icons/icons/gamepad'
 export { GarageIcon } from '@bymax-one/icons/icons/garage'
 export { GavelIcon } from '@bymax-one/icons/icons/gavel'
-export { GenerateIcon } from '@bymax-one/icons/icons/generate'
+export { GenerateIcon, MagicWandIcon } from '@bymax-one/icons/icons/generate'
 export { GhostIcon } from '@bymax-one/icons/icons/ghost'
 export { GifIcon } from '@bymax-one/icons/icons/gif'
 export { GiftIcon } from '@bymax-one/icons/icons/gift'
 export { GitCompareIcon } from '@bymax-one/icons/icons/git-compare'
+export { GitPullRequestClosedIcon } from '@bymax-one/icons/icons/git-pull-request-closed'
 export { GlassesIcon } from '@bymax-one/icons/icons/glasses'
 export { EarthIcon, GlobeIcon, LanguageIcon } from '@bymax-one/icons/icons/globe'
 export { GolfIcon } from '@bymax-one/icons/icons/golf'
@@ -308,11 +414,29 @@ export { GripIcon } from '@bymax-one/icons/icons/grip'
 export { HammerIcon } from '@bymax-one/icons/icons/hammer'
 export { HandIcon } from '@bymax-one/icons/icons/hand'
 export { HardDriveIcon } from '@bymax-one/icons/icons/hard-drive'
+export { HdIcon } from '@bymax-one/icons/icons/hd'
+export { HdrIcon } from '@bymax-one/icons/icons/hdr'
 export { HeadingIcon } from '@bymax-one/icons/icons/heading'
 export { HeadphonesIcon, HeadsetIcon } from '@bymax-one/icons/icons/headphones'
-export { HeartFilledIcon, HeartIcon } from '@bymax-one/icons/icons/heart'
+export { HeadsetOffIcon } from '@bymax-one/icons/icons/headset-off'
+export {
+  HeartFilledIcon,
+  HeartIcon,
+  HeartsFilledIcon,
+  HeartsIcon
+} from '@bymax-one/icons/icons/heart'
+export { HeartHalfIcon } from '@bymax-one/icons/icons/heart-half'
+export { HeartMinusIcon } from '@bymax-one/icons/icons/heart-minus'
+export { HeartPlusIcon } from '@bymax-one/icons/icons/heart-plus'
+export { HeartPulseIcon } from '@bymax-one/icons/icons/heart-pulse'
 export { HelicopterIcon } from '@bymax-one/icons/icons/helicopter'
-export { HelpCircleIcon, HelpIcon, QuestionMarkIcon } from '@bymax-one/icons/icons/help'
+export {
+  HelpCircleIcon,
+  HelpIcon,
+  QuestionIcon,
+  QuestionMarkIcon
+} from '@bymax-one/icons/icons/help'
+export { HelpSquareIcon } from '@bymax-one/icons/icons/help-square'
 export { HexagonIcon } from '@bymax-one/icons/icons/hexagon'
 export { HistoryIcon } from '@bymax-one/icons/icons/history'
 export {
@@ -324,19 +448,37 @@ export {
   HouseSmIcon
 } from '@bymax-one/icons/icons/home'
 export { HospitalIcon } from '@bymax-one/icons/icons/hospital'
+export { HotelIcon } from '@bymax-one/icons/icons/hotel'
 export { HourglassIcon, QueuedIcon } from '@bymax-one/icons/icons/hourglass'
 export { IceCreamIcon } from '@bymax-one/icons/icons/ice-cream'
 export { IdCardIcon } from '@bymax-one/icons/icons/id-card'
-export { ImageFilledIcon, ImageIcon } from '@bymax-one/icons/icons/image'
+export {
+  ImageFilledIcon,
+  ImageIcon,
+  WallpaperFilledIcon,
+  WallpaperIcon
+} from '@bymax-one/icons/icons/image'
 export { InboxIcon } from '@bymax-one/icons/icons/inbox'
 export { InfinityIcon } from '@bymax-one/icons/icons/infinity'
-export { InfoFilledIcon, InfoIcon, InfoSmIcon } from '@bymax-one/icons/icons/info'
+export {
+  DetailsFilledIcon,
+  DetailsIcon,
+  DetailsSmIcon,
+  InfoCircleFilledIcon,
+  InfoCircleIcon,
+  InfoCircleSmIcon,
+  InfoFilledIcon,
+  InfoIcon,
+  InfoSmIcon
+} from '@bymax-one/icons/icons/info'
 export { ItalicIcon } from '@bymax-one/icons/icons/italic'
 export { JoystickIcon } from '@bymax-one/icons/icons/joystick'
 export { KanbanIcon } from '@bymax-one/icons/icons/kanban'
 export { KeyIcon } from '@bymax-one/icons/icons/key'
 export { KeyboardIcon } from '@bymax-one/icons/icons/keyboard'
+export { KeyboardOffIcon } from '@bymax-one/icons/icons/keyboard-off'
 export { KeyframeIcon } from '@bymax-one/icons/icons/keyframe'
+export { LadderIcon } from '@bymax-one/icons/icons/ladder'
 export { LampIcon } from '@bymax-one/icons/icons/lamp'
 export { ComputerIcon, LaptopIcon } from '@bymax-one/icons/icons/laptop'
 export {
@@ -345,10 +487,12 @@ export {
   StackFilledIcon,
   StackIcon
 } from '@bymax-one/icons/icons/layers'
+export { LayoutRightIcon } from '@bymax-one/icons/icons/layout-right'
 export { LeafIcon } from '@bymax-one/icons/icons/leaf'
 export { LibraryFilledIcon, LibraryIcon, LibrarySmIcon } from '@bymax-one/icons/icons/library'
 export { LifebuoyIcon } from '@bymax-one/icons/icons/lifebuoy'
 export { LightbulbIcon } from '@bymax-one/icons/icons/lightbulb'
+export { LighthouseIcon } from '@bymax-one/icons/icons/lighthouse'
 export {
   BoltFilledIcon,
   BoltIcon,
@@ -368,6 +512,7 @@ export {
   LightningStackIcon
 } from '@bymax-one/icons/icons/lightning-stack'
 export { LinkIcon } from '@bymax-one/icons/icons/link'
+export { LinkOffIcon, UnlinkIcon } from '@bymax-one/icons/icons/link-off'
 export { LipSyncIcon } from '@bymax-one/icons/icons/lip-sync'
 export { ListIcon } from '@bymax-one/icons/icons/list'
 export { LoaderIcon, LoaderSmIcon } from '@bymax-one/icons/icons/loader'
@@ -380,7 +525,7 @@ export { LoopIcon, RepeatIcon, ReplayIcon } from '@bymax-one/icons/icons/loop'
 export { LuggageIcon } from '@bymax-one/icons/icons/luggage'
 export { LungsIcon } from '@bymax-one/icons/icons/lungs'
 export { MagnetIcon } from '@bymax-one/icons/icons/magnet'
-export { EmailIcon, MailIcon } from '@bymax-one/icons/icons/mail'
+export { EmailIcon, EnvelopeIcon, MailIcon } from '@bymax-one/icons/icons/mail'
 export { MailInviteIcon } from '@bymax-one/icons/icons/mail-invite'
 export { MailOpenIcon } from '@bymax-one/icons/icons/mail-open'
 export { MailboxIcon } from '@bymax-one/icons/icons/mailbox'
@@ -391,6 +536,7 @@ export {
   MapPinFilledIcon,
   MapPinIcon
 } from '@bymax-one/icons/icons/map-pin'
+export { MapPinPlusIcon } from '@bymax-one/icons/icons/map-pin-plus'
 export { MaskIcon } from '@bymax-one/icons/icons/mask'
 export { MedalIcon } from '@bymax-one/icons/icons/medal'
 export { AnnouncementIcon, MegaphoneIcon } from '@bymax-one/icons/icons/megaphone'
@@ -400,9 +546,14 @@ export { GitMergeIcon, MergeIcon } from '@bymax-one/icons/icons/merge'
 export {
   ChatFilledIcon,
   ChatIcon,
+  CommentFilledIcon,
+  CommentIcon,
+  MessageCircleFilledIcon,
+  MessageCircleIcon,
   MessageFilledIcon,
   MessageIcon
 } from '@bymax-one/icons/icons/message'
+export { MetronomeIcon } from '@bymax-one/icons/icons/metronome'
 export {
   MicFilledIcon,
   MicIcon,
@@ -446,10 +597,12 @@ export {
 } from '@bymax-one/icons/icons/octopus'
 export { OptionIcon } from '@bymax-one/icons/icons/option'
 export { OrbitIcon } from '@bymax-one/icons/icons/orbit'
+export { OutletIcon } from '@bymax-one/icons/icons/outlet'
 export { BoxIcon, PackageIcon } from '@bymax-one/icons/icons/package'
 export { PaletteIcon } from '@bymax-one/icons/icons/palette'
 export { PaperPlaneIcon, SendIcon } from '@bymax-one/icons/icons/paper-plane'
 export { AttachmentIcon, PaperclipIcon } from '@bymax-one/icons/icons/paperclip'
+export { ParkingIcon } from '@bymax-one/icons/icons/parking'
 export { PauseFilledIcon, PauseIcon } from '@bymax-one/icons/icons/pause'
 export { PauseCircleIcon } from '@bymax-one/icons/icons/pause-circle'
 export { PenIcon } from '@bymax-one/icons/icons/pen'
@@ -466,8 +619,10 @@ export {
   PhoneOffIcon
 } from '@bymax-one/icons/icons/phone-hang-up'
 export { PhoneIncomingIcon } from '@bymax-one/icons/icons/phone-incoming'
+export { PhoneMissedIcon } from '@bymax-one/icons/icons/phone-missed'
 export { PhoneOutgoingIcon } from '@bymax-one/icons/icons/phone-outgoing'
 export { PhonePlusIcon } from '@bymax-one/icons/icons/phone-plus'
+export { PiIcon } from '@bymax-one/icons/icons/pi'
 export { PianoIcon } from '@bymax-one/icons/icons/piano'
 export { PictureInPictureIcon } from '@bymax-one/icons/icons/picture-in-picture'
 export { PiggyBankIcon } from '@bymax-one/icons/icons/piggy-bank'
@@ -477,14 +632,18 @@ export { PizzaIcon } from '@bymax-one/icons/icons/pizza'
 export { PlanetIcon } from '@bymax-one/icons/icons/planet'
 export { PlayFilledIcon, PlayIcon } from '@bymax-one/icons/icons/play'
 export { PlayCircleIcon } from '@bymax-one/icons/icons/play-circle'
+export { PlayPauseIcon } from '@bymax-one/icons/icons/play-pause'
 export { CardsIcon, PlayingCardsIcon } from '@bymax-one/icons/icons/playing-cards'
 export { PlaylistIcon } from '@bymax-one/icons/icons/playlist'
 export { PlugIcon } from '@bymax-one/icons/icons/plug'
-export { PlusIcon, PlusSmIcon } from '@bymax-one/icons/icons/plus'
-export { PlusCircleIcon } from '@bymax-one/icons/icons/plus-circle'
+export { AddIcon, AddSmIcon, PlusIcon, PlusSmIcon } from '@bymax-one/icons/icons/plus'
+export { AddCircleIcon, PlusCircleIcon } from '@bymax-one/icons/icons/plus-circle'
+export { PlusMinusIcon } from '@bymax-one/icons/icons/plus-minus'
 export { PlusSquareIcon } from '@bymax-one/icons/icons/plus-square'
 export { PodcastIcon } from '@bymax-one/icons/icons/podcast'
 export { PodiumIcon } from '@bymax-one/icons/icons/podium'
+export { PokerChipIcon } from '@bymax-one/icons/icons/poker-chip'
+export { PoolIcon } from '@bymax-one/icons/icons/pool'
 export { PowerIcon } from '@bymax-one/icons/icons/power'
 export { PrescriptionIcon } from '@bymax-one/icons/icons/prescription'
 export { PresentationIcon, SlidesIcon } from '@bymax-one/icons/icons/presentation'
@@ -497,28 +656,37 @@ export { QrCodeIcon } from '@bymax-one/icons/icons/qr-code'
 export { QuoteIcon } from '@bymax-one/icons/icons/quote'
 export { RadarIcon } from '@bymax-one/icons/icons/radar'
 export { RadioIcon } from '@bymax-one/icons/icons/radio'
+export { RadiusIcon } from '@bymax-one/icons/icons/radius'
 export { RainbowIcon } from '@bymax-one/icons/icons/rainbow'
-export { ReceiptIcon } from '@bymax-one/icons/icons/receipt'
+export { InvoiceIcon, ReceiptIcon } from '@bymax-one/icons/icons/receipt'
+export { RecordIcon } from '@bymax-one/icons/icons/record'
 export { RectangleIcon } from '@bymax-one/icons/icons/rectangle'
 export { RecycleIcon } from '@bymax-one/icons/icons/recycle'
 export { RedoIcon } from '@bymax-one/icons/icons/redo'
 export { ReferenceCardIcon } from '@bymax-one/icons/icons/reference-card'
-export { RefreshIcon } from '@bymax-one/icons/icons/refresh'
+export { RefreshIcon, ReloadIcon, RestartIcon } from '@bymax-one/icons/icons/refresh'
 export { RegenerateIcon } from '@bymax-one/icons/icons/regenerate'
+export { RegexIcon } from '@bymax-one/icons/icons/regex'
 export { RenderIcon } from '@bymax-one/icons/icons/render'
 export { RepairIcon, WrenchIcon } from '@bymax-one/icons/icons/repair'
+export { RepeatOffIcon } from '@bymax-one/icons/icons/repeat-off'
 export { ReplyIcon } from '@bymax-one/icons/icons/reply'
 export { ReplyAllIcon } from '@bymax-one/icons/icons/reply-all'
 export { ResizeIcon, ResolutionIcon } from '@bymax-one/icons/icons/resolution'
+export { RestaurantIcon } from '@bymax-one/icons/icons/restaurant'
 export { RewindIcon } from '@bymax-one/icons/icons/rewind'
 export { RoadIcon } from '@bymax-one/icons/icons/road'
 export { AgentIcon, RobotIcon } from '@bymax-one/icons/icons/robot'
 export { LaunchIcon, RocketIcon } from '@bymax-one/icons/icons/rocket'
+export { RocketLaunchIcon } from '@bymax-one/icons/icons/rocket-launch'
 export { RoleIcon } from '@bymax-one/icons/icons/role'
+export { RotateLeftIcon } from '@bymax-one/icons/icons/rotate-left'
+export { RotateRightIcon } from '@bymax-one/icons/icons/rotate-right'
 export { RouteIcon } from '@bymax-one/icons/icons/route'
 export { RouterIcon } from '@bymax-one/icons/icons/router'
 export { RulerIcon } from '@bymax-one/icons/icons/ruler'
 export { SafeIcon } from '@bymax-one/icons/icons/safe'
+export { SailboatIcon } from '@bymax-one/icons/icons/sailboat'
 export { SatelliteDishIcon, SatelliteIcon } from '@bymax-one/icons/icons/satellite-dish'
 export { ScaleIcon } from '@bymax-one/icons/icons/scale'
 export { ScanIcon } from '@bymax-one/icons/icons/scan'
@@ -528,6 +696,7 @@ export { ScissorsIcon } from '@bymax-one/icons/icons/scissors'
 export { ScooterIcon } from '@bymax-one/icons/icons/scooter'
 export { AirplayIcon, CastIcon, ScreenCastIcon } from '@bymax-one/icons/icons/screen-cast'
 export { ScriptIcon, ScriptSmIcon } from '@bymax-one/icons/icons/script'
+export { SdCardIcon } from '@bymax-one/icons/icons/sd-card'
 export { SearchIcon, SearchSmIcon } from '@bymax-one/icons/icons/search'
 export { ServerIcon } from '@bymax-one/icons/icons/server'
 export { SettingsFilledIcon, SettingsIcon, SettingsSmIcon } from '@bymax-one/icons/icons/settings'
@@ -535,13 +704,23 @@ export { ShapesIcon, VariationsIcon } from '@bymax-one/icons/icons/shapes'
 export { ShareIcon, ShareSmIcon } from '@bymax-one/icons/icons/share'
 export { ShieldIcon } from '@bymax-one/icons/icons/shield'
 export { ShieldCheckFilledIcon, ShieldCheckIcon } from '@bymax-one/icons/icons/shield-check'
+export { ShieldHalfIcon } from '@bymax-one/icons/icons/shield-half'
 export { ShieldLockIcon } from '@bymax-one/icons/icons/shield-lock'
+export { ShieldMinusIcon } from '@bymax-one/icons/icons/shield-minus'
 export { ShieldOffIcon } from '@bymax-one/icons/icons/shield-off'
 export { ShieldPlusIcon } from '@bymax-one/icons/icons/shield-plus'
+export { ShieldQuestionIcon } from '@bymax-one/icons/icons/shield-question'
+export { ShieldStarIcon } from '@bymax-one/icons/icons/shield-star'
 export { ShirtIcon } from '@bymax-one/icons/icons/shirt'
 export { ShotIcon } from '@bymax-one/icons/icons/shot'
+export { ShovelIcon } from '@bymax-one/icons/icons/shovel'
 export { ShuffleIcon } from '@bymax-one/icons/icons/shuffle'
-export { SidebarIcon, SidebarSmIcon } from '@bymax-one/icons/icons/sidebar'
+export {
+  LayoutLeftIcon,
+  LayoutLeftSmIcon,
+  SidebarIcon,
+  SidebarSmIcon
+} from '@bymax-one/icons/icons/sidebar'
 export { SignalIcon } from '@bymax-one/icons/icons/signal'
 export { SignIcon, SignatureIcon } from '@bymax-one/icons/icons/signature'
 export { DirectionsIcon, SignpostIcon } from '@bymax-one/icons/icons/signpost'
@@ -556,6 +735,7 @@ export { SnailIcon } from '@bymax-one/icons/icons/snail'
 export { SnowflakeIcon } from '@bymax-one/icons/icons/snowflake'
 export { SofaIcon } from '@bymax-one/icons/icons/sofa'
 export { SolarPanelIcon, SolarPowerIcon } from '@bymax-one/icons/icons/solar-panel'
+export { SpadeIcon } from '@bymax-one/icons/icons/spade'
 export {
   SparkleFilledIcon,
   SparkleIcon,
@@ -582,22 +762,28 @@ export { StickerIcon } from '@bymax-one/icons/icons/sticker'
 export { StopIcon } from '@bymax-one/icons/icons/stop'
 export { StopCircleIcon } from '@bymax-one/icons/icons/stop-circle'
 export { StopwatchIcon, TimerIcon } from '@bymax-one/icons/icons/stopwatch'
-export { ShopIcon, StoreIcon } from '@bymax-one/icons/icons/store'
+export { ShopIcon, StoreIcon, StorefrontIcon } from '@bymax-one/icons/icons/store'
 export { StoryboardIcon } from '@bymax-one/icons/icons/storyboard'
 export { StrikethroughIcon } from '@bymax-one/icons/icons/strikethrough'
 export { StyleIcon } from '@bymax-one/icons/icons/style'
 export { SubscriptIcon } from '@bymax-one/icons/icons/subscript'
 export { SubwayIcon } from '@bymax-one/icons/icons/subway'
-export { SunFilledIcon, SunIcon } from '@bymax-one/icons/icons/sun'
+export {
+  BrightnessFilledIcon,
+  BrightnessIcon,
+  SunFilledIcon,
+  SunIcon
+} from '@bymax-one/icons/icons/sun'
 export { SunglassesIcon } from '@bymax-one/icons/icons/sunglasses'
 export { SunriseIcon } from '@bymax-one/icons/icons/sunrise'
 export { SunsetIcon } from '@bymax-one/icons/icons/sunset'
 export { SuperscriptIcon } from '@bymax-one/icons/icons/superscript'
 export { SwordIcon } from '@bymax-one/icons/icons/sword'
-export { TableIcon } from '@bymax-one/icons/icons/table'
+export { FileSpreadsheetIcon, TableIcon } from '@bymax-one/icons/icons/table'
 export { TabletIcon } from '@bymax-one/icons/icons/tablet'
-export { LabelIcon, PriceTagIcon, TagIcon } from '@bymax-one/icons/icons/tag'
+export { LabelIcon, PriceTagIcon, TagIcon, TagsIcon } from '@bymax-one/icons/icons/tag'
 export { TargetIcon } from '@bymax-one/icons/icons/target'
+export { TaxiIcon } from '@bymax-one/icons/icons/taxi'
 export { TelescopeIcon } from '@bymax-one/icons/icons/telescope'
 export {
   TemplatesFilledIcon,
@@ -611,22 +797,35 @@ export { TemperatureIcon, ThermometerIcon } from '@bymax-one/icons/icons/thermom
 export {
   DislikeFilledIcon,
   DislikeIcon,
+  ThumbDownFilledIcon,
+  ThumbDownIcon,
   ThumbsDownFilledIcon,
   ThumbsDownIcon
 } from '@bymax-one/icons/icons/thumbs-down'
 export {
   LikeFilledIcon,
   LikeIcon,
+  ThumbUpFilledIcon,
+  ThumbUpIcon,
   ThumbsUpFilledIcon,
   ThumbsUpIcon
 } from '@bymax-one/icons/icons/thumbs-up'
 export { TicketIcon } from '@bymax-one/icons/icons/ticket'
 export { TimelineIcon, TimelineSmIcon } from '@bymax-one/icons/icons/timeline'
-export { ToggleFilledIcon, ToggleIcon } from '@bymax-one/icons/icons/toggle'
+export { TimerOffIcon } from '@bymax-one/icons/icons/timer-off'
+export {
+  SwitchFilledIcon,
+  SwitchIcon,
+  ToggleFilledIcon,
+  ToggleIcon
+} from '@bymax-one/icons/icons/toggle'
+export { ToiletIcon } from '@bymax-one/icons/icons/toilet'
 export { ToolsIcon } from '@bymax-one/icons/icons/tools'
 export { TornadoIcon } from '@bymax-one/icons/icons/tornado'
 export { TractorIcon } from '@bymax-one/icons/icons/tractor'
 export { TrademarkIcon } from '@bymax-one/icons/icons/trademark'
+export { TrafficConeIcon } from '@bymax-one/icons/icons/traffic-cone'
+export { TrafficIcon, TrafficLightIcon } from '@bymax-one/icons/icons/traffic-light'
 export { TrainIcon } from '@bymax-one/icons/icons/train'
 export { TramIcon } from '@bymax-one/icons/icons/tram'
 export { TransitionIcon } from '@bymax-one/icons/icons/transition'
@@ -644,11 +843,12 @@ export { UnderlineIcon } from '@bymax-one/icons/icons/underline'
 export { UndoIcon } from '@bymax-one/icons/icons/undo'
 export { UploadIcon, UploadSmIcon } from '@bymax-one/icons/icons/upload'
 export { UsbIcon, UsbPlugIcon } from '@bymax-one/icons/icons/usb-plug'
-export { UserFilledIcon, UserIcon } from '@bymax-one/icons/icons/user'
+export { PersonFilledIcon, PersonIcon, UserFilledIcon, UserIcon } from '@bymax-one/icons/icons/user'
 export { UserCheckIcon } from '@bymax-one/icons/icons/user-check'
 export { UserCircleIcon } from '@bymax-one/icons/icons/user-circle'
 export { UserMinusIcon } from '@bymax-one/icons/icons/user-minus'
 export { UserPlusIcon } from '@bymax-one/icons/icons/user-plus'
+export { UserSearchIcon } from '@bymax-one/icons/icons/user-search'
 export { UserSquareIcon } from '@bymax-one/icons/icons/user-square'
 export { UserStarIcon } from '@bymax-one/icons/icons/user-star'
 export { UserXIcon } from '@bymax-one/icons/icons/user-x'
@@ -667,7 +867,14 @@ export { VideoOffIcon } from '@bymax-one/icons/icons/video-off'
 export { VirusIcon } from '@bymax-one/icons/icons/virus'
 export { VoiceIcon } from '@bymax-one/icons/icons/voice'
 export { VoicemailIcon } from '@bymax-one/icons/icons/voicemail'
-export { VolumeFilledIcon, VolumeIcon, VolumeSmIcon } from '@bymax-one/icons/icons/volume'
+export {
+  VolumeFilledIcon,
+  VolumeIcon,
+  VolumeSmIcon,
+  VolumeUpFilledIcon,
+  VolumeUpIcon,
+  VolumeUpSmIcon
+} from '@bymax-one/icons/icons/volume'
 export { VolumeMuteIcon, VolumeOffIcon } from '@bymax-one/icons/icons/volume-off'
 export { WalletFilledIcon, WalletIcon, WalletSmIcon } from '@bymax-one/icons/icons/wallet'
 export { WarehouseIcon } from '@bymax-one/icons/icons/warehouse'
@@ -680,6 +887,7 @@ export { WebhookIcon } from '@bymax-one/icons/icons/webhook'
 export { WeightIcon } from '@bymax-one/icons/icons/weight'
 export { WheelchairIcon } from '@bymax-one/icons/icons/wheelchair'
 export { WifiIcon, WirelessIcon } from '@bymax-one/icons/icons/wifi'
+export { WifiLockIcon } from '@bymax-one/icons/icons/wifi-lock'
 export { OfflineIcon, WifiOffIcon } from '@bymax-one/icons/icons/wifi-off'
 export { WindIcon } from '@bymax-one/icons/icons/wind'
 export { WindowIcon } from '@bymax-one/icons/icons/window'

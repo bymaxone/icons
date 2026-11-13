@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Bitcoin",
+  "tags": ["bitcoin", "crypto", "currency", "coin"],
+  "categories": ["commerce"],
+  "useCases": ["Shows a price in bitcoin", "Marks a cryptocurrency payment"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

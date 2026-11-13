@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Ladder",
+  "tags": ["ladder", "climb", "steps", "height"],
+  "categories": ["tools", "household"],
+  "useCases": ["Marks work at height", "Shows a way to climb up"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "High definition",
+  "tags": ["hd", "high definition", "resolution", "quality"],
+  "categories": ["media"],
+  "useCases": ["Marks a video in high definition", "Selects the sharper stream quality"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

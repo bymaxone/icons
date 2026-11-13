@@ -4,6 +4,12 @@
   "tags": ["visible", "show", "view", "preview"],
   "categories": ["status"],
   "useCases": ["Shows a hidden layer", "Reveals a password", "Filled: a layer that is visible"],
+  "aliases": [
+    {
+      "name": "view",
+      "deprecated": false
+    }
+  ],
   "variants": ["line", "filled", "sm"],
   "opticalSizes": [24, 16],
   "since": "0.1.0"

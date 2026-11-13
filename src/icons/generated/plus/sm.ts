@@ -19,3 +19,6 @@ export const PlusSmIcon = /* @__PURE__ */ createIcon(
   ],
   { masterSize: 16 }
 )
+
+/** `add`: an alias of {@link PlusSmIcon}. */
+export const AddSmIcon = PlusSmIcon

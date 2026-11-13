@@ -24,3 +24,6 @@ export const SidebarSmIcon = /* @__PURE__ */ createIcon(
   ],
   { masterSize: 16 }
 )
+
+/** `layout-left`: an alias of {@link SidebarSmIcon}. */
+export const LayoutLeftSmIcon = SidebarSmIcon

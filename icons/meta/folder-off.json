@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Folder off",
+  "tags": ["folder off", "disabled", "unavailable", "hidden"],
+  "categories": ["files", "status"],
+  "useCases": ["Shows a folder that is disabled", "Marks an unavailable location"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

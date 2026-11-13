@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Rotate right",
+  "tags": ["rotate right", "clockwise", "turn", "image"],
+  "categories": ["editing", "arrows"],
+  "useCases": ["Turns an image a quarter turn right", "Rotates a selection clockwise"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

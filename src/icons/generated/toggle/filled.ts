@@ -24,3 +24,6 @@ export const ToggleFilledIcon = /* @__PURE__ */ createIcon(
   ],
   { paint: 'fill' }
 )
+
+/** `switch`: an alias of {@link ToggleFilledIcon}. */
+export const SwitchFilledIcon = ToggleFilledIcon

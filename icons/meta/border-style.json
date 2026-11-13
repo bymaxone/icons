@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Border style",
+  "tags": ["border style", "dashed", "stroke", "outline"],
+  "categories": ["editing"],
+  "useCases": ["Chooses how a border is drawn", "Switches between solid and dashed lines"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

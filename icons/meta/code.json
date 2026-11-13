@@ -8,6 +8,10 @@
     {
       "name": "html",
       "deprecated": false
+    },
+    {
+      "name": "api",
+      "deprecated": false
     }
   ],
   "variants": ["line"],

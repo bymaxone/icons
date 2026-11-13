@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Bell with a plus",
+  "tags": ["bell plus", "alert", "new", "subscribe"],
+  "categories": ["status", "communication"],
+  "useCases": ["Creates a new alert", "Subscribes to a topic"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

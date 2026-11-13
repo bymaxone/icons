@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Report file",
+  "tags": ["file chart", "report", "analytics", "document"],
+  "categories": ["files", "data"],
+  "useCases": ["Opens a report with charts", "Shows an analytics document"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

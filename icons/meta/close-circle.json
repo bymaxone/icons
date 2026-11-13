@@ -8,6 +8,10 @@
     {
       "name": "x-circle",
       "deprecated": false
+    },
+    {
+      "name": "cancel",
+      "deprecated": false
     }
   ],
   "variants": ["line"],

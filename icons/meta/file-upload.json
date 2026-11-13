@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Upload file",
+  "tags": ["file upload", "send", "attach", "document"],
+  "categories": ["files", "actions"],
+  "useCases": ["Sends a document to a server", "Starts a file upload"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

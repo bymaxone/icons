@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Chess bishop",
+  "tags": ["chess bishop", "bishop", "diagonal", "chess"],
+  "categories": ["games"],
+  "useCases": ["Shows the diagonal chess piece", "Marks a strategic move"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

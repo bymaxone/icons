@@ -8,6 +8,10 @@
     {
       "name": "shopping-cart",
       "deprecated": false
+    },
+    {
+      "name": "trolley",
+      "deprecated": false
     }
   ],
   "variants": ["line"],

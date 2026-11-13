@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Premium shield",
+  "tags": ["shield star", "trusted", "premium", "secure"],
+  "categories": ["security"],
+  "useCases": ["Marks a trusted and top-rated service", "Shows premium protection"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

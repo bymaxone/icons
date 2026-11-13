@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Swimming pool",
+  "tags": ["pool", "swim", "water", "leisure"],
+  "categories": ["maps", "health"],
+  "useCases": ["Marks a swimming area", "Shows a pool amenity"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

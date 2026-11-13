@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { EmailIcon, MailIcon } from './line'
+export { EmailIcon, EnvelopeIcon, MailIcon } from './line'

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Flag off",
+  "tags": ["flag off", "unflag", "cleared", "marker"],
+  "categories": ["actions", "status"],
+  "useCases": ["Clears a flag from an item", "Shows that flagging is disabled"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

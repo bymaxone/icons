@@ -12,6 +12,10 @@
     {
       "name": "question-mark",
       "deprecated": false
+    },
+    {
+      "name": "question",
+      "deprecated": false
     }
   ],
   "variants": ["line"],

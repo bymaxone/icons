@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Bridge",
+  "tags": ["bridge", "crossing", "river", "span"],
+  "categories": ["maps", "transport"],
+  "useCases": ["Shows a crossing over water", "Marks a link between two places"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

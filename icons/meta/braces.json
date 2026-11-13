@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Curly braces",
+  "tags": ["braces", "curly brackets", "code block", "object"],
+  "categories": ["dev", "text"],
+  "useCases": ["Marks a block of code or an object", "Wraps a group of values"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -16,3 +16,6 @@ export const EyeIcon = /* @__PURE__ */ createIcon('eye', [
   ['path', { d: 'M19.489 14.201a8.245 8.245 0 0 1-14.478 0' }],
   ['circle', { cx: 12.25, cy: 12.25, r: 2.75 }]
 ])
+
+/** `view`: an alias of {@link EyeIcon}. */
+export const ViewIcon = EyeIcon

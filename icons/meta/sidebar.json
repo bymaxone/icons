@@ -4,6 +4,12 @@
   "tags": ["panel", "layout", "drawer", "toggle sidebar"],
   "categories": ["navigation"],
   "useCases": ["Shows or hides the side panel", "Switches the layout to one with a sidebar"],
+  "aliases": [
+    {
+      "name": "layout-left",
+      "deprecated": false
+    }
+  ],
   "variants": ["line", "sm"],
   "opticalSizes": [24, 16],
   "since": "0.1.0"

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Keyboard off",
+  "tags": ["keyboard off", "disabled", "hidden", "typing"],
+  "categories": ["devices", "status"],
+  "useCases": ["Hides the on-screen keyboard", "Shows that typing is disabled"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

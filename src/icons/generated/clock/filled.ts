@@ -24,3 +24,6 @@ export const ClockFilledIcon = /* @__PURE__ */ createIcon(
   ],
   { paint: 'fill' }
 )
+
+/** `time`: an alias of {@link ClockFilledIcon}. */
+export const TimeFilledIcon = ClockFilledIcon

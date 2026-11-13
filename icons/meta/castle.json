@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Castle",
+  "tags": ["castle", "fortress", "medieval", "landmark"],
+  "categories": ["maps", "games"],
+  "useCases": ["Shows a historic fortress", "Marks a landmark to visit"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -22,3 +22,6 @@ export const VolumeIcon = /* @__PURE__ */ createIcon('volume', [
   ['path', { d: 'M16.846 8.393a6 6 0 0 1 0 7.714' }],
   ['path', { d: 'M19.342 6.709a9 9 0 0 1 0 11.082' }]
 ])
+
+/** `volume-up`: an alias of {@link VolumeIcon}. */
+export const VolumeUpIcon = VolumeIcon

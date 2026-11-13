@@ -21,3 +21,6 @@ export const ReceiptIcon = /* @__PURE__ */ createIcon('receipt', [
   ['path', { d: 'M8.25 8.25h8' }],
   ['path', { d: 'M8.25 12.25h5' }]
 ])
+
+/** `invoice`: an alias of {@link ReceiptIcon}. */
+export const InvoiceIcon = ReceiptIcon

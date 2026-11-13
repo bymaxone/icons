@@ -8,6 +8,10 @@
     {
       "name": "money",
       "deprecated": false
+    },
+    {
+      "name": "coin",
+      "deprecated": false
     }
   ],
   "variants": ["line"],

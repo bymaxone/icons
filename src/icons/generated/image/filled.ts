@@ -24,3 +24,6 @@ export const ImageFilledIcon = /* @__PURE__ */ createIcon(
   ],
   { paint: 'fill' }
 )
+
+/** `wallpaper`: an alias of {@link ImageFilledIcon}. */
+export const WallpaperFilledIcon = ImageFilledIcon

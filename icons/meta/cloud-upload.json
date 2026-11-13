@@ -4,6 +4,16 @@
   "tags": ["cloud", "upload", "sync", "backup"],
   "categories": ["files", "connectivity"],
   "useCases": ["Uploads files to the cloud", "Backs up a project"],
+  "aliases": [
+    {
+      "name": "upload-cloud",
+      "deprecated": false
+    },
+    {
+      "name": "cloud-arrow-up",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

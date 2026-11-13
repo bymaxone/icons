@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Square brackets",
+  "tags": ["brackets", "square brackets", "array", "list"],
+  "categories": ["dev", "text"],
+  "useCases": ["Marks an array or a list of values", "Wraps an optional part of a pattern"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

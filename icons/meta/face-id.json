@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Face recognition",
+  "tags": ["face id", "face scan", "biometric", "unlock"],
+  "categories": ["security", "devices"],
+  "useCases": ["Unlocks a device with a face scan", "Marks facial authentication"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

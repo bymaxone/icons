@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { FileTextIcon, PdfIcon } from './line'
+export { ArticleIcon, FileTextIcon, PdfIcon, PostIcon } from './line'

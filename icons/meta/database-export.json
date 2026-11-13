@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Export data",
+  "tags": ["database export", "dump", "backup", "data"],
+  "categories": ["data"],
+  "useCases": ["Exports a table to a file", "Creates a copy of a database"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

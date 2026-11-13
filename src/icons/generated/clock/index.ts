@@ -4,5 +4,5 @@
  * @layer Generated
  */
 
-export { ClockIcon } from './line'
-export { ClockFilledIcon } from './filled'
+export { ClockIcon, TimeIcon } from './line'
+export { ClockFilledIcon, TimeFilledIcon } from './filled'

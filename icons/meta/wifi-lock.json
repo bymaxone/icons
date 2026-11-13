@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Secured network",
+  "tags": ["wifi lock", "secured", "password", "network"],
+  "categories": ["connectivity", "security"],
+  "useCases": ["Marks a wireless network that needs a password", "Shows an encrypted connection"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

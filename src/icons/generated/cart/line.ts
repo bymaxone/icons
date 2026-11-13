@@ -24,3 +24,6 @@ export const CartIcon = /* @__PURE__ */ createIcon('cart', [
 
 /** `shopping-cart`: an alias of {@link CartIcon}. */
 export const ShoppingCartIcon = CartIcon
+
+/** `trolley`: an alias of {@link CartIcon}. */
+export const TrolleyIcon = CartIcon

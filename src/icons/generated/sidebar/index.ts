@@ -4,5 +4,5 @@
  * @layer Generated
  */
 
-export { SidebarIcon } from './line'
-export { SidebarSmIcon } from './sm'
+export { LayoutLeftIcon, SidebarIcon } from './line'
+export { LayoutLeftSmIcon, SidebarSmIcon } from './sm'

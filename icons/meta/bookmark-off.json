@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Bookmark off",
+  "tags": ["bookmark off", "unsaved", "hidden", "disabled"],
+  "categories": ["actions"],
+  "useCases": ["Shows that bookmarks are turned off", "Marks a page that cannot be bookmarked"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Lighthouse",
+  "tags": ["lighthouse", "beacon", "coast", "guide"],
+  "categories": ["maps", "nature"],
+  "useCases": ["Shows a coastal beacon", "Marks a guiding light"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

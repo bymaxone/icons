@@ -4,6 +4,12 @@
   "tags": ["picture", "photo", "landscape", "media"],
   "categories": ["files", "media"],
   "useCases": ["Inserts an image", "Marks an image file", "Filled: the selected image"],
+  "aliases": [
+    {
+      "name": "wallpaper",
+      "deprecated": false
+    }
+  ],
   "variants": ["line", "filled"],
   "opticalSizes": [24],
   "since": "0.1.0"

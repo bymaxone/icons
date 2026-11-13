@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Bookmark plus",
+  "tags": ["bookmark plus", "new", "save", "collect"],
+  "categories": ["actions"],
+  "useCases": ["Saves a page as a new bookmark", "Starts a new reading list"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

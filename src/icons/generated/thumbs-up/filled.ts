@@ -27,3 +27,6 @@ export const ThumbsUpFilledIcon = /* @__PURE__ */ createIcon(
 
 /** `like`: an alias of {@link ThumbsUpFilledIcon}. */
 export const LikeFilledIcon = ThumbsUpFilledIcon
+
+/** `thumb-up`: an alias of {@link ThumbsUpFilledIcon}. */
+export const ThumbUpFilledIcon = ThumbsUpFilledIcon

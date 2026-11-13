@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Cable car",
+  "tags": ["cable car", "gondola", "mountain", "lift"],
+  "categories": ["transport"],
+  "useCases": ["Shows a mountain lift", "Marks a scenic ride"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Memory card",
+  "tags": ["sd card", "memory card", "storage", "flash"],
+  "categories": ["devices", "data"],
+  "useCases": ["Shows a removable memory card", "Marks storage that can be swapped"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

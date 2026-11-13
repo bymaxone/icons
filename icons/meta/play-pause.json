@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Play or pause",
+  "tags": ["play pause", "toggle", "playback", "control"],
+  "categories": ["media", "audio"],
+  "useCases": ["Toggles playback with one button", "Starts or holds a video"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

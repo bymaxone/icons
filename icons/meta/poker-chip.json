@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Poker chip",
+  "tags": ["poker chip", "casino", "bet", "token"],
+  "categories": ["games"],
+  "useCases": ["Marks a bet or a stake", "Shows a casino token"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

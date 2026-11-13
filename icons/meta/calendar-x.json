@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Cancelled date",
+  "tags": ["calendar x", "cancel", "missed", "date"],
+  "categories": ["time", "status"],
+  "useCases": ["Marks a cancelled appointment", "Clears a date from the calendar"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

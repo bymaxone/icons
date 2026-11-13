@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Clipboard with a minus",
+  "tags": ["clipboard minus", "list", "remove", "task"],
+  "categories": ["actions", "files"],
+  "useCases": ["Takes an entry off a checklist", "Removes a copied item"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

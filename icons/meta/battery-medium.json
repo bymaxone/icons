@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Half battery",
+  "tags": ["battery medium", "half", "charge", "power"],
+  "categories": ["devices", "status"],
+  "useCases": ["Shows a battery at half charge", "Marks a medium power level"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

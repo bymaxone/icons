@@ -21,3 +21,6 @@ export const GenerateIcon = /* @__PURE__ */ createIcon('generate', [
   ],
   ['circle', { cx: 8.25, cy: 4.25, r: 0.75 }]
 ])
+
+/** `magic-wand`: an alias of {@link GenerateIcon}. */
+export const MagicWandIcon = GenerateIcon

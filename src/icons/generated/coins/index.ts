@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { CoinsIcon, MoneyIcon } from './line'
+export { CoinIcon, CoinsIcon, MoneyIcon } from './line'

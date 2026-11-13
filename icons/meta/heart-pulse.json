@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Heartbeat",
+  "tags": ["heart pulse", "heartbeat", "cardio", "vitals"],
+  "categories": ["health"],
+  "useCases": ["Shows the heart rate", "Opens the cardio report"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

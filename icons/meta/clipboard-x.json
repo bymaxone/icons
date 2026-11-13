@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Rejected clipboard",
+  "tags": ["clipboard x", "failed", "rejected", "form"],
+  "categories": ["status", "files"],
+  "useCases": ["Marks a failed checklist", "Shows a form that was rejected"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

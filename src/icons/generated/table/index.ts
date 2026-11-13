@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { TableIcon } from './line'
+export { FileSpreadsheetIcon, TableIcon } from './line'

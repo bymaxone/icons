@@ -8,6 +8,14 @@
     {
       "name": "pdf",
       "deprecated": false
+    },
+    {
+      "name": "post",
+      "deprecated": false
+    },
+    {
+      "name": "article",
+      "deprecated": false
     }
   ],
   "variants": ["line"],

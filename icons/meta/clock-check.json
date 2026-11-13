@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Time confirmed",
+  "tags": ["clock check", "on time", "confirmed", "done"],
+  "categories": ["time", "status"],
+  "useCases": ["Confirms that a time slot is booked", "Marks a task finished on time"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

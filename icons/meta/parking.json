@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Parking",
+  "tags": ["parking", "car park", "lot", "garage"],
+  "categories": ["maps", "transport"],
+  "useCases": ["Marks a place to leave a car", "Shows available parking"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Horizontal borders",
+  "tags": ["border horizontal", "rows", "lines", "table"],
+  "categories": ["editing", "text"],
+  "useCases": ["Draws lines between the rows of a table", "Applies horizontal cell borders"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

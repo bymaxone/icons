@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { GenerateIcon } from './line'
+export { GenerateIcon, MagicWandIcon } from './line'

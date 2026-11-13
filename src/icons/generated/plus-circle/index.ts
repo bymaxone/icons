@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { PlusCircleIcon } from './line'
+export { AddCircleIcon, PlusCircleIcon } from './line'

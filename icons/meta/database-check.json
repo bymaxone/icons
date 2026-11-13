@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Verified database",
+  "tags": ["database check", "verified", "valid", "data"],
+  "categories": ["data", "status"],
+  "useCases": ["Confirms that stored data is valid", "Marks a successful database check"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

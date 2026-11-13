@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Extra time",
+  "tags": ["clock plus", "extend", "add time", "delay"],
+  "categories": ["time", "actions"],
+  "useCases": ["Extends a deadline", "Adds more time to a timer"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

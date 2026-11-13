@@ -20,3 +20,6 @@ export const BrushIcon = /* @__PURE__ */ createIcon('brush', [
   ],
   ['path', { d: 'm10.25 11.75 2.5 2.5' }]
 ])
+
+/** `paint-brush`: an alias of {@link BrushIcon}. */
+export const PaintBrushIcon = BrushIcon

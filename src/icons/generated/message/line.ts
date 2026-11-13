@@ -22,3 +22,9 @@ export const MessageIcon = /* @__PURE__ */ createIcon('message', [
 
 /** `chat`: an alias of {@link MessageIcon}. */
 export const ChatIcon = MessageIcon
+
+/** `comment`: an alias of {@link MessageIcon}. */
+export const CommentIcon = MessageIcon
+
+/** `message-circle`: an alias of {@link MessageIcon}. */
+export const MessageCircleIcon = MessageIcon

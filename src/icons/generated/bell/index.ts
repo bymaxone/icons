@@ -4,6 +4,6 @@
  * @layer Generated
  */
 
-export { BellIcon } from './line'
-export { BellFilledIcon } from './filled'
-export { BellSmIcon } from './sm'
+export { BellIcon, NotificationIcon } from './line'
+export { BellFilledIcon, NotificationFilledIcon } from './filled'
+export { BellSmIcon, NotificationSmIcon } from './sm'

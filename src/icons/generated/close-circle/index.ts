@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { CloseCircleIcon, XCircleIcon } from './line'
+export { CancelIcon, CloseCircleIcon, XCircleIcon } from './line'

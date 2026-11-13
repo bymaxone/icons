@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Traffic light",
+  "tags": ["traffic light", "signal", "stoplight", "road"],
+  "categories": ["transport", "maps"],
+  "useCases": ["Shows the state of traffic", "Marks a road crossing"],
+  "aliases": [
+    {
+      "name": "traffic",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

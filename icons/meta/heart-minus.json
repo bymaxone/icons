@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Heart with a minus",
+  "tags": ["heart minus", "unfavorite", "remove", "dislike"],
+  "categories": ["emotions", "actions"],
+  "useCases": ["Takes an item out of the favorites", "Reduces a like count"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

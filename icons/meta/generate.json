@@ -4,6 +4,12 @@
   "tags": ["magic wand", "create", "make", "ai"],
   "categories": ["ai"],
   "useCases": ["Generates a video from a prompt", "Creates content with AI"],
+  "aliases": [
+    {
+      "name": "magic-wand",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "City",
+  "tags": ["city", "skyline", "buildings", "urban"],
+  "categories": ["maps"],
+  "useCases": ["Shows a city skyline", "Marks an urban area"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

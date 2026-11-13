@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Folder with an x",
+  "tags": ["folder x", "delete", "error", "close"],
+  "categories": ["files", "status"],
+  "useCases": ["Marks a folder that failed to load", "Deletes a whole folder"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

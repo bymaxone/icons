@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Taxi",
+  "tags": ["taxi", "cab", "ride", "fare"],
+  "categories": ["transport"],
+  "useCases": ["Books a cab ride", "Marks a taxi stand"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

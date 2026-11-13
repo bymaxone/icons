@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Spade",
+  "tags": ["spade", "card suit", "cards", "games"],
+  "categories": ["games"],
+  "useCases": ["Shows the spades suit", "Marks a card game"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -4,6 +4,12 @@
   "tags": ["calendar", "date", "schedule", "events"],
   "categories": ["time"],
   "useCases": ["Opens the calendar", "Picks a date"],
+  "aliases": [
+    {
+      "name": "calendar-month",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

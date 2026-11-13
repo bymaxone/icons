@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Multiple devices",
+  "tags": ["devices", "screens", "responsive", "phone laptop"],
+  "categories": ["devices"],
+  "useCases": ["Shows an app on several screens", "Marks a cross-device sync"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

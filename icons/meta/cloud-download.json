@@ -4,6 +4,16 @@
   "tags": ["cloud", "download", "sync", "restore"],
   "categories": ["files", "connectivity"],
   "useCases": ["Downloads files from the cloud", "Restores a backup"],
+  "aliases": [
+    {
+      "name": "download-cloud",
+      "deprecated": false
+    },
+    {
+      "name": "cloud-arrow-down",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

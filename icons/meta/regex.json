@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Regular expression",
+  "tags": ["regex", "pattern", "match", "wildcard"],
+  "categories": ["dev", "text"],
+  "useCases": ["Opens a pattern match setting", "Switches a search to regular expressions"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}
