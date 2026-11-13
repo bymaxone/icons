@@ -23,3 +23,6 @@ export const ChessKnightIcon = /* @__PURE__ */ createIcon('chess-knight', [
 
 /** `strategy`: an alias of {@link ChessKnightIcon}. */
 export const StrategyIcon = ChessKnightIcon
+
+/** `chess`: an alias of {@link ChessKnightIcon}. */
+export const ChessIcon = ChessKnightIcon

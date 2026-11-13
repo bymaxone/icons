@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Arrow left in a square",
+  "tags": ["arrow left square", "left", "back", "boxed arrow"],
+  "categories": ["arrows"],
+  "useCases": ["Goes back with a square button", "Moves a box to the left"],
+  "aliases": [
+    {
+      "name": "square-arrow-left",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

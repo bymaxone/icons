@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Spell check",
+  "tags": ["spellcheck", "proofread", "typos", "grammar"],
+  "categories": ["text", "editing"],
+  "useCases": ["Checks the spelling of a text", "Underlines a mistake"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

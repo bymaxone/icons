@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { PowerIcon } from './line'
+export { PowerIcon, PowerOffIcon } from './line'

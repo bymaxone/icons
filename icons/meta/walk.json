@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Walking",
+  "tags": ["walk", "pedestrian", "steps", "stroll"],
+  "categories": ["people", "maps"],
+  "useCases": ["Switches a route to walking", "Marks a pedestrian path"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

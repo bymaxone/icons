@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { ServerIcon } from './line'
+export { DnsIcon, ServerIcon } from './line'

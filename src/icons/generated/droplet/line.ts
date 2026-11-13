@@ -18,3 +18,6 @@ export const DropletIcon = /* @__PURE__ */ createIcon('droplet', [
 
 /** @deprecated `accent` is a deprecated alias of `droplet`, removed in 2.0.0. Renamed to droplet, the object the drawing shows. Use {@link DropletIcon}. */
 export const AccentIcon = DropletIcon
+
+/** `water`: an alias of {@link DropletIcon}. */
+export const WaterIcon = DropletIcon

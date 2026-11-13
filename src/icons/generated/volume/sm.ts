@@ -23,3 +23,6 @@ export const VolumeSmIcon = /* @__PURE__ */ createIcon(
 
 /** `volume-up`: an alias of {@link VolumeSmIcon}. */
 export const VolumeUpSmIcon = VolumeSmIcon
+
+/** `volume-high`: an alias of {@link VolumeSmIcon}. */
+export const VolumeHighSmIcon = VolumeSmIcon

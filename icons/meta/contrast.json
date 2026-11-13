@@ -4,6 +4,12 @@
   "tags": ["contrast", "theme", "tone", "brightness"],
   "categories": ["editing", "system"],
   "useCases": ["Adjusts the contrast", "Switches to high contrast"],
+  "aliases": [
+    {
+      "name": "circle-half",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

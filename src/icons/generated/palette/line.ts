@@ -17,3 +17,9 @@ export const PaletteIcon = /* @__PURE__ */ createIcon('palette', [
   ['circle', { cx: 10.25, cy: 7.75, r: 0.75 }],
   ['circle', { cx: 14.75, cy: 7.75, r: 0.75 }]
 ])
+
+/** `colors`: an alias of {@link PaletteIcon}. */
+export const ColorsIcon = PaletteIcon
+
+/** `swatch`: an alias of {@link PaletteIcon}. */
+export const SwatchIcon = PaletteIcon

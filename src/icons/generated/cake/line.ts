@@ -23,3 +23,6 @@ export const CakeIcon = /* @__PURE__ */ createIcon('cake', [
 
 /** `birthday`: an alias of {@link CakeIcon}. */
 export const BirthdayIcon = CakeIcon
+
+/** `cupcake`: an alias of {@link CakeIcon}. */
+export const CupcakeIcon = CakeIcon

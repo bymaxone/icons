@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Dashed square",
+  "tags": ["square dashed", "placeholder", "selection", "outline"],
+  "categories": ["shapes"],
+  "useCases": ["Marks an area to fill", "Shows a drop zone"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

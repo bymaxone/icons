@@ -4,5 +4,5 @@
  * @layer Generated
  */
 
-export { LoaderIcon } from './line'
-export { LoaderSmIcon } from './sm'
+export { LoaderIcon, LoadingIcon } from './line'
+export { LoaderSmIcon, LoadingSmIcon } from './sm'

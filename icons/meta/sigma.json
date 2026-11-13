@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Sigma",
+  "tags": ["sigma", "sum", "total", "greek letter"],
+  "categories": ["math"],
+  "useCases": ["Adds up a series of values", "Inserts the summation sign"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

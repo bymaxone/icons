@@ -4,6 +4,12 @@
   "tags": ["minus", "subtract", "remove", "decrease", "collapse"],
   "categories": ["actions"],
   "useCases": ["Removes one item from a count", "Decreases a quantity in a stepper"],
+  "aliases": [
+    {
+      "name": "subtract",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

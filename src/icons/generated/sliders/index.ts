@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { SlidersIcon } from './line'
+export { SlidersHorizontalIcon, SlidersIcon } from './line'

@@ -10,6 +10,10 @@
       "deprecated": true,
       "deprecationReason": "Renamed to droplet, the object the drawing shows.",
       "toBeRemovedInVersion": "2.0.0"
+    },
+    {
+      "name": "water",
+      "deprecated": false
     }
   ],
   "variants": ["line"],

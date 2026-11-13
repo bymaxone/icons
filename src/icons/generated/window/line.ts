@@ -21,3 +21,9 @@ export const WindowIcon = /* @__PURE__ */ createIcon('window', [
   ['path', { d: 'M3.25 10.25h18' }],
   ['path', { d: 'M6.75 7.25h.01' }]
 ])
+
+/** `app-window`: an alias of {@link WindowIcon}. */
+export const AppWindowIcon = WindowIcon
+
+/** `browser`: an alias of {@link WindowIcon}. */
+export const BrowserIcon = WindowIcon

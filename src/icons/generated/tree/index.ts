@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { TreeIcon } from './line'
+export { ParkIcon, PineTreeIcon, TreeIcon } from './line'

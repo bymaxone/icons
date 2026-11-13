@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Mail search",
+  "tags": ["mail search", "find email", "look up", "inbox"],
+  "categories": ["communication", "actions"],
+  "useCases": ["Searches the inbox for a message", "Looks up an email thread"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

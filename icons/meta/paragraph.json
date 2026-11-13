@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Paragraph",
+  "tags": ["paragraph", "pilcrow", "text block", "formatting"],
+  "categories": ["text"],
+  "useCases": ["Shows hidden formatting marks", "Starts a new paragraph"],
+  "aliases": [
+    {
+      "name": "pilcrow",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

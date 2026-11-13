@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { PhoneMissedIcon } from './line'
+export { CallMissedIcon, PhoneMissedIcon } from './line'

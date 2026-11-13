@@ -4,6 +4,16 @@
   "tags": ["arrow", "up", "circle", "upload"],
   "categories": ["arrows"],
   "useCases": ["Scrolls back to the top", "Uploads an item"],
+  "aliases": [
+    {
+      "name": "arrow-circle-up",
+      "deprecated": false
+    },
+    {
+      "name": "circle-arrow-up",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

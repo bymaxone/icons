@@ -8,6 +8,10 @@
     {
       "name": "strategy",
       "deprecated": false
+    },
+    {
+      "name": "chess",
+      "deprecated": false
     }
   ],
   "variants": ["line"],

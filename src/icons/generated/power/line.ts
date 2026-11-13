@@ -15,3 +15,6 @@ export const PowerIcon = /* @__PURE__ */ createIcon('power', [
   ['path', { d: 'M17.232 7.063a7.75 7.75 0 1 1-9.964 0' }],
   ['path', { d: 'M12.25 3.25v8' }]
 ])
+
+/** `power-off`: an alias of {@link PowerIcon}. */
+export const PowerOffIcon = PowerIcon

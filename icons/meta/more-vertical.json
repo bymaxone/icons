@@ -4,6 +4,16 @@
   "tags": ["kebab", "overflow", "options", "dots"],
   "categories": ["actions"],
   "useCases": ["Opens the overflow menu of a list item", "Shows more actions in a header"],
+  "aliases": [
+    {
+      "name": "dots-vertical",
+      "deprecated": false
+    },
+    {
+      "name": "ellipsis-vertical",
+      "deprecated": false
+    }
+  ],
   "variants": ["line", "sm"],
   "opticalSizes": [24, 16],
   "since": "0.1.0"

@@ -18,3 +18,6 @@ export const ScaleIcon = /* @__PURE__ */ createIcon('scale', [
   ['path', { d: 'M3.25 13.75a2 2 0 0 0 4 0zm14 0a2 2 0 0 0 4 0z' }],
   ['path', { d: 'm5.25 7.25-2 6.5m2-6.5 2 6.5m12-6.5-2 6.5m2-6.5 2 6.5' }]
 ])
+
+/** `scales`: an alias of {@link ScaleIcon}. */
+export const ScalesIcon = ScaleIcon

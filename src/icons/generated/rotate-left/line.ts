@@ -15,3 +15,6 @@ export const RotateLeftIcon = /* @__PURE__ */ createIcon('rotate-left', [
   ['path', { d: 'M8.25 9.25h-3.5v-3.5' }],
   ['path', { d: 'M5.25 9A8 8 0 1 1 7 17.75' }]
 ])
+
+/** `refresh-ccw`: an alias of {@link RotateLeftIcon}. */
+export const RefreshCcwIcon = RotateLeftIcon

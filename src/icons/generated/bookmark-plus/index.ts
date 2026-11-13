@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { BookmarkPlusIcon } from './line'
+export { BookmarkAddIcon, BookmarkPlusIcon } from './line'

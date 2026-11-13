@@ -19,3 +19,6 @@ export const SlidersIcon = /* @__PURE__ */ createIcon('sliders', [
   ['path', { d: 'M3.75 18.25h1.5m6 0h9.25' }],
   ['circle', { cx: 8.25, cy: 18.25, r: 2 }]
 ])
+
+/** `sliders-horizontal`: an alias of {@link SlidersIcon}. */
+export const SlidersHorizontalIcon = SlidersIcon

@@ -24,3 +24,9 @@ export const ReloadIcon = RefreshIcon
 
 /** `restart`: an alias of {@link RefreshIcon}. */
 export const RestartIcon = RefreshIcon
+
+/** `refresh-circle`: an alias of {@link RefreshIcon}. */
+export const RefreshCircleIcon = RefreshIcon
+
+/** `refresh-cw`: an alias of {@link RefreshIcon}. */
+export const RefreshCwIcon = RefreshIcon

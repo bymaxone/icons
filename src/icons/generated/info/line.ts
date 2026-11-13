@@ -22,3 +22,9 @@ export const DetailsIcon = InfoIcon
 
 /** `info-circle`: an alias of {@link InfoIcon}. */
 export const InfoCircleIcon = InfoIcon
+
+/** `information`: an alias of {@link InfoIcon}. */
+export const InformationIcon = InfoIcon
+
+/** `information-circle`: an alias of {@link InfoIcon}. */
+export const InformationCircleIcon = InfoIcon

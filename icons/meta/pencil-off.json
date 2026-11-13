@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Pencil off",
+  "tags": ["pencil off", "read only", "no editing", "disabled"],
+  "categories": ["editing", "status"],
+  "useCases": ["Marks content as read only", "Turns editing off"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

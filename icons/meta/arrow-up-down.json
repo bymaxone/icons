@@ -10,6 +10,10 @@
       "deprecated": true,
       "deprecationReason": "Renamed to arrow-up-down, the object the drawing shows.",
       "toBeRemovedInVersion": "2.0.0"
+    },
+    {
+      "name": "arrows-vertical",
+      "deprecated": false
     }
   ],
   "variants": ["line"],

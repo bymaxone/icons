@@ -31,3 +31,6 @@ export const CastIcon = ScreenCastIcon
 
 /** `airplay`: an alias of {@link ScreenCastIcon}. */
 export const AirplayIcon = ScreenCastIcon
+
+/** `screen-share`: an alias of {@link ScreenCastIcon}. */
+export const ScreenShareIcon = ScreenCastIcon

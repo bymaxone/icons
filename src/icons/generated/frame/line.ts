@@ -25,3 +25,9 @@ export const FrameIcon = /* @__PURE__ */ createIcon('frame', [
   ['path', { d: 'M16.25 7.75h2' }],
   ['path', { d: 'M16.25 16.75h2' }]
 ])
+
+/** `bounding-box`: an alias of {@link FrameIcon}. */
+export const BoundingBoxIcon = FrameIcon
+
+/** `margin`: an alias of {@link FrameIcon}. */
+export const MarginIcon = FrameIcon

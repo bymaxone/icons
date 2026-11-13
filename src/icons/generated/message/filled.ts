@@ -33,3 +33,6 @@ export const CommentFilledIcon = MessageFilledIcon
 
 /** `message-circle`: an alias of {@link MessageFilledIcon}. */
 export const MessageCircleFilledIcon = MessageFilledIcon
+
+/** `message-square`: an alias of {@link MessageFilledIcon}. */
+export const MessageSquareFilledIcon = MessageFilledIcon

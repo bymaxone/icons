@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Meteor",
+  "tags": ["meteor", "shooting star", "space", "comet"],
+  "categories": ["science", "nature"],
+  "useCases": ["Shows a falling star", "Marks a space event"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

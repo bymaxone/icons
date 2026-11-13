@@ -25,3 +25,6 @@ export const UsersIcon = /* @__PURE__ */ createIcon('users', [
 
 /** `group`: an alias of {@link UsersIcon}. */
 export const GroupIcon = UsersIcon
+
+/** `user-group`: an alias of {@link UsersIcon}. */
+export const UserGroupIcon = UsersIcon

@@ -4,6 +4,12 @@
   "tags": ["phone missed", "call", "miss", "history"],
   "categories": ["communication"],
   "useCases": ["Shows a call that was not answered", "Lists missed calls"],
+  "aliases": [
+    {
+      "name": "call-missed",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

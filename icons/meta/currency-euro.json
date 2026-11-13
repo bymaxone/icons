@@ -4,6 +4,12 @@
   "tags": ["euro", "currency", "money", "eur"],
   "categories": ["commerce"],
   "useCases": ["Shows a price in euros", "Switches the currency to euros"],
+  "aliases": [
+    {
+      "name": "euro",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

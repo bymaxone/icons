@@ -4,6 +4,20 @@
   "tags": ["arrow", "down", "circle", "download"],
   "categories": ["arrows"],
   "useCases": ["Scrolls to the bottom", "Downloads an item"],
+  "aliases": [
+    {
+      "name": "arrow-circle-down",
+      "deprecated": false
+    },
+    {
+      "name": "circle-arrow-down",
+      "deprecated": false
+    },
+    {
+      "name": "download-circle",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

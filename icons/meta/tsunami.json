@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Tsunami",
+  "tags": ["tsunami", "wave", "flood", "disaster"],
+  "categories": ["nature"],
+  "useCases": ["Warns of a giant wave", "Marks a flood risk"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

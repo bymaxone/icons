@@ -4,6 +4,12 @@
   "tags": ["record", "rec", "capture", "live"],
   "categories": ["media"],
   "useCases": ["Starts recording a video or a call", "Shows that a capture is running"],
+  "aliases": [
+    {
+      "name": "record-circle",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

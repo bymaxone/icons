@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { ScaleIcon } from './line'
+export { ScaleIcon, ScalesIcon } from './line'

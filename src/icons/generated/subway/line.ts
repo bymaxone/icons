@@ -22,3 +22,6 @@ export const SubwayIcon = /* @__PURE__ */ createIcon('subway', [
   ['path', { d: 'M9.25 13.25h6' }],
   ['path', { d: 'm10.5 18.75-1 2.5m4.5-2.5 1 2.5' }]
 ])
+
+/** `metro`: an alias of {@link SubwayIcon}. */
+export const MetroIcon = SubwayIcon

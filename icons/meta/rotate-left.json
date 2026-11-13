@@ -4,6 +4,12 @@
   "tags": ["rotate left", "counterclockwise", "turn", "image"],
   "categories": ["editing", "arrows"],
   "useCases": ["Turns an image a quarter turn left", "Rotates a selection counterclockwise"],
+  "aliases": [
+    {
+      "name": "refresh-ccw",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

@@ -4,6 +4,12 @@
   "tags": ["screen", "display", "desktop", "system theme"],
   "categories": ["devices"],
   "useCases": ["Follows the system theme", "Labels a desktop preview"],
+  "aliases": [
+    {
+      "name": "desktop",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

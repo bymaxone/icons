@@ -12,6 +12,10 @@
     {
       "name": "airplay",
       "deprecated": false
+    },
+    {
+      "name": "screen-share",
+      "deprecated": false
     }
   ],
   "variants": ["line"],

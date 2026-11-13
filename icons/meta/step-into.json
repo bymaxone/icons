@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Step into",
+  "tags": ["step into", "debug", "enter", "dive in"],
+  "categories": ["dev", "arrows"],
+  "useCases": ["Steps into a function while debugging", "Moves one level deeper"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

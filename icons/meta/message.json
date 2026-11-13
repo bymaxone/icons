@@ -16,6 +16,10 @@
     {
       "name": "message-circle",
       "deprecated": false
+    },
+    {
+      "name": "message-square",
+      "deprecated": false
     }
   ],
   "variants": ["line", "filled"],

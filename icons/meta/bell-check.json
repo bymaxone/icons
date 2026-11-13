@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Bell with a check",
+  "tags": ["bell check", "notifications on", "confirmed", "alert"],
+  "categories": ["status", "communication"],
+  "useCases": ["Confirms that alerts are on", "Marks a subscription as active"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

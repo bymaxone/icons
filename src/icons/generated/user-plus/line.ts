@@ -21,3 +21,6 @@ export const UserPlusIcon = /* @__PURE__ */ createIcon('user-plus', [
   ],
   ['path', { d: 'M17.75 13.75v7m-3.5-3.5h7' }]
 ])
+
+/** `person-add`: an alias of {@link UserPlusIcon}. */
+export const PersonAddIcon = UserPlusIcon

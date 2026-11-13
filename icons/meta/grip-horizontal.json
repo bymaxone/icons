@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Horizontal grip",
+  "tags": ["grip horizontal", "drag handle", "resize", "dots"],
+  "categories": ["system"],
+  "useCases": ["Drags a panel by its handle", "Resizes a split view"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

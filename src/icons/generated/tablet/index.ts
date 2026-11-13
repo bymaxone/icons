@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { TabletIcon } from './line'
+export { DeviceTabletIcon, TabletIcon } from './line'

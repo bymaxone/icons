@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Locked cloud",
+  "tags": ["cloud lock", "private storage", "secure", "encrypted"],
+  "categories": ["security", "data"],
+  "useCases": ["Protects data stored online", "Marks a private cloud space"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Calendar event",
+  "tags": ["calendar event", "appointment", "meeting", "date"],
+  "categories": ["time"],
+  "useCases": ["Shows an event on a given day", "Marks a meeting in the calendar"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { ContrastIcon } from './line'
+export { CircleHalfIcon, ContrastIcon } from './line'

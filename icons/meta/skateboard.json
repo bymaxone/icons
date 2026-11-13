@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Skateboard",
+  "tags": ["skateboard", "skate", "board", "street"],
+  "categories": ["games", "transport"],
+  "useCases": ["Marks a skate park", "Shows an urban sport"],
+  "aliases": [
+    {
+      "name": "skateboarding",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -4,5 +4,5 @@
  * @layer Generated
  */
 
-export { FrameIcon } from './line'
-export { FrameSmIcon } from './sm'
+export { BoundingBoxIcon, FrameIcon, MarginIcon } from './line'
+export { BoundingBoxSmIcon, FrameSmIcon, MarginSmIcon } from './sm'

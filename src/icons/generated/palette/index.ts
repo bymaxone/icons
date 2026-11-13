@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { PaletteIcon } from './line'
+export { ColorsIcon, PaletteIcon, SwatchIcon } from './line'

@@ -29,3 +29,9 @@ export const FrameSmIcon = /* @__PURE__ */ createIcon(
   ],
   { masterSize: 16 }
 )
+
+/** `bounding-box`: an alias of {@link FrameSmIcon}. */
+export const BoundingBoxSmIcon = FrameSmIcon
+
+/** `margin`: an alias of {@link FrameSmIcon}. */
+export const MarginSmIcon = FrameSmIcon

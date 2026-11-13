@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Flare",
+  "tags": ["flare", "glare", "spark", "light"],
+  "categories": ["media", "nature"],
+  "useCases": ["Adds a lens flare to a photo", "Shows a burst of light"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

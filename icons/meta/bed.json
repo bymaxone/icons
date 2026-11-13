@@ -4,6 +4,12 @@
   "tags": ["bed", "sleep", "hotel", "bedroom"],
   "categories": ["household"],
   "useCases": ["Books a room", "Marks sleep time"],
+  "aliases": [
+    {
+      "name": "bed-single",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

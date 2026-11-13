@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Archive upload",
+  "tags": ["archive arrow up", "store", "move to archive", "box"],
+  "categories": ["files", "actions"],
+  "useCases": ["Moves an item into the archive", "Uploads a package to storage"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

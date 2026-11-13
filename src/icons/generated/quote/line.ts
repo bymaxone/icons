@@ -17,3 +17,6 @@ export const QuoteIcon = /* @__PURE__ */ createIcon('quote', [
   ['circle', { cx: 18.375, cy: 7.875, r: 1.25 }],
   ['path', { d: 'M19.625 7.875c.313 4.063-2.188 7.5-5.938 8.75' }]
 ])
+
+/** `quotes`: an alias of {@link QuoteIcon}. */
+export const QuotesIcon = QuoteIcon

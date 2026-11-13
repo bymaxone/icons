@@ -4,6 +4,12 @@
   "tags": ["phone", "outgoing", "call", "dialed"],
   "categories": ["communication"],
   "useCases": ["Shows an outgoing call", "Lists dialed calls"],
+  "aliases": [
+    {
+      "name": "phone-forwarded",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

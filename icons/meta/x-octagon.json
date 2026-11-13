@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Octagon with an x",
+  "tags": ["x octagon", "stop", "error", "critical"],
+  "categories": ["status"],
+  "useCases": ["Reports a critical error", "Marks a blocked action"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

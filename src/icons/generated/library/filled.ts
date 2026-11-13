@@ -41,3 +41,9 @@ export const LibraryFilledIcon = /* @__PURE__ */ createIcon(
   ],
   { paint: 'fill' }
 )
+
+/** `books`: an alias of {@link LibraryFilledIcon}. */
+export const BooksFilledIcon = LibraryFilledIcon
+
+/** `bookshelf`: an alias of {@link LibraryFilledIcon}. */
+export const BookshelfFilledIcon = LibraryFilledIcon

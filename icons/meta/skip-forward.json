@@ -4,6 +4,12 @@
   "tags": ["next", "forward", "media control", "end"],
   "categories": ["media"],
   "useCases": ["Jumps to the next clip", "Moves to the end of the timeline"],
+  "aliases": [
+    {
+      "name": "skip-next",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

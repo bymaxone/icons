@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Color picker",
+  "tags": ["color picker", "eyedropper", "sample", "pipette"],
+  "categories": ["editing"],
+  "useCases": ["Samples a colour from the screen", "Copies the shade of a pixel"],
+  "aliases": [
+    {
+      "name": "eyedropper",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

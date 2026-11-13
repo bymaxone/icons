@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { ScissorsIcon } from './line'
+export { CutIcon, ScissorsIcon } from './line'

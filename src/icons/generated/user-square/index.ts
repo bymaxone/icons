@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { UserSquareIcon } from './line'
+export { AccountBoxIcon, UserSquareIcon } from './line'

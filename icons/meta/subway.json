@@ -4,6 +4,12 @@
   "tags": ["subway", "metro", "train", "underground"],
   "categories": ["transport"],
   "useCases": ["Shows a metro line", "Plans a subway trip"],
+  "aliases": [
+    {
+      "name": "metro",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

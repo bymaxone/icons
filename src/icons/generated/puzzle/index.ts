@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { PuzzleIcon } from './line'
+export { PuzzleIcon, PuzzlePieceIcon } from './line'

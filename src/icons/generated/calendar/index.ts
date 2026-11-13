@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { CalendarIcon, CalendarMonthIcon } from './line'
+export { CalendarIcon, CalendarMonthIcon, CalendarRangeIcon, CalendarWeekIcon } from './line'

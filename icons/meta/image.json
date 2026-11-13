@@ -8,6 +8,10 @@
     {
       "name": "wallpaper",
       "deprecated": false
+    },
+    {
+      "name": "background",
+      "deprecated": false
     }
   ],
   "variants": ["line", "filled"],

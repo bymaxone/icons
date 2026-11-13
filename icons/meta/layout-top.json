@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Top panel",
+  "tags": ["layout top", "top pane", "header panel", "split"],
+  "categories": ["system"],
+  "useCases": ["Opens a panel at the top", "Shows a banner area above the content"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

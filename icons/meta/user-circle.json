@@ -4,6 +4,12 @@
   "tags": ["user", "account", "avatar", "profile"],
   "categories": ["people"],
   "useCases": ["Opens the account menu", "Shows a profile picture"],
+  "aliases": [
+    {
+      "name": "account-circle",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

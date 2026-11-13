@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Dog",
+  "tags": ["dog", "pet", "animal", "puppy"],
+  "categories": ["nature"],
+  "useCases": ["Marks a dog friendly place", "Shows a pet category"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

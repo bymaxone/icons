@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Bottom panel",
+  "tags": ["layout bottom", "bottom pane", "footer panel", "split"],
+  "categories": ["system"],
+  "useCases": ["Opens a panel at the bottom", "Splits the view horizontally"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -19,3 +19,6 @@ export const NoteIcon = /* @__PURE__ */ createIcon('note', [
   ['path', { d: 'M13.25 19.75v-4.5c0-1.25.75-2 2-2h4.5' }],
   ['path', { d: 'M8.25 8.5h7.5m-7.5 3.25h3' }]
 ])
+
+/** `sticky-note`: an alias of {@link NoteIcon}. */
+export const StickyNoteIcon = NoteIcon

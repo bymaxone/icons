@@ -27,3 +27,6 @@ export const VolumeFilledIcon = /* @__PURE__ */ createIcon(
 
 /** `volume-up`: an alias of {@link VolumeFilledIcon}. */
 export const VolumeUpFilledIcon = VolumeFilledIcon
+
+/** `volume-high`: an alias of {@link VolumeFilledIcon}. */
+export const VolumeHighFilledIcon = VolumeFilledIcon

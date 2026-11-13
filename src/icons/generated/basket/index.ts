@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { BasketIcon } from './line'
+export { BasketIcon, ShoppingBasketIcon } from './line'

@@ -31,3 +31,6 @@ export const LifebuoyIcon = /* @__PURE__ */ createIcon('lifebuoy', [
     }
   ]
 ])
+
+/** `life-buoy`: an alias of {@link LifebuoyIcon}. */
+export const LifeBuoyIcon = LifebuoyIcon

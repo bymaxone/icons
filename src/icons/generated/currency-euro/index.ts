@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { CurrencyEuroIcon } from './line'
+export { CurrencyEuroIcon, EuroIcon } from './line'

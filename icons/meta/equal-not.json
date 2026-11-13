@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Not equal",
+  "tags": ["equal not", "not equal", "different", "inequality"],
+  "categories": ["math"],
+  "useCases": ["Compares two unequal values", "Inserts the not equal sign"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

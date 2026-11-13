@@ -4,6 +4,16 @@
   "tags": ["window", "browser", "app", "frame"],
   "categories": ["system"],
   "useCases": ["Opens a new window", "Shows an app window"],
+  "aliases": [
+    {
+      "name": "app-window",
+      "deprecated": false
+    },
+    {
+      "name": "browser",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

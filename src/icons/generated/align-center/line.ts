@@ -17,3 +17,6 @@ export const AlignCenterIcon = /* @__PURE__ */ createIcon('align-center', [
   ['path', { d: 'M4.75 14.25h15' }],
   ['path', { d: 'M8.75 18.75h7' }]
 ])
+
+/** `text-align-center`: an alias of {@link AlignCenterIcon}. */
+export const TextAlignCenterIcon = AlignCenterIcon

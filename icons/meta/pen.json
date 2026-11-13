@@ -4,6 +4,16 @@
   "tags": ["pen", "write", "fountain pen", "sign"],
   "categories": ["editing", "text"],
   "useCases": ["Writes a note", "Signs a form"],
+  "aliases": [
+    {
+      "name": "pen-tool",
+      "deprecated": false
+    },
+    {
+      "name": "draw",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

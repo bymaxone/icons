@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Lasso",
+  "tags": ["lasso", "free select", "selection", "loop"],
+  "categories": ["editing"],
+  "useCases": ["Selects an area by drawing around it", "Picks objects with a free form loop"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -20,3 +20,6 @@ export const EyeOffSmIcon = /* @__PURE__ */ createIcon(
   ],
   { masterSize: 16 }
 )
+
+/** `eye-slash`: an alias of {@link EyeOffSmIcon}. */
+export const EyeSlashSmIcon = EyeOffSmIcon

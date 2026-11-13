@@ -16,3 +16,9 @@ export const PenIcon = /* @__PURE__ */ createIcon('pen', [
   ['path', { d: 'M12.25 21.25v-4.5' }],
   ['circle', { cx: 12.25, cy: 12.25, r: 1.25 }]
 ])
+
+/** `pen-tool`: an alias of {@link PenIcon}. */
+export const PenToolIcon = PenIcon
+
+/** `draw`: an alias of {@link PenIcon}. */
+export const DrawIcon = PenIcon

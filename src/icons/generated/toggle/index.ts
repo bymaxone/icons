@@ -4,5 +4,10 @@
  * @layer Generated
  */
 
-export { SwitchIcon, ToggleIcon } from './line'
-export { SwitchFilledIcon, ToggleFilledIcon } from './filled'
+export { SwitchIcon, ToggleIcon, ToggleOffIcon, ToggleOnIcon } from './line'
+export {
+  SwitchFilledIcon,
+  ToggleFilledIcon,
+  ToggleOffFilledIcon,
+  ToggleOnFilledIcon
+} from './filled'

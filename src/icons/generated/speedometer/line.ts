@@ -20,3 +20,6 @@ export const SpeedometerIcon = /* @__PURE__ */ createIcon('speedometer', [
 
 /** @deprecated `spending-cap` is a deprecated alias of `speedometer`, removed in 2.0.0. Renamed to speedometer, the object the drawing shows. Use {@link SpeedometerIcon}. */
 export const SpendingCapIcon = SpeedometerIcon
+
+/** `gauge`: an alias of {@link SpeedometerIcon}. */
+export const GaugeIcon = SpeedometerIcon

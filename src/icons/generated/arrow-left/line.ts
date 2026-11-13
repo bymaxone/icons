@@ -14,3 +14,6 @@ import { createIcon } from '@bymax-one/icons/runtime'
 export const ArrowLeftIcon = /* @__PURE__ */ createIcon('arrow-left', [
   ['path', { d: 'm11.25 5.75-6.5 6.5 6.5 6.5m-6.5-6.5h15' }]
 ])
+
+/** `arrow-back`: an alias of {@link ArrowLeftIcon}. */
+export const ArrowBackIcon = ArrowLeftIcon

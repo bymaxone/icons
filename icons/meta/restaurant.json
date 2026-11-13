@@ -4,6 +4,12 @@
   "tags": ["restaurant", "dining", "fork knife", "meal"],
   "categories": ["food", "maps"],
   "useCases": ["Marks a place to eat", "Lists nearby dining"],
+  "aliases": [
+    {
+      "name": "fork-knife",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

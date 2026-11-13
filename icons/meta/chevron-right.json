@@ -4,6 +4,16 @@
   "tags": ["caret", "forward", "next", "right"],
   "categories": ["arrows"],
   "useCases": ["Opens a nested menu item", "Moves a carousel to the next item"],
+  "aliases": [
+    {
+      "name": "caret-right",
+      "deprecated": false
+    },
+    {
+      "name": "greater-than",
+      "deprecated": false
+    }
+  ],
   "variants": ["line", "sm"],
   "opticalSizes": [24, 16],
   "since": "0.1.0"

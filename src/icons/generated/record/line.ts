@@ -15,3 +15,6 @@ export const RecordIcon = /* @__PURE__ */ createIcon('record', [
   ['circle', { cx: 12.25, cy: 12.25, r: 8.5 }],
   ['circle', { cx: 12.25, cy: 12.25, r: 1, fill: 'currentColor' }]
 ])
+
+/** `record-circle`: an alias of {@link RecordIcon}. */
+export const RecordCircleIcon = RecordIcon

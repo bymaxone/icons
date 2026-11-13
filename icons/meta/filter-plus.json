@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Filter plus",
+  "tags": ["filter plus", "add filter", "refine", "criteria"],
+  "categories": ["data", "actions"],
+  "useCases": ["Adds another filter to a list", "Narrows the results further"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { CloudRainIcon } from './line'
+export { CloudRainIcon, RainyIcon } from './line'

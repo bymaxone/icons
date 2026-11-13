@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Text wrap",
+  "tags": ["text wrap", "line break", "wrap", "overflow"],
+  "categories": ["text"],
+  "useCases": ["Wraps long text onto the next line", "Switches line wrapping on"],
+  "aliases": [
+    {
+      "name": "wrap-text",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

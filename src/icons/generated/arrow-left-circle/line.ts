@@ -15,3 +15,9 @@ export const ArrowLeftCircleIcon = /* @__PURE__ */ createIcon('arrow-left-circle
   ['circle', { cx: 12.25, cy: 12.25, r: 8.5 }],
   ['path', { d: 'M11.25 9 8 12.25l3.25 3.25M8 12.25h8' }]
 ])
+
+/** `arrow-circle-left`: an alias of {@link ArrowLeftCircleIcon}. */
+export const ArrowCircleLeftIcon = ArrowLeftCircleIcon
+
+/** `circle-arrow-left`: an alias of {@link ArrowLeftCircleIcon}. */
+export const CircleArrowLeftIcon = ArrowLeftCircleIcon

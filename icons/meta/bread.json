@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Bread",
+  "tags": ["bread", "loaf", "bakery", "toast"],
+  "categories": ["food"],
+  "useCases": ["Shows a freshly baked loaf", "Marks a bakery or a breakfast item"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

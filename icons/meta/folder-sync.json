@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Synced folder",
+  "tags": ["folder sync", "sync folder", "backup", "mirror"],
+  "categories": ["files", "system"],
+  "useCases": ["Keeps a folder in step across devices", "Shows a folder being updated"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

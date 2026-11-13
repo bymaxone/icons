@@ -16,3 +16,6 @@ export const BasketIcon = /* @__PURE__ */ createIcon('basket', [
   ['path', { d: 'm7.25 9.75 3-5.5m7 5.5-3-5.5' }],
   ['path', { d: 'M10.25 13.25v4.5m4-4.5v4.5' }]
 ])
+
+/** `shopping-basket`: an alias of {@link BasketIcon}. */
+export const ShoppingBasketIcon = BasketIcon

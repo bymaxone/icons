@@ -4,5 +4,5 @@
  * @layer Generated
  */
 
-export { VideoIcon } from './line'
-export { VideoFilledIcon } from './filled'
+export { CameraVideoIcon, VideoCameraIcon, VideoIcon } from './line'
+export { CameraVideoFilledIcon, VideoCameraFilledIcon, VideoFilledIcon } from './filled'

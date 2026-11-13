@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { FolderUserIcon } from './line'
+export { FolderSharedIcon, FolderUserIcon } from './line'

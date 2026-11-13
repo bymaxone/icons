@@ -16,6 +16,14 @@
     {
       "name": "info-circle",
       "deprecated": false
+    },
+    {
+      "name": "information",
+      "deprecated": false
+    },
+    {
+      "name": "information-circle",
+      "deprecated": false
     }
   ],
   "variants": ["line", "filled", "sm"],

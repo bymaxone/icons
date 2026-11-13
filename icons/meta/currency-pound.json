@@ -4,6 +4,12 @@
   "tags": ["pound", "currency", "money", "gbp"],
   "categories": ["commerce"],
   "useCases": ["Shows a price in pounds", "Switches the currency to pounds"],
+  "aliases": [
+    {
+      "name": "pound",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

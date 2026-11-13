@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Volleyball",
+  "tags": ["volleyball", "ball", "sport", "beach"],
+  "categories": ["games"],
+  "useCases": ["Marks a volleyball game", "Shows a team sport"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

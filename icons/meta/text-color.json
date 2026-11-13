@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Text color",
+  "tags": ["text color", "font color", "letter a", "underline"],
+  "categories": ["text", "editing"],
+  "useCases": ["Changes the colour of the letters", "Picks a font colour"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

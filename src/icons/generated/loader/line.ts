@@ -16,3 +16,6 @@ export const LoaderIcon = /* @__PURE__ */ createIcon('loader', [
   ['path', { d: 'M17.232 18.51a8 8 0 0 1-7.912 1.184' }],
   ['path', { d: 'M6.797 18.104a8 8 0 0 1-2.196-3.511' }]
 ])
+
+/** `loading`: an alias of {@link LoaderIcon}. */
+export const LoadingIcon = LoaderIcon

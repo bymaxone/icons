@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { WindowIcon } from './line'
+export { AppWindowIcon, BrowserIcon, WindowIcon } from './line'

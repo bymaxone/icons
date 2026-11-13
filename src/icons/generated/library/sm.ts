@@ -30,3 +30,9 @@ export const LibrarySmIcon = /* @__PURE__ */ createIcon(
   ],
   { masterSize: 16 }
 )
+
+/** `books`: an alias of {@link LibrarySmIcon}. */
+export const BooksSmIcon = LibrarySmIcon
+
+/** `bookshelf`: an alias of {@link LibrarySmIcon}. */
+export const BookshelfSmIcon = LibrarySmIcon

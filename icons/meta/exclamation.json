@@ -1,0 +1,20 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Exclamation mark",
+  "tags": ["exclamation", "important", "alert", "attention"],
+  "categories": ["status"],
+  "useCases": ["Flags something that needs attention", "Marks a high priority item"],
+  "aliases": [
+    {
+      "name": "exclamation-mark",
+      "deprecated": false
+    },
+    {
+      "name": "priority-high",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Arrow down in a square",
+  "tags": ["arrow down square", "down", "download", "boxed arrow"],
+  "categories": ["arrows"],
+  "useCases": ["Moves a box to the bottom", "Sends an item down in a square button"],
+  "aliases": [
+    {
+      "name": "square-arrow-down",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -22,3 +22,6 @@ export const CertificateIcon = /* @__PURE__ */ createIcon('certificate', [
   ['circle', { cx: 17.75, cy: 12.75, r: 3 }],
   ['path', { d: 'm15.75 15.25-.75 6 2.75-1.5 2.75 1.5-.75-6' }]
 ])
+
+/** `license`: an alias of {@link CertificateIcon}. */
+export const LicenseIcon = CertificateIcon

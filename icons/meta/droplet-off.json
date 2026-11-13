@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Droplet off",
+  "tags": ["droplet off", "no blur", "dry", "sharp"],
+  "categories": ["editing", "nature"],
+  "useCases": ["Turns the blur effect off", "Marks a dry or waterless item"],
+  "aliases": [
+    {
+      "name": "blur-off",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

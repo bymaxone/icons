@@ -21,3 +21,9 @@ export const BarChartIcon = ChartBarIcon
 
 /** `chart`: an alias of {@link ChartBarIcon}. */
 export const ChartIcon = ChartBarIcon
+
+/** `analytics`: an alias of {@link ChartBarIcon}. */
+export const AnalyticsIcon = ChartBarIcon
+
+/** `chart-column`: an alias of {@link ChartBarIcon}. */
+export const ChartColumnIcon = ChartBarIcon

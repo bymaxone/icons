@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { BedIcon } from './line'
+export { BedIcon, BedSingleIcon } from './line'

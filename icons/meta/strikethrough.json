@@ -4,6 +4,12 @@
   "tags": ["strikethrough", "strike", "text", "format"],
   "categories": ["text"],
   "useCases": ["Strikes the text through", "Marks removed text"],
+  "aliases": [
+    {
+      "name": "format-strikethrough",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

@@ -16,3 +16,6 @@ export const CoffeeIcon = /* @__PURE__ */ createIcon('coffee', [
   ['path', { d: 'M15.75 10.75h1.5a2.25 2.25 0 0 1 0 4.5h-1.5' }],
   ['path', { d: 'M8.25 3.25v2.5m4-2.5v2.5' }]
 ])
+
+/** `cup`: an alias of {@link CoffeeIcon}. */
+export const CupIcon = CoffeeIcon

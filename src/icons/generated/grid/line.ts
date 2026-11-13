@@ -20,3 +20,9 @@ export const GridIcon = /* @__PURE__ */ createIcon('grid', [
 
 /** `hash`: an alias of {@link GridIcon}. */
 export const HashIcon = GridIcon
+
+/** `grid-3x3`: an alias of {@link GridIcon}. */
+export const Grid3x3Icon = GridIcon
+
+/** `grid-3x`: an alias of {@link GridIcon}. */
+export const Grid3xIcon = GridIcon

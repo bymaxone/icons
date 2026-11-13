@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { PenIcon } from './line'
+export { DrawIcon, PenIcon, PenToolIcon } from './line'

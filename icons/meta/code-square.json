@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Code in a box",
+  "tags": ["code square", "snippet", "code box", "embed"],
+  "categories": ["dev"],
+  "useCases": ["Embeds a block of code", "Shows a code snippet"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

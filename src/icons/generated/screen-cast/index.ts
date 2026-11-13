@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { AirplayIcon, CastIcon, ScreenCastIcon } from './line'
+export { AirplayIcon, CastIcon, ScreenCastIcon, ScreenShareIcon } from './line'

@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Address book",
+  "tags": ["address book", "contacts", "directory", "people"],
+  "categories": ["people", "communication"],
+  "useCases": ["Opens the list of contacts", "Looks up a person"],
+  "aliases": [
+    {
+      "name": "contacts",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

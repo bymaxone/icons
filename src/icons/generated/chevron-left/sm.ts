@@ -16,3 +16,9 @@ export const ChevronLeftSmIcon = /* @__PURE__ */ createIcon(
   [['path', { d: 'm15.375 7.5-5.25 5.25 5.25 5.25' }]],
   { masterSize: 16 }
 )
+
+/** `caret-left`: an alias of {@link ChevronLeftSmIcon}. */
+export const CaretLeftSmIcon = ChevronLeftSmIcon
+
+/** `less-than`: an alias of {@link ChevronLeftSmIcon}. */
+export const LessThanSmIcon = ChevronLeftSmIcon

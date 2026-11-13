@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { ListIcon } from './line'
+export { ListIcon, TableOfContentsIcon, ViewListIcon } from './line'

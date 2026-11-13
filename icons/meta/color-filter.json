@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Color filter",
+  "tags": ["color filter", "tint", "effect", "photo"],
+  "categories": ["editing", "media"],
+  "useCases": ["Applies a colour filter to an image", "Switches a photo look"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

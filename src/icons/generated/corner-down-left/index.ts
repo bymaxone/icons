@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { CornerDownLeftIcon } from './line'
+export { CornerDownLeftIcon, KeyboardReturnIcon } from './line'

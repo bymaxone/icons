@@ -20,3 +20,6 @@ export const PhoneIncomingIcon = /* @__PURE__ */ createIcon('phone-incoming', [
   ],
   ['path', { d: 'm20.75 3.25-5 5m0-3.5v3.5h3.5' }]
 ])
+
+/** `call-received`: an alias of {@link PhoneIncomingIcon}. */
+export const CallReceivedIcon = PhoneIncomingIcon

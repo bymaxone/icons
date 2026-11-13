@@ -4,6 +4,12 @@
   "tags": ["folder user", "personal", "owner", "profile"],
   "categories": ["files", "people"],
   "useCases": ["Opens the files of one person", "Shows a folder owned by a user"],
+  "aliases": [
+    {
+      "name": "folder-shared",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

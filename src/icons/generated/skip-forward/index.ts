@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { SkipForwardIcon } from './line'
+export { SkipForwardIcon, SkipNextIcon } from './line'

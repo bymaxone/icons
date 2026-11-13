@@ -17,3 +17,6 @@ export const ScissorsIcon = /* @__PURE__ */ createIcon('scissors', [
   ['path', { d: 'm10.539 13.92 9.711-8.67' }],
   ['path', { d: 'm14.662 14.261 5.588 4.989' }]
 ])
+
+/** `cut`: an alias of {@link ScissorsIcon}. */
+export const CutIcon = ScissorsIcon

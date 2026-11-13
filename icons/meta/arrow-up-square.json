@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Arrow up in a square",
+  "tags": ["arrow up square", "up", "upload", "boxed arrow"],
+  "categories": ["arrows"],
+  "useCases": ["Moves a box to the top", "Sends an item up in a square button"],
+  "aliases": [
+    {
+      "name": "square-arrow-up",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

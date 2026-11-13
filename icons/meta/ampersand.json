@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Ampersand",
+  "tags": ["ampersand", "and", "symbol", "character"],
+  "categories": ["text"],
+  "useCases": ["Inserts the and sign", "Joins two names in a title"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

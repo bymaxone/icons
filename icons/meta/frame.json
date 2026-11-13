@@ -4,6 +4,16 @@
   "tags": ["film frame", "still", "perforation", "picture"],
   "categories": ["media"],
   "useCases": ["Marks a single frame of a clip", "Exports the current frame"],
+  "aliases": [
+    {
+      "name": "bounding-box",
+      "deprecated": false
+    },
+    {
+      "name": "margin",
+      "deprecated": false
+    }
+  ],
   "variants": ["line", "sm"],
   "opticalSizes": [24, 16],
   "since": "0.1.0"

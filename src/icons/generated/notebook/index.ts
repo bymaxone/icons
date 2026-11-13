@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { NotebookIcon } from './line'
+export { JournalIcon, NotebookIcon, NotesIcon } from './line'

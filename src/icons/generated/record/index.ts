@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { RecordIcon } from './line'
+export { RecordCircleIcon, RecordIcon } from './line'

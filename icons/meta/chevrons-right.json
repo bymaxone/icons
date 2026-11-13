@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Double chevron right",
+  "tags": ["chevrons right", "double chevron", "last", "forward"],
+  "categories": ["arrows"],
+  "useCases": ["Jumps to the last page", "Moves several steps ahead"],
+  "aliases": [
+    {
+      "name": "chevron-double-right",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

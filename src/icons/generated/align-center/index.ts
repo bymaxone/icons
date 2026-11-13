@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { AlignCenterIcon } from './line'
+export { AlignCenterIcon, TextAlignCenterIcon } from './line'

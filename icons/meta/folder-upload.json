@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Folder upload",
+  "tags": ["folder upload", "send folder", "import", "up"],
+  "categories": ["files", "actions"],
+  "useCases": ["Uploads a whole folder", "Sends a directory to a server"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

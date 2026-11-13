@@ -4,6 +4,12 @@
   "tags": ["tablet", "device", "ipad", "screen"],
   "categories": ["devices"],
   "useCases": ["Shows the tablet preview", "Marks a tablet device"],
+  "aliases": [
+    {
+      "name": "device-tablet",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

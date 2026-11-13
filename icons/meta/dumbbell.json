@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Dumbbell",
+  "tags": ["dumbbell", "gym", "strength", "workout"],
+  "categories": ["health"],
+  "useCases": ["Starts a strength workout", "Marks a gym or a fitness plan"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

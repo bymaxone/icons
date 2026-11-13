@@ -24,3 +24,9 @@ export const VideoFilledIcon = /* @__PURE__ */ createIcon(
   ],
   { paint: 'fill' }
 )
+
+/** `camera-video`: an alias of {@link VideoFilledIcon}. */
+export const CameraVideoFilledIcon = VideoFilledIcon
+
+/** `video-camera`: an alias of {@link VideoFilledIcon}. */
+export const VideoCameraFilledIcon = VideoFilledIcon

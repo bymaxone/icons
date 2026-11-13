@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { SpeedometerIcon, SpendingCapIcon } from './line'
+export { GaugeIcon, SpeedometerIcon, SpendingCapIcon } from './line'

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Folder edit",
+  "tags": ["folder edit", "rename folder", "modify", "pencil"],
+  "categories": ["files", "editing"],
+  "useCases": ["Renames a folder", "Changes the settings of a folder"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

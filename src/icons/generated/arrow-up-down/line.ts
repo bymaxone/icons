@@ -18,3 +18,6 @@ export const ArrowUpDownIcon = /* @__PURE__ */ createIcon('arrow-up-down', [
 
 /** @deprecated `sort` is a deprecated alias of `arrow-up-down`, removed in 2.0.0. Renamed to arrow-up-down, the object the drawing shows. Use {@link ArrowUpDownIcon}. */
 export const SortIcon = ArrowUpDownIcon
+
+/** `arrows-vertical`: an alias of {@link ArrowUpDownIcon}. */
+export const ArrowsVerticalIcon = ArrowUpDownIcon

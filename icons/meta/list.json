@@ -4,6 +4,16 @@
   "tags": ["list", "items", "bullets", "view"],
   "categories": ["data"],
   "useCases": ["Switches a view to a list", "Shows the items of a collection"],
+  "aliases": [
+    {
+      "name": "view-list",
+      "deprecated": false
+    },
+    {
+      "name": "table-of-contents",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

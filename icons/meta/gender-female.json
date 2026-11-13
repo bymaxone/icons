@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Female",
+  "tags": ["gender female", "woman", "venus", "female sign"],
+  "categories": ["people"],
+  "useCases": ["Selects the female option", "Marks a gender field"],
+  "aliases": [
+    {
+      "name": "female",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

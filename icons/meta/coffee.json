@@ -4,6 +4,12 @@
   "tags": ["coffee", "cup", "break", "cafe"],
   "categories": ["food"],
   "useCases": ["Takes a break", "Shows a cafe"],
+  "aliases": [
+    {
+      "name": "cup",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

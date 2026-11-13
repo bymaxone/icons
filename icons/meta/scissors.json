@@ -4,6 +4,12 @@
   "tags": ["cut", "trim", "clip", "shears"],
   "categories": ["media", "tools"],
   "useCases": ["Trims a clip", "Cuts a selection"],
+  "aliases": [
+    {
+      "name": "cut",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

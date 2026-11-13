@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { ArrowLeftCircleIcon } from './line'
+export { ArrowCircleLeftIcon, ArrowLeftCircleIcon, CircleArrowLeftIcon } from './line'

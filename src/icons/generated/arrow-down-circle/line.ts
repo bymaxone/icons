@@ -15,3 +15,12 @@ export const ArrowDownCircleIcon = /* @__PURE__ */ createIcon('arrow-down-circle
   ['circle', { cx: 12.25, cy: 12.25, r: 8.5 }],
   ['path', { d: 'm9 13.25 3.25 3.25 3.25-3.25m-3.25 3.25v-8' }]
 ])
+
+/** `arrow-circle-down`: an alias of {@link ArrowDownCircleIcon}. */
+export const ArrowCircleDownIcon = ArrowDownCircleIcon
+
+/** `circle-arrow-down`: an alias of {@link ArrowDownCircleIcon}. */
+export const CircleArrowDownIcon = ArrowDownCircleIcon
+
+/** `download-circle`: an alias of {@link ArrowDownCircleIcon}. */
+export const DownloadCircleIcon = ArrowDownCircleIcon

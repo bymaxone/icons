@@ -21,3 +21,6 @@ export const SafeIcon = /* @__PURE__ */ createIcon('safe', [
   ['circle', { cx: 12.25, cy: 11.25, r: 2.5 }],
   ['path', { d: 'M7.25 18.25v2m10-2v2' }]
 ])
+
+/** `vault`: an alias of {@link SafeIcon}. */
+export const VaultIcon = SafeIcon

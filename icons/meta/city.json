@@ -4,6 +4,12 @@
   "tags": ["city", "skyline", "buildings", "urban"],
   "categories": ["maps"],
   "useCases": ["Shows a city skyline", "Marks an urban area"],
+  "aliases": [
+    {
+      "name": "buildings",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

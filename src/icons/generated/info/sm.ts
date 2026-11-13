@@ -26,3 +26,9 @@ export const DetailsSmIcon = InfoSmIcon
 
 /** `info-circle`: an alias of {@link InfoSmIcon}. */
 export const InfoCircleSmIcon = InfoSmIcon
+
+/** `information`: an alias of {@link InfoSmIcon}. */
+export const InformationSmIcon = InfoSmIcon
+
+/** `information-circle`: an alias of {@link InfoSmIcon}. */
+export const InformationCircleSmIcon = InfoSmIcon

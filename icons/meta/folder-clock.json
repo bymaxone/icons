@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Recent folder",
+  "tags": ["folder clock", "recent", "history", "scheduled"],
+  "categories": ["files", "time"],
+  "useCases": ["Lists recently opened folders", "Shows when a folder was last changed"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

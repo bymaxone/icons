@@ -8,6 +8,10 @@
     {
       "name": "swap",
       "deprecated": false
+    },
+    {
+      "name": "exchange",
+      "deprecated": false
     }
   ],
   "variants": ["line"],

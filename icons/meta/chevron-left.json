@@ -4,6 +4,16 @@
   "tags": ["caret", "back", "previous", "left"],
   "categories": ["arrows"],
   "useCases": ["Goes back to the previous page", "Moves a carousel to the previous item"],
+  "aliases": [
+    {
+      "name": "caret-left",
+      "deprecated": false
+    },
+    {
+      "name": "less-than",
+      "deprecated": false
+    }
+  ],
   "variants": ["line", "sm"],
   "opticalSizes": [24, 16],
   "since": "0.1.0"

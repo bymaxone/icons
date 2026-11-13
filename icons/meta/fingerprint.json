@@ -4,6 +4,12 @@
   "tags": ["fingerprint", "biometric", "identity", "touch id"],
   "categories": ["security"],
   "useCases": ["Signs in with a fingerprint", "Confirms an action with biometrics"],
+  "aliases": [
+    {
+      "name": "finger-print",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"
