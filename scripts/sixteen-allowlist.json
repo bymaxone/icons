@@ -22,7 +22,7 @@
     },
     "chart-donut": {
       "pairs": ["0-1"],
-      "why": "the two slices fuse along their shared edge; it still reads as a donut chart"
+      "why": "the two slices fuse across the gap between them; it still reads as a donut chart"
     },
     "cherry": {
       "pairs": ["0-1"],
