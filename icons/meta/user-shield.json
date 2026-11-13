@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Protected user",
+  "tags": ["user shield", "secure profile", "guard", "person shield"],
+  "categories": ["people", "security"],
+  "useCases": ["Shows a user with extra protection", "Marks an account guarded by a shield"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

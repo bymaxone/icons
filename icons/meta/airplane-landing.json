@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Airplane landing",
+  "tags": ["airplane landing", "arrival", "flight", "airport"],
+  "categories": ["transport"],
+  "useCases": ["Shows a flight that arrives", "Lists inbound flights at an airport"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

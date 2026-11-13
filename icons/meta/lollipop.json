@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Lollipop",
+  "tags": ["lollipop", "sweet", "candy on a stick", "treat"],
+  "categories": ["food"],
+  "useCases": ["Marks a sweet for children", "Shows a candy on a stick"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

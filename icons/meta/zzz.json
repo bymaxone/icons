@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Sleep",
+  "tags": ["zzz", "sleep", "snooze", "rest"],
+  "categories": ["status", "time"],
+  "useCases": ["Shows that something is asleep", "Marks a device in standby"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

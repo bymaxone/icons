@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Mouse off",
+  "tags": ["mouse off", "no mouse", "disabled", "pointer"],
+  "categories": ["devices", "status"],
+  "useCases": ["Shows that the mouse is disabled", "Marks a keyboard only mode"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

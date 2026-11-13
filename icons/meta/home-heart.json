@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Home with a heart",
+  "tags": ["home heart", "favorite home", "family", "house"],
+  "categories": ["household", "emotions"],
+  "useCases": ["Marks a favourite property", "Shows a welcoming household"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

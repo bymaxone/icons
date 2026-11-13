@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Incognito",
+  "tags": ["incognito", "private browsing", "hat", "anonymous"],
+  "categories": ["security", "system"],
+  "useCases": ["Starts a private browsing session", "Hides the identity of a visitor"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

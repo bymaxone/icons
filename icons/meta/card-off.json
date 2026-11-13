@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Card off",
+  "tags": ["card off", "payment disabled", "no card", "blocked"],
+  "categories": ["commerce", "status"],
+  "useCases": ["Shows a payment card that is blocked", "Removes a card from checkout"],
+  "aliases": [
+    {
+      "name": "credit-card-off",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

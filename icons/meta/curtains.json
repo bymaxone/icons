@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Curtains",
+  "tags": ["curtains", "drapes", "window", "stage"],
+  "categories": ["household"],
+  "useCases": ["Opens or closes the drapes", "Shows a stage before a show"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

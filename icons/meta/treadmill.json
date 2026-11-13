@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Treadmill",
+  "tags": ["treadmill", "running machine", "cardio", "gym"],
+  "categories": ["health", "games"],
+  "useCases": ["Marks a cardio machine", "Tracks an indoor run"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

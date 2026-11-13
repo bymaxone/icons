@@ -15,3 +15,6 @@ export const RotateRightIcon = /* @__PURE__ */ createIcon('rotate-right', [
   ['path', { d: 'M16.25 9.25h3.5v-3.5' }],
   ['path', { d: 'M19.25 9a8 8 0 1 0-1.75 8.75' }]
 ])
+
+/** `rotate`: an alias of {@link RotateRightIcon}. */
+export const RotateIcon = RotateRightIcon

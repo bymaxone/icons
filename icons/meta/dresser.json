@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Dresser",
+  "tags": ["dresser", "drawers", "chest", "furniture"],
+  "categories": ["household"],
+  "useCases": ["Stores clothes in drawers", "Marks a bedroom furniture piece"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Beach",
+  "tags": ["beach", "umbrella", "sand", "holiday"],
+  "categories": ["nature", "maps"],
+  "useCases": ["Marks a seaside destination", "Shows a summer holiday"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

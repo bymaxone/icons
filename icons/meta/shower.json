@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Shower",
+  "tags": ["shower", "bath", "water", "bathroom"],
+  "categories": ["household"],
+  "useCases": ["Marks a bathroom feature", "Shows a water spray from above"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

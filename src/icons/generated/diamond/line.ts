@@ -25,3 +25,6 @@ export const DiamondSuitIcon = DiamondIcon
 
 /** `rhombus`: an alias of {@link DiamondIcon}. */
 export const RhombusIcon = DiamondIcon
+
+/** `gem`: an alias of {@link DiamondIcon}. */
+export const GemIcon = DiamondIcon

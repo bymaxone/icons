@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Cookies off",
+  "tags": ["cookie off", "no cookies", "tracking off", "privacy"],
+  "categories": ["security", "food"],
+  "useCases": ["Rejects tracking cookies", "Shows that cookies are disabled"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

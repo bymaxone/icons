@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Whistle",
+  "tags": ["whistle", "referee", "alert", "sports"],
+  "categories": ["games", "audio"],
+  "useCases": ["Starts or stops a match", "Calls for attention"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

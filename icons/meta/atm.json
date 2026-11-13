@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Cash machine",
+  "tags": ["atm", "cash machine", "withdraw", "bank"],
+  "categories": ["commerce", "data"],
+  "useCases": ["Withdraws cash from an account", "Marks a nearby bank service"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

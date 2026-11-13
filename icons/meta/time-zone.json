@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Time zone",
+  "tags": ["time zone", "world clock", "region", "hours"],
+  "categories": ["time", "maps"],
+  "useCases": ["Shows the local time of a region", "Picks a different time zone"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

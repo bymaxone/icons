@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Augmented reality",
+  "tags": ["augmented reality", "ar", "overlay", "headset"],
+  "categories": ["devices", "media"],
+  "useCases": ["Overlays digital content on the real world", "Opens a camera based experience"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Map search",
+  "tags": ["map search", "find place", "look up", "location"],
+  "categories": ["maps", "actions"],
+  "useCases": ["Searches for a place on a map", "Looks up an address"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

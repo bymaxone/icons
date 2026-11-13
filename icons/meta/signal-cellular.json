@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Cellular signal",
+  "tags": ["signal cellular", "bars", "reception", "mobile network"],
+  "categories": ["connectivity", "devices"],
+  "useCases": ["Shows the strength of a mobile network", "Indicates phone reception"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

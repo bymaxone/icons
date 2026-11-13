@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { CloudFogIcon } from './line'
+export { CloudFogIcon, MistIcon } from './line'

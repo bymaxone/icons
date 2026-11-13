@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { ColorPickerIcon, EyedropperIcon } from './line'
+export { ColorPickerIcon, DropperIcon, EyedropperIcon } from './line'

@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Phone call on hold",
+  "tags": ["phone pause", "on hold", "paused call", "call"],
+  "categories": ["communication"],
+  "useCases": ["Puts a call on hold", "Shows a paused conversation"],
+  "aliases": [
+    {
+      "name": "phone-paused",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

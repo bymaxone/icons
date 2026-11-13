@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Submarine",
+  "tags": ["submarine", "underwater", "periscope", "vessel"],
+  "categories": ["transport"],
+  "useCases": ["Shows a vessel that dives", "Marks an underwater mission"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

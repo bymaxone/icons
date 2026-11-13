@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Delivery truck",
+  "tags": ["truck delivery", "shipping", "cargo", "courier"],
+  "categories": ["transport", "commerce"],
+  "useCases": ["Tracks a shipment on the road", "Marks an order that is on its way"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Draft pull request",
+  "tags": ["git pull request draft", "draft", "review", "merge"],
+  "categories": ["dev"],
+  "useCases": ["Shows a change that is not ready for review", "Marks a work in progress proposal"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

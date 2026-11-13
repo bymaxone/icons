@@ -17,3 +17,6 @@ export const GlassesIcon = /* @__PURE__ */ createIcon('glasses', [
   ['path', { d: 'M10.75 13.75c.75-.75 2.25-.75 3 0' }],
   ['path', { d: 'M3.75 14.25 5 8.5m15.5 5.75L19.25 8.5' }]
 ])
+
+/** `eyeglasses`: an alias of {@link GlassesIcon}. */
+export const EyeglassesIcon = GlassesIcon

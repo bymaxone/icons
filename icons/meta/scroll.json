@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Scroll",
+  "tags": ["scroll", "parchment", "document", "ancient"],
+  "categories": ["files", "text"],
+  "useCases": ["Opens a long document", "Shows a rolled sheet of text"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

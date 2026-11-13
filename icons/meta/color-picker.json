@@ -8,6 +8,10 @@
     {
       "name": "eyedropper",
       "deprecated": false
+    },
+    {
+      "name": "dropper",
+      "deprecated": false
     }
   ],
   "variants": ["line"],

@@ -1,0 +1,20 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Low volume",
+  "tags": ["volume low", "quiet", "speaker", "sound"],
+  "categories": ["audio"],
+  "useCases": ["Turns the sound down", "Shows a quiet level"],
+  "aliases": [
+    {
+      "name": "volume-down",
+      "deprecated": false
+    },
+    {
+      "name": "volume-minus",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

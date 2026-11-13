@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Seal",
+  "tags": ["seal", "stamp of approval", "certified", "guarantee"],
+  "categories": ["commerce", "status"],
+  "useCases": ["Certifies that an item is genuine", "Marks a seal of quality"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

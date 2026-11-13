@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Wheat",
+  "tags": ["wheat", "grain", "crop", "bread"],
+  "categories": ["food", "nature"],
+  "useCases": ["Marks a grain based food", "Shows a harvest"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Brick wall",
+  "tags": ["wall", "bricks", "barrier", "construction"],
+  "categories": ["tools", "security"],
+  "useCases": ["Shows a barrier that blocks the way", "Marks a masonry job"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Hail",
+  "tags": ["hail", "ice", "storm", "weather"],
+  "categories": ["nature"],
+  "useCases": ["Forecasts a hailstorm", "Shows frozen rain"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

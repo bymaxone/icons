@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Tie",
+  "tags": ["tie", "necktie", "formal", "dress code"],
+  "categories": ["commerce", "people"],
+  "useCases": ["Marks a formal dress code", "Shows a business style"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

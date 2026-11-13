@@ -4,4 +4,12 @@
  * @layer Generated
  */
 
-export { RefreshCircleIcon, RefreshCwIcon, RefreshIcon, ReloadIcon, RestartIcon } from './line'
+export {
+  RefreshCircleIcon,
+  RefreshCwIcon,
+  RefreshIcon,
+  ReloadIcon,
+  RestartIcon,
+  SyncIcon,
+  UpdateIcon
+} from './line'

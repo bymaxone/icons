@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Sort ascending",
+  "tags": ["sort ascending", "order", "a to z", "increasing"],
+  "categories": ["data", "arrows"],
+  "useCases": ["Orders a list from low to high", "Sorts names from A to Z"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

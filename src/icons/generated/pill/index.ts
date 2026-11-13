@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { PillIcon } from './line'
+export { CapsuleIcon, PillIcon } from './line'

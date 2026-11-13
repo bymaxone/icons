@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Siren",
+  "tags": ["siren", "emergency light", "alarm", "alert"],
+  "categories": ["status", "security"],
+  "useCases": ["Raises an emergency alarm", "Marks an urgent alert"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

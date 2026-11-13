@@ -8,6 +8,10 @@
     {
       "name": "shipping",
       "deprecated": false
+    },
+    {
+      "name": "van",
+      "deprecated": false
     }
   ],
   "variants": ["line"],

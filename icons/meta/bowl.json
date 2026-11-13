@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Bowl",
+  "tags": ["bowl", "dish", "soup", "meal"],
+  "categories": ["food", "household"],
+  "useCases": ["Marks a hot meal", "Shows a dish for soup or cereal"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

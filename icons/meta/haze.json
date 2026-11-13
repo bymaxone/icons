@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Haze",
+  "tags": ["haze", "smog", "low visibility", "weather"],
+  "categories": ["nature"],
+  "useCases": ["Forecasts a hazy sky", "Shows poor air visibility"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

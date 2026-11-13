@@ -30,3 +30,6 @@ export const GroupFilledIcon = UsersFilledIcon
 
 /** `user-group`: an alias of {@link UsersFilledIcon}. */
 export const UserGroupFilledIcon = UsersFilledIcon
+
+/** `people`: an alias of {@link UsersFilledIcon}. */
+export const PeopleFilledIcon = UsersFilledIcon

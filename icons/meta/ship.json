@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Ship",
+  "tags": ["ship", "vessel", "cargo", "sea"],
+  "categories": ["transport"],
+  "useCases": ["Shows a large vessel at sea", "Marks maritime freight"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

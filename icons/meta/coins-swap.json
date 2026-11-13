@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Currency exchange",
+  "tags": ["coins swap", "exchange", "convert", "money"],
+  "categories": ["commerce", "arrows"],
+  "useCases": ["Converts between two currencies", "Swaps one coin for another"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

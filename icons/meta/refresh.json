@@ -20,6 +20,14 @@
     {
       "name": "refresh-cw",
       "deprecated": false
+    },
+    {
+      "name": "sync",
+      "deprecated": false
+    },
+    {
+      "name": "update",
+      "deprecated": false
     }
   ],
   "variants": ["line"],

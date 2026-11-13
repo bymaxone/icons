@@ -4,6 +4,6 @@
  * @layer Generated
  */
 
-export { AlertCircleIcon, ExclamationCircleIcon } from './line'
-export { AlertCircleFilledIcon, ExclamationCircleFilledIcon } from './filled'
-export { AlertCircleSmIcon, ExclamationCircleSmIcon } from './sm'
+export { AlertCircleIcon, ErrorIcon, ExclamationCircleIcon } from './line'
+export { AlertCircleFilledIcon, ErrorFilledIcon, ExclamationCircleFilledIcon } from './filled'
+export { AlertCircleSmIcon, ErrorSmIcon, ExclamationCircleSmIcon } from './sm'

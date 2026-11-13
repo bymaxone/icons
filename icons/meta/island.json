@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Island",
+  "tags": ["island", "palm tree", "sea", "getaway"],
+  "categories": ["nature", "maps"],
+  "useCases": ["Marks a remote getaway", "Shows a patch of land in the sea"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

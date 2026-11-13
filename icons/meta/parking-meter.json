@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Parking meter",
+  "tags": ["parking meter", "pay", "street", "time limit"],
+  "categories": ["transport", "commerce"],
+  "useCases": ["Pays for a street parking spot", "Shows a limit on parking time"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

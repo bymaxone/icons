@@ -30,3 +30,9 @@ export const RefreshCircleIcon = RefreshIcon
 
 /** `refresh-cw`: an alias of {@link RefreshIcon}. */
 export const RefreshCwIcon = RefreshIcon
+
+/** `sync`: an alias of {@link RefreshIcon}. */
+export const SyncIcon = RefreshIcon
+
+/** `update`: an alias of {@link RefreshIcon}. */
+export const UpdateIcon = RefreshIcon

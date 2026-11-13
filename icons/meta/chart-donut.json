@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Donut chart",
+  "tags": ["chart donut", "ring", "share", "percent"],
+  "categories": ["data"],
+  "useCases": ["Shows a share of a total", "Splits a whole into segments"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

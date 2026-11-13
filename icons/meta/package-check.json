@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Package with a check",
+  "tags": ["package check", "delivered", "verified", "parcel"],
+  "categories": ["commerce", "status"],
+  "useCases": ["Confirms that a parcel arrived", "Marks an order as delivered"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

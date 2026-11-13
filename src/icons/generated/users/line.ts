@@ -28,3 +28,6 @@ export const GroupIcon = UsersIcon
 
 /** `user-group`: an alias of {@link UsersIcon}. */
 export const UserGroupIcon = UsersIcon
+
+/** `people`: an alias of {@link UsersIcon}. */
+export const PeopleIcon = UsersIcon

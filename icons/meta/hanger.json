@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Clothes hanger",
+  "tags": ["hanger", "clothes", "wardrobe", "closet"],
+  "categories": ["household", "commerce"],
+  "useCases": ["Opens a wardrobe section", "Marks a fashion category"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

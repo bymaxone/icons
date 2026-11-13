@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Faucet",
+  "tags": ["faucet", "tap", "water", "sink"],
+  "categories": ["household"],
+  "useCases": ["Turns water on or off", "Marks a plumbing fixture"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

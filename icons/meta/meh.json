@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Neutral face",
+  "tags": ["meh", "neutral", "indifferent", "face"],
+  "categories": ["emotions"],
+  "useCases": ["Shows a lukewarm reaction", "Rates something as average"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

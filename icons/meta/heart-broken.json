@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Broken heart",
+  "tags": ["heart broken", "breakup", "sad", "loss"],
+  "categories": ["emotions"],
+  "useCases": ["Shows a loss or a breakup", "Marks a dislike"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

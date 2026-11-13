@@ -6,5 +6,11 @@
   "useCases": ["Opens the security settings", "Marks a protected area"],
   "variants": ["line"],
   "opticalSizes": [24],
-  "since": "0.1.0"
+  "since": "0.1.0",
+  "aliases": [
+    {
+      "name": "security",
+      "deprecated": false
+    }
+  ]
 }

@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { ShippingIcon, TruckIcon } from './line'
+export { ShippingIcon, TruckIcon, VanIcon } from './line'

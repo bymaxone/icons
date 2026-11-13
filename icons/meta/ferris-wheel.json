@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Ferris wheel",
+  "tags": ["ferris wheel", "fair", "amusement", "ride"],
+  "categories": ["games", "maps"],
+  "useCases": ["Marks an amusement park", "Shows a fairground ride"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

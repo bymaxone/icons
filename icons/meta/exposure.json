@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Exposure",
+  "tags": ["exposure", "brightness", "photo", "adjust"],
+  "categories": ["media", "editing"],
+  "useCases": ["Adjusts how bright a photo looks", "Balances light and shadow in an image"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

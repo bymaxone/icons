@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Paw print",
+  "tags": ["paw", "pet", "animal", "footprint"],
+  "categories": ["nature"],
+  "useCases": ["Marks a pet friendly place", "Shows an animal track"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

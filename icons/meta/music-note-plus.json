@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Add song",
+  "tags": ["music note plus", "add song", "new track", "audio"],
+  "categories": ["audio", "actions"],
+  "useCases": ["Adds a song to a playlist", "Creates a new track"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

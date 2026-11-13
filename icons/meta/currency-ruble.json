@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Ruble",
+  "tags": ["currency ruble", "money", "russia", "price"],
+  "categories": ["commerce"],
+  "useCases": ["Shows a price in rubles", "Marks a Russian currency"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

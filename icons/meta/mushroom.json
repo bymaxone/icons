@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Mushroom",
+  "tags": ["mushroom", "fungus", "forest", "ingredient"],
+  "categories": ["nature", "food"],
+  "useCases": ["Lists a mushroom ingredient", "Marks forest foraging"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Tournament bracket",
+  "tags": ["tournament", "bracket", "knockout", "competition"],
+  "categories": ["games", "data"],
+  "useCases": ["Shows the stages of a competition", "Lays out knockout matches"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

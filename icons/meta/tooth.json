@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Tooth",
+  "tags": ["tooth", "dental", "dentist", "teeth"],
+  "categories": ["health"],
+  "useCases": ["Marks a dental service", "Shows oral care"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

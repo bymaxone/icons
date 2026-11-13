@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Banana",
+  "tags": ["banana", "fruit", "yellow", "snack"],
+  "categories": ["food"],
+  "useCases": ["Lists a fruit in a menu", "Marks a healthy snack"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

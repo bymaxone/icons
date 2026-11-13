@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Fuel",
+  "tags": ["fuel", "petrol", "gas pump", "refill"],
+  "categories": ["transport"],
+  "useCases": ["Marks a place to refill a vehicle", "Shows the fuel level"],
+  "aliases": [
+    {
+      "name": "gas-station",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

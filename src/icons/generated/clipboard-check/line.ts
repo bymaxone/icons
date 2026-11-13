@@ -26,3 +26,6 @@ export const ClipboardCheckIcon = /* @__PURE__ */ createIcon('clipboard-check', 
   ],
   ['path', { d: 'M8.75 13.5 11 15.75l4.5-4.5' }]
 ])
+
+/** `task`: an alias of {@link ClipboardCheckIcon}. */
+export const TaskIcon = ClipboardCheckIcon

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Music off",
+  "tags": ["music off", "muted", "no music", "audio"],
+  "categories": ["audio", "status"],
+  "useCases": ["Turns the music off", "Shows that background audio is disabled"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

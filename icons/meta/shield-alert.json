@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Shield with an alert",
+  "tags": ["shield alert", "warning", "threat", "security"],
+  "categories": ["security", "status"],
+  "useCases": ["Warns about a security risk", "Flags a threat"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

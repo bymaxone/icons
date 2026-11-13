@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Baby carriage",
+  "tags": ["baby carriage", "stroller", "infant", "pram"],
+  "categories": ["people", "transport"],
+  "useCases": ["Marks a family friendly area", "Shows a stroller for an infant"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

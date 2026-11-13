@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Shopping bag with a check",
+  "tags": ["shopping bag check", "purchased", "order done", "bag"],
+  "categories": ["commerce", "status"],
+  "useCases": ["Confirms a completed purchase", "Marks an order as bagged"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

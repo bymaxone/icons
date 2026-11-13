@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Running",
+  "tags": ["run", "runner", "jog", "exercise"],
+  "categories": ["health", "people"],
+  "useCases": ["Tracks a running session", "Marks a workout"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Car battery",
+  "tags": ["car battery", "vehicle power", "terminals", "charge"],
+  "categories": ["transport", "tools"],
+  "useCases": ["Shows the power source of a vehicle", "Flags a battery that needs charge"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

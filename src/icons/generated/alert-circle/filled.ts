@@ -27,3 +27,6 @@ export const AlertCircleFilledIcon = /* @__PURE__ */ createIcon(
 
 /** `exclamation-circle`: an alias of {@link AlertCircleFilledIcon}. */
 export const ExclamationCircleFilledIcon = AlertCircleFilledIcon
+
+/** `error`: an alias of {@link AlertCircleFilledIcon}. */
+export const ErrorFilledIcon = AlertCircleFilledIcon

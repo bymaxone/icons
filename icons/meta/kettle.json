@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Kettle",
+  "tags": ["kettle", "boil", "tea", "heat water"],
+  "categories": ["food", "household"],
+  "useCases": ["Boils water for a drink", "Marks a kitchen appliance"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

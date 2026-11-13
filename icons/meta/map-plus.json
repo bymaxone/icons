@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Map with a plus",
+  "tags": ["map plus", "add place", "new location", "pin"],
+  "categories": ["maps", "actions"],
+  "useCases": ["Adds a place to a map", "Saves a new location"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

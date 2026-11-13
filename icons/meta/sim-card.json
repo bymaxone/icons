@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "SIM card",
+  "tags": ["sim card", "chip", "mobile plan", "phone"],
+  "categories": ["devices", "connectivity"],
+  "useCases": ["Identifies a mobile subscription", "Shows a phone chip"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

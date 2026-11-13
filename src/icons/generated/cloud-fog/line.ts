@@ -15,3 +15,6 @@ export const CloudFogIcon = /* @__PURE__ */ createIcon('cloud-fog', [
   ['path', { d: 'M6.75 14.75a3.5 3.5 0 1 1 .25-7 5 5 0 0 1 9.75-1.5 4.25 4.25 0 0 1 .75 8.5z' }],
   ['path', { d: 'M4.25 18.25h11m-8 3h12' }]
 ])
+
+/** `mist`: an alias of {@link CloudFogIcon}. */
+export const MistIcon = CloudFogIcon
