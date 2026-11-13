@@ -24,3 +24,6 @@ export const AlertCircleFilledIcon = /* @__PURE__ */ createIcon(
   ],
   { paint: 'fill' }
 )
+
+/** `exclamation-circle`: an alias of {@link AlertCircleFilledIcon}. */
+export const ExclamationCircleFilledIcon = AlertCircleFilledIcon

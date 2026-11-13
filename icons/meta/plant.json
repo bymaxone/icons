@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Plant",
+  "tags": ["plant", "sprout", "growth", "pot"],
+  "categories": ["nature", "household"],
+  "useCases": ["Shows a potted plant", "Marks growth or a new start"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

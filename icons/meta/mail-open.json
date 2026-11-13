@@ -4,6 +4,12 @@
   "tags": ["mail", "open", "read", "envelope"],
   "categories": ["communication"],
   "useCases": ["Marks a message as read", "Opens a letter"],
+  "aliases": [
+    {
+      "name": "envelope-open",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

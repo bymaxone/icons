@@ -20,3 +20,6 @@ export const SkipForwardIcon = /* @__PURE__ */ createIcon('skip-forward', [
   ],
   ['path', { d: 'M18.25 5.5V19' }]
 ])
+
+/** `skip-next`: an alias of {@link SkipForwardIcon}. */
+export const SkipNextIcon = SkipForwardIcon

@@ -20,3 +20,9 @@ export const NotebookIcon = /* @__PURE__ */ createIcon('notebook', [
   ],
   ['path', { d: 'M4.25 7.25h4m-4 5h4m-4 5h4' }]
 ])
+
+/** `journal`: an alias of {@link NotebookIcon}. */
+export const JournalIcon = NotebookIcon
+
+/** `notes`: an alias of {@link NotebookIcon}. */
+export const NotesIcon = NotebookIcon

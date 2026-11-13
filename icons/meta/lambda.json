@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Lambda",
+  "tags": ["lambda", "function", "greek letter", "anonymous"],
+  "categories": ["dev", "math"],
+  "useCases": ["Marks an anonymous function", "Inserts the Greek letter lambda"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

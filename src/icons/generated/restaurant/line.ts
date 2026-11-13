@@ -15,3 +15,6 @@ export const RestaurantIcon = /* @__PURE__ */ createIcon('restaurant', [
   ['path', { d: 'M6.25 3.25v5a2.5 2.5 0 0 0 5 0v-5m-2.5 0v18' }],
   ['path', { d: 'M17.75 21.25v-18c-2.5 1-3.5 3.5-3.5 7v3.5h3.5' }]
 ])
+
+/** `fork-knife`: an alias of {@link RestaurantIcon}. */
+export const ForkKnifeIcon = RestaurantIcon

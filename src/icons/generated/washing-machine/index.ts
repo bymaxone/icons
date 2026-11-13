@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { WashingMachineIcon } from './line'
+export { WashIcon, WashingMachineIcon } from './line'

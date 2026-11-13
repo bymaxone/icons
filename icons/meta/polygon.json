@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Polygon",
+  "tags": ["polygon", "shape", "vertices", "geometry"],
+  "categories": ["shapes"],
+  "useCases": ["Draws a shape with straight sides", "Marks a custom area on a map"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

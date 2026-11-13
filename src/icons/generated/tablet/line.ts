@@ -20,3 +20,6 @@ export const TabletIcon = /* @__PURE__ */ createIcon('tablet', [
   ],
   ['path', { d: 'M10.75 5.75h3' }]
 ])
+
+/** `device-tablet`: an alias of {@link TabletIcon}. */
+export const DeviceTabletIcon = TabletIcon

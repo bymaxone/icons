@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Paint bucket",
+  "tags": ["paint bucket", "fill", "color", "flood fill"],
+  "categories": ["editing"],
+  "useCases": ["Fills an area with colour", "Changes the colour of a shape"],
+  "aliases": [
+    {
+      "name": "paint",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

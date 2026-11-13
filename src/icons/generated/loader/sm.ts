@@ -20,3 +20,6 @@ export const LoaderSmIcon = /* @__PURE__ */ createIcon(
   ],
   { masterSize: 16 }
 )
+
+/** `loading`: an alias of {@link LoaderSmIcon}. */
+export const LoadingSmIcon = LoaderSmIcon

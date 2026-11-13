@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Fried egg",
+  "tags": ["egg fried", "breakfast", "cooking", "sunny side up"],
+  "categories": ["food"],
+  "useCases": ["Shows a breakfast dish", "Marks a cooking step"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

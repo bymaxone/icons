@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { MonitorIcon } from './line'
+export { DesktopIcon, MonitorIcon } from './line'

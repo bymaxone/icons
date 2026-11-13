@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Step out",
+  "tags": ["step out", "debug", "exit", "return"],
+  "categories": ["dev", "arrows"],
+  "useCases": ["Steps out of a function while debugging", "Moves one level back up"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

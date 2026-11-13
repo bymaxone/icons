@@ -27,3 +27,9 @@ export const CalendarIcon = /* @__PURE__ */ createIcon('calendar', [
 
 /** `calendar-month`: an alias of {@link CalendarIcon}. */
 export const CalendarMonthIcon = CalendarIcon
+
+/** `calendar-week`: an alias of {@link CalendarIcon}. */
+export const CalendarWeekIcon = CalendarIcon
+
+/** `calendar-range`: an alias of {@link CalendarIcon}. */
+export const CalendarRangeIcon = CalendarIcon

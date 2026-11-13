@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { ToolsIcon } from './line'
+export { ToolIcon, ToolsIcon } from './line'

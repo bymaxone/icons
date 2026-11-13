@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { BookIcon } from './line'
+export { BookBookmarkIcon, BookIcon } from './line'

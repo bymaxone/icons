@@ -23,3 +23,6 @@ export const LightningOffIcon = /* @__PURE__ */ createIcon('lightning-off', [
 
 /** `flash-off`: an alias of {@link LightningOffIcon}. */
 export const FlashOffIcon = LightningOffIcon
+
+/** `zap-off`: an alias of {@link LightningOffIcon}. */
+export const ZapOffIcon = LightningOffIcon

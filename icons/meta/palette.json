@@ -4,6 +4,16 @@
   "tags": ["colours", "paint", "theme", "swatches"],
   "categories": ["editing"],
   "useCases": ["Opens the colour picker", "Changes the accent colour"],
+  "aliases": [
+    {
+      "name": "colors",
+      "deprecated": false
+    },
+    {
+      "name": "swatch",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

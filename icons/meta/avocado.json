@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Avocado",
+  "tags": ["avocado", "fruit", "guacamole", "healthy"],
+  "categories": ["food"],
+  "useCases": ["Marks a healthy ingredient", "Shows a fruit in a recipe"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

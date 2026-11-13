@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { StrikethroughIcon } from './line'
+export { FormatStrikethroughIcon, StrikethroughIcon } from './line'

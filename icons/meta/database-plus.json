@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Database with a plus",
+  "tags": ["database plus", "new database", "add data", "storage"],
+  "categories": ["data", "actions"],
+  "useCases": ["Creates a new data source", "Adds a database to a project"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

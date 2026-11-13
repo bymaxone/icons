@@ -8,6 +8,14 @@
     {
       "name": "slides",
       "deprecated": false
+    },
+    {
+      "name": "slideshow",
+      "deprecated": false
+    },
+    {
+      "name": "presentation-chart",
+      "deprecated": false
     }
   ],
   "variants": ["line"],

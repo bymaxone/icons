@@ -4,6 +4,12 @@
   "tags": ["hidden", "hide", "invisible", "conceal"],
   "categories": ["status"],
   "useCases": ["Hides a layer", "Masks a password"],
+  "aliases": [
+    {
+      "name": "eye-slash",
+      "deprecated": false
+    }
+  ],
   "variants": ["line", "sm"],
   "opticalSizes": [24, 16],
   "since": "0.1.0"

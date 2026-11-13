@@ -4,6 +4,12 @@
   "tags": ["basket", "shopping", "groceries", "buy"],
   "categories": ["commerce"],
   "useCases": ["Opens the basket", "Adds groceries"],
+  "aliases": [
+    {
+      "name": "shopping-basket",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { GamepadIcon } from './line'
+export { GameControllerIcon, GamepadIcon } from './line'

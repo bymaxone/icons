@@ -16,3 +16,9 @@ export const MoreVerticalIcon = /* @__PURE__ */ createIcon('more-vertical', [
   ['circle', { cx: 12.25, cy: 12.25, r: 0.75 }],
   ['circle', { cx: 12.25, cy: 19.25, r: 0.75 }]
 ])
+
+/** `dots-vertical`: an alias of {@link MoreVerticalIcon}. */
+export const DotsVerticalIcon = MoreVerticalIcon
+
+/** `ellipsis-vertical`: an alias of {@link MoreVerticalIcon}. */
+export const EllipsisVerticalIcon = MoreVerticalIcon

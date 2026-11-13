@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Scatter chart",
+  "tags": ["chart scatter", "scatter plot", "dots", "correlation"],
+  "categories": ["data"],
+  "useCases": ["Plots points on two axes", "Shows how two values relate"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

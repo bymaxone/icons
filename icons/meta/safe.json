@@ -4,6 +4,12 @@
   "tags": ["safe", "vault", "secure", "storage"],
   "categories": ["security", "commerce"],
   "useCases": ["Opens the vault", "Stores a secret safely"],
+  "aliases": [
+    {
+      "name": "vault",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

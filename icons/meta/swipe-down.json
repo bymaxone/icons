@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Swipe down",
+  "tags": ["swipe down", "gesture", "touch", "pull"],
+  "categories": ["arrows", "devices"],
+  "useCases": ["Shows a swipe downward", "Pulls a page to refresh it"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

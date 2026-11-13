@@ -8,6 +8,10 @@
     {
       "name": "volume-mute",
       "deprecated": false
+    },
+    {
+      "name": "volume-x",
+      "deprecated": false
     }
   ],
   "variants": ["line"],

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Parentheses",
+  "tags": ["parentheses", "brackets", "round brackets", "group"],
+  "categories": ["dev", "text"],
+  "useCases": ["Wraps an expression to group it", "Marks an aside in a sentence"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

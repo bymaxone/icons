@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Clipboard with a list",
+  "tags": ["clipboard list", "checklist", "tasks", "form"],
+  "categories": ["files", "actions"],
+  "useCases": ["Opens a list of tasks", "Shows a form with several items"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

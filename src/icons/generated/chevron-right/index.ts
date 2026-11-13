@@ -4,5 +4,5 @@
  * @layer Generated
  */
 
-export { ChevronRightIcon } from './line'
-export { ChevronRightSmIcon } from './sm'
+export { CaretRightIcon, ChevronRightIcon, GreaterThanIcon } from './line'
+export { CaretRightSmIcon, ChevronRightSmIcon, GreaterThanSmIcon } from './sm'

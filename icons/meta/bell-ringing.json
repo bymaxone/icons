@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Ringing bell",
+  "tags": ["bell ringing", "ring", "new alert", "alarm"],
+  "categories": ["status", "communication"],
+  "useCases": ["Shows an alert that is ringing", "Marks a new notification"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

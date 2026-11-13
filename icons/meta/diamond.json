@@ -8,6 +8,10 @@
     {
       "name": "diamond-suit",
       "deprecated": false
+    },
+    {
+      "name": "rhombus",
+      "deprecated": false
     }
   ],
   "variants": ["line"],

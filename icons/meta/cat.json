@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Cat",
+  "tags": ["cat", "pet", "animal", "kitten"],
+  "categories": ["nature"],
+  "useCases": ["Marks a cat friendly place", "Shows a pet category"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

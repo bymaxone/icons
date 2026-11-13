@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Locked mail",
+  "tags": ["mail lock", "encrypted email", "private message", "secure"],
+  "categories": ["communication", "security"],
+  "useCases": ["Encrypts a message", "Marks a private email"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

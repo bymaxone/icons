@@ -20,3 +20,6 @@ export const StrikethroughIcon = /* @__PURE__ */ createIcon('strikethrough', [
   ],
   ['path', { d: 'M3.75 12.25h17' }]
 ])
+
+/** `format-strikethrough`: an alias of {@link StrikethroughIcon}. */
+export const FormatStrikethroughIcon = StrikethroughIcon

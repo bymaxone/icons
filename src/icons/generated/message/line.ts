@@ -28,3 +28,6 @@ export const CommentIcon = MessageIcon
 
 /** `message-circle`: an alias of {@link MessageIcon}. */
 export const MessageCircleIcon = MessageIcon
+
+/** `message-square`: an alias of {@link MessageIcon}. */
+export const MessageSquareIcon = MessageIcon

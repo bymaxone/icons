@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Double chevron up",
+  "tags": ["chevrons up", "double chevron", "scroll up", "less"],
+  "categories": ["arrows"],
+  "useCases": ["Scrolls back to the top", "Collapses content upward"],
+  "aliases": [
+    {
+      "name": "chevron-double-up",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

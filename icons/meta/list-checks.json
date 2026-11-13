@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Checklist",
+  "tags": ["list checks", "to do", "tasks done", "checkboxes"],
+  "categories": ["actions", "status"],
+  "useCases": ["Shows tasks that are ticked off", "Opens a to-do list"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

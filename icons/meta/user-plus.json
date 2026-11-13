@@ -4,6 +4,12 @@
   "tags": ["add user", "invite", "new member", "person plus"],
   "categories": ["people"],
   "useCases": ["Adds a member to the team", "Invites a collaborator"],
+  "aliases": [
+    {
+      "name": "person-add",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

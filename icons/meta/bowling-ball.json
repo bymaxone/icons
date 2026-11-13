@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Bowling ball",
+  "tags": ["bowling ball", "bowling", "sport", "strike"],
+  "categories": ["games"],
+  "useCases": ["Marks a bowling alley", "Shows a round of bowling"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

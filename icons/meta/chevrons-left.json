@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Double chevron left",
+  "tags": ["chevrons left", "double chevron", "first", "rewind"],
+  "categories": ["arrows"],
+  "useCases": ["Jumps to the first page", "Moves several steps back"],
+  "aliases": [
+    {
+      "name": "chevron-double-left",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

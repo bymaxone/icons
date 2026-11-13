@@ -4,6 +4,12 @@
   "tags": ["washing machine", "laundry", "wash", "clothes"],
   "categories": ["household"],
   "useCases": ["Starts the laundry", "Marks a washing service"],
+  "aliases": [
+    {
+      "name": "wash",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

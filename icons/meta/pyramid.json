@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Pyramid",
+  "tags": ["pyramid", "egypt", "shape", "monument"],
+  "categories": ["shapes", "maps"],
+  "useCases": ["Shows a pyramid shape", "Marks an ancient landmark"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

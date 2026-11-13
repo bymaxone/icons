@@ -21,3 +21,6 @@ export const GamepadIcon = /* @__PURE__ */ createIcon('gamepad', [
   ['path', { d: 'M6.5 10.25v3M5 11.75h3' }],
   ['path', { d: 'M15.5 11.75h.01' }]
 ])
+
+/** `game-controller`: an alias of {@link GamepadIcon}. */
+export const GameControllerIcon = GamepadIcon

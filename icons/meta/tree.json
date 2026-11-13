@@ -4,6 +4,16 @@
   "tags": ["tree", "pine", "forest", "nature"],
   "categories": ["nature"],
   "useCases": ["Shows a park or forest", "Marks an outdoor place"],
+  "aliases": [
+    {
+      "name": "park",
+      "deprecated": false
+    },
+    {
+      "name": "pine-tree",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

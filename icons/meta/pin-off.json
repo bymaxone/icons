@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Pin off",
+  "tags": ["pin off", "unpin", "detach", "release"],
+  "categories": ["actions"],
+  "useCases": ["Unpins an item from the top", "Removes a fixed position"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

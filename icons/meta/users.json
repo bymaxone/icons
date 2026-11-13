@@ -12,6 +12,10 @@
     {
       "name": "group",
       "deprecated": false
+    },
+    {
+      "name": "user-group",
+      "deprecated": false
     }
   ],
   "variants": ["line", "filled", "sm"],

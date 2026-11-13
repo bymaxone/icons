@@ -4,5 +4,5 @@
  * @layer Generated
  */
 
-export { MoreVerticalIcon } from './line'
-export { MoreVerticalSmIcon } from './sm'
+export { DotsVerticalIcon, EllipsisVerticalIcon, MoreVerticalIcon } from './line'
+export { DotsVerticalSmIcon, EllipsisVerticalSmIcon, MoreVerticalSmIcon } from './sm'

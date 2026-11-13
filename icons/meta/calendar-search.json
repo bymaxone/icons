@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Calendar search",
+  "tags": ["calendar search", "find date", "look up", "schedule"],
+  "categories": ["time", "actions"],
+  "useCases": ["Searches for an event by date", "Looks up a free slot"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

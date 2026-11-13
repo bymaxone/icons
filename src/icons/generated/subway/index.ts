@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { SubwayIcon } from './line'
+export { MetroIcon, SubwayIcon } from './line'

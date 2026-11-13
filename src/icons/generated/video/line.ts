@@ -25,3 +25,9 @@ export const VideoIcon = /* @__PURE__ */ createIcon('video', [
     }
   ]
 ])
+
+/** `camera-video`: an alias of {@link VideoIcon}. */
+export const CameraVideoIcon = VideoIcon
+
+/** `video-camera`: an alias of {@link VideoIcon}. */
+export const VideoCameraIcon = VideoIcon

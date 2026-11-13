@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { ShapesIcon, VariationsIcon } from './line'
+export { CategoryIcon, ShapeIcon, ShapesIcon, VariationsIcon } from './line'

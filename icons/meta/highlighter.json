@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Highlighter",
+  "tags": ["highlighter", "marker", "highlight", "text"],
+  "categories": ["editing", "text"],
+  "useCases": ["Highlights a passage of text", "Marks a key sentence"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

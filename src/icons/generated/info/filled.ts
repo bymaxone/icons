@@ -30,3 +30,9 @@ export const DetailsFilledIcon = InfoFilledIcon
 
 /** `info-circle`: an alias of {@link InfoFilledIcon}. */
 export const InfoCircleFilledIcon = InfoFilledIcon
+
+/** `information`: an alias of {@link InfoFilledIcon}. */
+export const InformationFilledIcon = InfoFilledIcon
+
+/** `information-circle`: an alias of {@link InfoFilledIcon}. */
+export const InformationCircleFilledIcon = InfoFilledIcon

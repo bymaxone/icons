@@ -4,6 +4,6 @@
  * @layer Generated
  */
 
-export { GroupIcon, UsersIcon } from './line'
-export { GroupFilledIcon, UsersFilledIcon } from './filled'
-export { GroupSmIcon, UsersSmIcon } from './sm'
+export { GroupIcon, UserGroupIcon, UsersIcon } from './line'
+export { GroupFilledIcon, UserGroupFilledIcon, UsersFilledIcon } from './filled'
+export { GroupSmIcon, UserGroupSmIcon, UsersSmIcon } from './sm'

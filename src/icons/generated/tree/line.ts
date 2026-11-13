@@ -15,3 +15,9 @@ export const TreeIcon = /* @__PURE__ */ createIcon('tree', [
   ['path', { d: 'm12.25 3.25-5 6h2.5l-4 5h3L5 18.75h14.5l-3.75-4.5h3l-4-5h2.5z' }],
   ['path', { d: 'M12.25 18.75v2.5' }]
 ])
+
+/** `park`: an alias of {@link TreeIcon}. */
+export const ParkIcon = TreeIcon
+
+/** `pine-tree`: an alias of {@link TreeIcon}. */
+export const PineTreeIcon = TreeIcon

@@ -8,6 +8,14 @@
     {
       "name": "notifications-off",
       "deprecated": false
+    },
+    {
+      "name": "bell-slash",
+      "deprecated": false
+    },
+    {
+      "name": "notification-off",
+      "deprecated": false
     }
   ],
   "variants": ["line", "filled"],

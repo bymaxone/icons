@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Tabs",
+  "tags": ["tabs", "browser tabs", "panels", "pages"],
+  "categories": ["system"],
+  "useCases": ["Switches between open pages", "Groups content in tabs"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

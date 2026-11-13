@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Swipe left",
+  "tags": ["swipe left", "gesture", "touch", "slide"],
+  "categories": ["arrows", "devices"],
+  "useCases": ["Shows a swipe to the left", "Dismisses a card with a gesture"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

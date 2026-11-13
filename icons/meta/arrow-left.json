@@ -4,6 +4,12 @@
   "tags": ["back", "previous", "left", "return"],
   "categories": ["arrows"],
   "useCases": ["Goes back to the previous screen", "Moves to the previous step of a flow"],
+  "aliases": [
+    {
+      "name": "arrow-back",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

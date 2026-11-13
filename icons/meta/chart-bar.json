@@ -12,6 +12,14 @@
     {
       "name": "chart",
       "deprecated": false
+    },
+    {
+      "name": "analytics",
+      "deprecated": false
+    },
+    {
+      "name": "chart-column",
+      "deprecated": false
     }
   ],
   "variants": ["line"],

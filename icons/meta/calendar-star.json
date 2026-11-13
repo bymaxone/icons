@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Starred date",
+  "tags": ["calendar star", "special day", "favorite", "holiday"],
+  "categories": ["time"],
+  "useCases": ["Marks a special day", "Saves an important date"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

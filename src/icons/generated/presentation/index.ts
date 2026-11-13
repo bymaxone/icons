@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { PresentationIcon, SlidesIcon } from './line'
+export { PresentationChartIcon, PresentationIcon, SlidesIcon, SlideshowIcon } from './line'

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Message with a question",
+  "tags": ["message question", "ask", "query", "unknown"],
+  "categories": ["communication"],
+  "useCases": ["Asks a question in a chat", "Flags a message that needs an answer"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

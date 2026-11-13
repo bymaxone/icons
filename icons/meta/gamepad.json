@@ -4,6 +4,12 @@
   "tags": ["gamepad", "controller", "game", "console"],
   "categories": ["games", "devices"],
   "useCases": ["Opens the games", "Connects a controller"],
+  "aliases": [
+    {
+      "name": "game-controller",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

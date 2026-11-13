@@ -4,6 +4,16 @@
   "tags": ["arrow", "left", "circle", "back"],
   "categories": ["arrows"],
   "useCases": ["Goes back", "Shows the previous item"],
+  "aliases": [
+    {
+      "name": "arrow-circle-left",
+      "deprecated": false
+    },
+    {
+      "name": "circle-arrow-left",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

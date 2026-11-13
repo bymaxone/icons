@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Horse",
+  "tags": ["horse", "animal", "riding", "stable"],
+  "categories": ["nature"],
+  "useCases": ["Shows a riding activity", "Marks a farm animal"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

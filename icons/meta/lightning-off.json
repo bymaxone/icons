@@ -8,6 +8,10 @@
     {
       "name": "flash-off",
       "deprecated": false
+    },
+    {
+      "name": "zap-off",
+      "deprecated": false
     }
   ],
   "variants": ["line"],

@@ -18,3 +18,6 @@ export const ArrowLeftRightIcon = /* @__PURE__ */ createIcon('arrow-left-right',
 
 /** `swap`: an alias of {@link ArrowLeftRightIcon}. */
 export const SwapIcon = ArrowLeftRightIcon
+
+/** `exchange`: an alias of {@link ArrowLeftRightIcon}. */
+export const ExchangeIcon = ArrowLeftRightIcon

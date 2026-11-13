@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Replace",
+  "tags": ["replace", "swap text", "substitute", "find and replace"],
+  "categories": ["editing", "text"],
+  "useCases": ["Swaps a word for another", "Replaces every match in a document"],
+  "aliases": [
+    {
+      "name": "find-replace",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

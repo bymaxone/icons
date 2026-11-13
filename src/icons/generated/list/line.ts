@@ -17,3 +17,9 @@ export const ListIcon = /* @__PURE__ */ createIcon('list', [
   ['path', { d: 'M5.25 18.25h.01' }],
   ['path', { d: 'M9.25 6.25h10.5m-10.5 6h10.5m-10.5 6h10.5' }]
 ])
+
+/** `view-list`: an alias of {@link ListIcon}. */
+export const ViewListIcon = ListIcon
+
+/** `table-of-contents`: an alias of {@link ListIcon}. */
+export const TableOfContentsIcon = ListIcon

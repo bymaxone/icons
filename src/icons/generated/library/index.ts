@@ -4,6 +4,6 @@
  * @layer Generated
  */
 
-export { LibraryIcon } from './line'
-export { LibraryFilledIcon } from './filled'
-export { LibrarySmIcon } from './sm'
+export { BooksIcon, BookshelfIcon, LibraryIcon } from './line'
+export { BooksFilledIcon, BookshelfFilledIcon, LibraryFilledIcon } from './filled'
+export { BooksSmIcon, BookshelfSmIcon, LibrarySmIcon } from './sm'

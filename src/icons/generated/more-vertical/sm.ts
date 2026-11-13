@@ -20,3 +20,9 @@ export const MoreVerticalSmIcon = /* @__PURE__ */ createIcon(
   ],
   { masterSize: 16 }
 )
+
+/** `dots-vertical`: an alias of {@link MoreVerticalSmIcon}. */
+export const DotsVerticalSmIcon = MoreVerticalSmIcon
+
+/** `ellipsis-vertical`: an alias of {@link MoreVerticalSmIcon}. */
+export const EllipsisVerticalSmIcon = MoreVerticalSmIcon

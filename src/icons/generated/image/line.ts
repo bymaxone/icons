@@ -24,3 +24,6 @@ export const ImageIcon = /* @__PURE__ */ createIcon('image', [
 
 /** `wallpaper`: an alias of {@link ImageIcon}. */
 export const WallpaperIcon = ImageIcon
+
+/** `background`: an alias of {@link ImageIcon}. */
+export const BackgroundIcon = ImageIcon

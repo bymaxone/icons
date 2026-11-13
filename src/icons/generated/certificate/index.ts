@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { CertificateIcon } from './line'
+export { CertificateIcon, LicenseIcon } from './line'

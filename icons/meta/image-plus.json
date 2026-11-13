@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Image with a plus",
+  "tags": ["image plus", "add image", "new photo", "upload"],
+  "categories": ["media", "actions"],
+  "useCases": ["Adds a picture to a post", "Uploads a new image"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

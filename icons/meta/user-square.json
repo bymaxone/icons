@@ -4,6 +4,12 @@
   "tags": ["user", "contact", "card", "profile"],
   "categories": ["people"],
   "useCases": ["Shows a contact", "Opens a profile card"],
+  "aliases": [
+    {
+      "name": "account-box",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

@@ -4,6 +4,12 @@
   "tags": ["center", "alignment", "text align", "justify"],
   "categories": ["text"],
   "useCases": ["Centers the selected text", "Aligns layers on their centre"],
+  "aliases": [
+    {
+      "name": "text-align-center",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Hamburger",
+  "tags": ["hamburger", "burger", "fast food", "meal"],
+  "categories": ["food"],
+  "useCases": ["Marks a fast food order", "Shows a quick meal"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

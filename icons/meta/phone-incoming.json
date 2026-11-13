@@ -4,6 +4,12 @@
   "tags": ["phone", "incoming", "call", "received"],
   "categories": ["communication"],
   "useCases": ["Shows an incoming call", "Lists received calls"],
+  "aliases": [
+    {
+      "name": "call-received",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

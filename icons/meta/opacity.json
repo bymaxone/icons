@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Opacity",
+  "tags": ["opacity", "transparency", "alpha", "fade"],
+  "categories": ["editing"],
+  "useCases": ["Sets how see-through a layer is", "Fades an element"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

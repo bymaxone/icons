@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { FlashOffIcon, LightningOffIcon } from './line'
+export { FlashOffIcon, LightningOffIcon, ZapOffIcon } from './line'

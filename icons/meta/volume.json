@@ -12,6 +12,10 @@
     {
       "name": "volume-up",
       "deprecated": false
+    },
+    {
+      "name": "volume-high",
+      "deprecated": false
     }
   ],
   "variants": ["line", "filled", "sm"],

@@ -16,3 +16,6 @@ export const SailboatIcon = /* @__PURE__ */ createIcon('sailboat', [
   ['path', { d: 'M14.25 7.25c2.25 2 3.5 4.75 4 8h-4z' }],
   ['path', { d: 'M4.75 18.25h15c-1 1.75-2 2.5-3.75 2.5H8.5c-1.75 0-2.75-.75-3.75-2.5' }]
 ])
+
+/** `boat`: an alias of {@link SailboatIcon}. */
+export const BoatIcon = SailboatIcon

@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { FireIcon } from './line'
+export { FireIcon, FlameIcon } from './line'

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Graduation cap",
+  "tags": ["graduation cap", "education", "degree", "student"],
+  "categories": ["people"],
+  "useCases": ["Marks a course or a degree", "Shows an academic achievement"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

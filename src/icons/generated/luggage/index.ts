@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { LuggageIcon } from './line'
+export { LuggageIcon, SuitcaseIcon } from './line'

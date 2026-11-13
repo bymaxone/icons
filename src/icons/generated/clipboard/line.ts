@@ -26,3 +26,6 @@ export const ClipboardIcon = /* @__PURE__ */ createIcon('clipboard', [
   ],
   ['path', { d: 'M8.25 12.25h8m-8 4h5' }]
 ])
+
+/** `clipboard-text`: an alias of {@link ClipboardIcon}. */
+export const ClipboardTextIcon = ClipboardIcon

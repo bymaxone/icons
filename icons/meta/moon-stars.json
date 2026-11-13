@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Moon and stars",
+  "tags": ["moon stars", "night", "sleep", "sky"],
+  "categories": ["nature"],
+  "useCases": ["Switches to a night mode", "Marks the evening hours"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -31,3 +31,6 @@ export const FolderUserIcon = /* @__PURE__ */ createIcon('folder-user', [
     }
   ]
 ])
+
+/** `folder-shared`: an alias of {@link FolderUserIcon}. */
+export const FolderSharedIcon = FolderUserIcon

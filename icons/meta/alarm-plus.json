@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Add alarm",
+  "tags": ["alarm plus", "new alarm", "wake up", "clock"],
+  "categories": ["time", "actions"],
+  "useCases": ["Creates a new alarm", "Adds another wake-up time"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { SnowflakeIcon } from './line'
+export { SnowIcon, SnowflakeIcon } from './line'

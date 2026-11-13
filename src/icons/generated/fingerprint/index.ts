@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { FingerprintIcon } from './line'
+export { FingerPrintIcon, FingerprintIcon } from './line'

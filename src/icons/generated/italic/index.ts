@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { ItalicIcon } from './line'
+export { FormatItalicIcon, ItalicIcon } from './line'

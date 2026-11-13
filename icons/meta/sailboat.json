@@ -4,6 +4,12 @@
   "tags": ["sailboat", "boat", "sail", "sea"],
   "categories": ["transport", "nature"],
   "useCases": ["Shows a boat trip", "Marks sailing on the sea"],
+  "aliases": [
+    {
+      "name": "boat",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

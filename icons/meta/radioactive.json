@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Radioactive",
+  "tags": ["radioactive", "radiation", "nuclear", "hazard"],
+  "categories": ["science", "status"],
+  "useCases": ["Warns of radiation", "Marks a hazardous zone"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

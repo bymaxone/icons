@@ -27,3 +27,9 @@ export const ToggleFilledIcon = /* @__PURE__ */ createIcon(
 
 /** `switch`: an alias of {@link ToggleFilledIcon}. */
 export const SwitchFilledIcon = ToggleFilledIcon
+
+/** `toggle-off`: an alias of {@link ToggleFilledIcon}. */
+export const ToggleOffFilledIcon = ToggleFilledIcon
+
+/** `toggle-on`: an alias of {@link ToggleFilledIcon}. */
+export const ToggleOnFilledIcon = ToggleFilledIcon

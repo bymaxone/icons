@@ -4,6 +4,12 @@
   "tags": ["sliders", "settings", "filters", "adjust", "controls"],
   "categories": ["system"],
   "useCases": ["Opens the filters of a list", "Adjusts the settings of a view"],
+  "aliases": [
+    {
+      "name": "sliders-horizontal",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

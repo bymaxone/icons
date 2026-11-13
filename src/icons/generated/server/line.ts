@@ -27,3 +27,6 @@ export const ServerIcon = /* @__PURE__ */ createIcon('server', [
   ['path', { d: 'M8 7.25h.01' }],
   ['path', { d: 'M8 17.25h.01' }]
 ])
+
+/** `dns`: an alias of {@link ServerIcon}. */
+export const DnsIcon = ServerIcon

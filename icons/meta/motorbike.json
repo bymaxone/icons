@@ -8,6 +8,10 @@
     {
       "name": "moped",
       "deprecated": false
+    },
+    {
+      "name": "motorcycle",
+      "deprecated": false
     }
   ],
   "variants": ["line"],

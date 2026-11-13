@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Locked calendar",
+  "tags": ["calendar lock", "private", "closed dates", "schedule"],
+  "categories": ["time", "security"],
+  "useCases": ["Locks dates against changes", "Marks a private calendar"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -4,6 +4,12 @@
   "tags": ["server", "rack", "host", "infrastructure"],
   "categories": ["data", "dev"],
   "useCases": ["Shows the servers of a deployment", "Opens the infrastructure settings"],
+  "aliases": [
+    {
+      "name": "dns",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

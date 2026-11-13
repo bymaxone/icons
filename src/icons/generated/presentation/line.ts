@@ -19,3 +19,9 @@ export const PresentationIcon = /* @__PURE__ */ createIcon('presentation', [
 
 /** `slides`: an alias of {@link PresentationIcon}. */
 export const SlidesIcon = PresentationIcon
+
+/** `slideshow`: an alias of {@link PresentationIcon}. */
+export const SlideshowIcon = PresentationIcon
+
+/** `presentation-chart`: an alias of {@link PresentationIcon}. */
+export const PresentationChartIcon = PresentationIcon

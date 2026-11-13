@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { SafeIcon } from './line'
+export { SafeIcon, VaultIcon } from './line'

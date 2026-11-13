@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Tag with a plus",
+  "tags": ["tag plus", "add tag", "new label", "categorize"],
+  "categories": ["actions", "data"],
+  "useCases": ["Adds a label to an item", "Creates a new tag"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

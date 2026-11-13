@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { GripIcon } from './line'
+export { GripIcon, GripVerticalIcon } from './line'

@@ -27,3 +27,9 @@ export const LibraryIcon = /* @__PURE__ */ createIcon('library', [
   ],
   ['path', { d: 'M4.42 19.645h15.225' }]
 ])
+
+/** `books`: an alias of {@link LibraryIcon}. */
+export const BooksIcon = LibraryIcon
+
+/** `bookshelf`: an alias of {@link LibraryIcon}. */
+export const BookshelfIcon = LibraryIcon

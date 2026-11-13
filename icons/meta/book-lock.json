@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Locked book",
+  "tags": ["book lock", "private", "restricted", "read only"],
+  "categories": ["security", "files"],
+  "useCases": ["Marks a restricted publication", "Protects a book with a lock"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

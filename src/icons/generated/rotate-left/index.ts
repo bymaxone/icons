@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { RotateLeftIcon } from './line'
+export { RefreshCcwIcon, RotateLeftIcon } from './line'

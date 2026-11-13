@@ -35,3 +35,9 @@ export const ShapesIcon = /* @__PURE__ */ createIcon('shapes', [
 
 /** @deprecated `variations` is a deprecated alias of `shapes`, removed in 2.0.0. Renamed to shapes, the object the drawing shows. Use {@link ShapesIcon}. */
 export const VariationsIcon = ShapesIcon
+
+/** `shape`: an alias of {@link ShapesIcon}. */
+export const ShapeIcon = ShapesIcon
+
+/** `category`: an alias of {@link ShapesIcon}. */
+export const CategoryIcon = ShapesIcon

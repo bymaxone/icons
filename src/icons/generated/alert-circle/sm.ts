@@ -20,3 +20,6 @@ export const AlertCircleSmIcon = /* @__PURE__ */ createIcon(
   ],
   { masterSize: 16 }
 )
+
+/** `exclamation-circle`: an alias of {@link AlertCircleSmIcon}. */
+export const ExclamationCircleSmIcon = AlertCircleSmIcon

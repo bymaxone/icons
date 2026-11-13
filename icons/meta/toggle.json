@@ -8,6 +8,14 @@
     {
       "name": "switch",
       "deprecated": false
+    },
+    {
+      "name": "toggle-off",
+      "deprecated": false
+    },
+    {
+      "name": "toggle-on",
+      "deprecated": false
     }
   ],
   "variants": ["line", "filled"],

@@ -4,6 +4,16 @@
   "tags": ["notebook", "journal", "notes", "spiral"],
   "categories": ["text", "files"],
   "useCases": ["Opens the notebook", "Writes in a journal"],
+  "aliases": [
+    {
+      "name": "journal",
+      "deprecated": false
+    },
+    {
+      "name": "notes",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

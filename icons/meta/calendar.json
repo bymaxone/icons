@@ -8,6 +8,14 @@
     {
       "name": "calendar-month",
       "deprecated": false
+    },
+    {
+      "name": "calendar-week",
+      "deprecated": false
+    },
+    {
+      "name": "calendar-range",
+      "deprecated": false
     }
   ],
   "variants": ["line"],

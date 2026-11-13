@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { QuoteIcon } from './line'
+export { QuoteIcon, QuotesIcon } from './line'

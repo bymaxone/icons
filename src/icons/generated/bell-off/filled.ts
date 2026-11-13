@@ -27,3 +27,9 @@ export const BellOffFilledIcon = /* @__PURE__ */ createIcon(
 
 /** `notifications-off`: an alias of {@link BellOffFilledIcon}. */
 export const NotificationsOffFilledIcon = BellOffFilledIcon
+
+/** `bell-slash`: an alias of {@link BellOffFilledIcon}. */
+export const BellSlashFilledIcon = BellOffFilledIcon
+
+/** `notification-off`: an alias of {@link BellOffFilledIcon}. */
+export const NotificationOffFilledIcon = BellOffFilledIcon

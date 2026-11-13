@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Archive download",
+  "tags": ["archive arrow down", "retrieve", "restore", "box"],
+  "categories": ["files", "actions"],
+  "useCases": ["Takes an item out of the archive", "Downloads a stored package"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

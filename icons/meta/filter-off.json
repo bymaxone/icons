@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Filter off",
+  "tags": ["filter off", "clear filter", "no filter", "reset"],
+  "categories": ["data", "actions"],
+  "useCases": ["Clears the active filters", "Shows the full unfiltered list"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

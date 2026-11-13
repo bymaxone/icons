@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "File changes",
+  "tags": ["file diff", "changes", "compare", "version"],
+  "categories": ["files", "dev"],
+  "useCases": ["Shows what changed in a file", "Compares two versions of a document"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

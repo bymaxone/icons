@@ -19,3 +19,6 @@ export const GripIcon = /* @__PURE__ */ createIcon('grip', [
   ['circle', { cx: 15.25, cy: 12.25, r: 0.75 }],
   ['circle', { cx: 15.25, cy: 18.75, r: 0.75 }]
 ])
+
+/** `grip-vertical`: an alias of {@link GripIcon}. */
+export const GripVerticalIcon = GripIcon

@@ -18,3 +18,6 @@ export const CurrencyPoundIcon = /* @__PURE__ */ createIcon('currency-pound', [
   ],
   ['path', { d: 'M6.25 12.25h7' }]
 ])
+
+/** `pound`: an alias of {@link CurrencyPoundIcon}. */
+export const PoundIcon = CurrencyPoundIcon

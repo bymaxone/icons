@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Dashed circle",
+  "tags": ["circle dashed", "placeholder", "empty", "outline"],
+  "categories": ["shapes"],
+  "useCases": ["Marks an empty slot", "Shows a pending step"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

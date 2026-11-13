@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Arrow right in a square",
+  "tags": ["arrow right square", "right", "next", "boxed arrow"],
+  "categories": ["arrows"],
+  "useCases": ["Goes forward with a square button", "Moves a box to the right"],
+  "aliases": [
+    {
+      "name": "square-arrow-right",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

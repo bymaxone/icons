@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Radio button",
+  "tags": ["radio button", "option", "choice", "select one"],
+  "categories": ["system"],
+  "useCases": ["Picks one option out of a group", "Shows a selected choice"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

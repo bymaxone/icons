@@ -22,3 +22,6 @@ export const LuggageIcon = /* @__PURE__ */ createIcon('luggage', [
   ['path', { d: 'M8.75 19.25v2m7-2v2' }],
   ['path', { d: 'M10.25 9.75v6m4-6v6' }]
 ])
+
+/** `suitcase`: an alias of {@link LuggageIcon}. */
+export const SuitcaseIcon = LuggageIcon

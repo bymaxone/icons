@@ -21,3 +21,6 @@ export const UserSquareIcon = /* @__PURE__ */ createIcon('user-square', [
   ['circle', { cx: 12.25, cy: 10, r: 2 }],
   ['path', { d: 'M9 20.25c.5-2 1.5-3 3.25-3s2.75 1 3.25 3' }]
 ])
+
+/** `account-box`: an alias of {@link UserSquareIcon}. */
+export const AccountBoxIcon = UserSquareIcon

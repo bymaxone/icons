@@ -15,3 +15,6 @@ export const BookIcon = /* @__PURE__ */ createIcon('book', [
   ['path', { d: 'M18.75 3.25h-9.5c-2.25 0-3.5 1.25-3.5 3.5v11c0 2.25 1.25 3.5 3.5 3.5h9.5z' }],
   ['path', { d: 'M18.75 17.25h-9.5c-2.25 0-3.5.5-3.5 2' }]
 ])
+
+/** `book-bookmark`: an alias of {@link BookIcon}. */
+export const BookBookmarkIcon = BookIcon

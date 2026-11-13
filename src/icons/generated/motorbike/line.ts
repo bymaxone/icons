@@ -20,3 +20,6 @@ export const MotorbikeIcon = /* @__PURE__ */ createIcon('motorbike', [
 
 /** `moped`: an alias of {@link MotorbikeIcon}. */
 export const MopedIcon = MotorbikeIcon
+
+/** `motorcycle`: an alias of {@link MotorbikeIcon}. */
+export const MotorcycleIcon = MotorbikeIcon

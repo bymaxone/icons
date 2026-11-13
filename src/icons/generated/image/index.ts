@@ -4,5 +4,5 @@
  * @layer Generated
  */
 
-export { ImageIcon, WallpaperIcon } from './line'
-export { ImageFilledIcon, WallpaperFilledIcon } from './filled'
+export { BackgroundIcon, ImageIcon, WallpaperIcon } from './line'
+export { BackgroundFilledIcon, ImageFilledIcon, WallpaperFilledIcon } from './filled'

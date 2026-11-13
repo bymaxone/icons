@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Registered mark",
+  "tags": ["registered", "trademark", "brand", "legal"],
+  "categories": ["commerce"],
+  "useCases": ["Marks a registered trademark", "Adds a legal notice to a name"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

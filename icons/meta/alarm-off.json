@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Alarm off",
+  "tags": ["alarm off", "silenced", "disabled", "clock"],
+  "categories": ["time"],
+  "useCases": ["Turns an alarm off", "Shows a disabled wake-up call"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Swipe up",
+  "tags": ["swipe up", "gesture", "touch", "scroll"],
+  "categories": ["arrows", "devices"],
+  "useCases": ["Shows a swipe upward", "Opens a sheet with a gesture"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

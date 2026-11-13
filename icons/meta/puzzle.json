@@ -4,6 +4,12 @@
   "tags": ["puzzle", "piece", "plugin", "extension"],
   "categories": ["games", "dev"],
   "useCases": ["Opens the extensions", "Shows a puzzle game"],
+  "aliases": [
+    {
+      "name": "puzzle-piece",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

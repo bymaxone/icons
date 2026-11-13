@@ -4,6 +4,12 @@
   "tags": ["bookmark", "minus", "unsave", "remove"],
   "categories": ["status", "actions"],
   "useCases": ["Removes a saved item", "Unsaves an article"],
+  "aliases": [
+    {
+      "name": "bookmark-remove",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

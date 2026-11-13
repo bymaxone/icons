@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Yoga",
+  "tags": ["yoga", "pose", "stretch", "wellness"],
+  "categories": ["health", "people"],
+  "useCases": ["Marks a yoga class", "Shows a calm exercise"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

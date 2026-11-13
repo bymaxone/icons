@@ -14,3 +14,9 @@ import { createIcon } from '@bymax-one/icons/runtime'
 export const ChevronRightIcon = /* @__PURE__ */ createIcon('chevron-right', [
   ['path', { d: 'm9.25 6.25 6 6-6 6' }]
 ])
+
+/** `caret-right`: an alias of {@link ChevronRightIcon}. */
+export const CaretRightIcon = ChevronRightIcon
+
+/** `greater-than`: an alias of {@link ChevronRightIcon}. */
+export const GreaterThanIcon = ChevronRightIcon

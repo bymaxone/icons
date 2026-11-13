@@ -20,3 +20,6 @@ export const MonitorIcon = /* @__PURE__ */ createIcon('monitor', [
   ],
   ['path', { d: 'M12.25 18.25v2.5m-4.5 0h9' }]
 ])
+
+/** `desktop`: an alias of {@link MonitorIcon}. */
+export const DesktopIcon = MonitorIcon

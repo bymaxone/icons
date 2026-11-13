@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Shadow",
+  "tags": ["shadow", "drop shadow", "depth", "elevation"],
+  "categories": ["editing"],
+  "useCases": ["Adds a drop shadow to a shape", "Raises an element above the page"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

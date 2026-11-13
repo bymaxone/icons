@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { NoteIcon } from './line'
+export { NoteIcon, StickyNoteIcon } from './line'

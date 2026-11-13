@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Mail with a check",
+  "tags": ["mail check", "delivered", "verified email", "confirmed"],
+  "categories": ["communication", "status"],
+  "useCases": ["Confirms that a message was delivered", "Marks an email address as verified"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

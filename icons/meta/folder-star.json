@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Starred folder",
+  "tags": ["folder star", "pinned folder", "important", "featured"],
+  "categories": ["files"],
+  "useCases": ["Pins an important folder", "Highlights a featured collection"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

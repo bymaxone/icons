@@ -4,6 +4,12 @@
   "tags": ["corner", "arrow", "down", "left"],
   "categories": ["arrows"],
   "useCases": ["Points down then left", "Shows a turn in a flow"],
+  "aliases": [
+    {
+      "name": "keyboard-return",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

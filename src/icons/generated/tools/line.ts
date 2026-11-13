@@ -20,3 +20,6 @@ export const ToolsIcon = /* @__PURE__ */ createIcon('tools', [
   ],
   ['path', { d: 'M7.852 7.852 13 13m.5 2.5 2-2 4.25 4.25c.75.75.75 1.25 0 2s-1.25.75-2 0z' }]
 ])
+
+/** `tool`: an alias of {@link ToolsIcon}. */
+export const ToolIcon = ToolsIcon

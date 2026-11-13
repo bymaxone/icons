@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Vignette",
+  "tags": ["vignette", "edges", "photo effect", "dark corners"],
+  "categories": ["editing", "media"],
+  "useCases": ["Darkens the edges of a photo", "Applies a soft frame effect"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

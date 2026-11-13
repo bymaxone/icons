@@ -8,6 +8,16 @@
     "Starts a video recording",
     "Filled: the video tab while it is active"
   ],
+  "aliases": [
+    {
+      "name": "camera-video",
+      "deprecated": false
+    },
+    {
+      "name": "video-camera",
+      "deprecated": false
+    }
+  ],
   "variants": ["line", "filled"],
   "opticalSizes": [24],
   "since": "0.1.0"

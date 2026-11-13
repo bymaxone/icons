@@ -16,3 +16,6 @@ export const UserCircleIcon = /* @__PURE__ */ createIcon('user-circle', [
   ['circle', { cx: 12.25, cy: 10.25, r: 2.5 }],
   ['path', { d: 'M8.75 19.75c.5-1.5 1.75-2.25 3.5-2.25s3 .75 3.5 2.25' }]
 ])
+
+/** `account-circle`: an alias of {@link UserCircleIcon}. */
+export const AccountCircleIcon = UserCircleIcon

@@ -4,5 +4,10 @@
  * @layer Generated
  */
 
-export { BellOffIcon, NotificationsOffIcon } from './line'
-export { BellOffFilledIcon, NotificationsOffFilledIcon } from './filled'
+export { BellOffIcon, BellSlashIcon, NotificationOffIcon, NotificationsOffIcon } from './line'
+export {
+  BellOffFilledIcon,
+  BellSlashFilledIcon,
+  NotificationOffFilledIcon,
+  NotificationsOffFilledIcon
+} from './filled'

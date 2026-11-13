@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Music folder",
+  "tags": ["folder music", "songs", "audio library", "playlist"],
+  "categories": ["files", "audio"],
+  "useCases": ["Opens a folder of songs", "Stores audio tracks together"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

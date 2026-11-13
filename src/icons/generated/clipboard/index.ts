@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { ClipboardIcon } from './line'
+export { ClipboardIcon, ClipboardTextIcon } from './line'

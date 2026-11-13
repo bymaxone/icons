@@ -22,3 +22,6 @@ export const WashingMachineIcon = /* @__PURE__ */ createIcon('washing-machine', 
   ['path', { d: 'M9.75 6.25h.01' }],
   ['circle', { cx: 12.25, cy: 15.25, r: 2.25 }]
 ])
+
+/** `wash`: an alias of {@link WashingMachineIcon}. */
+export const WashIcon = WashingMachineIcon

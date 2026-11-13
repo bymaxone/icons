@@ -8,6 +8,10 @@
     {
       "name": "birthday",
       "deprecated": false
+    },
+    {
+      "name": "cupcake",
+      "deprecated": false
     }
   ],
   "variants": ["line"],

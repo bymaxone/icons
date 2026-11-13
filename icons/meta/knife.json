@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Knife",
+  "tags": ["knife", "blade", "cutlery", "cut"],
+  "categories": ["food", "tools"],
+  "useCases": ["Shows a kitchen knife", "Marks a cutting step in a recipe"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

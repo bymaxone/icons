@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Line height",
+  "tags": ["line height", "spacing", "leading", "text"],
+  "categories": ["text", "editing"],
+  "useCases": ["Sets the space between lines", "Tightens or loosens a paragraph"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

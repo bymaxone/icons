@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Campfire",
+  "tags": ["campfire", "camp", "flame", "outdoors"],
+  "categories": ["nature"],
+  "useCases": ["Marks a camping spot", "Shows a fire to gather around"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

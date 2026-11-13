@@ -27,3 +27,6 @@ export const ImageFilledIcon = /* @__PURE__ */ createIcon(
 
 /** `wallpaper`: an alias of {@link ImageFilledIcon}. */
 export const WallpaperFilledIcon = ImageFilledIcon
+
+/** `background`: an alias of {@link ImageFilledIcon}. */
+export const BackgroundFilledIcon = ImageFilledIcon

@@ -19,3 +19,6 @@ export const FireIcon = /* @__PURE__ */ createIcon('fire', [
     }
   ]
 ])
+
+/** `flame`: an alias of {@link FireIcon}. */
+export const FlameIcon = FireIcon

@@ -14,3 +14,6 @@ import { createIcon } from '@bymax-one/icons/runtime'
 export const ItalicIcon = /* @__PURE__ */ createIcon('italic', [
   ['path', { d: 'M11.25 4.75h6.5m-11 14.5h6.5M15 4.75l-4 14.5' }]
 ])
+
+/** `format-italic`: an alias of {@link ItalicIcon}. */
+export const FormatItalicIcon = ItalicIcon

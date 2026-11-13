@@ -4,6 +4,12 @@
   "tags": ["scale", "balance", "justice", "compare"],
   "categories": ["tools", "commerce"],
   "useCases": ["Compares two options", "Marks a legal topic"],
+  "aliases": [
+    {
+      "name": "scales",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

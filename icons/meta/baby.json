@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Baby",
+  "tags": ["baby", "infant", "child", "newborn"],
+  "categories": ["people"],
+  "useCases": ["Marks a baby friendly area", "Shows an infant profile"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

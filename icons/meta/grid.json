@@ -8,6 +8,14 @@
     {
       "name": "hash",
       "deprecated": false
+    },
+    {
+      "name": "grid-3x3",
+      "deprecated": false
+    },
+    {
+      "name": "grid-3x",
+      "deprecated": false
     }
   ],
   "variants": ["line"],

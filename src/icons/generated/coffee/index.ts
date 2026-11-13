@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { CoffeeIcon } from './line'
+export { CoffeeIcon, CupIcon } from './line'

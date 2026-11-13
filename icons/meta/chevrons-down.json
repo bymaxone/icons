@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Double chevron down",
+  "tags": ["chevrons down", "double chevron", "scroll down", "more"],
+  "categories": ["arrows"],
+  "useCases": ["Scrolls to the end of a page", "Shows more content below"],
+  "aliases": [
+    {
+      "name": "chevron-double-down",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Clover",
+  "tags": ["clover", "luck", "plant", "shamrock"],
+  "categories": ["nature"],
+  "useCases": ["Wishes someone good luck", "Marks a lucky pick"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

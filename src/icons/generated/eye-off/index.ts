@@ -4,5 +4,5 @@
  * @layer Generated
  */
 
-export { EyeOffIcon } from './line'
-export { EyeOffSmIcon } from './sm'
+export { EyeOffIcon, EyeSlashIcon } from './line'
+export { EyeOffSmIcon, EyeSlashSmIcon } from './sm'

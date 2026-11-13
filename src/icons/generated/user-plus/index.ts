@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { UserPlusIcon } from './line'
+export { PersonAddIcon, UserPlusIcon } from './line'
