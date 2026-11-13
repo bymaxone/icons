@@ -1,7 +1,7 @@
 {
   "$schema": "../../schemas/icon.schema.json",
   "label": "Area chart",
-  "tags": ["chart area", "filled line", "trend", "volume"],
+  "tags": ["chart area", "shaded line", "trend", "volume"],
   "categories": ["data"],
   "useCases": ["Shows a trend over time with fill", "Compares the volume of a series"],
   "variants": ["line"],
