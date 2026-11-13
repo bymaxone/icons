@@ -438,6 +438,8 @@ These rules apply to every phase. Phase sections only add rules specific to them
 - **B6-E1 ✅ (2026-11-12):** approved by the delegated auditor on behalf of the founder.
 - **B6-E2 ✅ (2026-11-12):** approved by the delegated auditor on behalf of the founder.
 - **B6-E3 ✅ (2026-11-12):** approved by the delegated auditor on behalf of the founder; `card-off` and `card-plus` are the names of the credit-card drawings, and `fruit` is the apple. B6-E totals 213.
+- **B6-F1 ✅ (2026-11-12):** the first wave of the category fill, approved by the delegated auditor on behalf of the founder; `smog` and `avalanche` are deferred.
+- **B6-F2 ✅ (2026-11-12):** approved by the delegated auditor on behalf of the founder; food is closed for 1.0.
 - **Size:** XL
 
 ### B7: brand-marks
