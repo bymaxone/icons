@@ -1,6 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
-  "label": "Remove file",
+  "label": "Delete file",
   "tags": ["file", "x", "delete", "error"],
   "categories": ["files", "status"],
   "useCases": ["Removes a file", "Shows a failed upload"],

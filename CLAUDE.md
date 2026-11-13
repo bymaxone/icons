@@ -78,7 +78,7 @@ Every subpath is built, exported and gated; **Partial** ones hold the drawings s
 ## Verification — Run Before Completing Any Task
 
 ```bash
-pnpm typecheck && pnpm lint && pnpm format:check && pnpm lint:icons && pnpm check:generated && pnpm check:visual && pnpm check:sixteen && pnpm test:cov:all && pnpm build && pnpm size && pnpm check:exports && pnpm check:runtime && pnpm check:fixtures
+pnpm typecheck && pnpm lint && pnpm format:check && pnpm lint:icons && pnpm check:generated && pnpm check:visual && pnpm check:sixteen && pnpm check:meta && pnpm test:cov:all && pnpm build && pnpm size && pnpm check:exports && pnpm check:runtime && pnpm check:fixtures
 ```
 
 `pnpm check:api` compares the built `.d.ts`/`.d.cts` with the previous published version and always prints what differs. A difference passes only when the CHANGELOG section of the version being released holds an "Apply to a derived backend" (or "Apply to a consumer") note; there is no override. The release workflow runs it before the publish.

@@ -428,7 +428,9 @@ it is a regression everywhere at once. The suite is held to a bar beyond "the te
   Component, `check:published` compiles this README's snippets against `dist/`, and
   `check:api` requires an "Apply to a derived backend" CHANGELOG note when the built
   declarations change
-- ✅ **Bundle size budget** per subpath, measured on the brotli-compressed bundle
+- ✅ **Bundle size budget** per subpath, measured on the brotli-compressed bundle. `./meta`
+  is budgeted per record: 24,843 bytes brotli for 559 icon and brand records, 43.2 bytes a
+  record above a fixed 707, against a limit of 52
 - ✅ **Every icon renders**: a smoke test driven by the generated metadata renders every
   component, aliases included, in jsdom and in `react-dom/server` and checks the default
   accessibility attributes

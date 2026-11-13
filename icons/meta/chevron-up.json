@@ -1,6 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
-  "label": "Collapse",
+  "label": "Show less",
   "tags": ["caret", "collapse", "up", "expand less"],
   "categories": ["arrows"],
   "useCases": ["Collapses an open section", "Moves a selection up a list"],

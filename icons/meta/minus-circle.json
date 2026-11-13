@@ -1,6 +1,6 @@
 {
   "$schema": "../../schemas/icon.schema.json",
-  "label": "Remove",
+  "label": "Remove item",
   "tags": ["remove", "minus", "subtract", "circle"],
   "categories": ["actions"],
   "useCases": ["Removes an item from a list", "Decreases a value in a form"],
