@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Turtle",
+  "tags": ["turtle", "shell", "slow", "reptile"],
+  "categories": ["nature"],
+  "useCases": ["Shows a slow pace", "Marks a protected sea species"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

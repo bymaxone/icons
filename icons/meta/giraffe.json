@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Giraffe",
+  "tags": ["giraffe", "neck", "tall", "savanna"],
+  "categories": ["nature"],
+  "useCases": ["Shows the tallest animal", "Marks a savanna tour"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

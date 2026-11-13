@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Tomato",
+  "tags": ["tomato", "red", "salad", "sauce"],
+  "categories": ["food"],
+  "useCases": ["Lists a salad ingredient", "Marks a red vegetable"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

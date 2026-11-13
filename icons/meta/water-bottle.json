@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Water bottle",
+  "tags": ["water bottle", "hydration", "drink", "refill"],
+  "categories": ["food", "health"],
+  "useCases": ["Reminds people to drink water", "Marks a refill station"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Coffee bean",
+  "tags": ["coffee bean", "roast", "caffeine", "seed"],
+  "categories": ["food"],
+  "useCases": ["Marks a roasted product", "Shows a source of caffeine"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

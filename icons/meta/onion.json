@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Onion",
+  "tags": ["onion", "bulb", "layers", "vegetable"],
+  "categories": ["food"],
+  "useCases": ["Lists a cooking ingredient", "Marks a layered thing"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

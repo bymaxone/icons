@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Wolf",
+  "tags": ["wolf", "pack", "howl", "wild"],
+  "categories": ["nature"],
+  "useCases": ["Shows a leader of the pack", "Marks a wild predator"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

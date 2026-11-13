@@ -36,6 +36,10 @@
       "pairs": ["0-1"],
       "why": "the crease fuses with the outline at the family's cut; the silhouette still reads as a document"
     },
+    "elephant": {
+      "pairs": ["0-1", "1-2"],
+      "why": "the ear fuses with the head outline and with the legs; it still reads as an elephant"
+    },
     "file-chart": {
       "pairs": ["0-1"],
       "why": "the crease fuses with the outline at the family's cut; the silhouette still reads as a document"
@@ -132,6 +136,10 @@
       "pairs": ["0-1"],
       "why": "the filled half fuses with the outline it sits in; it still reads as a half heart"
     },
+    "hippo": {
+      "pairs": ["0-1"],
+      "why": "the head arc fuses with the snout; it still reads as a hippo"
+    },
     "lightbulb": {
       "pairs": ["0-1"],
       "why": "still reads as the object in the blur"
@@ -143,6 +151,18 @@
     "masks": {
       "pairs": ["0-1", "1-2"],
       "why": "the two masks fuse where they overlap, and the face marks fuse with the front mask; it still reads as theatre masks"
+    },
+    "owl": {
+      "pairs": ["0-2"],
+      "why": "the right eye fuses with the body outline; it still reads as an owl"
+    },
+    "panda": {
+      "pairs": ["0-2"],
+      "why": "the eye patches fuse with the head outline; it still reads as a panda"
+    },
+    "pepper-shaker": {
+      "pairs": ["0-2"],
+      "why": "the band line fuses with the body outline; it still reads as a shaker"
     },
     "podcast": {
       "pairs": ["1-2"],
@@ -156,9 +176,17 @@
       "pairs": ["0-1"],
       "why": "the shadow arc fuses with the circle it trails; it still reads as a shadow"
     },
+    "shark": {
+      "pairs": ["0-2"],
+      "why": "the eye fuses with the body outline; it still reads as a shark"
+    },
     "snail": {
       "pairs": ["1-2"],
       "why": "the centre of the spiral touches the shell ring; the spiral draws the shell, and it still reads as a snail"
+    },
+    "turtle": {
+      "pairs": ["1-2"],
+      "why": "the head fuses with the legs; it still reads as a turtle"
     },
     "wifi-lock": {
       "pairs": ["0-3"],

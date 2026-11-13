@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Ketchup",
+  "tags": ["ketchup", "sauce", "condiment", "squeeze bottle"],
+  "categories": ["food"],
+  "useCases": ["Lists a table sauce", "Marks a condiment"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

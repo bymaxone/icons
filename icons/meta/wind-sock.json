@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Wind sock",
+  "tags": ["wind sock", "windsock", "direction", "airfield"],
+  "categories": ["nature", "transport"],
+  "useCases": ["Shows wind direction", "Marks an airfield"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

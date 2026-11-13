@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Bear",
+  "tags": ["bear", "grizzly", "forest", "wildlife"],
+  "categories": ["nature"],
+  "useCases": ["Warns of a wild animal", "Marks a national park"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

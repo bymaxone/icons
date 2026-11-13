@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Bonsai",
+  "tags": ["bonsai", "miniature tree", "zen", "potted tree"],
+  "categories": ["nature", "household"],
+  "useCases": ["Shows a patient hobby", "Marks a calm and mindful theme"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

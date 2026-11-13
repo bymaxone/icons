@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Pear",
+  "tags": ["pear", "fruit", "orchard", "sweet"],
+  "categories": ["food"],
+  "useCases": ["Lists a juicy fruit", "Marks an orchard product"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

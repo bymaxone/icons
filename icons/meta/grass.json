@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Grass",
+  "tags": ["grass", "lawn", "blades", "meadow"],
+  "categories": ["nature"],
+  "useCases": ["Marks a lawn or a meadow", "Shows green growth"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

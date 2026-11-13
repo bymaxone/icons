@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Pigeon",
+  "tags": ["pigeon", "dove", "city bird", "message"],
+  "categories": ["nature"],
+  "useCases": ["Marks a city bird", "Shows a carrier of messages"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Tea cup",
+  "tags": ["tea", "cup", "hot drink", "leaves"],
+  "categories": ["food"],
+  "useCases": ["Lists a hot drink", "Marks a tea break"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

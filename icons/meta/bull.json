@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Bull",
+  "tags": ["bull", "horns", "ring", "cattle"],
+  "categories": ["nature"],
+  "useCases": ["Shows a rising market", "Marks a strong animal"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Jar",
+  "tags": ["jar", "honey", "lid", "preserves"],
+  "categories": ["food", "household"],
+  "useCases": ["Lists a pantry item", "Marks a stored preserve"],
+  "aliases": [
+    {
+      "name": "honey",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

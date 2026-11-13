@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Ostrich",
+  "tags": ["ostrich", "flightless", "runner", "large bird"],
+  "categories": ["nature"],
+  "useCases": ["Shows the largest bird", "Marks a fast runner"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

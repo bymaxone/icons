@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Beetle",
+  "tags": ["beetle", "insect", "shell", "bug"],
+  "categories": ["nature"],
+  "useCases": ["Marks a hard shelled insect", "Shows a crawling bug"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

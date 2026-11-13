@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Windy cloud",
+  "tags": ["cloud wind", "windy", "breeze", "gusts"],
+  "categories": ["nature"],
+  "useCases": ["Forecasts a windy day", "Shows gusts under a cloud"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

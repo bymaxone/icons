@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Shark",
+  "tags": ["shark", "fin", "ocean", "predator"],
+  "categories": ["nature"],
+  "useCases": ["Warns of dangerous waters", "Marks a sea predator"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

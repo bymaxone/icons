@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Wildfire",
+  "tags": ["wildfire", "forest fire", "blaze", "smoke"],
+  "categories": ["nature", "status"],
+  "useCases": ["Warns of a fire in the wild", "Marks an evacuation zone"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

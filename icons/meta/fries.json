@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "French fries",
+  "tags": ["fries", "chips", "fast food", "side"],
+  "categories": ["food"],
+  "useCases": ["Lists a fast food side", "Marks a snack bar"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

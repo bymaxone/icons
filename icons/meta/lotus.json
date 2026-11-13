@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Lotus",
+  "tags": ["lotus", "water lily", "calm", "bloom"],
+  "categories": ["nature", "health"],
+  "useCases": ["Marks a calm or wellness theme", "Shows a flower on water"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

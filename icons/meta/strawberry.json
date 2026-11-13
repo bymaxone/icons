@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Strawberry",
+  "tags": ["strawberry", "berry", "red fruit", "seeds"],
+  "categories": ["food"],
+  "useCases": ["Lists a berry flavour", "Marks a fresh fruit"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

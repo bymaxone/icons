@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Broccoli",
+  "tags": ["broccoli", "vegetable", "green", "florets"],
+  "categories": ["food", "health"],
+  "useCases": ["Lists a green vegetable", "Marks a healthy side dish"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Tide",
+  "tags": ["tide", "sea level", "coast", "ebb"],
+  "categories": ["nature"],
+  "useCases": ["Shows the rise and fall of the sea", "Checks the beach schedule"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

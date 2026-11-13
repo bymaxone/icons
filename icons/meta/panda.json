@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Panda",
+  "tags": ["panda", "bamboo", "black and white", "china"],
+  "categories": ["nature"],
+  "useCases": ["Marks a conservation program", "Shows a bamboo eater"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

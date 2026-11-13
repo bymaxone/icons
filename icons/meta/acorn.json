@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Acorn",
+  "tags": ["acorn", "oak", "seed", "squirrel food"],
+  "categories": ["nature"],
+  "useCases": ["Marks a seed from an oak", "Shows autumn on the forest floor"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

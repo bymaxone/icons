@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Moose",
+  "tags": ["moose", "antlers", "north", "elk"],
+  "categories": ["nature"],
+  "useCases": ["Warns of animals on the road", "Shows a northern forest animal"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

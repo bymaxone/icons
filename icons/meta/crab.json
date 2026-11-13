@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Crab",
+  "tags": ["crab", "shellfish", "claws", "seafood"],
+  "categories": ["nature", "food"],
+  "useCases": ["Lists a seafood dish", "Marks a coastal species"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

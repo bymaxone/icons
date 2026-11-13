@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Iceberg",
+  "tags": ["iceberg", "ice", "polar", "floating"],
+  "categories": ["nature"],
+  "useCases": ["Shows hidden depth under the surface", "Marks polar waters"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

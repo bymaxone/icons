@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Penguin",
+  "tags": ["penguin", "antarctic", "flightless", "ice"],
+  "categories": ["nature"],
+  "useCases": ["Marks a polar habitat", "Shows a bird that swims"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

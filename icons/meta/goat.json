@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Goat",
+  "tags": ["goat", "horns", "farm", "mountain"],
+  "categories": ["nature"],
+  "useCases": ["Lists a farm animal", "Marks a mountain pasture"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

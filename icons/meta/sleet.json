@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Sleet",
+  "tags": ["sleet", "icy rain", "wintry mix", "slush"],
+  "categories": ["nature"],
+  "useCases": ["Forecasts icy rain", "Warns of slippery roads"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

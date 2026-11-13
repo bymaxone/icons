@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Salt shaker",
+  "tags": ["salt", "shaker", "seasoning", "sodium"],
+  "categories": ["food", "health"],
+  "useCases": ["Marks a seasoning", "Warns of sodium content"],
+  "aliases": [
+    {
+      "name": "salt-shaker",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

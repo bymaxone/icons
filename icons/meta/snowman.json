@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Snowman",
+  "tags": ["snowman", "winter", "snow", "christmas"],
+  "categories": ["nature"],
+  "useCases": ["Marks a winter holiday", "Shows a snowy day"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

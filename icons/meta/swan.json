@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Swan",
+  "tags": ["swan", "elegant", "lake", "white bird"],
+  "categories": ["nature"],
+  "useCases": ["Shows grace and elegance", "Marks a lake bird"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Deer",
+  "tags": ["deer", "antlers", "forest", "wildlife"],
+  "categories": ["nature"],
+  "useCases": ["Marks a wildlife crossing", "Shows a forest animal"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}
