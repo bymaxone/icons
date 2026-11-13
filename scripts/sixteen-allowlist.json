@@ -20,6 +20,18 @@
       "pairs": ["0-2"],
       "why": "the cable fuses with the cabin outline; it still reads as a cable car"
     },
+    "chart-donut": {
+      "pairs": ["0-1"],
+      "why": "the two slices fuse along their shared edge; it still reads as a donut chart"
+    },
+    "cherry": {
+      "pairs": ["0-1"],
+      "why": "the two cherries fuse where they meet; it still reads as a cherry pair"
+    },
+    "cloud-drizzle": {
+      "pairs": ["0-1"],
+      "why": "the drops fuse with the cloud outline; it still reads as drizzle"
+    },
     "contract": {
       "pairs": ["0-1"],
       "why": "the crease fuses with the outline at the family's cut; the silhouette still reads as a document"
@@ -108,6 +120,10 @@
       "pairs": ["0-2"],
       "why": "the handle touches the outline; without it the drawing is a cabinet, and it still reads as a fridge"
     },
+    "hail": {
+      "pairs": ["0-3"],
+      "why": "the right hailstone fuses with the cloud outline; it still reads as hail"
+    },
     "hdr": {
       "pairs": ["1-2"],
       "why": "the D and the R fuse; it still reads as HDR"
@@ -119,6 +135,14 @@
     "lightbulb": {
       "pairs": ["0-1"],
       "why": "still reads as the object in the blur"
+    },
+    "lightbulb-off": {
+      "pairs": ["0-1"],
+      "why": "the base line fuses with the bulb outline; it still reads as an unlit bulb"
+    },
+    "masks": {
+      "pairs": ["0-1", "1-2"],
+      "why": "the two masks fuse where they overlap, and the face marks fuse with the front mask; it still reads as theatre masks"
     },
     "podcast": {
       "pairs": ["1-2"],
