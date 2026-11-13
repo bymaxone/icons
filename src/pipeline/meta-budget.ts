@@ -22,6 +22,13 @@ export const META_RECORD_BYTES = 52
 export const META_CAP_BYTES = 112 * 1024
 
 /**
+ * The least brotli bytes the bundle may be allowed: a package of a handful of records, such as
+ * the placeholder icons of `fixtures/icons`, is dominated by its fixed part and its tables, not
+ * by the cost of a record.
+ */
+export const META_FLOOR_BYTES = 2048
+
+/**
  * The brotli bytes one record costs: what the bundle weighs above its base, over the records.
  *
  * @param brotli - The brotli bytes of the bundle.
@@ -37,10 +44,13 @@ export function recordCost(brotli: number, records: number): number {
  * per-record budget for each, never above the cap.
  *
  * @param records - The icon and brand records the bundle holds.
- * @returns The limit in bytes.
+ * @returns The limit in bytes: the base and the records' budget, within the floor and the cap.
  */
 export function metaLimit(records: number): number {
-  return Math.min(META_CAP_BYTES, META_BASE_BYTES + META_RECORD_BYTES * records)
+  return Math.min(
+    META_CAP_BYTES,
+    Math.max(META_FLOOR_BYTES, META_BASE_BYTES + META_RECORD_BYTES * records)
+  )
 }
 
 /**
@@ -57,6 +67,9 @@ export const ROOT_ICON_BYTES = 12
 
 /** The most brotli bytes the root entry may reach whatever the icons, room for about 2,300. */
 export const ROOT_CAP_BYTES = 28 * 1024
+
+/** The least brotli bytes the root entry may be allowed, for a package of a handful of icons. */
+export const ROOT_FLOOR_BYTES = 512
 
 /**
  * The brotli bytes one icon costs the root entry: what it weighs above its base, over the icons.
@@ -77,5 +90,8 @@ export function iconCost(brotli: number, icons: number): number {
  * @returns The limit in bytes.
  */
 export function rootLimit(icons: number): number {
-  return Math.min(ROOT_CAP_BYTES, ROOT_BASE_BYTES + ROOT_ICON_BYTES * icons)
+  return Math.min(
+    ROOT_CAP_BYTES,
+    Math.max(ROOT_FLOOR_BYTES, ROOT_BASE_BYTES + ROOT_ICON_BYTES * icons)
+  )
 }

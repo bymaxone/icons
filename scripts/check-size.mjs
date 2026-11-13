@@ -49,6 +49,9 @@ const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 //     12 bytes an icon, about 20% of headroom for a longer name, so the limit is 85 + 12 * icons
 //     and follows the set. A sanity cap of 28 KiB holds whatever the icons, room for about
 //     2,300 of them; the arithmetic is `src/pipeline/meta-budget.ts`.
+//     A package of a handful of icons, such as the placeholders of `fixtures/icons`, is held to a
+//     floor of 512 bytes for the root and 2 KiB for meta, because its fixed part outweighs
+//     the cost of an icon.
 //   - runtime, 1.25 KiB brotli: the `Icon` base, `createIcon`, the stroke maths and the
 //     accessibility rules, measured at 3614 bytes raw and 1206 bytes brotli. The headroom
 //     fits a small fix, while an inlined dependency such as React fails.

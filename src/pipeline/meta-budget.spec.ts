@@ -9,9 +9,11 @@
 import {
   META_BASE_BYTES,
   META_CAP_BYTES,
+  META_FLOOR_BYTES,
   META_RECORD_BYTES,
   ROOT_BASE_BYTES,
   ROOT_CAP_BYTES,
+  ROOT_FLOOR_BYTES,
   ROOT_ICON_BYTES,
   iconCost,
   metaLimit,
@@ -22,7 +24,9 @@ import {
 describe('the budget constants', () => {
   it('are the measured base, the per-record budget and the cap', () => {
     /** Scenario: the numbers the comment of `scripts/check-size.mjs` states. */
-    expect([META_BASE_BYTES, META_RECORD_BYTES, META_CAP_BYTES]).toStrictEqual([707, 52, 114688])
+    expect([META_BASE_BYTES, META_RECORD_BYTES, META_CAP_BYTES, META_FLOOR_BYTES]).toStrictEqual([
+      707, 52, 114688, 2048
+    ])
   })
 })
 
@@ -49,9 +53,15 @@ describe('metaLimit', () => {
     expect(metaLimit(559)).toBe(707 + 52 * 559)
   })
 
-  it('is the base alone with no record', () => {
-    /** Scenario: nothing to budget but the fixed part. */
-    expect(metaLimit(0)).toBe(707)
+  it('is the floor with no record', () => {
+    /** Scenario: a package of a handful of records is held to the floor, not to the base. */
+    expect(metaLimit(0)).toBe(META_FLOOR_BYTES)
+    expect(metaLimit(3)).toBe(META_FLOOR_BYTES)
+  })
+
+  it('leaves the floor where the base and the records pass it', () => {
+    /** Scenario: 30 records at 707 + 52 each are over 2,048, so the budget rules. */
+    expect(metaLimit(30)).toBe(707 + 52 * 30)
   })
 
   it('stops at the cap', () => {
@@ -75,7 +85,9 @@ describe('metaLimit', () => {
 describe('the root budget constants', () => {
   it('are the measured base, the per-icon budget and the cap', () => {
     /** Scenario: the numbers the comment of `scripts/check-size.mjs` states for the root. */
-    expect([ROOT_BASE_BYTES, ROOT_ICON_BYTES, ROOT_CAP_BYTES]).toStrictEqual([85, 12, 28672])
+    expect([ROOT_BASE_BYTES, ROOT_ICON_BYTES, ROOT_CAP_BYTES, ROOT_FLOOR_BYTES]).toStrictEqual([
+      85, 12, 28672, 512
+    ])
   })
 })
 
@@ -97,9 +109,15 @@ describe('rootLimit', () => {
     expect(rootLimit(661)).toBe(85 + 12 * 661)
   })
 
-  it('is the base alone with no icon', () => {
-    /** Scenario: nothing to budget but the fixed part. */
-    expect(rootLimit(0)).toBe(85)
+  it('is the floor with few icons', () => {
+    /** Scenario: a package of a handful of icons is held to the floor, not to the base. */
+    expect(rootLimit(0)).toBe(ROOT_FLOOR_BYTES)
+    expect(rootLimit(2)).toBe(ROOT_FLOOR_BYTES)
+  })
+
+  it('leaves the floor where the base and the icons pass it', () => {
+    /** Scenario: 100 icons at 85 + 12 each are over 512, so the budget rules. */
+    expect(rootLimit(100)).toBe(85 + 12 * 100)
   })
 
   it('stops at the cap', () => {
