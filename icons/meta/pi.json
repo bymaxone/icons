@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Pi",
+  "tags": ["pi", "constant", "math", "circle"],
+  "categories": ["math"],
+  "useCases": ["Inserts the constant pi into a formula", "Marks a maths topic"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

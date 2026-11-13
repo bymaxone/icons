@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Earbuds",
+  "tags": ["earbuds", "wireless", "listen", "audio"],
+  "categories": ["audio", "devices"],
+  "useCases": ["Shows wireless earphones", "Marks private listening"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -19,3 +19,6 @@ export const CodeIcon = /* @__PURE__ */ createIcon('code', [
 
 /** `html`: an alias of {@link CodeIcon}. */
 export const HtmlIcon = CodeIcon
+
+/** `api`: an alias of {@link CodeIcon}. */
+export const ApiIcon = CodeIcon

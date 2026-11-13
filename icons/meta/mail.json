@@ -8,6 +8,10 @@
     {
       "name": "email",
       "deprecated": false
+    },
+    {
+      "name": "envelope",
+      "deprecated": false
     }
   ],
   "variants": ["line"],

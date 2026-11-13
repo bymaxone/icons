@@ -23,3 +23,6 @@ export const MailIcon = /* @__PURE__ */ createIcon('mail', [
 
 /** `email`: an alias of {@link MailIcon}. */
 export const EmailIcon = MailIcon
+
+/** `envelope`: an alias of {@link MailIcon}. */
+export const EnvelopeIcon = MailIcon

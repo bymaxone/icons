@@ -24,3 +24,6 @@ export const BellSmIcon = /* @__PURE__ */ createIcon(
   ],
   { masterSize: 16 }
 )
+
+/** `notification`: an alias of {@link BellSmIcon}. */
+export const NotificationSmIcon = BellSmIcon

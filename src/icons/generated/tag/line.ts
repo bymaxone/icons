@@ -26,3 +26,6 @@ export const PriceTagIcon = TagIcon
 
 /** `label`: an alias of {@link TagIcon}. */
 export const LabelIcon = TagIcon
+
+/** `tags`: an alias of {@link TagIcon}. */
+export const TagsIcon = TagIcon

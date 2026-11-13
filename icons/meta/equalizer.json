@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Equalizer",
+  "tags": ["equalizer", "eq", "levels", "sound"],
+  "categories": ["audio", "media"],
+  "useCases": ["Adjusts the bands of a sound", "Shows the level of each frequency"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

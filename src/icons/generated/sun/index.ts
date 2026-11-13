@@ -4,5 +4,5 @@
  * @layer Generated
  */
 
-export { SunIcon } from './line'
-export { SunFilledIcon } from './filled'
+export { BrightnessIcon, SunIcon } from './line'
+export { BrightnessFilledIcon, SunFilledIcon } from './filled'

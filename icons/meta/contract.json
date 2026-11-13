@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Contract",
+  "tags": ["contract", "agreement", "signature", "legal"],
+  "categories": ["files", "commerce"],
+  "useCases": ["Opens an agreement to sign", "Shows a legal document"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

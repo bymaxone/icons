@@ -8,6 +8,12 @@
     "Marks an item that is scheduled",
     "Filled: an item that is scheduled"
   ],
+  "aliases": [
+    {
+      "name": "time",
+      "deprecated": false
+    }
+  ],
   "variants": ["line", "filled"],
   "opticalSizes": [24],
   "since": "0.1.0"

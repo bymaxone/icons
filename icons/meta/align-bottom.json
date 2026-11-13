@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Align to bottom",
+  "tags": ["align bottom", "bottom edge", "layout", "position"],
+  "categories": ["editing"],
+  "useCases": ["Lines up the objects on their bottom edge", "Moves a selection to the base"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

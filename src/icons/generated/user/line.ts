@@ -20,3 +20,6 @@ export const UserIcon = /* @__PURE__ */ createIcon('user', [
     }
   ]
 ])
+
+/** `person`: an alias of {@link UserIcon}. */
+export const PersonIcon = UserIcon

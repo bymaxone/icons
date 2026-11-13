@@ -24,3 +24,9 @@ export const FileTextIcon = /* @__PURE__ */ createIcon('file-text', [
 
 /** `pdf`: an alias of {@link FileTextIcon}. */
 export const PdfIcon = FileTextIcon
+
+/** `post`: an alias of {@link FileTextIcon}. */
+export const PostIcon = FileTextIcon
+
+/** `article`: an alias of {@link FileTextIcon}. */
+export const ArticleIcon = FileTextIcon

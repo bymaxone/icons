@@ -4,5 +4,5 @@
  * @layer Generated
  */
 
-export { DislikeIcon, ThumbsDownIcon } from './line'
-export { DislikeFilledIcon, ThumbsDownFilledIcon } from './filled'
+export { DislikeIcon, ThumbDownIcon, ThumbsDownIcon } from './line'
+export { DislikeFilledIcon, ThumbDownFilledIcon, ThumbsDownFilledIcon } from './filled'

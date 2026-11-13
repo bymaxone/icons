@@ -8,6 +8,16 @@
     "Opens the details of an item",
     "Filled: an information notice that is open"
   ],
+  "aliases": [
+    {
+      "name": "details",
+      "deprecated": false
+    },
+    {
+      "name": "info-circle",
+      "deprecated": false
+    }
+  ],
   "variants": ["line", "filled", "sm"],
   "opticalSizes": [24, 16],
   "since": "0.1.0"

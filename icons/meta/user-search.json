@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Find a user",
+  "tags": ["user search", "find", "people", "lookup"],
+  "categories": ["people", "actions"],
+  "useCases": ["Searches for a person by name", "Looks up a member of the directory"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

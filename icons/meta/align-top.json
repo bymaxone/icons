@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Align to top",
+  "tags": ["align top", "top edge", "layout", "position"],
+  "categories": ["editing"],
+  "useCases": ["Lines up the objects on their top edge", "Moves a selection to the top"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

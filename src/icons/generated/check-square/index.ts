@@ -4,5 +4,5 @@
  * @layer Generated
  */
 
-export { CheckSquareIcon } from './line'
-export { CheckSquareFilledIcon } from './filled'
+export { CheckSquareIcon, CheckboxIcon } from './line'
+export { CheckSquareFilledIcon, CheckboxFilledIcon } from './filled'

@@ -19,3 +19,6 @@ export const HeartIcon = /* @__PURE__ */ createIcon('heart', [
     }
   ]
 ])
+
+/** `hearts`: an alias of {@link HeartIcon}. */
+export const HeartsIcon = HeartIcon

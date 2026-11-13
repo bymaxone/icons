@@ -19,3 +19,6 @@ export const StoreIcon = /* @__PURE__ */ createIcon('store', [
 
 /** `shop`: an alias of {@link StoreIcon}. */
 export const ShopIcon = StoreIcon
+
+/** `storefront`: an alias of {@link StoreIcon}. */
+export const StorefrontIcon = StoreIcon

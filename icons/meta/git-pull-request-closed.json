@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Closed pull request",
+  "tags": ["pull request closed", "rejected", "git", "review"],
+  "categories": ["dev", "status"],
+  "useCases": ["Marks a pull request closed without a merge", "Shows a rejected code change"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Overcast",
+  "tags": ["cloudy", "overcast", "clouds", "weather"],
+  "categories": ["nature"],
+  "useCases": ["Shows an overcast sky", "Marks a grey day"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

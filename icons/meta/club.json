@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Club",
+  "tags": ["club", "card suit", "clover", "cards"],
+  "categories": ["games"],
+  "useCases": ["Shows the clubs suit", "Marks a hand of cards"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

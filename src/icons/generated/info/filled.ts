@@ -24,3 +24,9 @@ export const InfoFilledIcon = /* @__PURE__ */ createIcon(
   ],
   { paint: 'fill' }
 )
+
+/** `details`: an alias of {@link InfoFilledIcon}. */
+export const DetailsFilledIcon = InfoFilledIcon
+
+/** `info-circle`: an alias of {@link InfoFilledIcon}. */
+export const InfoCircleFilledIcon = InfoFilledIcon

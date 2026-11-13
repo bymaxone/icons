@@ -20,3 +20,6 @@ export const BellIcon = /* @__PURE__ */ createIcon('bell', [
   ],
   ['path', { d: 'M10.25 20.75h4' }]
 ])
+
+/** `notification`: an alias of {@link BellIcon}. */
+export const NotificationIcon = BellIcon

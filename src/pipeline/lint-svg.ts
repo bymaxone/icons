@@ -41,6 +41,8 @@ const FILL_CONTROLS = ['fill', 'fill-rule', 'clip-rule']
  */
 export const PARTIAL_FILLS: ReadonlyMap<string, string> = new Map([
   ['contrast', 'the filled half is the contrast between two tones'],
+  ['heart-half', 'the filled half is a partial like or rating'],
+  ['shield-half', 'the filled half is a partial protection'],
   ['star-half', 'the filled half is a half rating']
 ])
 

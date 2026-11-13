@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Repeat off",
+  "tags": ["repeat off", "no loop", "playback", "once"],
+  "categories": ["media", "audio"],
+  "useCases": ["Turns repeat off for a playlist", "Plays a track one time only"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

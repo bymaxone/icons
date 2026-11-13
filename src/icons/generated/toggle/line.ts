@@ -20,3 +20,6 @@ export const ToggleIcon = /* @__PURE__ */ createIcon('toggle', [
   ],
   ['circle', { cx: 8.5, cy: 12.25, r: 2.25 }]
 ])
+
+/** `switch`: an alias of {@link ToggleIcon}. */
+export const SwitchIcon = ToggleIcon

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Plus or minus",
+  "tags": ["plus minus", "tolerance", "margin", "math"],
+  "categories": ["math"],
+  "useCases": ["Shows a margin of error", "Inserts the plus or minus sign"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

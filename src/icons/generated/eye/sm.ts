@@ -20,3 +20,6 @@ export const EyeSmIcon = /* @__PURE__ */ createIcon(
   ],
   { masterSize: 16 }
 )
+
+/** `view`: an alias of {@link EyeSmIcon}. */
+export const ViewSmIcon = EyeSmIcon

@@ -16,3 +16,9 @@ export const InfoIcon = /* @__PURE__ */ createIcon('info', [
   ['path', { d: 'M12.25 8.75h.01' }],
   ['path', { d: 'M12.25 11.75v5' }]
 ])
+
+/** `details`: an alias of {@link InfoIcon}. */
+export const DetailsIcon = InfoIcon
+
+/** `info-circle`: an alias of {@link InfoIcon}. */
+export const InfoCircleIcon = InfoIcon

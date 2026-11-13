@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Dial pad",
+  "tags": ["dialpad", "keypad", "number pad", "dial"],
+  "categories": ["communication", "devices"],
+  "useCases": ["Opens the keypad to enter a number", "Starts dialling a phone number"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

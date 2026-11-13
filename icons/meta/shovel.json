@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Shovel",
+  "tags": ["shovel", "dig", "garden", "tool"],
+  "categories": ["tools", "nature"],
+  "useCases": ["Shows digging or gardening work", "Marks a construction site"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

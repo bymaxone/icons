@@ -25,3 +25,6 @@ export const CaptionsIcon = /* @__PURE__ */ createIcon('captions', [
 
 /** `subtitles`: an alias of {@link CaptionsIcon}. */
 export const SubtitlesIcon = CaptionsIcon
+
+/** `closed-caption`: an alias of {@link CaptionsIcon}. */
+export const ClosedCaptionIcon = CaptionsIcon

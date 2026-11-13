@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Battery plus",
+  "tags": ["battery plus", "extra", "power", "boost"],
+  "categories": ["devices"],
+  "useCases": ["Offers an extra power pack", "Marks a battery upgrade"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Fence",
+  "tags": ["fence", "barrier", "garden", "boundary"],
+  "categories": ["household", "security"],
+  "useCases": ["Marks the edge of a property", "Shows a barrier around an area"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

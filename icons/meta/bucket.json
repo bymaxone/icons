@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Bucket",
+  "tags": ["bucket", "pail", "container", "water"],
+  "categories": ["household", "tools"],
+  "useCases": ["Shows a pail for water or sand", "Marks a cleaning task"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

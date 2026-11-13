@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Chess pawn",
+  "tags": ["chess pawn", "pawn", "chess", "piece"],
+  "categories": ["games"],
+  "useCases": ["Shows the smallest chess piece", "Marks a beginner level"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

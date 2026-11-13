@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Code folder",
+  "tags": ["folder code", "project", "source", "repository"],
+  "categories": ["files", "dev"],
+  "useCases": ["Opens a source code project", "Groups the files of a repository"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

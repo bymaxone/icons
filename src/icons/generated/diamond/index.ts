@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { DiamondIcon } from './line'
+export { DiamondIcon, DiamondSuitIcon } from './line'

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Diameter",
+  "tags": ["diameter", "width", "circle", "measure"],
+  "categories": ["math", "shapes"],
+  "useCases": ["Shows the width of a circle", "Inserts the diameter symbol"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

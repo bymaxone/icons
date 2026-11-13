@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Right panel",
+  "tags": ["layout right", "side panel", "inspector", "columns"],
+  "categories": ["navigation", "editing"],
+  "useCases": ["Shows a panel on the right side", "Switches to a layout with an inspector"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

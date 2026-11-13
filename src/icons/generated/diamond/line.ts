@@ -19,3 +19,6 @@ export const DiamondIcon = /* @__PURE__ */ createIcon('diamond', [
     }
   ]
 ])
+
+/** `diamond-suit`: an alias of {@link DiamondIcon}. */
+export const DiamondSuitIcon = DiamondIcon

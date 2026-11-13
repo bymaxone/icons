@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { CaptionsIcon, SubtitlesIcon } from './line'
+export { CaptionsIcon, ClosedCaptionIcon, SubtitlesIcon } from './line'

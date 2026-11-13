@@ -21,3 +21,6 @@ export const ImageIcon = /* @__PURE__ */ createIcon('image', [
   ['path', { d: 'm6.5 16 3.45-3.856c.65-.726.955-.731 1.625-.023L15.25 16' }],
   ['circle', { cx: 16.25, cy: 10.25, r: 1.25 }]
 ])
+
+/** `wallpaper`: an alias of {@link ImageIcon}. */
+export const WallpaperIcon = ImageIcon

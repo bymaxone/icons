@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Metronome",
+  "tags": ["metronome", "tempo", "beat", "rhythm"],
+  "categories": ["audio", "time"],
+  "useCases": ["Sets the tempo of a piece", "Keeps the beat while practising"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

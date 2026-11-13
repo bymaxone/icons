@@ -8,6 +8,12 @@
     "Shows the light mode option",
     "Filled: the light theme while it is active"
   ],
+  "aliases": [
+    {
+      "name": "brightness",
+      "deprecated": false
+    }
+  ],
   "variants": ["line", "filled"],
   "opticalSizes": [24],
   "since": "0.1.0"

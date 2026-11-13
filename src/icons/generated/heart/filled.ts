@@ -24,3 +24,6 @@ export const HeartFilledIcon = /* @__PURE__ */ createIcon(
   ],
   { paint: 'fill' }
 )
+
+/** `hearts`: an alias of {@link HeartFilledIcon}. */
+export const HeartsFilledIcon = HeartFilledIcon

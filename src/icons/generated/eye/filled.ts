@@ -24,3 +24,6 @@ export const EyeFilledIcon = /* @__PURE__ */ createIcon(
   ],
   { paint: 'fill' }
 )
+
+/** `view`: an alias of {@link EyeFilledIcon}. */
+export const ViewFilledIcon = EyeFilledIcon

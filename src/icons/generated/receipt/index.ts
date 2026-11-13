@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { ReceiptIcon } from './line'
+export { InvoiceIcon, ReceiptIcon } from './line'

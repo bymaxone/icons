@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Traffic cone",
+  "tags": ["traffic cone", "roadwork", "caution", "barrier"],
+  "categories": ["transport", "status"],
+  "useCases": ["Warns of roadwork ahead", "Marks a closed lane"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

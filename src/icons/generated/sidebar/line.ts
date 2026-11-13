@@ -20,3 +20,6 @@ export const SidebarIcon = /* @__PURE__ */ createIcon('sidebar', [
   ],
   ['path', { d: 'M9.25 7.25v10' }]
 ])
+
+/** `layout-left`: an alias of {@link SidebarIcon}. */
+export const LayoutLeftIcon = SidebarIcon

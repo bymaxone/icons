@@ -23,3 +23,6 @@ export const ThumbsUpIcon = /* @__PURE__ */ createIcon('thumbs-up', [
 
 /** `like`: an alias of {@link ThumbsUpIcon}. */
 export const LikeIcon = ThumbsUpIcon
+
+/** `thumb-up`: an alias of {@link ThumbsUpIcon}. */
+export const ThumbUpIcon = ThumbsUpIcon

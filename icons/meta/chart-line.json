@@ -4,6 +4,12 @@
   "tags": ["chart", "line", "trend", "analytics"],
   "categories": ["data"],
   "useCases": ["Shows a metric over time", "Opens the analytics view"],
+  "aliases": [
+    {
+      "name": "graph",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

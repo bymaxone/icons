@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Radius",
+  "tags": ["radius", "corner", "circle", "measure"],
+  "categories": ["math", "shapes"],
+  "useCases": ["Shows the distance from the centre of a circle", "Sets the rounding of a corner"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

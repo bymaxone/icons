@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { CursorIcon } from './line'
+export { CursorIcon, SelectIcon } from './line'

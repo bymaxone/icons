@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Chess rook",
+  "tags": ["chess rook", "rook", "tower", "castle piece"],
+  "categories": ["games"],
+  "useCases": ["Shows the tower chess piece", "Marks a strong defence"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

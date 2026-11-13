@@ -16,3 +16,6 @@ export const ChevronDownSmIcon = /* @__PURE__ */ createIcon(
   [['path', { d: 'm7.5 10.125 5.25 5.25 5.25-5.25' }]],
   { masterSize: 16 }
 )
+
+/** `caret-down`: an alias of {@link ChevronDownSmIcon}. */
+export const CaretDownSmIcon = ChevronDownSmIcon

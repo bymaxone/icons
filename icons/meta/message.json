@@ -8,6 +8,14 @@
     {
       "name": "chat",
       "deprecated": false
+    },
+    {
+      "name": "comment",
+      "deprecated": false
+    },
+    {
+      "name": "message-circle",
+      "deprecated": false
     }
   ],
   "variants": ["line", "filled"],

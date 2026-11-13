@@ -24,3 +24,6 @@ export const SunFilledIcon = /* @__PURE__ */ createIcon(
   ],
   { paint: 'fill' }
 )
+
+/** `brightness`: an alias of {@link SunFilledIcon}. */
+export const BrightnessFilledIcon = SunFilledIcon

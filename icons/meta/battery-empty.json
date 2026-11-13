@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Empty battery",
+  "tags": ["battery empty", "drained", "dead", "power"],
+  "categories": ["devices", "status"],
+  "useCases": ["Warns that the battery is drained", "Shows a device about to shut down"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

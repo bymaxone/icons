@@ -4,6 +4,12 @@
   "tags": ["paint", "draw", "stroke", "retouch"],
   "categories": ["editing"],
   "useCases": ["Selects the brush tool", "Paints a mask"],
+  "aliases": [
+    {
+      "name": "paint-brush",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

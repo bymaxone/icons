@@ -4,6 +4,6 @@
  * @layer Generated
  */
 
-export { EyeIcon } from './line'
-export { EyeFilledIcon } from './filled'
-export { EyeSmIcon } from './sm'
+export { EyeIcon, ViewIcon } from './line'
+export { EyeFilledIcon, ViewFilledIcon } from './filled'
+export { EyeSmIcon, ViewSmIcon } from './sm'

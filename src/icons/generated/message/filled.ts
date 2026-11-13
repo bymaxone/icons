@@ -27,3 +27,9 @@ export const MessageFilledIcon = /* @__PURE__ */ createIcon(
 
 /** `chat`: an alias of {@link MessageFilledIcon}. */
 export const ChatFilledIcon = MessageFilledIcon
+
+/** `comment`: an alias of {@link MessageFilledIcon}. */
+export const CommentFilledIcon = MessageFilledIcon
+
+/** `message-circle`: an alias of {@link MessageFilledIcon}. */
+export const MessageCircleFilledIcon = MessageFilledIcon

@@ -15,3 +15,9 @@ export const CloudDownloadIcon = /* @__PURE__ */ createIcon('cloud-download', [
   ['path', { d: 'M6.75 18.75a3.5 3.5 0 1 1 .25-7 5 5 0 0 1 9.75-1.5 4.25 4.25 0 0 1 .75 8.5' }],
   ['path', { d: 'M12.25 11.75v8.5M10 18l2.25 2.25L14.5 18' }]
 ])
+
+/** `download-cloud`: an alias of {@link CloudDownloadIcon}. */
+export const DownloadCloudIcon = CloudDownloadIcon
+
+/** `cloud-arrow-down`: an alias of {@link CloudDownloadIcon}. */
+export const CloudArrowDownIcon = CloudDownloadIcon

@@ -18,3 +18,6 @@ export const CloseCircleIcon = /* @__PURE__ */ createIcon('close-circle', [
 
 /** `x-circle`: an alias of {@link CloseCircleIcon}. */
 export const XCircleIcon = CloseCircleIcon
+
+/** `cancel`: an alias of {@link CloseCircleIcon}. */
+export const CancelIcon = CloseCircleIcon

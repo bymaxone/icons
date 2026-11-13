@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Align to middle",
+  "tags": ["align middle", "center", "vertical", "layout"],
+  "categories": ["editing"],
+  "useCases": ["Centers objects on a horizontal axis", "Lines up a selection by its middle"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

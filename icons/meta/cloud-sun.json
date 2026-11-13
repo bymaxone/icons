@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Partly sunny",
+  "tags": ["cloud sun", "partly sunny", "weather", "forecast"],
+  "categories": ["nature"],
+  "useCases": ["Shows a forecast with clouds and sun", "Marks a mild day"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

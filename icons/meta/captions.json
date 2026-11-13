@@ -8,6 +8,10 @@
     {
       "name": "subtitles",
       "deprecated": false
+    },
+    {
+      "name": "closed-caption",
+      "deprecated": false
     }
   ],
   "variants": ["line"],

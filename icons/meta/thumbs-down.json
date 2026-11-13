@@ -8,6 +8,10 @@
     {
       "name": "dislike",
       "deprecated": false
+    },
+    {
+      "name": "thumb-down",
+      "deprecated": false
     }
   ],
   "variants": ["line", "filled"],

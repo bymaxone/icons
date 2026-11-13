@@ -28,3 +28,6 @@ export const CoinsIcon = /* @__PURE__ */ createIcon('coins', [
 
 /** `money`: an alias of {@link CoinsIcon}. */
 export const MoneyIcon = CoinsIcon
+
+/** `coin`: an alias of {@link CoinsIcon}. */
+export const CoinIcon = CoinsIcon

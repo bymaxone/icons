@@ -20,3 +20,6 @@ export const SunIcon = /* @__PURE__ */ createIcon('sun', [
   ['path', { d: 'm8.875 6.404-1-1.732' }],
   ['path', { d: 'm15.625 6.404 1-1.732' }]
 ])
+
+/** `brightness`: an alias of {@link SunIcon}. */
+export const BrightnessIcon = SunIcon

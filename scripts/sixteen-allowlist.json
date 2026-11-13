@@ -12,7 +12,23 @@
       "pairs": ["0-1"],
       "why": "still reads as the object in the blur"
     },
+    "cable-car": {
+      "pairs": ["0-2"],
+      "why": "the cable fuses with the cabin outline; it still reads as a cable car"
+    },
+    "contract": {
+      "pairs": ["0-1"],
+      "why": "the crease fuses with the outline at the family's cut; the silhouette still reads as a document"
+    },
+    "file-chart": {
+      "pairs": ["0-1"],
+      "why": "the crease fuses with the outline at the family's cut; the silhouette still reads as a document"
+    },
     "file-check": {
+      "pairs": ["0-1"],
+      "why": "the crease fuses with the outline at the family's cut; the silhouette still reads as a document"
+    },
+    "file-cloud": {
       "pairs": ["0-1"],
       "why": "the crease fuses with the outline at the family's cut; the silhouette still reads as a document"
     },
@@ -21,6 +37,10 @@
       "why": "the crease fuses with the outline at the family's cut; the silhouette still reads as a document"
     },
     "file-download": {
+      "pairs": ["0-1"],
+      "why": "the crease fuses with the outline at the family's cut; the silhouette still reads as a document"
+    },
+    "file-edit": {
       "pairs": ["0-1"],
       "why": "the crease fuses with the outline at the family's cut; the silhouette still reads as a document"
     },
@@ -48,6 +68,10 @@
       "pairs": ["0-1"],
       "why": "the crease fuses with the outline at the family's cut; the silhouette still reads as a document"
     },
+    "file-upload": {
+      "pairs": ["0-1"],
+      "why": "the crease fuses with the outline at the family's cut; the silhouette still reads as a document"
+    },
     "file-x": {
       "pairs": ["0-1"],
       "why": "the crease fuses with the outline at the family's cut; the silhouette still reads as a document"
@@ -72,6 +96,14 @@
       "pairs": ["0-2"],
       "why": "the handle touches the outline; without it the drawing is a cabinet, and it still reads as a fridge"
     },
+    "hdr": {
+      "pairs": ["1-2"],
+      "why": "the D and the R fuse; it still reads as HDR"
+    },
+    "heart-half": {
+      "pairs": ["0-1"],
+      "why": "the filled half fuses with the outline it sits in; it still reads as a half heart"
+    },
     "lightbulb": {
       "pairs": ["0-1"],
       "why": "still reads as the object in the blur"
@@ -80,9 +112,17 @@
       "pairs": ["1-2"],
       "why": "the two broadcast arcs touch; it still reads as a podcast"
     },
+    "sailboat": {
+      "pairs": ["0-2"],
+      "why": "the mainsail fuses with the hull; it still reads as a sailboat"
+    },
     "snail": {
       "pairs": ["1-2"],
       "why": "the centre of the spiral touches the shell ring; the spiral draws the shell, and it still reads as a snail"
+    },
+    "wifi-lock": {
+      "pairs": ["0-3"],
+      "why": "the lock badge fuses with the outer arc; it still reads as a locked network"
     },
     "window": {
       "pairs": ["0-2"],

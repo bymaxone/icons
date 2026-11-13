@@ -8,6 +8,10 @@
     {
       "name": "shop",
       "deprecated": false
+    },
+    {
+      "name": "storefront",
+      "deprecated": false
     }
   ],
   "variants": ["line"],

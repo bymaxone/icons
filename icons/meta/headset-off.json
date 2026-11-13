@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Headset off",
+  "tags": ["headset off", "muted", "disconnected", "support"],
+  "categories": ["audio", "devices"],
+  "useCases": ["Shows that the headset is disconnected", "Mutes a support line"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

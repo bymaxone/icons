@@ -4,6 +4,12 @@
   "tags": ["diamond", "rhombus", "shape", "gem"],
   "categories": ["shapes"],
   "useCases": ["Inserts a diamond shape", "Marks a decision point"],
+  "aliases": [
+    {
+      "name": "diamond-suit",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

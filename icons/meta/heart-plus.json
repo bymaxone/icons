@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Heart with a plus",
+  "tags": ["heart plus", "favorite", "new", "collect"],
+  "categories": ["emotions", "actions"],
+  "useCases": ["Adds an item to the favorites", "Creates a new wishlist entry"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

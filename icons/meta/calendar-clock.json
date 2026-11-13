@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Scheduled time",
+  "tags": ["calendar clock", "schedule", "appointment", "time"],
+  "categories": ["time"],
+  "useCases": ["Shows the date and hour of an appointment", "Opens the scheduling options"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

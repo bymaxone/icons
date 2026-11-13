@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Vertical borders",
+  "tags": ["border vertical", "columns", "lines", "table"],
+  "categories": ["editing", "text"],
+  "useCases": ["Draws lines between the columns of a table", "Applies vertical cell borders"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

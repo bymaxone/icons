@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Armchair",
+  "tags": ["armchair", "chair", "seat", "furniture"],
+  "categories": ["household"],
+  "useCases": ["Shows a comfortable seat", "Marks a lounge area"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Record",
+  "tags": ["record", "rec", "capture", "live"],
+  "categories": ["media"],
+  "useCases": ["Starts recording a video or a call", "Shows that a capture is running"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

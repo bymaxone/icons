@@ -19,3 +19,6 @@ export const ClockIcon = /* @__PURE__ */ createIcon('clock', [
   ['path', { d: 'M12.25 12.25v-5' }],
   ['path', { d: 'm14.65 14.05 2 1.5' }]
 ])
+
+/** `time`: an alias of {@link ClockIcon}. */
+export const TimeIcon = ClockIcon

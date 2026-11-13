@@ -4,6 +4,6 @@
  * @layer Generated
  */
 
-export { InfoIcon } from './line'
-export { InfoFilledIcon } from './filled'
-export { InfoSmIcon } from './sm'
+export { DetailsIcon, InfoCircleIcon, InfoIcon } from './line'
+export { DetailsFilledIcon, InfoCircleFilledIcon, InfoFilledIcon } from './filled'
+export { DetailsSmIcon, InfoCircleSmIcon, InfoSmIcon } from './sm'

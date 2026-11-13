@@ -24,3 +24,6 @@ export const CheckSquareFilledIcon = /* @__PURE__ */ createIcon(
   ],
   { paint: 'fill' }
 )
+
+/** `checkbox`: an alias of {@link CheckSquareFilledIcon}. */
+export const CheckboxFilledIcon = CheckSquareFilledIcon

@@ -20,3 +20,9 @@ export const InfoSmIcon = /* @__PURE__ */ createIcon(
   ],
   { masterSize: 16 }
 )
+
+/** `details`: an alias of {@link InfoSmIcon}. */
+export const DetailsSmIcon = InfoSmIcon
+
+/** `info-circle`: an alias of {@link InfoSmIcon}. */
+export const InfoCircleSmIcon = InfoSmIcon

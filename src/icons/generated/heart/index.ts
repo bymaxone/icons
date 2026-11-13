@@ -4,5 +4,5 @@
  * @layer Generated
  */
 
-export { HeartIcon } from './line'
-export { HeartFilledIcon } from './filled'
+export { HeartIcon, HeartsIcon } from './line'
+export { HeartFilledIcon, HeartsFilledIcon } from './filled'

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Hotel",
+  "tags": ["hotel", "lodging", "stay", "accommodation"],
+  "categories": ["maps", "transport"],
+  "useCases": ["Marks a place to stay overnight", "Lists nearby lodging"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

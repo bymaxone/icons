@@ -22,3 +22,6 @@ export const TableIcon = /* @__PURE__ */ createIcon('table', [
   ['path', { d: 'M10.25 9.75v9.5' }],
   ['path', { d: 'M10.25 14.5h9' }]
 ])
+
+/** `file-spreadsheet`: an alias of {@link TableIcon}. */
+export const FileSpreadsheetIcon = TableIcon

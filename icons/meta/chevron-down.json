@@ -4,6 +4,12 @@
   "tags": ["caret", "expand", "down", "dropdown"],
   "categories": ["arrows"],
   "useCases": ["Opens a dropdown menu", "Expands a collapsed section"],
+  "aliases": [
+    {
+      "name": "caret-down",
+      "deprecated": false
+    }
+  ],
   "variants": ["line", "sm"],
   "opticalSizes": [24, 16],
   "since": "0.1.0"

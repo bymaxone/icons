@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Broken link",
+  "tags": ["link off", "unlink", "detach", "broken"],
+  "categories": ["actions", "editing"],
+  "useCases": ["Removes a link from some text", "Shows a link that no longer works"],
+  "aliases": [
+    {
+      "name": "unlink",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

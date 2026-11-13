@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Timer off",
+  "tags": ["timer off", "stopped", "disabled", "countdown"],
+  "categories": ["time", "status"],
+  "useCases": ["Shows that a timer is switched off", "Cancels a countdown"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

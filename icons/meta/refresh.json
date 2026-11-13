@@ -4,6 +4,16 @@
   "tags": ["reload", "sync", "retry", "rotate"],
   "categories": ["actions"],
   "useCases": ["Reloads a list", "Retries a failed request"],
+  "aliases": [
+    {
+      "name": "reload",
+      "deprecated": false
+    },
+    {
+      "name": "restart",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

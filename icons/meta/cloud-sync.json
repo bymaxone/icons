@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Cloud sync",
+  "tags": ["cloud sync", "backup", "sync", "storage"],
+  "categories": ["connectivity", "data"],
+  "useCases": ["Shows that files are syncing to the cloud", "Starts a backup refresh"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

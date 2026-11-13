@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Camera plus",
+  "tags": ["camera plus", "photo", "new", "capture"],
+  "categories": ["media"],
+  "useCases": ["Takes a new photo to attach", "Adds a camera to a setup"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

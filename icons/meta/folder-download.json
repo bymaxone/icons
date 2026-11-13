@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Download folder",
+  "tags": ["folder download", "downloads", "save", "receive"],
+  "categories": ["files", "actions"],
+  "useCases": ["Opens the downloads folder", "Saves a folder to the device"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}
