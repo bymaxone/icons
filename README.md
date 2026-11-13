@@ -429,7 +429,7 @@ it is a regression everywhere at once. The suite is held to a bar beyond "the te
   `check:api` requires an "Apply to a derived backend" CHANGELOG note when the built
   declarations change
 - ✅ **Bundle size budget** per subpath, measured on the brotli-compressed bundle. `./meta`
-  is budgeted per record: 24,837 bytes brotli for 559 icon and brand records, 43.2 bytes a
+  is budgeted per record: 24,843 bytes brotli for 559 icon and brand records, 43.2 bytes a
   record above a fixed 707, against a limit of 52
 - ✅ **Every icon renders**: a smoke test driven by the generated metadata renders every
   component, aliases included, in jsdom and in `react-dom/server` and checks the default

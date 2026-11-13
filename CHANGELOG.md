@@ -13,7 +13,7 @@ and deprecated, each rename with the alias that keeps the old name working.
 
 ### Changed
 
-- Six icons have a label of their own: no two icons share one except the pairs that are the
+- Seven icons have a label of their own: no two icons share one except the pairs that are the
   same word, `plus` and `plus-circle` ("Add") and `more-vertical` and `more-horizontal`
   ("More options"). `heart` is "Love" (`thumbs-up` stays "Like"), `arrow-right` is "Continue"
   (`forward` stays "Forward"), `bookmark-check` is "Bookmarked" (`cloud-check` stays "Saved"),

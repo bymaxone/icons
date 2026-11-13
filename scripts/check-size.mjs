@@ -47,8 +47,8 @@ const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 //   - meta, a budget per record, not a total: `dist/meta/index.mjs` grows with every icon and
 //     brand, so a fixed total was raised by hand each batch. The fixed part (the grid, the deep
 //     freeze, the categories and the empty tables) measures 707 bytes brotli with every
-//     icon name and record taken out; the tree measures 24837 bytes with 559 records (545
-//     icon and 14 brand), (24837 - 707) / 559 = 43.2 bytes brotli a record, the icon's `label`
+//     icon name and record taken out; the tree measures 24843 bytes with 559 records (545
+//     icon and 14 brand), (24843 - 707) / 559 = 43.2 bytes brotli a record, the icon's `label`
 //     included. The budget is 52 bytes a record, about 20% of headroom for records with longer
 //     tags and use cases, so the limit is 707 + 52 * records and follows the set instead of
 //     being recalibrated. A sanity cap of 112 KiB holds whatever the records, room for about
