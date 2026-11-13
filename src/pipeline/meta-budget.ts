@@ -42,3 +42,40 @@ export function recordCost(brotli: number, records: number): number {
 export function metaLimit(records: number): number {
   return Math.min(META_CAP_BYTES, META_BASE_BYTES + META_RECORD_BYTES * records)
 }
+
+/**
+ * The brotli bytes of the root entry with no icon: the grid and the runtime re-exports,
+ * measured on a build that holds no drawing.
+ */
+export const ROOT_BASE_BYTES = 85
+
+/**
+ * The most brotli bytes one icon may cost the root entry, which holds one re-export line for
+ * each. The tree measures 9.8 bytes an icon, so this leaves about 20% for a longer name.
+ */
+export const ROOT_ICON_BYTES = 12
+
+/** The most brotli bytes the root entry may reach whatever the icons, room for about 2,300. */
+export const ROOT_CAP_BYTES = 28 * 1024
+
+/**
+ * The brotli bytes one icon costs the root entry: what it weighs above its base, over the icons.
+ *
+ * @param brotli - The brotli bytes of the root entry.
+ * @param icons - The icons the entry re-exports.
+ * @returns The bytes an icon costs; an entry with no icon is counted as one.
+ */
+export function iconCost(brotli: number, icons: number): number {
+  return (brotli - ROOT_BASE_BYTES) / Math.max(icons, 1)
+}
+
+/**
+ * The most brotli bytes the root entry may weigh with this many icons: the base and the
+ * per-icon budget for each, never above the cap.
+ *
+ * @param icons - The icons the entry re-exports.
+ * @returns The limit in bytes.
+ */
+export function rootLimit(icons: number): number {
+  return Math.min(ROOT_CAP_BYTES, ROOT_BASE_BYTES + ROOT_ICON_BYTES * icons)
+}

@@ -115,6 +115,7 @@ function labelIssues(
           )
   )
   const entries = Object.entries(allowlist).flatMap(([label, entry]) =>
+    // Stryker disable next-line ArrayDeclaration: any group of fewer than two icons reads as "no longer shared", so a one-element fallback gives the same message.
     entryIssues(label, entry, groups.get(label) ?? [])
   )
   return [...placeholders, ...joined, ...entries]

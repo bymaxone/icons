@@ -10,8 +10,13 @@ import {
   META_BASE_BYTES,
   META_CAP_BYTES,
   META_RECORD_BYTES,
+  ROOT_BASE_BYTES,
+  ROOT_CAP_BYTES,
+  ROOT_ICON_BYTES,
+  iconCost,
   metaLimit,
-  recordCost
+  recordCost,
+  rootLimit
 } from './meta-budget.ts'
 
 describe('the budget constants', () => {
@@ -64,5 +69,48 @@ describe('metaLimit', () => {
   it('leaves room for about 2,000 records at the measured cost', () => {
     /** Scenario: 2,000 records at 44 bytes fit under the limit. */
     expect(metaLimit(2000)).toBeGreaterThan(META_BASE_BYTES + 2000 * 44)
+  })
+})
+
+describe('the root budget constants', () => {
+  it('are the measured base, the per-icon budget and the cap', () => {
+    /** Scenario: the numbers the comment of `scripts/check-size.mjs` states for the root. */
+    expect([ROOT_BASE_BYTES, ROOT_ICON_BYTES, ROOT_CAP_BYTES]).toStrictEqual([85, 12, 28672])
+  })
+})
+
+describe('iconCost', () => {
+  it('shares the bytes above the base over the icons', () => {
+    /** Scenario: 85 + 100 * 10 bytes over 100 icons is 10 an icon. */
+    expect(iconCost(ROOT_BASE_BYTES + 1000, 100)).toBe(10)
+  })
+
+  it('counts an entry with no icon as one icon', () => {
+    /** Scenario: no division by zero; the bytes above the base are the cost. */
+    expect(iconCost(ROOT_BASE_BYTES + 7, 0)).toBe(7)
+  })
+})
+
+describe('rootLimit', () => {
+  it('is the base plus the budget of each icon', () => {
+    /** Scenario: 661 icons are far below the cap. */
+    expect(rootLimit(661)).toBe(85 + 12 * 661)
+  })
+
+  it('is the base alone with no icon', () => {
+    /** Scenario: nothing to budget but the fixed part. */
+    expect(rootLimit(0)).toBe(85)
+  })
+
+  it('stops at the cap', () => {
+    /** Scenario: 5,000 icons would exceed the cap by far. */
+    expect(rootLimit(5000)).toBe(ROOT_CAP_BYTES)
+  })
+
+  it('reaches the cap exactly where the two meet', () => {
+    /** Scenario: the icons at which base + budget equals the cap are not capped lower. */
+    const icons = (ROOT_CAP_BYTES - ROOT_BASE_BYTES) / ROOT_ICON_BYTES
+    expect(rootLimit(Math.floor(icons))).toBeLessThanOrEqual(ROOT_CAP_BYTES)
+    expect(rootLimit(Math.ceil(icons))).toBe(ROOT_CAP_BYTES)
   })
 })

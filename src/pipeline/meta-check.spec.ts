@@ -169,6 +169,14 @@ describe('metaIssues', () => {
     ])
   })
 
+  it('names every other icon that has the same use cases, comma separated', () => {
+    /** Scenario: three icons carry one list, so each message names the other two. */
+    const records = ['a', 'b', 'c'].map((name) => record(name, name.toUpperCase(), ['One', 'Two']))
+    expect(metaIssues(records, {})[0]).toBe(
+      'a: useCases are identical to those of b, c. Write use cases that fit this icon.'
+    )
+  })
+
   it('does not call two empty lists identical', () => {
     /** Scenario: each is reported as empty, once. */
     const records = [record('a', 'Alpha', []), record('b', 'Beta', [])]
