@@ -4,6 +4,12 @@
   "tags": ["mute microphone", "muted", "audio input off", "silence"],
   "categories": ["audio"],
   "useCases": ["Mutes the microphone", "Shows that recording is off"],
+  "aliases": [
+    {
+      "name": "microphone-off",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

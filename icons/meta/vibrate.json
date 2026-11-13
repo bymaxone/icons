@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Vibrate",
+  "tags": ["vibrate", "haptic", "phone buzz", "silent"],
+  "categories": ["devices", "audio"],
+  "useCases": ["Switches a phone to vibration mode", "Gives feedback with a buzz"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

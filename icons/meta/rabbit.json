@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Rabbit",
+  "tags": ["rabbit", "bunny", "animal", "fast"],
+  "categories": ["nature"],
+  "useCases": ["Shows a small pet", "Marks something quick"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

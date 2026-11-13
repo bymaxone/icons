@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Balcony",
+  "tags": ["balcony", "terrace", "railing", "outdoor"],
+  "categories": ["household", "maps"],
+  "useCases": ["Marks an outdoor space of an apartment", "Shows a railing with a view"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

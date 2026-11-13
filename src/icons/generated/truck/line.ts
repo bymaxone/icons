@@ -25,3 +25,6 @@ export const TruckIcon = /* @__PURE__ */ createIcon('truck', [
 
 /** `shipping`: an alias of {@link TruckIcon}. */
 export const ShippingIcon = TruckIcon
+
+/** `van`: an alias of {@link TruckIcon}. */
+export const VanIcon = TruckIcon

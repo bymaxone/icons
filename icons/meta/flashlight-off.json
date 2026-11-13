@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Flashlight off",
+  "tags": ["flashlight off", "torch", "dark", "disabled"],
+  "categories": ["devices", "status"],
+  "useCases": ["Turns the torch off", "Shows that the light is disabled"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

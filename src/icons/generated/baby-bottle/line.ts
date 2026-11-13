@@ -1,0 +1,19 @@
+/**
+ * @fileoverview The `baby-bottle` icon, line variant.
+ * Written by `pnpm generate` from icons/line/baby-bottle.svg: edit the source, never this file.
+ * @layer Generated
+ */
+
+import { createIcon } from '@bymax-one/icons/runtime'
+
+/**
+ * The `baby-bottle` icon, line variant: baby bottle, feeding, infant, milk.
+ *
+ * @since 0.1.0
+ */
+export const BabyBottleIcon = /* @__PURE__ */ createIcon('baby-bottle', [
+  ['path', { d: 'M9.25 8.25h6v10.5Q15.25 21 13 21h-1.5q-2.25 0-2.25-2.25z' }],
+  ['path', { d: 'm9.25 8.25 1-3h4l1 3' }],
+  ['path', { d: 'M11.25 5.25c0-1.25.5-2 1-2s1 .75 1 2' }],
+  ['path', { d: 'M9.25 12.75h2.5m-2.5 3h2.5' }]
+])

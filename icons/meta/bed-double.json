@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Double bed",
+  "tags": ["bed double", "two people", "room", "sleep"],
+  "categories": ["household"],
+  "useCases": ["Shows a room for two guests", "Marks a bedroom with a large bed"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

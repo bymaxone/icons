@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Battery warning",
+  "tags": ["battery warning", "low power", "charge", "alert"],
+  "categories": ["devices", "status"],
+  "useCases": ["Warns that the charge is low", "Flags a problem with the battery"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Shredder",
+  "tags": ["shredder", "destroy", "paper", "delete"],
+  "categories": ["tools", "files"],
+  "useCases": ["Destroys a document for good", "Permanently erases an item"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -17,3 +17,6 @@ export const ScooterIcon = /* @__PURE__ */ createIcon('scooter', [
   ['path', { d: 'M7.75 18.25h8.5' }],
   ['path', { d: 'M18.75 16.25 16 4.25h-2.5' }]
 ])
+
+/** `scooter-electric`: an alias of {@link ScooterIcon}. */
+export const ScooterElectricIcon = ScooterIcon

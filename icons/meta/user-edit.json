@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Edit user",
+  "tags": ["user edit", "edit profile", "person pencil", "account"],
+  "categories": ["people", "editing"],
+  "useCases": ["Edits the details of a profile", "Changes the name of an account"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

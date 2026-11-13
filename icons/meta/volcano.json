@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Volcano",
+  "tags": ["volcano", "eruption", "lava", "mountain"],
+  "categories": ["nature"],
+  "useCases": ["Marks an active volcano", "Warns of an eruption"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -8,6 +8,10 @@
     {
       "name": "subtract",
       "deprecated": false
+    },
+    {
+      "name": "remove",
+      "deprecated": false
     }
   ],
   "variants": ["line"],

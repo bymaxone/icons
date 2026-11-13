@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Mountain",
+  "tags": ["mountain", "peak", "hiking", "summit"],
+  "categories": ["nature", "maps"],
+  "useCases": ["Marks a hiking destination", "Shows a high peak"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

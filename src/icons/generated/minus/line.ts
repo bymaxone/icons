@@ -15,3 +15,6 @@ export const MinusIcon = /* @__PURE__ */ createIcon('minus', [['path', { d: 'M5.
 
 /** `subtract`: an alias of {@link MinusIcon}. */
 export const SubtractIcon = MinusIcon
+
+/** `remove`: an alias of {@link MinusIcon}. */
+export const RemoveIcon = MinusIcon

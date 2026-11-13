@@ -30,3 +30,6 @@ export const WallpaperFilledIcon = ImageFilledIcon
 
 /** `background`: an alias of {@link ImageFilledIcon}. */
 export const BackgroundFilledIcon = ImageFilledIcon
+
+/** `photo`: an alias of {@link ImageFilledIcon}. */
+export const PhotoFilledIcon = ImageFilledIcon

@@ -6,5 +6,11 @@
   "useCases": ["Turns an image a quarter turn right", "Rotates a selection clockwise"],
   "variants": ["line"],
   "opticalSizes": [24],
-  "since": "0.1.0"
+  "since": "0.1.0",
+  "aliases": [
+    {
+      "name": "rotate",
+      "deprecated": false
+    }
+  ]
 }

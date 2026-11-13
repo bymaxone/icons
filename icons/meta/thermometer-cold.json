@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Cold thermometer",
+  "tags": ["thermometer cold", "low temperature", "freezing", "weather"],
+  "categories": ["nature", "science"],
+  "useCases": ["Shows a low temperature", "Warns of freezing weather"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Theatre masks",
+  "tags": ["masks", "theatre", "drama", "comedy"],
+  "categories": ["emotions", "games"],
+  "useCases": ["Marks a performing arts section", "Shows comedy and tragedy"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

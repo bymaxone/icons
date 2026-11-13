@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Remote control",
+  "tags": ["remote control", "tv remote", "buttons", "device"],
+  "categories": ["devices", "media"],
+  "useCases": ["Controls a screen from a distance", "Switches channels"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

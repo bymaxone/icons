@@ -12,6 +12,10 @@
     {
       "name": "rhombus",
       "deprecated": false
+    },
+    {
+      "name": "gem",
+      "deprecated": false
     }
   ],
   "variants": ["line"],

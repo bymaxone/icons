@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Stamp",
+  "tags": ["stamp", "approved", "official", "mark"],
+  "categories": ["commerce", "files"],
+  "useCases": ["Marks a document as approved", "Adds an official mark"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

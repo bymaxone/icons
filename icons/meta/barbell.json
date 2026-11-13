@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Barbell",
+  "tags": ["barbell", "weights", "gym", "strength"],
+  "categories": ["health", "games"],
+  "useCases": ["Marks a strength workout", "Opens a gym section"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

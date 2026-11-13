@@ -22,3 +22,6 @@ export const ColorPickerIcon = /* @__PURE__ */ createIcon('color-picker', [
 
 /** `eyedropper`: an alias of {@link ColorPickerIcon}. */
 export const EyedropperIcon = ColorPickerIcon
+
+/** `dropper`: an alias of {@link ColorPickerIcon}. */
+export const DropperIcon = ColorPickerIcon

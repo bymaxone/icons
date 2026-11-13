@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Treasure chest",
+  "tags": ["treasure chest", "loot", "reward", "box"],
+  "categories": ["games", "commerce"],
+  "useCases": ["Opens a reward", "Marks a hidden prize"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

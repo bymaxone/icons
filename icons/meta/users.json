@@ -16,6 +16,10 @@
     {
       "name": "user-group",
       "deprecated": false
+    },
+    {
+      "name": "people",
+      "deprecated": false
     }
   ],
   "variants": ["line", "filled", "sm"],

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Horizontal bar chart",
+  "tags": ["chart bar horizontal", "bars", "ranking", "compare"],
+  "categories": ["data"],
+  "useCases": ["Ranks items by length of bars", "Compares categories side by side"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

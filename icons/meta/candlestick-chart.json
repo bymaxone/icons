@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Candlestick chart",
+  "tags": ["candlestick chart", "trading", "market", "price"],
+  "categories": ["data", "commerce"],
+  "useCases": ["Shows price moves of a market", "Compares opening and closing values"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

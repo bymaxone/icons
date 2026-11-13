@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Hard hat",
+  "tags": ["hard hat", "helmet", "construction", "safety"],
+  "categories": ["tools"],
+  "useCases": ["Marks a construction site", "Shows a safety requirement"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

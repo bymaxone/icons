@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Area chart",
+  "tags": ["chart area", "shaded line", "trend", "volume"],
+  "categories": ["data"],
+  "useCases": ["Shows a trend over time with fill", "Compares the volume of a series"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

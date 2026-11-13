@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Wind power",
+  "tags": ["wind power", "turbine", "renewable", "energy"],
+  "categories": ["nature", "science"],
+  "useCases": ["Shows clean energy from wind", "Marks a wind farm"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

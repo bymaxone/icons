@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Steering wheel",
+  "tags": ["steering", "wheel", "drive", "car"],
+  "categories": ["transport"],
+  "useCases": ["Shows the controls for driving", "Marks a car related setting"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

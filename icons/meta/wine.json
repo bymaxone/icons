@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Wine glass",
+  "tags": ["wine", "glass", "drink", "red"],
+  "categories": ["food"],
+  "useCases": ["Marks an alcoholic drink", "Lists a drink at dinner"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Heart with a check",
+  "tags": ["heart check", "healthy", "approved", "liked"],
+  "categories": ["health", "status"],
+  "useCases": ["Confirms a favourite item", "Shows a healthy result"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

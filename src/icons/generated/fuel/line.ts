@@ -1,0 +1,21 @@
+/**
+ * @fileoverview The `fuel` icon, line variant.
+ * Written by `pnpm generate` from icons/line/fuel.svg: edit the source, never this file.
+ * @layer Generated
+ */
+
+import { createIcon } from '@bymax-one/icons/runtime'
+
+/**
+ * The `fuel` icon, line variant: fuel, petrol, gas pump, refill.
+ *
+ * @since 0.1.0
+ */
+export const FuelIcon = /* @__PURE__ */ createIcon('fuel', [
+  ['path', { d: 'M5.25 20.25V5.75q0-1.5 1.5-1.5h6q1.5 0 1.5 1.5v14.5z' }],
+  ['path', { d: 'M8.25 8.25h3v2.5h-3z' }],
+  ['path', { d: 'M14.25 10.25H16c.75 0 1.25.5 1.25 1.25v5.25a1.25 1.25 0 0 0 2.5 0v-8.5' }]
+])
+
+/** `gas-station`: an alias of {@link FuelIcon}. */
+export const GasStationIcon = FuelIcon

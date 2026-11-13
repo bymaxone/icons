@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Transgender symbol",
+  "tags": ["gender transgender", "symbol", "identity", "gender"],
+  "categories": ["people"],
+  "useCases": ["Marks a gender identity option", "Shows an inclusive profile field"],
+  "aliases": [
+    {
+      "name": "transgender",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

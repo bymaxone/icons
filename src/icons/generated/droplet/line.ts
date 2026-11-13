@@ -21,3 +21,6 @@ export const AccentIcon = DropletIcon
 
 /** `water`: an alias of {@link DropletIcon}. */
 export const WaterIcon = DropletIcon
+
+/** `drop`: an alias of {@link DropletIcon}. */
+export const DropIcon = DropletIcon

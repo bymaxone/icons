@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Parachute",
+  "tags": ["parachute", "skydiving", "descent", "safety"],
+  "categories": ["games", "transport"],
+  "useCases": ["Marks a safe descent", "Shows skydiving"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

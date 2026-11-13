@@ -1,0 +1,20 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Fruit",
+  "tags": ["fruit", "fresh", "healthy", "nutrition"],
+  "categories": ["food", "health"],
+  "useCases": ["Marks a healthy snack", "Shows a balanced diet"],
+  "aliases": [
+    {
+      "name": "nutrition",
+      "deprecated": false
+    },
+    {
+      "name": "apple-fruit",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

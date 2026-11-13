@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Oven",
+  "tags": ["oven", "bake", "cooking", "kitchen"],
+  "categories": ["food", "household"],
+  "useCases": ["Bakes food at a set heat", "Marks a kitchen appliance"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

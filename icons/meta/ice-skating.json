@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Ice skating",
+  "tags": ["ice skating", "skate", "winter", "rink"],
+  "categories": ["games"],
+  "useCases": ["Marks a winter activity", "Shows a skating rink"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

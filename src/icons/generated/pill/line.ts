@@ -15,3 +15,6 @@ export const PillIcon = /* @__PURE__ */ createIcon('pill', [
   ['path', { d: 'm9.725 19.725 10-10a3.5 3.5 0 0 0-4.95-4.95l-10 10a3.5 3.5 0 0 0 4.95 4.95' }],
   ['path', { d: 'm14.725 14.725-4.95-4.95' }]
 ])
+
+/** `capsule`: an alias of {@link PillIcon}. */
+export const CapsuleIcon = PillIcon

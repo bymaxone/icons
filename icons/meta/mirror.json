@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Mirror",
+  "tags": ["mirror", "reflection", "looking glass", "vanity"],
+  "categories": ["household"],
+  "useCases": ["Shows a reflection", "Marks a bathroom or bedroom item"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

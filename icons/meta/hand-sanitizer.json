@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Hand sanitizer",
+  "tags": ["hand sanitizer", "hygiene", "gel", "clean"],
+  "categories": ["health"],
+  "useCases": ["Marks a hygiene station", "Reminds people to clean their hands"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

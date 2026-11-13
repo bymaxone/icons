@@ -27,3 +27,6 @@ export const GroupSmIcon = UsersSmIcon
 
 /** `user-group`: an alias of {@link UsersSmIcon}. */
 export const UserGroupSmIcon = UsersSmIcon
+
+/** `people`: an alias of {@link UsersSmIcon}. */
+export const PeopleSmIcon = UsersSmIcon

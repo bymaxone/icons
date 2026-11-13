@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Package search",
+  "tags": ["package search", "track parcel", "find order", "parcel"],
+  "categories": ["commerce", "actions"],
+  "useCases": ["Looks up the status of a parcel", "Searches for an order"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

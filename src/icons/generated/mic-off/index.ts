@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { MicOffIcon } from './line'
+export { MicOffIcon, MicrophoneOffIcon } from './line'

@@ -12,6 +12,10 @@
     {
       "name": "background",
       "deprecated": false
+    },
+    {
+      "name": "photo",
+      "deprecated": false
     }
   ],
   "variants": ["line", "filled"],

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Clapperboard",
+  "tags": ["clapperboard", "film", "take", "movie"],
+  "categories": ["media"],
+  "useCases": ["Opens a film or video section", "Marks the start of a recording take"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

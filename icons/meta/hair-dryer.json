@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Hair dryer",
+  "tags": ["hair dryer", "blow dry", "salon", "heat"],
+  "categories": ["household", "health"],
+  "useCases": ["Dries hair with warm air", "Marks a salon service"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

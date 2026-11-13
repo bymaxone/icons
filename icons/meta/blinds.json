@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Blinds",
+  "tags": ["blinds", "window", "shade", "slats"],
+  "categories": ["household"],
+  "useCases": ["Controls the light coming in a window", "Shows a shade that can be raised"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

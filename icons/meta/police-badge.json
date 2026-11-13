@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Police badge",
+  "tags": ["police badge", "shield", "authority", "law"],
+  "categories": ["security", "people"],
+  "useCases": ["Marks an officer or an authority", "Shows a law enforcement shield"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

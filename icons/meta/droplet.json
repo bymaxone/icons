@@ -14,6 +14,10 @@
     {
       "name": "water",
       "deprecated": false
+    },
+    {
+      "name": "drop",
+      "deprecated": false
     }
   ],
   "variants": ["line"],

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Histogram",
+  "tags": ["chart histogram", "distribution", "frequency", "bins"],
+  "categories": ["data"],
+  "useCases": ["Shows how values are distributed", "Counts items per range"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

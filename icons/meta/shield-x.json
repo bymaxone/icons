@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Shield with an x",
+  "tags": ["shield x", "blocked", "unprotected", "denied"],
+  "categories": ["security", "status"],
+  "useCases": ["Shows that protection is off", "Marks a blocked threat"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

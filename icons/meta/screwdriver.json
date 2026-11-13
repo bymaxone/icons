@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Screwdriver",
+  "tags": ["screwdriver", "repair", "tool", "fix"],
+  "categories": ["tools"],
+  "useCases": ["Opens a repair section", "Tightens or loosens a screw"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

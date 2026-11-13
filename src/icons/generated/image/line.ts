@@ -27,3 +27,6 @@ export const WallpaperIcon = ImageIcon
 
 /** `background`: an alias of {@link ImageIcon}. */
 export const BackgroundIcon = ImageIcon
+
+/** `photo`: an alias of {@link ImageIcon}. */
+export const PhotoIcon = ImageIcon

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Hot air balloon",
+  "tags": ["hot air balloon", "flight", "adventure", "sky"],
+  "categories": ["transport", "games"],
+  "useCases": ["Marks a scenic flight", "Shows an adventure trip"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Paragliding",
+  "tags": ["paragliding", "glider", "wing", "flight"],
+  "categories": ["games", "transport"],
+  "useCases": ["Marks an air sport", "Shows a flight under a wing"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Butterfly",
+  "tags": ["butterfly", "insect", "wings", "garden"],
+  "categories": ["nature"],
+  "useCases": ["Shows a winged insect", "Marks a change or a transformation"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

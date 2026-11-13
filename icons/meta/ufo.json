@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "UFO",
+  "tags": ["ufo", "alien", "spaceship", "flying saucer"],
+  "categories": ["science", "games"],
+  "useCases": ["Marks something unexplained", "Shows a flying saucer"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

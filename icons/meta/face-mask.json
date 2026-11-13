@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Face mask",
+  "tags": ["face mask", "protection", "hygiene", "health"],
+  "categories": ["health"],
+  "useCases": ["Requires protection in public", "Marks a hygiene rule"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

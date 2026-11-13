@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Police car",
+  "tags": ["police car", "patrol", "emergency", "siren"],
+  "categories": ["transport", "security"],
+  "useCases": ["Shows a patrol vehicle", "Marks an emergency response"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Rocking chair",
+  "tags": ["rocking chair", "rest", "porch", "relax"],
+  "categories": ["household"],
+  "useCases": ["Shows a place to relax", "Marks a calm and slow pace"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

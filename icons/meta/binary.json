@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Binary code",
+  "tags": ["binary", "bits", "zero one", "code"],
+  "categories": ["dev", "data"],
+  "useCases": ["Shows data as zeros and ones", "Marks a machine-level representation"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

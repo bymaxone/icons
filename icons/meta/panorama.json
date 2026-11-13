@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Panorama",
+  "tags": ["panorama", "wide photo", "landscape", "view"],
+  "categories": ["media"],
+  "useCases": ["Captures a wide view", "Shows a panoramic picture"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

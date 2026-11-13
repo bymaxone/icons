@@ -12,6 +12,10 @@
     {
       "name": "exclamation-circle",
       "deprecated": false
+    },
+    {
+      "name": "error",
+      "deprecated": false
     }
   ],
   "variants": ["line", "filled", "sm"],

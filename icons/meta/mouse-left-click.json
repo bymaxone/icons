@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Left click",
+  "tags": ["mouse left click", "click", "primary button", "pointer"],
+  "categories": ["devices"],
+  "useCases": ["Shows a click with the main button", "Selects an item with the mouse"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

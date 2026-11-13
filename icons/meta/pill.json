@@ -4,6 +4,12 @@
   "tags": ["pill", "medicine", "capsule", "dose"],
   "categories": ["health"],
   "useCases": ["Reminds the user of a dose", "Shows a medication"],
+  "aliases": [
+    {
+      "name": "capsule",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

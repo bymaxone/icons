@@ -4,6 +4,12 @@
   "tags": ["cloud fog", "mist", "haze", "weather"],
   "categories": ["nature"],
   "useCases": ["Shows a foggy forecast", "Warns of low visibility"],
+  "aliases": [
+    {
+      "name": "mist",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

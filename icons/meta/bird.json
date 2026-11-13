@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Bird",
+  "tags": ["bird", "wings", "animal", "fly"],
+  "categories": ["nature"],
+  "useCases": ["Shows a flying animal", "Marks a wildlife category"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

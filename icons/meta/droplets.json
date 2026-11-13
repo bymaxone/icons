@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Water drops",
+  "tags": ["droplets", "drops", "water", "humidity"],
+  "categories": ["nature", "science"],
+  "useCases": ["Shows the level of humidity", "Marks water or liquid"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

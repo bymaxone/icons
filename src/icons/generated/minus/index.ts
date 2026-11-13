@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { MinusIcon, SubtractIcon } from './line'
+export { MinusIcon, RemoveIcon, SubtractIcon } from './line'
