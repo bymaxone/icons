@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Monkey",
+  "tags": ["monkey", "primate", "jungle", "playful"],
+  "categories": ["nature"],
+  "useCases": ["Marks a playful mode", "Shows a jungle animal"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

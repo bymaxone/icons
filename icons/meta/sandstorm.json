@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Sandstorm",
+  "tags": ["sandstorm", "dust", "desert", "wind"],
+  "categories": ["nature"],
+  "useCases": ["Warns of blowing dust", "Forecasts low visibility in a desert"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

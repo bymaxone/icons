@@ -19,3 +19,6 @@ export const BreadIcon = /* @__PURE__ */ createIcon('bread', [
     }
   ]
 ])
+
+/** `toast`: an alias of {@link BreadIcon}. */
+export const ToastIcon = BreadIcon

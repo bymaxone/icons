@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Barometer",
+  "tags": ["barometer", "pressure", "gauge", "forecast"],
+  "categories": ["nature", "science"],
+  "useCases": ["Reads air pressure", "Predicts a change in weather"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

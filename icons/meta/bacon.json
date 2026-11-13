@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Bacon",
+  "tags": ["bacon", "strips", "breakfast", "pork"],
+  "categories": ["food"],
+  "useCases": ["Lists a breakfast item", "Marks cured meat"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

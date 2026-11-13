@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Hot thermometer",
+  "tags": ["thermometer hot", "high temperature", "fever", "heat"],
+  "categories": ["nature", "health"],
+  "useCases": ["Shows a high temperature", "Warns of overheating"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

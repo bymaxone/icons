@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Peanut",
+  "tags": ["peanut", "nut", "legume", "allergen"],
+  "categories": ["food", "health"],
+  "useCases": ["Warns of a nut allergy", "Lists a snack ingredient"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

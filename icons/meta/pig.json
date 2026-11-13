@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Pig",
+  "tags": ["pig", "farm", "snout", "pork"],
+  "categories": ["nature", "food"],
+  "useCases": ["Lists a farm animal", "Marks a pork product"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

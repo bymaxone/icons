@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Pepper shaker",
+  "tags": ["pepper shaker", "pepper", "spice", "grinder"],
+  "categories": ["food"],
+  "useCases": ["Marks a spice at the table", "Lists a seasoning"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

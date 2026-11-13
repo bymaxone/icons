@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Rhino",
+  "tags": ["rhino", "horn", "safari", "endangered"],
+  "categories": ["nature"],
+  "useCases": ["Marks an endangered species", "Shows a horned animal"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

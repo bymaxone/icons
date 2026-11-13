@@ -21,3 +21,6 @@ export const IslandIcon = /* @__PURE__ */ createIcon('island', [
     }
   ]
 ])
+
+/** `palm-tree`: an alias of {@link IslandIcon}. */
+export const PalmTreeIcon = IslandIcon

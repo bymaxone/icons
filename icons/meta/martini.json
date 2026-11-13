@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Cocktail glass",
+  "tags": ["martini", "cocktail", "bar", "olive"],
+  "categories": ["food"],
+  "useCases": ["Marks a bar menu", "Lists a mixed drink"],
+  "aliases": [
+    {
+      "name": "cocktail",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

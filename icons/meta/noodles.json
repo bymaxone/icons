@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Noodles",
+  "tags": ["noodles", "ramen", "pasta", "bowl of noodles"],
+  "categories": ["food"],
+  "useCases": ["Lists a noodle dish", "Marks an asian restaurant"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

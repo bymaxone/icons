@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Bat",
+  "tags": ["bat", "nocturnal", "cave", "wings"],
+  "categories": ["nature"],
+  "useCases": ["Marks a night time creature", "Shows a flying mammal"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

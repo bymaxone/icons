@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Cave",
+  "tags": ["cave", "cavern", "underground", "grotto"],
+  "categories": ["nature", "maps"],
+  "useCases": ["Marks an underground site", "Shows a rock opening"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

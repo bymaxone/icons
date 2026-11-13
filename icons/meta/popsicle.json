@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Popsicle",
+  "tags": ["popsicle", "ice pop", "frozen", "stick"],
+  "categories": ["food"],
+  "useCases": ["Lists a frozen treat", "Marks a summer snack"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

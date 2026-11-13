@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Sunflower",
+  "tags": ["sunflower", "petals", "summer", "bloom"],
+  "categories": ["nature"],
+  "useCases": ["Marks a summer field", "Shows a flower that faces the sun"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

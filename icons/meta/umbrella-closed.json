@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Closed umbrella",
+  "tags": ["umbrella closed", "folded", "rain gear", "dry"],
+  "categories": ["nature"],
+  "useCases": ["Reminds people to carry rain gear", "Shows a dry spell"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

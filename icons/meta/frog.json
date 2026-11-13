@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Frog",
+  "tags": ["frog", "amphibian", "pond", "green"],
+  "categories": ["nature"],
+  "useCases": ["Marks a wetland species", "Shows an amphibian"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

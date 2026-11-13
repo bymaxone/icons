@@ -4,6 +4,12 @@
   "tags": ["flower", "tulip", "garden", "spring"],
   "categories": ["nature"],
   "useCases": ["Shows a garden", "Marks spring"],
+  "aliases": [
+    {
+      "name": "tulip",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

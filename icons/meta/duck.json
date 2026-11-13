@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Duck",
+  "tags": ["duck", "bird", "pond", "quack"],
+  "categories": ["nature"],
+  "useCases": ["Marks a pond with birds", "Shows a waterfowl"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

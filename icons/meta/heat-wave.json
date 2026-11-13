@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Heat wave",
+  "tags": ["heat wave", "hot", "sun", "high temperature"],
+  "categories": ["nature", "status"],
+  "useCases": ["Warns of extreme heat", "Forecasts a scorching day"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

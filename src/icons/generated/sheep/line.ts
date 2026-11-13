@@ -1,0 +1,23 @@
+/**
+ * @fileoverview The `sheep` icon, line variant.
+ * Written by `pnpm generate` from icons/line/sheep.svg: edit the source, never this file.
+ * @layer Generated
+ */
+
+import { createIcon } from '@bymax-one/icons/runtime'
+
+/**
+ * The `sheep` icon, line variant: sheep, wool, farm, lamb.
+ *
+ * @since 0.1.0
+ */
+export const SheepIcon = /* @__PURE__ */ createIcon('sheep', [
+  [
+    'path',
+    {
+      d: 'M7.25 8.75c-1.5 0-2.75 1-3 2.5C3 11.75 2.5 13 3 14.25c.25 1.25 1.5 2 2.75 2 .5 1 1.75 1.5 3 1.25 1 .75 2.5.75 3.5 0 1.25.25 2.5-.25 3-1.25 1.25 0 2.25-.75 2.5-2l-1.5-5c-.5-1.25-1.75-2-3-1.75-1-.75-2.5-.75-3.5 0-.75-.25-1.75-.25-2.5.25z'
+    }
+  ],
+  ['path', { d: 'm16.75 10.75 3.5-.5c.75 0 1 .5 1 1.25 0 2-1.25 3.25-3 3.25' }],
+  ['path', { d: 'M7.25 17.75v3m5-3v3' }]
+])

@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { IslandIcon } from './line'
+export { IslandIcon, PalmTreeIcon } from './line'

@@ -4,6 +4,12 @@
   "tags": ["island", "palm tree", "sea", "getaway"],
   "categories": ["nature", "maps"],
   "useCases": ["Marks a remote getaway", "Shows a patch of land in the sea"],
+  "aliases": [
+    {
+      "name": "palm-tree",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

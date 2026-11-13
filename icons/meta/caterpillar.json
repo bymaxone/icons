@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Caterpillar",
+  "tags": ["caterpillar", "larva", "leaf", "crawl"],
+  "categories": ["nature"],
+  "useCases": ["Shows a stage of growth", "Marks a leaf eater"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Seahorse",
+  "tags": ["seahorse", "sea", "curl", "reef"],
+  "categories": ["nature"],
+  "useCases": ["Marks a coral reef species", "Shows a small sea animal"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

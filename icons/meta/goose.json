@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Goose",
+  "tags": ["goose", "honk", "waterfowl", "farm"],
+  "categories": ["nature"],
+  "useCases": ["Lists a farm bird", "Shows a migrating bird"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

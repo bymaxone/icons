@@ -8,6 +8,10 @@
     {
       "name": "snow",
       "deprecated": false
+    },
+    {
+      "name": "frost",
+      "deprecated": false
     }
   ],
   "variants": ["line"],

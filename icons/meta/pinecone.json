@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Pinecone",
+  "tags": ["pinecone", "pine", "conifer", "seed"],
+  "categories": ["nature"],
+  "useCases": ["Marks an evergreen forest", "Shows a winter decoration"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

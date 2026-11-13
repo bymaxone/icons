@@ -16,3 +16,6 @@ export const FlowerIcon = /* @__PURE__ */ createIcon('flower', [
   ['path', { d: 'M12.25 14.25v7' }],
   ['path', { d: 'M12.25 19.25c-1.5-2-3.5-2.75-5-2.75 0 2 2 3.5 5 3.5' }]
 ])
+
+/** `tulip`: an alias of {@link FlowerIcon}. */
+export const TulipIcon = FlowerIcon

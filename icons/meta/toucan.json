@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Toucan",
+  "tags": ["toucan", "beak", "tropical", "rainforest"],
+  "categories": ["nature"],
+  "useCases": ["Marks a tropical bird", "Shows a rainforest animal"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Fox",
+  "tags": ["fox", "cunning", "red", "wildlife"],
+  "categories": ["nature"],
+  "useCases": ["Shows a clever wild animal", "Marks a woodland species"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

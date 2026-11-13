@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Lion",
+  "tags": ["lion", "mane", "king", "big cat"],
+  "categories": ["nature"],
+  "useCases": ["Shows courage and strength", "Marks a big cat"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

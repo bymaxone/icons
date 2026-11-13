@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Starfish",
+  "tags": ["starfish", "sea star", "ocean", "beach"],
+  "categories": ["nature"],
+  "useCases": ["Marks a tide pool find", "Shows a five armed sea animal"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

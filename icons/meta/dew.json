@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Dew drop",
+  "tags": ["dew", "drop", "morning", "moisture"],
+  "categories": ["nature"],
+  "useCases": ["Shows morning moisture", "Marks a fresh start"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

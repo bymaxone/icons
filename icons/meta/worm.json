@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Worm",
+  "tags": ["worm", "soil", "crawl", "garden"],
+  "categories": ["nature"],
+  "useCases": ["Marks healthy soil", "Shows a crawling creature"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

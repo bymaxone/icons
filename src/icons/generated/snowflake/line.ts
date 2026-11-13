@@ -22,3 +22,6 @@ export const SnowflakeIcon = /* @__PURE__ */ createIcon('snowflake', [
 
 /** `snow`: an alias of {@link SnowflakeIcon}. */
 export const SnowIcon = SnowflakeIcon
+
+/** `frost`: an alias of {@link SnowflakeIcon}. */
+export const FrostIcon = SnowflakeIcon

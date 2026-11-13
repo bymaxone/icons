@@ -4,6 +4,12 @@
   "tags": ["cherry", "fruit", "red", "pair"],
   "categories": ["food"],
   "useCases": ["Lists a fruit flavour", "Marks a sweet topping"],
+  "aliases": [
+    {
+      "name": "cherries",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

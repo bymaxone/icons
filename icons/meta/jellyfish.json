@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Jellyfish",
+  "tags": ["jellyfish", "tentacles", "sea", "sting"],
+  "categories": ["nature"],
+  "useCases": ["Warns of stinging waters", "Shows a drifting sea animal"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Drink",
+  "tags": ["drink", "cup", "straw", "beverage"],
+  "categories": ["food"],
+  "useCases": ["Lists a cold beverage", "Marks a drink to go"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

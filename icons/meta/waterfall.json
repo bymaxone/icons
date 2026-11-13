@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Waterfall",
+  "tags": ["waterfall", "cascade", "river", "falls"],
+  "categories": ["nature", "maps"],
+  "useCases": ["Marks a scenic viewpoint", "Shows falling water"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

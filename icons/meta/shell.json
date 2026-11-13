@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Seashell",
+  "tags": ["shell", "seashell", "beach", "spiral"],
+  "categories": ["nature"],
+  "useCases": ["Marks a beach find", "Shows a souvenir from the sea"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

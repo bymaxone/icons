@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Chili",
+  "tags": ["chili", "pepper", "spicy", "hot"],
+  "categories": ["food"],
+  "useCases": ["Marks a spicy dish", "Sets a heat level"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

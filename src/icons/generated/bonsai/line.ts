@@ -1,0 +1,23 @@
+/**
+ * @fileoverview The `bonsai` icon, line variant.
+ * Written by `pnpm generate` from icons/line/bonsai.svg: edit the source, never this file.
+ * @layer Generated
+ */
+
+import { createIcon } from '@bymax-one/icons/runtime'
+
+/**
+ * The `bonsai` icon, line variant: bonsai, miniature tree, zen, potted tree.
+ *
+ * @since 0.1.0
+ */
+export const BonsaiIcon = /* @__PURE__ */ createIcon('bonsai', [
+  ['path', { d: 'M5.25 17.25h14l-1.5 4h-11z' }],
+  ['path', { d: 'M12.25 17.25c0-2.25-.5-4.25-1.75-5.75' }],
+  [
+    'path',
+    {
+      d: 'M10.5 11.5c-2.5 0-4.25-1.25-4.25-3s1.75-3 4-2.75c.5-1.5 2-2.5 3.75-2.25 2 .25 3.25 1.75 3.25 3.5 1.5.25 2.5 1.25 2.5 2.5s-1.25 2.25-3 2.25z'
+    }
+  ]
+])

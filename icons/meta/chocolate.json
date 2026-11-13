@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Chocolate bar",
+  "tags": ["chocolate", "bar", "cocoa", "sweet"],
+  "categories": ["food"],
+  "useCases": ["Lists a sweet snack", "Marks a cocoa product"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

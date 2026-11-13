@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "UV index",
+  "tags": ["uv index", "ultraviolet", "sunscreen", "radiation"],
+  "categories": ["nature", "health"],
+  "useCases": ["Reports sun exposure risk", "Reminds people to use sunscreen"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

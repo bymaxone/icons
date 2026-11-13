@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Soda can",
+  "tags": ["soda", "can", "fizzy", "soft drink"],
+  "categories": ["food"],
+  "useCases": ["Lists a fizzy drink", "Marks a vending machine item"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

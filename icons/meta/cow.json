@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Cow",
+  "tags": ["cow", "cattle", "milk", "farm"],
+  "categories": ["nature", "food"],
+  "useCases": ["Marks a dairy product", "Lists a farm animal"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

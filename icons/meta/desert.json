@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Desert",
+  "tags": ["desert", "dunes", "dry", "sand"],
+  "categories": ["nature"],
+  "useCases": ["Marks a dry landscape", "Shows rolling dunes"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

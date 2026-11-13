@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Pie",
+  "tags": ["pie", "slice", "pastry", "dessert"],
+  "categories": ["food"],
+  "useCases": ["Lists a baked dessert", "Marks a bakery item"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

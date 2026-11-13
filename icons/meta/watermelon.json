@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Watermelon",
+  "tags": ["watermelon", "slice", "summer", "seeds"],
+  "categories": ["food"],
+  "useCases": ["Lists a summer fruit", "Marks a fresh snack"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

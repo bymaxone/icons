@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Camel",
+  "tags": ["camel", "hump", "desert", "caravan"],
+  "categories": ["nature"],
+  "useCases": ["Marks a desert journey", "Shows a pack animal"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

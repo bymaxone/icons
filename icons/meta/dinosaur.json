@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Dinosaur",
+  "tags": ["dinosaur", "fossil", "prehistoric", "reptile"],
+  "categories": ["nature", "science"],
+  "useCases": ["Marks a natural history exhibit", "Shows an extinct animal"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

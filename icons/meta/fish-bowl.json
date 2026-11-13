@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Fish bowl",
+  "tags": ["fish bowl", "aquarium", "pet fish", "glass"],
+  "categories": ["nature", "household"],
+  "useCases": ["Marks an aquarium", "Shows a pet fish at home"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

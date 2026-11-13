@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Ladybug",
+  "tags": ["ladybug", "beetle", "spots", "garden"],
+  "categories": ["nature"],
+  "useCases": ["Marks a friendly garden insect", "Shows a good luck charm"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

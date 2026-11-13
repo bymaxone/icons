@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Pancakes",
+  "tags": ["pancakes", "stack", "syrup", "brunch"],
+  "categories": ["food"],
+  "useCases": ["Lists a brunch dish", "Marks a stack of items"],
+  "aliases": [
+    {
+      "name": "pancake-stack",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

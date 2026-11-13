@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Spider",
+  "tags": ["spider", "web", "arachnid", "legs"],
+  "categories": ["nature"],
+  "useCases": ["Marks a web or a crawler", "Shows an eight legged animal"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

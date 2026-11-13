@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Maple leaf",
+  "tags": ["maple leaf", "autumn", "canada", "foliage"],
+  "categories": ["nature"],
+  "useCases": ["Marks the autumn season", "Shows a fallen leaf"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

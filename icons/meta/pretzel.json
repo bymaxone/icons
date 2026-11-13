@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Pretzel",
+  "tags": ["pretzel", "twisted", "baked", "snack"],
+  "categories": ["food"],
+  "useCases": ["Lists a baked snack", "Marks a salty treat"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

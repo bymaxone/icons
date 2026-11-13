@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Bee",
+  "tags": ["bee", "honey", "insect", "pollinator"],
+  "categories": ["nature"],
+  "useCases": ["Marks a pollinator friendly place", "Shows a busy worker"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

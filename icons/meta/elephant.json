@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Elephant",
+  "tags": ["elephant", "trunk", "safari", "large"],
+  "categories": ["nature"],
+  "useCases": ["Marks a safari or a sanctuary", "Shows the largest land animal"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

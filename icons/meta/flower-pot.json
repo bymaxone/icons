@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Flower pot",
+  "tags": ["flower pot", "planter", "houseplant", "garden"],
+  "categories": ["nature", "household"],
+  "useCases": ["Marks a houseplant", "Shows a plant at home"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Milk",
+  "tags": ["milk", "carton", "dairy", "calcium"],
+  "categories": ["food"],
+  "useCases": ["Lists a dairy product", "Marks a breakfast staple"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

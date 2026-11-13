@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { CherryIcon } from './line'
+export { CherriesIcon, CherryIcon } from './line'
