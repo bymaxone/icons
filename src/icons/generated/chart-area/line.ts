@@ -7,7 +7,7 @@
 import { createIcon } from '@bymax-one/icons/runtime'
 
 /**
- * The `chart-area` icon, line variant: chart area, filled line, trend, volume.
+ * The `chart-area` icon, line variant: chart area, shaded line, trend, volume.
  *
  * @since 0.1.0
  */
