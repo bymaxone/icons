@@ -2,9 +2,9 @@
  * Unit tests for the `check:meta` command.
  *
  * Layer: unit, against scratch copies of the repository layout on disk.
- * Goal: pin the exit code and the output of `runMetaCheck`: a clean set, the incident of a
- * placeholder record copied over a new icon, a stale entry, a malformed allowlist, sources that
- * do not lint, brand marks left out and `--icons`.
+ * Goal: pin the exit code and the output of `runMetaCheck`: a clean set, a record copied from
+ * another icon, a placeholder record copied over a new icon, a stale entry, a malformed
+ * allowlist, sources that do not lint, brand marks left out and `--icons`.
  * Mocks: none.
  */
 
@@ -66,7 +66,7 @@ describe('runMetaCheck', () => {
     ])
   })
 
-  it('fails when a new icon carries the record of `plus`, the overwrite incident', () => {
+  it('fails when a new icon carries the record of `plus`', () => {
     /** Scenario: `plus.json` is copied over `motorbike.json`; `plus` and `plus-circle` are listed. */
     const plus = JSON.stringify({
       ...JSON.parse(readFileSync(join(REPO_ROOT, 'icons/meta/plus.json'), 'utf8')),

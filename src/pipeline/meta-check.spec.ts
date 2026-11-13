@@ -72,7 +72,7 @@ describe('metaIssues', () => {
   })
 
   it('fails only the icon that joins a listed group', () => {
-    /** Scenario: the incident: a new icon carries the label of `plus`, which is listed with one other. */
+    /** Scenario: a new icon carries the label of `plus`, which is listed with one other. */
     const records = [
       record('motorbike', 'Add'),
       record('plus', 'Add'),

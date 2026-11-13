@@ -42,9 +42,9 @@ const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 // artifact shrinks.
 //
 // What the budgets rest on, measured on a build that holds no drawing:
-//   - root, a budget per icon, not a total: the entry re-exports the grid, the runtime and every
-//     icon by package specifier and holds no code of its own, one re-export line for each, so a
-//     fixed total was raised by hand each batch. It measures 85 bytes brotli with no icon and
+//   - root, a budget per icon: the entry re-exports the grid, the runtime and every icon by
+//     package specifier and holds no code of its own, one re-export line for each, so its size
+//     grows with the set. It measures 85 bytes brotli with no icon and
 //     5409 bytes with 545 icons, (5409 - 85) / 545 = 9.8 bytes brotli an icon. The budget is
 //     12 bytes an icon, about 20% of headroom for a longer name, so the limit is 85 + 12 * icons
 //     and follows the set. A sanity cap of 28 KiB holds whatever the icons, room for about
@@ -55,14 +55,13 @@ const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 //   - runtime, 1.25 KiB brotli: the `Icon` base, `createIcon`, the stroke maths and the
 //     accessibility rules, measured at 3614 bytes raw and 1206 bytes brotli. The headroom
 //     fits a small fix, while an inlined dependency such as React fails.
-//   - meta, a budget per record, not a total: `dist/meta/index.mjs` grows with every icon and
-//     brand, so a fixed total was raised by hand each batch. The fixed part (the grid, the deep
+//   - meta, a budget per record: `dist/meta/index.mjs` grows with every icon and brand, so its
+//     size follows the set. The fixed part (the grid, the deep
 //     freeze, the categories and the empty tables) measures 707 bytes brotli with every
 //     icon name and record taken out; the tree measures 24843 bytes with 559 records (545
 //     icon and 14 brand), (24843 - 707) / 559 = 43.2 bytes brotli a record, the icon's `label`
 //     included. The budget is 52 bytes a record, about 20% of headroom for records with longer
-//     tags and use cases, so the limit is 707 + 52 * records and follows the set instead of
-//     being recalibrated. A sanity cap of 112 KiB holds whatever the records, room for about
+//     tags and use cases, so the limit is 707 + 52 * records and follows the set. A sanity cap of 112 KiB holds whatever the records, room for about
 //     2,000 of them at the measured cost; the arithmetic is `src/pipeline/meta-budget.ts`.
 //   - brands, 5 KiB brotli: the entry holds every brand mark, measured at 5 bytes brotli
 //     with no mark and at 4015 bytes with 14 marks, about 290 bytes per mark, most of it the

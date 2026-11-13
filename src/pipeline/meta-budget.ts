@@ -1,7 +1,7 @@
 /**
- * @fileoverview The size budget of the `./meta` subpath, per record instead of as a total
- * raised by hand: the brotli bytes of the bundle, less a fixed base, shared over the records
- * it holds, may not exceed a per-record cost, and the whole may not exceed a sanity cap.
+ * @fileoverview The size budget of the `./meta` subpath, per record: the brotli bytes of the
+ * bundle, less a fixed base, shared over the records it holds, may not exceed a per-record cost,
+ * and the whole may not exceed a sanity cap.
  * @layer Pipeline
  */
 
