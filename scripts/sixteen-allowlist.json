@@ -152,6 +152,10 @@
       "pairs": ["0-1", "1-2"],
       "why": "the two masks fuse where they overlap, and the face marks fuse with the front mask; it still reads as theatre masks"
     },
+    "nurse": {
+      "pairs": ["0-1"],
+      "why": "the head fuses with the shoulders; it still reads as a nurse"
+    },
     "owl": {
       "pairs": ["0-2"],
       "why": "the right eye fuses with the body outline; it still reads as an owl"
