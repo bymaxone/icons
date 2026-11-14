@@ -1,0 +1,18 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Paint roller",
+  "tags": ["paint roller", "roller", "paint", "style"],
+  "categories": ["ai", "tools"],
+  "useCases": ["Picks a visual style", "Applies a style preset"],
+  "aliases": [
+    {
+      "name": "style",
+      "deprecated": true,
+      "deprecationReason": "Renamed to paint-roller, the object the drawing shows.",
+      "toBeRemovedInVersion": "2.0.0"
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

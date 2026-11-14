@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Set square",
+  "tags": ["set square", "triangle ruler", "drafting", "right angle"],
+  "categories": ["math", "tools"],
+  "useCases": ["Shows a triangle ruler for drawing", "Marks a technical drafting task"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

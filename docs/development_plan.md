@@ -446,6 +446,7 @@ These rules apply to every phase. Phase sections only add rules specific to them
 - **B6-T4 ✅ (2026-11-13):** the fourth top-up of family variants, approved by the delegated auditor on behalf of the founder.
 - **B6-F6 ✅ (2026-11-14):** transport and places, approved by the delegated auditor on behalf of the founder; the other buildings are after 1.0.
 - **B6-T5 ✅ (2026-11-14):** the fifth top-up of family variants, approved by the delegated auditor on behalf of the founder; every candidate was measured in the file names of 14 icon sets.
+- **B6-F7 and B6-F8 ✅ (2026-11-14):** objects and the last variants, approved by the delegated auditor on behalf of the founder; `style` is renamed `paint-roller`. The line set closes here.
 - **Size:** XL
 
 ### B7: brand-marks

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Mail alert",
+  "tags": ["mail warning", "email problem", "delivery issue", "suspicious message"],
+  "categories": ["communication", "status"],
+  "useCases": ["Warns about a problem with an email", "Flags a suspicious message"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

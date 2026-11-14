@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Birdhouse",
+  "tags": ["birdhouse", "nest box", "bird feeder", "garden bird"],
+  "categories": ["nature"],
+  "useCases": ["Shows a small home for birds", "Marks a section about wildlife"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

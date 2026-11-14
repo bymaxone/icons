@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Smart lock",
+  "tags": ["smart lock", "door lock", "keyless entry", "digital key"],
+  "categories": ["devices", "security"],
+  "useCases": ["Locks or unlocks a door remotely", "Shows a connected entry lock"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

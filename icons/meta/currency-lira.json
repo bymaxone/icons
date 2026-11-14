@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Lira",
+  "tags": ["lira", "currency", "money", "try"],
+  "categories": ["commerce"],
+  "useCases": ["Shows a price in lira", "Switches the currency to lira"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

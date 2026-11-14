@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Yen",
+  "tags": ["yen", "currency", "money", "jpy"],
+  "categories": ["commerce"],
+  "useCases": ["Shows a price in yen", "Switches the currency to yen"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

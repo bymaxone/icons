@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Chisel",
+  "tags": ["chisel", "carving", "woodwork", "craft tool"],
+  "categories": ["tools"],
+  "useCases": ["Shows a tool for carving wood or stone", "Marks a section about craftwork"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

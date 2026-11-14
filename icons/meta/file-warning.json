@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "File alert",
+  "tags": ["file warning", "document problem", "file issue", "caution"],
+  "categories": ["files", "status"],
+  "useCases": ["Warns about a problem in a document", "Flags a file that needs attention"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

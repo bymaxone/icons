@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Retro TV",
+  "tags": ["retro tv", "old television", "crt screen", "vintage set"],
+  "categories": ["devices", "media"],
+  "useCases": ["Shows a television from the past", "Marks a classic broadcast channel"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

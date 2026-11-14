@@ -70,6 +70,11 @@ and deprecated, each rename with the alias that keeps the old name working.
   `rocket` (alias `launch`), `anchor`, `hospital`, `bed`, `umbrella`, `leaf`, `flower`,
   `feather`, `skull`, `dice` (alias `random`), `cake` (alias `birthday`), `cookie` and `egg`,
   and the categories `science`, `food` and `household`.
+- Devices, tools, finance and education, and the last variants (B6-F7 and B6-F8): `cctv`, `computer-tower`, `ethernet`, `trackpad`, `tv-retro`, `smart-lock`, `tape-measure`, `wheelbarrow`, `rake`, `lawn-mower`, `birdhouse`, `chisel`, `currency-yen`, `currency-won`, `currency-lira`, `invoice-check`, `money-bag`, `math-symbols`, `protractor`, `set-square`, `drum`, `file-cabinet`, `card-lock`, `card-refund`, `mail-star`, `mail-warning`, `server-bolt` and `file-warning`.
+- `style` is renamed `paint-roller`, the object the drawing shows; the drawing is unchanged and `style` stays a deprecated alias, removed in 2.0.0, whose component still renders the drawing.
+
+  Apply to a consumer: import `PaintRollerIcon`, or the subpath `./icons/paint-roller`, instead of `StyleIcon`.
+
 - Transport and places (B6-F6): `motorboat`, `high-speed-train`, `bicycle-electric`, `car-electric`, `car-wash`, `apartment`, `fire-station`, `police-station`, `pharmacy`, `monument` and `skyscraper`.
 - Family variants (B6-T5): `map-pin-minus`, `alarm-clock-check`, `alarm-clock-plus`, `alarm-clock-minus`, `alarm-clock-off`, `book-check`, `book-minus`, `book-plus`, `book-off`, `book-search`, `book-x`, `copy-check`, `copy-plus`, `egg-off`, `fish-off`, `milk-off`, `beer-off`, `globe-off`, `globe-x`, `playlist-plus`, `search-check`, `search-off`, `search-x`, `arrow-down-clock`, `arrow-up-clock`, `database-minus`, `fingerprint-off`, `grid-off`, `message-minus`, `monitor-off`, `monitor-play`, `network-off`, `note-plus`, `pen-off`, `route-off`, `share-off`, `shield-search`, `text-search`, `vibrate-off`, `virus-off`, `webcam-off` and `webhook-off`.
 - The aliases `file-play` (`file-video`) and `list-check` (`list-checks`).

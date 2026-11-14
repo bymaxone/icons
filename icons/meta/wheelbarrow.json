@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Wheelbarrow",
+  "tags": ["wheelbarrow", "garden cart", "barrow", "carry load"],
+  "categories": ["tools", "nature"],
+  "useCases": ["Shows a cart for carrying heavy loads", "Marks a section about gardening work"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

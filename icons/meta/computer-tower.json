@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Desktop tower",
+  "tags": ["computer tower", "desktop pc", "workstation", "cpu case"],
+  "categories": ["devices"],
+  "useCases": ["Shows a desktop computer unit", "Marks a workstation in a list of machines"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}
