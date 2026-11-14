@@ -159,7 +159,12 @@
   width: 48px;
   height: 48px;
 }
-/* A flag is 3:2: each preview is as high as its size and one and a half times as wide. */
+/* A flag is 3:2: each preview is as high as its size and one and a half times as wide, with a
+   hairline inset outline that keeps its white edge visible; its SVG is not changed. */
+.pv[data-kind='flag'] svg {
+  outline: 1px solid var(--line);
+  outline-offset: -1px;
+}
 .pv[data-kind='flag'] .big svg {
   width: 180px;
   height: 120px;
