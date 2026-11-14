@@ -193,12 +193,17 @@ describe('Server Components: source', () => {
      */
     expect(sources.map(([file]) => file).sort()).toEqual([
       'accessibility.ts',
+      'create-flag.ts',
       'create-icon.ts',
+      'flag-node.ts',
+      'flag-props.ts',
+      'flag.ts',
       'icon-node.ts',
       'icon-props.ts',
       'icon.ts',
       'index.ts',
-      'stroke.ts'
+      'stroke.ts',
+      'view-box.ts'
     ])
   })
 

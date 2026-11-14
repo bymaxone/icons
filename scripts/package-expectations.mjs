@@ -26,8 +26,10 @@ const component = (kebab) =>
 /** The kebab names an icon or a brand publishes: its own and every alias's. */
 const namesOf = (name, record) => [name, ...record.aliases.map((alias) => alias.name)]
 
-/** The runtime names every build exports, whatever icons it holds. */
-const RUNTIME = ['Icon', 'createIcon']
+/** The runtime names the root re-exports, whatever icons the build holds. */
+const ROOT_RUNTIME = ['Icon', 'createIcon']
+/** The runtime names every build exports: the root's and the country flag base and factory. */
+const RUNTIME = ['Flag', 'Icon', 'createFlag', 'createIcon']
 const META = [
   'BRAND_METADATA',
   'BRAND_NAMES',
@@ -90,6 +92,6 @@ export function packageExpectations(packageDir) {
     svgFiles.push(`svg/brands/${name}.svg`)
   }
   exports.set('./brands', brandExports.sort())
-  exports.set('.', ['ICON_GRID', ...RUNTIME, ...iconExports].sort())
+  exports.set('.', ['ICON_GRID', ...ROOT_RUNTIME, ...iconExports].sort())
   return { metadata, exports: Object.fromEntries(exports), components, symbols, svgFiles }
 }
