@@ -4,6 +4,8 @@ Each mark is the path of Simple Icons 16.37.0, placed in the 20 x 20 live area a
 
 Over the 21 marks: no pixel over 8 lies away from an edge, the largest difference at 10x is 240 (7 marks reach more than 48), at 24 px it is 48 (`steam`) and at 16 px 16. [`brands.png`](./brands.png) shows every mark at 48 and 24 px on the dark and the light page, and [`brands-compare.png`](./brands-compare.png) shows, for the marks over 48 at 10x, the original, the committed mark and the difference enlarged four times.
 
+`steam` reaches 240 at 10x: [`brands-compare.png`](./brands-compare.png) shows a sub-pixel offset along the edge of its upper ring, one pixel wide, with the shape unchanged; at 24 px it measures 48 and at 16 px 16.
+
 | Mark              | Largest at 10x | Where | Pixels over 8 | Off an edge | At 24 px | At 16 px |
 | ----------------- | -------------- | ----- | ------------- | ----------- | -------- | -------- |
 | `android`         | 64             | edge  | 83            | 0           | 32       | 16       |
