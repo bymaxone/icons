@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/brand.schema.json",
+  "title": "Kotlin",
+  "source": "https://github.com/simple-icons/simple-icons/blob/16.37.0/icons/kotlin.svg",
+  "guidelines": "https://kotlinlang.org/docs/kotlin-brand-assets.html",
+  "license": "CC0-1.0",
+  "retrievedAt": "2026-11-14",
+  "tags": ["programming language", "jvm", "android", "jetbrains"],
+  "since": "1.0.0"
+}

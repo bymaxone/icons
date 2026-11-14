@@ -1,0 +1,26 @@
+/**
+ * @fileoverview The Figma brand mark.
+ * Written by `pnpm generate` from icons/brands/figma.svg: edit the source, never this file.
+ * @layer Generated
+ */
+
+import { createIcon } from '@bymax-one/icons/runtime'
+
+/**
+ * The Figma brand mark, from https://github.com/simple-icons/simple-icons/blob/16.37.0/icons/figma.svg (CC0-1.0, retrieved 2026-11-14).
+ * The mark belongs to its owner and is not covered by the MIT grant; see TRADEMARKS.md and https://www.figma.com/using-the-figma-brand/.
+ *
+ * @since 1.0.0
+ */
+export const FigmaBrandIcon = /* @__PURE__ */ createIcon(
+  'figma-brand',
+  [
+    [
+      'path',
+      {
+        d: 'M15.21 9.484h-3.823V2h3.823c2.063 0 3.742 1.678 3.742 3.742s-1.679 3.742-3.742 3.742m-2.598-1.226h2.598c1.387 0 2.516-1.129 2.516-2.516s-1.13-2.515-2.516-2.515h-2.598zm0 1.226H8.79c-2.063 0-3.742-1.678-3.742-3.742S6.727 2 8.79 2h3.823zM8.79 3.226c-1.388 0-2.516 1.129-2.516 2.516S7.402 8.258 8.79 8.258h2.597V3.226zm3.822 12.516H8.79c-2.063 0-3.742-1.679-3.742-3.742S6.727 8.258 8.79 8.258h3.823zM8.79 9.484c-1.388 0-2.516 1.13-2.516 2.516s1.13 2.516 2.516 2.516h2.597V9.484zM8.81 22c-2.074 0-3.763-1.678-3.763-3.742s1.679-3.741 3.742-3.741h3.823v3.7c0 2.086-1.705 3.783-3.802 3.783m-.02-6.258a2.52 2.52 0 0 0-2.516 2.515c0 1.388 1.138 2.516 2.537 2.516 1.42 0 2.577-1.146 2.577-2.556v-2.475zm6.42 0h-.082c-2.063 0-3.741-1.679-3.741-3.742s1.678-3.742 3.741-3.742h.082c2.063 0 3.742 1.679 3.742 3.742s-1.679 3.742-3.742 3.742m-.08-6.258c-1.388 0-2.517 1.13-2.517 2.516s1.13 2.516 2.516 2.516h.082c1.387 0 2.516-1.13 2.516-2.516s-1.13-2.516-2.516-2.516z'
+      }
+    ]
+  ],
+  { paint: 'fill' }
+)

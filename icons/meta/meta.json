@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/brand.schema.json",
+  "title": "Meta",
+  "source": "https://github.com/simple-icons/simple-icons/blob/16.37.0/icons/meta.svg",
+  "guidelines": "https://www.facebook.com/brand/resources/meta/company-brand",
+  "license": "CC0-1.0",
+  "retrievedAt": "2026-11-14",
+  "tags": ["facebook", "instagram", "social", "company"],
+  "since": "1.0.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/brand.schema.json",
+  "title": "Webflow",
+  "source": "https://github.com/simple-icons/simple-icons/blob/16.37.0/icons/webflow.svg",
+  "guidelines": "https://brand-at.webflow.io/design-guidelines",
+  "license": "CC0-1.0",
+  "retrievedAt": "2026-11-14",
+  "tags": ["website builder", "no-code", "cms", "design tool"],
+  "since": "1.0.0"
+}

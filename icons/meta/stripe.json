@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/brand.schema.json",
+  "title": "Stripe",
+  "source": "https://github.com/simple-icons/simple-icons/blob/16.37.0/icons/stripe.svg",
+  "guidelines": "https://stripe.com/br/newsroom/information",
+  "license": "CC0-1.0",
+  "retrievedAt": "2026-11-14",
+  "tags": ["payments", "checkout", "billing", "api"],
+  "since": "1.0.0"
+}

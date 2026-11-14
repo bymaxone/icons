@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/brand.schema.json",
+  "title": "Laravel",
+  "source": "https://github.com/simple-icons/simple-icons/blob/16.37.0/icons/laravel.svg",
+  "guidelines": "https://laravel.com/legal/trademark",
+  "license": "CC0-1.0",
+  "retrievedAt": "2026-11-14",
+  "tags": ["php", "web framework", "backend", "framework"],
+  "since": "1.0.0"
+}

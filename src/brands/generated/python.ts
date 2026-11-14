@@ -1,0 +1,26 @@
+/**
+ * @fileoverview The Python brand mark.
+ * Written by `pnpm generate` from icons/brands/python.svg: edit the source, never this file.
+ * @layer Generated
+ */
+
+import { createIcon } from '@bymax-one/icons/runtime'
+
+/**
+ * The Python brand mark, from https://github.com/simple-icons/simple-icons/blob/16.37.0/icons/python.svg (CC0-1.0, retrieved 2026-11-14).
+ * The mark belongs to its owner and is not covered by the MIT grant; see TRADEMARKS.md and https://www.python.org/community/logos/.
+ *
+ * @since 1.0.0
+ */
+export const PythonBrandIcon = /* @__PURE__ */ createIcon(
+  'python-brand',
+  [
+    [
+      'path',
+      {
+        d: 'M11.882 2c-.815.004-1.595.073-2.28.195-2.019.357-2.385 1.103-2.385 2.48v1.818h4.77v.606H5.426c-1.387 0-2.601.833-2.981 2.42-.438 1.817-.457 2.951 0 4.85.34 1.411 1.15 2.418 2.536 2.418h1.64v-2.18c0-1.575 1.363-2.965 2.98-2.965h4.767c1.326 0 2.385-1.091 2.385-2.425V4.676c0-1.294-1.09-2.265-2.386-2.481A15 15 0 0 0 11.882 2m-2.58 1.462c.492 0 .895.41.895.913 0 .5-.403.906-.895.906a.9.9 0 0 1-.895-.906c0-.503.4-.913.895-.913M17.348 7.1v2.12c0 1.642-1.392 3.024-2.98 3.024H9.602c-1.305 0-2.385 1.117-2.385 2.425v4.544c0 1.292 1.124 2.053 2.385 2.425 1.51.443 2.958.523 4.766 0 1.2-.349 2.385-1.049 2.385-2.425v-1.82h-4.766v-.606h7.152c1.387 0 1.903-.967 2.385-2.42.498-1.494.478-2.931 0-4.849-.342-1.38-.997-2.419-2.385-2.419zm-2.68 11.506a.9.9 0 0 1 .895.907c0 .503-.4.911-.895.911a.905.905 0 0 1-.896-.911c0-.501.403-.907.896-.907'
+      }
+    ]
+  ],
+  { paint: 'fill' }
+)

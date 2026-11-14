@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/brand.schema.json",
+  "title": "MongoDB",
+  "source": "https://github.com/simple-icons/simple-icons/blob/16.37.0/icons/mongodb.svg",
+  "guidelines": "https://www.mongodb.com/company/newsroom/brand-resources",
+  "license": "CC0-1.0",
+  "retrievedAt": "2026-11-14",
+  "tags": ["database", "nosql", "document", "mongo"],
+  "since": "1.0.0"
+}

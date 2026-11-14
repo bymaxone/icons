@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/brand.schema.json",
+  "title": "Bun",
+  "source": "https://github.com/simple-icons/simple-icons/blob/16.37.0/icons/bun.svg",
+  "guidelines": "https://bun.com/press-kit",
+  "license": "CC0-1.0",
+  "retrievedAt": "2026-11-14",
+  "tags": ["javascript runtime", "bundler", "package manager", "fast"],
+  "since": "1.0.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/brand.schema.json",
+  "title": "Datadog",
+  "source": "https://github.com/simple-icons/simple-icons/blob/16.37.0/icons/datadog.svg",
+  "guidelines": "https://www.datadoghq.com/about/resources/",
+  "license": "CC0-1.0",
+  "retrievedAt": "2026-11-14",
+  "tags": ["monitoring", "observability", "apm", "logs"],
+  "since": "1.0.0"
+}

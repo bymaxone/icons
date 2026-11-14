@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/brand.schema.json",
+  "title": "Anthropic",
+  "source": "https://github.com/simple-icons/simple-icons/blob/16.37.0/icons/anthropic.svg",
+  "guidelines": "https://www.anthropic.com/legal/trademark-guidelines",
+  "license": "CC0-1.0",
+  "retrievedAt": "2026-11-14",
+  "tags": ["ai lab", "claude maker", "llm", "safety"],
+  "since": "1.0.0"
+}

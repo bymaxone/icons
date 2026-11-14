@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/brand.schema.json",
+  "title": "GitHub Actions",
+  "source": "https://github.com/simple-icons/simple-icons/blob/16.37.0/icons/githubactions.svg",
+  "guidelines": "https://brand.github.com/foundations/logo",
+  "license": "CC0-1.0",
+  "retrievedAt": "2026-11-14",
+  "tags": ["ci", "cd", "workflow", "automation"],
+  "since": "1.0.0"
+}

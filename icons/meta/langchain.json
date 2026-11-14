@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/brand.schema.json",
+  "title": "LangChain",
+  "source": "https://github.com/simple-icons/simple-icons/blob/16.37.0/icons/langchain.svg",
+  "guidelines": "https://www.langchain.com/brand-assets",
+  "license": "CC0-1.0",
+  "retrievedAt": "2026-11-14",
+  "tags": ["llm framework", "agents", "rag", "ai"],
+  "since": "1.0.0"
+}

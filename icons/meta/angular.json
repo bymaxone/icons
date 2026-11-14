@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/brand.schema.json",
+  "title": "Angular",
+  "source": "https://github.com/simple-icons/simple-icons/blob/16.37.0/icons/angular.svg",
+  "guidelines": "https://angular.dev/press-kit",
+  "license": "CC-BY-4.0",
+  "retrievedAt": "2026-11-14",
+  "tags": ["framework", "typescript", "frontend", "web"],
+  "since": "1.0.0"
+}
