@@ -117,13 +117,10 @@ request, and no other source with a clear licence exists. They return when one d
 
 ## Marks under another licence
 
-Simple Icons states a licence other than CC0-1.0 for three of the marks, and the owner's own
+Simple Icons states a licence other than CC0-1.0 for the marks below, and the owner's own
 page repeats it. Each is credited here as its licence asks, and each path is moved and scaled
 as a whole, with no other change.
 
-- **Android** (`android`): "The Android robot is reproduced or modified from work created and
-  shared by Google and used according to terms described in the
-  [Creative Commons](https://creativecommons.org/licenses/by/3.0/) 3.0 Attribution License."
 - **Angular** (`angular`): the logo graphics are provided under
   [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) on
   [angular.dev](https://angular.dev/press-kit).
