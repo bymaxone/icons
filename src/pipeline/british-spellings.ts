@@ -57,7 +57,8 @@ export const BRITISH_SPELLINGS: ReadonlyMap<string, string> = new Map([
   ...family('catalogue', 'catalog', NOUN),
   ...family('programme', 'program', NOUN),
   ...family('jewellery', 'jewelry', ['']),
-  ...family('analyse', 'analyze', ['', 's', 'd']),
+  // No `analyses`: it is also the plural noun of `analysis`, which American English keeps.
+  ...family('analys', 'analyz', ['e', 'ed', 'ing']),
   ...family('defence', 'defense', NOUN),
   ...family('offence', 'offense', NOUN),
   ...family('kerb', 'curb', NOUN),

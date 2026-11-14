@@ -39,6 +39,14 @@ describe('BRITISH_SPELLINGS', () => {
 })
 
 describe('britishWords', () => {
+  it('keeps analyses, the plural noun of analysis, and flags the verb forms', () => {
+    /** Scenario: `analyses` is American as a plural noun, so only the verb forms are British. */
+    expect(britishWords('Shows statistical analyses')).toStrictEqual([])
+    expect(britishWords('analysing')).toStrictEqual([
+      { british: 'analysing', american: 'analyzing' }
+    ])
+  })
+
   it('passes American text', () => {
     /** Scenario: the American forms and a regional word with no spelling variant are fine. */
     expect(britishWords('Samples a color; the torch and the cancellation')).toStrictEqual([])
