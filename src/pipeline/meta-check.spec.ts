@@ -216,11 +216,11 @@ describe('metaIssues', () => {
 })
 
 describe('metaIssues on tags', () => {
-  it('fails a tag that holds the word filled, as the tag of chart-area did', () => {
-    /** Scenario: "filled line" made the search for the type "filled" find an icon with no filled drawing. */
-    const records = [record('chart-area', 'Chart area', undefined, ['chart area', 'filled line'])]
+  it('fails a tag that holds the word filled on an icon with no filled drawing', () => {
+    /** Scenario: the tag "filled line" would make the search for the type "filled" find this icon. */
+    const records = [record('area', 'Area', undefined, ['area', 'filled line'])]
     expect(metaIssues(records, {})).toStrictEqual([
-      'chart-area: tag "filled line" holds the type word "filled", which the search reads as a filter. Write the tag without it.'
+      'area: tag "filled line" holds the type word "filled", which the search reads as a filter. Write the tag without it.'
     ])
   })
 
