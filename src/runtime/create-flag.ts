@@ -24,7 +24,8 @@ export interface FlagComponent {
  *
  * The component renders through {@link Flag} with the given drawing and view box. It writes
  * the class names `bx-icon` and `bx-icon-<name>` first and appends the consumer's
- * `className` after them. Every other prop is passed to `Flag`.
+ * `className` after them. The view box of the source is the default: a `viewBox` the consumer
+ * passes wins, as every other consumer prop does. Every other prop is passed to `Flag`.
  *
  * @param name - The flag's kebab-case name, such as `us-flag`.
  * @param viewBox - The view box of the drawing, four numbers with a positive width and
@@ -49,11 +50,15 @@ export function createFlag(name: string, viewBox: string, flagNode: FlagNode): F
     throw new TypeError(`Flag view box ${JSON.stringify(viewBox)} is not four numbers.`)
   }
   const className = `bx-icon bx-icon-${name}`
-  const component = ({ className: consumerClass, ...props }: FlagProps): ReactElement =>
+  const component = ({
+    className: consumerClass,
+    viewBox: consumerViewBox,
+    ...props
+  }: FlagProps): ReactElement =>
     Flag({
       ...props,
       flagNode,
-      viewBox,
+      viewBox: consumerViewBox ?? viewBox,
       className: consumerClass ? `${className} ${consumerClass}` : className
     })
   component.displayName = toComponentName(name)

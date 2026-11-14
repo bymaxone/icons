@@ -75,6 +75,38 @@ describe('createFlag: rendering', () => {
     )
   })
 
+  it('lets a consumer viewBox win over the one of the source', () => {
+    /**
+     * Scenario: the view box of the source is the default, so a `viewBox` the consumer passes is
+     * the one written on the root, as spec section 8.3 says of every consumer prop; the width
+     * follows that box.
+     */
+    const SeFlagIcon = createFlag('se-flag', BOX, FIXTURE)
+    expect(renderToStaticMarkup(<SeFlagIcon viewBox="0 0 100 100" />)).toContain(
+      'width="16" height="16" viewBox="0 0 100 100"'
+    )
+  })
+
+  it('keeps the view box of the source when the consumer passes none or undefined', () => {
+    /** Scenario: an absent `viewBox` does not erase the default of the same name. */
+    const SeFlagIcon = createFlag('se-flag', BOX, FIXTURE)
+    expect(renderToStaticMarkup(<SeFlagIcon viewBox={undefined} />)).toContain(`viewBox="${BOX}"`)
+  })
+
+  it('lets a consumer width, height and aria attribute win over the defaults', () => {
+    /**
+     * Scenario: the family of the same defect: every prop the flag computes or defaults is
+     * overridden by the consumer's, so none is lost after the spread.
+     */
+    const SeFlagIcon = createFlag('se-flag', BOX, FIXTURE)
+    const html = renderToStaticMarkup(
+      <SeFlagIcon width={50} height={40} aria-hidden="false" focusable="true" />
+    )
+    expect(html).toContain('width="50" height="40"')
+    expect(html).toContain('aria-hidden="false"')
+    expect(html).toContain('focusable="true"')
+  })
+
   it('renders a 24 by 16 flag by default', () => {
     /** Scenario: the default size of a created flag is 16 px high and 24 wide in a 3:2 box. */
     const SeFlagIcon = createFlag('se-flag', BOX, FIXTURE)
