@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/flag.schema.json",
+  "title": "French Guiana",
+  "code": "GF",
+  "source": "https://gitlab.com/catamphetamine/country-flag-icons/-/blob/v1.6.20/flags/3x2/GF.svg",
+  "license": "MIT",
+  "retrievedAt": "2026-11-14",
+  "tags": ["gf", "french guiana"],
+  "since": "1.0.0"
+}

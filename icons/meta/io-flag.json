@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/flag.schema.json",
+  "title": "British Indian Ocean Territory",
+  "code": "IO",
+  "source": "https://gitlab.com/catamphetamine/country-flag-icons/-/blob/v1.6.20/flags/3x2/IO.svg",
+  "license": "MIT",
+  "retrievedAt": "2026-11-14",
+  "tags": ["io", "british indian ocean territory"],
+  "since": "1.0.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/flag.schema.json",
+  "title": "Myanmar (Burma)",
+  "code": "MM",
+  "source": "https://gitlab.com/catamphetamine/country-flag-icons/-/blob/v1.6.20/flags/3x2/MM.svg",
+  "license": "MIT",
+  "retrievedAt": "2026-11-14",
+  "tags": ["mm", "myanmar (burma)", "myanmar", "burma"],
+  "since": "1.0.0"
+}

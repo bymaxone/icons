@@ -35,7 +35,7 @@
 
 **5. Drawing Originality**
 
-- Every non-brand icon is drawn from scratch. No third-party SVG is pasted, traced or modified; third-party sets are never open in the working file of a new drawing.
+- Every icon that is not a brand mark or a country flag is drawn from scratch. No third-party SVG is pasted, traced or modified; third-party sets are never open in the working file of a new drawing. Country flags are the one other third-party shape: the files of `country-flag-icons`, kept as published (spec section 5.1).
 - A pull request that adds or changes a drawing carries the originality checkbox from the PR template.
 - Brand marks use the owner's official geometry only (see [TRADEMARKS.md](./TRADEMARKS.md)).
 
@@ -67,6 +67,7 @@
 | `./meta`          | Typed metadata and the `IconName` union, no React import | None      | Ready   |
 | `./icons/<name>`  | One icon's components                                    | React 19  | Partial |
 | `./brands`        | Brand components                                         | React 19  | Partial |
+| `./flags`         | Country flag components, and `./flags/<name>` one flag   | React 19  | Partial |
 | `./svg/*`         | Raw SVG files                                            | None      | Partial |
 | `./sprite.svg`    | The sprite                                               | None      | Partial |
 | `./metadata.json` | Merged metadata                                          | None      | Partial |

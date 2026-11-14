@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/flag.schema.json",
+  "title": "Heard & McDonald Islands",
+  "code": "HM",
+  "source": "https://gitlab.com/catamphetamine/country-flag-icons/-/blob/v1.6.20/flags/3x2/HM.svg",
+  "license": "MIT",
+  "retrievedAt": "2026-11-14",
+  "tags": ["hm", "heard & mcdonald islands"],
+  "since": "1.0.0"
+}

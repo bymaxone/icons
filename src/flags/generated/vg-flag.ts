@@ -1,0 +1,65 @@
+/**
+ * @fileoverview The British Virgin Islands flag.
+ * Written by `pnpm generate` from icons/flags/vg-flag.svg: edit the source, never this file.
+ * @layer Generated
+ */
+
+import { createFlag } from '@bymax-one/icons/runtime'
+
+/**
+ * The British Virgin Islands flag, from https://gitlab.com/catamphetamine/country-flag-icons/-/blob/v1.6.20/flags/3x2/VG.svg (MIT, retrieved 2026-11-14).
+ * It is reproduced as published by its source; see TRADEMARKS.md.
+ *
+ * @since 1.0.0
+ */
+export const VgFlagIcon = /* @__PURE__ */ createFlag('vg-flag', '0 0 513 342', [
+  ['path', { fill: '#012169', d: 'M0 0h513v342H0z' }],
+  [
+    'path',
+    {
+      fill: '#ffc72c',
+      d: 'm384.8 174.7-46.2 46.2c8.7 16.7 26.1 28.1 46.2 28.1s37.6-11.4 46.2-28.1l-46.2-46.2z'
+    }
+  ],
+  [
+    'path',
+    {
+      fill: '#006129',
+      stroke: '#ffffff',
+      strokeWidth: 3,
+      d: 'M332.7 93v81.8c0 39.8 52 52 52 52s52-12.2 52-52V93h-104z'
+    }
+  ],
+  ['path', { fill: '#ffffff', d: 'M373.6 130.1h22.3v59.5h-22.3z' }],
+  ['circle', { cx: 384.8, cy: 130.1, r: 11.2, fill: '#9c4c00' }],
+  [
+    'path',
+    {
+      fill: '#ffc72c',
+      d: 'M347.6 107.8h14.9v14.9h-14.9zM347.6 141.3h14.9v14.9h-14.9zM347.6 174.7h14.9v14.9h-14.9zM407.1 107.8H422v14.9h-14.9zM407.1 141.3H422v14.9h-14.9zM407.1 174.7H422v14.9h-14.9z'
+    }
+  ],
+  ['path', { fill: '#012169', d: 'M0 0h256.5v171H0z' }],
+  [
+    'path',
+    {
+      fill: '#ffffff',
+      d: 'M256.5 0v30.6l-45.3 25.2h45.3v59.4h-59.2l59.2 32.9V171h-26.7l-73.7-40.9V171h-55.7v-48.7L12.8 171H0v-30.6l45.3-25.2H0V55.8h59.2L0 22.9V0h26.7l73.7 40.9V0h55.7v48.7L243.7 0z'
+    }
+  ],
+  [
+    'path',
+    { fill: '#ffffff', d: 'M156.1 115.2 256.5 171v-15.8l-72-40zM100.4 55.8 0 0v15.8l72 40z' }
+  ],
+  [
+    'path',
+    { fill: '#d80027', d: 'M144.3 0h-32.1v69.5H0v32h112.2V171h32.1v-69.5h112.2v-32H144.3z' }
+  ],
+  [
+    'path',
+    {
+      fill: '#d80027',
+      d: 'M156.1 115.2 256.5 171v-15.8l-72-40zM72 115.2l-72 40V171l100.4-55.8zM100.4 55.8 0 0v15.8l72 40zM184.5 55.8l72-40V0L156.1 55.8z'
+    }
+  ]
+])

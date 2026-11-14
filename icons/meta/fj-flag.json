@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/flag.schema.json",
+  "title": "Fiji",
+  "code": "FJ",
+  "source": "https://gitlab.com/catamphetamine/country-flag-icons/-/blob/v1.6.20/flags/3x2/FJ.svg",
+  "license": "MIT",
+  "retrievedAt": "2026-11-14",
+  "tags": ["fj", "fiji"],
+  "since": "1.0.0"
+}

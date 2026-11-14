@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/flag.schema.json",
+  "title": "Guyana",
+  "code": "GY",
+  "source": "https://gitlab.com/catamphetamine/country-flag-icons/-/blob/v1.6.20/flags/3x2/GY.svg",
+  "license": "MIT",
+  "retrievedAt": "2026-11-14",
+  "tags": ["gy", "guyana"],
+  "since": "1.0.0"
+}

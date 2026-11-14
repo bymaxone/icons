@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/flag.schema.json",
+  "title": "Georgia",
+  "code": "GE",
+  "source": "https://gitlab.com/catamphetamine/country-flag-icons/-/blob/v1.6.20/flags/3x2/GE.svg",
+  "license": "MIT",
+  "retrievedAt": "2026-11-14",
+  "tags": ["ge", "georgia"],
+  "since": "1.0.0"
+}

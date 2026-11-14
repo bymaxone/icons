@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/flag.schema.json",
+  "title": "Guernsey",
+  "code": "GG",
+  "source": "https://gitlab.com/catamphetamine/country-flag-icons/-/blob/v1.6.20/flags/3x2/GG.svg",
+  "license": "MIT",
+  "retrievedAt": "2026-11-14",
+  "tags": ["gg", "guernsey"],
+  "since": "1.0.0"
+}

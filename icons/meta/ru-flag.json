@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/flag.schema.json",
+  "title": "Russia",
+  "code": "RU",
+  "source": "https://gitlab.com/catamphetamine/country-flag-icons/-/blob/v1.6.20/flags/3x2/RU.svg",
+  "license": "MIT",
+  "retrievedAt": "2026-11-14",
+  "tags": ["ru", "russia"],
+  "since": "1.0.0"
+}

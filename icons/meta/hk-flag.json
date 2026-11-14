@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/flag.schema.json",
+  "title": "Hong Kong SAR China",
+  "code": "HK",
+  "source": "https://gitlab.com/catamphetamine/country-flag-icons/-/blob/v1.6.20/flags/3x2/HK.svg",
+  "license": "MIT",
+  "retrievedAt": "2026-11-14",
+  "tags": ["hk", "hong kong sar china", "hong kong"],
+  "since": "1.0.0"
+}

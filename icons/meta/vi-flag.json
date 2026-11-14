@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/flag.schema.json",
+  "title": "U.S. Virgin Islands",
+  "code": "VI",
+  "source": "https://gitlab.com/catamphetamine/country-flag-icons/-/blob/v1.6.20/flags/3x2/VI.svg",
+  "license": "MIT",
+  "retrievedAt": "2026-11-14",
+  "tags": ["vi", "u.s. virgin islands"],
+  "since": "1.0.0"
+}

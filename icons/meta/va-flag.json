@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/flag.schema.json",
+  "title": "Vatican City",
+  "code": "VA",
+  "source": "https://gitlab.com/catamphetamine/country-flag-icons/-/blob/v1.6.20/flags/3x2/VA.svg",
+  "license": "MIT",
+  "retrievedAt": "2026-11-14",
+  "tags": ["va", "vatican city", "holy see"],
+  "since": "1.0.0"
+}

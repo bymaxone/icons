@@ -7,6 +7,11 @@
  */
 
 import {
+  FLAG_MODULE_BYTES,
+  FLAGS_BASE_BYTES,
+  FLAGS_CAP_BYTES,
+  FLAGS_FLAG_BYTES,
+  FLAGS_FLOOR_BYTES,
   BRANDS_BASE_BYTES,
   BRANDS_CAP_BYTES,
   BRANDS_FLOOR_BYTES,
@@ -20,6 +25,8 @@ import {
   ROOT_FLOOR_BYTES,
   ROOT_ICON_BYTES,
   brandsLimit,
+  flagCost,
+  flagsLimit,
   iconCost,
   markCost,
   metaLimit,
@@ -190,5 +197,60 @@ describe('brandsLimit', () => {
     const marks = (BRANDS_CAP_BYTES - BRANDS_BASE_BYTES) / BRANDS_MARK_BYTES
     expect(brandsLimit(Math.floor(marks))).toBeLessThanOrEqual(BRANDS_CAP_BYTES)
     expect(brandsLimit(Math.ceil(marks))).toBe(BRANDS_CAP_BYTES)
+  })
+})
+
+describe('the flags budget constants', () => {
+  it('are the measured base, the per-flag budget, the cap, the floor and the module budget', () => {
+    /** Scenario: the numbers the comment of `scripts/check-size.mjs` states for `./flags`. */
+    expect([
+      FLAGS_BASE_BYTES,
+      FLAGS_FLAG_BYTES,
+      FLAGS_CAP_BYTES,
+      FLAGS_FLOOR_BYTES,
+      FLAG_MODULE_BYTES
+    ]).toStrictEqual([5, 3.5, 8192, 512, 2048])
+  })
+})
+
+describe('flagCost', () => {
+  it('shares the bytes above the base over the flags', () => {
+    /** Scenario: 5 + 100 * 3 bytes over 100 flags is 3 a flag. */
+    expect(flagCost(FLAGS_BASE_BYTES + 300, 100)).toBe(3)
+  })
+
+  it('counts an entry with no flag as one flag', () => {
+    /** Scenario: no division by zero; the bytes above the base are the cost. */
+    expect(flagCost(FLAGS_BASE_BYTES + 2, 0)).toBe(2)
+  })
+})
+
+describe('flagsLimit', () => {
+  it('is the base plus the budget of each flag', () => {
+    /** Scenario: 250 flags are far below the cap. */
+    expect(flagsLimit(250)).toBe(5 + 3.5 * 250)
+  })
+
+  it('is the floor with few flags', () => {
+    /** Scenario: a package of a handful of flags is held to the floor, not to the base. */
+    expect(flagsLimit(0)).toBe(FLAGS_FLOOR_BYTES)
+    expect(flagsLimit(3)).toBe(FLAGS_FLOOR_BYTES)
+  })
+
+  it('leaves the floor where the base and the flags pass it', () => {
+    /** Scenario: 200 flags at 5 + 3.5 each are over 512, so the budget rules. */
+    expect(flagsLimit(200)).toBe(5 + 3.5 * 200)
+  })
+
+  it('stops at the cap', () => {
+    /** Scenario: 10,000 flags would exceed the cap by far. */
+    expect(flagsLimit(10000)).toBe(FLAGS_CAP_BYTES)
+  })
+
+  it('reaches the cap exactly where the two meet', () => {
+    /** Scenario: the flags at which base + budget equals the cap are not capped lower. */
+    const flags = (FLAGS_CAP_BYTES - FLAGS_BASE_BYTES) / FLAGS_FLAG_BYTES
+    expect(flagsLimit(Math.floor(flags))).toBeLessThanOrEqual(FLAGS_CAP_BYTES)
+    expect(flagsLimit(Math.ceil(flags))).toBe(FLAGS_CAP_BYTES)
   })
 })

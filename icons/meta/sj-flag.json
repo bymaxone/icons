@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/flag.schema.json",
+  "title": "Svalbard & Jan Mayen",
+  "code": "SJ",
+  "source": "https://gitlab.com/catamphetamine/country-flag-icons/-/blob/v1.6.20/flags/3x2/SJ.svg",
+  "license": "MIT",
+  "retrievedAt": "2026-11-14",
+  "tags": ["sj", "svalbard & jan mayen"],
+  "since": "1.0.0"
+}

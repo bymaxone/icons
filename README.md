@@ -93,6 +93,9 @@ and is not built yet.
   than scaled, at 16 px with the set's 1.5 px stroke
 - ✅ **Brand marks**: in their owners' geometry from Simple Icons, monochrome
   `currentColor`, excluded from the MIT grant (see [`TRADEMARKS.md`](./TRADEMARKS.md))
+- ✅ **Country flags**: the 249 assigned ISO 3166-1 codes and the European Union, from
+  `country-flag-icons` (MIT), in colour and 3:2, each kept as its source publishes it (see
+  [`TRADEMARKS.md`](./TRADEMARKS.md))
 
 ### ⚛️ React
 
@@ -123,16 +126,23 @@ and is not built yet.
 
 ## 📦 Subpath Exports
 
-| Subpath           | Contents                                                        | Status  |
-| ----------------- | --------------------------------------------------------------- | ------- |
-| `.`               | Every line and filled component, the `Icon` base and the types  | Partial |
-| `./runtime`       | The `Icon` base, `createIcon` and their types                   | Ready   |
-| `./meta`          | Typed metadata and the `IconName` union, with no React import   | Ready   |
-| `./icons/<name>`  | One icon's components, for consumers that avoid barrels         | Partial |
-| `./brands`        | Brand components                                                | Partial |
-| `./svg/*`         | Raw SVG files (`svg/line/<name>.svg`, `filled`, `sm`, `brands`) | Partial |
-| `./sprite.svg`    | The SVG sprite, one `<symbol>` per drawing                      | Partial |
-| `./metadata.json` | Merged metadata of every icon and brand                         | Partial |
+| Subpath           | Contents                                                                 | Status  |
+| ----------------- | ------------------------------------------------------------------------ | ------- |
+| `.`               | Every line and filled component, the `Icon` base and the types           | Partial |
+| `./runtime`       | The `Icon` base, `createIcon` and their types                            | Ready   |
+| `./meta`          | Typed metadata and the `IconName` union, with no React import            | Ready   |
+| `./icons/<name>`  | One icon's components, for consumers that avoid barrels                  | Partial |
+| `./brands`        | Brand components                                                         | Partial |
+| `./flags`         | Country flag components (`BrFlagIcon`), 16 px high by default            | Partial |
+| `./flags/<name>`  | One flag's component, for a dynamic import                               | Partial |
+| `./svg/*`         | Raw SVG files (`svg/line/<name>.svg`, `filled`, `sm`, `brands`, `flags`) | Partial |
+| `./sprite.svg`    | The SVG sprite, one `<symbol>` per drawing                               | Partial |
+| `./metadata.json` | Merged metadata of every icon, brand and flag                            | Partial |
+
+A flag takes the props of an icon without `color`, `strokeWidth` and `absoluteStrokeWidth`, since
+it keeps its own colours, and its `size` is its height: 16 by default, so a 3:2 flag is 24 by 16.
+For example `<BrFlagIcon size={24} title="Brazil" />` after
+`import { BrFlagIcon } from '@bymax-one/icons/flags'`.
 
 Every subpath is built, exported and checked on every pull request. **Partial** ones hold
 the drawings so far.
@@ -161,10 +171,10 @@ pnpm add @bymax-one/icons react
 
 ### Peer dependency matrix
 
-| Package | Version    | Needed by               |
-| ------- | ---------- | ----------------------- |
-| Node.js | `>=24.0.0` | Tooling and builds      |
-| `react` | `^19.0.0`  | The root and `./brands` |
+| Package | Version    | Needed by                          |
+| ------- | ---------- | ---------------------------------- |
+| Node.js | `>=24.0.0` | Tooling and builds                 |
+| `react` | `^19.0.0`  | The root, `./brands` and `./flags` |
 
 ---
 
@@ -536,10 +546,12 @@ Frozen data with no React import, generated from `icons/meta` and `categories.js
 | `ICON_METADATA`   | `Readonly<Record<IconName, IconMetadata>>`   | Tags, categories, use cases, aliases, variants, sizes, since |
 | `BRAND_NAMES`     | `readonly BrandName[]`                       | Every brand name, in name order                              |
 | `BRAND_METADATA`  | `Readonly<Record<BrandName, BrandMetadata>>` | Title, source, guidelines, license, retrieval date, aliases  |
+| `FLAG_NAMES`      | `readonly FlagName[]`                        | Every flag name, in name order                               |
+| `FLAG_METADATA`   | `Readonly<Record<FlagName, FlagMetadata>>`   | Title, code, source, license, retrieval date, tags           |
 | `ICON_CATEGORIES` | `readonly IconCategory[]`                    | The categories with their titles                             |
 
-`IconName`, `BrandName` and `IconCategoryName` are the unions of the generated names, and
-`IconAlias`, `IconMetadata`, `BrandMetadata`, `IconCategory` and `IconVariant` the shapes
+`IconName`, `BrandName`, `FlagName` and `IconCategoryName` are the unions of the generated names,
+and `IconAlias`, `IconMetadata`, `BrandMetadata`, `FlagMetadata`, `IconCategory` and `IconVariant` the shapes
 of the records. `metadata.json` holds the same records.
 
 ### Planned surface
@@ -557,8 +569,8 @@ the specification, generated by the pipeline, and documented here as each drawin
    consumers. React Native components are planned as the `./native` subpath, after 1.0.
 3. **No context provider for default size or colour.** CSS does the same without a client
    boundary.
-4. **No coloured or multi-colour icons.**
-5. **No third-party drawings** other than brand marks.
+4. **No coloured or multi-colour icons**, except the country flags, which keep their own colours.
+5. **No third-party drawings** other than brand marks and country flags.
 6. **No dynamic loading by name at runtime.** A `<DynamicIcon name="...">` defeats
    tree-shaking; map names to components explicitly.
 
@@ -589,7 +601,8 @@ respond promptly. See [`SECURITY.md`](./SECURITY.md) for the full policy.
 
 [MIT](./LICENSE) © [Bymax One](https://github.com/bymaxone)
 
-Brand marks are excluded from the MIT grant and belong to their owners; see
+Brand marks are excluded from the MIT grant and belong to their owners, and the country flags
+are the MIT-licensed drawings of `country-flag-icons`, reproduced as published; see
 [`TRADEMARKS.md`](./TRADEMARKS.md).
 
 ---

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/flag.schema.json",
+  "title": "Wallis & Futuna",
+  "code": "WF",
+  "source": "https://gitlab.com/catamphetamine/country-flag-icons/-/blob/v1.6.20/flags/3x2/WF.svg",
+  "license": "MIT",
+  "retrievedAt": "2026-11-14",
+  "tags": ["wf", "wallis & futuna"],
+  "since": "1.0.0"
+}

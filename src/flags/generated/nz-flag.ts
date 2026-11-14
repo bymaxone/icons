@@ -1,0 +1,50 @@
+/**
+ * @fileoverview The New Zealand flag.
+ * Written by `pnpm generate` from icons/flags/nz-flag.svg: edit the source, never this file.
+ * @layer Generated
+ */
+
+import { createFlag } from '@bymax-one/icons/runtime'
+
+/**
+ * The New Zealand flag, from https://gitlab.com/catamphetamine/country-flag-icons/-/blob/v1.6.20/flags/3x2/NZ.svg (MIT, retrieved 2026-11-14).
+ * It is reproduced as published by its source; see TRADEMARKS.md.
+ *
+ * @since 1.0.0
+ */
+export const NzFlagIcon = /* @__PURE__ */ createFlag('nz-flag', '0 0 513 342', [
+  ['path', { fill: '#012169', d: 'M0 0h513v342H0z' }],
+  [
+    'path',
+    {
+      fill: '#d80027',
+      stroke: '#ffffff',
+      strokeMiterlimit: 10,
+      strokeWidth: 2,
+      d: 'm448.9 107.7 4.2 13.1h13.8l-11.1 8.1L460 142l-11.1-8.1-11.1 8.1 4.2-13.1-11.1-8.1h13.7zM384.7 253.6l5.1 15.6h16.4l-13.2 9.7 5 15.6-13.3-9.7-13.2 9.7 5-15.6-13.3-9.7h16.5zM384.8 43.4l4.7 14.6h15.3l-12.4 8.9 4.7 14.6-12.3-9-12.4 9 4.7-14.6-12.3-8.9H380zM320.6 129.4l4.7 14.5h15.3l-12.3 9 4.7 14.5-12.4-8.9-12.3 8.9 4.7-14.5-12.4-9h15.3z'
+    }
+  ],
+  ['path', { fill: '#012169', d: 'M0 0h256.5v171H0z' }],
+  [
+    'path',
+    {
+      fill: '#ffffff',
+      d: 'M256.5 0v30.6l-45.3 25.2h45.3v59.4h-59.2l59.2 32.9V171h-26.7l-73.7-40.9V171h-55.7v-48.7L12.8 171H0v-30.6l45.3-25.2H0V55.8h59.2L0 22.9V0h26.7l73.7 40.9V0h55.7v48.7L243.7 0z'
+    }
+  ],
+  [
+    'path',
+    { fill: '#ffffff', d: 'M156.1 115.2 256.5 171v-15.8l-72-40zM100.4 55.8 0 0v15.8l72 40z' }
+  ],
+  [
+    'path',
+    { fill: '#d80027', d: 'M144.3 0h-32.1v69.5H0v32h112.2V171h32.1v-69.5h112.2v-32H144.3z' }
+  ],
+  [
+    'path',
+    {
+      fill: '#d80027',
+      d: 'M156.1 115.2 256.5 171v-15.8l-72-40zM72 115.2l-72 40V171l100.4-55.8zM100.4 55.8 0 0v15.8l72 40zM184.5 55.8l72-40V0L156.1 55.8z'
+    }
+  ]
+])

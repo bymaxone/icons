@@ -1,0 +1,48 @@
+/**
+ * @fileoverview The Sint Maarten flag.
+ * Written by `pnpm generate` from icons/flags/sx-flag.svg: edit the source, never this file.
+ * @layer Generated
+ */
+
+import { createFlag } from '@bymax-one/icons/runtime'
+
+/**
+ * The Sint Maarten flag, from https://gitlab.com/catamphetamine/country-flag-icons/-/blob/v1.6.20/flags/3x2/SX.svg (MIT, retrieved 2026-11-14).
+ * It is reproduced as published by its source; see TRADEMARKS.md.
+ *
+ * @since 1.0.0
+ */
+export const SxFlagIcon = /* @__PURE__ */ createFlag('sx-flag', '0 85.333 512 341.333', [
+  ['path', { fill: '#0052b4', d: 'M0 85.337h512v341.326H0z' }],
+  ['path', { fill: '#d80027', d: 'M512 85.331v166.69L0 256.173V85.331z' }],
+  ['path', { fill: '#ffffff', d: 'M256 256.006 0 426.668V85.331z' }],
+  [
+    'path',
+    {
+      fill: '#ffda44',
+      d: 'M59.621 256a59.546 59.546 0 0 0-.193 4.57c0 32.821 26.607 59.429 59.429 59.429s59.429-26.607 59.429-59.429c0-1.539-.078-3.061-.193-4.57H59.621z'
+    }
+  ],
+  ['circle', { cx: 118.862, cy: 210.287, r: 18.286, fill: '#ffda44' }],
+  [
+    'path',
+    {
+      fill: '#d80027',
+      d: 'M77.715 205.714v59.429c0 31.494 41.144 41.143 41.144 41.143s41.144-9.649 41.144-41.143v-59.429H77.715z'
+    }
+  ],
+  [
+    'path',
+    {
+      fill: '#338af3',
+      d: 'M118.877 287.148c-7.632-2.746-22.876-9.767-22.876-22.006v-41.144h45.715v41.144c-.001 12.28-15.244 19.283-22.839 22.006z'
+    }
+  ],
+  [
+    'path',
+    {
+      fill: '#f3f3f3',
+      d: 'M128.001 246.856v-9.142l-9.144-4.571-9.142 4.571v9.142l-4.571 4.573v18.285h27.428v-18.285z'
+    }
+  ]
+])

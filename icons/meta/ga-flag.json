@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/flag.schema.json",
+  "title": "Gabon",
+  "code": "GA",
+  "source": "https://gitlab.com/catamphetamine/country-flag-icons/-/blob/v1.6.20/flags/3x2/GA.svg",
+  "license": "MIT",
+  "retrievedAt": "2026-11-14",
+  "tags": ["ga", "gabon"],
+  "since": "1.0.0"
+}

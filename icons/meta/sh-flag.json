@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/flag.schema.json",
+  "title": "St. Helena",
+  "code": "SH",
+  "source": "https://gitlab.com/catamphetamine/country-flag-icons/-/blob/v1.6.20/flags/3x2/SH.svg",
+  "license": "MIT",
+  "retrievedAt": "2026-11-14",
+  "tags": ["sh", "st. helena"],
+  "since": "1.0.0"
+}

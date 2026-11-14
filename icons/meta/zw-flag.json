@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/flag.schema.json",
+  "title": "Zimbabwe",
+  "code": "ZW",
+  "source": "https://gitlab.com/catamphetamine/country-flag-icons/-/blob/v1.6.20/flags/3x2/ZW.svg",
+  "license": "MIT",
+  "retrievedAt": "2026-11-14",
+  "tags": ["zw", "zimbabwe"],
+  "since": "1.0.0"
+}

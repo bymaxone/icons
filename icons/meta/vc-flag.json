@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/flag.schema.json",
+  "title": "St. Vincent & Grenadines",
+  "code": "VC",
+  "source": "https://gitlab.com/catamphetamine/country-flag-icons/-/blob/v1.6.20/flags/3x2/VC.svg",
+  "license": "MIT",
+  "retrievedAt": "2026-11-14",
+  "tags": ["vc", "st. vincent & grenadines"],
+  "since": "1.0.0"
+}

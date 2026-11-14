@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/flag.schema.json",
+  "title": "Cocos (Keeling) Islands",
+  "code": "CC",
+  "source": "https://gitlab.com/catamphetamine/country-flag-icons/-/blob/v1.6.20/flags/3x2/CC.svg",
+  "license": "MIT",
+  "retrievedAt": "2026-11-14",
+  "tags": ["cc", "cocos (keeling) islands", "cocos islands", "keeling islands"],
+  "since": "1.0.0"
+}

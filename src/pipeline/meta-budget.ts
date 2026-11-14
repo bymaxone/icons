@@ -143,3 +143,55 @@ export function brandsLimit(marks: number): number {
     Math.max(BRANDS_FLOOR_BYTES, BRANDS_BASE_BYTES + BRANDS_MARK_BYTES * marks)
   )
 }
+
+/**
+ * The brotli bytes of the `./flags` entry with no flag: the empty export, measured on a build
+ * that holds no flag.
+ */
+export const FLAGS_BASE_BYTES = 5
+
+/**
+ * The most brotli bytes one flag may cost the `./flags` entry, which holds one re-export line
+ * for each, through the flag's own subpath. The tree measures 2.9 bytes a flag over 250, so this
+ * leaves about 20% for a longer name.
+ */
+export const FLAGS_FLAG_BYTES = 3.5
+
+/** The most brotli bytes the `./flags` entry may reach whatever the flags, room for about 2,300. */
+export const FLAGS_CAP_BYTES = 8 * 1024
+
+/** The least brotli bytes the `./flags` entry may be allowed, for a package of a handful of flags. */
+export const FLAGS_FLOOR_BYTES = 512
+
+/**
+ * The most brotli bytes one flag's own module, `dist/flags/<name>/index.mjs`, may weigh: what a
+ * consumer who imports one flag loads, with its path data. The largest of the 250 measures
+ * 1,505 bytes, so this leaves about a third for a flag with more detail.
+ */
+export const FLAG_MODULE_BYTES = 2 * 1024
+
+/**
+ * The brotli bytes one flag costs the `./flags` entry: what it weighs above its base, over the
+ * flags.
+ *
+ * @param brotli - The brotli bytes of the `./flags` entry.
+ * @param flags - The flags the entry re-exports.
+ * @returns The bytes a flag costs; an entry with no flag is counted as one.
+ */
+export function flagCost(brotli: number, flags: number): number {
+  return (brotli - FLAGS_BASE_BYTES) / Math.max(flags, 1)
+}
+
+/**
+ * The most brotli bytes the `./flags` entry may weigh with this many flags: the base and the
+ * per-flag budget for each, within the floor and the cap.
+ *
+ * @param flags - The flags the entry re-exports.
+ * @returns The limit in bytes.
+ */
+export function flagsLimit(flags: number): number {
+  return Math.min(
+    FLAGS_CAP_BYTES,
+    Math.max(FLAGS_FLOOR_BYTES, FLAGS_BASE_BYTES + FLAGS_FLAG_BYTES * flags)
+  )
+}

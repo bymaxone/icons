@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/flag.schema.json",
+  "title": "Taiwan",
+  "code": "TW",
+  "source": "https://gitlab.com/catamphetamine/country-flag-icons/-/blob/v1.6.20/flags/3x2/TW.svg",
+  "license": "MIT",
+  "retrievedAt": "2026-11-14",
+  "tags": ["tw", "taiwan"],
+  "since": "1.0.0"
+}

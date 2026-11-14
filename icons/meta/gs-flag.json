@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/flag.schema.json",
+  "title": "South Georgia & South Sandwich Islands",
+  "code": "GS",
+  "source": "https://gitlab.com/catamphetamine/country-flag-icons/-/blob/v1.6.20/flags/3x2/GS.svg",
+  "license": "MIT",
+  "retrievedAt": "2026-11-14",
+  "tags": ["gs", "south georgia & south sandwich islands"],
+  "since": "1.0.0"
+}
