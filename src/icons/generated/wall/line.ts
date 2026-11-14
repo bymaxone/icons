@@ -12,6 +12,12 @@ import { createIcon } from '@bymax-one/icons/runtime'
  * @since 0.1.0
  */
 export const WallIcon = /* @__PURE__ */ createIcon('wall', [
-  ['path', { d: 'M5.25 6.25h14M5.25 11h14m-14 4.75h14m-14 4.75h14' }],
-  ['path', { d: 'M12.25 6.25V11m-3.5 0v4.75m7-4.75v4.75m-3.5 0v4.75' }]
+  [
+    'path',
+    {
+      d: 'M6.25 7.25h12c.813 0 1 .188 1 1v8c0 .813-.188 1-1 1h-12c-.813 0-1-.188-1-1v-8c0-.813.188-1 1-1'
+    }
+  ],
+  ['path', { d: 'M5.25 10.5h14m-14 3.25h14' }],
+  ['path', { d: 'M10.25 7.25v3.25m4 3.25V10.5m-4 3.25v3.5' }]
 ])

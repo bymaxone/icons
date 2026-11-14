@@ -12,6 +12,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
  * @since 0.1.0
  */
 export const FlipVerticalIcon = /* @__PURE__ */ createIcon('flip-vertical', [
-  ['path', { d: 'M3.25 12.25h18' }],
-  ['path', { d: 'm6.25 9.25 11.5-5.5v5.5zm0 6 11.5 5.5v-5.5z' }]
+  ['path', { d: 'm6.25 9.75 6-6.25 6 6.25z' }],
+  ['path', { d: 'm6.25 14.75 6 6.25 6-6.25z' }],
+  ['path', { d: 'M2.75 12.25h2m3.5 0h2m3.5 0h2m3.5 0h2' }]
 ])

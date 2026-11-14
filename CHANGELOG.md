@@ -13,6 +13,7 @@ and deprecated, each rename with the alias that keeps the old name working.
 
 ### Changed
 
+- Twenty-six line icons are redrawn after a review at catalogue size, 24 px at 1x in the catalogue cell: `antenna`, `oven`, `garlic`, `salt`, `lasso`, `mailbox`, `wall`, `cctv`, `wheelbarrow`, `lip-sync`, `lifebuoy`, `nose`, the four `swipe-*`, `extend`, `prism`, `flip-vertical`, `flip-horizontal`, `screen-rotation`, `projector`, `puzzle`, `crocodile`, `elephant` and `monkey`. Eight niche icons that did not read there are out of 1.0: `bacon`, `butter`, `dumpling`, `shrimp`, `soda`, `cricket`, `crow` and `hedgehog`.
 - Seven icons have a label of their own: no two icons share one except the pairs that are the
   same word, `plus` and `plus-circle` ("Add") and `more-vertical` and `more-horizontal`
   ("More options"). `heart` is "Love" (`thumbs-up` stays "Like"), `arrow-right` is "Continue"

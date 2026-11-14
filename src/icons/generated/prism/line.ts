@@ -12,7 +12,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
  * @since 0.1.0
  */
 export const PrismIcon = /* @__PURE__ */ createIcon('prism', [
-  ['path', { d: 'm11.25 5.25 6 12h-12z' }],
-  ['path', { d: 'm2.25 14.25 4.5-1.75' }],
-  ['path', { d: 'm17.25 10 4.5-2M19 13l2.75-.25' }]
+  ['path', { d: 'm12.25 4.75 8 13.5h-16z' }],
+  ['path', { d: 'M2.75 12.25h5.1' }],
+  ['path', { d: 'm17.4 12.75 4.6-2.5m-4.6 2.5 4.6.5m-4.6-.5L22 16' }]
 ])

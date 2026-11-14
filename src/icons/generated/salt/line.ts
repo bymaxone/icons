@@ -12,8 +12,10 @@ import { createIcon } from '@bymax-one/icons/runtime'
  * @since 0.1.0
  */
 export const SaltIcon = /* @__PURE__ */ createIcon('salt', [
-  ['path', { d: 'M9.25 8.25h6l1 12c0 .75-.5 1-1.25 1H9.5c-.75 0-1.25-.25-1.25-1z' }],
-  ['path', { d: 'M9.25 8.25c0-2.75 1.25-4.75 3-4.75s3 2 3 4.75' }]
+  ['path', { d: 'M8.25 7.25c0-2.5 1.5-4 4-4s4 1.5 4 4' }],
+  ['path', { d: 'M7.25 7.25h10' }],
+  ['path', { d: 'm7.75 7.25-.75 11c0 1.5.75 2.5 2.25 2.5h6c1.5 0 2.25-1 2.25-2.5l-.75-11' }],
+  ['path', { d: 'M12.25 5.25h.01' }]
 ])
 
 /** `salt-shaker`: an alias of {@link SaltIcon}. */
