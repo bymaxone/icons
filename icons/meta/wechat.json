@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/brand.schema.json",
+  "title": "WeChat",
+  "source": "https://github.com/simple-icons/simple-icons/blob/16.37.0/icons/wechat.svg",
+  "guidelines": "https://wechat.design/brand/main-brand",
+  "license": "CC0-1.0",
+  "retrievedAt": "2026-11-14",
+  "tags": ["messenger", "chat", "china", "tencent"],
+  "since": "1.0.0"
+}

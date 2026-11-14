@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/brand.schema.json",
+  "title": "Messenger",
+  "source": "https://github.com/simple-icons/simple-icons/blob/16.37.0/icons/messenger.svg",
+  "guidelines": "https://about.meta.com/brand/resources/facebook/messenger-icon",
+  "license": "CC0-1.0",
+  "retrievedAt": "2026-11-14",
+  "tags": ["chat", "message", "facebook", "meta"],
+  "since": "1.0.0"
+}

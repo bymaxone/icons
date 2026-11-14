@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/brand.schema.json",
+  "title": "KakaoTalk",
+  "source": "https://github.com/simple-icons/simple-icons/blob/16.37.0/icons/kakaotalk.svg",
+  "guidelines": "https://www.kakao.com/policy/brand/trademark",
+  "license": "CC0-1.0",
+  "retrievedAt": "2026-11-14",
+  "tags": ["messenger", "chat", "korea", "messaging"],
+  "since": "1.0.0"
+}
