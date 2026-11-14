@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Print complete",
+  "tags": ["printer check", "job done", "printed ok", "finished printing"],
+  "categories": ["devices"],
+  "useCases": ["Confirms a print job has finished", "Marks a document as printed"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

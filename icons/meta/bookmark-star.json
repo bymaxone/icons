@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Top bookmark",
+  "tags": ["bookmark star", "best saved", "priority save", "featured mark"],
+  "categories": ["status"],
+  "useCases": ["Marks a saved item as a priority", "Features a kept page at the top"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

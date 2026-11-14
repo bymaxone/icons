@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "File details",
+  "tags": ["file info", "document properties", "metadata", "about file"],
+  "categories": ["files"],
+  "useCases": ["Shows the properties of a document", "Opens the details of a file"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { FileEditIcon } from './line'
+export { FileEditIcon, FilePenIcon } from './line'

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Valid key",
+  "tags": ["key check", "confirmed credential", "accepted password", "authenticated"],
+  "categories": ["security"],
+  "useCases": ["Confirms that a credential is valid", "Marks an accepted password"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

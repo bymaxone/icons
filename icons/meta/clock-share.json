@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Share schedule",
+  "tags": ["clock share", "send time", "shared timetable", "publish hours"],
+  "categories": ["time", "status"],
+  "useCases": ["Shares a time slot with others", "Sends a timetable to a team"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Rated item",
+  "tags": ["star check", "confirmed rating", "verified favorite", "approved score"],
+  "categories": ["status"],
+  "useCases": ["Confirms a rating given to an item", "Marks a favorite as reviewed"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

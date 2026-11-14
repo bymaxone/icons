@@ -1,0 +1,24 @@
+/**
+ * @fileoverview The `printer-check` icon, line variant.
+ * Written by `pnpm generate` from icons/line/printer-check.svg: edit the source, never this file.
+ * @layer Generated
+ */
+
+import { createIcon } from '@bymax-one/icons/runtime'
+
+/**
+ * The `printer-check` icon, line variant: printer check, job done, printed ok, finished printing.
+ *
+ * @since 0.1.0
+ */
+export const PrinterCheckIcon = /* @__PURE__ */ createIcon('printer-check', [
+  ['path', { d: 'M7.75 8.25v-3q0-1.5 1.5-1.5h6q1.5 0 1.5 1.5v3' }],
+  [
+    'path',
+    {
+      d: 'M7.25 16.25h-1.5c-1.75 0-2.5-.75-2.5-2.5v-3c0-1.75.75-2.5 2.5-2.5h13c1.75 0 2.5.75 2.5 2.5v1.741'
+    }
+  ],
+  ['path', { d: 'M8.25 14.25h8v.9m-3.26 5.1H8.25v-6' }],
+  ['path', { d: 'M14.75 17.75 17 20l4.5-4.5' }]
+])

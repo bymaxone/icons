@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Call ended",
+  "tags": ["phone x", "hang up", "missed call", "declined"],
+  "categories": ["communication"],
+  "useCases": ["Ends a call in progress", "Shows a missed or declined call"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

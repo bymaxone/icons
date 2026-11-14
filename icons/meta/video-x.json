@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Video failed",
+  "tags": ["video x", "playback error", "cancelled clip", "rejected video"],
+  "categories": ["media"],
+  "useCases": ["Shows a clip that cannot be played", "Cancels a video upload"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

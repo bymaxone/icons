@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Payment failed",
+  "tags": ["wallet x", "insufficient funds", "refused charge", "unpaid"],
+  "categories": ["commerce"],
+  "useCases": ["Shows a payment that was refused", "Flags an account without funds"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

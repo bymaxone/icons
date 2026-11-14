@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Add to cloud",
+  "tags": ["cloud plus", "new storage", "upload space", "extend"],
+  "categories": ["connectivity", "nature"],
+  "useCases": ["Adds storage space online", "Creates a new synced location"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

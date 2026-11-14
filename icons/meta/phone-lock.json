@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Locked phone",
+  "tags": ["phone lock", "secure device", "screen lock", "private line"],
+  "categories": ["communication"],
+  "useCases": ["Locks a mobile device", "Protects a private phone line"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

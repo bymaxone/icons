@@ -21,3 +21,6 @@ export const FileEditIcon = /* @__PURE__ */ createIcon('file-edit', [
   ['path', { d: 'M13.25 5.75V7c0 1.016.234 1.25 1.25 1.25h1.25' }],
   ['path', { d: 'm9.25 17.75.5-2L13.5 12l1.5 1.5-3.75 3.75z' }]
 ])
+
+/** `file-pen`: an alias of {@link FileEditIcon}. */
+export const FilePenIcon = FileEditIcon

@@ -1,0 +1,22 @@
+/**
+ * @fileoverview The `phone-x` icon, line variant.
+ * Written by `pnpm generate` from icons/line/phone-x.svg: edit the source, never this file.
+ * @layer Generated
+ */
+
+import { createIcon } from '@bymax-one/icons/runtime'
+
+/**
+ * The `phone-x` icon, line variant: phone x, hang up, missed call, declined.
+ *
+ * @since 0.1.0
+ */
+export const PhoneXIcon = /* @__PURE__ */ createIcon('phone-x', [
+  [
+    'path',
+    {
+      d: 'm8.25 4.25 1.5 3.5c.25.75 0 1.25-.5 1.75L7.75 11c1.076 2.152 2.522 3.748 4.498 4.948m-.188 3.428C7.068 16.542 3.176 11.399 3 7c0-1.25.75-2.25 2-2.25h2.5c.5 0 .75.25.75.5'
+    }
+  ],
+  ['path', { d: 'M15 14.75 20.25 20m0-5.25L15 20' }]
+])

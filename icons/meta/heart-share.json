@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Share love",
+  "tags": ["heart share", "send kindness", "pass on like", "gift"],
+  "categories": ["status"],
+  "useCases": ["Sends a liked item to a friend", "Shares a favorite post"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

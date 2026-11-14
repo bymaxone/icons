@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Pending user",
+  "tags": ["user clock", "waiting account", "late member", "awaiting approval"],
+  "categories": ["people"],
+  "useCases": ["Shows a person waiting for approval", "Marks an account with a pending date"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

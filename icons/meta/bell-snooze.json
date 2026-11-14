@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Snooze alert",
+  "tags": ["bell snooze", "remind later", "postpone", "quiet"],
+  "categories": ["status", "communication"],
+  "useCases": ["Postpones a reminder for later", "Silences an alert for a short time"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

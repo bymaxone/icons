@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Add viewer",
+  "tags": ["eye plus", "new watcher", "follow", "grant view"],
+  "categories": ["status"],
+  "useCases": ["Adds a person who can view an item", "Starts watching a record"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

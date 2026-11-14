@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Detach link",
+  "tags": ["link minus", "remove url", "shorten", "disconnect"],
+  "categories": ["actions"],
+  "useCases": ["Detaches a URL from an item", "Removes a hyperlink from text"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

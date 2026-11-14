@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Close home",
+  "tags": ["home x", "leave start", "cancel house", "dismiss"],
+  "categories": ["navigation"],
+  "useCases": ["Leaves the start page", "Closes a household record"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

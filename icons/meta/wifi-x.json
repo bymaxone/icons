@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "No connection",
+  "tags": ["wifi x", "signal lost", "network down", "disconnected"],
+  "categories": ["connectivity"],
+  "useCases": ["Shows a lost wireless signal", "Flags a network that is down"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

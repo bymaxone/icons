@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Share data",
+  "tags": ["database share", "publish records", "open dataset", "give access"],
+  "categories": ["data", "dev"],
+  "useCases": ["Gives others access to a data source", "Publishes a dataset to a team"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

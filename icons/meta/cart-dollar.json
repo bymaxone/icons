@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Cart total",
+  "tags": ["cart dollar", "order price", "checkout amount", "basket cost"],
+  "categories": ["commerce"],
+  "useCases": ["Shows the price of an order", "Displays the amount due at checkout"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}
