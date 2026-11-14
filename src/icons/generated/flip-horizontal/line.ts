@@ -12,6 +12,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
  * @since 0.1.0
  */
 export const FlipHorizontalIcon = /* @__PURE__ */ createIcon('flip-horizontal', [
-  ['path', { d: 'M12.25 3.25v18' }],
-  ['path', { d: 'm9.25 6.25-5.5 11.5h5.5zm6 0 5.5 11.5h-5.5z' }]
+  ['path', { d: 'm9.75 6.25-6.25 6 6.25 6z' }],
+  ['path', { d: 'm14.75 6.25 6.25 6-6.25 6z' }],
+  ['path', { d: 'M12.25 2.75v2m0 3.5v2m0 3.5v2m0 3.5v2' }]
 ])

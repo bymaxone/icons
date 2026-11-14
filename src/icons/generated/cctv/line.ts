@@ -12,7 +12,9 @@ import { createIcon } from '@bymax-one/icons/runtime'
  * @since 0.1.0
  */
 export const CctvIcon = /* @__PURE__ */ createIcon('cctv', [
-  ['path', { d: 'm3.25 7.25 12-3.5 2.5 6.5-12 3.5z' }],
-  ['path', { d: 'm17.75 10.25 3.5-1.5v4.5l-3.5-1.5' }],
-  ['path', { d: 'm7.75 14.25-1.5 6.5h-3' }]
+  ['path', { d: 'm8.458 3.969 9.397 3.42-1.916 5.262-9.397-3.42Z' }],
+  ['path', { d: 'm20.23 7.296 1.879.684-2.531 6.954-1.879-.684Z' }],
+  ['path', { d: 'M2 3.25v8' }],
+  ['path', { d: 'M2 6.6h1.1' }],
+  ['circle', { cx: 4.1, cy: 6.6, r: 1 }]
 ])

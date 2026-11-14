@@ -12,6 +12,11 @@ import { createIcon } from '@bymax-one/icons/runtime'
  * @since 0.1.0
  */
 export const SwipeRightIcon = /* @__PURE__ */ createIcon('swipe-right', [
-  ['circle', { cx: 7.25, cy: 17.25, r: 2.25 }],
-  ['path', { d: 'M4.25 10.25c3.5-4 11-4 14.5 0m-3.5.5 3.5-.5-.5-3.5' }]
+  [
+    'path',
+    {
+      d: 'M5.75 17.25V13a1.5 1.5 0 0 1 3 0v3.75a1.25 1.25 0 0 1 2.25 0 1.25 1.25 0 0 1 2.25.25v2.5c0 1.75-1.25 2.75-2.75 2.75H7.75c-1.5 0-2.5-.5-3.25-1.5l-1-1.5c-.5-.75.25-1.5 1.25-1z'
+    }
+  ],
+  ['path', { d: 'M5.25 6.25h13.5m-3-3 3 3-3 3' }]
 ])

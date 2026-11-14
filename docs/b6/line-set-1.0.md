@@ -8,10 +8,12 @@ Measured on the files of `icons/` when the set closed:
 
 | Folder         | Files |
 | -------------- | ----- |
-| `icons/line`   | 1,311 |
+| `icons/line`   | 1,303 |
 | `icons/filled` | 51    |
 | `icons/sm`     | 45    |
 | `icons/brands` | 14    |
+
+The set closed at 1,311 line icons. The founder then reviewed every icon as the catalogue shows it, 24 px at 1x in its cell, and eight were taken out of 1.0 for the next section; the counts above are measured after that review.
 
 Every candidate was matched against the file names of fourteen reference sets (names only, never drawings) and drawn only when at least three of them carry the same meaning.
 
@@ -25,6 +27,7 @@ The auditor's decisions, grouped by the reason. A name here was drawn or conside
 - **A letter or a symbol reading.** `tuning-fork` reads as a Y, `dart` as the male sign, `walker` as an A, `maracas` as 99, `roundabout` as a crosshair.
 - **Trademark and risk.** Silhouettes at risk of a registered shape (`sloth`, `walrus`, `otter`, `mole`, `lizard`), the `nfc` mark, and `hand-point`, whose single raised finger reads as an obscene gesture.
 - **The cog as a marker.** No `-cog` variant is drawn: rendered at 16 px the cog fills 47% of its badge box, against 17 to 36% for the other markers (spec section 2.5).
+- **Weak at catalogue size.** `bacon`, `butter`, `dumpling`, `shrimp`, `soda`, `cricket`, `crow` and `hedgehog` were niche and did not read in the catalogue cell, and were removed without a retry. Twenty-six drawings that did not read there were redrawn once instead (`docs/redraws/r2-catalogue-size.md`).
 - **Out of 1.0 by decision.** `zodiac-*` and `hurricane`.
 
 ## After 1.0

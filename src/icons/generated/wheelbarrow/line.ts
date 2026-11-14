@@ -12,8 +12,9 @@ import { createIcon } from '@bymax-one/icons/runtime'
  * @since 0.1.0
  */
 export const WheelbarrowIcon = /* @__PURE__ */ createIcon('wheelbarrow', [
-  ['path', { d: 'M6.25 7.25h15l-3 8h-9z' }],
-  ['path', { d: 'm6.25 7.25-3 9h4' }],
-  ['circle', { cx: 8.25, cy: 18.25, r: 2.5 }],
-  ['path', { d: 'm12.25 7.25 1.5-3' }]
+  ['path', { d: 'M3.25 7.25h15.5l-2.75 8H7z' }],
+  ['circle', { cx: 6.25, cy: 19.5, r: 2 }],
+  ['path', { d: 'M17.9 9.75h4.35' }],
+  ['path', { d: 'M16.9 12.75h5.35' }],
+  ['path', { d: 'M13.75 15.25v5.5' }]
 ])
