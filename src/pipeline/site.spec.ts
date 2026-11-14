@@ -8,8 +8,8 @@
  * Mocks: none.
  */
 
-import type { BrandMetadata, IconMetadata } from '../meta/icon-metadata.ts'
-import { BRAND_CATEGORY, catalogFrom, escapeHtml } from './site.ts'
+import type { BrandMetadata, FlagMetadata, IconMetadata } from '../meta/icon-metadata.ts'
+import { BRAND_CATEGORY, catalogFrom, escapeHtml, FLAG_CATEGORY } from './site.ts'
 import type { BuiltMetadata } from './site.ts'
 
 const ICON: IconMetadata = {
@@ -35,9 +35,20 @@ const BRAND: BrandMetadata = {
   since: '0.2.0'
 }
 
+const FLAG: FlagMetadata = {
+  title: 'Sweden',
+  code: 'SE',
+  source: 'https://example.com/flags/SE.svg',
+  license: 'MIT',
+  retrievedAt: '2026-11-14',
+  tags: ['se', 'swedish'],
+  since: '1.0.0'
+}
+
 const METADATA: BuiltMetadata = {
   icons: { zeta: { ...ICON, aliases: [], variants: ['line'] }, ring: ICON },
   brands: { zed: { ...BRAND, title: 'Zed' }, acme: BRAND },
+  flags: { 'se-flag': FLAG, 'no-flag': { ...FLAG, title: 'Norway', code: 'NO', tags: ['no'] } },
   categories: [{ name: 'status', title: 'Status' }]
 }
 
@@ -73,16 +84,18 @@ describe('escapeHtml', () => {
 describe('catalogFrom', () => {
   const catalog = catalogFrom(METADATA)
 
-  it('lists the icons in name order, then the brand marks', () => {
+  it('lists the icons in name order, then the brand marks and the flags', () => {
     /**
-     * Scenario: the grid shows icons alphabetically and the brand marks after them, whatever
-     * the order of the metadata records.
+     * Scenario: the grid shows icons alphabetically, the brand marks after them and the flags
+     * last, whatever the order of the metadata records.
      */
     expect(catalog.entries.map((entry) => [entry.kind, entry.name])).toEqual([
       ['icon', 'ring'],
       ['icon', 'zeta'],
       ['brand', 'acme'],
-      ['brand', 'zed']
+      ['brand', 'zed'],
+      ['flag', 'no-flag'],
+      ['flag', 'se-flag']
     ])
   })
 
@@ -128,11 +141,36 @@ describe('catalogFrom', () => {
     })
   })
 
-  it('lists the metadata categories, then the brands category', () => {
+  it('describes a flag under the flags category, with its title and its code as a tag', () => {
     /**
-     * Scenario: the category filter offers every category of the set and, last, Brands.
+     * Scenario: a flag has one drawing, its flag component, is listed under Flags, shows the
+     * English name of its region as its title and label, and is found by the tags the metadata
+     * holds, which include its code.
      */
-    expect(catalog.categories).toEqual([{ name: 'status', title: 'Status' }, BRAND_CATEGORY])
+    expect(catalog.entries[5]).toEqual({
+      name: 'se-flag',
+      kind: 'flag',
+      title: 'Sweden',
+      label: 'Sweden',
+      drawings: [{ variant: 'flag', component: 'SeFlagIcon' }],
+      categories: ['flags'],
+      tags: ['se', 'swedish'],
+      aliases: [],
+      useCases: [],
+      since: '1.0.0'
+    })
+  })
+
+  it('lists the metadata categories, then the brands and the flags categories', () => {
+    /**
+     * Scenario: the category filter offers every category of the set and, last, Brands and Flags.
+     */
+    expect(catalog.categories).toEqual([
+      { name: 'status', title: 'Status' },
+      BRAND_CATEGORY,
+      FLAG_CATEGORY
+    ])
     expect(BRAND_CATEGORY).toEqual({ name: 'brands', title: 'Brands' })
+    expect(FLAG_CATEGORY).toEqual({ name: 'flags', title: 'Flags' })
   })
 })

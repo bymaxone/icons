@@ -1,6 +1,6 @@
 /**
- * The Portuguese search terms of the catalog site, checked against the set itself: every icon
- * and brand mark has at least one, so a drawing added without its translation fails here, and
+ * The Portuguese search terms of the catalog site, checked against the set itself: every icon,
+ * brand mark and flag has at least one, so a drawing added without its translation fails here, and
  * the real searches a Brazilian reader types find what they mean.
  *
  * Layer: integration.
@@ -11,7 +11,7 @@
 import { readFileSync } from 'node:fs'
 import { join } from 'node:path'
 
-import { BRANDS, CATEGORIES, ICONS } from '../meta/generated/metadata.ts'
+import { BRANDS, CATEGORIES, FLAGS, ICONS } from '../meta/generated/metadata.ts'
 import { search, searchIndex } from './site-search.ts'
 import { catalogFrom } from './site.ts'
 
@@ -21,7 +21,7 @@ const terms = JSON.parse(
 const categoryTitles = JSON.parse(
   readFileSync(join(__dirname, '..', '..', 'site', 'categories-pt.json'), 'utf8')
 ) as Record<string, string>
-const catalog = catalogFrom({ icons: ICONS, brands: BRANDS, categories: CATEGORIES })
+const catalog = catalogFrom({ icons: ICONS, brands: BRANDS, flags: FLAGS, categories: CATEGORIES })
 const docs = searchIndex(catalog, terms, categoryTitles)
 
 /** Every icon the query finds, best first. */
@@ -35,7 +35,7 @@ const top = (query: string, count = 1): string[] =>
     .map((hit) => hit.name)
 
 describe('site/terms-pt.json', () => {
-  it('names exactly the icons and brand marks of the set', () => {
+  it('names exactly the icons, brand marks and flags of the set', () => {
     // Scenario: a new drawing without terms, or terms left behind by a rename, fail here.
     const names = catalog.entries.map((entry) => entry.name).sort()
     expect(Object.keys(terms).sort()).toStrictEqual(names)
@@ -52,7 +52,7 @@ describe('site/terms-pt.json', () => {
 })
 
 describe('site/categories-pt.json', () => {
-  it('titles exactly the categories of the catalog, brands included', () => {
+  it('titles exactly the categories of the catalog, brands and flags included', () => {
     // Scenario: a new category without its Portuguese title, or a title left behind by a
     // removed one, fails here; no title is blank.
     expect(Object.keys(categoryTitles).sort()).toStrictEqual(
