@@ -13,6 +13,7 @@ and deprecated, each rename with the alias that keeps the old name working.
 
 ### Changed
 
+- Five of the redrawn icons are out of 1.0 because their single redraw still did not read at 24 px in the catalogue cell: `wheelbarrow`, `garlic`, `nose`, `screen-rotation` and `crocodile`. The line set is 1,298.
 - Twenty-six line icons are redrawn after a review at catalogue size, 24 px at 1x in the catalogue cell: `antenna`, `oven`, `garlic`, `salt`, `lasso`, `mailbox`, `wall`, `cctv`, `wheelbarrow`, `lip-sync`, `lifebuoy`, `nose`, the four `swipe-*`, `extend`, `prism`, `flip-vertical`, `flip-horizontal`, `screen-rotation`, `projector`, `puzzle`, `crocodile`, `elephant` and `monkey`. Eight niche icons that did not read there are out of 1.0: `bacon`, `butter`, `dumpling`, `shrimp`, `soda`, `cricket`, `crow` and `hedgehog`.
 - The categories of the renamed icons are reviewed and `check:meta` now refuses a renamed icon that is not on `scripts/renames-reviewed.json`: `paint-roller` is in `editing` and `tools`, `stairs` in `household` and `commerce`, `speedometer` in `data`, `commerce` and `transport`, `droplet` in `nature` and `editing`, `mail-plus` in `communication` and `people`, `shapes` in `shapes` and `editing`, and `captions` is in `media`.
 - Tags and use cases are in American English: 45 British spellings in 36 icons are fixed and `check:meta` refuses the ones on its list. The tag `place of interest` of `command` is now `cmd key`, and `fish-off` no longer carries `pescatarian no`.

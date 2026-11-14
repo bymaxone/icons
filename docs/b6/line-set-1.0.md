@@ -8,12 +8,12 @@ Measured on the files of `icons/` when the set closed:
 
 | Folder         | Files |
 | -------------- | ----- |
-| `icons/line`   | 1,303 |
+| `icons/line`   | 1,298 |
 | `icons/filled` | 51    |
 | `icons/sm`     | 45    |
 | `icons/brands` | 14    |
 
-The set closed at 1,311 line icons. The founder then reviewed every icon as the catalogue shows it, 24 px at 1x in its cell, and eight were taken out of 1.0 for the next section; the counts above are measured after that review.
+The set closed at 1,311 line icons. The founder then reviewed every icon as the catalogue shows it, 24 px at 1x in its cell, and thirteen were taken out of 1.0, eight of them at once and five after their single redraw failed the same review; the counts above are measured after that review.
 
 Every candidate was matched against the file names of fourteen reference sets (names only, never drawings) and drawn only when at least three of them carry the same meaning.
 
@@ -27,7 +27,8 @@ The auditor's decisions, grouped by the reason. A name here was drawn or conside
 - **A letter or a symbol reading.** `tuning-fork` reads as a Y, `dart` as the male sign, `walker` as an A, `maracas` as 99, `roundabout` as a crosshair.
 - **Trademark and risk.** Silhouettes at risk of a registered shape (`sloth`, `walrus`, `otter`, `mole`, `lizard`), the `nfc` mark, and `hand-point`, whose single raised finger reads as an obscene gesture.
 - **The cog as a marker.** No `-cog` variant is drawn: rendered at 16 px the cog fills 47% of its badge box, against 17 to 36% for the other markers (spec section 2.5).
-- **Weak at catalogue size.** `bacon`, `butter`, `dumpling`, `shrimp`, `soda`, `cricket`, `crow` and `hedgehog` were niche and did not read in the catalogue cell, and were removed without a retry. Twenty-six drawings that did not read there were redrawn once instead (`docs/redraws/r2-catalogue-size.md`).
+- **Weak at catalogue size.** `bacon`, `butter`, `dumpling`, `shrimp`, `soda`, `cricket`, `crow` and `hedgehog` were niche and did not read in the catalogue cell, and were removed without a retry. Twenty-six drawings that did not read there were redrawn once instead (`docs/redraws/r2-catalogue-size.md`), and five of those were taken out when the redraw still did not read (the next entry).
+- **Redraw failed at catalogue size.** `wheelbarrow` read as a cart, `garlic` kept the silhouette of `onion`, `nose` read as a bulb or a drop, `screen-rotation` read as a padlock and `crocodile` was a thin strip with no reading. Each had its one attempt (`docs/redraws/r2-remove-five.md`).
 - **Out of 1.0 by decision.** `zodiac-*` and `hurricane`.
 
 ## After 1.0
@@ -35,4 +36,4 @@ The auditor's decisions, grouped by the reason. A name here was drawn or conside
 These are not rejected. They wait for 1.x, one attempt each with a new idea:
 
 - **Categories:** buildings beyond the few that read at 24 px, clothing, celebration, toys, music, and the balanced set of beliefs and places of worship (`church`, `mosque`, `synagogue`, `temple`, `yin-yang`).
-- **Deferred drawings, with the idea to try:** `passport` (the top half of a globe as an arc with a meridian, or an open booklet with a stamp), `football` (a ball with three curved panels), `baseball` (one stitched seam), `engine`, `axe` (a symmetric labrys), `repeat-once`, `popcorn` (kernels as separate rings), `smog`, `avalanche`, `earthquake` (cracked ground) and `sun-moon`.
+- **Deferred drawings, with the idea to try:** `wheelbarrow` (a bucket-shaped tray with the wheel in front and the handles drawn as two clearly separate lines, so it does not read as a cart), `garlic` (a bulb with the clove outlines as the whole drawing, and a tip), `nose` (a profile with the nostril), `screen-rotation` (a phone with two opposed arrows around its corners, no arc over the top), `crocodile` (a profile with the open jaw and the teeth), `passport` (the top half of a globe as an arc with a meridian, or an open booklet with a stamp), `football` (a ball with three curved panels), `baseball` (one stitched seam), `engine`, `axe` (a symmetric labrys), `repeat-once`, `popcorn` (kernels as separate rings), `smog`, `avalanche`, `earthquake` (cracked ground) and `sun-moon`.

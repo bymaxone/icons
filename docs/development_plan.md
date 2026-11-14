@@ -414,14 +414,14 @@ These rules apply to every phase. Phase sections only add rules specific to them
 
 ### B6: icon-expansion
 
-- **Goal:** A reference set of line icons before 1.0, with the quality bar of the earlier batches: 1,311 closed it on 2026-11-14 and the review at catalogue size left 1,303, and the set keeps growing in 1.x (founder decision, 2026-11-13). The closing report is [`b6/line-set-1.0.md`](./b6/line-set-1.0.md).
+- **Goal:** A reference set of line icons before 1.0, with the quality bar of the earlier batches: 1,311 closed it on 2026-11-14 and the review at catalogue size left 1,298, and the set keeps growing in 1.x (founder decision, 2026-11-13). The closing report is [`b6/line-set-1.0.md`](./b6/line-set-1.0.md).
 - **Why:** a founder decision of 2026-11-11: the set, the brand marks and the country flags all reach their size before the first publish.
 - **Inventory:** the concepts that at least three of fourteen open sets name and this set lacks, by name only: their drawings are never opened (spec section 3). The concepts are grouped into tiers by how many sets name them: A (eight or more), B (six or seven), C (five), D (four) and E (three). A category fill follows, until each category has real coverage.
 - **Taxonomy (2026-11-12):** one taxonomy of 32 categories, fixed before the waves, with English and Portuguese titles; a category joins `categories.json` with its first icon.
 - **Variants:** a `-circle` or `-square` form only where its meaning differs and the reference sets widely draw it; filled drawings only for a state; 16 px masters only on a measured failure.
 - **Waves:** sub-batches of 25 to 40 icons by family, each with the audit package of B5 and the same bar.
 - **Inventory file:** `docs/b6/coverage-inventory.csv` (concept, how many sets name it, tier, which sets, their categories), names only.
-- **Definition of Done:** every line icon that passed the bar merged and every sub-batch approved by the auditor, 1,303 line icons at the close, after the review at catalogue size. A candidate is drawn only when its name appears in at least three of the fourteen reference sets with the same meaning, a count measured per candidate from file names. The categories after 1.0 are not rejected: buildings (beyond the few that read at 24 px), clothing, celebration, toys and the balanced sets of beliefs and places of worship.
+- **Definition of Done:** every line icon that passed the bar merged and every sub-batch approved by the auditor, 1,298 line icons at the close, after the review at catalogue size. A candidate is drawn only when its name appears in at least three of the fourteen reference sets with the same meaning, a count measured per candidate from file names. The categories after 1.0 are not rejected: buildings (beyond the few that read at 24 px), clothing, celebration, toys and the balanced sets of beliefs and places of worship.
 - **B6-A1 ✅ (2026-11-12):** approved by the delegated auditor on behalf of the founder.
 - **B6-A2 ✅ (2026-11-12):** approved by the delegated auditor on behalf of the founder; `queued` renamed `hourglass`.
 - **B6-A3 ✅ (2026-11-12):** approved by the delegated auditor on behalf of the founder.
