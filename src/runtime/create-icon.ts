@@ -35,13 +35,13 @@ export interface IconComponent {
  * starting with a letter. The name becomes a class name and a component name, so
  * a space, an upper-case letter or a leading digit would make either ill-formed.
  */
-const ICON_NAME = /^[a-z][a-z0-9]*(?:-[a-z0-9]+)*$/
+export const ICON_NAME = /^[a-z][a-z0-9]*(?:-[a-z0-9]+)*$/
 
 /**
  * The component name for an icon name: each word capitalised, then `Icon`, so
  * `lightning-filled` becomes `LightningFilledIcon`.
  */
-function toComponentName(name: string): string {
+export function toComponentName(name: string): string {
   const words = name.split('-').map((word) => word.charAt(0).toUpperCase() + word.slice(1))
   return `${words.join('')}Icon`
 }

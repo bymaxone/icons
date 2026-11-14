@@ -57,9 +57,10 @@ const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 //     A package of a handful of icons, such as the placeholders of `fixtures/icons`, is held to a
 //     floor of 512 bytes for the root and 2 KiB for meta, because its fixed part outweighs
 //     the cost of an icon.
-//   - runtime, 1.25 KiB brotli: the `Icon` base, `createIcon`, the stroke maths and the
-//     accessibility rules, measured at 3614 bytes raw and 1206 bytes brotli. The headroom
-//     fits a small fix, while an inlined dependency such as React fails.
+//   - runtime, 1.75 KiB brotli: the `Icon` and `Flag` bases, `createIcon` and `createFlag`, the
+//     stroke maths, the view box reader and the accessibility rules, measured at 5976 bytes raw
+//     and 1617 bytes brotli. The headroom of 11% fits a small fix, while an inlined dependency
+//     such as React fails.
 //   - meta, a budget per record: `dist/meta/index.mjs` grows with every icon and brand, so its
 //     size follows the set. The fixed part (the grid, the deep
 //     freeze, the categories and the empty tables) measures 707 bytes brotli with every
@@ -90,7 +91,7 @@ const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 // components stays inside its own budget. Against 545 icons the largest module,
 // `octopus`, measures 0.90 KiB brotli.
 const BUDGETS = [
-  { name: 'runtime (Icon base)', path: 'dist/runtime/index.mjs', brotli: 1.25 * 1024 }
+  { name: 'runtime (Icon and Flag bases)', path: 'dist/runtime/index.mjs', brotli: 1.75 * 1024 }
 ]
 const MODULE_BUDGET = 1.5 * 1024
 

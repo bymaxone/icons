@@ -51,10 +51,11 @@ describe('public entry points', () => {
   it('exports only the documented names from each entry', () => {
     /**
      * Scenario: a barrel decides what is public; a name added to an entry by accident is
-     * new surface, so every list is pinned. The root and `./brands` add exactly the
-     * generated components.
+     * new surface, so every list is pinned. The runtime adds the flag base and factory,
+     * which the root does not re-export. The root and `./brands` add exactly the generated
+     * components.
      */
-    expect(Object.keys(runtime).sort()).toStrictEqual(['Icon', 'createIcon'])
+    expect(Object.keys(runtime).sort()).toStrictEqual(['Flag', 'Icon', 'createFlag', 'createIcon'])
     expect(Object.keys(meta).sort()).toStrictEqual([
       'BRAND_METADATA',
       'BRAND_NAMES',
