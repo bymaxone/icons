@@ -19,6 +19,16 @@ describe('BRITISH_SPELLINGS', () => {
     }
   })
 
+  it.each([
+    ['centred', 'centered'],
+    ['analysed', 'analyzed'],
+    ['organised', 'organized'],
+    ['colourful', 'colorful']
+  ])('asks for the American form %s -> %s as it is spelled', (british, american) => {
+    /** Scenario: a suffix glued onto a stem must give a real word, not a misspelling like centerd. */
+    expect(BRITISH_SPELLINGS.get(british)).toBe(american)
+  })
+
   it.each([...BRITISH_SPELLINGS])('flags %s and asks for %s', (british, american) => {
     /** Scenario: each listed spelling, alone and in a sentence in capitals, is found. */
     expect(britishWords(british)).toStrictEqual([{ british, american }])
