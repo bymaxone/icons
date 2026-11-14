@@ -2,15 +2,26 @@
  * @fileoverview The metadata check: it catches records that were overwritten or copied
  * instead of written. Two icons may share a label only through the allowlist, each group with
  * its written justification; an icon's use cases are never empty and never the same list as
- * another icon's; and no label is a placeholder. Brand marks have no label or use cases and
+ * another icon's; no label is a placeholder; and no tag names a type of the catalogue. Brand marks have no label or use cases and
  * are out of scope.
  * @layer Pipeline
  */
 
 import type { IconSet } from './icon-set.ts'
+import { fold } from './site-search.ts'
 
 /** The labels that stand for "not written yet", compared in lower case and trimmed. A blank label is one too. */
 export const PLACEHOLDER_LABELS: readonly string[] = ['todo', 'icon', 'untitled', 'label']
+
+/**
+ * The words of a tag that name a type of the catalogue, which the search reads as the type
+ * filter: a tag holding one makes the search for that type find an icon that has no such
+ * drawing. Matched as whole words in the tag as the search folds it: accents removed, lower
+ * case and every run of other characters one space, so `16-px` and `Filled!` are caught too.
+ */
+export const TYPE_WORDS: readonly string[] = ['filled', 'sm', '16 px', '16px']
+
+const TYPE_WORD = /(?:^| )(filled|sm|16 ?px)(?: |$)/
 
 /** Where the allowlist is named in the messages, from the repository root. */
 export const META_ALLOWLIST = 'scripts/meta-allowlist.json'
@@ -19,6 +30,7 @@ export const META_ALLOWLIST = 'scripts/meta-allowlist.json'
 export interface MetaRecord {
   readonly name: string
   readonly label: string
+  readonly tags: readonly string[]
   readonly useCases: readonly string[]
 }
 
@@ -41,6 +53,7 @@ export function metaRecords(set: IconSet): MetaRecord[] {
   return set.icons.map(({ name, meta }) => ({
     name,
     label: meta.label,
+    tags: meta.tags,
     useCases: meta.useCases
   }))
 }
@@ -121,6 +134,20 @@ function labelIssues(
   return [...placeholders, ...joined, ...entries]
 }
 
+/** The tags that hold a word naming a type of the catalogue, one message for each. */
+function tagIssues(records: readonly MetaRecord[]): string[] {
+  return records.flatMap(({ name, tags }) =>
+    tags.flatMap((tag) => {
+      const word = TYPE_WORD.exec(fold(tag))?.[1]
+      return word === undefined
+        ? []
+        : [
+            `${name}: tag ${JSON.stringify(tag)} holds the type word "${word}", which the search reads as a filter. Write the tag without it.`
+          ]
+    })
+  )
+}
+
 /** The problems of the use cases: an empty list, and a list another icon has too. */
 function useCaseIssues(records: readonly MetaRecord[]): string[] {
   const empty = records
@@ -145,7 +172,8 @@ function useCaseIssues(records: readonly MetaRecord[]): string[] {
  * Compares the metadata of the icons with the rules, so a record that was overwritten or
  * copied fails: a label that is a placeholder, a label shared by icons the allowlist does not
  * list as a group, an entry whose group changed, has fewer than two icons or has no
- * justification, an empty `useCases` and a `useCases` list that another icon has too.
+ * justification, an empty `useCases`, a `useCases` list that another icon has too and a tag that
+ * holds a type word.
  *
  * @param records - The records of the icons the check covers.
  * @param allowlist - The groups that may share a label, by label.
@@ -155,5 +183,5 @@ export function metaIssues(
   records: readonly MetaRecord[],
   allowlist: Readonly<Record<string, AllowedLabel>>
 ): string[] {
-  return [...labelIssues(records, allowlist), ...useCaseIssues(records)]
+  return [...labelIssues(records, allowlist), ...useCaseIssues(records), ...tagIssues(records)]
 }

@@ -1,7 +1,7 @@
 /**
  * @fileoverview The command behind `pnpm check:meta`: it reads the metadata of every icon and
- * fails on a placeholder label, a label shared outside `scripts/meta-allowlist.json` and an
- * empty or repeated `useCases`. Returns an exit code and prints through the output it is given.
+ * fails on a placeholder label, a label shared outside `scripts/meta-allowlist.json`, an
+ * empty or repeated `useCases` and a tag that holds a type word. Returns an exit code and prints through the output it is given.
  * @layer Pipeline
  */
 
