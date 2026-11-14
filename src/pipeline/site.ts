@@ -82,6 +82,29 @@ export function escapeHtml(text: string): string {
 }
 
 /**
+ * Builds the catalog entries of the flags.
+ *
+ * @param flags - The `flags` table of `dist/metadata.json`.
+ * @returns One entry per flag in name order, filed under the flags category.
+ */
+function flagEntries(flags: BuiltMetadata['flags']): CatalogEntry[] {
+  return Object.entries(flags)
+    .sort(([a], [b]) => a.localeCompare(b))
+    .map(([name, flag]): CatalogEntry => ({
+      name,
+      kind: 'flag',
+      title: flag.title,
+      label: flag.title,
+      drawings: [{ variant: 'flag', component: componentName(name, 'flag') }],
+      categories: [FLAG_CATEGORY.name],
+      tags: flag.tags,
+      aliases: [],
+      useCases: [],
+      since: flag.since
+    }))
+}
+
+/**
  * Builds the catalog from the built metadata.
  *
  * @param metadata - The content of `dist/metadata.json`.
@@ -120,20 +143,7 @@ export function catalogFrom(metadata: BuiltMetadata): Catalog {
       useCases: [],
       since: brand.since
     }))
-  const flags = Object.entries(metadata.flags)
-    .sort(([a], [b]) => a.localeCompare(b))
-    .map(([name, flag]): CatalogEntry => ({
-      name,
-      kind: 'flag',
-      title: flag.title,
-      label: flag.title,
-      drawings: [{ variant: 'flag', component: componentName(name, 'flag') }],
-      categories: [FLAG_CATEGORY.name],
-      tags: flag.tags,
-      aliases: [],
-      useCases: [],
-      since: flag.since
-    }))
+  const flags = flagEntries(metadata.flags)
   return {
     entries: [...icons, ...brands, ...flags],
     categories: [...metadata.categories, BRAND_CATEGORY, FLAG_CATEGORY]
