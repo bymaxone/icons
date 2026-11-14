@@ -13,6 +13,7 @@ import { existsSync, readdirSync, readFileSync } from 'node:fs'
 import { join } from 'node:path'
 
 import { FLAG_METADATA, FLAG_NAMES } from '../meta'
+import type { FlagMetadata } from '../meta'
 import { parseSvg, svgRoot } from '../pipeline/svg.ts'
 import type { SvgElementNode } from '../pipeline/svg.ts'
 
@@ -25,6 +26,9 @@ const SOURCE_PACKAGE = JSON.parse(readFileSync(join(SOURCE, 'package.json'), 'ut
   version: string
   license: string
 }
+/** Widened so the spec type-checks in the fixture package, which ships no flag. */
+const NAMES: readonly string[] = FLAG_NAMES
+const METADATA: Readonly<Record<string, FlagMetadata>> = FLAG_METADATA
 const VERSION = PACKAGE.devDependencies['country-flag-icons']
 const TRADEMARKS = readFileSync(join(ROOT, 'TRADEMARKS.md'), 'utf8')
 
@@ -88,19 +92,19 @@ describe('flag provenance', () => {
     const files = readdirSync(join(SOURCE, '3x2'))
       .filter((file) => file.endsWith('.svg'))
       .map((file) => file.slice(0, -'.svg'.length))
-    const shipped = FLAG_NAMES.map((name) => FLAG_METADATA[name].code)
+    const shipped = NAMES.map((name) => METADATA[name]!.code)
     expect(shipped).toHaveLength(250)
     expect(new Set(shipped).size).toBe(250)
     expect([...shipped, ...DEFERRED].sort()).toStrictEqual([...files].sort())
   })
 
-  it.each(FLAG_NAMES)('names the file of %s in the source as its source', (name) => {
+  it.each(NAMES)('names the file of %s in the source as its source', (name) => {
     /**
      * Scenario: `source` is where the drawing was taken from (schemas/flag.schema.json): the
      * file of the code at the pinned version, which exists in the installed package, and the
      * name is the lower-case code and `-flag`.
      */
-    const meta = FLAG_METADATA[name]
+    const meta = METADATA[name]!
     expect(name).toBe(`${meta.code.toLowerCase()}-flag`)
     expect(meta.source).toBe(
       `https://gitlab.com/catamphetamine/country-flag-icons/-/blob/v${VERSION}/flags/3x2/${meta.code}.svg`
@@ -109,13 +113,13 @@ describe('flag provenance', () => {
     expect(meta.license).toBe(SOURCE_PACKAGE.license)
   })
 
-  it.each(FLAG_NAMES)('keeps the view box, the shapes and the path data of %s', (name) => {
+  it.each(NAMES)('keeps the view box, the shapes and the path data of %s', (name) => {
     /**
      * Scenario: a flag is official geometry kept as published: its view box, its shapes in
      * paint order and the geometry of each, path data included, equal the source's, whatever the
      * formatter did to groups, colours and attributes.
      */
-    const { code } = FLAG_METADATA[name]
+    const { code } = METADATA[name]!
     const source = readFileSync(join(SOURCE, '3x2', `${code}.svg`), 'utf8')
     const flag = readFileSync(join(ROOT, 'icons', 'flags', `${name}.svg`), 'utf8')
     const viewBox = (text: string): string | undefined =>
