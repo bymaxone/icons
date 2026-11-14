@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/brand.schema.json",
+  "title": "Viber",
+  "source": "https://github.com/simple-icons/simple-icons/blob/16.37.0/icons/viber.svg",
+  "guidelines": "https://www.viber.com/brand-center",
+  "license": "CC0-1.0",
+  "retrievedAt": "2026-11-14",
+  "tags": ["messenger", "chat", "calls", "messaging"],
+  "since": "1.0.0"
+}

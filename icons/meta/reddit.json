@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/brand.schema.json",
+  "title": "Reddit",
+  "source": "https://github.com/simple-icons/simple-icons/blob/16.37.0/icons/reddit.svg",
+  "guidelines": "https://www.redditinc.com/brand",
+  "license": "CC0-1.0",
+  "retrievedAt": "2026-11-14",
+  "tags": ["forum", "community", "subreddit", "social news"],
+  "since": "1.0.0"
+}

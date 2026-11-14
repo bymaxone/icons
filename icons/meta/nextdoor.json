@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/brand.schema.json",
+  "title": "Nextdoor",
+  "source": "https://github.com/simple-icons/simple-icons/blob/16.37.0/icons/nextdoor.svg",
+  "guidelines": "https://about.nextdoor.com/nextdoor-brand-use-guidelines/",
+  "license": "CC0-1.0",
+  "retrievedAt": "2026-11-14",
+  "tags": ["wordmark", "neighborhood", "local", "community", "social network"],
+  "since": "1.0.0"
+}

@@ -1,0 +1,26 @@
+/**
+ * @fileoverview The Messenger brand mark.
+ * Written by `pnpm generate` from icons/brands/messenger.svg: edit the source, never this file.
+ * @layer Generated
+ */
+
+import { createIcon } from '@bymax-one/icons/runtime'
+
+/**
+ * The Messenger brand mark, from https://github.com/simple-icons/simple-icons/blob/16.37.0/icons/messenger.svg (CC0-1.0, retrieved 2026-11-14).
+ * The mark belongs to its owner and is not covered by the MIT grant; see TRADEMARKS.md and https://about.meta.com/brand/resources/facebook/messenger-icon.
+ *
+ * @since 1.0.0
+ */
+export const MessengerBrandIcon = /* @__PURE__ */ createIcon(
+  'messenger-brand',
+  [
+    [
+      'path',
+      {
+        d: 'M12 2C6.367 2 2 6.127 2 11.7c0 2.916 1.195 5.434 3.14 7.175a.8.8 0 0 1 .27.57l.054 1.778a.8.8 0 0 0 1.123.709l1.984-.878a.8.8 0 0 1 .534-.038A10.8 10.8 0 0 0 12 21.4c5.633 0 10-4.127 10-9.7S17.633 2 12 2m5.672 6.2c.435-.025.809.472.525.912l-3.482 5.38a.59.59 0 0 1-.814.174l-3.225-2.087a.37.37 0 0 0-.409.006l-3.635 2.508c-.531.365-1.18-.264-.83-.805l3.483-5.38a.59.59 0 0 1 .814-.176l3.225 2.088c.125.08.287.078.41-.006l3.634-2.507a.6.6 0 0 1 .304-.108'
+      }
+    ]
+  ],
+  { paint: 'fill' }
+)

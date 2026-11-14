@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/brand.schema.json",
+  "title": "Bluesky",
+  "source": "https://github.com/simple-icons/simple-icons/blob/16.37.0/icons/bluesky.svg",
+  "guidelines": "https://bsky.social/about/support/branding",
+  "license": "CC0-1.0",
+  "retrievedAt": "2026-11-14",
+  "tags": ["social network", "microblog", "decentralized", "post"],
+  "since": "1.0.0"
+}

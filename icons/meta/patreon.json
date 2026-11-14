@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/brand.schema.json",
+  "title": "Patreon",
+  "source": "https://github.com/simple-icons/simple-icons/blob/16.37.0/icons/patreon.svg",
+  "guidelines": "https://www.patreon.com/brand",
+  "license": "CC0-1.0",
+  "retrievedAt": "2026-11-14",
+  "tags": ["creators", "membership", "subscription", "support"],
+  "since": "1.0.0"
+}

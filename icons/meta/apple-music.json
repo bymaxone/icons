@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/brand.schema.json",
+  "title": "Apple Music",
+  "source": "https://github.com/simple-icons/simple-icons/blob/16.37.0/icons/applemusic.svg",
+  "guidelines": "https://marketing.services.apple/apple-music-identity-guidelines",
+  "license": "CC0-1.0",
+  "retrievedAt": "2026-11-14",
+  "tags": ["music", "streaming", "songs", "apple"],
+  "since": "1.0.0"
+}
