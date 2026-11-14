@@ -14,6 +14,10 @@ import { fileURLToPath } from 'node:url'
 import { brotliCompressSync, constants } from 'node:zlib'
 
 import {
+  FLAG_MODULE_BYTES,
+  FLAGS_BASE_BYTES,
+  FLAGS_CAP_BYTES,
+  FLAGS_FLAG_BYTES,
   BRANDS_BASE_BYTES,
   BRANDS_CAP_BYTES,
   BRANDS_MARK_BYTES,
@@ -24,6 +28,8 @@ import {
   ROOT_CAP_BYTES,
   ROOT_ICON_BYTES,
   brandsLimit,
+  flagCost,
+  flagsLimit,
   iconCost,
   markCost,
   metaLimit,
@@ -76,6 +82,11 @@ const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 //     a longer path, so the limit is 5 + 465 * marks, within a floor of 5 KiB and a sanity cap of
 //     64 KiB, room for about 140 marks; the arithmetic is `src/pipeline/meta-budget.ts`. An
 //     inline of the runtime still fails.
+//   - flags: `dist/flags/index.mjs` holds one re-export line per flag, through the flag's own
+//     subpath, so its size follows the set: 5 bytes brotli with no flag and 733 with 250, 2.9
+//     bytes a flag. The budget is 3.5 bytes a flag above a base of 5, within a floor of 512
+//     bytes and a cap of 8 KiB. Each flag's own module, `dist/flags/<name>/index.mjs`, is held
+//     to 2 KiB brotli: the largest of the 250 measures 1,505 bytes, 403 on average.
 //
 // Each icon component is measured by `scripts/check-component-size.mjs`, against the targets
 // of the specification: the component a consumer imports, bundled and tree-shaken, at most
@@ -131,9 +142,10 @@ function measure(name, raw, limit) {
 
 for (const { name, path, brotli: limit } of BUDGETS) measure(name, readArtifact(path), limit)
 
-// The meta bundle is budgeted per record: icons and brands in the merged metadata.
+// The meta bundle is budgeted per record: icons, brands and flags in the merged metadata.
 const merged = JSON.parse(readArtifact('dist/metadata.json').toString('utf8'))
-const records = Object.keys(merged.icons).length + Object.keys(merged.brands).length
+const flagCount = Object.keys(merged.flags).length
+const records = Object.keys(merged.icons).length + Object.keys(merged.brands).length + flagCount
 const rootBundle = readArtifact('dist/index.mjs')
 const iconCount = Object.keys(merged.icons).length
 measure('root (re-exports)', rootBundle, rootLimit(iconCount))
@@ -142,9 +154,22 @@ const brandsBundle = readArtifact('dist/brands/index.mjs')
 const brandCount = Object.keys(merged.brands).length
 measure('brands (brand marks)', brandsBundle, brandsLimit(brandCount))
 const brandCost = markCost(brotliCompressSync(brandsBundle, BROTLI_OPTS).length, brandCount)
+const flagsBundle = readArtifact('dist/flags/index.mjs')
+measure('flags (re-exports)', flagsBundle, flagsLimit(flagCount))
+const flagCostBytes = flagCost(brotliCompressSync(flagsBundle, BROTLI_OPTS).length, flagCount)
 const metaBundle = readArtifact('dist/meta/index.mjs')
 measure('meta (typed metadata)', metaBundle, metaLimit(records))
 const metaCost = recordCost(brotliCompressSync(metaBundle, BROTLI_OPTS).length, records)
+
+// One directory per flag entry, `dist/flags/<name>/index.mjs`, each held to its own budget: a
+// consumer who imports one flag loads this module and nothing else of the flags.
+const flagsDir = resolve(ROOT, 'dist', 'flags')
+const flagEntries = existsSync(flagsDir)
+  ? readdirSync(flagsDir, { withFileTypes: true }).filter((entry) => entry.isDirectory())
+  : []
+for (const { name } of flagEntries) {
+  measure(`flag ${name}`, readArtifact(`dist/flags/${name}/index.mjs`), FLAG_MODULE_BYTES)
+}
 
 // One directory per icon entry, `dist/icons/<name>/index.mjs`; none before the first drawing.
 const iconsDir = resolve(ROOT, 'dist', 'icons')
@@ -177,6 +202,10 @@ console.log(
 console.log(
   `  brands: ${brandCost.toFixed(1)} bytes brotli per mark over ${brandCount} marks ` +
     `(budget ${BRANDS_MARK_BYTES} above a base of ${BRANDS_BASE_BYTES}, cap ${fmt(BRANDS_CAP_BYTES)})`
+)
+console.log(
+  `  flags: ${flagCostBytes.toFixed(1)} bytes brotli per flag over ${flagCount} flags ` +
+    `(budget ${FLAGS_FLAG_BYTES} above a base of ${FLAGS_BASE_BYTES}, cap ${fmt(FLAGS_CAP_BYTES)}; a module of one flag, ${fmt(FLAG_MODULE_BYTES)})`
 )
 console.log(
   `  meta: ${metaCost.toFixed(1)} bytes brotli per record over ${records} records ` +
