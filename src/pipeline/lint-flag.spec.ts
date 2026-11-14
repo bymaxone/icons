@@ -245,6 +245,35 @@ describe('lintFlag: paint', () => {
   })
 })
 
+describe('lintFlag: numbers', () => {
+  it.each([
+    ['cx', '0x10', 'circle'],
+    ['r', '10px', 'circle'],
+    ['rx', '', 'ellipse'],
+    ['width', '1 2', 'rect'],
+    ['height', 'wide', 'rect'],
+    ['stroke-width', '1e', 'path'],
+    ['stroke-miterlimit', '0b1', 'path']
+  ])('refuses %s="%s" on a %s', (name, value, tag) => {
+    /**
+     * Scenario: a numeric attribute holds one SVG number; `Number()` would read `0x10` as 16
+     * and a blank as 0, so the raw SVG and the generated component would disagree.
+     */
+    const text = written(`<${tag} fill="#ffffff" ${name}="${value}"/>`)
+    expect(messages(lint(text).issues, 'svg-fill')).toStrictEqual([
+      `<${tag}> ${name}="${value}" must be a number`
+    ])
+  })
+
+  it('accepts a number in every notation of SVG', () => {
+    /** Scenario: signs, a leading or trailing point and an exponent are numbers. */
+    const text = flagDrawing(
+      '<rect fill="#ffffff" x="-.5" y="+1." width="2e1" height="1.5E+1" rx="0"/>'
+    )
+    expect(messages(lint(text).issues, 'svg-fill')).toStrictEqual([])
+  })
+})
+
 describe('lintFlag: precision', () => {
   it('reports more than three decimals and an exponent, in the view box and the elements', () => {
     /**

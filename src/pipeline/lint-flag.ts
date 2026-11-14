@@ -52,6 +52,21 @@ const NUMBER_TEXT = /^[-+]?(?:\d*\.\d+|\d+\.?)(?:[eE][-+]?\d+)?$/
 /** Every number in an attribute value, in any notation SVG accepts. */
 const NUMBER = /[-+]?(?:\d*\.\d+|\d+\.?)(?:[eE][-+]?\d+)?/g
 
+/** The attributes whose value is one number: the geometry of the shapes and the stroke metrics. */
+const NUMERIC = [
+  'cx',
+  'cy',
+  'r',
+  'rx',
+  'ry',
+  'x',
+  'y',
+  'width',
+  'height',
+  'stroke-width',
+  'stroke-miterlimit'
+]
+
 /** The values an attribute that names a keyword may take. */
 const KEYWORDS: ReadonlyMap<string, readonly string[]> = new Map([
   ['fill-rule', ['nonzero', 'evenodd']],
@@ -102,7 +117,7 @@ function attributeMessages(elements: readonly CheckedElement[]): string[] {
   )
 }
 
-/** Colours are `#rrggbb` or `none`; `opacity` is a number from 0 to 1; keywords are known. */
+/** Colours are `#rrggbb` or `none`; a numeric attribute and `opacity` are numbers; keywords are known. */
 function paintMessages(elements: readonly CheckedElement[]): string[] {
   return elements.flatMap(({ tag, attributes }) => {
     const colours = COLOURS.flatMap((name) => {
@@ -116,13 +131,19 @@ function paintMessages(elements: readonly CheckedElement[]): string[] {
       opacity === undefined || (level >= 0 && level <= 1)
         ? []
         : [`<${tag}> opacity="${opacity}" must be a number from 0 to 1`]
+    const numbers = NUMERIC.flatMap((name) => {
+      const value = attributes[name]
+      return value === undefined || NUMBER_TEXT.test(value)
+        ? []
+        : [`<${tag}> ${name}="${value}" must be a number`]
+    })
     const keywords = [...KEYWORDS].flatMap(([name, allowed]) => {
       const value = attributes[name]
       return value === undefined || allowed.includes(value)
         ? []
         : [`<${tag}> ${name}="${value}" must be one of ${allowed.join(', ')}`]
     })
-    return [...colours, ...opacityMessages, ...keywords]
+    return [...colours, ...numbers, ...opacityMessages, ...keywords]
   })
 }
 

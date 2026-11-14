@@ -54,6 +54,21 @@ describe('normalizeFlag: what it keeps', () => {
     ).toBe(true)
   })
 
+  it('keeps a view box that equals the width and the height of the source', () => {
+    /**
+     * Scenario: SVGO's `removeViewBox` drops a view box that matches the root size; it is not in
+     * the default preset of this SVGO, and the flag formatter keeps the view box either way.
+     */
+    expect(
+      normalizeFlag(
+        flag(
+          '<path fill="#fff" d="M0 0h513v342z"/>',
+          'viewBox="0 0 513 342" width="513" height="342"'
+        )
+      )
+    ).toBe(`${ROOT}\n  <path fill="#ffffff" d="M0 0h513v342z"/>\n</svg>\n`)
+  })
+
   it('writes a root with the namespace alone when the source has no view box', () => {
     /** Scenario: nothing is invented; the lint reports the missing view box. */
     expect(normalizeFlag('<svg><path fill="#fff" d="M0 0h1v1z"/></svg>')).toBe(
