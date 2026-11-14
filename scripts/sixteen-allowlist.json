@@ -20,6 +20,10 @@
       "pairs": ["0-2"],
       "why": "the cable fuses with the cabin outline; it still reads as a cable car"
     },
+    "cctv": {
+      "pairs": ["0-1", "0-4"],
+      "why": "the hood and the joint close on the body at 16 px; the bracket, the tilted body and the hood still read as a wall camera"
+    },
     "chart-donut": {
       "pairs": ["0-1"],
       "why": "the two slices fuse across the gap between them; it still reads as a donut chart"
@@ -255,6 +259,10 @@
     "webhook-off": {
       "pairs": ["1-2", "1-3"],
       "why": "the upper node fuses with the arc and the arrow beside it; it still reads as a disabled webhook"
+    },
+    "wheelbarrow": {
+      "pairs": ["0-1"],
+      "why": "the wheel closes on the tray at 16 px; the tray, the wheel, the handles and the leg still read as a wheelbarrow"
     },
     "wifi-lock": {
       "pairs": ["0-3"],
