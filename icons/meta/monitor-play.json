@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Screen playback",
+  "tags": ["monitor play", "play on desktop", "cast video", "screen show"],
+  "categories": ["devices", "media"],
+  "useCases": ["Plays a video on a desktop screen", "Starts a presentation on a display"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

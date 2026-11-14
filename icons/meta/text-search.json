@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Find text",
+  "tags": ["text search", "look up words", "search document", "locate phrase"],
+  "categories": ["text"],
+  "useCases": ["Looks for words in a document", "Finds a phrase in a page"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

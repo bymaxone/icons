@@ -16,3 +16,6 @@ export const ListChecksIcon = /* @__PURE__ */ createIcon('list-checks', [
   ['path', { d: 'M11.25 6.5h9m-9 6h9m-9 6h9' }],
   ['path', { d: 'M5.5 18.5h.01' }]
 ])
+
+/** `list-check`: an alias of {@link ListChecksIcon}. */
+export const ListCheckIcon = ListChecksIcon

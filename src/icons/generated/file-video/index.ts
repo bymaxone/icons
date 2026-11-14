@@ -4,5 +4,5 @@
  * @layer Generated
  */
 
-export { FileVideoIcon } from './line'
-export { FileVideoSmIcon } from './sm'
+export { FilePlayIcon, FileVideoIcon } from './line'
+export { FilePlaySmIcon, FileVideoSmIcon } from './sm'

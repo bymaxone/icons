@@ -36,6 +36,14 @@
       "pairs": ["0-1"],
       "why": "the crease fuses with the outline at the family's cut; the silhouette still reads as a document"
     },
+    "copy-check": {
+      "pairs": ["0-1"],
+      "why": "the two sheets fuse where they overlap; it still reads as a copied document"
+    },
+    "copy-plus": {
+      "pairs": ["0-1"],
+      "why": "the two sheets fuse where they overlap; it still reads as a copy with a plus"
+    },
     "database-lock": {
       "pairs": ["0-2"],
       "why": "the lock badge fuses with the cylinder outline; it still reads as a locked database"
@@ -196,6 +204,10 @@
       "pairs": ["0-2"],
       "why": "the band line fuses with the body outline; it still reads as a shaker"
     },
+    "pharmacy": {
+      "pairs": ["0-1"],
+      "why": "the awning fuses with the walls; it still reads as a pharmacy"
+    },
     "podcast": {
       "pairs": ["1-2"],
       "why": "the two broadcast arcs touch; it still reads as a podcast"
@@ -235,6 +247,10 @@
     "wallet-x": {
       "pairs": ["0-2"],
       "why": "the strap line fuses with the wallet outline; it still reads as a wallet with a cross"
+    },
+    "webhook-off": {
+      "pairs": ["1-2", "1-3"],
+      "why": "the upper node fuses with the arc and the arrow beside it; it still reads as a disabled webhook"
     },
     "wifi-lock": {
       "pairs": ["0-3"],

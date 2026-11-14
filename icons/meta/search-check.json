@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Search verified",
+  "tags": ["search check", "match found", "confirmed result", "valid query"],
+  "categories": ["navigation"],
+  "useCases": ["Confirms that a result was found", "Marks a verified match"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

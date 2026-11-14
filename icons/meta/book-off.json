@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Book unavailable",
+  "tags": ["book off", "closed library", "hidden title", "no reading"],
+  "categories": ["files", "science"],
+  "useCases": ["Shows that a title cannot be read", "Disables reading material"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

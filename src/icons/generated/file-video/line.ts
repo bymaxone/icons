@@ -26,3 +26,6 @@ export const FileVideoIcon = /* @__PURE__ */ createIcon('file-video', [
     }
   ]
 ])
+
+/** `file-play`: an alias of {@link FileVideoIcon}. */
+export const FilePlayIcon = FileVideoIcon

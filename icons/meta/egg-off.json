@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Egg free",
+  "tags": ["egg free", "no eggs", "allergen", "vegan diet"],
+  "categories": ["food", "nature"],
+  "useCases": ["Labels a dish without eggs", "Warns that an ingredient is absent"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

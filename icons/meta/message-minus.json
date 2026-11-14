@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Remove message",
+  "tags": ["message minus", "delete chat", "hide comment", "drop reply"],
+  "categories": ["communication"],
+  "useCases": ["Deletes a message from a conversation", "Removes a comment from a thread"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

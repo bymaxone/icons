@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Remove location",
+  "tags": ["map pin minus", "delete place", "drop pin", "unsave address"],
+  "categories": ["maps"],
+  "useCases": ["Removes a place from the saved list", "Deletes a pin from a map"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Screen off",
+  "tags": ["monitor off", "display asleep", "blank screen", "power saving"],
+  "categories": ["devices"],
+  "useCases": ["Shows a display that is turned off", "Marks a screen in sleep mode"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

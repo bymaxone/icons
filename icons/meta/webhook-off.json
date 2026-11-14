@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Webhook paused",
+  "tags": ["webhook off", "stopped callback", "disabled integration", "api silent"],
+  "categories": ["dev", "connectivity"],
+  "useCases": ["Pauses a webhook delivery", "Disconnects an integration callback"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

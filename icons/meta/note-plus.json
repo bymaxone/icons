@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Add note",
+  "tags": ["note plus", "new memo", "jot down", "extra comment"],
+  "categories": ["text", "files"],
+  "useCases": ["Creates a new memo", "Attaches another comment to an item"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

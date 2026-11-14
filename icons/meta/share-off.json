@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Sharing disabled",
+  "tags": ["share off", "private item", "no sending", "unlinked"],
+  "categories": ["actions"],
+  "useCases": ["Turns off sharing for a project", "Marks an item as private"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

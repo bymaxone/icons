@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Monument",
+  "tags": ["monument", "landmark", "memorial", "sightseeing"],
+  "categories": ["maps"],
+  "useCases": ["Marks a historic landmark", "Points to a place worth visiting"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

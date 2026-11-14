@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Delete alarm",
+  "tags": ["alarm clock minus", "remove reminder", "clear wake time", "drop alert"],
+  "categories": ["time"],
+  "useCases": ["Deletes a saved reminder", "Removes a wake up time"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

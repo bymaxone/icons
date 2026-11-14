@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Copied",
+  "tags": ["copy check", "duplicated ok", "clipboard done", "paste ready"],
+  "categories": ["actions"],
+  "useCases": ["Confirms that a value reached the clipboard", "Shows a finished duplication"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

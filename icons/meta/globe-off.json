@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Offline world",
+  "tags": ["globe off", "no internet", "disabled region", "language off"],
+  "categories": ["connectivity", "maps"],
+  "useCases": ["Shows that web access is disabled", "Turns off a language or region"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

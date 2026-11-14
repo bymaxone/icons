@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Police station",
+  "tags": ["police station", "law enforcement", "precinct", "public safety"],
+  "categories": ["maps"],
+  "useCases": ["Marks a police office on a map", "Shows a public safety building"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

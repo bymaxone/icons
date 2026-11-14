@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Network down",
+  "tags": ["network off", "detached nodes", "broken topology", "service outage"],
+  "categories": ["connectivity", "dev"],
+  "useCases": ["Shows that services are disconnected", "Flags an infrastructure outage"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

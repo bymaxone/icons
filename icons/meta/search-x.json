@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "No results",
+  "tags": ["search x", "nothing found", "empty query", "clear lookup"],
+  "categories": ["navigation"],
+  "useCases": ["Shows that nothing matched", "Clears the current search"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

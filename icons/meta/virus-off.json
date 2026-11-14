@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Virus free",
+  "tags": ["virus off", "clean system", "no infection", "malware removed"],
+  "categories": ["health", "security"],
+  "useCases": ["Confirms that no infection was found", "Marks a cleaned device"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

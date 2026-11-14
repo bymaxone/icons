@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Reminder off",
+  "tags": ["alarm clock off", "silent reminder", "disabled alert", "mute wake"],
+  "categories": ["time"],
+  "useCases": ["Turns a reminder off", "Disables a scheduled alert"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

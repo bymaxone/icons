@@ -22,3 +22,6 @@ export const FileVideoSmIcon = /* @__PURE__ */ createIcon(
   ],
   { masterSize: 16 }
 )
+
+/** `file-play`: an alias of {@link FileVideoSmIcon}. */
+export const FilePlaySmIcon = FileVideoSmIcon

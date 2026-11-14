@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Dairy free",
+  "tags": ["dairy free", "no milk", "lactose free", "allergen"],
+  "categories": ["food"],
+  "useCases": ["Labels a product without dairy", "Marks a lactose free option"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Car wash",
+  "tags": ["car wash", "vehicle cleaning", "auto spa", "clean car"],
+  "categories": ["transport"],
+  "useCases": ["Marks a place that cleans vehicles", "Offers a washing service for a car"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

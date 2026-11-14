@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Vibration off",
+  "tags": ["vibrate off", "no buzz", "haptic disabled", "quiet phone"],
+  "categories": ["devices", "audio"],
+  "useCases": ["Turns off the vibration of a phone", "Disables haptic feedback"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}
