@@ -44,14 +44,19 @@ drawing format does not allow.
 
 ## Marks in the package
 
+- **Android** (`android`): [brand guidelines](https://developer.android.com/distribute/marketing-tools/brand-guidelines)
 - **Angular** (`angular`): [brand guidelines](https://angular.dev/press-kit)
 - **Ansible** (`ansible`): [brand guidelines](https://docs.ansible.com/projects/ansible/latest/dev_guide/style_guide/trademarks.html)
 - **Anthropic** (`anthropic`): [brand guidelines](https://www.anthropic.com/legal/trademark-guidelines)
+- **App Store** (`appstore`): [brand guidelines](https://developer.apple.com/app-store/marketing/guidelines/)
 - **Apple** (`apple`): [brand guidelines](https://www.apple.com/legal/intellectual-property/guidelinesfor3rdparties.html)
 - **Apple Music** (`apple-music`): [brand guidelines](https://marketing.services.apple/apple-music-identity-guidelines)
+- **Apple Pay** (`apple-pay`): [brand guidelines](https://developer.apple.com/apple-pay/marketing/)
+- **Arch Linux** (`arch-linux`): [brand guidelines](https://terms.archlinux.org/docs/trademark-policy/)
 - **Astro** (`astro`): [brand guidelines](https://astro.build/press/)
 - **Bitbucket** (`bitbucket`): [brand guidelines](https://atlassian.design/foundations/logos)
 - **Bluesky** (`bluesky`): [brand guidelines](https://bsky.social/about/support/branding)
+- **Brave** (`brave`): [brand guidelines](https://brave.com/brave-branding-assets)
 - **Bun** (`bun`): [brand guidelines](https://bun.com/press-kit)
 - **CircleCI** (`circleci`): [brand guidelines](https://circleci.com/legal/trademark-guidelines/)
 - **Claude** (`claude`): [brand guidelines](https://www.anthropic.com/legal/trademark-guidelines)
@@ -62,10 +67,12 @@ drawing format does not allow.
 - **Django** (`django`): [brand guidelines](https://www.djangoproject.com/community/logos/)
 - **Docker** (`docker`): [brand guidelines](https://www.docker.com/legal/trademark-guidelines/)
 - **Dribbble** (`dribbble`): [brand guidelines](https://dribbble.com/media-kit)
+- **eBay** (`ebay`): [brand guidelines](https://brandpermission.ebay.com/guidelines); logo use requires written permission from eBay
 - **ESLint** (`eslint`): [brand guidelines](https://eslint.org/branding/)
 - **Facebook** (`facebook`): [brand guidelines](https://about.meta.com/brand/resources/facebook/logo)
 - **Figma** (`figma`): [brand guidelines](https://www.figma.com/using-the-figma-brand/)
 - **Firebase** (`firebase`): [brand guidelines](https://firebase.google.com/brand-guidelines)
+- **Firefox** (`firefox`): [brand guidelines](https://www.mozilla.org/en-US/foundation/trademarks/policy/)
 - **Fly.io** (`flyio`): [brand guidelines](https://docs.fly.io/about/brand)
 - **Framer** (`framer`): [brand guidelines](https://www.framer.com/brand)
 - **Git** (`git`): [brand guidelines](https://git-scm.com/community/logos)
@@ -75,15 +82,21 @@ drawing format does not allow.
 - **Go** (`go`): [brand guidelines](https://go.dev/brand)
 - **Google** (`google`): [brand guidelines](https://about.google/brand-resource-center/brand-elements/)
 - **Google Gemini** (`google-gemini`): [brand guidelines](https://partnermarketinghub.withgoogle.com/brands/google/trademarks-and-terms/trademark-guidelines-for-proper-usage/)
+- **Google Pay** (`google-pay`): [brand guidelines](https://developers.google.com/pay/api/web/guides/brand-guidelines)
+- **Google Play** (`google-play`): [brand guidelines](https://partnermarketinghub.withgoogle.com/brands/google-play/google-play/lockups-icons-badges/)
 - **Grafana** (`grafana`): [brand guidelines](https://grafana.com/trademark-policy/)
 - **HBO** (`hbo`): [brand guidelines](https://brand.hbomax.com/logos); the page is the HBO Max brand site, owned by Warner Bros. Discovery
 - **Instagram** (`instagram`): [brand guidelines](https://about.meta.com/brand/resources/instagram)
+- **iOS** (`ios`): [brand guidelines](https://www.apple.com/legal/intellectual-property/guidelinesfor3rdparties.html)
 - **KakaoTalk** (`kakaotalk`): [brand guidelines](https://www.kakao.com/policy/brand/trademark)
+- **Klarna** (`klarna`): [brand guidelines](https://brand.klarna.com/)
 - **Kotlin** (`kotlin`): [brand guidelines](https://kotlinlang.org/docs/kotlin-brand-assets.html)
 - **Kubernetes** (`kubernetes`): [brand guidelines](https://www.linuxfoundation.org/legal/trademark-usage)
 - **LangChain** (`langchain`): [brand guidelines](https://www.langchain.com/brand-assets)
 - **Laravel** (`laravel`): [brand guidelines](https://laravel.com/legal/trademark)
 - **LINE** (`line-messenger`): [brand guidelines](https://line.me/en/logo)
+- **Linux** (`linux`): [brand guidelines](https://www.linuxfoundation.org/legal/the-linux-mark)
+- **macOS** (`macos`): [brand guidelines](https://www.apple.com/legal/intellectual-property/guidelinesfor3rdparties.html)
 - **Mastodon** (`mastodon`): [brand guidelines](https://joinmastodon.org/branding)
 - **Messenger** (`messenger`): [brand guidelines](https://about.meta.com/brand/resources/facebook/messenger-icon)
 - **Meta** (`meta`): [brand guidelines](https://www.facebook.com/brand/resources/meta/company-brand)
@@ -97,6 +110,7 @@ drawing format does not allow.
 - **Node.js** (`nodejs`): [brand guidelines](https://nodejs.org/en/about/branding)
 - **npm** (`npm`): [brand guidelines](https://docs.npmjs.com/policies/logos-and-usage)
 - **Nuxt** (`nuxt`): [brand guidelines](https://nuxt.com/design-kit)
+- **Opera** (`opera`): [brand guidelines](https://brand.opera.com)
 - **Patreon** (`patreon`): [brand guidelines](https://www.patreon.com/brand)
 - **Perplexity** (`perplexity`): [brand guidelines](https://www.perplexity.ai/hub/brand)
 - **Pinterest** (`pinterest`): [brand guidelines](https://business.pinterest.com/en/brand-guidelines)
@@ -107,11 +121,16 @@ drawing format does not allow.
 - **QQ** (`qq`): [brand guidelines](https://qq.design/brand/BrandDesign/Logo/)
 - **Reddit** (`reddit`): [brand guidelines](https://www.redditinc.com/brand)
 - **Redis** (`redis`): [brand guidelines](https://redis.io/legal/trademark-policy/)
+- **Safari** (`safari`): [brand guidelines](https://www.apple.com/legal/intellectual-property/guidelinesfor3rdparties.html)
+- **Samsung Pay** (`samsungpay`): [brand guidelines](https://developer.samsung.com/pay/design)
 - **Sentry** (`sentry`): [brand guidelines](https://sentry.io/branding/)
+- **Shopify** (`shopify`): [brand guidelines](https://www.shopify.com/brand-assets)
 - **Signal** (`signal-messenger`): [brand guidelines](https://signal.org/brand)
 - **Snapchat** (`snapchat`): [brand guidelines](https://www.snapchat.com/brand-guidelines)
 - **SoundCloud** (`soundcloud`): [brand guidelines](https://soundcloud.com/company/media-kit)
 - **Spotify** (`spotify`): [brand guidelines](https://developer.spotify.com/documentation/general/design-and-branding/#using-our-logo)
+- **Square** (`square-payments`): [brand guidelines](https://developer.squareup.com/docs/brand-guidelines)
+- **Steam** (`steam`): [brand guidelines](https://partner.steamgames.com/doc/marketing/branding)
 - **Stripe** (`stripe`): [brand guidelines](https://stripe.com/br/newsroom/information); the unprefixed address redirects by region
 - **Substack** (`substack`): [brand guidelines](https://substack.com/brand)
 - **Supabase** (`supabase`): [brand guidelines](https://supabase.com/brand)
@@ -123,10 +142,12 @@ drawing format does not allow.
 - **TikTok** (`tiktok`): [brand guidelines](https://www.tiktok.com/brand)
 - **Tumblr** (`tumblr`): [brand guidelines](https://www.tumblr.com/logo)
 - **TypeScript** (`typescript`): [brand guidelines](https://www.typescriptlang.org/branding)
+- **Ubuntu** (`ubuntu`): [brand guidelines](https://design.ubuntu.com/brand)
 - **Unity** (`unity`): [brand guidelines](https://unity.com/legal/branding-trademarks)
 - **Vercel** (`vercel`): [brand guidelines](https://vercel.com/geist/brands)
 - **Viber** (`viber`): [brand guidelines](https://www.viber.com/brand-center)
 - **Vimeo** (`vimeo`): [brand guidelines](https://press.vimeo.com/brand-guidelines)
+- **Visa** (`visa`): [brand guidelines](https://corporate.visa.com/content/dam/VCOM/corporate/about-visa/documents/visa-brand-standards-sept2025.pdf)
 - **Webflow** (`webflow`): [brand guidelines](https://brand-at.webflow.io/design-guidelines)
 - **WeChat** (`wechat`): [brand guidelines](https://wechat.design/brand/main-brand)
 - **WhatsApp** (`whatsapp`): [brand guidelines](https://about.meta.com/brand/resources/whatsapp/whatsapp-brand)
@@ -135,7 +156,9 @@ drawing format does not allow.
 - **Zoom** (`zoom`): [brand guidelines](https://explore.zoom.us/brandguidelines)
 
 Microsoft and LinkedIn are not included: Simple Icons removed them at their owners'
-request, and no other source with a clear licence exists. They return when one does.
+request, and no other source with a clear licence exists. They return when one does. The
+other brands that were considered and left out, and the reason for each, are in
+[`docs/b7/brands-1.0.md`](./docs/b7/brands-1.0.md).
 
 ## Marks under another licence
 
@@ -143,6 +166,9 @@ Simple Icons states a licence other than CC0-1.0 for the marks below, and the ow
 page repeats it. Each is credited here as its licence asks, and each path is moved and scaled
 as a whole, with no other change.
 
+- **Android** (`android`): "The Android robot is reproduced or modified from work created and
+  shared by Google and used according to terms described in the
+  [Creative Commons](https://creativecommons.org/licenses/by/3.0/) 3.0 Attribution License."
 - **Angular** (`angular`): the logo graphics are provided under
   [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) on
   [angular.dev](https://angular.dev/press-kit).

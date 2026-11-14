@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/brand.schema.json",
+  "title": "Safari",
+  "source": "https://github.com/simple-icons/simple-icons/blob/16.37.0/icons/safari.svg",
+  "guidelines": "https://www.apple.com/legal/intellectual-property/guidelinesfor3rdparties.html",
+  "license": "CC0-1.0",
+  "retrievedAt": "2026-11-14",
+  "tags": ["browser", "apple", "web", "webkit"],
+  "since": "1.0.0"
+}

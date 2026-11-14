@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/brand.schema.json",
+  "title": "Brave",
+  "source": "https://github.com/simple-icons/simple-icons/blob/16.37.0/icons/brave.svg",
+  "guidelines": "https://brave.com/brave-branding-assets",
+  "license": "CC0-1.0",
+  "retrievedAt": "2026-11-14",
+  "tags": ["browser", "privacy", "web", "chromium"],
+  "since": "1.0.0"
+}

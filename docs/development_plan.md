@@ -50,7 +50,7 @@
 | R1   | aesthetic-redraw                  | ✅     | 100%     | M    | 2026-11-11   |
 | B5   | general-icons                     | ✅     | 100%     | L    | 2026-11-11   |
 | B6   | icon-expansion                    | ✅     | 100%     | XL   | 2026-11-14   |
-| B7   | brand-marks                       | 📋     | 0%       | L    | 2026-11-12   |
+| B7   | brand-marks                       | ✅     | 100%     | L    | 2026-11-14   |
 | B8   | country-flags                     | 📋     | 0%       | L    | 2026-11-12   |
 | P5   | hardening-release                 | 🔄     | 25%      | M    | 2026-11-11   |
 | P6   | react-native                      | 📋     | 0%       | M    | 2026-11-08   |
@@ -451,8 +451,9 @@ These rules apply to every phase. Phase sections only add rules specific to them
 
 ### B7: brand-marks
 
-- **Goal:** From 14 brand marks to about 200, through the pipeline of B4a: the owners' geometry from Simple Icons, a TRADEMARKS line per brand, the provenance test.
-- **Selection:** by real use: social networks, messaging, developer and cloud tools, payments, AI providers, design tools, operating systems and browsers, stores and streaming. A brand with no source or a restrictive policy is left out, with the reason recorded.
+- **Goal:** From 14 brand marks to every one that passes the three rules of spec section 5, through the pipeline of B4a: the owners' geometry from Simple Icons, a TRADEMARKS line per brand, the provenance test. 110 marks closed it on 2026-11-14, and the brands left out are in [`b7/brands-1.0.md`](./b7/brands-1.0.md).
+- **Selection:** by real use: social networks, messaging, developer and cloud tools, payments, AI providers, design tools, operating systems and browsers, stores and streaming. A brand with no source, no guidelines page of the owner that was opened and read, or a licence that cannot be shipped is left out, with the reason recorded.
+- **B7 ✅ (2026-11-14):** three batches of 53, 22 and 21 marks, approved by the delegated auditor on behalf of the founder; the founder chose to take every brand with a verified guidelines page over a count of about 200.
 - **Size:** L
 
 ### B8: country-flags
