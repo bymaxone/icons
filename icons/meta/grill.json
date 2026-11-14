@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Grill",
+  "tags": ["grill", "barbecue", "bbq", "charcoal"],
+  "categories": ["food", "household"],
+  "useCases": ["Marks a barbecue area", "Lists an outdoor cooking tool"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

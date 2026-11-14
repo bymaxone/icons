@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Frying pan",
+  "tags": ["frying pan", "skillet", "sear", "sauté"],
+  "categories": ["food", "household"],
+  "useCases": ["Marks a frying step", "Lists a cooking utensil"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

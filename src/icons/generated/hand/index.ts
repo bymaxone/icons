@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { HandIcon } from './line'
+export { HandIcon, HandStopIcon } from './line'

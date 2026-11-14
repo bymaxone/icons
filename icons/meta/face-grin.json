@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Grinning face",
+  "tags": ["grinning face", "grin", "teeth", "cheerful"],
+  "categories": ["emotions"],
+  "useCases": ["Reacts with a big smile", "Marks a cheerful message"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

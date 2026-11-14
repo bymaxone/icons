@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { ToothIcon } from './line'
+export { DentalIcon, ToothIcon } from './line'

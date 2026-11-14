@@ -24,3 +24,6 @@ export const WaterIcon = DropletIcon
 
 /** `drop`: an alias of {@link DropletIcon}. */
 export const DropIcon = DropletIcon
+
+/** `blood-drop`: an alias of {@link DropletIcon}. */
+export const BloodDropIcon = DropletIcon

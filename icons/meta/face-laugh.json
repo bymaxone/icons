@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Laughing face",
+  "tags": ["laughing face", "laugh", "lol", "joy"],
+  "categories": ["emotions"],
+  "useCases": ["Reacts to a funny message", "Marks a joke"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

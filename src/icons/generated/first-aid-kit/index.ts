@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { FirstAidKitIcon } from './line'
+export { FirstAidKitIcon, MedicalBagIcon } from './line'

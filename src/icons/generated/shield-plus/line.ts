@@ -15,3 +15,6 @@ export const ShieldPlusIcon = /* @__PURE__ */ createIcon('shield-plus', [
   ['path', { d: 'M12.25 3.25 5.25 6v5.5c0 4.25 2.75 7.5 7 9.25 4.25-1.75 7-5 7-9.25V6z' }],
   ['path', { d: 'M12.25 9.25v6m-3-3h6' }]
 ])
+
+/** `health-insurance`: an alias of {@link ShieldPlusIcon}. */
+export const HealthInsuranceIcon = ShieldPlusIcon

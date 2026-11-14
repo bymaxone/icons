@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Door handle",
+  "tags": ["door handle", "knob", "lever", "entrance"],
+  "categories": ["household", "security"],
+  "useCases": ["Marks a door that opens", "Lists a hardware part"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

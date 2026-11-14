@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { AccentIcon, DropIcon, DropletIcon, WaterIcon } from './line'
+export { AccentIcon, BloodDropIcon, DropIcon, DropletIcon, WaterIcon } from './line'

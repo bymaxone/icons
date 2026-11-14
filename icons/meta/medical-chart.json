@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Medical chart",
+  "tags": ["medical chart", "patient record", "clipboard", "charting"],
+  "categories": ["health", "files"],
+  "useCases": ["Opens a patient record", "Lists notes of a visit"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

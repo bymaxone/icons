@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Rugby ball",
+  "tags": ["rugby ball", "oval ball", "scrum", "try"],
+  "categories": ["games"],
+  "useCases": ["Marks a rugby match", "Lists a contact sport"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Star-struck face",
+  "tags": ["star-struck face", "starry eyes", "fan", "amazed"],
+  "categories": ["emotions"],
+  "useCases": ["Reacts with admiration", "Marks an outstanding item"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

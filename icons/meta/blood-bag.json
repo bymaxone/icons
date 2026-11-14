@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Blood bag",
+  "tags": ["blood bag", "donation", "transfusion", "plasma"],
+  "categories": ["health"],
+  "useCases": ["Marks a blood donation", "Lists a transfusion supply"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

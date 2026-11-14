@@ -17,3 +17,6 @@ export const SyringeIcon = /* @__PURE__ */ createIcon('syringe', [
   ['path', { d: 'm8.9 15.6-4.65 4.65' }],
   ['path', { d: 'm11.25 11.25 1.5 1.5' }]
 ])
+
+/** `vaccine`: an alias of {@link SyringeIcon}. */
+export const VaccineIcon = SyringeIcon

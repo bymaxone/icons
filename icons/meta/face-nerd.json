@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Nerd face",
+  "tags": ["nerd face", "geek", "glasses", "smart"],
+  "categories": ["emotions"],
+  "useCases": ["Marks a fun fact", "Reacts to a technical detail"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

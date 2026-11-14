@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Zipper-mouth face",
+  "tags": ["zipper-mouth face", "secret", "silent", "sealed lips"],
+  "categories": ["emotions"],
+  "useCases": ["Marks a confidential topic", "Asks people to keep quiet"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

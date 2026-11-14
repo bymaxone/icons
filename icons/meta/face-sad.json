@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Sad face",
+  "tags": ["sad face", "frown", "unhappy", "down"],
+  "categories": ["emotions"],
+  "useCases": ["Shows a negative mood", "Rates an experience as poor"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

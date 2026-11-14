@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Air conditioner",
+  "tags": ["air conditioner", "ac unit", "cooling", "climate"],
+  "categories": ["household"],
+  "useCases": ["Sets the room climate", "Marks a cooling unit"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

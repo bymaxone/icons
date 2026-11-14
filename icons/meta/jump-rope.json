@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Jump rope",
+  "tags": ["jump rope", "skipping", "cardio", "workout"],
+  "categories": ["games", "health"],
+  "useCases": ["Marks a cardio exercise", "Lists a workout routine"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Tennis racket",
+  "tags": ["tennis racket", "racquet", "court", "match"],
+  "categories": ["games"],
+  "useCases": ["Marks a tennis court", "Lists a racket sport"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

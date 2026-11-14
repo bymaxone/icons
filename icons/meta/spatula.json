@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Spatula",
+  "tags": ["spatula", "turner", "flip", "spreader"],
+  "categories": ["food", "household"],
+  "useCases": ["Lists a cooking utensil", "Marks a flipping step"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Happy face",
+  "tags": ["happy face", "smile", "happy", "emoji"],
+  "categories": ["emotions"],
+  "useCases": ["Shows a positive mood", "Rates an experience as good"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Test tube rack",
+  "tags": ["test tube rack", "lab samples", "tubes", "experiment"],
+  "categories": ["science", "health"],
+  "useCases": ["Marks a lab sample set", "Lists pending test results"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

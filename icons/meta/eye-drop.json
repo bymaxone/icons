@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Eye drop",
+  "tags": ["eye drop", "dropper", "eyecare", "lubricant"],
+  "categories": ["health"],
+  "useCases": ["Lists an eye medicine", "Reminds people of a dosage"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

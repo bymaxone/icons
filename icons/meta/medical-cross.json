@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Medical cross",
+  "tags": ["medical cross", "red cross", "clinic", "emergency"],
+  "categories": ["health"],
+  "useCases": ["Marks a medical service", "Points to a clinic"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

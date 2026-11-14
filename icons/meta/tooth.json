@@ -4,6 +4,12 @@
   "tags": ["tooth", "dental", "dentist", "teeth"],
   "categories": ["health"],
   "useCases": ["Marks a dental service", "Shows oral care"],
+  "aliases": [
+    {
+      "name": "dental",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

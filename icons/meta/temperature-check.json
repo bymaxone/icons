@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Temperature check",
+  "tags": ["temperature check", "fever", "thermometer reading", "screening"],
+  "categories": ["health"],
+  "useCases": ["Records a body temperature", "Marks a health screening"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

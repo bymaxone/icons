@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Running shoe",
+  "tags": ["running shoe", "sneaker", "jogging", "trainer"],
+  "categories": ["games", "health"],
+  "useCases": ["Marks a running activity", "Lists sports footwear"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Racing flag",
+  "tags": ["racing", "checkered", "finish", "motorsport"],
+  "categories": ["games"],
+  "useCases": ["Marks the end of a race", "Shows a finish line"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

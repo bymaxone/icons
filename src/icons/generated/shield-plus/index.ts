@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { ShieldPlusIcon } from './line'
+export { HealthInsuranceIcon, ShieldPlusIcon } from './line'

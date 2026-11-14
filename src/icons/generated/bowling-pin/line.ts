@@ -1,0 +1,22 @@
+/**
+ * @fileoverview The `bowling-pin` icon, line variant.
+ * Written by `pnpm generate` from icons/line/bowling-pin.svg: edit the source, never this file.
+ * @layer Generated
+ */
+
+import { createIcon } from '@bymax-one/icons/runtime'
+
+/**
+ * The `bowling-pin` icon, line variant: bowling pin, strike, alley, pins.
+ *
+ * @since 0.1.0
+ */
+export const BowlingPinIcon = /* @__PURE__ */ createIcon('bowling-pin', [
+  [
+    'path',
+    {
+      d: 'M12.25 3.25c1.5 0 2.25 1.25 2.25 2.75 0 1.25-.75 2.25-.75 3.25 0 1.5 2.75 3.75 2.75 7.25 0 2.25-1 3.75-1.75 4.75h-5C9 20.25 8 18.75 8 16.5c0-3.5 2.75-5.75 2.75-7.25 0-1-.75-2-.75-3.25 0-1.5.75-2.75 2.25-2.75'
+    }
+  ],
+  ['path', { d: 'M10.75 10.25h3' }]
+])

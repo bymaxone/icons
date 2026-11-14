@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Whisk",
+  "tags": ["whisk", "beat", "mix", "eggs"],
+  "categories": ["food", "household"],
+  "useCases": ["Marks a mixing step", "Lists a baking tool"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

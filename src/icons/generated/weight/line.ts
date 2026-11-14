@@ -18,3 +18,6 @@ export const WeightIcon = /* @__PURE__ */ createIcon('weight', [
   ],
   ['path', { d: 'm8.75 10.25-.5-3.5c-.25-1.5.5-2.5 2-2.5h4c1.5 0 2.25 1 2 2.5l-.5 3.5' }]
 ])
+
+/** `kettlebell`: an alias of {@link WeightIcon}. */
+export const KettlebellIcon = WeightIcon

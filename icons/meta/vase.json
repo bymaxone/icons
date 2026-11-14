@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Vase",
+  "tags": ["vase", "bouquet", "decor", "ceramic"],
+  "categories": ["household"],
+  "useCases": ["Marks home decoration", "Lists a flower holder"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

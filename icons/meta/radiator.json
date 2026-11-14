@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Radiator",
+  "tags": ["radiator", "heater", "warmth", "fins"],
+  "categories": ["household"],
+  "useCases": ["Marks a heating unit", "Sets room warmth"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

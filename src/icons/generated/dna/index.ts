@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { DnaIcon } from './line'
+export { DnaIcon, GeneIcon } from './line'

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "IV drip",
+  "tags": ["iv drip", "infusion", "saline", "drip bag"],
+  "categories": ["health"],
+  "useCases": ["Marks an infusion in progress", "Lists a hospital treatment"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

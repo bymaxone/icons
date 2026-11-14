@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Crib",
+  "tags": ["crib", "cot", "nursery", "baby bed"],
+  "categories": ["household"],
+  "useCases": ["Marks a nursery", "Lists baby furniture"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

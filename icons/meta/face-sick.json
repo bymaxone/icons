@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Sick face",
+  "tags": ["sick face", "ill", "nauseous", "unwell"],
+  "categories": ["emotions", "health"],
+  "useCases": ["Reports feeling unwell", "Marks a sick day"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

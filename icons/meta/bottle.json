@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Bottle",
+  "tags": ["bottle", "flask", "container", "liquid"],
+  "categories": ["food", "household"],
+  "useCases": ["Lists a bottled drink", "Marks a refillable container"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

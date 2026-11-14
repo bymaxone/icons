@@ -4,6 +4,12 @@
   "tags": ["pan", "grab", "drag canvas", "palm"],
   "categories": ["editing", "emotions"],
   "useCases": ["Pans the canvas", "Selects the hand tool"],
+  "aliases": [
+    {
+      "name": "hand-stop",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

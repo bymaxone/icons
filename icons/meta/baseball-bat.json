@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Baseball bat",
+  "tags": ["baseball bat", "slugger", "batter", "swing"],
+  "categories": ["games"],
+  "useCases": ["Marks a baseball game", "Lists a team sport"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

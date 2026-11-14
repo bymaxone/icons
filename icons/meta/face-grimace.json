@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Grimacing face",
+  "tags": ["grimacing face", "awkward", "nervous", "yikes"],
+  "categories": ["emotions"],
+  "useCases": ["Marks an awkward moment", "Reacts to a small mistake"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}
