@@ -6,12 +6,14 @@
  */
 
 import { byName } from './icon-set.ts'
-import type { BrandEntry, Drawing, IconEntry, IconSet } from './icon-set.ts'
+import type { BrandEntry, Drawing, FlagEntry, IconEntry, IconSet } from './icon-set.ts'
+import { lintFlag } from './lint-flag.ts'
 import { inkIssues } from './lint-ink.ts'
 import type { LintIssue } from './lint-issue.ts'
 import {
   brandScopeIssues,
   categoryIssues,
+  flagScopeIssues,
   pairIssues,
   uniquenessIssues,
   variantIssues
@@ -21,6 +23,7 @@ import { lintSvg } from './lint-svg.ts'
 import {
   BRAND_SCHEMA_REF,
   createValidators,
+  FLAG_SCHEMA_REF,
   ICON_SCHEMA_REF,
   parseJson,
   validationErrors
@@ -28,6 +31,7 @@ import {
 import type {
   BrandMetaSource,
   CategorySource,
+  FlagMetaSource,
   IconMetaSource,
   MetadataValidators
 } from './metadata.ts'
@@ -67,14 +71,15 @@ function schemaOf(value: unknown): unknown {
     : undefined
 }
 
-/** Parses and validates every metadata file, sorting icons from brands by `$schema`. */
+/** Parses and validates every metadata file, sorting icons, brands and flags by `$schema`. */
 function readMetadata(
   files: ReadonlyMap<string, SourceFile>,
   validators: MetadataValidators,
   issues: LintIssue[]
-): Pick<Catalog, 'icons' | 'brands'> {
+): Pick<Catalog, 'icons' | 'brands' | 'flags'> {
   const icons = new Map<string, Described<IconMetaSource>>()
   const brands = new Map<string, Described<BrandMetaSource>>()
+  const flags = new Map<string, Described<FlagMetaSource>>()
   for (const [name, file] of files) {
     const at = (message: string): void => {
       issues.push({ file: file.path, rule: 'meta-schema', message })
@@ -92,9 +97,14 @@ function readMetadata(
     } else if (schema === BRAND_SCHEMA_REF) {
       if (validators.brand(value)) brands.set(name, { meta: value, file })
       else validationErrors(validators.brand).forEach(at)
-    } else at(`$schema must be "${ICON_SCHEMA_REF}" or "${BRAND_SCHEMA_REF}"`)
+    } else if (schema === FLAG_SCHEMA_REF) {
+      if (validators.flag(value)) flags.set(name, { meta: value, file })
+      else validationErrors(validators.flag).forEach(at)
+    } else {
+      at(`$schema must be "${ICON_SCHEMA_REF}", "${BRAND_SCHEMA_REF}" or "${FLAG_SCHEMA_REF}"`)
+    }
   }
-  return { icons, brands }
+  return { icons, brands, flags }
 }
 
 /** Parses and validates `categories.json`; its names must be unique. */
@@ -129,10 +139,15 @@ function readDrawings(
   const drawings = new Map<string, Drawing>()
   for (const [name, file] of files) {
     const multicolor = kind === 'brands' && brands.get(name)?.meta.multicolor === true
-    const report = lintSvg({ file, kind, multicolor })
+    const report = kind === 'flags' ? lintFlag(file) : lintSvg({ file, kind, multicolor })
     issues.push(...report.issues)
     if (report.elements !== undefined) {
-      drawings.set(name, { path: file.path, text: file.text, elements: report.elements })
+      drawings.set(name, {
+        path: file.path,
+        text: file.text,
+        elements: report.elements,
+        ...(report.viewBox === undefined ? {} : { viewBox: report.viewBox })
+      })
     }
   }
   return drawings
@@ -158,7 +173,14 @@ function buildSet(
     const drawing = drawings.brands.get(name)
     return drawing === undefined ? [] : [{ name, metaPath: file.path, meta, drawing }]
   })
-  return { icons: byName(icons), brands: byName(brands), categories }
+  const flags: FlagEntry[] = [...catalog.flags].flatMap(([name, { meta, file }]) => {
+    const drawing = drawings.flags.get(name)
+    const viewBox = drawing?.viewBox
+    return drawing === undefined || viewBox === undefined
+      ? []
+      : [{ name, metaPath: file.path, meta, drawing, viewBox }]
+  })
+  return { icons: byName(icons), brands: byName(brands), flags: byName(flags), categories }
 }
 
 /**
@@ -172,7 +194,7 @@ export function lintSources(sources: IconSources): LintResult {
   const issues: LintIssue[] = sources.strays.map((path) => ({
     file: path,
     rule: 'file-name',
-    message: 'not part of the icons layout: icons/{line,filled,sm,brands,meta}/ and README.md'
+    message: 'not part of the icons layout: icons/{line,filled,sm,brands,flags,meta}/ and README.md'
   }))
   const validators = createValidators(sources.schemas)
   const svg = mapKinds(sources.svg, (files) => byFileName(files, '.svg', issues))
@@ -191,6 +213,7 @@ export function lintSources(sources: IconSources): LintResult {
   issues.push(
     ...pairIssues(catalog),
     ...brandScopeIssues(catalog),
+    ...flagScopeIssues(catalog),
     ...variantIssues(catalog),
     ...categoryIssues(catalog),
     ...uniquenessIssues(catalog)

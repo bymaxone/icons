@@ -37,7 +37,8 @@ export interface SimilarityEntry {
 export const MATCHES_PER_DRAWING = 3
 
 /**
- * Compares every icon variant of a set with every reference.
+ * Compares every icon variant of a set with every reference. Brand marks and country flags
+ * are official geometry kept as published, so they are not compared.
  *
  * @param set - The icon set.
  * @param references - Every reference, normalised.

@@ -111,6 +111,21 @@ describe('normalizeSvg', () => {
     )
   })
 
+  it('hands a flag to the flag formatter, which keeps its view box and paint', () => {
+    /**
+     * Scenario: a flag is formatted by `normalizeFlag`, not by the stroked or filled roots: it
+     * keeps its own view box, its colours as `#rrggbb` and its attributes.
+     */
+    expect(
+      normalizeSvg(
+        '<svg viewBox="0 0 513 342" width="9"><g fill="#FFF"><path d="M 0 0 h1 v1 z"/></g></svg>',
+        'flags'
+      )
+    ).toBe(
+      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 513 342">\n  <path fill="#ffffff" d="M 0 0 h1 v1 z"/>\n</svg>\n'
+    )
+  })
+
   it('treats a 16 px master as stroked', () => {
     /**
      * Scenario: the sm masters are line drawings, painted like the line icons, on a

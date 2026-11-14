@@ -5,16 +5,18 @@
  * Goal: prove each entry exposes exactly its documented names through the same package
  * specifiers a consumer and the bundler use; that the root re-exports the `./meta` grid
  * and the `./runtime` functions rather than copies of them; and that the root and
- * `./brands` export exactly the generated components.
+ * `./brands` and `./flags` export exactly the generated components.
  * Mocks: none.
  */
 
 import * as root from '@bymax-one/icons'
 import * as brands from '@bymax-one/icons/brands'
+import * as flags from '@bymax-one/icons/flags'
 import * as meta from '@bymax-one/icons/meta'
 import * as runtime from '@bymax-one/icons/runtime'
 
 import * as generatedBrands from './brands/generated'
+import * as generatedFlags from './flags/generated'
 import * as generatedIcons from './icons/generated'
 import { ICON_GRID } from './meta/icon-grid'
 import { createIcon } from './runtime/create-icon'
@@ -59,6 +61,8 @@ describe('public entry points', () => {
     expect(Object.keys(meta).sort()).toStrictEqual([
       'BRAND_METADATA',
       'BRAND_NAMES',
+      'FLAG_METADATA',
+      'FLAG_NAMES',
       'ICON_CATEGORIES',
       'ICON_GRID',
       'ICON_METADATA',
@@ -68,5 +72,6 @@ describe('public entry points', () => {
       ['ICON_GRID', 'Icon', 'createIcon', ...Object.keys(generatedIcons)].sort()
     )
     expect(Object.keys(brands).sort()).toStrictEqual(Object.keys(generatedBrands).sort())
+    expect(Object.keys(flags).sort()).toStrictEqual(Object.keys(generatedFlags).sort())
   })
 })

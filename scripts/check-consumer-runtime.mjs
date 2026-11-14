@@ -103,7 +103,8 @@ for (const file of EXPECTED.svgFiles) {
 if (JSON.stringify(metadataJson) !== JSON.stringify(EXPECTED.metadata)) failures.push('metadata.json does not load as packed')
 const meta = loaded['./meta']
 if (JSON.stringify(meta.ICON_METADATA) !== JSON.stringify(EXPECTED.metadata.icons) ||
-    JSON.stringify(meta.BRAND_METADATA) !== JSON.stringify(EXPECTED.metadata.brands)) {
+    JSON.stringify(meta.BRAND_METADATA) !== JSON.stringify(EXPECTED.metadata.brands) ||
+    JSON.stringify(meta.FLAG_METADATA) !== JSON.stringify(EXPECTED.metadata.flags)) {
   failures.push('./meta and metadata.json describe different records')
 }
 if (failures.length) {
@@ -124,10 +125,22 @@ console.log('  ✓ ' + FORMAT + ': ' + Object.keys(EXPECTED.exports).length + ' 
  */
 function rscProbe(expected) {
   const imports = Object.keys(expected.exports)
-    .filter((subpath) => subpath === './brands' || subpath.startsWith('./icons/'))
+    .filter(
+      (subpath) =>
+        subpath === './brands' ||
+        subpath === './flags' ||
+        subpath.startsWith('./icons/') ||
+        subpath.startsWith('./flags/')
+    )
     .map((subpath, i) => `import * as m${i} from '${specifier(subpath)}'`)
   const modules = Object.keys(expected.exports)
-    .filter((subpath) => subpath === './brands' || subpath.startsWith('./icons/'))
+    .filter(
+      (subpath) =>
+        subpath === './brands' ||
+        subpath === './flags' ||
+        subpath.startsWith('./icons/') ||
+        subpath.startsWith('./flags/')
+    )
     .map((subpath, i) => `'${subpath}': m${i}`)
   return `import { createElement, Fragment } from 'react'
 import * as React from 'react'
@@ -169,9 +182,11 @@ renderToPipeableStream(tree, {}, {
 
 /** The bundles of every subpath that has JavaScript, by path in the package. */
 function bundles(expected) {
-  const entries = ['index', 'meta/index', 'brands/index']
+  const entries = ['index', 'meta/index', 'brands/index', 'flags/index']
   for (const subpath of Object.keys(expected.exports)) {
-    if (subpath.startsWith('./icons/')) entries.push(`${subpath.slice(2)}/index`)
+    if (subpath.startsWith('./icons/') || subpath.startsWith('./flags/')) {
+      entries.push(`${subpath.slice(2)}/index`)
+    }
   }
   return entries.flatMap((entry) => [`dist/${entry}.mjs`, `dist/${entry}.cjs`])
 }

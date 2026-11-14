@@ -1,14 +1,14 @@
 /**
  * @fileoverview The TypeScript the generator writes: one module per icon variant holding
  * its drawing as data for `createIcon`, one entry per icon (`./icons/<name>`), the root
- * barrel's icon re-exports, the brand modules and their barrel, and the metadata as data
+ * barrel's icon re-exports, the brand modules and their barrel, the flag modules and theirs, and the metadata as data
  * for `./meta`. Every drawing is an element list in a literal; no module holds markup.
  * @layer Pipeline
  */
 
 import { ICON_GRID } from '../meta/icon-grid.ts'
 import { drawnVariants } from './icon-set.ts'
-import type { BrandEntry, Drawing, IconEntry, IconSet } from './icon-set.ts'
+import type { BrandEntry, Drawing, FlagEntry, IconEntry, IconSet } from './icon-set.ts'
 import type { AliasSource, IconVariantName } from './metadata.ts'
 import { componentName, variantName } from './naming.ts'
 import type { Variant } from './naming.ts'
@@ -18,13 +18,17 @@ import type { DrawingElement } from './svg.ts'
 export const GENERATED_DIRECTORIES = [
   'src/icons/generated',
   'src/brands/generated',
+  'src/flags/generated',
   'src/meta/generated'
 ] as const
 
 /** The SVG attributes whose React prop name differs from the attribute name. */
 const PROP_NAMES: ReadonlyMap<string, string> = new Map([
   ['fill-rule', 'fillRule'],
-  ['clip-rule', 'clipRule']
+  ['clip-rule', 'clipRule'],
+  ['stroke-width', 'strokeWidth'],
+  ['stroke-miterlimit', 'strokeMiterlimit'],
+  ['stroke-linejoin', 'strokeLinejoin']
 ])
 
 /** The attributes whose value is one number; every other value is written as a string. */
@@ -41,7 +45,10 @@ const NUMERIC_ATTRIBUTES = new Set([
   'rx',
   'ry',
   'width',
-  'height'
+  'height',
+  'stroke-width',
+  'stroke-miterlimit',
+  'opacity'
 ])
 
 /** Keeps metadata text from closing the JSDoc block it is written into. */
@@ -187,6 +194,36 @@ function brandsBarrel(set: IconSet): string {
   return [header('Every brand mark component.', 'icons/brands'), ...body, ''].join('\n')
 }
 
+/** One flag module: the component, created from its drawing and its own view box. */
+function flagModule(flag: FlagEntry): string {
+  const { meta } = flag
+  const doc = [
+    '/**',
+    ` * The ${docText(meta.title)} flag, from ${docText(meta.source)} (${docText(meta.license)}, retrieved ${meta.retrievedAt}).`,
+    ' * It is reproduced as published by its source; see TRADEMARKS.md.',
+    ' *',
+    ` * @since ${meta.since}`,
+    ' */'
+  ].join('\n')
+  const view = JSON.stringify(flag.viewBox)
+  return [
+    header(`The ${docText(meta.title)} flag.`, flag.drawing.path),
+    "import { createFlag } from '@bymax-one/icons/runtime'\n",
+    doc,
+    `export const ${componentName(flag.name, 'flag')} = /* @__PURE__ */ createFlag(${JSON.stringify(variantName(flag.name, 'flag'))}, ${view}, ${iconNodeLiteral(flag.drawing.elements)})\n`
+  ].join('\n')
+}
+
+/** The flag barrel, each flag through its own subpath, so it exists once in the package. */
+function flagsBarrel(set: IconSet): string {
+  const lines = set.flags.map(
+    (flag) =>
+      `export { ${componentName(flag.name, 'flag')} } from '@bymax-one/icons/flags/${flag.name}'`
+  )
+  const body = lines.length === 0 ? ['export {}'] : lines
+  return [header('Every country flag component.', 'icons/flags'), ...body, ''].join('\n')
+}
+
 /**
  * Every generated module except the metadata, keyed by path from the repository root.
  *
@@ -196,7 +233,8 @@ function brandsBarrel(set: IconSet): string {
 export function componentModules(set: IconSet): Map<string, string> {
   const files = new Map<string, string>([
     ['src/icons/generated/index.ts', rootBarrel(set)],
-    ['src/brands/generated/index.ts', brandsBarrel(set)]
+    ['src/brands/generated/index.ts', brandsBarrel(set)],
+    ['src/flags/generated/index.ts', flagsBarrel(set)]
   ])
   for (const icon of set.icons) {
     files.set(`src/icons/generated/${icon.name}/index.ts`, iconEntryModule(icon))
@@ -209,5 +247,6 @@ export function componentModules(set: IconSet): Map<string, string> {
   }
   for (const brand of set.brands)
     files.set(`src/brands/generated/${brand.name}.ts`, brandModule(brand))
+  for (const flag of set.flags) files.set(`src/flags/generated/${flag.name}.ts`, flagModule(flag))
   return files
 }

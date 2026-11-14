@@ -8,7 +8,7 @@
  * Mocks: none.
  */
 
-import { brandMeta, drawing, iconMeta, sources } from './__tests__/support.ts'
+import { brandMeta, drawing, iconMeta, ONE_FLAG, sources } from './__tests__/support.ts'
 import { CELL, SHEET_SIZES, SHEET_THEMES, placedDrawing } from './contact-sheet.ts'
 import type { SheetRow } from './contact-sheet.ts'
 import { lintSources } from './lint.ts'
@@ -90,6 +90,16 @@ describe('visualTargets', () => {
       ['circle'],
       ['path']
     ])
+  })
+
+  it('has no target for a country flag', () => {
+    /**
+     * Scenario: a flag keeps its own colours and view box, which the strip's square cell and
+     * single ink do not fit, so it has no baseline here.
+     */
+    const { set } = lintSources(sources(ONE_FLAG))
+    expect(set.flags).toHaveLength(1)
+    expect(visualTargets(set)).toStrictEqual([])
   })
 
   it('is empty for an empty set', () => {

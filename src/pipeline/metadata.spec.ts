@@ -4,14 +4,15 @@
  * Layer: unit, with ajv and the repository's schemas.
  * Goal: pin what each schema requires and refuses (the metadata rules of spec section
  * 6.2: required fields, two use cases, the alias shape and its deprecation fields, the
- * brand fields), the error format, and the JSON parse that never throws.
+ * brand and flag fields), the error format, and the JSON parse that never throws.
  * Mocks: none.
  */
 
-import { brandMeta, CATEGORIES_TEXT, iconMeta, SCHEMAS } from './__tests__/support.ts'
+import { brandMeta, CATEGORIES_TEXT, flagMeta, iconMeta, SCHEMAS } from './__tests__/support.ts'
 import {
   BRAND_SCHEMA_REF,
   createValidators,
+  FLAG_SCHEMA_REF,
   ICON_SCHEMA_REF,
   parseJson,
   validationErrors
@@ -20,6 +21,7 @@ import {
 const validators = createValidators(SCHEMAS)
 const icon = (overrides: Record<string, unknown> = {}): unknown => JSON.parse(iconMeta(overrides))
 const brand = (overrides: Record<string, unknown> = {}): unknown => JSON.parse(brandMeta(overrides))
+const flag = (overrides: Record<string, unknown> = {}): unknown => JSON.parse(flagMeta(overrides))
 
 describe('schema references', () => {
   it('names the schemas the way a file in icons/meta reaches them', () => {
@@ -29,6 +31,7 @@ describe('schema references', () => {
      */
     expect(ICON_SCHEMA_REF).toBe('../../schemas/icon.schema.json')
     expect(BRAND_SCHEMA_REF).toBe('../../schemas/brand.schema.json')
+    expect(FLAG_SCHEMA_REF).toBe('../../schemas/flag.schema.json')
   })
 })
 
@@ -246,6 +249,61 @@ describe('brand schema', () => {
      */
     expect(validators.brand(brand(overrides))).toBe(false)
     expect(validationErrors(validators.brand)).toContain(message)
+  })
+})
+
+describe('flag schema', () => {
+  it.each([
+    ['the minimal valid file', {}],
+    ['the optional tags', { tags: ['sweden', 'swedish flag'] }],
+    ['a code with a subdivision', { code: 'GB-ENG' }]
+  ])('accepts %s', (_label, overrides) => {
+    /**
+     * Scenario: a flag records where its drawing came from, its licence and the day it was
+     * retrieved, with the code the source gives it (spec section 5.1).
+     */
+    expect(validators.flag(flag(overrides))).toBe(true)
+  })
+
+  it.each(['title', 'code', 'source', 'license', 'retrievedAt', 'since'])(
+    'requires %p',
+    (field) => {
+      /** Scenario: every flag carries its provenance; a missing field fails. */
+      const value = flag()
+      Reflect.deleteProperty(value as object, field)
+      expect(validators.flag(value)).toBe(false)
+      expect(validationErrors(validators.flag)).toContain(
+        `/ must have required property '${field}'`
+      )
+    }
+  )
+
+  it.each([
+    [
+      'a source that is not https',
+      { source: 'http://example.com' },
+      '/source must match pattern "^https://\\S+$"'
+    ],
+    [
+      'a code in lower case',
+      { code: 'se' },
+      '/code must match pattern "^[A-Z]{2}(?:-[A-Z]{2,3})?$"'
+    ],
+    [
+      'a code of three letters',
+      { code: 'SWE' },
+      '/code must match pattern "^[A-Z]{2}(?:-[A-Z]{2,3})?$"'
+    ],
+    [
+      'a date that is not YYYY-MM-DD',
+      { retrievedAt: '2026-13-01' },
+      '/retrievedAt must match pattern "^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$"'
+    ],
+    ['brand fields', { guidelines: 'https://example.com' }, '/ must NOT have additional properties']
+  ])('refuses %s', (_label, overrides, message) => {
+    /** Scenario: each flag field has a shape a reviewer can rely on. */
+    expect(validators.flag(flag(overrides))).toBe(false)
+    expect(validationErrors(validators.flag)).toContain(message)
   })
 })
 

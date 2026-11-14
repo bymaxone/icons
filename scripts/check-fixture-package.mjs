@@ -42,7 +42,12 @@ const keep = process.argv.includes('--keep')
 const verbose = process.argv.includes('--verbose')
 
 /** Generated directories, written fresh in the copy from the fixtures. */
-const GENERATED = ['src/icons/generated/', 'src/brands/generated/', 'src/meta/generated/']
+const GENERATED = [
+  'src/icons/generated/',
+  'src/brands/generated/',
+  'src/flags/generated/',
+  'src/meta/generated/'
+]
 
 /**
  * Every step, as the commands its package script runs, called directly. pnpm is never run

@@ -41,7 +41,8 @@ export type PartPair = readonly [first: number, second: number]
 
 /**
  * The drawings the check covers: each icon's 16 px master, or its line drawing when it has
- * none. Filled variants and brand marks are out of scope.
+ * none. Filled variants, brand marks and country flags are out of scope: a flag keeps the
+ * drawing of its source, which is no 16 px master and no line drawing.
  *
  * @param set - The icon set.
  * @returns One drawing a non-brand icon, in the set's name order.

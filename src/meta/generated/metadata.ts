@@ -1,5 +1,5 @@
 /**
- * @fileoverview The metadata of every icon and brand mark, as data.
+ * @fileoverview The metadata of every icon, brand mark and country flag, as data.
  * Written by `pnpm generate` from icons/meta and categories.json: edit the sources, never this file.
  * @layer Generated
  */
@@ -1432,6 +1432,9 @@ export const BRAND_NAMES = [
   'youtube',
   'zoom'
 ] as const
+
+/** Every flag name, in name order. */
+export const FLAG_NAMES = [] as const
 
 /** Every category name, in the order of categories.json. */
 export const CATEGORY_NAMES = [
@@ -2935,3 +2938,7 @@ export const BRANDS = {
   "youtube": {"title":"YouTube","source":"https://github.com/simple-icons/simple-icons/blob/16.37.0/icons/youtube.svg","guidelines":"https://www.youtube.com/howyoutubeworks/resources/brand-resources/#logos-icons-and-colors","license":"CC0-1.0","retrievedAt":"2026-11-11","tags":["video","channel","play","streaming"],"aliases":[],"multicolor":false,"since":"0.1.0"},
   "zoom": {"title":"Zoom","source":"https://github.com/simple-icons/simple-icons/blob/16.37.0/icons/zoom.svg","guidelines":"https://explore.zoom.us/brandguidelines","license":"CC0-1.0","retrievedAt":"2026-11-14","tags":["wordmark","video call","meeting","conference","video"],"aliases":[],"multicolor":false,"since":"1.0.0"},
 } as const
+
+/** The metadata of every country flag, keyed by name. */
+// prettier-ignore
+export const FLAGS = {} as const

@@ -92,7 +92,7 @@ export async function runGenerate(
   if (!check) {
     replaceGenerated(root, modules)
     output.log(
-      `generated ${modules.size} module(s) from ${set.icons.length} icon(s) and ${set.brands.length} brand(s)`
+      `generated ${modules.size} module(s) from ${set.icons.length} icon(s), ${set.brands.length} brand(s) and ${set.flags.length} flag(s)`
     )
     return 0
   }
@@ -120,7 +120,9 @@ export function runLint(args: readonly string[], root: string, output: Output): 
   const { layout } = parseOptions(args, root)
   const { issues, set } = lintAndReport(layout, output)
   if (issues.length > 0) return 1
-  output.log(`icon lint: ${set.icons.length} icon(s) and ${set.brands.length} brand(s), no issue`)
+  output.log(
+    `icon lint: ${set.icons.length} icon(s), ${set.brands.length} brand(s) and ${set.flags.length} flag(s), no issue`
+  )
   return 0
 }
 

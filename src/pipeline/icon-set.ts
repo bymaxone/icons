@@ -1,6 +1,6 @@
 /**
  * @fileoverview The icon set every output is written from: each icon with its metadata
- * and its drawings, each brand mark, and the categories, in name order so every output is
+ * and its drawings, each brand mark, each country flag, and the categories, in name order so every output is
  * deterministic.
  * @layer Pipeline
  */
@@ -8,6 +8,7 @@
 import type {
   BrandMetaSource,
   CategorySource,
+  FlagMetaSource,
   IconMetaSource,
   IconVariantName
 } from './metadata.ts'
@@ -20,6 +21,8 @@ export interface Drawing {
   /** The normalised file, which is also the published raw SVG. */
   readonly text: string
   readonly elements: readonly DrawingElement[]
+  /** The view box a flag keeps from its source; absent for every other kind. */
+  readonly viewBox?: string | undefined
 }
 
 /** A non-brand icon: its metadata and the drawing of each declared variant. */
@@ -41,10 +44,22 @@ export interface BrandEntry {
   readonly drawing: Drawing
 }
 
+/** A country flag. */
+export interface FlagEntry {
+  readonly name: string
+  /** The metadata file's path from the repository root. */
+  readonly metaPath: string
+  readonly meta: FlagMetaSource
+  readonly drawing: Drawing
+  /** The view box of the drawing, kept from the source. */
+  readonly viewBox: string
+}
+
 /** Everything the outputs are written from. */
 export interface IconSet {
   readonly icons: readonly IconEntry[]
   readonly brands: readonly BrandEntry[]
+  readonly flags: readonly FlagEntry[]
   readonly categories: readonly CategorySource[]
 }
 

@@ -29,6 +29,7 @@ describe('readSources', () => {
       'icons/filled/a.svg': '<svg>f</svg>',
       'icons/sm/a.svg': '<svg>s</svg>',
       'icons/brands/b.svg': '<svg>b</svg>',
+      'icons/flags/f.svg': '<svg>f</svg>',
       'icons/meta/a.json': '{}',
       'icons/README.md': '# layout'
     })
@@ -37,7 +38,8 @@ describe('readSources', () => {
       line: [{ fileName: 'a.svg', path: 'icons/line/a.svg', text: '<svg/>' }],
       filled: [{ fileName: 'a.svg', path: 'icons/filled/a.svg', text: '<svg>f</svg>' }],
       sm: [{ fileName: 'a.svg', path: 'icons/sm/a.svg', text: '<svg>s</svg>' }],
-      brands: [{ fileName: 'b.svg', path: 'icons/brands/b.svg', text: '<svg>b</svg>' }]
+      brands: [{ fileName: 'b.svg', path: 'icons/brands/b.svg', text: '<svg>b</svg>' }],
+      flags: [{ fileName: 'f.svg', path: 'icons/flags/f.svg', text: '<svg>f</svg>' }]
     })
     expect(sources.meta).toStrictEqual([
       { fileName: 'a.json', path: 'icons/meta/a.json', text: '{}' }
@@ -56,7 +58,13 @@ describe('readSources', () => {
      */
     root = scratchRepository()
     const sources = readSources({ root, icons: 'icons' })
-    expect(sources.svg).toStrictEqual({ line: [], filled: [], sm: [], brands: [] })
+    expect(sources.svg).toStrictEqual({
+      line: [],
+      filled: [],
+      sm: [],
+      brands: [],
+      flags: []
+    })
     expect(sources.meta).toStrictEqual([])
     expect(sources.strays).toStrictEqual([])
   })

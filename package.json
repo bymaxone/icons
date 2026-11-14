@@ -62,6 +62,26 @@
         "default": "./dist/brands/index.cjs"
       }
     },
+    "./flags": {
+      "import": {
+        "types": "./dist/flags/index.d.ts",
+        "default": "./dist/flags/index.mjs"
+      },
+      "require": {
+        "types": "./dist/flags/index.d.cts",
+        "default": "./dist/flags/index.cjs"
+      }
+    },
+    "./flags/*": {
+      "import": {
+        "types": "./dist/flags/*/index.d.ts",
+        "default": "./dist/flags/*/index.mjs"
+      },
+      "require": {
+        "types": "./dist/flags/*/index.d.cts",
+        "default": "./dist/flags/*/index.cjs"
+      }
+    },
     "./icons/*": {
       "import": {
         "types": "./dist/icons/*/index.d.ts",
@@ -93,6 +113,14 @@
       "brands": [
         "./dist/brands/index.d.cts",
         "./dist/brands/index.d.ts"
+      ],
+      "flags": [
+        "./dist/flags/index.d.cts",
+        "./dist/flags/index.d.ts"
+      ],
+      "flags/*": [
+        "./dist/flags/*/index.d.cts",
+        "./dist/flags/*/index.d.ts"
       ],
       "icons/*": [
         "./dist/icons/*/index.d.cts",

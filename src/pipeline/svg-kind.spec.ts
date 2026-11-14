@@ -45,20 +45,20 @@ const FILL_ROOT = {
 }
 
 describe('svg kinds', () => {
-  it('lists the four source directories in output order', () => {
+  it('lists the five source directories in output order', () => {
     /**
-     * Scenario: the outputs list line icons first, then filled, sm and brands; the
+     * Scenario: the outputs list line icons first, then filled, sm, brands and flags; the
      * directory names are the layout of `icons/`.
      */
-    expect(SVG_KINDS).toStrictEqual(['line', 'filled', 'sm', 'brands'])
+    expect(SVG_KINDS).toStrictEqual(['line', 'filled', 'sm', 'brands', 'flags'])
   })
 
   it('strokes the line icons and the 16 px masters only', () => {
     /**
-     * Scenario: a filled icon and a brand mark are filled shapes; drawing them with a
-     * stroke would change their silhouette.
+     * Scenario: a filled icon and a brand mark are filled shapes, and a flag paints each
+     * element itself; drawing them with a root stroke would change their silhouette.
      */
-    expect(SVG_KINDS.map(isStrokeKind)).toStrictEqual([true, false, true, false])
+    expect(SVG_KINDS.map(isStrokeKind)).toStrictEqual([true, false, true, false, false])
   })
 
   it('writes the stroked root and the filled root, in their order', () => {
@@ -74,16 +74,25 @@ describe('svg kinds', () => {
     expect(Object.entries(rootAttributes('brands'))).toStrictEqual(Object.entries(FILL_ROOT))
   })
 
+  it('fixes only the namespace on the root of a flag', () => {
+    /**
+     * Scenario: a flag keeps the view box of its source, which differs from flag to flag, so
+     * the fixed root holds the namespace alone and the formatter keeps the file's own view box.
+     */
+    expect(rootAttributes('flags')).toStrictEqual({ xmlns: 'http://www.w3.org/2000/svg' })
+  })
+
   it('maps each kind to the variant it becomes', () => {
     /**
-     * Scenario: a file in `icons/brands` becomes a brand variant; the others keep the
-     * directory name.
+     * Scenario: a file in `icons/brands` becomes a brand variant and one in `icons/flags`
+     * a flag; the others keep the directory name.
      */
     expect(KIND_VARIANT).toStrictEqual({
       line: 'line',
       filled: 'filled',
       sm: 'sm',
-      brands: 'brand'
+      brands: 'brand',
+      flags: 'flag'
     })
   })
 
@@ -92,18 +101,20 @@ describe('svg kinds', () => {
      * Scenario: each kind's value reaches the callback with its own kind, and the
      * entries come in the order of SVG_KINDS.
      */
-    const record = { line: 1, filled: 2, sm: 3, brands: 4 }
+    const record = { line: 1, filled: 2, sm: 3, brands: 4, flags: 5 }
     expect(mapKinds(record, (value, kind) => `${kind}:${value}`)).toStrictEqual({
       line: 'line:1',
       filled: 'filled:2',
       sm: 'sm:3',
-      brands: 'brands:4'
+      brands: 'brands:4',
+      flags: 'flags:5'
     })
     expect(kindEntries(record)).toStrictEqual([
       ['line', 1],
       ['filled', 2],
       ['sm', 3],
-      ['brands', 4]
+      ['brands', 4],
+      ['flags', 5]
     ])
   })
 })

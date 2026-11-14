@@ -7,7 +7,7 @@
  * Mocks: none.
  */
 
-import { brandMeta, drawing, iconMeta, sources } from './__tests__/support.ts'
+import { brandMeta, drawing, iconMeta, ONE_FLAG, sources } from './__tests__/support.ts'
 import {
   CELL,
   composeContactSheet,
@@ -84,6 +84,16 @@ describe('the sheet constants', () => {
 })
 
 describe('sheetRows', () => {
+  it('has no row for a country flag', () => {
+    /**
+     * Scenario: a flag keeps its own colours and view box, which the square cells and the
+     * single ink of the sheet do not fit.
+     */
+    const { set } = lintSources(sources(ONE_FLAG))
+    expect(set.flags).toHaveLength(1)
+    expect(sheetRows(set)).toStrictEqual([])
+  })
+
   it('lists every icon variant in name order, then every brand', () => {
     /**
      * Scenario: each drawing is one row, labelled with its name and variant.

@@ -23,6 +23,7 @@ const readJson = (path: string): object => JSON.parse(readFileSync(join(REPO_ROO
 export const SCHEMAS: Schemas = {
   icon: readJson('schemas/icon.schema.json'),
   brand: readJson('schemas/brand.schema.json'),
+  flag: readJson('schemas/flag.schema.json'),
   category: readJson('schemas/category.schema.json')
 }
 
@@ -32,6 +33,17 @@ export const CATEGORIES_TEXT = readFileSync(join(REPO_ROOT, 'categories.json'), 
 /** A drawing body in its normalised file form for a kind. */
 export const drawing = (kind: SvgKind, body: string): string =>
   normalizeSvg(`<svg>${body}</svg>`, kind)
+
+/** A flag drawing in its normalised file form: its own 3:2 view box around the body. */
+export const flagDrawing = (body: string, viewBox = '0 0 513 342'): string =>
+  normalizeSvg(
+    `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${viewBox}">${body}</svg>`,
+    'flags'
+  )
+
+/** Two bands, the least a flag needs to be a drawing. */
+export const BANDS =
+  '<path fill="#004f8e" d="M0 0h513v342H0z"/><path fill="#f6c500" d="M0 171h513v57H0z"/>'
 
 /** A stroked circle well inside the live area. */
 export const CIRCLE = '<circle cx="12" cy="12" r="7.25"/>'
@@ -65,6 +77,20 @@ export function brandMeta(overrides: Record<string, unknown> = {}): string {
   })
 }
 
+/** Valid metadata of a country flag, with overrides. */
+export function flagMeta(overrides: Record<string, unknown> = {}): string {
+  return JSON.stringify({
+    $schema: '../../schemas/flag.schema.json',
+    title: 'Sweden',
+    code: 'SE',
+    source: 'https://example.com/flags/SE.svg',
+    license: 'MIT',
+    retrievedAt: '2026-11-15',
+    since: '1.0.0',
+    ...overrides
+  })
+}
+
 /** The files of an in-memory icons directory, by directory and file name. */
 export type SourceTree = Partial<Record<SvgKind | 'meta', Record<string, string>>>
 
@@ -82,7 +108,8 @@ export function sources(tree: SourceTree, overrides: Partial<IconSources> = {}):
       line: files('line', tree.line),
       filled: files('filled', tree.filled),
       sm: files('sm', tree.sm),
-      brands: files('brands', tree.brands)
+      brands: files('brands', tree.brands),
+      flags: files('flags', tree.flags)
     },
     meta: files('meta', tree.meta),
     categories: { fileName: 'categories.json', path: 'categories.json', text: CATEGORIES_TEXT },
@@ -90,6 +117,12 @@ export function sources(tree: SourceTree, overrides: Partial<IconSources> = {}):
     strays: [],
     ...overrides
   }
+}
+
+/** One flag with two bands, valid in every respect. */
+export const ONE_FLAG: SourceTree = {
+  flags: { 'se-flag.svg': flagDrawing(BANDS) },
+  meta: { 'se-flag.json': flagMeta() }
 }
 
 /** One icon with a line circle, valid in every respect. */

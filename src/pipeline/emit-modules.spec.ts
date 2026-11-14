@@ -3,12 +3,21 @@
  *
  * Layer: unit, on a set built from in-memory sources.
  * Goal: pin every generated module byte for byte before formatting: the drawing as an
- * element-list literal for `createIcon`, the paint, the aliases with `@deprecated`, the
- * per-icon entry, the root and brand barrels, and the empty barrels of a set with no icon.
+ * element-list literal for `createIcon` or `createFlag`, the paint, the aliases with
+ * `@deprecated`, the per-icon entry, the root, brand and flag barrels, and the empty barrels of
+ * a set with no icon.
  * Mocks: none.
  */
 
-import { brandMeta, drawing, iconMeta, sources } from './__tests__/support.ts'
+import {
+  BANDS,
+  brandMeta,
+  drawing,
+  flagDrawing,
+  flagMeta,
+  iconMeta,
+  sources
+} from './__tests__/support.ts'
 import { componentModules, GENERATED_DIRECTORIES, iconNodeLiteral } from './emit-modules.ts'
 import { lintSources } from './lint.ts'
 
@@ -33,6 +42,13 @@ const build = (): ReturnType<typeof lintSources> =>
         'acme.svg': drawing('brands', '<polygon points="12 3 21 21 3 21"/>'),
         'beta.svg': drawing('brands', '<rect width="16" height="16" x="4" y="4"/>')
       },
+      flags: {
+        'se-flag.svg': flagDrawing(BANDS),
+        'no-flag.svg': flagDrawing(
+          '<g fill="red" stroke="#000" stroke-width="8" stroke-miterlimit="10" stroke-linejoin="round"><circle cx="256" cy="171" r="80"/><path fill-rule="evenodd" opacity=".5" d="M0 0h9v9z" fill="#FFF"/></g>',
+          '0 0 22.5 15'
+        )
+      },
       meta: {
         'ring.json': iconMeta({
           tags: ['circle', 'end */ here'],
@@ -50,6 +66,8 @@ const build = (): ReturnType<typeof lintSources> =>
           ]
         }),
         'dot.json': iconMeta({ since: '1.2.0' }),
+        'se-flag.json': flagMeta({ title: 'Sweden */ SE' }),
+        'no-flag.json': flagMeta({ title: 'Norway', code: 'NO' }),
         'beta.json': brandMeta({ title: 'Beta' }),
         'acme.json': brandMeta({
           title: 'Acme */ Co',
@@ -119,7 +137,7 @@ describe('componentModules', () => {
     modules = componentModules(build().set)
   })
 
-  it('writes the barrels, one entry per icon, one module per variant and per brand', () => {
+  it('writes the barrels, one entry per icon, one module per variant, per brand and per flag', () => {
     /**
      * Scenario: the paths are the layout tsup and the export map read; only what is drawn
      * is written.
@@ -127,6 +145,7 @@ describe('componentModules', () => {
     expect([...modules.keys()]).toStrictEqual([
       'src/icons/generated/index.ts',
       'src/brands/generated/index.ts',
+      'src/flags/generated/index.ts',
       'src/icons/generated/dot/index.ts',
       'src/icons/generated/dot/line.ts',
       'src/icons/generated/ring/index.ts',
@@ -134,7 +153,9 @@ describe('componentModules', () => {
       'src/icons/generated/ring/filled.ts',
       'src/icons/generated/ring/sm.ts',
       'src/brands/generated/acme.ts',
-      'src/brands/generated/beta.ts'
+      'src/brands/generated/beta.ts',
+      'src/flags/generated/no-flag.ts',
+      'src/flags/generated/se-flag.ts'
     ])
     expect(build().issues).toStrictEqual([])
   })
@@ -246,12 +267,37 @@ describe('componentModules', () => {
     )
   })
 
+  it('writes a flag as a createFlag call over its own view box, with its provenance', () => {
+    /**
+     * Scenario: a flag is created with the view box of its source and a drawing that keeps its
+     * own paint, in React prop spelling (the formatter flattened the group of `no-flag` onto its
+     * children and wrote its colours as `#rrggbb`); its doc names where it came from and that it is
+     * reproduced as published; the barrel reaches each flag through its own subpath.
+     */
+    expect(modules.get('src/flags/generated/se-flag.ts')).toBe(
+      HEADER('The Sweden *\\/ SE flag.', 'icons/flags/se-flag.svg') +
+        "import { createFlag } from '@bymax-one/icons/runtime'\n\n" +
+        '/**\n * The Sweden *\\/ SE flag, from https://example.com/flags/SE.svg (MIT, retrieved 2026-11-15).\n' +
+        ' * It is reproduced as published by its source; see TRADEMARKS.md.\n' +
+        ' *\n * @since 1.0.0\n */\n' +
+        'export const SeFlagIcon = /* @__PURE__ */ createFlag("se-flag", "0 0 513 342", [["path", { fill: "#004f8e", d: "M0 0h513v342H0z" }], ["path", { fill: "#f6c500", d: "M0 171h513v57H0z" }]])\n'
+    )
+    expect(modules.get('src/flags/generated/no-flag.ts')).toContain(
+      'createFlag("no-flag", "0 0 22.5 15", [["circle", { cx: 256, cy: 171, r: 80, fill: "#ff0000", stroke: "#000000", strokeLinejoin: "round", strokeMiterlimit: 10, strokeWidth: 8 }], ["path", { fill: "#ffffff", fillRule: "evenodd", stroke: "#000000", strokeLinejoin: "round", strokeMiterlimit: 10, strokeWidth: 8, d: "M0 0h9v9z", opacity: 0.5 }]])'
+    )
+    expect(modules.get('src/flags/generated/index.ts')).toBe(
+      HEADER('Every country flag component.', 'icons/flags') +
+        "export { NoFlagIcon } from '@bymax-one/icons/flags/no-flag'\n" +
+        "export { SeFlagIcon } from '@bymax-one/icons/flags/se-flag'\n"
+    )
+  })
+
   it('writes empty barrels for a set with no icon and no brand', () => {
     /**
      * Scenario: before the first drawing the root and `./brands` still build; their
      * generated part exports nothing.
      */
-    const empty = componentModules({ icons: [], brands: [], categories: [] })
+    const empty = componentModules({ icons: [], brands: [], flags: [], categories: [] })
     expect(empty).toStrictEqual(
       new Map([
         [
@@ -261,12 +307,16 @@ describe('componentModules', () => {
         [
           'src/brands/generated/index.ts',
           `${HEADER('Every brand mark component.', 'icons/brands')}export {}\n`
+        ],
+        [
+          'src/flags/generated/index.ts',
+          `${HEADER('Every country flag component.', 'icons/flags')}export {}\n`
         ]
       ])
     )
   })
 
-  it('names the three generated directories', () => {
+  it('names the four generated directories', () => {
     /**
      * Scenario: a generation replaces these directories, and the stale-copy check reads
      * them; nothing else under `src` is generated.
@@ -274,6 +324,7 @@ describe('componentModules', () => {
     expect(GENERATED_DIRECTORIES).toStrictEqual([
       'src/icons/generated',
       'src/brands/generated',
+      'src/flags/generated',
       'src/meta/generated'
     ])
   })

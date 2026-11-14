@@ -2,7 +2,7 @@
  * @fileoverview The metadata sources: the shapes of `icons/meta/<name>.json` and
  * `categories.json`, and their validation against the JSON Schemas in `schemas/` with ajv.
  * A file names its schema in `$schema`, and that is what decides whether it describes an
- * icon or a brand mark.
+ * icon, a brand mark or a country flag.
  * @layer Pipeline
  */
 
@@ -52,6 +52,18 @@ export interface BrandMetaSource {
   readonly since: string
 }
 
+/** `icons/meta/<name>.json` of a country flag. */
+export interface FlagMetaSource {
+  readonly $schema: string
+  readonly title: string
+  readonly code: string
+  readonly source: string
+  readonly license: string
+  readonly retrievedAt: string
+  readonly tags?: readonly string[]
+  readonly since: string
+}
+
 /** One entry of `categories.json`. */
 export interface CategorySource {
   readonly name: string
@@ -70,10 +82,14 @@ export const ICON_SCHEMA_REF = '../../schemas/icon.schema.json'
 /** The `$schema` value of a brand's metadata file. */
 export const BRAND_SCHEMA_REF = '../../schemas/brand.schema.json'
 
-/** The three schemas, parsed from `schemas/`. */
+/** The `$schema` value of a country flag's metadata file. */
+export const FLAG_SCHEMA_REF = '../../schemas/flag.schema.json'
+
+/** The four schemas, parsed from `schemas/`. */
 export interface Schemas {
   readonly icon: object
   readonly brand: object
+  readonly flag: object
   readonly category: object
 }
 
@@ -81,12 +97,13 @@ export interface Schemas {
 export interface MetadataValidators {
   readonly icon: ValidateFunction<IconMetaSource>
   readonly brand: ValidateFunction<BrandMetaSource>
+  readonly flag: ValidateFunction<FlagMetaSource>
   readonly categories: ValidateFunction<CategoriesSource>
 }
 
 /**
  * Compiles the schemas. The icon schema is compiled first, which registers it under its
- * `$id`, because the other two refer to its definitions (`icon.schema.json#/$defs/...`).
+ * `$id`, because the others refer to its definitions (`icon.schema.json#/$defs/...`).
  * Strict mode refuses an unknown
  * keyword in a schema instead of ignoring it, and every error is reported, not only the
  * first.
@@ -99,6 +116,7 @@ export function createValidators(schemas: Schemas): MetadataValidators {
   return {
     icon: ajv.compile<IconMetaSource>(schemas.icon),
     brand: ajv.compile<BrandMetaSource>(schemas.brand),
+    flag: ajv.compile<FlagMetaSource>(schemas.flag),
     categories: ajv.compile<CategoriesSource>(schemas.category)
   }
 }

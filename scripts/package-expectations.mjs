@@ -1,7 +1,7 @@
 /**
  * @fileoverview What a built package must export, read from its own `dist/metadata.json`:
- * the exact export list of every subpath, every component with the class it renders, every
- * sprite symbol and every raw SVG file. Shared by `check-consumer-runtime.mjs` and
+ * the exact export list of every subpath (icons, brands and flags), every component with the
+ * class it renders, every sprite symbol (a flag has none) and every raw SVG file. Shared by `check-consumer-runtime.mjs` and
  * `dogfood-smoke-test.mjs`.
  * @layer scripts
  *
@@ -33,6 +33,8 @@ const RUNTIME = ['Flag', 'Icon', 'createFlag', 'createIcon']
 const META = [
   'BRAND_METADATA',
   'BRAND_NAMES',
+  'FLAG_METADATA',
+  'FLAG_NAMES',
   'ICON_CATEGORIES',
   'ICON_GRID',
   'ICON_METADATA',
@@ -44,7 +46,7 @@ const META = [
  *
  * @param {string} packageDir - A directory holding the package's `dist/`.
  * @returns {{
- *   metadata: { icons: Record<string, any>, brands: Record<string, any> },
+ *   metadata: { icons: Record<string, any>, brands: Record<string, any>, flags: Record<string, any> },
  *   exports: Record<string, string[]>,
  *   components: { subpath: string, name: string, className: string }[],
  *   symbols: string[],
@@ -92,6 +94,16 @@ export function packageExpectations(packageDir) {
     svgFiles.push(`svg/brands/${name}.svg`)
   }
   exports.set('./brands', brandExports.sort())
+  const flagExports = []
+  for (const name of Object.keys(metadata.flags)) {
+    const subpath = `./flags/${name}`
+    const flagComponent = component(name)
+    exports.set(subpath, [flagComponent])
+    flagExports.push(flagComponent)
+    components.push({ subpath, name: flagComponent, className: `bx-icon bx-icon-${name}` })
+    svgFiles.push(`svg/flags/${name}.svg`)
+  }
+  exports.set('./flags', flagExports.sort())
   exports.set('.', ['ICON_GRID', ...ROOT_RUNTIME, ...iconExports].sort())
   return { metadata, exports: Object.fromEntries(exports), components, symbols, svgFiles }
 }

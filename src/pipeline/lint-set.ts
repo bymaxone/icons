@@ -1,12 +1,12 @@
 /**
  * @fileoverview The rules that read the sources as a set (spec section 12): every drawing
- * has its metadata and the reverse, the declared variants exist, brand names stay in
- * `icons/brands`, categories exist, and no two names or component names collide.
+ * has its metadata and the reverse, the declared variants exist, brand and flag names stay in
+ * `icons/brands` and `icons/flags`, categories exist, and no two names or component names collide.
  * @layer Pipeline
  */
 
 import type { LintIssue } from './lint-issue.ts'
-import type { BrandMetaSource, IconMetaSource } from './metadata.ts'
+import type { BrandMetaSource, FlagMetaSource, IconMetaSource } from './metadata.ts'
 import { componentName } from './naming.ts'
 import type { Variant } from './naming.ts'
 import type { SourceFile } from './sources.ts'
@@ -25,6 +25,7 @@ export interface Catalog {
   readonly metaFiles: ReadonlyMap<string, SourceFile>
   readonly icons: ReadonlyMap<string, Described<IconMetaSource>>
   readonly brands: ReadonlyMap<string, Described<BrandMetaSource>>
+  readonly flags: ReadonlyMap<string, Described<FlagMetaSource>>
   readonly categories: ReadonlySet<string>
 }
 
@@ -51,6 +52,9 @@ export function pairIssues(catalog: Catalog): LintIssue[] {
   for (const [name, { file }] of catalog.brands) {
     missing(name, file, 'brands', catalog.svg.brands.has(name))
   }
+  for (const [name, { file }] of catalog.flags) {
+    missing(name, file, 'flags', catalog.svg.flags.has(name))
+  }
   return issues
 }
 
@@ -69,6 +73,26 @@ export function brandScopeIssues(catalog: Catalog): LintIssue[] {
     if (catalog.icons.has(name)) {
       const message = `${name} is an icon, not a brand: icons/brands holds brand marks only`
       issues.push({ file: file.path, rule: 'brand-scope', message })
+    }
+  }
+  return issues
+}
+
+/** A flag's drawing lives only in `icons/flags`, and only a flag's lives there. */
+export function flagScopeIssues(catalog: Catalog): LintIssue[] {
+  const issues: LintIssue[] = []
+  for (const files of [catalog.svg.line, catalog.svg.filled, catalog.svg.sm, catalog.svg.brands]) {
+    for (const [name, file] of files) {
+      if (catalog.flags.has(name)) {
+        const message = `${name} is a flag: its drawing belongs in icons/flags only`
+        issues.push({ file: file.path, rule: 'flag-scope', message })
+      }
+    }
+  }
+  for (const [name, file] of catalog.svg.flags) {
+    if (!catalog.flags.has(name)) {
+      const message = `${name} is not a flag: icons/flags holds country flags only`
+      issues.push({ file: file.path, rule: 'flag-scope', message })
     }
   }
   return issues
@@ -161,7 +185,7 @@ function collisionIssues(
 }
 
 /**
- * No icon, brand or alias name, and no component name, is published twice. A component
+ * No icon, brand, flag or alias name, and no component name, is published twice. A component
  * collision is reported only between distinct names (`foo-filled` against the filled
  * variant of `foo`, `aspect-16-9` against `aspect-169`); a repeated name is reported once,
  * as a name.
@@ -171,7 +195,10 @@ export function uniquenessIssues(catalog: Catalog): LintIssue[] {
     ...[...catalog.icons].map(([name, described]) =>
       claims(name, described, described.meta.variants)
     ),
-    ...[...catalog.brands].map(([name, described]) => claims(name, described, ['brand']))
+    ...[...catalog.brands].map(([name, described]) => claims(name, described, ['brand'])),
+    ...[...catalog.flags].map(([name, described]) =>
+      claims(name, { file: described.file, meta: {} }, ['flag'])
+    )
   ]
   const names = collisions(all.flatMap((claim) => claim.names))
   const components = collisions(
@@ -180,7 +207,7 @@ export function uniquenessIssues(catalog: Catalog): LintIssue[] {
   return [
     ...collisionIssues(
       names,
-      (value) => `the name ${value} is used by more than one icon, brand or alias`
+      (value) => `the name ${value} is used by more than one icon, brand, flag or alias`
     ),
     ...collisionIssues(
       components,

@@ -9,10 +9,13 @@
  */
 
 import {
+  BANDS,
   brandMeta,
   CATEGORIES_TEXT,
   CIRCLE,
   drawing,
+  flagDrawing,
+  flagMeta,
   iconMeta,
   ONE_ICON,
   REPO_ROOT,
@@ -25,6 +28,8 @@ import { readSources } from './sources.ts'
 
 const LINE = drawing('line', CIRCLE)
 const BRAND = drawing('brands', '<path d="M4 4h16v16H4z"/>')
+const FLAG = flagDrawing(BANDS)
+const normalised = (body: string): string => drawing('flags', body)
 
 const issuesOf = (tree: SourceTree, rule: RuleId) =>
   lintSources(sources(tree)).issues.filter((issue) => issue.rule === rule)
@@ -65,7 +70,7 @@ describe('lintSources: file-name', () => {
      */
     const result = lintSources(sources({}, { strays: ['icons/notes.txt', 'icons/line/nested'] }))
     const message =
-      'not part of the icons layout: icons/{line,filled,sm,brands,meta}/ and README.md'
+      'not part of the icons layout: icons/{line,filled,sm,brands,flags,meta}/ and README.md'
     expect(result.issues).toStrictEqual([
       { file: 'icons/notes.txt', rule: 'file-name', message },
       { file: 'icons/line/nested', rule: 'file-name', message }
@@ -115,7 +120,7 @@ describe('lintSources: meta-json and meta-schema', () => {
         file: 'icons/meta/ring.json',
         rule: 'meta-schema',
         message:
-          '$schema must be "../../schemas/icon.schema.json" or "../../schemas/brand.schema.json"'
+          '$schema must be "../../schemas/icon.schema.json", "../../schemas/brand.schema.json" or "../../schemas/flag.schema.json"'
       }
     ])
   })
@@ -158,6 +163,25 @@ describe('lintSources: meta-json and meta-schema', () => {
         file: 'icons/meta/acme.json',
         rule: 'meta-schema',
         message: '/source must match pattern "^https://\\S+$"'
+      }
+    ])
+  })
+
+  it('validates a flag file against the flag schema', () => {
+    /** Scenario: a flag's provenance fields are required and its code is upper case. */
+    const text = flagMeta({ license: undefined, code: 'se' })
+    expect(
+      issuesOf({ flags: { 'se-flag.svg': FLAG }, meta: { 'se-flag.json': text } }, 'meta-schema')
+    ).toStrictEqual([
+      {
+        file: 'icons/meta/se-flag.json',
+        rule: 'meta-schema',
+        message: "/ must have required property 'license'"
+      },
+      {
+        file: 'icons/meta/se-flag.json',
+        rule: 'meta-schema',
+        message: '/code must match pattern "^[A-Z]{2}(?:-[A-Z]{2,3})?$"'
       }
     ])
   })
@@ -321,6 +345,57 @@ describe('lintSources: the icon set', () => {
       ['beta', 'icons/meta/beta.json', 'icons/brands/beta.svg']
     ])
     expect(set.categories.map((category) => category.name)).toContain('system')
+  })
+
+  it('builds every flag in name order, with its drawing, view box and metadata path', () => {
+    /**
+     * Scenario: the outputs are written from this set, so it holds each flag once, sorted,
+     * with the view box its drawing keeps from its source.
+     */
+    const tree: SourceTree = {
+      flags: {
+        'se-flag.svg': FLAG,
+        'no-flag.svg': flagDrawing(BANDS, '0 0 22.5 15')
+      },
+      meta: {
+        'se-flag.json': flagMeta(),
+        'no-flag.json': flagMeta({ title: 'Norway', code: 'NO' })
+      }
+    }
+    const { issues, set } = lintSources(sources(tree))
+    expect(issues).toStrictEqual([])
+    expect(
+      set.flags.map((flag) => [flag.name, flag.metaPath, flag.drawing.path, flag.viewBox])
+    ).toStrictEqual([
+      ['no-flag', 'icons/meta/no-flag.json', 'icons/flags/no-flag.svg', '0 0 22.5 15'],
+      ['se-flag', 'icons/meta/se-flag.json', 'icons/flags/se-flag.svg', '0 0 513 342']
+    ])
+    expect(set.flags[0]?.meta).toStrictEqual(JSON.parse(flagMeta({ title: 'Norway', code: 'NO' })))
+    expect(set.icons).toStrictEqual([])
+    expect(set.brands).toStrictEqual([])
+  })
+
+  it('leaves a flag out of the set when its drawing does not parse or has no view box', () => {
+    /**
+     * Scenario: a flag without a readable drawing cannot be built, and one without a view box
+     * has no size to give its component; each is reported and left out.
+     */
+    const tree: SourceTree = {
+      flags: {
+        'se-flag.svg': '<svg>',
+        'no-flag.svg': normalised('<path fill="#ffffff" d="M0 0h1v1z"/>')
+      },
+      meta: {
+        'se-flag.json': flagMeta(),
+        'no-flag.json': flagMeta({ title: 'Norway', code: 'NO' })
+      }
+    }
+    const { issues, set } = lintSources(sources(tree))
+    expect(issues.map((issue) => [issue.file, issue.rule])).toStrictEqual([
+      ['icons/flags/se-flag.svg', 'svg-parse'],
+      ['icons/flags/no-flag.svg', 'svg-root']
+    ])
+    expect(set.flags).toStrictEqual([])
   })
 
   it('leaves out a brand whose drawing does not parse, and keeps the icon whose line does not', () => {

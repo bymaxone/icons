@@ -31,6 +31,8 @@ const config: Config = {
   moduleNameMapper: {
     '^@bymax-one/icons$': '<rootDir>/src/index.ts',
     '^@bymax-one/icons/brands$': '<rootDir>/src/brands/index.ts',
+    '^@bymax-one/icons/flags$': '<rootDir>/src/flags/index.ts',
+    '^@bymax-one/icons/flags/([a-z0-9-]+)$': '<rootDir>/src/flags/generated/$1.ts',
     '^@bymax-one/icons/icons/([a-z0-9-]+)$': '<rootDir>/src/icons/generated/$1/index.ts',
     '^@bymax-one/icons/meta$': '<rootDir>/src/meta/index.ts',
     '^@bymax-one/icons/runtime$': '<rootDir>/src/runtime/index.ts'

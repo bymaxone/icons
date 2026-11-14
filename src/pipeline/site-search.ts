@@ -80,7 +80,8 @@ const TYPE_WORDS: Readonly<Record<Variant, string>> = {
   line: 'line outline',
   filled: 'filled solid',
   sm: 'sm 16 px master',
-  brand: 'brand logo'
+  brand: 'brand logo',
+  flag: 'country flag'
 }
 
 /**
