@@ -207,7 +207,7 @@ The icons that appear at 16 px in the Studio shell, and the icons whose 24 px dr
 
 ## 5. Brand Icons
 
-Brand marks are the only third-party shapes in the package.
+Brand marks and the country flags of section 5.1 are the only third-party shapes in the package.
 
 - **Shape:** official geometry only, scaled into the live area, filled, monochrome `currentColor`. No line versions, no restyling, because modifying a logo breaks most brand guidelines.
 - **Source:** path data from Simple Icons (CC0-1.0) where available, credited in `TRADEMARKS.md` even though CC0 does not require it.
@@ -217,6 +217,22 @@ Brand marks are the only third-party shapes in the package.
 - **Selection:** a brand is in only if Simple Icons 16.37.0 has its path, the owner's own guidelines page was opened and is about the use of the logo or brand, and the licence of the mark can be shipped. The page, its owner and the day it was read are in `docs/brands/guidelines-evidence.md`, and a provenance test holds every mark to them. A mark under a licence that asks for credit has it in `TRADEMARKS.md`. A lettering mark is tagged `wordmark`, for sizes larger than 24 px.
 - **Not in 1.0:** the brands that failed a rule, each with its reason, are in [`b7/brands-1.0.md`](./b7/brands-1.0.md), which includes microsoft and linkedin, removed by Simple Icons at their owners' request. A brand returns when its blocker lifts. The decision is provisional and reversible.
 - **Google:** the monochrome G is the default (Studio decision 103). Google's "Sign in with Google" branding guidelines require the standard colour G on the sign-in button and list monochrome versions as a "Don't". The risk is accepted by the founder and recorded in the Studio. An optional `google-color` mark was planned for the sign-in button (D3), but the current official Google sign-in asset uses a gradient G built with a mask, filters and a `foreignObject` conic-gradient, which the package format does not allow; `google-color` is deferred until an official solid-colour asset exists.
+
+### 5.1 Country flags
+
+Approved by the delegated auditor on behalf of the founder, 2026-11-14. A flag is official geometry like a brand mark: its path data is the source's, never redrawn or restyled.
+
+- **Source:** the `3x2` SVGs of `country-flag-icons` 1.6.20 (MIT), an exact development dependency. The package holds 265 of them: the 249 officially assigned ISO 3166-1 alpha-2 codes, `EU`, `XK`, the reserved `AC`, `IC` and `TA`, the de facto states `XA`, `XC` and `XO`, and eight subdivisions.
+- **Set for 1.0:** 250 flags, the 249 assigned ISO 3166-1 codes and `EU`. The criterion is an ISO assignment, plus the European Union. Deferred to 1.x, as a decision of the founder: `XK` (Kosovo), whose recognition is contested; `XA` (Abkhazia), `XC` (Northern Cyprus) and `XO` (South Ossetia); the reserved codes `AC`, `IC` and `TA`; and the eight subdivisions.
+- **Names:** `<code>-flag` with the lower-case code of the source, such as `us-flag` and `br-flag`. The same name is the metadata key, the file (`icons/flags/us-flag.svg`), the subpath and the raw SVG, and the component is `UsFlagIcon`. A suffix because three plain codes already name something in the shared name space (`tv` an icon, `at` and `cd` aliases); it removes the clash for every flag with no exception.
+- **Entry points:** `./flags` (every flag, named exports, tree-shakable; the root does not re-export them, as it does not re-export the brand marks), `./flags/<name>` (one flag, for a dynamic import) and `./svg/flags/<name>.svg`. No sprite entry and no filled or 16 px variants: the sprite holds `currentColor` icons, and a flag keeps its own colours.
+- **Runtime:** `createFlag` in `./runtime`, beside `createIcon`, with the accessibility rules of section 8.5 (`aria-hidden="true"` and `focusable="false"`; a `title` gives `role="img"`, `aria-label` and a `<title>`). The props are `IconProps` without `color`, `strokeWidth` and `absoluteStrokeWidth`, which mean nothing for a flag. `size` is the height: a number is px, default 16, so the box is 24 by 16; a CSS length sets the height alone and the width follows the 3:2 view box. A pure function, with no hooks and no context.
+- **Drawing format:** the view box of the source is kept as it is, and path data is not rewritten: the formatter of the flag kind runs without the SVGO plugins that rewrite path data or convert shapes, so a `d` is the source's, byte for byte. The three-decimal rule of section 6.3 holds without a rewrite, since the most decimals in the 265 sources is 3. The source uses 20 different view boxes, all 3:2. The import flattens each `g` by writing its `fill`, `stroke` and `opacity` attributes onto its children, with a small plugin of ours because no SVGO plugin moves presentation attributes down; an `opacity` moves only when the group has one child, and the import fails otherwise, which the 265 sources do not need (the one group with an `opacity`, in `IR`, holds one path, and no group carries a `transform`). It drops the stray `class` and `clip-rule` and writes named colours as `#rrggbb`.
+- **Lint profile `flag`:** the root is `<svg xmlns viewBox>` and nothing else, the view box positive and 3:2 within 0.2%; the elements are `path`, `circle`, `ellipse`, `rect` and `polygon`, never `g`, `use`, `defs`, `style`, `clipPath`, `mask`, `filter`, a gradient, `image`, `text`, `pattern` or `foreignObject`; the attributes are the element's geometry, `fill`, `fill-rule`, `stroke`, `stroke-width`, `stroke-miterlimit`, `stroke-linejoin` and `opacity` (a number from 0 to 1), never `transform`, `style`, `id`, `class`, `clip-rule` or `fill-opacity`; a colour is `#rrggbb` or `none`, never `currentColor` or `url(...)`; a file is at most 8 KiB raw. The similarity check and the 16 px check do not read flags, stated in the configuration of both gates and held by a test.
+- **Metadata:** `schemas/flag.schema.json` with `title` (the English region name from `Intl.DisplayNames`, written to the file rather than computed at build), `code` (upper case), `source` (the file at the pinned version in the repository of `country-flag-icons`), `license` (MIT), `retrievedAt`, `tags` and `since`. A provenance spec holds every flag to its source file at the pinned version, as for the brand marks. The merged `dist/metadata.json` gains a `flags` table beside `icons` and `brands`, and `scripts/package-expectations.mjs` reads it, so the exports, runtime and size gates cover every flag subpath.
+- **Notice:** a "Country flags" section of `TRADEMARKS.md` with the MIT notice of `country-flag-icons`, a statement that the licence covers the files and says nothing of how a country regulates the display of its flag, a statement that flags are reproduced as published by the source and that their inclusion implies no position on sovereignty or recognition, and the deferred list above with its reason.
+- **Catalogue:** a Flags section, with search by the code and by the name in English and in Portuguese; the Portuguese terms come from `Intl.DisplayNames` for `pt-BR`, written to `site/terms-pt.json`.
+- **Size:** a budget per flag on the built `./flags`, set 20% over the measured cost like the brands'. The 250 flags concatenate to 166,051 bytes raw and 36,585 bytes brotli, before the per-module overhead.
 
 ---
 
@@ -295,6 +311,8 @@ Generated modules are rebuilt from source in CI and compared with the committed 
 | `@bymax-one/icons`               | Every line and filled component, plus `Icon` and the types    |
 | `@bymax-one/icons/icons/<name>`  | One icon's components, for consumers that avoid barrels       |
 | `@bymax-one/icons/brands`        | Brand components                                              |
+| `@bymax-one/icons/flags`         | Country flag components (section 5.1)                         |
+| `@bymax-one/icons/flags/<name>`  | One flag's component, for a dynamic import                    |
 | `@bymax-one/icons/meta`          | Typed metadata and the `IconName` union, with no React import |
 | `@bymax-one/icons/svg/*`         | Raw SVG files                                                 |
 | `@bymax-one/icons/sprite.svg`    | The sprite                                                    |
@@ -302,7 +320,7 @@ Generated modules are rebuilt from source in CI and compared with the committed 
 
 ### 8.2 Component naming
 
-- Line: `LightningIcon`. Filled: `LightningFilledIcon`. 16 px master: `LightningSmIcon`. Brands: `GoogleBrandIcon`.
+- Line: `LightningIcon`. Filled: `LightningFilledIcon`. 16 px master: `LightningSmIcon`. Brands: `GoogleBrandIcon`. Flags: `UsFlagIcon`.
 - The `Icon` suffix is always present so names never collide with application components such as `Image`, `Link` or `Video`.
 - Aliases export the same component under the alias name (`CreditIcon`), marked `@deprecated` in JSDoc when the alias is deprecated.
 
@@ -328,6 +346,7 @@ interface IconProps extends Omit<SVGProps<SVGSVGElement>, 'ref'> {
 - `absoluteStrokeWidth` computes `strokeWidth × 24 / size` when both are numeric and the size is positive; otherwise the stroke scales with the drawing.
 - Without it, a width is written as given on a 24 px master and as `strokeWidth × 24 / 16` on a 16 px master (`createIcon` option `masterSize: 16`); a width that is not a finite number is written unchanged.
 - `ref` is a regular prop (React 19); no `forwardRef`.
+- A flag takes `IconProps` without `color`, `strokeWidth` and `absoluteStrokeWidth`, and its `size` is the height (section 5.1). As for icons, consumer props are spread last, so a `width`, `height` or `viewBox` passed by the consumer wins over `size` and the drawing.
 
 ### 8.4 Server Components
 
@@ -365,15 +384,15 @@ It is published with GitHub Pages on `icons.bymax.one` (D4).
 - No icon font. Fonts cost accessibility and tree-shaking; SVG covers every use.
 - No Vue, Svelte or Angular component packages. Raw SVG covers those consumers. React Native components ship in P6, after the 1.0 release (D6).
 - No context provider for default size or colour. CSS (`color`, `width`, `height` on a wrapper class) does the same without a client boundary.
-- No coloured or multi-colour icons. The optional `google-color` mark of D3 is deferred (§5).
-- No third-party drawings other than brand marks.
+- No coloured or multi-colour icons, except the country flags of §5.1, which keep their own colours. The optional `google-color` mark of D3 is deferred (§5).
+- No third-party drawings other than brand marks and country flags.
 - No dynamic loading by name at runtime (`<DynamicIcon name="...">`). It defeats tree-shaking; consumers map names to components explicitly.
 
 ---
 
 ## 11. Dependencies and Packaging
 
-- **Zero direct dependencies.** `react ^19.0.0` is a peer dependency, required by the root and `brands` subpaths and not imported by `meta`.
+- **Zero direct dependencies.** `react ^19.0.0` is a peer dependency, required by the root, `brands` and `flags` subpaths and not imported by `meta`.
 - **Formats:** ESM `.mjs` and CJS `.cjs`, with `.d.ts` and `.d.cts`, per the `@bymax-one` export map shape (types per condition, `typesVersions`, `./package.json` exported).
 - `"sideEffects": false`, `"type": "module"`, `files: ["dist", "LICENSE", "README.md", "CHANGELOG.md", "TRADEMARKS.md"]`.
 - `publishConfig`: public, provenance, npm registry.

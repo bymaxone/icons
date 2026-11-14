@@ -458,8 +458,9 @@ These rules apply to every phase. Phase sections only add rules specific to them
 
 ### B8: country-flags
 
-- **Goal:** A `./flags` subpath with the country flags in 3:2 and in colour, from `country-flag-icons` (MIT), with its attribution and a provenance note per flag.
-- **Rules:** flags are official geometry, like brand marks; they have a lint profile of their own (several solid fills; no gradient, transform, mask, filter, `use` or `id`). The API and names are decided with the auditor before the first flag.
+- **Goal:** A `./flags` subpath with the 250 country flags (the 249 assigned ISO 3166-1 codes and the European Union) in 3:2 and in colour, from `country-flag-icons` (MIT), with its attribution and a provenance note per flag.
+- **Rules:** flags are official geometry, like brand marks; they have a lint profile of their own (spec section 5.1: several solid fills; no gradient, transform, mask, filter, `use` or `id`). The set, the names, the API and the profile were decided with the auditor on 2026-11-14 and are in spec section 5.1; the similarity and 16 px checks do not read flags.
+- **Pull requests:** the spec (section 5.1), the runtime (`createFlag`), the profile, the schema and the gates, then the import in batches, then the catalogue section. The rules that README and `CLAUDE.md` state ('no coloured icons', 'no third-party drawings') change with the runtime pull request, when flags exist.
 - **Size:** L
 
 ### P5: hardening-release
