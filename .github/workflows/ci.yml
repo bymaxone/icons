@@ -98,8 +98,9 @@ jobs:
         run: pnpm check:sixteen
       - name: Metadata is written per icon
         # Fails on a placeholder label, a label two icons share that is not a justified group
-        # of scripts/meta-allowlist.json, and empty or repeated useCases, so a record that
-        # was overwritten or copied from another icon cannot merge.
+        # of scripts/meta-allowlist.json, empty or repeated useCases, and a tag holding a type word
+        # (filled, sm, 16 px) that the search reads as a filter, so a record that was
+        # overwritten or copied from another icon cannot merge.
         run: pnpm check:meta
       - name: Existing drawings change only through a redraw manifest
         # A pull request may change a drawing that already exists, or its baseline, only

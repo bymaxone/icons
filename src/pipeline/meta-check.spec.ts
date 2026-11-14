@@ -9,13 +9,25 @@
 
 import { brandMeta, drawing, iconMeta, sources, CIRCLE } from './__tests__/support.ts'
 import { lintSources } from './lint.ts'
-import { META_ALLOWLIST, PLACEHOLDER_LABELS, metaIssues, metaRecords } from './meta-check.ts'
+import {
+  META_ALLOWLIST,
+  PLACEHOLDER_LABELS,
+  TYPE_WORDS,
+  metaIssues,
+  metaRecords
+} from './meta-check.ts'
 import type { AllowedLabel, MetaRecord } from './meta-check.ts'
 
-/** A record with distinct use cases unless told otherwise. */
-const record = (name: string, label: string, useCases?: string[]): MetaRecord => ({
+/** A record with distinct use cases and no tags unless told otherwise. */
+const record = (
+  name: string,
+  label: string,
+  useCases?: string[],
+  tags: string[] = []
+): MetaRecord => ({
   name,
   label,
+  tags,
   useCases: useCases ?? [`Use of ${name}`]
 })
 
@@ -28,6 +40,13 @@ describe('PLACEHOLDER_LABELS', () => {
   it('lists the words that stand for a label not written yet', () => {
     /** Scenario: the constant is the list the check and its callers share. */
     expect(PLACEHOLDER_LABELS).toStrictEqual(['todo', 'icon', 'untitled', 'label'])
+  })
+})
+
+describe('TYPE_WORDS', () => {
+  it('lists the words of a tag that name a type of the catalogue', () => {
+    /** Scenario: the constant is the list the check and its callers share. */
+    expect(TYPE_WORDS).toStrictEqual(['filled', 'sm', '16 px', '16px'])
   })
 })
 
@@ -44,7 +63,7 @@ describe('metaRecords', () => {
     expect(issues).toEqual([])
     expect(set.brands).toHaveLength(1)
     expect(metaRecords(set)).toStrictEqual([
-      { name: 'ring', label: 'Ring', useCases: ['First use', 'Second use'] }
+      { name: 'ring', label: 'Ring', tags: ['circle'], useCases: ['First use', 'Second use'] }
     ])
   })
 })
@@ -193,5 +212,52 @@ describe('metaIssues', () => {
       'a: label "TODO" is a placeholder. Write the label the icon is known by.',
       'a: useCases is empty. List at least one use.'
     ])
+  })
+})
+
+describe('metaIssues on tags', () => {
+  it('fails a tag that holds the word filled, as the tag of chart-area did', () => {
+    /** Scenario: "filled line" made the search for the type "filled" find an icon with no filled drawing. */
+    const records = [record('chart-area', 'Chart area', undefined, ['chart area', 'filled line'])]
+    expect(metaIssues(records, {})).toStrictEqual([
+      'chart-area: tag "filled line" holds the type word "filled", which the search reads as a filter. Write the tag without it.'
+    ])
+  })
+
+  it.each([
+    ['sm', 'sm'],
+    ['SM size', 'sm'],
+    ['16 px', '16 px'],
+    ['at 16px', '16px'],
+    ['Filled', 'filled'],
+    ['a-filled-b', 'filled']
+  ])('fails the tag %j for the type word %j', (tag, word) => {
+    /** Scenario: each type word is caught as a whole word, in any case and next to a hyphen or a space. */
+    expect(metaIssues([record('a', 'Alpha', undefined, [tag])], {})).toStrictEqual([
+      `a: tag ${JSON.stringify(tag)} holds the type word "${word}", which the search reads as a filter. Write the tag without it.`
+    ])
+  })
+
+  it.each(['smart', 'filler', 'small', 'sm4', '16 pixels', 'unfilled', 'mismatch', 'circle'])(
+    'passes the tag %j that only contains the letters of a type word',
+    (tag) => {
+      /** Scenario: a word that merely contains the letters is not a type word. */
+      expect(metaIssues([record('a', 'Alpha', undefined, [tag])], {})).toStrictEqual([])
+    }
+  )
+
+  it('reports one message for each tag that holds a type word', () => {
+    /** Scenario: two tags of two icons hold a type word; the others are clean. */
+    const records = [
+      record('a', 'Alpha', undefined, ['sm', 'round']),
+      record('b', 'Beta', undefined, ['filled', 'sm'])
+    ]
+    expect(metaIssues(records, {})).toHaveLength(3)
+  })
+
+  it('leaves the use cases alone, which describe the filled variant of an icon', () => {
+    /** Scenario: "Filled: the selected file" is a use case of the filled drawing and is not a tag. */
+    const records = [record('file', 'File', ['Filled: the selected file', 'Opens a file'])]
+    expect(metaIssues(records, {})).toStrictEqual([])
   })
 })
