@@ -8,6 +8,7 @@
  */
 
 import type { IconSet } from './icon-set.ts'
+import { fold } from './site-search.ts'
 
 /** The labels that stand for "not written yet", compared in lower case and trimmed. A blank label is one too. */
 export const PLACEHOLDER_LABELS: readonly string[] = ['todo', 'icon', 'untitled', 'label']
@@ -15,11 +16,12 @@ export const PLACEHOLDER_LABELS: readonly string[] = ['todo', 'icon', 'untitled'
 /**
  * The words of a tag that name a type of the catalogue, which the search reads as the type
  * filter: a tag holding one makes the search for that type find an icon that has no such
- * drawing. Matched as whole words, case-insensitively.
+ * drawing. Matched as whole words in the tag as the search folds it: accents removed, lower
+ * case and every run of other characters one space, so `16-px` and `Filled!` are caught too.
  */
 export const TYPE_WORDS: readonly string[] = ['filled', 'sm', '16 px', '16px']
 
-const TYPE_WORD = /(?<![a-z0-9])(filled|sm|16 ?px)(?![a-z0-9])/i
+const TYPE_WORD = /(?:^| )(filled|sm|16 ?px)(?: |$)/
 
 /** Where the allowlist is named in the messages, from the repository root. */
 export const META_ALLOWLIST = 'scripts/meta-allowlist.json'
@@ -136,11 +138,11 @@ function labelIssues(
 function tagIssues(records: readonly MetaRecord[]): string[] {
   return records.flatMap(({ name, tags }) =>
     tags.flatMap((tag) => {
-      const word = TYPE_WORD.exec(tag)?.[1]
+      const word = TYPE_WORD.exec(fold(tag))?.[1]
       return word === undefined
         ? []
         : [
-            `${name}: tag ${JSON.stringify(tag)} holds the type word "${word.toLowerCase()}", which the search reads as a filter. Write the tag without it.`
+            `${name}: tag ${JSON.stringify(tag)} holds the type word "${word}", which the search reads as a filter. Write the tag without it.`
           ]
     })
   )

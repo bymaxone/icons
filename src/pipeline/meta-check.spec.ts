@@ -230,7 +230,13 @@ describe('metaIssues on tags', () => {
     ['16 px', '16 px'],
     ['at 16px', '16px'],
     ['Filled', 'filled'],
-    ['a-filled-b', 'filled']
+    ['a-filled-b', 'filled'],
+    ['16-px', '16 px'],
+    ['16_px', '16 px'],
+    ['16  px', '16 px'],
+    ['sm.', 'sm'],
+    ['Filled!', 'filled'],
+    ['Sm\u0301', 'sm']
   ])('fails the tag %j for the type word %j', (tag, word) => {
     /** Scenario: each type word is caught as a whole word, in any case and next to a hyphen or a space. */
     expect(metaIssues([record('a', 'Alpha', undefined, [tag])], {})).toStrictEqual([
@@ -238,13 +244,20 @@ describe('metaIssues on tags', () => {
     ])
   })
 
-  it.each(['smart', 'filler', 'small', 'sm4', '16 pixels', 'unfilled', 'mismatch', 'circle'])(
-    'passes the tag %j that only contains the letters of a type word',
-    (tag) => {
-      /** Scenario: a word that merely contains the letters is not a type word. */
-      expect(metaIssues([record('a', 'Alpha', undefined, [tag])], {})).toStrictEqual([])
-    }
-  )
+  it.each([
+    'smart',
+    'filler',
+    'small',
+    'sm4',
+    '16 pixels',
+    'unfilled',
+    'mismatch',
+    'circle',
+    'smé'
+  ])('passes the tag %j that only contains the letters of a type word', (tag) => {
+    /** Scenario: a word that merely contains the letters is not a type word. */
+    expect(metaIssues([record('a', 'Alpha', undefined, [tag])], {})).toStrictEqual([])
+  })
 
   it('reports one message for each tag that holds a type word', () => {
     /** Scenario: two tags of two icons hold a type word; the others are clean. */
