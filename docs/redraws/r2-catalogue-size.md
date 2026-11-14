@@ -1,9 +1,9 @@
 # R2: the catalogue-size review
 
-The founder reviewed every icon as the catalogue shows it, 24 px at 1x in its cell. Each drawing below got one redraw, judged on a sheet at that size; the collisions were judged beside the icon they were mistaken for.
+The founder reviewed every icon as the catalogue shows it, 24 px at 1x in its cell. Each drawing below got one redraw, judged on a sheet at that size.
 
 - `antenna`: read as `martini`; now a mast with two pairs of signal arcs (auditor, 2026-11-14)
-- `oven`: read as a microwave or a washing machine; now a range with burners and knobs above the door (auditor, 2026-11-14)
+- `oven`: read as a microwave or a washing machine; now a range with three knobs above the door and a window (auditor, 2026-11-14)
 - `garlic`: read as `onion`; now has the neck and the separate cloves (auditor, 2026-11-14)
 - `salt`: read as `pepper-shaker`; now a dome-capped shaker (auditor, 2026-11-14)
 - `lasso`: read as an oval or a bubble; now has the knot and the tail of the rope (auditor, 2026-11-14)
