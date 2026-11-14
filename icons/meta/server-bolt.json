@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Fast server",
+  "tags": ["server bolt", "quick host", "power usage", "performance"],
+  "categories": ["data", "dev"],
+  "useCases": ["Shows a server with a quick response", "Marks a high performance host"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

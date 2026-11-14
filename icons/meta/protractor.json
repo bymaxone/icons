@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Protractor",
+  "tags": ["protractor", "angle", "geometry", "degrees"],
+  "categories": ["math", "tools"],
+  "useCases": ["Shows a tool for measuring angles", "Marks a geometry lesson"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

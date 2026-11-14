@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "File cabinet",
+  "tags": ["file cabinet", "filing", "archive drawers", "records"],
+  "categories": ["files"],
+  "useCases": ["Shows a cabinet that stores records", "Opens the archive of documents"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

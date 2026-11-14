@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Paid invoice",
+  "tags": ["invoice check", "paid bill", "settled", "payment done"],
+  "categories": ["commerce", "files"],
+  "useCases": ["Confirms that a bill was settled", "Marks an invoice as paid"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Math symbols",
+  "tags": ["math symbols", "operators", "arithmetic", "formula"],
+  "categories": ["math"],
+  "useCases": ["Shows the basic signs of arithmetic", "Opens a list of mathematical operators"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

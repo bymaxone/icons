@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Drum",
+  "tags": ["drum", "percussion", "snare", "beat"],
+  "categories": ["audio"],
+  "useCases": ["Shows a percussion instrument", "Marks a rhythm section of a song"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

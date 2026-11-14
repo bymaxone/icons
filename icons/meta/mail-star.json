@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Starred mail",
+  "tags": ["mail star", "important email", "favorite message", "flagged mail"],
+  "categories": ["communication"],
+  "useCases": ["Marks an email as a favorite", "Highlights an important message"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

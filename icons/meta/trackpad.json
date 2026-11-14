@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Trackpad",
+  "tags": ["trackpad", "touchpad", "laptop mouse", "pointer pad"],
+  "categories": ["devices"],
+  "useCases": ["Shows the touch surface of a laptop", "Opens the pointer settings"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

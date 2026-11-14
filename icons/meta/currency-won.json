@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Won",
+  "tags": ["won", "currency", "money", "krw"],
+  "categories": ["commerce"],
+  "useCases": ["Shows a price in won", "Switches the currency to won"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

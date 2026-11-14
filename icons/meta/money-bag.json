@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Money bag",
+  "tags": ["money bag", "cash sack", "savings", "funds"],
+  "categories": ["commerce"],
+  "useCases": ["Shows a sack of cash", "Marks the total savings of an account"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

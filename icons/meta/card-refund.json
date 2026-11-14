@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Card refund",
+  "tags": ["card refund", "money back", "chargeback", "returned payment"],
+  "categories": ["commerce"],
+  "useCases": ["Returns money to a payment card", "Marks a refunded purchase"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Security camera",
+  "tags": ["cctv", "surveillance", "security camera", "monitoring"],
+  "categories": ["devices", "security"],
+  "useCases": ["Shows a camera that watches a place", "Marks a surveillance feed"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

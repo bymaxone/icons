@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Lawn mower",
+  "tags": ["lawn mower", "grass cutter", "mowing", "garden care"],
+  "categories": ["tools", "nature"],
+  "useCases": ["Shows a machine that cuts grass", "Marks a lawn care service"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

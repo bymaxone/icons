@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Tape measure",
+  "tags": ["tape measure", "measuring tape", "length", "dimensions"],
+  "categories": ["tools"],
+  "useCases": ["Shows a tool for measuring length", "Marks a section about dimensions"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Ethernet port",
+  "tags": ["ethernet", "lan port", "network cable", "wired connection"],
+  "categories": ["devices", "connectivity"],
+  "useCases": ["Shows a wired network connection", "Marks a port for a network cable"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}
