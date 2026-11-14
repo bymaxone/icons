@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Dizzy face",
+  "tags": ["dizzy face", "dazed", "spiral eyes", "stunned"],
+  "categories": ["emotions"],
+  "useCases": ["Shows a confusing result", "Marks a sudden crash"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

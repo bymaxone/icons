@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Cool face",
+  "tags": ["cool face", "sunglasses", "confident", "relaxed"],
+  "categories": ["emotions"],
+  "useCases": ["Reacts with approval", "Marks a relaxed mood"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

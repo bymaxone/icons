@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Confused face",
+  "tags": ["confused face", "puzzled", "thinking", "unsure"],
+  "categories": ["emotions"],
+  "useCases": ["Shows doubt about an answer", "Marks a puzzling step"],
+  "aliases": [
+    {
+      "name": "face-thinking",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -4,6 +4,12 @@
   "tags": ["shield", "plus", "protection", "insurance"],
   "categories": ["security"],
   "useCases": ["Adds a protection plan", "Turns on a safeguard"],
+  "aliases": [
+    {
+      "name": "health-insurance",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

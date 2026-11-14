@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Ladle",
+  "tags": ["ladle", "soup spoon", "scoop", "serve"],
+  "categories": ["food", "household"],
+  "useCases": ["Lists a serving utensil", "Marks a soup dish"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

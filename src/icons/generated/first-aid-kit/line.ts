@@ -21,3 +21,6 @@ export const FirstAidKitIcon = /* @__PURE__ */ createIcon('first-aid-kit', [
   ['path', { d: 'M9.25 7.25v-2c0-.75.25-1 1-1h4c.75 0 1 .25 1 1v2' }],
   ['path', { d: 'M12.25 10.75v6m-3-3h6' }]
 ])
+
+/** `medical-bag`: an alias of {@link FirstAidKitIcon}. */
+export const MedicalBagIcon = FirstAidKitIcon

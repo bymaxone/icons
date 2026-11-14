@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Spoon",
+  "tags": ["spoon", "cutlery", "tablespoon", "scoop"],
+  "categories": ["food", "household"],
+  "useCases": ["Lists a piece of cutlery", "Marks a place setting"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

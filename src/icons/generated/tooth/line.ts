@@ -19,3 +19,6 @@ export const ToothIcon = /* @__PURE__ */ createIcon('tooth', [
     }
   ]
 ])
+
+/** `dental`: an alias of {@link ToothIcon}. */
+export const DentalIcon = ToothIcon

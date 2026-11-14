@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Kissing face",
+  "tags": ["kissing face", "kiss", "affection", "blow a kiss"],
+  "categories": ["emotions"],
+  "useCases": ["Sends a kiss", "Thanks someone warmly"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

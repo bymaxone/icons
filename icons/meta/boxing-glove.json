@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Boxing glove",
+  "tags": ["boxing glove", "punch", "fight", "ring"],
+  "categories": ["games"],
+  "useCases": ["Marks a boxing class", "Lists a combat sport"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

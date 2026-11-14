@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Waving hand",
+  "tags": ["waving hand", "hello", "goodbye", "greeting"],
+  "categories": ["people", "communication"],
+  "useCases": ["Greets a new visitor", "Says goodbye"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

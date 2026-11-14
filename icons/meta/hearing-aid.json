@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Hearing aid",
+  "tags": ["hearing aid", "ear device", "audiology", "amplifier"],
+  "categories": ["health"],
+  "useCases": ["Marks an assistive device", "Lists an audiology service"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

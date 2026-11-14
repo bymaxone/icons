@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Nurse",
+  "tags": ["nurse", "caregiver", "nursing", "staff"],
+  "categories": ["health", "people"],
+  "useCases": ["Marks a care professional", "Lists a medical staff member"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

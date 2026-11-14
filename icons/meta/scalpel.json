@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Scalpel",
+  "tags": ["scalpel", "surgery", "blade", "operation"],
+  "categories": ["health"],
+  "useCases": ["Marks a surgical procedure", "Lists an operating tool"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

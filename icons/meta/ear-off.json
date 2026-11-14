@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Ear off",
+  "tags": ["ear off", "deaf", "hearing loss", "mute"],
+  "categories": ["health"],
+  "useCases": ["Marks a hearing impairment", "Shows sound that is turned off"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

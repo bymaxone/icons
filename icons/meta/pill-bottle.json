@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Pill bottle",
+  "tags": ["pill bottle", "prescription", "medication", "capsules"],
+  "categories": ["health"],
+  "useCases": ["Lists a prescription", "Reminds people to take medication"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

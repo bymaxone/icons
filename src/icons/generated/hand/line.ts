@@ -25,3 +25,6 @@ export const HandIcon = /* @__PURE__ */ createIcon('hand', [
     }
   ]
 ])
+
+/** `hand-stop`: an alias of {@link HandIcon}. */
+export const HandStopIcon = HandIcon

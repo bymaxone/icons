@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Hospital bed",
+  "tags": ["hospital bed", "ward", "patient", "admission"],
+  "categories": ["health"],
+  "useCases": ["Marks an inpatient room", "Shows a bed available"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

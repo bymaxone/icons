@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Stool",
+  "tags": ["stool", "seat", "bar stool", "three legs"],
+  "categories": ["household"],
+  "useCases": ["Lists a seat without a back", "Marks furniture for a counter"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

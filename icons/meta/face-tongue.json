@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Face with tongue",
+  "tags": ["face with tongue", "tongue out", "silly", "playful"],
+  "categories": ["emotions"],
+  "useCases": ["Marks a playful remark", "Reacts with a cheeky tone"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

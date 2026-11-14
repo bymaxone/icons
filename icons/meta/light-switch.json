@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Light switch",
+  "tags": ["light switch", "toggle", "wall plate", "lights"],
+  "categories": ["household"],
+  "useCases": ["Turns the lights on or off", "Lists a wiring fixture"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

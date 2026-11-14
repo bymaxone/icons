@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Crying face",
+  "tags": ["crying face", "tear", "weep", "upset"],
+  "categories": ["emotions"],
+  "useCases": ["Shows deep sadness", "Marks a moving moment"],
+  "aliases": [
+    {
+      "name": "face-sad-tear",
+      "deprecated": false
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

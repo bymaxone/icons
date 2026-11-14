@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Sink",
+  "tags": ["sink", "basin", "faucet", "washing"],
+  "categories": ["household"],
+  "useCases": ["Marks a kitchen or bathroom", "Lists a plumbing fixture"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

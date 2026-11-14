@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Face in love",
+  "tags": ["face in love", "heart eyes", "adore", "crush"],
+  "categories": ["emotions"],
+  "useCases": ["Reacts with love", "Marks a favourite thing"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

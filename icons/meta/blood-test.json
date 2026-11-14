@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Blood test",
+  "tags": ["blood test", "sample", "lab work", "vial"],
+  "categories": ["health", "science"],
+  "useCases": ["Orders a lab exam", "Marks a blood sample"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Fishing rod",
+  "tags": ["fishing rod", "angling", "hook", "catch"],
+  "categories": ["games", "nature"],
+  "useCases": ["Marks a fishing spot", "Lists an outdoor hobby"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

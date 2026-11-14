@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Nose",
+  "tags": ["nose", "nostrils", "smell", "sniff"],
+  "categories": ["health", "people"],
+  "useCases": ["Marks the sense of smell", "Lists a facial feature"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

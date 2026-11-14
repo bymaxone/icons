@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Angry face",
+  "tags": ["angry face", "mad", "furious", "rage"],
+  "categories": ["emotions"],
+  "useCases": ["Flags a frustrated customer", "Rates an experience as bad"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

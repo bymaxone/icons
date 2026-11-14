@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Rolling pin",
+  "tags": ["rolling pin", "dough", "baking", "roller"],
+  "categories": ["food", "household"],
+  "useCases": ["Marks a baking step", "Lists a pastry tool"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

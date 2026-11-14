@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Cane",
+  "tags": ["cane", "walking stick", "mobility", "support"],
+  "categories": ["health"],
+  "useCases": ["Marks a mobility aid", "Lists an accessibility need"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

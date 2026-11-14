@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Football helmet",
+  "tags": ["football helmet", "headgear", "american football", "protection"],
+  "categories": ["games"],
+  "useCases": ["Marks a football team", "Lists protective gear"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Cabinet",
+  "tags": ["cabinet", "cupboard", "storage", "doors"],
+  "categories": ["household"],
+  "useCases": ["Marks a storage cupboard", "Lists furniture for a room"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

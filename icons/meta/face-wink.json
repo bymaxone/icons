@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Winking face",
+  "tags": ["winking face", "wink", "flirt", "hint"],
+  "categories": ["emotions"],
+  "useCases": ["Hints at a shared secret", "Marks a friendly joke"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

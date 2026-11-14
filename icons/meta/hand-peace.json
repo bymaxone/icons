@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Peace hand",
+  "tags": ["peace hand", "victory", "two fingers", "v sign"],
+  "categories": ["people", "emotions"],
+  "useCases": ["Marks a victory", "Shows a peaceful mood"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

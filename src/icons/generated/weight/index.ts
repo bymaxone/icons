@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { WeightIcon } from './line'
+export { KettlebellIcon, WeightIcon } from './line'

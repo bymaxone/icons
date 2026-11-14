@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Upside-down face",
+  "tags": ["upside-down face", "irony", "sarcasm", "silly"],
+  "categories": ["emotions"],
+  "useCases": ["Marks a sarcastic remark", "Reacts with a wry tone"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

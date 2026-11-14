@@ -4,6 +4,12 @@
   "tags": ["first aid kit", "emergency", "medical", "rescue"],
   "categories": ["health"],
   "useCases": ["Opens emergency help", "Marks a medical supply"],
+  "aliases": [
+    {
+      "name": "medical-bag",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

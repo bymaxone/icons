@@ -18,6 +18,10 @@
     {
       "name": "drop",
       "deprecated": false
+    },
+    {
+      "name": "blood-drop",
+      "deprecated": false
     }
   ],
   "variants": ["line"],

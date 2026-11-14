@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Sleeping face",
+  "tags": ["sleeping face", "sleep", "zzz", "tired"],
+  "categories": ["emotions"],
+  "useCases": ["Shows an idle or away status", "Marks bedtime"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

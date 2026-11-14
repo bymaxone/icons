@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Hockey stick",
+  "tags": ["hockey stick", "puck", "ice hockey", "rink"],
+  "categories": ["games"],
+  "useCases": ["Marks a hockey match", "Lists a winter sport"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

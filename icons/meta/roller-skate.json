@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Roller skate",
+  "tags": ["roller skate", "quad skate", "wheels", "rink"],
+  "categories": ["games"],
+  "useCases": ["Marks a skating rink", "Lists a wheeled sport"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

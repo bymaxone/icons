@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Mortar and pestle",
+  "tags": ["mortar and pestle", "pharmacy", "grind", "apothecary"],
+  "categories": ["health", "food"],
+  "useCases": ["Marks a pharmacy", "Shows a grinding step"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

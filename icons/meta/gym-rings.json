@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Gym rings",
+  "tags": ["gym rings", "gymnastics", "hanging rings", "strength"],
+  "categories": ["games", "health"],
+  "useCases": ["Marks a gymnastics class", "Lists a strength exercise"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

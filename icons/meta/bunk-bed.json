@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Bunk bed",
+  "tags": ["bunk bed", "bunks", "dorm", "kids room"],
+  "categories": ["household"],
+  "useCases": ["Lists a shared bedroom", "Marks sleeping space for two"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

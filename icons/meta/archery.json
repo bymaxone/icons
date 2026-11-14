@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Archery",
+  "tags": ["archery", "bow and arrow", "target", "aim"],
+  "categories": ["games"],
+  "useCases": ["Marks an archery range", "Lists a precision sport"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

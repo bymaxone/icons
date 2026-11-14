@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Cooking pot",
+  "tags": ["cooking pot", "stockpot", "simmer", "stew"],
+  "categories": ["food", "household"],
+  "useCases": ["Marks a simmering dish", "Lists a kitchen utensil"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

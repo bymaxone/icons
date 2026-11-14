@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Raised fist",
+  "tags": ["raised fist", "solidarity", "strength", "power"],
+  "categories": ["people", "emotions"],
+  "useCases": ["Marks a show of strength", "Reacts with solidarity"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}
