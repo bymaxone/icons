@@ -2,8 +2,7 @@
  * @fileoverview Public entry point for the `./runtime` subpath of `@bymax-one/icons`: the
  * runtime every icon component renders through, the `Icon` base, the `createIcon` factory,
  * the `Flag` base and the `createFlag` factory for the country flags, and the types of the
- * props and of a drawing. The root re-exports all of it; the
- * generated icon modules import `createIcon` from here.
+ * props and of a drawing.
  * @layer Module
  */
 

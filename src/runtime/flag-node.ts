@@ -1,7 +1,7 @@
 /**
  * @fileoverview The data shape a country flag's drawing is stored in: a list of SVG
  * elements, each a tag name and its attributes, with the colours the flag carries. The
- * list of tags and attributes is closed, as for an icon, so no gradient, mask, filter,
+ * list of tags and attributes is closed, so no gradient, mask, filter,
  * `use`, `image`, `transform`, `style`, `id` or `class` can appear in a flag.
  * @layer Runtime
  */

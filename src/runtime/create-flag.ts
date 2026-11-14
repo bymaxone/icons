@@ -1,7 +1,6 @@
 /**
  * @fileoverview The factory that turns a flag's drawing into a named component: a stable
- * `displayName` and the `bx-icon` class names, around the `Flag` base. Generated flag
- * modules are written as one call to it.
+ * `displayName` and the `bx-icon` class names, around the `Flag` base.
  * @layer Runtime
  */
 
