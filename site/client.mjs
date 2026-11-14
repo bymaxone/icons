@@ -166,17 +166,17 @@ function filter() {
       }
     }
     section.hidden = count === 0
-    section.querySelector('[data-count]').textContent = String(count)
+    section.querySelector('[data-count]').textContent = count.toLocaleString('en-US')
     const nav = document.querySelector(`[data-count-nav="${section.dataset.cat}"]`)
     if (nav) {
-      nav.textContent = String(count)
+      nav.textContent = count.toLocaleString('en-US')
       nav.parentElement.toggleAttribute('data-zero', count === 0)
     }
   }
-  document.getElementById('shown-icons').textContent = String(shown.icon.size)
-  document.getElementById('shown-brands').textContent = String(shown.brand.size)
+  document.getElementById('shown-icons').textContent = shown.icon.size.toLocaleString('en-US')
+  document.getElementById('shown-brands').textContent = shown.brand.size.toLocaleString('en-US')
   const shownFlags = document.getElementById('shown-flags')
-  if (shownFlags) shownFlags.textContent = String(shown.flag.size)
+  if (shownFlags) shownFlags.textContent = shown.flag.size.toLocaleString('en-US')
   showEmpty(
     document.querySelector('.empty'),
     shown.icon.size + shown.brand.size + shown.flag.size === 0
