@@ -217,6 +217,22 @@ Brand marks are the only third-party shapes in the package.
 - **Not in 1.0:** microsoft and linkedin, which Simple Icons removed at their owners' request, so no source with a clear licence exists; they return when one does. The decision is provisional and reversible.
 - **Google:** the monochrome G is the default (Studio decision 103). Google's "Sign in with Google" branding guidelines require the standard colour G on the sign-in button and list monochrome versions as a "Don't". The risk is accepted by the founder and recorded in the Studio. An optional `google-color` mark was planned for the sign-in button (D3), but the current official Google sign-in asset uses a gradient G built with a mask, filters and a `foreignObject` conic-gradient, which the package format does not allow; `google-color` is deferred until an official solid-colour asset exists.
 
+### 5.1 Country flags
+
+Approved by the delegated auditor on behalf of the founder, 2026-11-14. A flag is official geometry like a brand mark: its path data is the source's, never redrawn or restyled.
+
+- **Source:** the `3x2` SVGs of `country-flag-icons` 1.6.20 (MIT), an exact development dependency. The package holds 265 of them: the 249 officially assigned ISO 3166-1 alpha-2 codes, `EU`, `XK`, the reserved `AC`, `IC` and `TA`, the de facto states `XA`, `XC` and `XO`, and eight subdivisions.
+- **Set for 1.0:** 250 flags, the 249 assigned ISO 3166-1 codes and `EU`. The criterion is an ISO assignment, plus the European Union. Deferred to 1.x, as a decision of the founder: `XK` (Kosovo), whose recognition is contested; `XA` (Abkhazia), `XC` (Northern Cyprus) and `XO` (South Ossetia); the reserved codes `AC`, `IC` and `TA`; and the eight subdivisions.
+- **Names:** `<code>-flag` with the lower-case code of the source, such as `us-flag` and `br-flag`. The same name is the metadata key, the file (`icons/flags/us-flag.svg`), the subpath and the raw SVG, and the component is `UsFlagIcon`. A suffix because three plain codes already name something in the shared name space (`tv` an icon, `at` and `cd` aliases); it removes the clash for every flag with no exception.
+- **Entry points:** `./flags` (every flag, named exports, tree-shakable), `./flags/<name>` (one flag, for a dynamic import) and `./svg/flags/<name>.svg`. No sprite entry and no filled or 16 px variants: the sprite holds `currentColor` icons, and a flag keeps its own colours.
+- **Runtime:** `createFlag` in `./runtime`, beside `createIcon`, with the accessibility rules of section 8.5 (`aria-hidden="true"` and `focusable="false"`; a `title` gives `role="img"`, `aria-label` and a `<title>`). The props are `IconProps` without `color`, `strokeWidth` and `absoluteStrokeWidth`, which mean nothing for a flag. `size` is the height: a number is px, default 16, so the box is 24 by 16; a CSS length sets the height alone and the width follows the 3:2 view box. A pure function, with no hooks and no context.
+- **Drawing format:** the view box of the source is kept as it is, so no path coordinate is edited and the path data is byte for byte the source's once groups are flattened. The source uses 20 different view boxes, all 3:2. The import flattens each `g` onto its children (SVGO `collapseGroups` and `moveGroupAttrsToElems`), drops the stray `class` and `clip-rule`, and writes named colours as `#rrggbb`.
+- **Lint profile `flag`:** the root is `<svg xmlns viewBox>` and nothing else, the view box positive and 3:2 within 0.2%; the elements are `path`, `circle`, `ellipse`, `rect` and `polygon`, never `g`, `use`, `defs`, `style`, `clipPath`, `mask`, `filter`, a gradient, `image`, `text`, `pattern` or `foreignObject`; the attributes are the element's geometry, `fill`, `fill-rule`, `stroke`, `stroke-width`, `stroke-miterlimit`, `stroke-linejoin` and `opacity` (a number from 0 to 1), never `transform`, `style`, `id`, `class`, `clip-rule` or `fill-opacity`; a colour is `#rrggbb` or `none`, never `currentColor` or `url(...)`; a file is at most 8 KiB raw. The similarity check and the 16 px check do not read flags, stated in the configuration of both gates and held by a test.
+- **Metadata:** `schemas/flag.schema.json` with `title` (the English region name from `Intl.DisplayNames`, written to the file rather than computed at build), `code` (upper case), `source` (the file at the pinned version in the repository of `country-flag-icons`), `license` (MIT), `retrievedAt`, `tags` and `since`. A provenance spec holds every flag to its source file at the pinned version, as for the brand marks.
+- **Notice:** a "Country flags" section of `TRADEMARKS.md` with the MIT notice of `country-flag-icons`, a statement that the licence covers the files and says nothing of how a country regulates the display of its flag, a statement that flags are reproduced as published by the source and that their inclusion implies no position on sovereignty or recognition, and the deferred list above with its reason.
+- **Catalogue:** a Flags section, with search by the code and by the name in English and in Portuguese; the Portuguese terms come from `Intl.DisplayNames` for `pt-BR`, written to `site/terms-pt.json`.
+- **Size:** a budget per flag on the built `./flags`, set 20% over the measured cost like the brands'. The 250 flags concatenate to 166,051 bytes raw and 36,585 bytes brotli, before the per-module overhead.
+
 ---
 
 ## 6. Source Layout and Metadata
@@ -294,6 +310,8 @@ Generated modules are rebuilt from source in CI and compared with the committed 
 | `@bymax-one/icons`               | Every line and filled component, plus `Icon` and the types    |
 | `@bymax-one/icons/icons/<name>`  | One icon's components, for consumers that avoid barrels       |
 | `@bymax-one/icons/brands`        | Brand components                                              |
+| `@bymax-one/icons/flags`         | Country flag components (section 5.1)                         |
+| `@bymax-one/icons/flags/<name>`  | One flag's component, for a dynamic import                    |
 | `@bymax-one/icons/meta`          | Typed metadata and the `IconName` union, with no React import |
 | `@bymax-one/icons/svg/*`         | Raw SVG files                                                 |
 | `@bymax-one/icons/sprite.svg`    | The sprite                                                    |
