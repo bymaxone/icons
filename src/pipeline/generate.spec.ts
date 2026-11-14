@@ -89,6 +89,7 @@ describe('generatedModules', () => {
     expect([...modules.keys()]).toStrictEqual([
       'src/icons/generated/index.ts',
       'src/brands/generated/index.ts',
+      'src/flags/generated/index.ts',
       'src/icons/generated/ring/index.ts',
       'src/icons/generated/ring/line.ts',
       'src/meta/generated/metadata.ts'

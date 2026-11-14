@@ -18,11 +18,13 @@ describe('variantName', () => {
     ['lightning', 'line', 'lightning'],
     ['lightning', 'filled', 'lightning-filled'],
     ['lightning', 'sm', 'lightning-sm'],
-    ['github', 'brand', 'github-brand']
+    ['github', 'brand', 'github-brand'],
+    ['us-flag', 'flag', 'us-flag']
   ] as const)('names %p %p as %p', (name, variant, expected) => {
     /**
-     * Scenario: the line master keeps the bare name and every other variant appends its
-     * own, so no two variants of one icon share a class name or a symbol id.
+     * Scenario: the line master and a flag keep the bare name (a flag's name already ends in
+     * `-flag`) and every other variant appends its own, so no two variants of one icon share a
+     * class name or a symbol id.
      */
     expect(variantName(name, variant)).toBe(expected)
   })
@@ -47,6 +49,8 @@ describe('pascalCase and componentName', () => {
     ['lightning', 'filled', 'LightningFilledIcon'],
     ['lightning', 'sm', 'LightningSmIcon'],
     ['google', 'brand', 'GoogleBrandIcon'],
+    ['us-flag', 'flag', 'UsFlagIcon'],
+    ['gb-eng-flag', 'flag', 'GbEngFlagIcon'],
     ['aspect-16-9', 'line', 'Aspect169Icon']
   ] as const)('exports %p %p as %p', (name, variant, expected) => {
     /**

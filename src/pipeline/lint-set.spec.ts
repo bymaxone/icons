@@ -3,12 +3,24 @@
  *
  * Layer: unit, through `lintSources` on in-memory sources.
  * Goal: one failing fixture per set rule of spec section 12 (every drawing has metadata
- * and the reverse, declared variants exist, brand names only in brands, categories exist,
+ * and the reverse, declared variants exist, brand and flag names only in their directories,
+ * categories exist,
  * alias and name uniqueness, component-name uniqueness), each asserted as the exact issue.
  * Mocks: none.
  */
 
-import { brandMeta, CIRCLE, drawing, iconMeta, ONE_ICON, sources } from './__tests__/support.ts'
+import {
+  BANDS,
+  brandMeta,
+  CIRCLE,
+  drawing,
+  flagDrawing,
+  flagMeta,
+  iconMeta,
+  ONE_FLAG,
+  ONE_ICON,
+  sources
+} from './__tests__/support.ts'
 import type { SourceTree } from './__tests__/support.ts'
 import { lintSources } from './lint.ts'
 import type { RuleId } from './lint-issue.ts'
@@ -17,6 +29,7 @@ const LINE = drawing('line', CIRCLE)
 const FILLED = drawing('filled', CIRCLE)
 const SM = drawing('sm', CIRCLE)
 const BRAND = drawing('brands', '<path d="M4 4h16v16H4z"/>')
+const FLAG = flagDrawing(BANDS)
 
 /** The issues of one rule, for a source tree. */
 const issuesOf = (tree: SourceTree, rule: RuleId) =>
@@ -79,6 +92,73 @@ describe('meta-pair', () => {
         file: 'icons/meta/acme.json',
         rule: 'meta-pair',
         message: 'no drawing icons/brands/acme.svg'
+      }
+    ])
+  })
+})
+
+describe('flags', () => {
+  it('reports nothing for a flag with its metadata', () => {
+    /** Scenario: the set rules accept a flag whose drawing and metadata are a pair. */
+    expect(lintSources(sources(ONE_FLAG)).issues).toStrictEqual([])
+  })
+
+  it('reports a flag drawing with no metadata file', () => {
+    /** Scenario: every SVG needs its `icons/meta/<name>.json`, a flag's included. */
+    expect(issuesOf({ flags: { 'se-flag.svg': FLAG } }, 'meta-pair')).toStrictEqual([
+      {
+        file: 'icons/flags/se-flag.svg',
+        rule: 'meta-pair',
+        message: 'no metadata file icons/meta/se-flag.json'
+      }
+    ])
+  })
+
+  it('reports a flag metadata file with no flag drawing', () => {
+    /** Scenario: a flag's drawing lives in icons/flags. */
+    expect(issuesOf({ meta: { 'se-flag.json': flagMeta() } }, 'meta-pair')).toStrictEqual([
+      {
+        file: 'icons/meta/se-flag.json',
+        rule: 'meta-pair',
+        message: 'no drawing icons/flags/se-flag.svg'
+      }
+    ])
+  })
+})
+
+describe('flag-scope', () => {
+  it.each(['line', 'filled', 'sm', 'brands'] as const)(
+    'reports a flag name in icons/%s',
+    (kind) => {
+      /**
+       * Scenario: a flag's drawing lives only in icons/flags (spec section 5.1); a line, filled,
+       * 16 px or brand drawing under a flag's name would ship a second drawing of it.
+       */
+      const tree: SourceTree = {
+        ...ONE_FLAG,
+        [kind]: { 'se-flag.svg': drawing(kind, CIRCLE) }
+      }
+      expect(issuesOf(tree, 'flag-scope')).toStrictEqual([
+        {
+          file: `icons/${kind}/se-flag.svg`,
+          rule: 'flag-scope',
+          message: 'se-flag is a flag: its drawing belongs in icons/flags only'
+        }
+      ])
+    }
+  )
+
+  it('reports a name that is not a flag in icons/flags', () => {
+    /**
+     * Scenario: icons/flags holds country flags only; a drawing there described by icon
+     * metadata would ship as a flag.
+     */
+    const tree: SourceTree = { ...ONE_ICON, flags: { 'ring.svg': FLAG } }
+    expect(issuesOf(tree, 'flag-scope')).toStrictEqual([
+      {
+        file: 'icons/flags/ring.svg',
+        rule: 'flag-scope',
+        message: 'ring is not a flag: icons/flags holds country flags only'
       }
     ])
   })
@@ -216,7 +296,7 @@ describe('name-unique', () => {
         'dot.json': iconMeta()
       }
     }
-    const message = 'the name dot is used by more than one icon, brand or alias'
+    const message = 'the name dot is used by more than one icon, brand, flag or alias'
     expect(issuesOf(tree, 'name-unique')).toStrictEqual([
       { file: 'icons/meta/ring.json', rule: 'name-unique', message },
       { file: 'icons/meta/dot.json', rule: 'name-unique', message }
@@ -235,10 +315,27 @@ describe('name-unique', () => {
         'acme.json': brandMeta({ aliases: [{ name: 'logo', deprecated: false }] })
       }
     }
-    const message = 'the name logo is used by more than one icon, brand or alias'
+    const message = 'the name logo is used by more than one icon, brand, flag or alias'
     expect(issuesOf(tree, 'name-unique')).toStrictEqual([
       { file: 'icons/meta/ring.json', rule: 'name-unique', message },
       { file: 'icons/meta/acme.json', rule: 'name-unique', message }
+    ])
+  })
+
+  it('reports an alias that is a flag name, on both files', () => {
+    /** Scenario: an alias takes part in the same name space as a flag. */
+    const tree: SourceTree = {
+      ...ONE_FLAG,
+      line: { 'ring.svg': LINE },
+      meta: {
+        'se-flag.json': flagMeta(),
+        'ring.json': iconMeta({ aliases: [{ name: 'se-flag', deprecated: false }] })
+      }
+    }
+    const message = 'the name se-flag is used by more than one icon, brand, flag or alias'
+    expect(issuesOf(tree, 'name-unique')).toStrictEqual([
+      { file: 'icons/meta/ring.json', rule: 'name-unique', message },
+      { file: 'icons/meta/se-flag.json', rule: 'name-unique', message }
     ])
   })
 
@@ -254,7 +351,7 @@ describe('name-unique', () => {
       {
         file: 'icons/meta/ring.json',
         rule: 'name-unique',
-        message: 'the name ring is used by more than one icon, brand or alias'
+        message: 'the name ring is used by more than one icon, brand, flag or alias'
       }
     ])
   })

@@ -44,7 +44,7 @@ describe('runGenerate', () => {
     expect(output.errors).toStrictEqual([])
     expect(output.logs).toStrictEqual([
       'formatted icons/line/ring.svg',
-      'generated 5 module(s) from 1 icon(s) and 0 brand(s)'
+      'generated 6 module(s) from 1 icon(s), 0 brand(s) and 0 flag(s)'
     ])
     expect(readFileSync(join(root, 'icons/line/ring.svg'), 'utf8')).toBe(drawing('line', CIRCLE))
     expect(readFileSync(join(root, 'src/icons/generated/ring/line.ts'), 'utf8')).toContain(
@@ -77,7 +77,9 @@ describe('runGenerate', () => {
     })
     const output = capture()
     expect(await runGenerate(['--icons', 'fixtures/icons'], root, output)).toBe(0)
-    expect(output.logs).toStrictEqual(['generated 5 module(s) from 1 icon(s) and 0 brand(s)'])
+    expect(output.logs).toStrictEqual([
+      'generated 6 module(s) from 1 icon(s), 0 brand(s) and 0 flag(s)'
+    ])
   })
 
   it('passes --check when the committed modules are current, writing nothing', async () => {
@@ -91,7 +93,7 @@ describe('runGenerate', () => {
     await runGenerate([], root, capture())
     const output = capture()
     expect(await runGenerate(['--check'], root, output)).toBe(0)
-    expect(output.logs).toStrictEqual(['the 5 generated module(s) match the sources'])
+    expect(output.logs).toStrictEqual(['the 6 generated module(s) match the sources'])
     expect(output.errors).toStrictEqual([])
   })
 
@@ -192,7 +194,7 @@ describe('runLint', () => {
     })
     const output = capture()
     expect(runLint([], root, output)).toBe(0)
-    expect(output.logs).toStrictEqual(['icon lint: 1 icon(s) and 0 brand(s), no issue'])
+    expect(output.logs).toStrictEqual(['icon lint: 1 icon(s), 0 brand(s) and 0 flag(s), no issue'])
   })
 
   it('fails with every issue and writes nothing', () => {

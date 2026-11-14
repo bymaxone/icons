@@ -7,7 +7,7 @@
  * Mocks: none.
  */
 
-import { drawing, iconMeta, sources } from './__tests__/support.ts'
+import { drawing, iconMeta, ONE_FLAG, sources } from './__tests__/support.ts'
 import { lintSources } from './lint.ts'
 import {
   BRIDGE_ALPHA,
@@ -206,6 +206,23 @@ describe('sixteenDrawings', () => {
       ['both', 'sm', 'icons/sm/both.svg'],
       ['plain', 'line', 'icons/line/plain.svg']
     ])
+  })
+
+  it('does not read a country flag', () => {
+    /**
+     * Scenario: a flag keeps the drawing of its source, which is no 16 px master, so a set with
+     * one measures exactly the drawings it measures without it.
+     */
+    const withFlag = lintSources(
+      sources({
+        ...ONE_FLAG,
+        line: { 'plain.svg': drawing('line', '<path d="M4 12h16"/>') },
+        meta: { ...ONE_FLAG.meta, 'plain.json': iconMeta() }
+      })
+    )
+    expect(withFlag.issues).toEqual([])
+    expect(withFlag.set.flags).toHaveLength(1)
+    expect(sixteenDrawings(withFlag.set).map(({ name }) => name)).toEqual(['plain'])
   })
 
   it('leaves out an icon that has no line or master drawing', () => {

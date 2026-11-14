@@ -8,7 +8,7 @@
  * inline SVGs.
  */
 
-import { ONE_ICON, sources } from './__tests__/support.ts'
+import { ONE_FLAG, ONE_ICON, sources } from './__tests__/support.ts'
 import type { Drawing, IconEntry, IconSet } from './icon-set.ts'
 import { lintSources } from './lint.ts'
 import {
@@ -65,7 +65,7 @@ const icon = (
   }
 })
 
-const setOf = (...icons: IconEntry[]): IconSet => ({ icons, brands: [], categories: [] })
+const setOf = (...icons: IconEntry[]): IconSet => ({ icons, brands: [], flags: [], categories: [] })
 
 describe('similarityEntries', () => {
   it('lists every drawn variant in icon and variant order, with its label', () => {
@@ -81,6 +81,18 @@ describe('similarityEntries', () => {
       ['ring (sm)', 'ring', 'sm'],
       ['disc (filled)', 'disc', 'filled']
     ])
+  })
+
+  it('does not compare a country flag', () => {
+    /**
+     * Scenario: a flag is official geometry kept as published, so a set with one lists the
+     * entries of its icons alone.
+     */
+    const { set } = lintSources(
+      sources({ ...ONE_ICON, ...ONE_FLAG, meta: { ...ONE_ICON.meta, ...ONE_FLAG.meta } })
+    )
+    expect(set.flags).toHaveLength(1)
+    expect(similarityEntries(set, REFERENCES).map((entry) => entry.name)).toStrictEqual(['ring'])
   })
 
   it('reads a line or sm variant as stroked and a filled one as filled', () => {
