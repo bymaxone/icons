@@ -176,6 +176,50 @@ as a whole, with no other change.
   [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/), from
   [git-scm.com](https://git-scm.com/community/logos).
 
+## Country flags
+
+The flags under `@bymax-one/icons/flags` are the drawings of
+[`country-flag-icons`](https://gitlab.com/catamphetamine/country-flag-icons) 1.6.20, a
+pinned development dependency, released under the MIT licence below. Each flag is kept as
+its source publishes it: the generator changes how the file is written (groups flattened,
+colours as `#rrggbb`) and never its path data, which a test compares with the source. The
+licence asks that its notice go with copies, so it is reproduced here:
+
+> (The MIT License)
+>
+> Copyright (c) 2020 @catamphetamine <purecatamphetamine@gmail.com>
+>
+> Permission is hereby granted, free of charge, to any person obtaining
+> a copy of this software and associated documentation files (the
+> 'Software'), to deal in the Software without restriction, including
+> without limitation the rights to use, copy, modify, merge, publish,
+> distribute, sublicense, and/or sell copies of the Software, and to
+> permit persons to whom the Software is furnished to do so, subject to
+> the following conditions:
+>
+> The above copyright notice and this permission notice shall be
+> included in all copies or substantial portions of the Software.
+>
+> THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
+> EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+> MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+> IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+> CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+> TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+> SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+The licence covers the files. It says nothing of how a country regulates the display of its
+flag, and whoever displays one is responsible for doing so in line with the law that applies
+to them. Flags are reproduced as published by the source; their inclusion implies no position
+on sovereignty or recognition.
+
+The package ships the 249 officially assigned ISO 3166-1 alpha-2 codes and the European Union.
+The following are left out of 1.0, as a decision of the founder, because whether to show them
+is a political and legal question and not a drawing's: `XK` (Kosovo), whose recognition is
+contested; `XA` (Abkhazia), `XC` (Northern Cyprus) and `XO` (South Ossetia), de facto states;
+the reserved codes `AC`, `IC` and `TA`; and the subdivisions `BQ-BO`, `BQ-SA`, `BQ-SE`,
+`ES-CT`, `GB-ENG`, `GB-NIR`, `GB-SCT` and `GB-WLS`.
+
 ## Questions and takedown requests
 
 A trademark owner who wants a mark changed or removed can write to
