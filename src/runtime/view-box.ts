@@ -12,19 +12,27 @@ export interface ViewBox {
   readonly height: number
 }
 
+/** A number as SVG writes it: no blank, no hexadecimal, no word, no `Infinity`. */
+const NUMBER = '[-+]?(?:\\d*\\.\\d+|\\d+\\.?)(?:[eE][-+]?\\d+)?'
+
+/** The separator of two numbers: whitespace, or one comma with whitespace around it or none. */
+const SEPARATOR = '(?:\\s*,\\s*|\\s+)'
+
+/** Four numbers joined by the separator, with whitespace allowed at either end. */
+const VIEW_BOX = new RegExp(
+  `^\\s*${Array.from({ length: 4 }, () => `(${NUMBER})`).join(SEPARATOR)}\\s*$`
+)
+
 /**
- * Parses a `viewBox` of four numbers separated by whitespace or commas.
+ * Parses a `viewBox` of four numbers, each pair separated by whitespace or by a single comma.
  *
  * @param text - The attribute value, such as `0 0 513 342`.
- * @returns The box, or `undefined` when there are not four finite numbers or the width or
- *   the height is not positive.
+ * @returns The box, or `undefined` when it is not four numbers in that form, or when the width
+ *   or the height is not positive.
  */
 export function parseViewBox(text: string): ViewBox | undefined {
-  const numbers = text
-    .trim()
-    .split(/[\s,]+/)
-    .map(Number)
-  if (numbers.length !== 4 || !numbers.every(Number.isFinite)) return undefined
-  const [minX, minY, width, height] = numbers as [number, number, number, number]
+  const parts = VIEW_BOX.exec(text)?.slice(1)
+  if (parts === undefined) return undefined
+  const [minX, minY, width, height] = parts.map(Number) as [number, number, number, number]
   return width > 0 && height > 0 ? { minX, minY, width, height } : undefined
 }
