@@ -6,5 +6,5 @@
   "useCases": ["Plots values by position and size", "Compares groups with circles"],
   "variants": ["line"],
   "opticalSizes": [24],
-  "since": "0.1.0"
+  "since": "1.0.0"
 }

@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `currency-lira` icon, line variant: lira, currency, money, try.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const CurrencyLiraIcon = /* @__PURE__ */ createIcon('currency-lira', [
   ['path', { d: 'M8.25 4.25v12c0 2.5 2 4 5 4s5-1.5 5-4' }],

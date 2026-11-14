@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `aspect-1-1` icon, line variant: square, ratio, feed, equal.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const Aspect11Icon = /* @__PURE__ */ createIcon('aspect-1-1', [
   [

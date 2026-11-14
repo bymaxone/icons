@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `seahorse` icon, line variant: seahorse, sea, curl, reef.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const SeahorseIcon = /* @__PURE__ */ createIcon('seahorse', [
   [

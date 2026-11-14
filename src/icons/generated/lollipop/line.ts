@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `lollipop` icon, line variant: lollipop, sweet, candy on a stick, treat.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const LollipopIcon = /* @__PURE__ */ createIcon('lollipop', [
   ['circle', { cx: 12.25, cy: 9.25, r: 5.5 }],

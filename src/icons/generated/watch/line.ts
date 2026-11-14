@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `watch` icon, line variant: watch, smartwatch, wearable, wrist.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const WatchIcon = /* @__PURE__ */ createIcon('watch', [
   [

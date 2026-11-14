@@ -6,5 +6,5 @@
   "useCases": ["Shows the version of a project", "Links to earlier versions of a file"],
   "variants": ["line"],
   "opticalSizes": [24],
-  "since": "0.1.0"
+  "since": "1.0.0"
 }

@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `koala` icon, line variant: koala, eucalyptus, marsupial, australia.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const KoalaIcon = /* @__PURE__ */ createIcon('koala', [
   ['circle', { cx: 12.25, cy: 13.5, r: 5.5 }],

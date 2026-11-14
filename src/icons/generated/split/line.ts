@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `split` icon, line variant: cut clip, razor, divide, playhead.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const SplitIcon = /* @__PURE__ */ createIcon('split', [
   [

@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `pen-off` icon, line variant: pen off, read only, no writing, disabled draw.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const PenOffIcon = /* @__PURE__ */ createIcon('pen-off', [
   [

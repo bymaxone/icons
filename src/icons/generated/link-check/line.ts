@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `link-check` icon, line variant: link check, valid url, working link, confirmed address.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const LinkCheckIcon = /* @__PURE__ */ createIcon('link-check', [
   [

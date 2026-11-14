@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `glasses` icon, line variant: glasses, eyewear, read, vision.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const GlassesIcon = /* @__PURE__ */ createIcon('glasses', [
   ['circle', { cx: 7.25, cy: 14.25, r: 3.5 }],

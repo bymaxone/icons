@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `cabinet` icon, line variant: cabinet, cupboard, storage, doors.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const CabinetIcon = /* @__PURE__ */ createIcon('cabinet', [
   [

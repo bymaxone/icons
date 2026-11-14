@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `uv-index` icon, line variant: uv index, ultraviolet, sunscreen, radiation.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const UvIndexIcon = /* @__PURE__ */ createIcon('uv-index', [
   ['circle', { cx: 12.25, cy: 8.75, r: 3 }],

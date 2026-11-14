@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `tennis-ball` icon, line variant: tennis ball, tennis, sport, court.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const TennisBallIcon = /* @__PURE__ */ createIcon('tennis-ball', [
   ['circle', { cx: 12.25, cy: 12.25, r: 8.5 }],

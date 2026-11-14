@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `currency-dollar` icon, line variant: dollar, currency, money, usd.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const CurrencyDollarIcon = /* @__PURE__ */ createIcon('currency-dollar', [
   [

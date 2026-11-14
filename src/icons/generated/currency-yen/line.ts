@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `currency-yen` icon, line variant: yen, currency, money, jpy.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const CurrencyYenIcon = /* @__PURE__ */ createIcon('currency-yen', [
   ['path', { d: 'm6.25 4.25 6 8.5 6-8.5' }],

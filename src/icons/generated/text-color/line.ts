@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `text-color` icon, line variant: text color, font color, letter a, underline.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const TextColorIcon = /* @__PURE__ */ createIcon('text-color', [
   ['path', { d: 'm7.25 15.25 5-11.5 5 11.5M9 11h6.5' }],

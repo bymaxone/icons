@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `user-circle` icon, line variant: user, account, avatar, profile.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const UserCircleIcon = /* @__PURE__ */ createIcon('user-circle', [
   ['circle', { cx: 12.25, cy: 12.25, r: 8.75 }],

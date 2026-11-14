@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `more-horizontal` icon, sm variant: ellipsis, overflow, options, dots.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const MoreHorizontalSmIcon = /* @__PURE__ */ createIcon(
   'more-horizontal-sm',

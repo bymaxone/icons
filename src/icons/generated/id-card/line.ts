@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `id-card` icon, line variant: id, card, identity, badge, profile.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const IdCardIcon = /* @__PURE__ */ createIcon('id-card', [
   [

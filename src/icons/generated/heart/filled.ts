@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `heart` icon, filled variant: heart, like, love, favorite.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const HeartFilledIcon = /* @__PURE__ */ createIcon(
   'heart-filled',

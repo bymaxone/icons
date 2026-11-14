@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `alarm-clock-plus` icon, line variant: alarm clock plus, add reminder, set wake time, new alert.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const AlarmClockPlusIcon = /* @__PURE__ */ createIcon('alarm-clock-plus', [
   [

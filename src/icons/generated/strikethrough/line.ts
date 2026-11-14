@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `strikethrough` icon, line variant: strikethrough, strike, text, format.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const StrikethroughIcon = /* @__PURE__ */ createIcon('strikethrough', [
   [

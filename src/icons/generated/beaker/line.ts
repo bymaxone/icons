@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `beaker` icon, line variant: beaker, lab, measure, liquid.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const BeakerIcon = /* @__PURE__ */ createIcon('beaker', [
   ['path', { d: 'M4.75 3.25h2.5v15c0 2 .75 3 2.75 3h5c2 0 2.75-1 2.75-3v-15' }],

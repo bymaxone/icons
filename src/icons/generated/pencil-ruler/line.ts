@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `pencil-ruler` icon, line variant: pencil, ruler, design, draft.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const PencilRulerIcon = /* @__PURE__ */ createIcon('pencil-ruler', [
   [

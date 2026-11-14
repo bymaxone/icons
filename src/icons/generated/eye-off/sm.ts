@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `eye-off` icon, sm variant: hidden, hide, invisible, conceal.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const EyeOffSmIcon = /* @__PURE__ */ createIcon(
   'eye-off-sm',

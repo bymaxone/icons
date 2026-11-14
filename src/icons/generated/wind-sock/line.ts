@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `wind-sock` icon, line variant: wind sock, windsock, direction, airfield.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const WindSockIcon = /* @__PURE__ */ createIcon('wind-sock', [
   ['path', { d: 'M4.25 21.25v-18' }],

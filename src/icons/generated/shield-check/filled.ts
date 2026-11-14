@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `shield-check` icon, filled variant: shield, verified, protected, secure.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const ShieldCheckFilledIcon = /* @__PURE__ */ createIcon(
   'shield-check-filled',

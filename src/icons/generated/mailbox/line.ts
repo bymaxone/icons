@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `mailbox` icon, line variant: mailbox, post, letter, delivery.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const MailboxIcon = /* @__PURE__ */ createIcon('mailbox', [
   ['path', { d: 'M3.25 14.25v-3.5a5.5 5.5 0 0 1 5.5-5.5h5a5.5 5.5 0 0 1 5.5 5.5v3.5z' }],

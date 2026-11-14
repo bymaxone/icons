@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `phone-x` icon, line variant: phone x, hang up, missed call, declined.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const PhoneXIcon = /* @__PURE__ */ createIcon('phone-x', [
   [

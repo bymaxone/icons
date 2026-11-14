@@ -6,5 +6,5 @@
   "useCases": ["Adds storage space online", "Creates a new synced location"],
   "variants": ["line"],
   "opticalSizes": [24],
-  "since": "0.1.0"
+  "since": "1.0.0"
 }

@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `alarm-clock-minus` icon, line variant: alarm clock minus, remove reminder, clear wake time, drop alert.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const AlarmClockMinusIcon = /* @__PURE__ */ createIcon('alarm-clock-minus', [
   [

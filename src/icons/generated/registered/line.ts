@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `registered` icon, line variant: registered, trademark, brand, legal.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const RegisteredIcon = /* @__PURE__ */ createIcon('registered', [
   ['circle', { cx: 12.25, cy: 12.25, r: 8.5 }],

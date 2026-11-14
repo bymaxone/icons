@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `cow` icon, line variant: cow, cattle, milk, farm.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const CowIcon = /* @__PURE__ */ createIcon('cow', [
   ['path', { d: 'M6.328 12.281a6.001 6.001 0 0 1 11.845.007' }],

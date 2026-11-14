@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `chisel` icon, line variant: chisel, carving, woodwork, craft tool.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const ChiselIcon = /* @__PURE__ */ createIcon('chisel', [
   ['path', { d: 'm17.25 3.25 3.5 3.5-9 9-3.5-3.5z' }],

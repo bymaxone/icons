@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `calendar-minus` icon, line variant: calendar, minus, remove, cancel event.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const CalendarMinusIcon = /* @__PURE__ */ createIcon('calendar-minus', [
   [

@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `tape-measure` icon, line variant: tape measure, measuring tape, length, dimensions.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const TapeMeasureIcon = /* @__PURE__ */ createIcon('tape-measure', [
   [

@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `microwave` icon, line variant: microwave, oven, kitchen, heat.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const MicrowaveIcon = /* @__PURE__ */ createIcon('microwave', [
   [

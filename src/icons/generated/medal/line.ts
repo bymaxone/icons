@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `medal` icon, line variant: medal, achievement, rank, prize.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const MedalIcon = /* @__PURE__ */ createIcon('medal', [
   ['circle', { cx: 12.25, cy: 15.25, r: 5 }],

@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `fuel` icon, line variant: fuel, petrol, gas pump, refill.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const FuelIcon = /* @__PURE__ */ createIcon('fuel', [
   ['path', { d: 'M5.25 20.25V5.75q0-1.5 1.5-1.5h6q1.5 0 1.5 1.5v14.5z' }],

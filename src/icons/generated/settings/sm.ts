@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `settings` icon, sm variant: gear, cog, preferences, configuration.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const SettingsSmIcon = /* @__PURE__ */ createIcon(
   'settings-sm',

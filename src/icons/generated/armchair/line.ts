@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `armchair` icon, line variant: armchair, chair, seat, furniture.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const ArmchairIcon = /* @__PURE__ */ createIcon('armchair', [
   ['path', { d: 'M6.25 11.75v-3.5q0-3 3-3h6q3 0 3 3v3.5' }],

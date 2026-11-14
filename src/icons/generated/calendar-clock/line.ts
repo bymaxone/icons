@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `calendar-clock` icon, line variant: calendar clock, schedule, appointment, time.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const CalendarClockIcon = /* @__PURE__ */ createIcon('calendar-clock', [
   [

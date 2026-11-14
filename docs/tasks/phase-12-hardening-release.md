@@ -1,6 +1,6 @@
 # Phase P5: hardening-release
 
-> **Status**: 🔄 In Progress · **Progress**: 1 / 9 tasks · **Last updated**: 2026-11-11
+> **Status**: 🔄 In Progress · **Progress**: 1 / 9 tasks · **Last updated**: 2026-11-14
 > **Source roadmap**: [`../development_plan.md`](../development_plan.md) §5 (P5)
 > **Source spec**: [`../technical_specification.md`](../technical_specification.md) §11, §12, §13, §16
 
@@ -25,11 +25,11 @@ P5 holds every gate at its final threshold and prepares the first publish. It ad
 | 12.1 | Metadata: a `label` per icon, use cases for any product  | ✅ Done   | P0       | S    | none       |
 | 12.2 | Keep one preview per pull request                        | 👀 Review | P1       | S    | none       |
 | 12.3 | API surface check on an unpublished package              | 👀 Review | P0       | S    | none       |
-| 12.4 | The tarball in Next.js (App Router) and Vite             | 📋 ToDo   | P0       | M    | 12.1       |
-| 12.5 | Final gates: size budgets, cold mutation, package checks | 📋 ToDo   | P0       | M    | 12.1       |
-| 12.6 | Security alerts, each with a decision                    | 📋 ToDo   | P1       | S    | none       |
-| 12.7 | README against the site and the API                      | 📋 ToDo   | P1       | S    | 12.1       |
-| 12.8 | The release pull request and the checklist               | 📋 ToDo   | P0       | M    | 12.2–12.7  |
+| 12.4 | The tarball in Next.js (App Router) and Vite             | 👀 Review | P0       | M    | 12.1       |
+| 12.5 | Final gates: size budgets, cold mutation, package checks | 👀 Review | P0       | M    | 12.1       |
+| 12.6 | Security alerts, each with a decision                    | 👀 Review | P1       | S    | none       |
+| 12.7 | README against the site and the API                      | 👀 Review | P1       | S    | 12.1       |
+| 12.8 | The release pull request and the checklist               | 👀 Review | P0       | M    | 12.2–12.7  |
 | 12.9 | First publish, trusted publishing, the Studio on npm     | 📋 ToDo   | P0       | S    | 12.8       |
 
 Task 12.9 is the founder's: the first publish is manual.

@@ -6,5 +6,5 @@
   "useCases": ["Shows a tool for gathering leaves", "Marks a section about yard care"],
   "variants": ["line"],
   "opticalSizes": [24],
-  "since": "0.1.0"
+  "since": "1.0.0"
 }

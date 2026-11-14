@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `battery-charging` icon, line variant: battery, charging, power, energy.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const BatteryChargingIcon = /* @__PURE__ */ createIcon('battery-charging', [
   ['path', { d: 'M8 7.25H5.25c-2.031 0-2.5.469-2.5 2.5v5c0 2.031.469 2.5 2.5 2.5H8' }],

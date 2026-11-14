@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `asset` icon, line variant: cube, resource, package, media asset.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const AssetIcon = /* @__PURE__ */ createIcon('asset', [
   [

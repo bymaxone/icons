@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `lighthouse` icon, line variant: lighthouse, beacon, coast, guide.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const LighthouseIcon = /* @__PURE__ */ createIcon('lighthouse', [
   ['path', { d: 'm9.25 21.25 1.5-12h3l1.5 12z' }],

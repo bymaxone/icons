@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `arrow-down-clock` icon, line variant: arrow down clock, sort by oldest, earlier time, time descending.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const ArrowDownClockIcon = /* @__PURE__ */ createIcon('arrow-down-clock', [
   ['path', { d: 'm5.75 13.25 5.317 5.317m1.183-4.917v-8.9' }],

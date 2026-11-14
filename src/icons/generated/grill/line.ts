@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `grill` icon, line variant: grill, barbecue, bbq, charcoal.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const GrillIcon = /* @__PURE__ */ createIcon('grill', [
   ['path', { d: 'M4.25 9.25h16c0 4.5-3.5 7.5-8 7.5s-8-3-8-7.5' }],

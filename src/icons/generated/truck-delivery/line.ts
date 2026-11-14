@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `truck-delivery` icon, line variant: truck delivery, shipping, cargo, courier.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const TruckDeliveryIcon = /* @__PURE__ */ createIcon('truck-delivery', [
   ['path', { d: 'M8.25 5.25h5c1.5 0 2 .5 2 2v8h-7c-1.5 0-1.5-.5-1.5-2v-6.5q0-1.5 1.5-1.5' }],

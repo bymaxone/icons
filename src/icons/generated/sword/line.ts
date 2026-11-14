@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `sword` icon, line variant: sword, battle, attack, fight.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const SwordIcon = /* @__PURE__ */ createIcon('sword', [
   ['path', { d: 'M20.25 4.25h-3.5l-9.5 9.5 3.5 3.5 9.5-9.5z' }],

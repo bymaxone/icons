@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `tractor` icon, line variant: tractor, farm, agriculture, vehicle.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const TractorIcon = /* @__PURE__ */ createIcon('tractor', [
   ['circle', { cx: 7.25, cy: 16.25, r: 4 }],

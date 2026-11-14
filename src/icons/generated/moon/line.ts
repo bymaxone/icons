@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `moon` icon, line variant: dark mode, night, theme, crescent.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const MoonIcon = /* @__PURE__ */ createIcon('moon', [
   ['path', { d: 'M20.988 12.699a8.75 8.75 0 1 1-9.187-9.187 6.5 6.5 0 1 0 9.187 9.187' }],

@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `chart-area` icon, line variant: chart area, shaded line, trend, volume.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const ChartAreaIcon = /* @__PURE__ */ createIcon('chart-area', [
   ['path', { d: 'M3.75 3.75v16.5h16.5' }],

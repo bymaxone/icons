@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `angle` icon, line variant: angle, degrees, geometry, corner.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const AngleIcon = /* @__PURE__ */ createIcon('angle', [
   ['path', { d: 'M4.25 4.25v16h16' }],

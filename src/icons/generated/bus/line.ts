@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `bus` icon, line variant: bus, public transport, transit, coach.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const BusIcon = /* @__PURE__ */ createIcon('bus', [
   [

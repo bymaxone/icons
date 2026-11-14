@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `calendar-user` icon, line variant: calendar user, appointment, booking, attendee.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const CalendarUserIcon = /* @__PURE__ */ createIcon('calendar-user', [
   [

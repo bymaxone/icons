@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `layout-bottom` icon, line variant: layout bottom, bottom pane, footer panel, split.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const LayoutBottomIcon = /* @__PURE__ */ createIcon('layout-bottom', [
   [

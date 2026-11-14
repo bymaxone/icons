@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `chocolate` icon, line variant: chocolate, bar, cocoa, sweet.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const ChocolateIcon = /* @__PURE__ */ createIcon('chocolate', [
   ['path', { d: 'M7.25 11.25v-6.5h9.5v6.5' }],

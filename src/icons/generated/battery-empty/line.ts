@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `battery-empty` icon, line variant: battery empty, drained, dead, power.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const BatteryEmptyIcon = /* @__PURE__ */ createIcon('battery-empty', [
   [

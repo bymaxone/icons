@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `leaf` icon, line variant: leaf, eco, green, plant.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const LeafIcon = /* @__PURE__ */ createIcon('leaf', [
   ['path', { d: 'M5.25 19.25c0-9 5-14 15-14 0 10-5 14-14 14' }],

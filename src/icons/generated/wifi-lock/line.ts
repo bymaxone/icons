@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `wifi-lock` icon, line variant: wifi lock, secured, password, network.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const WifiLockIcon = /* @__PURE__ */ createIcon('wifi-lock', [
   ['path', { d: 'M5.224 11.947a10.5 10.5 0 0 1 12.009-1.441' }],

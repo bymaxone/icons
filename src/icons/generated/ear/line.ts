@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `ear` icon, line variant: ear, hearing, listen, audio.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const EarIcon = /* @__PURE__ */ createIcon('ear', [
   ['path', { d: 'M7.25 9.25a5.5 5.5 0 0 1 11 0c0 3-2.5 4-3 6.5-.5 2.75-2 4.5-4.5 4.5' }],

@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `folder-user` icon, line variant: folder user, personal, owner, profile.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const FolderUserIcon = /* @__PURE__ */ createIcon('folder-user', [
   [

@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `monkey` icon, line variant: monkey, primate, jungle, playful.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const MonkeyIcon = /* @__PURE__ */ createIcon('monkey', [
   ['circle', { cx: 12.25, cy: 12.75, r: 6.75 }],

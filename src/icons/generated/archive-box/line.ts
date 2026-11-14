@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `archive-box` icon, line variant: archive, box, store, put away.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const ArchiveBoxIcon = /* @__PURE__ */ createIcon('archive-box', [
   [

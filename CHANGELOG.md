@@ -11,6 +11,12 @@ and deprecated, each rename with the alias that keeps the old name working.
 
 ## [Unreleased]
 
+## [1.0.0] - 2026-11-14
+
+The first published version: 1,298 line icons, 51 filled variants, 45 hand-tuned 16 px masters,
+110 brand marks and 250 country flags, as React 19 components, raw SVG, an SVG sprite and typed
+metadata.
+
 ### Changed
 
 - Five of the redrawn icons are out of 1.0 because their single redraw still did not read at 24 px in the catalogue cell: `wheelbarrow`, `garlic`, `nose`, `screen-rotation` and `crocodile`. The line set is 1,298.
@@ -269,3 +275,6 @@ and deprecated, each rename with the alias that keeps the old name working.
   Lucide, Tabler, Phosphor and Heroicons and flags close matches for review;
   `pnpm family-sheet` renders the whole set by category; and a pull request that changes a
   drawing gets a preview comment with its render and its nearest matches.
+
+[Unreleased]: https://github.com/bymaxone/icons/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/bymaxone/icons/releases/tag/v1.0.0

@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `swipe-up` icon, line variant: swipe up, gesture, touch, scroll.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const SwipeUpIcon = /* @__PURE__ */ createIcon('swipe-up', [
   [

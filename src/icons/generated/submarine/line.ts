@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `submarine` icon, line variant: submarine, underwater, periscope, vessel.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const SubmarineIcon = /* @__PURE__ */ createIcon('submarine', [
   ['path', { d: 'M6.25 12.25h11a3.5 3.5 0 0 1 0 7h-11a3.5 3.5 0 0 1 0-7' }],

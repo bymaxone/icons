@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `border-horizontal` icon, line variant: border horizontal, rows, lines, table.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const BorderHorizontalIcon = /* @__PURE__ */ createIcon('border-horizontal', [
   ['path', { d: 'M4.75 12.25h15' }],

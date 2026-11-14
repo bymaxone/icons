@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `hospital` icon, line variant: hospital, clinic, medical, emergency.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const HospitalIcon = /* @__PURE__ */ createIcon('hospital', [
   ['path', { d: 'M4.25 21.25h16' }],

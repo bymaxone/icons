@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `island` icon, line variant: island, palm tree, sea, getaway.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const IslandIcon = /* @__PURE__ */ createIcon('island', [
   ['path', { d: 'M2.75 20.25c3-2.5 6-3.5 9.5-3.5s6.5 1 9.5 3.5' }],

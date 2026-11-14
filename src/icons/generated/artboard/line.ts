@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `artboard` icon, line variant: artboard, canvas, design, frame.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const ArtboardIcon = /* @__PURE__ */ createIcon('artboard', [
   [

@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `aspect-16-9` icon, line variant: landscape, widescreen, ratio, horizontal.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const Aspect169Icon = /* @__PURE__ */ createIcon('aspect-16-9', [
   [

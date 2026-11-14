@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `gender-male` icon, line variant: gender male, man, mars, male sign.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const GenderMaleIcon = /* @__PURE__ */ createIcon('gender-male', [
   ['circle', { cx: 10.25, cy: 13.75, r: 5.5 }],

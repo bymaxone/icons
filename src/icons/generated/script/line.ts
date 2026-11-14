@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `script` icon, line variant: screenplay, document, text, dialogue.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const ScriptIcon = /* @__PURE__ */ createIcon('script', [
   [

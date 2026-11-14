@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `birdhouse` icon, line variant: birdhouse, nest box, bird feeder, garden bird.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const BirdhouseIcon = /* @__PURE__ */ createIcon('birdhouse', [
   ['path', { d: 'm12.25 3.25-8 7h16z' }],

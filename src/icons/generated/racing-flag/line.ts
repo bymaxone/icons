@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `racing-flag` icon, line variant: racing, checkered, finish, motorsport.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const RacingFlagIcon = /* @__PURE__ */ createIcon('racing-flag', [
   ['path', { d: 'M5.25 21.25V3.75' }],

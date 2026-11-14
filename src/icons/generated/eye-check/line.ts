@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `eye-check` icon, line variant: eye check, reviewed, seen, approved.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const EyeCheckIcon = /* @__PURE__ */ createIcon('eye-check', [
   ['path', { d: 'M5.011 10.299a8.244 8.244 0 0 1 14.478 0' }],

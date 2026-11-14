@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `dna` icon, line variant: dna, gene, biology, helix.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const DnaIcon = /* @__PURE__ */ createIcon('dna', [
   ['path', { d: 'M7.25 3.25c0 4.5 10 4.5 10 9s-10 4.5-10 9' }],

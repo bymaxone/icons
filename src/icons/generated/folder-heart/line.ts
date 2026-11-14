@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `folder-heart` icon, line variant: folder heart, favorite folder, liked, loved.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const FolderHeartIcon = /* @__PURE__ */ createIcon('folder-heart', [
   [

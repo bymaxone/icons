@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `pi` icon, line variant: pi, constant, math, circle.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const PiIcon = /* @__PURE__ */ createIcon('pi', [
   ['path', { d: 'M4.75 7.25h14.5' }],

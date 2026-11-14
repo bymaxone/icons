@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `banana` icon, line variant: banana, fruit, yellow, snack.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const BananaIcon = /* @__PURE__ */ createIcon('banana', [
   [

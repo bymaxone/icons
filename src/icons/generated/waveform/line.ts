@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `waveform` icon, line variant: audio, sound wave, levels, signal.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const WaveformIcon = /* @__PURE__ */ createIcon('waveform', [
   ['path', { d: 'M3.25 11.25v2' }],

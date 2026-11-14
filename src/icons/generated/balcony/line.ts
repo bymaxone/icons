@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `balcony` icon, line variant: balcony, terrace, railing, outdoor.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const BalconyIcon = /* @__PURE__ */ createIcon('balcony', [
   ['path', { d: 'M3.25 12.25h18m-18 8h18' }],

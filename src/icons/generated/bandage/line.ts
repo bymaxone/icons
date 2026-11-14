@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `bandage` icon, line variant: bandage, plaster, first aid, wound.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const BandageIcon = /* @__PURE__ */ createIcon('bandage', [
   ['path', { d: 'M2.881 16.316 16.316 2.881l5.303 5.303L8.184 21.619Z' }],

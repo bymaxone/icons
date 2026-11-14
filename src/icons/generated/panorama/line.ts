@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `panorama` icon, line variant: panorama, wide photo, landscape, view.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const PanoramaIcon = /* @__PURE__ */ createIcon('panorama', [
   ['path', { d: 'M3.25 7.75q9-2.25 18 0v9.5q-9-2.25-18 0z' }],

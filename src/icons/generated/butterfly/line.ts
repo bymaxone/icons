@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `butterfly` icon, line variant: butterfly, insect, wings, garden.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const ButterflyIcon = /* @__PURE__ */ createIcon('butterfly', [
   ['path', { d: 'M12.25 8.25v11' }],

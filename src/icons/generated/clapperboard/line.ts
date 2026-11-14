@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `clapperboard` icon, line variant: clapperboard, film, take, movie.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const ClapperboardIcon = /* @__PURE__ */ createIcon('clapperboard', [
   [

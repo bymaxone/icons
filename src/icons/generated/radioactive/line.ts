@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `radioactive` icon, line variant: radioactive, radiation, nuclear, hazard.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const RadioactiveIcon = /* @__PURE__ */ createIcon('radioactive', [
   ['path', { d: 'M12.25 12.25h.01' }],

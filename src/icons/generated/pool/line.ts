@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `pool` icon, line variant: pool, swim, water, leisure.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const PoolIcon = /* @__PURE__ */ createIcon('pool', [
   ['path', { d: 'M3.25 19.25q2.25-2.25 4.5 0c2.25 2.25 3 1.5 4.5 0s3-1.5 4.5 0 3 1.5 4.5 0' }],

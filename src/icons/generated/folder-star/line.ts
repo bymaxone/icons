@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `folder-star` icon, line variant: folder star, pinned folder, important, featured.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const FolderStarIcon = /* @__PURE__ */ createIcon('folder-star', [
   [

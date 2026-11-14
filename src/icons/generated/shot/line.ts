@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `shot` icon, line variant: framing, viewfinder, subject, take.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const ShotIcon = /* @__PURE__ */ createIcon('shot', [
   ['path', { d: 'M3.25 9.25v-2c0-1.625.375-2 2-2h2' }],

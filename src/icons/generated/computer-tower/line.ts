@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `computer-tower` icon, line variant: computer tower, desktop pc, workstation, cpu case.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const ComputerTowerIcon = /* @__PURE__ */ createIcon('computer-tower', [
   [

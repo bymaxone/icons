@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `scene` icon, filled variant: clapperboard, take, episode, film.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const SceneFilledIcon = /* @__PURE__ */ createIcon(
   'scene-filled',

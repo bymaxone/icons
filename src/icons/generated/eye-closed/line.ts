@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `eye-closed` icon, line variant: eye, closed, sleep, lashes.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const EyeClosedIcon = /* @__PURE__ */ createIcon('eye-closed', [
   ['path', { d: 'M4.25 9.75c2 3 4.75 4.5 8 4.5s6-1.5 8-4.5' }],

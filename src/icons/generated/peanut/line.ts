@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `peanut` icon, line variant: peanut, nut, legume, allergen.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const PeanutIcon = /* @__PURE__ */ createIcon('peanut', [
   [

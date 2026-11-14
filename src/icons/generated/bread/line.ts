@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `bread` icon, line variant: bread, loaf, bakery, toast.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const BreadIcon = /* @__PURE__ */ createIcon('bread', [
   [

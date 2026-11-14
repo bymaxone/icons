@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `heart-share` icon, line variant: heart share, send kindness, pass on like, gift.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const HeartShareIcon = /* @__PURE__ */ createIcon('heart-share', [
   [

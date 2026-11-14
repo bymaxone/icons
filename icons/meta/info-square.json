@@ -6,5 +6,5 @@
   "useCases": ["Shows more details about an item", "Opens a note in a square badge"],
   "variants": ["line"],
   "opticalSizes": [24],
-  "since": "0.1.0"
+  "since": "1.0.0"
 }

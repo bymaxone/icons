@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `more-vertical` icon, sm variant: kebab, overflow, options, dots.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const MoreVerticalSmIcon = /* @__PURE__ */ createIcon(
   'more-vertical-sm',

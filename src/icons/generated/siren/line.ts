@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `siren` icon, line variant: siren, emergency light, alarm, alert.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const SirenIcon = /* @__PURE__ */ createIcon('siren', [
   ['path', { d: 'M7.25 17.25v-4.5a5 5 0 0 1 10 0v4.5' }],

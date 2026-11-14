@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `home-heart` icon, line variant: home heart, favorite home, family, house.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const HomeHeartIcon = /* @__PURE__ */ createIcon('home-heart', [
   [

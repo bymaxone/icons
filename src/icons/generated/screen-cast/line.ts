@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `screen-cast` icon, line variant: cast, airplay, mirror, screen.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const ScreenCastIcon = /* @__PURE__ */ createIcon('screen-cast', [
   [

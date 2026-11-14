@@ -1,6 +1,6 @@
 # Development Tasks: @bymax-one/icons
 
-> **Last updated:** 2026-11-11
+> **Last updated:** 2026-11-14
 > **Source roadmap:** [`../development_plan.md`](../development_plan.md) · **Spec:** [`../technical_specification.md`](../technical_specification.md)
 
 Tasks live **one file per phase** in this folder (`phase-NN-<slug>.md`, numbered in execution order; a drawing batch is a phase like any other, so B0 is `phase-03-keystone-icons.md`). Each phase file is self-contained: context, rules-of-phase, reference docs, a task index, the tasks (each with an executable **Agent prompt**), and a completion log. Phase files are scaffolded one phase at a time, when the previous phase closes.

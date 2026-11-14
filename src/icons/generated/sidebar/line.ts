@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `sidebar` icon, line variant: panel, layout, drawer, toggle sidebar.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const SidebarIcon = /* @__PURE__ */ createIcon('sidebar', [
   [

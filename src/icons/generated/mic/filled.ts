@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `mic` icon, filled variant: microphone, record, audio input, voice.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const MicFilledIcon = /* @__PURE__ */ createIcon(
   'mic-filled',

@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `diamond` icon, line variant: diamond, rhombus, shape, gem.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const DiamondIcon = /* @__PURE__ */ createIcon('diamond', [
   [

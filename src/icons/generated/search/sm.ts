@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `search` icon, sm variant: magnifier, find, lookup, query.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const SearchSmIcon = /* @__PURE__ */ createIcon(
   'search-sm',

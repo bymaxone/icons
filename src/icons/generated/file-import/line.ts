@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `file-import` icon, line variant: import, file, bring in, upload file.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const FileImportIcon = /* @__PURE__ */ createIcon('file-import', [
   [

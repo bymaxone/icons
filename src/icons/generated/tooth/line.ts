@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `tooth` icon, line variant: tooth, dental, dentist, teeth.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const ToothIcon = /* @__PURE__ */ createIcon('tooth', [
   [

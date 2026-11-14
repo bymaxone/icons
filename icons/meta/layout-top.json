@@ -6,5 +6,5 @@
   "useCases": ["Opens a panel at the top", "Shows a banner area above the content"],
   "variants": ["line"],
   "opticalSizes": [24],
-  "since": "0.1.0"
+  "since": "1.0.0"
 }

@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `math-symbols` icon, line variant: math symbols, operators, arithmetic, formula.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const MathSymbolsIcon = /* @__PURE__ */ createIcon('math-symbols', [
   ['path', { d: 'M4.25 7.25h6m-3-3v6' }],

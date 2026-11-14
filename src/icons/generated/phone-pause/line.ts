@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `phone-pause` icon, line variant: phone pause, on hold, paused call, call.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const PhonePauseIcon = /* @__PURE__ */ createIcon('phone-pause', [
   [

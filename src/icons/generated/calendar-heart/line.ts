@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `calendar-heart` icon, line variant: calendar, heart, favorite date, anniversary.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const CalendarHeartIcon = /* @__PURE__ */ createIcon('calendar-heart', [
   [

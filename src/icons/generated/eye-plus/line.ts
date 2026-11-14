@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `eye-plus` icon, line variant: eye plus, new watcher, follow, grant view.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const EyePlusIcon = /* @__PURE__ */ createIcon('eye-plus', [
   ['path', { d: 'M5.011 10.299a8.244 8.244 0 0 1 14.478 0' }],

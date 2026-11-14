@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `folder-lock` icon, line variant: folder, lock, private, protected.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const FolderLockIcon = /* @__PURE__ */ createIcon('folder-lock', [
   ['path', { d: 'M7.25 10.25h4.76m-.776 9.5H7.25c-3.25 0-4-.75-4-4v-1.5c0-3.25.75-4 4-4' }],

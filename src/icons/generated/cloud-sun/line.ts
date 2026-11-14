@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `cloud-sun` icon, line variant: cloud sun, partly sunny, weather, forecast.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const CloudSunIcon = /* @__PURE__ */ createIcon('cloud-sun', [
   ['path', { d: 'M5.837 9.189a2.75 2.75 0 0 1 4.526-2.712' }],

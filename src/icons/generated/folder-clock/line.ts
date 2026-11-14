@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `folder-clock` icon, line variant: folder clock, recent, history, scheduled.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const FolderClockIcon = /* @__PURE__ */ createIcon('folder-clock', [
   [

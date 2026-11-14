@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `carrot` icon, line variant: carrot, vegetable, food, healthy.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const CarrotIcon = /* @__PURE__ */ createIcon('carrot', [
   [

@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `alarm-snooze` icon, line variant: alarm snooze, snooze, postpone, sleep.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const AlarmSnoozeIcon = /* @__PURE__ */ createIcon('alarm-snooze', [
   [

@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `message-off` icon, line variant: message off, mute chat, silenced, disabled.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const MessageOffIcon = /* @__PURE__ */ createIcon('message-off', [
   [

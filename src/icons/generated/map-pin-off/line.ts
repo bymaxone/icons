@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `map-pin-off` icon, line variant: map pin off, no location, gps disabled, hidden place.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const MapPinOffIcon = /* @__PURE__ */ createIcon('map-pin-off', [
   [

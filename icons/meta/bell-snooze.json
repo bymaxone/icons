@@ -6,5 +6,5 @@
   "useCases": ["Postpones a reminder for later", "Silences an alert for a short time"],
   "variants": ["line"],
   "opticalSizes": [24],
-  "since": "0.1.0"
+  "since": "1.0.0"
 }

@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `wallet-plus` icon, line variant: wallet plus, top up, deposit, credit.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const WalletPlusIcon = /* @__PURE__ */ createIcon('wallet-plus', [
   [

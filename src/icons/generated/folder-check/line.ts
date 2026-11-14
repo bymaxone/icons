@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `folder-check` icon, line variant: folder, check, done, synced folder.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const FolderCheckIcon = /* @__PURE__ */ createIcon('folder-check', [
   [

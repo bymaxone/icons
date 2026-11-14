@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `plug` icon, line variant: plug, power, connect, integration.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const PlugIcon = /* @__PURE__ */ createIcon('plug', [
   [

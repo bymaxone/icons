@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `cloud-warning` icon, line variant: cloud warning, storage alert, quota, sync issue.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const CloudWarningIcon = /* @__PURE__ */ createIcon('cloud-warning', [
   [

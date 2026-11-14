@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `braces` icon, line variant: braces, curly brackets, code block, object.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const BracesIcon = /* @__PURE__ */ createIcon('braces', [
   [

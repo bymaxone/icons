@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `microscope` icon, line variant: microscope, lab, research, science.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const MicroscopeIcon = /* @__PURE__ */ createIcon('microscope', [
   ['path', { d: 'M5.25 21.25h14' }],

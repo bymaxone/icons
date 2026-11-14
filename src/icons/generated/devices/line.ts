@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `devices` icon, line variant: devices, screens, responsive, phone laptop.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const DevicesIcon = /* @__PURE__ */ createIcon('devices', [
   [

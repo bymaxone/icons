@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `align-justify` icon, line variant: align, justify, text, paragraph.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const AlignJustifyIcon = /* @__PURE__ */ createIcon('align-justify', [
   ['path', { d: 'M4.75 5.25h15' }],

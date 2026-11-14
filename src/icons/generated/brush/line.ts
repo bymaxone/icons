@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `brush` icon, line variant: paint, draw, stroke, retouch.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const BrushIcon = /* @__PURE__ */ createIcon('brush', [
   [

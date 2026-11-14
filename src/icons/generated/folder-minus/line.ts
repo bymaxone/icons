@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `folder-minus` icon, line variant: folder, remove, minus, delete folder.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const FolderMinusIcon = /* @__PURE__ */ createIcon('folder-minus', [
   [

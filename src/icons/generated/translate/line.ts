@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `translate` icon, line variant: translate, language, localize, i18n.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const TranslateIcon = /* @__PURE__ */ createIcon('translate', [
   [

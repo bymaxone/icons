@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `transition` icon, line variant: crossfade, wipe, cut, bowtie.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const TransitionIcon = /* @__PURE__ */ createIcon('transition', [
   [

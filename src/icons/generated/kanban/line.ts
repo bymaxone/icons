@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `kanban` icon, line variant: kanban, board, columns, tasks.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const KanbanIcon = /* @__PURE__ */ createIcon('kanban', [
   [

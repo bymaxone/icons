@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `skip-back` icon, line variant: previous, rewind, media control, start.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const SkipBackIcon = /* @__PURE__ */ createIcon('skip-back', [
   [

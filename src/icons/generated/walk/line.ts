@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `walk` icon, line variant: walk, pedestrian, steps, stroll.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const WalkIcon = /* @__PURE__ */ createIcon('walk', [
   ['circle', { cx: 13.25, cy: 4.75, r: 1.75 }],

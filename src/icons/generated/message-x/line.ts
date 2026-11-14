@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `message-x` icon, line variant: message x, remove chat, failed, dismiss.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const MessageXIcon = /* @__PURE__ */ createIcon('message-x', [
   [

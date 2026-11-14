@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `image-plus` icon, line variant: image plus, add image, new photo, upload.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const ImagePlusIcon = /* @__PURE__ */ createIcon('image-plus', [
   [

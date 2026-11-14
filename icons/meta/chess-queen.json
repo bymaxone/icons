@@ -6,5 +6,5 @@
   "useCases": ["Shows the most powerful chess piece", "Marks a leading player"],
   "variants": ["line"],
   "opticalSizes": [24],
-  "since": "0.1.0"
+  "since": "1.0.0"
 }

@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `plus` icon, sm variant: add, new, create, more.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const PlusSmIcon = /* @__PURE__ */ createIcon(
   'plus-sm',

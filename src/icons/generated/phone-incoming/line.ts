@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `phone-incoming` icon, line variant: phone, incoming, call, received.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const PhoneIncomingIcon = /* @__PURE__ */ createIcon('phone-incoming', [
   [

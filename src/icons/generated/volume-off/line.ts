@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `volume-off` icon, line variant: mute, silent, speaker off, no sound.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const VolumeOffIcon = /* @__PURE__ */ createIcon('volume-off', [
   ['path', { d: 'M2.75 9.75h3.5v5h-3.5z' }],

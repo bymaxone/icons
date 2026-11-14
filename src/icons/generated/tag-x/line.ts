@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `tag-x` icon, line variant: tag x, discard label, clear tag, cancel.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const TagXIcon = /* @__PURE__ */ createIcon('tag-x', [
   [

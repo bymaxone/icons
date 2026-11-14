@@ -6,5 +6,5 @@
   "useCases": ["Warns that the battery is drained", "Shows a device about to shut down"],
   "variants": ["line"],
   "opticalSizes": [24],
-  "since": "0.1.0"
+  "since": "1.0.0"
 }

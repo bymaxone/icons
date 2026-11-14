@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `pharmacy` icon, line variant: pharmacy, drugstore, chemist, medicine shop.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const PharmacyIcon = /* @__PURE__ */ createIcon('pharmacy', [
   ['path', { d: 'm3.25 9.25 1.5-4.5h15l1.5 4.5' }],

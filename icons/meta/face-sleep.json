@@ -6,5 +6,5 @@
   "useCases": ["Shows an idle or away status", "Marks bedtime"],
   "variants": ["line"],
   "opticalSizes": [24],
-  "since": "0.1.0"
+  "since": "1.0.0"
 }

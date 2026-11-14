@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `file-cloud` icon, line variant: file cloud, online, storage, document.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const FileCloudIcon = /* @__PURE__ */ createIcon('file-cloud', [
   [

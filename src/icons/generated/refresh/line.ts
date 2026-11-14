@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `refresh` icon, line variant: reload, sync, retry, rotate.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const RefreshIcon = /* @__PURE__ */ createIcon('refresh', [
   ['path', { d: 'M4.764 10.244a7.75 7.75 0 0 1 14.198-1.869m1.035-3.864-1.035 3.864-3.864-1.035' }],

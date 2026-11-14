@@ -6,5 +6,5 @@
   "useCases": ["Marks an item as not synced", "Shows a cloud outage"],
   "variants": ["line"],
   "opticalSizes": [24],
-  "since": "0.1.0"
+  "since": "1.0.0"
 }

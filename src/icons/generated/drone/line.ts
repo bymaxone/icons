@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `drone` icon, line variant: drone, aerial, quadcopter, flight.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const DroneIcon = /* @__PURE__ */ createIcon('drone', [
   [

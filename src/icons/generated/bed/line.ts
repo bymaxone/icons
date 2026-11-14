@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `bed` icon, line variant: bed, sleep, hotel, bedroom.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const BedIcon = /* @__PURE__ */ createIcon('bed', [
   ['path', { d: 'M3.25 5.25v15' }],

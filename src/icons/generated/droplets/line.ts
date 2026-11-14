@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `droplets` icon, line variant: droplets, drops, water, humidity.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const DropletsIcon = /* @__PURE__ */ createIcon('droplets', [
   ['path', { d: 'm15.25 7.25 3.5 4.75a4.25 4.25 0 1 1-7 0z' }],

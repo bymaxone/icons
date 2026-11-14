@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `paint-bucket` icon, line variant: paint bucket, fill, color, flood fill.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const PaintBucketIcon = /* @__PURE__ */ createIcon('paint-bucket', [
   ['path', { d: 'm9.25 3.75 9.5 9.5-6.5 6.5c-1 1-2 1-3 0l-5.5-5.5c-1-1-1-2 0-3z' }],

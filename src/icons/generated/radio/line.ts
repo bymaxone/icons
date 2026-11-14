@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `radio` icon, line variant: radio, broadcast, station, fm.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const RadioIcon = /* @__PURE__ */ createIcon('radio', [
   [

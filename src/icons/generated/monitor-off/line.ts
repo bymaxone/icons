@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `monitor-off` icon, line variant: monitor off, display asleep, blank screen, power saving.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const MonitorOffIcon = /* @__PURE__ */ createIcon('monitor-off', [
   [

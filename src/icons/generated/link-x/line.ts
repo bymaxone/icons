@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `link-x` icon, line variant: link x, unlink, broken link, detach.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const LinkXIcon = /* @__PURE__ */ createIcon('link-x', [
   [

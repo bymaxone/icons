@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `whisk` icon, line variant: whisk, beat, mix, eggs.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const WhiskIcon = /* @__PURE__ */ createIcon('whisk', [
   ['path', { d: 'M12.25 14.25v7' }],

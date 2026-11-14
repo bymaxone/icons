@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `vibrate-off` icon, line variant: vibrate off, no buzz, haptic disabled, quiet phone.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const VibrateOffIcon = /* @__PURE__ */ createIcon('vibrate-off', [
   [

@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `road` icon, line variant: road, street, highway, route.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const RoadIcon = /* @__PURE__ */ createIcon('road', [
   ['path', { d: 'm8.25 3.75-4 17M16 3.75l4 17' }],

@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `flower-pot` icon, line variant: flower pot, planter, houseplant, garden.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const FlowerPotIcon = /* @__PURE__ */ createIcon('flower-pot', [
   ['path', { d: 'M7.25 14.25h10l-1.5 7h-7z' }],

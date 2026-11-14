@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `bell` icon, sm variant: notifications, alerts, alarm, ring.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const BellSmIcon = /* @__PURE__ */ createIcon(
   'bell-sm',

@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `webcam` icon, line variant: webcam, camera, video call, stream.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const WebcamIcon = /* @__PURE__ */ createIcon('webcam', [
   ['circle', { cx: 12.25, cy: 9.75, r: 6.5 }],

@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `highlighter` icon, line variant: highlighter, marker, highlight, text.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const HighlighterIcon = /* @__PURE__ */ createIcon('highlighter', [
   ['path', { d: 'M14.25 4.25 20 10l-7.25 7.25L7 11.5z' }],

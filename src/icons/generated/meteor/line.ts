@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `meteor` icon, line variant: meteor, shooting star, space, comet.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const MeteorIcon = /* @__PURE__ */ createIcon('meteor', [
   ['circle', { cx: 15.25, cy: 15.25, r: 4.25 }],

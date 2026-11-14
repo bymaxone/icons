@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `message-dots` icon, line variant: message dots, typing, writing, pending reply.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const MessageDotsIcon = /* @__PURE__ */ createIcon('message-dots', [
   [

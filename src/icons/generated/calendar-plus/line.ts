@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `calendar-plus` icon, line variant: calendar, plus, add event, schedule.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const CalendarPlusIcon = /* @__PURE__ */ createIcon('calendar-plus', [
   [

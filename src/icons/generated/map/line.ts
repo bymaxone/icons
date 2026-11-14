@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `map` icon, line variant: map, directions, area, route.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const MapIcon = /* @__PURE__ */ createIcon('map', [
   ['path', { d: 'm4.25 6.75 5-2.25 6 2.25 5-2.25V17l-5 2.25-6-2.25-5 2.25z' }],

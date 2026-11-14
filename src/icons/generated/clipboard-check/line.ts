@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `clipboard-check` icon, line variant: clipboard, check, task done, checklist.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const ClipboardCheckIcon = /* @__PURE__ */ createIcon('clipboard-check', [
   [

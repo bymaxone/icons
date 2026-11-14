@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `bonsai` icon, line variant: bonsai, miniature tree, zen, potted tree.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const BonsaiIcon = /* @__PURE__ */ createIcon('bonsai', [
   ['path', { d: 'M5.25 17.25h14l-1.5 4h-11z' }],

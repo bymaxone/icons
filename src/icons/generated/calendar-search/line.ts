@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `calendar-search` icon, line variant: calendar search, find date, look up, schedule.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const CalendarSearchIcon = /* @__PURE__ */ createIcon('calendar-search', [
   [

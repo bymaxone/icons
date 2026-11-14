@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `webhook` icon, line variant: webhook, integration, callback, api.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const WebhookIcon = /* @__PURE__ */ createIcon('webhook', [
   ['circle', { cx: 6.25, cy: 17.75, r: 2.5 }],

@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `share` icon, sm variant: send, network, nodes, social.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const ShareSmIcon = /* @__PURE__ */ createIcon(
   'share-sm',

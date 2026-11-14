@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `caravan` icon, line variant: caravan, camper, trailer, trip.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const CaravanIcon = /* @__PURE__ */ createIcon('caravan', [
   [

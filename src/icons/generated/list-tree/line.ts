@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `list-tree` icon, line variant: list tree, hierarchy, nested items, indent.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const ListTreeIcon = /* @__PURE__ */ createIcon('list-tree', [
   ['path', { d: 'M5.25 6.25h14.5' }],

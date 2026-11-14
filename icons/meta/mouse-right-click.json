@@ -6,5 +6,5 @@
   "useCases": ["Opens a context menu", "Shows a click with the secondary button"],
   "variants": ["line"],
   "opticalSizes": [24],
-  "since": "0.1.0"
+  "since": "1.0.0"
 }

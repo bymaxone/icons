@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `user-lock` icon, line variant: user lock, blocked account, restricted, suspended.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const UserLockIcon = /* @__PURE__ */ createIcon('user-lock', [
   ['path', { d: 'M8.5 6.75a3.5 3.5 0 1 0 7 0 3.5 3.5 0 0 0-7 0' }],

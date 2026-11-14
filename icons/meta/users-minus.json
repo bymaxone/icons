@@ -6,5 +6,5 @@
   "useCases": ["Removes people from a group", "Ends access for a team"],
   "variants": ["line"],
   "opticalSizes": [24],
-  "since": "0.1.0"
+  "since": "1.0.0"
 }

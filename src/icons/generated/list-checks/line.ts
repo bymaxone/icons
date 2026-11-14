@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `list-checks` icon, line variant: list checks, to do, tasks done, checkboxes.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const ListChecksIcon = /* @__PURE__ */ createIcon('list-checks', [
   ['path', { d: 'm3.75 6.25 1.5 1.5 2.5-2.5m-4 6.5 1.5 1.5 2.5-2.5' }],

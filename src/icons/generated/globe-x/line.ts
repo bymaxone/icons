@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `globe-x` icon, line variant: globe x, cancel language, drop country, unsupported area.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const GlobeXIcon = /* @__PURE__ */ createIcon('globe-x', [
   [

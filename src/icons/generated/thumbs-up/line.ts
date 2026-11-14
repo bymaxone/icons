@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `thumbs-up` icon, line variant: like, approve, upvote, thumbs up.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const ThumbsUpIcon = /* @__PURE__ */ createIcon('thumbs-up', [
   [

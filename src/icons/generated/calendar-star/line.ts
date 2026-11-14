@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `calendar-star` icon, line variant: calendar star, special day, favorite, holiday.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const CalendarStarIcon = /* @__PURE__ */ createIcon('calendar-star', [
   [

@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `grid` icon, line variant: lattice, guides, hash, layout grid.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const GridIcon = /* @__PURE__ */ createIcon('grid', [
   ['path', { d: 'M8.25 3.25v2m0 6v10' }],

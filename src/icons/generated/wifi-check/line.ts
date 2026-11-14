@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `wifi-check` icon, line variant: wifi check, online ok, network verified, signal good.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const WifiCheckIcon = /* @__PURE__ */ createIcon('wifi-check', [
   ['path', { d: 'M5.224 11.947a10.5 10.5 0 0 1 14.052 0' }],

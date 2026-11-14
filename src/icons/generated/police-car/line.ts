@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `police-car` icon, line variant: police car, patrol, emergency, siren.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const PoliceCarIcon = /* @__PURE__ */ createIcon('police-car', [
   ['path', { d: 'm5.25 11.25 1.5-4c.25-1 .75-1.5 1.75-1.5H16c1 0 1.5.5 1.75 1.5l1.5 4' }],

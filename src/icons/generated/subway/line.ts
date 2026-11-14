@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `subway` icon, line variant: subway, metro, train, underground.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const SubwayIcon = /* @__PURE__ */ createIcon('subway', [
   ['path', { d: 'M4.25 21.25v-9a8 8 0 0 1 16 0v9' }],

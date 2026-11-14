@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `message-minus` icon, line variant: message minus, delete chat, hide comment, drop reply.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const MessageMinusIcon = /* @__PURE__ */ createIcon('message-minus', [
   [

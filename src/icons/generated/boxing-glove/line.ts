@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `boxing-glove` icon, line variant: boxing glove, punch, fight, ring.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const BoxingGloveIcon = /* @__PURE__ */ createIcon('boxing-glove', [
   [

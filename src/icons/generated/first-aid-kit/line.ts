@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `first-aid-kit` icon, line variant: first aid kit, emergency, medical, rescue.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const FirstAidKitIcon = /* @__PURE__ */ createIcon('first-aid-kit', [
   [

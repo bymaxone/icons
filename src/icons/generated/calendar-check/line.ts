@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `calendar-check` icon, line variant: calendar, check, confirmed, attending.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const CalendarCheckIcon = /* @__PURE__ */ createIcon('calendar-check', [
   [

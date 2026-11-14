@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `flag-off` icon, line variant: flag off, unflag, cleared, marker.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const FlagOffIcon = /* @__PURE__ */ createIcon('flag-off', [
   [

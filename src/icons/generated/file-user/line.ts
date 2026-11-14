@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `file-user` icon, line variant: file user, profile document, owner, personal file.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const FileUserIcon = /* @__PURE__ */ createIcon('file-user', [
   [

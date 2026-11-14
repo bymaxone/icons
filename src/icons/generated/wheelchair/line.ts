@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `wheelchair` icon, line variant: wheelchair, accessible, mobility, disability.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const WheelchairIcon = /* @__PURE__ */ createIcon('wheelchair', [
   ['circle', { cx: 13.25, cy: 4.75, r: 1.75 }],

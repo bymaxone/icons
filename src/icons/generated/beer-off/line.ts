@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `beer-off` icon, line variant: alcohol free, no beer, sober, dry.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const BeerOffIcon = /* @__PURE__ */ createIcon('beer-off', [
   [

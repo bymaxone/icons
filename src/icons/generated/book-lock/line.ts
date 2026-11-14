@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `book-lock` icon, line variant: book lock, private, restricted, read only.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const BookLockIcon = /* @__PURE__ */ createIcon('book-lock', [
   [

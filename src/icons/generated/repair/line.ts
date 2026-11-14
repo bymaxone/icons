@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `repair` icon, line variant: wrench, fix, maintenance, tool.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const RepairIcon = /* @__PURE__ */ createIcon('repair', [
   [

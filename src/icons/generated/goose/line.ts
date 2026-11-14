@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `goose` icon, line variant: goose, honk, waterfowl, farm.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const GooseIcon = /* @__PURE__ */ createIcon('goose', [
   [

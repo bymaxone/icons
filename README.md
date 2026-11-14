@@ -34,20 +34,18 @@
 
 ## ✨ Overview
 
-`@bymax-one/icons` is a public icon set with its own drawings. It will ship every icon as a
+`@bymax-one/icons` is a public icon set with its own drawings. It ships every icon as a
 React component, a raw SVG file, a symbol in an SVG sprite and an entry in typed metadata.
 Every non-brand glyph is an original Bymax drawing built on one grid and one set of rules,
 so the products that use it do not look like every other app built on the same open-source
 set.
 
 > [!NOTE]
-> **Status: pre-1.0, no icons yet.** The repository, its quality gates, the release
-> workflow, the runtime every icon renders through (the `Icon` base and `createIcon`) and the
-> build pipeline are in place: an SVG and its metadata under `icons/` become a component, a
-> raw SVG file, a sprite symbol and a metadata entry, behind an icon lint. The pipeline is
-> proven on placeholder fixtures; the first drawing batch comes next, in the order the
-> [development plan](./docs/development_plan.md) sets. Nothing is published to npm until
-> `1.0.0`.
+> **Status: 1.0.0, the first published version.** The package holds 1,298 line icons, 51
+> filled variants, 45 hand-tuned 16 px masters, 110 brand marks and 250 country flags, in 32
+> icon categories, each as a component, a raw SVG file, a sprite symbol and a metadata
+> entry. React Native components are not part of 1.0; they are planned as a minor release
+> after it.
 
 The library has **zero direct dependencies**: `react` arrives as a peer dependency, so you
 control its version and the supply-chain surface stays minimal.
@@ -57,8 +55,8 @@ control its version and the supply-chain surface stays minimal.
 - **Its own identity.** Most React products draw their interface from the same two or three
   open-source sets, so the same house, gear and sparkle appear everywhere. These drawings
   are new, made for Bymax products.
-- **Concepts other sets do not draw well.** Scene, shot, keyframe, credit, spending cap,
-  lip-sync and version are first-class icons, not approximations.
+- **Concepts other sets do not draw well.** Scene, shot, keyframe, lip-sync and version are
+  first-class icons, not approximations.
 - **One grid, one stroke, verified.** A 24 px master, a 20 px live area and a 1.5 px round
   stroke apply to every icon, and a lint checks the rules a machine can check.
 - **The engineering of the most adopted sets.** One source SVG and one metadata file per
@@ -69,8 +67,7 @@ control its version and the supply-chain surface stays minimal.
 
 ## 🔥 Features
 
-✅ marks what the package ships today; 📋 marks what the specification commits to for 1.0
-and is not built yet.
+✅ marks what the package ships in 1.0.0.
 
 ### 🎨 Drawing System
 
@@ -79,21 +76,18 @@ and is not built yet.
 - ✅ **The design language, approved**: the twelve keystone icons (`home`, `search`, `play`,
   `plus`, `close`, `check`, `settings`, `user`, `file`, `folder`, `lightning`, `scene`) fix
   the signature of the set, a 1.5 px cut that keeps distinct parts from touching
-- ✅ **Navigation, actions and status**: 44 more icons in the same language, from
-  `dashboard` and the chevrons to `trash`, `eye-off` and `cloud-check`
-- ✅ **Media, audio, files and editor**: 50 more icons, from `pause` and `timeline` to
-  `mic`, `lip-sync`, `layers` and `mask`
-- ✅ **Studio, AI, formats, billing, people and system**: 42 more icons, from `wallet` and
-  the `aspect-*` formats to `sparkle`, `octopus` (alias `polvi`) and `bell`, 148 in all
-- 📋 **About 125 original icons**: common concepts plus the Studio's own (scene, shot,
-  keyframe, credit, spending cap, lip-sync, version)
-- ✅ **Filled variants** for 40 icons with a stateful meaning, with the same silhouette as
+- ✅ **The line set**: 1,298 icons in the same language, from navigation, actions and
+  status, media, audio, files and editor, and the Studio, AI, formats, billing, people and
+  system sets to weather, food, sports, transport, places and objects, in 32 categories
+- ✅ **Filled variants** for 51 icons with a stateful meaning, with the same silhouette as
   the line icon so switching causes no size jump
-- ✅ **Hand-tuned 16 px masters** for icons used in dense UI, drawn separately rather
+- ✅ **Hand-tuned 16 px masters** for 45 icons used in dense UI, drawn separately rather
   than scaled, at 16 px with the set's 1.5 px stroke
-- ✅ **Brand marks**: in their owners' geometry from Simple Icons, monochrome
+- ✅ **Aliases**: 387 aliases in the metadata, each with a component of its own (`DeleteIcon`
+  for `trash`); 9 of them are deprecated, the old names of renamed icons, kept until 2.0.0
+- ✅ **Brand marks**: 110, in their owners' geometry from Simple Icons, monochrome
   `currentColor`, excluded from the MIT grant (see [`TRADEMARKS.md`](./TRADEMARKS.md))
-- ✅ **Country flags**: the 249 assigned ISO 3166-1 codes and the European Union, from
+- ✅ **Country flags**: 250, the 249 assigned ISO 3166-1 codes and the European Union, from
   `country-flag-icons` (MIT), in colour and 3:2, each kept as its source publishes it (see
   [`TRADEMARKS.md`](./TRADEMARKS.md))
 
@@ -105,8 +99,9 @@ and is not built yet.
   named image
 - ✅ **`ref` as a regular prop** (React 19), no `forwardRef`
 - ✅ **`absoluteStrokeWidth`** keeps the visual stroke constant at every size
-- ✅ **One component per icon** (`LightningIcon`), generated from the drawing, from the root or
-  from `./icons/<name>`
+- ✅ **One component per drawing**, generated from it: `<Name>Icon` (`LightningIcon`),
+  `<Name>FilledIcon`, `<Name>SmIcon`, from the root or from `./icons/<name>`, and
+  `<Name>BrandIcon` from `./brands`
 
 ### 🧩 Developer Experience
 
@@ -118,34 +113,34 @@ and is not built yet.
   `noUncheckedIndexedAccess`; zero `any`
 - ✅ **A build pipeline**: SVGO normalisation, an icon lint over every SVG and metadata rule,
   one generated module per icon variant, raw SVG files, a sprite and merged metadata, with a
-  stale-copy check in CI; proven end to end on placeholder fixtures
-- 📋 **Per-icon modules** that tree-shake: the entries, their exports and their gates exist,
-  and fill with the drawings
+  stale-copy check in CI
+- ✅ **Per-icon modules that tree-shake**: one entry per icon, with a size gate per subpath
 
 ---
 
 ## 📦 Subpath Exports
 
-| Subpath           | Contents                                                                 | Status  |
-| ----------------- | ------------------------------------------------------------------------ | ------- |
-| `.`               | Every line and filled component, the `Icon` base and the types           | Partial |
-| `./runtime`       | The `Icon` base, `createIcon` and their types                            | Ready   |
-| `./meta`          | Typed metadata and the `IconName` union, with no React import            | Ready   |
-| `./icons/<name>`  | One icon's components, for consumers that avoid barrels                  | Partial |
-| `./brands`        | Brand components                                                         | Partial |
-| `./flags`         | Country flag components (`BrFlagIcon`), 16 px high by default            | Partial |
-| `./flags/<name>`  | One flag's component, for a dynamic import                               | Partial |
-| `./svg/*`         | Raw SVG files (`svg/line/<name>.svg`, `filled`, `sm`, `brands`, `flags`) | Partial |
-| `./sprite.svg`    | The SVG sprite, one `<symbol>` per drawing                               | Partial |
-| `./metadata.json` | Merged metadata of every icon, brand and flag                            | Partial |
+| Subpath           | Contents                                                                 | Status |
+| ----------------- | ------------------------------------------------------------------------ | ------ |
+| `.`               | Every line, filled and 16 px component, the `Icon` base and the types    | Ready  |
+| `./runtime`       | The `Icon` base, `createIcon` and their types                            | Ready  |
+| `./meta`          | Typed metadata and the `IconName` union, with no React import            | Ready  |
+| `./icons/<name>`  | One icon's components, for consumers that avoid barrels                  | Ready  |
+| `./brands`        | Brand components                                                         | Ready  |
+| `./flags`         | Country flag components (`BrFlagIcon`), 16 px high by default            | Ready  |
+| `./flags/<name>`  | One flag's component, for a dynamic import                               | Ready  |
+| `./svg/*`         | Raw SVG files (`svg/line/<name>.svg`, `filled`, `sm`, `brands`, `flags`) | Ready  |
+| `./sprite.svg`    | The SVG sprite, one `<symbol>` per drawing                               | Ready  |
+| `./metadata.json` | Merged metadata of every icon, brand and flag                            | Ready  |
 
 A flag takes the props of an icon without `color`, `strokeWidth` and `absoluteStrokeWidth`, since
 it keeps its own colours, and its `size` is its height: 16 by default, so a 3:2 flag is 24 by 16.
 For example `<BrFlagIcon size={24} title="Brazil" />` after
 `import { BrFlagIcon } from '@bymax-one/icons/flags'`.
 
-Every subpath is built, exported and checked on every pull request. **Partial** ones hold
-the drawings so far.
+Every subpath is built, exported and checked on every pull request, and holds the full set.
+The root does not export brand marks or flags; they come from `./brands` and `./flags`.
+The packed tarball holds 7,973 files: 1.40 MiB packed, 7.5 MiB unpacked.
 
 ```
 @bymax-one/icons ──► @bymax-one/icons/icons/<name> ──► @bymax-one/icons/runtime ──► react (peer)
@@ -191,7 +186,7 @@ npm install @bymax-one/icons react
 yarn add @bymax-one/icons react
 ```
 
-The grid is available now, from the React-free entry:
+The grid comes from the React-free entry:
 
 ```typescript
 import { ICON_GRID } from '@bymax-one/icons/meta'
@@ -219,6 +214,24 @@ export function Toolbar() {
 }
 ```
 
+The filled variant, the 16 px master and the brand mark have components of their own, named
+after the drawing; an alias has components too (`DeleteIcon` draws `trash`):
+
+```tsx
+import { LightningFilledIcon, LightningSmIcon } from '@bymax-one/icons'
+import { GithubBrandIcon } from '@bymax-one/icons/brands'
+
+export function Badges() {
+  return (
+    <>
+      <LightningFilledIcon size={24} title="Credits" />
+      <LightningSmIcon title="Credits" />
+      <GithubBrandIcon size={20} title="GitHub" />
+    </>
+  )
+}
+```
+
 An icon inside a labelled button is silent (`aria-hidden="true"`), because the button carries
 the name; `title` makes an icon a named image of its own. `createIcon` makes a component from
 any drawing held as data, the same way the generated icons are made:
@@ -241,7 +254,7 @@ and a set-wide default comes from CSS (`color`, `width` and `height` on a wrappe
 which needs no client boundary. A context provider for default size or colour is deliberately
 not offered.
 
-| Planned prop          | Default        | Description                                                  |
+| Prop                  | Default        | Description                                                  |
 | --------------------- | -------------- | ------------------------------------------------------------ |
 | `size`                | `24`           | Width and height; 16 on a 16 px master (`LightningSmIcon`)   |
 | `strokeWidth`         | `1.5`          | Stroke width in px at the icon's master size (24, or 16)     |
@@ -253,8 +266,9 @@ not offered.
 
 ## 📐 Design Language
 
-These rules are the identity of the set. They apply to every icon and are checked by lint
-where a machine can check them.
+These rules are the identity of the set. They apply to every icon. The runtime, the build
+pipeline and the preview workflow enforce them, and the icon lint checks the ones a machine
+can check.
 
 ### Grid
 
@@ -307,7 +321,7 @@ which Node 24 runs directly with its native type stripping.
 
 ```
           icons/line/<name>.svg          icons/meta/<name>.json
-          icons/filled/  sm/  brands/    (tags, categories, aliases)
+          icons/filled/ sm/ brands/ flags/ (tags, categories, aliases)
                        │                          │
                        ▼                          │
         ┌──────────────────────────────┐          │
@@ -325,7 +339,8 @@ which Node 24 runs directly with its native type stripping.
                                ▼
         ┌─────────────────────────────────────────────────┐
         │  Bundle  (tsup)                                 │
-        │  one entry per icon, root, runtime, meta, brands│
+        │  one entry per icon and per flag, and the root, │
+        │  runtime, meta, brands and flags entries        │
         │  ESM + CJS, .d.ts + .d.cts, siblings external   │
         └───────┬───────────────┬───────────────┬─────────┘
                 ▼               ▼               ▼
@@ -358,9 +373,8 @@ stale copy fails the build. The org package checks then run on the packed tarbal
 
 An icon set is markup that consumers render inside their own pages, so what matters is that
 nothing it ships can carry executable content or reach outside the drawing. The properties
-below are fixed by the specification; each is enforced from the phase that builds the part
-it protects. The runtime enforces the first and the third today; the pipeline and the
-preview do not exist yet.
+below are fixed by the specification; the runtime, the pipeline and the preview workflow
+enforce them.
 
 ### Elements are built from data
 
@@ -430,17 +444,22 @@ it is a regression everywhere at once. The suite is held to a bar beyond "the te
 
 - ✅ **100% line coverage**: statements, branches, functions and lines, enforced as a gate
   in both Jest configs
-- ✅ **Mutation testing at `break: 100`**: [Stryker](https://stryker-mutator.io/) runs on
-  every push to `main` and cold once a week; a surviving mutant fails the run
+- ✅ **Mutation testing at `break: 100`**: [Stryker](https://stryker-mutator.io/) runs after
+  every merge to `main`; a surviving mutant fails the run
 - ✅ **Published-artifact gates**: `check:exports` resolves the types the way each module
   system does, `check:runtime` loads every subpath from the packed tarball in ESM and
   CommonJS and renders a fixture icon from it through `react-dom/server` and as a Server
   Component, `check:published` compiles this README's snippets against `dist/`, and
   `check:api` requires an "Apply to a derived backend" CHANGELOG note when the built
   declarations change
-- ✅ **Bundle size budget** per subpath, measured on the brotli-compressed bundle. `./meta`
-  is budgeted per record: 24,843 bytes brotli for 559 icon and brand records, 43.2 bytes a
-  record above a fixed 707, against a limit of 52
+- ✅ **Bundle size budget** per subpath, measured on the brotli-compressed bundle. The
+  budgets are per drawing: the root costs 9.5 bytes brotli an icon over 1,298 icons (budget
+  12 above a base of 85, cap 28 kB); `./brands` 386.9 bytes a mark over 110 marks (budget
+  465 above a base of 5, cap 64 kB); `./flags` 2.9 bytes a flag over 250 flags (budget 3.5
+  above a base of 5, cap 8 kB, and no flag module above 2 kB); `./meta` 40.6 bytes a record
+  over 1,658 records (budget 52 above a base of 707, cap 112 kB). The runtime is 1.60 kB
+  (limit 1.75), the root re-exports 12.13 kB (limit 15.29), `./brands` 41.56 kB (limit
+  49.96), the `./flags` entry 0.72 kB (limit 0.86) and `./meta` 66.46 kB (limit 84.89)
 - ✅ **Every icon renders**: a smoke test driven by the generated metadata renders every
   component, aliases included, in jsdom and in `react-dom/server` and checks the default
   accessibility attributes
@@ -540,25 +559,40 @@ limited to `path`, `line`, `polyline`, `polygon`, `circle`, `ellipse` and `rect`
 
 Frozen data with no React import, generated from `icons/meta` and `categories.json`.
 
-| Export            | Type                                         | Contents                                                     |
-| ----------------- | -------------------------------------------- | ------------------------------------------------------------ |
-| `ICON_NAMES`      | `readonly IconName[]`                        | Every icon name, in name order                               |
-| `ICON_METADATA`   | `Readonly<Record<IconName, IconMetadata>>`   | Tags, categories, use cases, aliases, variants, sizes, since |
-| `BRAND_NAMES`     | `readonly BrandName[]`                       | Every brand name, in name order                              |
-| `BRAND_METADATA`  | `Readonly<Record<BrandName, BrandMetadata>>` | Title, source, guidelines, license, retrieval date, aliases  |
-| `FLAG_NAMES`      | `readonly FlagName[]`                        | Every flag name, in name order                               |
-| `FLAG_METADATA`   | `Readonly<Record<FlagName, FlagMetadata>>`   | Title, code, source, license, retrieval date, tags           |
-| `ICON_CATEGORIES` | `readonly IconCategory[]`                    | The categories with their titles                             |
+| Export            | Type                                         | Contents                                                            |
+| ----------------- | -------------------------------------------- | ------------------------------------------------------------------- |
+| `ICON_NAMES`      | `readonly IconName[]`                        | Every icon name, in name order                                      |
+| `ICON_METADATA`   | `Readonly<Record<IconName, IconMetadata>>`   | Label, tags, categories, use cases, aliases, variants, sizes, since |
+| `BRAND_NAMES`     | `readonly BrandName[]`                       | Every brand name, in name order                                     |
+| `BRAND_METADATA`  | `Readonly<Record<BrandName, BrandMetadata>>` | Title, source, guidelines, license, retrieval date, aliases         |
+| `FLAG_NAMES`      | `readonly FlagName[]`                        | Every flag name, in name order                                      |
+| `FLAG_METADATA`   | `Readonly<Record<FlagName, FlagMetadata>>`   | Title, code, source, license, retrieval date, tags                  |
+| `ICON_CATEGORIES` | `readonly IconCategory[]`                    | The categories with their titles                                    |
+
+Each `IconMetadata` record holds `label`, `tags`, `categories`, `useCases`, `aliases`,
+`variants`, `opticalSizes` and `since`. The `label` is the short name an icon most often takes
+when it stands alone, so it can be the `title`:
+
+```tsx
+import { LightningIcon } from '@bymax-one/icons'
+import { ICON_METADATA } from '@bymax-one/icons/meta'
+
+export const Credits = () => <LightningIcon title={ICON_METADATA.lightning.label} />
+```
+
+A `BrandMetadata` record holds the brand's `title`, `source`, `guidelines`, `license`,
+`retrievedAt`, `tags`, `aliases`, `multicolor` and `since`.
 
 `IconName`, `BrandName`, `FlagName` and `IconCategoryName` are the unions of the generated names,
 and `IconAlias`, `IconMetadata`, `BrandMetadata`, `FlagMetadata`, `IconCategory` and `IconVariant` the shapes
 of the records. `metadata.json` holds the same records.
 
-### Planned surface
+### Components
 
-The components (`LightningIcon`, `LightningFilledIcon`, `LightningSmIcon`,
-`GoogleBrandIcon`) are specified in the [Public API](./docs/technical_specification.md#8-public-api) section of
-the specification, generated by the pipeline, and documented here as each drawing ships.
+The components (`LightningIcon`, `LightningFilledIcon`, `LightningSmIcon`, `GithubBrandIcon`
+and `BrFlagIcon`) are generated by the pipeline from the drawings and specified in the
+[Public API](./docs/technical_specification.md#8-public-api) section of the specification.
+`ICON_NAMES`, `BRAND_NAMES` and `FLAG_NAMES` list every name.
 
 ---
 
@@ -566,7 +600,7 @@ the specification, generated by the pipeline, and documented here as each drawin
 
 1. **No icon font.** Fonts cost accessibility and tree-shaking; SVG covers every use.
 2. **No Vue, Svelte or Angular component packages.** The raw SVG output covers those
-   consumers. React Native components are planned as the `./native` subpath, after 1.0.
+   consumers. React Native components are planned as the `./native` subpath, in a minor release after 1.0.
 3. **No context provider for default size or colour.** CSS does the same without a client
    boundary.
 4. **No coloured or multi-colour icons**, except the country flags, which keep their own colours.

@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `wolf` icon, line variant: wolf, pack, howl, wild.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const WolfIcon = /* @__PURE__ */ createIcon('wolf', [
   [

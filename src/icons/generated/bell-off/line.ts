@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `bell-off` icon, line variant: bell, mute, silent, notifications.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const BellOffIcon = /* @__PURE__ */ createIcon('bell-off', [
   [

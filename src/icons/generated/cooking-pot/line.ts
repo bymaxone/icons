@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `cooking-pot` icon, line variant: cooking pot, stockpot, simmer, stew.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const CookingPotIcon = /* @__PURE__ */ createIcon('cooking-pot', [
   ['path', { d: 'M5.25 10.25h14v7.5c0 1.75-1.25 3-3 3h-8c-1.75 0-3-1.25-3-3z' }],

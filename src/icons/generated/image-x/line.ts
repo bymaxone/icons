@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `image-x` icon, line variant: image x, missing picture, failed upload, error.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const ImageXIcon = /* @__PURE__ */ createIcon('image-x', [
   [

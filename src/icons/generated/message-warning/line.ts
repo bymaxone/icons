@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `message-warning` icon, line variant: message warning, suspicious chat, report, caution.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const MessageWarningIcon = /* @__PURE__ */ createIcon('message-warning', [
   [

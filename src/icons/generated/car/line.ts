@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `car` icon, line variant: car, vehicle, drive, auto.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const CarIcon = /* @__PURE__ */ createIcon('car', [
   ['path', { d: 'm5.25 11.25 1.5-4c.25-1 .75-1.5 1.75-1.5H16c1 0 1.5.5 1.75 1.5l1.5 4' }],

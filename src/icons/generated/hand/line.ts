@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `hand` icon, line variant: pan, grab, drag canvas, palm.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const HandIcon = /* @__PURE__ */ createIcon('hand', [
   [

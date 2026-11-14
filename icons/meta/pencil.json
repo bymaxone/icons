@@ -6,5 +6,5 @@
   "useCases": ["Starts editing a field or an item", "Renames a project"],
   "variants": ["line", "sm"],
   "opticalSizes": [24, 16],
-  "since": "0.1.0"
+  "since": "1.0.0"
 }

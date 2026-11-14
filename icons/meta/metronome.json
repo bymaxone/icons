@@ -6,5 +6,5 @@
   "useCases": ["Sets the tempo of a piece", "Keeps the beat while practising"],
   "variants": ["line"],
   "opticalSizes": [24],
-  "since": "0.1.0"
+  "since": "1.0.0"
 }

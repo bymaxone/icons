@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `eye-search` icon, line variant: eye search, examine, look closer, zoom view.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const EyeSearchIcon = /* @__PURE__ */ createIcon('eye-search', [
   ['path', { d: 'M5.011 10.299a8.244 8.244 0 0 1 14.478 0' }],

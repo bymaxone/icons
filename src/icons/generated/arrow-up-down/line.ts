@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `arrow-up-down` icon, line variant: arrow up down, swap vertical, order, arrange, ascending, descending.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const ArrowUpDownIcon = /* @__PURE__ */ createIcon('arrow-up-down', [
   ['path', { d: 'M7.75 16.75v-13M4.922 6.578 7.75 3.75l2.828 2.828' }],

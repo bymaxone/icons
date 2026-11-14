@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `virus` icon, line variant: virus, germ, infection, malware.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const VirusIcon = /* @__PURE__ */ createIcon('virus', [
   ['circle', { cx: 12.25, cy: 12.25, r: 4.25 }],

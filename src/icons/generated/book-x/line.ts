@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `book-x` icon, line variant: book x, canceled title, declined reading, removed volume.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const BookXIcon = /* @__PURE__ */ createIcon('book-x', [
   [

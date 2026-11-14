@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `tv` icon, line variant: tv, television, screen, broadcast.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const TvIcon = /* @__PURE__ */ createIcon('tv', [
   [

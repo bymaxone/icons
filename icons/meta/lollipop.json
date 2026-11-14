@@ -6,5 +6,5 @@
   "useCases": ["Marks a sweet for children", "Shows a candy on a stick"],
   "variants": ["line"],
   "opticalSizes": [24],
-  "since": "0.1.0"
+  "since": "1.0.0"
 }

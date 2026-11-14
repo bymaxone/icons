@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `pause` icon, filled variant: pause, hold, media control, bars.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const PauseFilledIcon = /* @__PURE__ */ createIcon(
   'pause-filled',

@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `tomato` icon, line variant: tomato, red, salad, sauce.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const TomatoIcon = /* @__PURE__ */ createIcon('tomato', [
   ['circle', { cx: 12.25, cy: 13.25, r: 7 }],

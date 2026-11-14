@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `bear` icon, line variant: bear, grizzly, forest, wildlife.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const BearIcon = /* @__PURE__ */ createIcon('bear', [
   ['path', { d: 'M18.25 13.25a6 6 0 1 1-12 0 6 6 0 0 1 12 0' }],

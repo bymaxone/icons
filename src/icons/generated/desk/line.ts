@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `desk` icon, line variant: desk, table, workspace, office.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const DeskIcon = /* @__PURE__ */ createIcon('desk', [
   ['path', { d: 'M3.25 9.25h18' }],

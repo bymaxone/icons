@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `variable` icon, line variant: variable, value, placeholder, x.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const VariableIcon = /* @__PURE__ */ createIcon('variable', [
   ['path', { d: 'M7.25 4.75q-3 3-3 7.5c0 4.5 1 5.5 3 7.5m10-15q3 3 3 7.5c0 4.5-1 5.5-3 7.5' }],

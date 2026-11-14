@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `wall` icon, line variant: wall, bricks, barrier, construction.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const WallIcon = /* @__PURE__ */ createIcon('wall', [
   [

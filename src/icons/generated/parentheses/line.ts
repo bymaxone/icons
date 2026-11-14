@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `parentheses` icon, line variant: parentheses, brackets, round brackets, group.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const ParenthesesIcon = /* @__PURE__ */ createIcon('parentheses', [
   [

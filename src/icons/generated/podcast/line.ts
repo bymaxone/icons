@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `podcast` icon, line variant: podcast, microphone, audio, show.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const PodcastIcon = /* @__PURE__ */ createIcon('podcast', [
   ['path', { d: 'M12.25 8.5c1.5 0 2 .5 2 2v2c0 1.5-.5 2-2 2s-2-.5-2-2v-2c0-1.5.5-2 2-2' }],

@@ -6,5 +6,5 @@
   "useCases": ["Confirms that a URL works", "Marks a verified hyperlink"],
   "variants": ["line"],
   "opticalSizes": [24],
-  "since": "0.1.0"
+  "since": "1.0.0"
 }

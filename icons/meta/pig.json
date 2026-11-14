@@ -6,5 +6,5 @@
   "useCases": ["Lists a farm animal", "Marks a pork product"],
   "variants": ["line"],
   "opticalSizes": [24],
-  "since": "0.1.0"
+  "since": "1.0.0"
 }

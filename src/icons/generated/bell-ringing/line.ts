@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `bell-ringing` icon, line variant: bell ringing, ring, new alert, alarm.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const BellRingingIcon = /* @__PURE__ */ createIcon('bell-ringing', [
   [

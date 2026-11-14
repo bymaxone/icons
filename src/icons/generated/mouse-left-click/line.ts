@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `mouse-left-click` icon, line variant: mouse left click, click, primary button, pointer.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const MouseLeftClickIcon = /* @__PURE__ */ createIcon('mouse-left-click', [
   [

@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `arrow-right-square` icon, line variant: arrow right square, right, next, boxed arrow.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const ArrowRightSquareIcon = /* @__PURE__ */ createIcon('arrow-right-square', [
   [

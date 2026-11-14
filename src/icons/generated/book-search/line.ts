@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `book-search` icon, line variant: book search, library lookup, search titles, browse catalog.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const BookSearchIcon = /* @__PURE__ */ createIcon('book-search', [
   [

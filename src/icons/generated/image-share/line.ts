@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `image-share` icon, line variant: image share, send picture, post photo, distribute.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const ImageShareIcon = /* @__PURE__ */ createIcon('image-share', [
   [

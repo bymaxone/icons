@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `worm` icon, line variant: worm, soil, crawl, garden.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const WormIcon = /* @__PURE__ */ createIcon('worm', [
   [

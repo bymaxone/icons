@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `helicopter` icon, line variant: helicopter, flight, aviation, rescue.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const HelicopterIcon = /* @__PURE__ */ createIcon('helicopter', [
   ['path', { d: 'M3.75 4.75h15' }],

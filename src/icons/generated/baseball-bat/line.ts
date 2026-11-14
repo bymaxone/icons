@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `baseball-bat` icon, line variant: baseball bat, slugger, batter, swing.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const BaseballBatIcon = /* @__PURE__ */ createIcon('baseball-bat', [
   [

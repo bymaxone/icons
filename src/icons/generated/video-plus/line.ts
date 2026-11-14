@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `video-plus` icon, line variant: video plus, upload video, new clip, create.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const VideoPlusIcon = /* @__PURE__ */ createIcon('video-plus', [
   [

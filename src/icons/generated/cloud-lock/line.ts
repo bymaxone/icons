@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `cloud-lock` icon, line variant: cloud lock, private storage, secure, encrypted.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const CloudLockIcon = /* @__PURE__ */ createIcon('cloud-lock', [
   [

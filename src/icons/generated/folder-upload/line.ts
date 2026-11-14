@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `folder-upload` icon, line variant: folder upload, send folder, import, up.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const FolderUploadIcon = /* @__PURE__ */ createIcon('folder-upload', [
   [

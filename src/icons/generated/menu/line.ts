@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `menu` icon, line variant: hamburger, navigation, lines, open menu.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const MenuIcon = /* @__PURE__ */ createIcon('menu', [
   ['path', { d: 'M4.75 6.25h15' }],

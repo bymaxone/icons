@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `help` icon, line variant: question, support, faq, how to.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const HelpIcon = /* @__PURE__ */ createIcon('help', [
   ['circle', { cx: 12.25, cy: 12.25, r: 9 }],

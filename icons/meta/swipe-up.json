@@ -6,5 +6,5 @@
   "useCases": ["Shows a swipe upward", "Opens a sheet with a gesture"],
   "variants": ["line"],
   "opticalSizes": [24],
-  "since": "0.1.0"
+  "since": "1.0.0"
 }

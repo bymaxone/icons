@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `haze` icon, line variant: haze, smog, low visibility, weather.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const HazeIcon = /* @__PURE__ */ createIcon('haze', [
   ['path', { d: 'M6.25 13.25a6 6 0 0 1 12 0' }],

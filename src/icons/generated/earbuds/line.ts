@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `earbuds` icon, line variant: earbuds, wireless, listen, audio.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const EarbudsIcon = /* @__PURE__ */ createIcon('earbuds', [
   [

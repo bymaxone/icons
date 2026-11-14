@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `avocado` icon, line variant: avocado, fruit, guacamole, healthy.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const AvocadoIcon = /* @__PURE__ */ createIcon('avocado', [
   [

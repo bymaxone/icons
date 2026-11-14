@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `presentation` icon, line variant: presentation, slides, board, pitch.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const PresentationIcon = /* @__PURE__ */ createIcon('presentation', [
   ['path', { d: 'M3.25 4.25h18' }],

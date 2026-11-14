@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `remote-control` icon, line variant: remote control, tv remote, buttons, device.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const RemoteControlIcon = /* @__PURE__ */ createIcon('remote-control', [
   [

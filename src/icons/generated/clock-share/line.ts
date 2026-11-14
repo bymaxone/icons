@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `clock-share` icon, line variant: clock share, send time, shared timetable, publish hours.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const ClockShareIcon = /* @__PURE__ */ createIcon('clock-share', [
   [

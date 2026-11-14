@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `corner-down-left` icon, line variant: corner, arrow, down, left.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const CornerDownLeftIcon = /* @__PURE__ */ createIcon('corner-down-left', [
   ['path', { d: 'M19.75 4.75v6.5c0 2.5-1 3.5-3.5 3.5H4.75' }],

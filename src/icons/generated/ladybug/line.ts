@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `ladybug` icon, line variant: ladybug, beetle, spots, garden.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const LadybugIcon = /* @__PURE__ */ createIcon('ladybug', [
   ['path', { d: 'M5.25 15.25c0-4.25 3.25-7.5 7-7.5s7 3.25 7 7.5-3 5.5-7 5.5-7-1.25-7-5.5' }],

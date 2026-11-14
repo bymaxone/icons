@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `cactus` icon, line variant: cactus, desert, plant, succulent.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const CactusIcon = /* @__PURE__ */ createIcon('cactus', [
   ['path', { d: 'M9.75 21.25V5.75a2.5 2.5 0 0 1 5 0v15.5' }],

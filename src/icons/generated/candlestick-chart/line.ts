@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `candlestick-chart` icon, line variant: candlestick chart, trading, market, price.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const CandlestickChartIcon = /* @__PURE__ */ createIcon('candlestick-chart', [
   ['path', { d: 'M6.25 3.75v3.5m0 8v5m6-14v3.5m0 4.5v4m6-15.5v3m0 8.5v3' }],

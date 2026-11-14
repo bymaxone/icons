@@ -6,5 +6,5 @@
   "useCases": ["Removes an event", "Takes a day off the schedule"],
   "variants": ["line"],
   "opticalSizes": [24],
-  "since": "0.1.0"
+  "since": "1.0.0"
 }

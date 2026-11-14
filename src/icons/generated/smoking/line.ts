@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `smoking` icon, line variant: smoking, cigarette, smoke, area.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const SmokingIcon = /* @__PURE__ */ createIcon('smoking', [
   [

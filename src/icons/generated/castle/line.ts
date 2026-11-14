@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `castle` icon, line variant: castle, fortress, medieval, landmark.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const CastleIcon = /* @__PURE__ */ createIcon('castle', [
   ['path', { d: 'M4.25 20.75V7.25h3v2.5h2v-2.5h6v2.5h2v-2.5h3v13.5z' }],

@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `close` icon, sm variant: x, cross, dismiss, cancel.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const CloseSmIcon = /* @__PURE__ */ createIcon(
   'close-sm',

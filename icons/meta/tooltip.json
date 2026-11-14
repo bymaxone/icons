@@ -6,5 +6,5 @@
   "useCases": ["Shows a hint on hover", "Explains a control in a small bubble"],
   "variants": ["line"],
   "opticalSizes": [24],
-  "since": "0.1.0"
+  "since": "1.0.0"
 }

@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `archive-arrow-down` icon, line variant: archive arrow down, retrieve, restore, box.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const ArchiveArrowDownIcon = /* @__PURE__ */ createIcon('archive-arrow-down', [
   [

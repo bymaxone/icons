@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `card-plus` icon, line variant: card plus, add card, new payment, credit.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const CardPlusIcon = /* @__PURE__ */ createIcon('card-plus', [
   [

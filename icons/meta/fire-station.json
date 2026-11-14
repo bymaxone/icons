@@ -6,5 +6,5 @@
   "useCases": ["Marks the home of a fire brigade", "Shows an emergency service building"],
   "variants": ["line"],
   "opticalSizes": [24],
-  "since": "0.1.0"
+  "since": "1.0.0"
 }

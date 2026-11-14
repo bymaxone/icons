@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `rectangle` icon, line variant: rectangle, shape, box, geometry.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const RectangleIcon = /* @__PURE__ */ createIcon('rectangle', [
   [
