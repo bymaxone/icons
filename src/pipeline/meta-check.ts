@@ -7,6 +7,7 @@
  * @layer Pipeline
  */
 
+import { britishWords } from './british-spellings.ts'
 import type { IconSet } from './icon-set.ts'
 import { fold } from './site-search.ts'
 
@@ -26,13 +27,21 @@ const TYPE_WORD = /(?:^| )(filled|sm|16 ?px)(?: |$)/
 /** Where the allowlist is named in the messages, from the repository root. */
 export const META_ALLOWLIST = 'scripts/meta-allowlist.json'
 
+/** Where the review manifest of the renamed icons is named in the messages. */
+export const RENAMES_REVIEWED = 'scripts/renames-reviewed.json'
+
 /** The part of an icon's metadata the check reads. */
 export interface MetaRecord {
   readonly name: string
+  /** Whether the icon holds a deprecated alias whose reason says it was renamed to this icon. */
+  readonly renamed: boolean
   readonly label: string
   readonly tags: readonly string[]
   readonly useCases: readonly string[]
 }
+
+/** The renamed icons whose categories were reviewed against the drawing, each with the verdict. */
+export type ReviewedRenames = Readonly<Record<string, string>>
 
 /** What the allowlist records for a label: the exact icons that may share it, and why. */
 export interface AllowedLabel {
@@ -52,6 +61,9 @@ export interface AllowedLabel {
 export function metaRecords(set: IconSet): MetaRecord[] {
   return set.icons.map(({ name, meta }) => ({
     name,
+    renamed: (meta.aliases ?? []).some(
+      (alias) => alias.deprecated && alias.deprecationReason?.startsWith('Renamed to') === true
+    ),
     label: meta.label,
     tags: meta.tags,
     useCases: meta.useCases
@@ -169,19 +181,70 @@ function useCaseIssues(records: readonly MetaRecord[]): string[] {
 }
 
 /**
+ * The problems of the rename review: an icon that was renamed keeps the categories of its old
+ * name until someone checks them against the drawing, so it has to be listed with the verdict;
+ * an entry for an icon that is not renamed, or with no verdict, is stale.
+ */
+function renameIssues(records: readonly MetaRecord[], reviewed: ReviewedRenames): string[] {
+  const renamed = new Set(records.filter((record) => record.renamed).map(({ name }) => name))
+  const unreviewed = [...renamed]
+    .filter((name) => !Object.hasOwn(reviewed, name))
+    .map(
+      (name) =>
+        `${name}: renamed, but its categories were not reviewed against the drawing. Check them, then list the icon in ${RENAMES_REVIEWED} with the verdict.`
+    )
+  const stale = Object.entries(reviewed).flatMap(([name, verdict]) => [
+    ...(renamed.has(name)
+      ? []
+      : [`${name}: listed in ${RENAMES_REVIEWED} but not a renamed icon. Remove its entry.`]),
+    ...(verdict.trim() === ''
+      ? [`${name}: listed in ${RENAMES_REVIEWED} without a verdict. Write what was decided.`]
+      : [])
+  ])
+  return [...unreviewed, ...stale]
+}
+
+/** The label, tags and use cases that hold a British spelling, one message for each word. */
+function spellingIssues(records: readonly MetaRecord[]): string[] {
+  return records.flatMap(({ name, label, tags, useCases }) =>
+    [
+      ['label', [label]],
+      ['tag', tags],
+      ['use case', useCases]
+    ].flatMap(([field, texts]) =>
+      (texts as readonly string[]).flatMap((text) =>
+        britishWords(text).map(
+          ({ british, american }) =>
+            `${name}: ${field} ${JSON.stringify(text)}: '${british}' is British; write '${american}'.`
+        )
+      )
+    )
+  )
+}
+
+/**
  * Compares the metadata of the icons with the rules, so a record that was overwritten or
  * copied fails: a label that is a placeholder, a label shared by icons the allowlist does not
  * list as a group, an entry whose group changed, has fewer than two icons or has no
  * justification, an empty `useCases`, a `useCases` list that another icon has too and a tag that
- * holds a type word.
+ * holds a type word, a renamed icon whose categories were not reviewed, and a British spelling in
+ * a label, tag or use case.
  *
  * @param records - The records of the icons the check covers.
  * @param allowlist - The groups that may share a label, by label.
+ * @param reviewed - The renamed icons whose categories were reviewed, with the verdict.
  * @returns One message per problem.
  */
 export function metaIssues(
   records: readonly MetaRecord[],
-  allowlist: Readonly<Record<string, AllowedLabel>>
+  allowlist: Readonly<Record<string, AllowedLabel>>,
+  reviewed: ReviewedRenames = {}
 ): string[] {
-  return [...labelIssues(records, allowlist), ...useCaseIssues(records), ...tagIssues(records)]
+  return [
+    ...labelIssues(records, allowlist),
+    ...useCaseIssues(records),
+    ...tagIssues(records),
+    ...renameIssues(records, reviewed),
+    ...spellingIssues(records)
+  ]
 }

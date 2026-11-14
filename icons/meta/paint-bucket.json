@@ -3,7 +3,7 @@
   "label": "Paint bucket",
   "tags": ["paint bucket", "fill", "color", "flood fill"],
   "categories": ["editing"],
-  "useCases": ["Fills an area with colour", "Changes the colour of a shape"],
+  "useCases": ["Fills an area with color", "Changes the color of a shape"],
   "aliases": [
     {
       "name": "paint",

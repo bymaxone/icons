@@ -3,7 +3,7 @@
   "label": "Favorite folder",
   "tags": ["folder heart", "favorite folder", "liked", "loved"],
   "categories": ["files"],
-  "useCases": ["Marks a folder as a favourite", "Collects the items someone loves"],
+  "useCases": ["Marks a folder as a favorite", "Collects the items someone loves"],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Speedometer",
   "tags": ["speedometer", "gauge", "dial", "limit", "budget", "cap"],
-  "categories": ["commerce"],
+  "categories": ["data", "commerce", "transport"],
   "useCases": ["Sets a monthly spending cap", "Warns when the cap is near"],
   "aliases": [
     {

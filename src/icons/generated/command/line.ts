@@ -7,7 +7,7 @@
 import { createIcon } from '@bymax-one/icons/runtime'
 
 /**
- * The `command` icon, line variant: command key, shortcut, cmd, place of interest.
+ * The `command` icon, line variant: command key, shortcut, cmd, cmd key.
  *
  * @since 0.1.0
  */

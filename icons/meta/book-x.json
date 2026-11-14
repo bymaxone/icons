@@ -1,7 +1,7 @@
 {
   "$schema": "../../schemas/icon.schema.json",
   "label": "Book rejected",
-  "tags": ["book x", "cancelled title", "declined reading", "removed volume"],
+  "tags": ["book x", "canceled title", "declined reading", "removed volume"],
   "categories": ["files", "science"],
   "useCases": ["Marks a title as declined", "Cancels a reading assignment"],
   "variants": ["line"],

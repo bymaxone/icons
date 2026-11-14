@@ -3,7 +3,7 @@
   "label": "Align center",
   "tags": ["center", "alignment", "text align", "justify"],
   "categories": ["text"],
-  "useCases": ["Centers the selected text", "Aligns layers on their centre"],
+  "useCases": ["Centers the selected text", "Aligns layers on their center"],
   "aliases": [
     {
       "name": "text-align-center",

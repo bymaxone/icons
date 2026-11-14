@@ -3,7 +3,7 @@
   "label": "Text color",
   "tags": ["text color", "font color", "letter a", "underline"],
   "categories": ["text", "editing"],
-  "useCases": ["Changes the colour of the letters", "Picks a font colour"],
+  "useCases": ["Changes the color of the letters", "Picks a font color"],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Paint roller",
   "tags": ["paint roller", "roller", "paint", "style"],
-  "categories": ["ai", "tools"],
+  "categories": ["editing", "tools"],
   "useCases": ["Picks a visual style", "Applies a style preset"],
   "aliases": [
     {

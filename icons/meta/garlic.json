@@ -3,7 +3,7 @@
   "label": "Garlic",
   "tags": ["garlic", "clove", "bulb", "seasoning"],
   "categories": ["food"],
-  "useCases": ["Lists a seasoning", "Marks a strong flavour"],
+  "useCases": ["Lists a seasoning", "Marks a strong flavor"],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

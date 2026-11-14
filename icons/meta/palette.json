@@ -1,9 +1,9 @@
 {
   "$schema": "../../schemas/icon.schema.json",
   "label": "Palette",
-  "tags": ["colours", "paint", "theme", "swatches"],
+  "tags": ["colors", "paint", "theme", "swatches"],
   "categories": ["editing"],
-  "useCases": ["Opens the colour picker", "Changes the accent colour"],
+  "useCases": ["Opens the color picker", "Changes the accent color"],
   "aliases": [
     {
       "name": "colors",

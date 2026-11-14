@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Stairs",
   "tags": ["stairs", "steps", "levels", "tier", "subscription", "pricing"],
-  "categories": ["commerce"],
+  "categories": ["household", "commerce"],
   "useCases": ["Links to the plans", "Shows the current plan"],
   "aliases": [
     {

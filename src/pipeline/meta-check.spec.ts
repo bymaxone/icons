@@ -12,6 +12,7 @@ import { lintSources } from './lint.ts'
 import {
   META_ALLOWLIST,
   PLACEHOLDER_LABELS,
+  RENAMES_REVIEWED,
   TYPE_WORDS,
   metaIssues,
   metaRecords
@@ -23,9 +24,11 @@ const record = (
   name: string,
   label: string,
   useCases?: string[],
-  tags: string[] = []
+  tags: string[] = [],
+  renamed = false
 ): MetaRecord => ({
   name,
+  renamed,
   label,
   tags,
   useCases: useCases ?? [`Use of ${name}`]
@@ -63,7 +66,13 @@ describe('metaRecords', () => {
     expect(issues).toEqual([])
     expect(set.brands).toHaveLength(1)
     expect(metaRecords(set)).toStrictEqual([
-      { name: 'ring', label: 'Ring', tags: ['circle'], useCases: ['First use', 'Second use'] }
+      {
+        name: 'ring',
+        renamed: false,
+        label: 'Ring',
+        tags: ['circle'],
+        useCases: ['First use', 'Second use']
+      }
     ])
   })
 })
@@ -272,5 +281,98 @@ describe('metaIssues on tags', () => {
     /** Scenario: "Filled: the selected file" is a use case of the filled drawing and is not a tag. */
     const records = [record('file', 'File', ['Filled: the selected file', 'Opens a file'])]
     expect(metaIssues(records, {})).toStrictEqual([])
+  })
+})
+
+describe('metaRecords on renames', () => {
+  it.each([
+    ['a deprecated alias whose reason says renamed', true, 'Renamed to ring, the object.', true],
+    ['a deprecated alias with another reason', true, 'Replaced by a new design.', false],
+    ['a deprecated alias with no reason', true, undefined, false],
+    ['an alias that is not deprecated', false, undefined, false]
+  ])('reads %s', (_label, deprecated, reason, renamed) => {
+    /** Scenario: only a deprecated alias whose reason starts with "Renamed to" marks a rename. */
+    const alias = deprecated
+      ? {
+          name: 'old',
+          deprecated,
+          toBeRemovedInVersion: '2.0.0',
+          ...(reason === undefined ? {} : { deprecationReason: reason })
+        }
+      : { name: 'old', deprecated }
+    const { set } = lintSources(
+      sources({
+        line: { 'ring.svg': drawing('line', CIRCLE) },
+        meta: { 'ring.json': iconMeta({ aliases: [alias] }) }
+      })
+    )
+    expect(metaRecords(set).map((entry) => entry.renamed)).toStrictEqual([renamed])
+  })
+
+  it('reads an icon with no aliases as not renamed', () => {
+    /** Scenario: the `aliases` field is optional. */
+    const { set } = lintSources(
+      sources({
+        line: { 'ring.svg': drawing('line', CIRCLE) },
+        meta: { 'ring.json': iconMeta() }
+      })
+    )
+    expect(metaRecords(set).map((entry) => entry.renamed)).toStrictEqual([false])
+  })
+})
+
+describe('metaIssues on renames', () => {
+  const renamed = record('stairs', 'Stairs', undefined, [], true)
+
+  it('fails a renamed icon whose categories were not reviewed, and says where to record it', () => {
+    /** Scenario: the icon is renamed and the manifest is empty. */
+    expect(metaIssues([renamed], {}, {})).toStrictEqual([
+      `stairs: renamed, but its categories were not reviewed against the drawing. Check them, then list the icon in ${RENAMES_REVIEWED} with the verdict.`
+    ])
+  })
+
+  it('passes a renamed icon the manifest lists with a verdict', () => {
+    /** Scenario: reviewed. */
+    expect(metaIssues([renamed], {}, { stairs: 'household, commerce' })).toStrictEqual([])
+  })
+
+  it('fails an entry for an icon that is not renamed, or that no longer exists', () => {
+    /** Scenario: the manifest lists `ring` (never renamed) and `gone` (not in the set). */
+    expect(metaIssues([record('ring', 'Ring')], {}, { ring: 'fine', gone: 'fine' })).toStrictEqual([
+      `ring: listed in ${RENAMES_REVIEWED} but not a renamed icon. Remove its entry.`,
+      `gone: listed in ${RENAMES_REVIEWED} but not a renamed icon. Remove its entry.`
+    ])
+  })
+
+  it('fails an entry with a blank verdict', () => {
+    /** Scenario: the icon is listed but nothing was decided. */
+    expect(metaIssues([renamed], {}, { stairs: '  ' })).toStrictEqual([
+      `stairs: listed in ${RENAMES_REVIEWED} without a verdict. Write what was decided.`
+    ])
+  })
+})
+
+describe('metaIssues on spelling', () => {
+  it('names the field, the text and the American form for a label, a tag and a use case', () => {
+    /** Scenario: one British word in each field is reported with the exact message. */
+    expect(
+      metaIssues([record('a', 'Colour wheel', ['Marks a favourite'], ['grey'])], {})
+    ).toStrictEqual([
+      `a: label "Colour wheel": 'colour' is British; write 'color'.`,
+      `a: tag "grey": 'grey' is British; write 'gray'.`,
+      `a: use case "Marks a favourite": 'favourite' is British; write 'favorite'.`
+    ])
+  })
+
+  it('reports each British word of a text', () => {
+    /** Scenario: two words in one use case give two messages. */
+    expect(metaIssues([record('a', 'Alpha', ['Colour and centre'])], {})).toHaveLength(2)
+  })
+
+  it('passes American text', () => {
+    /** Scenario: the American spellings raise nothing. */
+    expect(
+      metaIssues([record('a', 'Color wheel', ['Marks a favorite'], ['gray'])], {})
+    ).toStrictEqual([])
   })
 })

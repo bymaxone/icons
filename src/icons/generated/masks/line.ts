@@ -7,7 +7,7 @@
 import { createIcon } from '@bymax-one/icons/runtime'
 
 /**
- * The `masks` icon, line variant: masks, theatre, drama, comedy.
+ * The `masks` icon, line variant: masks, theater, drama, comedy.
  *
  * @since 0.1.0
  */

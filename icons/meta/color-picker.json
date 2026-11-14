@@ -3,7 +3,7 @@
   "label": "Color picker",
   "tags": ["color picker", "eyedropper", "sample", "pipette"],
   "categories": ["editing"],
-  "useCases": ["Samples a colour from the screen", "Copies the shade of a pixel"],
+  "useCases": ["Samples a color from the screen", "Copies the shade of a pixel"],
   "aliases": [
     {
       "name": "eyedropper",

@@ -7,7 +7,7 @@
 import { createIcon } from '@bymax-one/icons/runtime'
 
 /**
- * The `droplet` icon, line variant: droplet, drop, water, colour, theme colour, tint.
+ * The `droplet` icon, line variant: droplet, drop, water, color, theme color, tint.
  *
  * @since 0.1.0
  */

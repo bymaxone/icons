@@ -7,7 +7,7 @@
 import { createIcon } from '@bymax-one/icons/runtime'
 
 /**
- * The `video-x` icon, line variant: video x, playback error, cancelled clip, rejected video.
+ * The `video-x` icon, line variant: video x, playback error, canceled clip, rejected video.
  *
  * @since 0.1.0
  */

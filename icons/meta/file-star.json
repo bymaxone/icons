@@ -3,7 +3,7 @@
   "label": "Starred file",
   "tags": ["file star", "favorite file", "important", "pinned"],
   "categories": ["files"],
-  "useCases": ["Marks a file as a favourite", "Pins an important document"],
+  "useCases": ["Marks a file as a favorite", "Pins an important document"],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

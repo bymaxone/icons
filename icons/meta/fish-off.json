@@ -1,7 +1,7 @@
 {
   "$schema": "../../schemas/icon.schema.json",
   "label": "Fish free",
-  "tags": ["fish free", "no seafood", "allergen", "pescatarian no"],
+  "tags": ["fish free", "no seafood", "allergen"],
   "categories": ["nature", "food"],
   "useCases": ["Labels a dish without fish", "Flags a meal free of seafood"],
   "variants": ["line"],
