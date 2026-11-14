@@ -10,7 +10,7 @@ Measured on the files of `icons/brands` when the batches closed:
 | -------------- | ----- |
 | `icons/brands` | 110   |
 
-The first 14 came with B4a. B7 added 96 in three batches: developer and cloud tools, AI providers and design tools (53); social networks, messaging and streaming (22); and payments, operating systems, browsers and stores (21). `mysql`, `go`, `nextdoor`, `zoom`, `hbo`, `ios`, `macos`, `visa`, `ebay`, `samsungpay`, `apple-pay` and `google-pay` are wordmarks, tagged so, meant for sizes larger than 24 px.
+The first 14 came with B4a. B7 added 96 in three batches: developer and cloud tools, AI providers and design tools (53); social networks, messaging and streaming (22); and payments, operating systems, browsers and stores (21). `mysql`, `go`, `nextdoor`, `zoom`, `hbo`, `kakaotalk`, `line-messenger`, `ios`, `macos`, `visa`, `ebay`, `samsungpay`, `apple-pay` and `google-pay` are wordmarks, tagged so, meant for sizes larger than 24 px.
 
 ## What was left out, and why
 
@@ -60,4 +60,6 @@ Searches on the owner's own site and the web found no page about the use of the 
 
 ## After 1.0
 
-A brand returns when its blocker lifts: the owner publishes a guidelines page, a page that could not be read is read, a licence is settled or the owner of a mark is confirmed. Each return carries its own evidence row. `google-color` waits for an official solid-colour asset, as spec section 5 records.
+A brand returns when its blocker lifts: the owner publishes a guidelines page, a page that could not be read is read, a licence is settled or the owner of a mark is confirmed. Each return carries its own evidence row.
+
+Known item: the formatter of the sources (`pnpm generate`) is not idempotent on a raw file, which takes up to three passes to reach the form `pnpm check:generated` accepts. A committed tree is at that fixed point, so no gate fails; the import of the marks runs `pnpm generate` until it prints nothing. Making the formatter idempotent is a change for after 1.0. `google-color` waits for an official solid-colour asset, as spec section 5 records.
