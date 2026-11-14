@@ -95,3 +95,51 @@ export function rootLimit(icons: number): number {
     Math.max(ROOT_FLOOR_BYTES, ROOT_BASE_BYTES + ROOT_ICON_BYTES * icons)
   )
 }
+
+/**
+ * The brotli bytes of the `./brands` entry with no mark: the runtime import and the empty
+ * export, measured on a build that holds no brand mark.
+ */
+export const BRANDS_BASE_BYTES = 5
+
+/**
+ * The most brotli bytes one brand mark may cost the `./brands` entry, which holds the owner's
+ * path data of every mark. The tree measures 333.7 bytes a mark, so this leaves about 20% for
+ * a mark with a longer path.
+ */
+export const BRANDS_MARK_BYTES = 400
+
+/** The most brotli bytes the `./brands` entry may reach whatever the marks, room for about 160. */
+export const BRANDS_CAP_BYTES = 64 * 1024
+
+/**
+ * The least brotli bytes the `./brands` entry may be allowed, for a package of a handful of
+ * marks, which a single long path can fill.
+ */
+export const BRANDS_FLOOR_BYTES = 5 * 1024
+
+/**
+ * The brotli bytes one brand mark costs the `./brands` entry: what it weighs above its base,
+ * over the marks.
+ *
+ * @param brotli - The brotli bytes of the `./brands` entry.
+ * @param marks - The brand marks the entry holds.
+ * @returns The bytes a mark costs; an entry with no mark is counted as one.
+ */
+export function markCost(brotli: number, marks: number): number {
+  return (brotli - BRANDS_BASE_BYTES) / Math.max(marks, 1)
+}
+
+/**
+ * The most brotli bytes the `./brands` entry may weigh with this many marks: the base and the
+ * per-mark budget for each, within the floor and the cap.
+ *
+ * @param marks - The brand marks the entry holds.
+ * @returns The limit in bytes.
+ */
+export function brandsLimit(marks: number): number {
+  return Math.min(
+    BRANDS_CAP_BYTES,
+    Math.max(BRANDS_FLOOR_BYTES, BRANDS_BASE_BYTES + BRANDS_MARK_BYTES * marks)
+  )
+}

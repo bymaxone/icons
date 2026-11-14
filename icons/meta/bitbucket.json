@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/brand.schema.json",
+  "title": "Bitbucket",
+  "source": "https://github.com/simple-icons/simple-icons/blob/16.37.0/icons/bitbucket.svg",
+  "guidelines": "https://atlassian.design/foundations/logos",
+  "license": "CC0-1.0",
+  "retrievedAt": "2026-11-14",
+  "tags": ["git", "repository", "code hosting", "atlassian"],
+  "since": "1.0.0"
+}

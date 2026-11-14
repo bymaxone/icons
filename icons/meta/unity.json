@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/brand.schema.json",
+  "title": "Unity",
+  "source": "https://github.com/simple-icons/simple-icons/blob/16.37.0/icons/unity.svg",
+  "guidelines": "https://unity.com/legal/branding-trademarks",
+  "license": "CC0-1.0",
+  "retrievedAt": "2026-11-14",
+  "tags": ["game engine", "3d", "games", "real-time"],
+  "since": "1.0.0"
+}

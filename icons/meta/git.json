@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/brand.schema.json",
+  "title": "Git",
+  "source": "https://github.com/simple-icons/simple-icons/blob/16.37.0/icons/git.svg",
+  "guidelines": "https://git-scm.com/community/logos",
+  "license": "CC-BY-3.0",
+  "retrievedAt": "2026-11-14",
+  "tags": ["version control", "vcs", "commit", "branch"],
+  "since": "1.0.0"
+}

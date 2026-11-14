@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/brand.schema.json",
+  "title": "Claude",
+  "source": "https://github.com/simple-icons/simple-icons/blob/16.37.0/icons/claude.svg",
+  "guidelines": "https://www.anthropic.com/legal/trademark-guidelines",
+  "license": "CC0-1.0",
+  "retrievedAt": "2026-11-14",
+  "tags": ["chatbot", "assistant", "llm", "ai"],
+  "since": "1.0.0"
+}

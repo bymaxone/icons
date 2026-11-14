@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/brand.schema.json",
+  "title": "Vercel",
+  "source": "https://github.com/simple-icons/simple-icons/blob/16.37.0/icons/vercel.svg",
+  "guidelines": "https://vercel.com/geist/brands",
+  "license": "CC0-1.0",
+  "retrievedAt": "2026-11-14",
+  "tags": ["hosting", "deploy", "frontend cloud", "serverless"],
+  "since": "1.0.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/brand.schema.json",
+  "title": "Ansible",
+  "source": "https://github.com/simple-icons/simple-icons/blob/16.37.0/icons/ansible.svg",
+  "guidelines": "https://docs.ansible.com/projects/ansible/latest/dev_guide/style_guide/trademarks.html",
+  "license": "CC0-1.0",
+  "retrievedAt": "2026-11-14",
+  "tags": ["automation", "configuration", "devops", "it"],
+  "since": "1.0.0"
+}

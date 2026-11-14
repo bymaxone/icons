@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/brand.schema.json",
+  "title": "Python",
+  "source": "https://github.com/simple-icons/simple-icons/blob/16.37.0/icons/python.svg",
+  "guidelines": "https://www.python.org/community/logos/",
+  "license": "CC0-1.0",
+  "retrievedAt": "2026-11-14",
+  "tags": ["programming language", "scripting", "data science", "snake"],
+  "since": "1.0.0"
+}

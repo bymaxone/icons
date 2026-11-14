@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/brand.schema.json",
+  "title": "Kubernetes",
+  "source": "https://github.com/simple-icons/simple-icons/blob/16.37.0/icons/kubernetes.svg",
+  "guidelines": "https://www.linuxfoundation.org/legal/trademark-usage",
+  "license": "CC0-1.0",
+  "retrievedAt": "2026-11-14",
+  "tags": ["k8s", "container", "orchestration", "cluster"],
+  "since": "1.0.0"
+}

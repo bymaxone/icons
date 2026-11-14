@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/brand.schema.json",
+  "title": "Tailwind CSS",
+  "source": "https://github.com/simple-icons/simple-icons/blob/16.37.0/icons/tailwindcss.svg",
+  "guidelines": "https://tailwindcss.com/brand",
+  "license": "CC0-1.0",
+  "retrievedAt": "2026-11-14",
+  "tags": ["css", "utility classes", "framework", "styling"],
+  "since": "1.0.0"
+}

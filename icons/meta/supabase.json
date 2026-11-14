@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/brand.schema.json",
+  "title": "Supabase",
+  "source": "https://github.com/simple-icons/simple-icons/blob/16.37.0/icons/supabase.svg",
+  "guidelines": "https://supabase.com/brand",
+  "license": "CC0-1.0",
+  "retrievedAt": "2026-11-14",
+  "tags": ["backend", "database", "postgres", "auth"],
+  "since": "1.0.0"
+}

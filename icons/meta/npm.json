@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/brand.schema.json",
+  "title": "npm",
+  "source": "https://github.com/simple-icons/simple-icons/blob/16.37.0/icons/npm.svg",
+  "guidelines": "https://docs.npmjs.com/policies/logos-and-usage",
+  "license": "CC0-1.0",
+  "retrievedAt": "2026-11-14",
+  "tags": ["package manager", "registry", "packages", "node"],
+  "since": "1.0.0"
+}

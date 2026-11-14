@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/brand.schema.json",
+  "title": "Docker",
+  "source": "https://github.com/simple-icons/simple-icons/blob/16.37.0/icons/docker.svg",
+  "guidelines": "https://www.docker.com/legal/trademark-guidelines/",
+  "license": "CC0-1.0",
+  "retrievedAt": "2026-11-14",
+  "tags": ["container", "image", "devops", "compose"],
+  "since": "1.0.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/brand.schema.json",
+  "title": "Perplexity",
+  "source": "https://github.com/simple-icons/simple-icons/blob/16.37.0/icons/perplexity.svg",
+  "guidelines": "https://www.perplexity.ai/hub/brand",
+  "license": "CC0-1.0",
+  "retrievedAt": "2026-11-14",
+  "tags": ["ai search", "answer engine", "chatbot", "ai"],
+  "since": "1.0.0"
+}

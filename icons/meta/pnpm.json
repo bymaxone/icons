@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/brand.schema.json",
+  "title": "pnpm",
+  "source": "https://github.com/simple-icons/simple-icons/blob/16.37.0/icons/pnpm.svg",
+  "guidelines": "https://pnpm.io/logos",
+  "license": "CC0-1.0",
+  "retrievedAt": "2026-11-14",
+  "tags": ["package manager", "packages", "workspace", "node"],
+  "since": "1.0.0"
+}

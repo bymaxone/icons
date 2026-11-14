@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/brand.schema.json",
+  "title": "PostgreSQL",
+  "source": "https://github.com/simple-icons/simple-icons/blob/16.37.0/icons/postgresql.svg",
+  "guidelines": "https://www.postgresql.org/about/policies/trademarks/",
+  "license": "CC0-1.0",
+  "retrievedAt": "2026-11-14",
+  "tags": ["postgres", "database", "sql", "relational"],
+  "since": "1.0.0"
+}

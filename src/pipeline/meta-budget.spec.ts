@@ -7,6 +7,10 @@
  */
 
 import {
+  BRANDS_BASE_BYTES,
+  BRANDS_CAP_BYTES,
+  BRANDS_FLOOR_BYTES,
+  BRANDS_MARK_BYTES,
   META_BASE_BYTES,
   META_CAP_BYTES,
   META_FLOOR_BYTES,
@@ -15,7 +19,9 @@ import {
   ROOT_CAP_BYTES,
   ROOT_FLOOR_BYTES,
   ROOT_ICON_BYTES,
+  brandsLimit,
   iconCost,
+  markCost,
   metaLimit,
   recordCost,
   rootLimit
@@ -130,5 +136,59 @@ describe('rootLimit', () => {
     const icons = (ROOT_CAP_BYTES - ROOT_BASE_BYTES) / ROOT_ICON_BYTES
     expect(rootLimit(Math.floor(icons))).toBeLessThanOrEqual(ROOT_CAP_BYTES)
     expect(rootLimit(Math.ceil(icons))).toBe(ROOT_CAP_BYTES)
+  })
+})
+
+describe('the brands budget constants', () => {
+  it('are the measured base, the per-mark budget, the cap and the floor', () => {
+    /** Scenario: the numbers the comment of `scripts/check-size.mjs` states for `./brands`. */
+    expect([
+      BRANDS_BASE_BYTES,
+      BRANDS_MARK_BYTES,
+      BRANDS_CAP_BYTES,
+      BRANDS_FLOOR_BYTES
+    ]).toStrictEqual([5, 400, 65536, 5120])
+  })
+})
+
+describe('markCost', () => {
+  it('shares the bytes above the base over the marks', () => {
+    /** Scenario: 5 + 100 * 300 bytes over 100 marks is 300 a mark. */
+    expect(markCost(BRANDS_BASE_BYTES + 30000, 100)).toBe(300)
+  })
+
+  it('counts an entry with no mark as one mark', () => {
+    /** Scenario: no division by zero; the bytes above the base are the cost. */
+    expect(markCost(BRANDS_BASE_BYTES + 7, 0)).toBe(7)
+  })
+})
+
+describe('brandsLimit', () => {
+  it('is the base plus the budget of each mark', () => {
+    /** Scenario: 67 marks are far below the cap. */
+    expect(brandsLimit(67)).toBe(5 + 400 * 67)
+  })
+
+  it('is the floor with few marks', () => {
+    /** Scenario: a package of a handful of marks is held to the floor, not to the base. */
+    expect(brandsLimit(0)).toBe(BRANDS_FLOOR_BYTES)
+    expect(brandsLimit(3)).toBe(BRANDS_FLOOR_BYTES)
+  })
+
+  it('leaves the floor where the base and the marks pass it', () => {
+    /** Scenario: 20 marks at 5 + 400 each are over 5,120, so the budget rules. */
+    expect(brandsLimit(20)).toBe(5 + 400 * 20)
+  })
+
+  it('stops at the cap', () => {
+    /** Scenario: 1,000 marks would exceed the cap by far. */
+    expect(brandsLimit(1000)).toBe(BRANDS_CAP_BYTES)
+  })
+
+  it('reaches the cap exactly where the two meet', () => {
+    /** Scenario: the marks at which base + budget equals the cap are not capped lower. */
+    const marks = (BRANDS_CAP_BYTES - BRANDS_BASE_BYTES) / BRANDS_MARK_BYTES
+    expect(brandsLimit(Math.floor(marks))).toBeLessThanOrEqual(BRANDS_CAP_BYTES)
+    expect(brandsLimit(Math.ceil(marks))).toBe(BRANDS_CAP_BYTES)
   })
 })

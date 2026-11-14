@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/brand.schema.json",
+  "title": "Redis",
+  "source": "https://github.com/simple-icons/simple-icons/blob/16.37.0/icons/redis.svg",
+  "guidelines": "https://redis.io/legal/trademark-policy/",
+  "license": "CC0-1.0",
+  "retrievedAt": "2026-11-14",
+  "tags": ["cache", "database", "key value", "in-memory"],
+  "since": "1.0.0"
+}
