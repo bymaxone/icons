@@ -399,6 +399,14 @@
   height: var(--icon);
   stroke-width: var(--stroke);
 }
+/* A flag is 3:2: its height is the size and its width follows, and it keeps its own colours.
+   A hairline inset outline keeps the white edge of a flag visible on the light page; the SVG
+   itself stays as its source publishes it. */
+.cell[data-kind='flag'] svg {
+  width: calc(var(--icon) * 1.5);
+  outline: 1px solid var(--line);
+  outline-offset: -1px;
+}
 .cell .d[data-d='sm'] svg {
   stroke-width: calc(var(--stroke) * 1.5);
 }

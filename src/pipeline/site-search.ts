@@ -22,7 +22,7 @@ export interface SearchText {
 /** An entry as the search sees it: its texts, and the types and categories it filters by. */
 export interface SearchDoc {
   readonly name: string
-  /** The drawings it has: `line`, `filled`, `sm` or `brand`. */
+  /** The drawings it has: `line`, `filled`, `sm`, `brand` or `flag`. */
   readonly types: readonly string[]
   readonly categories: readonly string[]
   readonly texts: readonly SearchText[]
@@ -300,7 +300,7 @@ const listOf = (value: string | null): string[] => (value ?? '').split(',').filt
 const LEGACY_VARIANTS = ['filled', 'sm']
 
 /** The types the Type control can pick, one at a time. */
-const KNOWN_TYPES = ['line', 'filled', 'sm', 'brand']
+const KNOWN_TYPES = ['line', 'filled', 'sm', 'brand', 'flag']
 
 /**
  * Reads the search state from an address's query string. Of the types, the first known one

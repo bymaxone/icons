@@ -33,7 +33,8 @@ if (!existsSync(metadataFile)) {
 
 const components = new Map([
   ...Object.entries(await import('@bymax-one/icons')),
-  ...Object.entries(await import('@bymax-one/icons/brands'))
+  ...Object.entries(await import('@bymax-one/icons/brands')),
+  ...Object.entries(await import('@bymax-one/icons/flags'))
 ])
 
 /**
@@ -63,7 +64,7 @@ function page(path, html) {
 page('index.html', homePage(catalog, render, version))
 for (const entry of catalog.entries) {
   page(
-    `${entry.kind === 'brand' ? 'brands' : 'icons'}/${entry.name}/index.html`,
+    `${{ icon: 'icons', brand: 'brands', flag: 'flags' }[entry.kind]}/${entry.name}/index.html`,
     entryPage(entry, catalog, render, version)
   )
 }
