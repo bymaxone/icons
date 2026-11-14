@@ -39,7 +39,8 @@ describe('parseViewBox', () => {
     ['a trailing comma', '0 0 513 342,'],
     ['a comma and a gap of commas', '0 0 513 ,, 342'],
     ['a hexadecimal number', '0x10 0 513 342'],
-    ['a number with a unit', '0 0 513px 342']
+    ['a number with a unit', '0 0 513px 342'],
+    ['a number too large to be finite', '0 0 1e999 342']
   ])('refuses %s', (_label, text) => {
     /**
      * Scenario: anything that is not four numbers in the SVG list form, each pair joined by

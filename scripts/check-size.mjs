@@ -58,8 +58,8 @@ const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 //     floor of 512 bytes for the root and 2 KiB for meta, because its fixed part outweighs
 //     the cost of an icon.
 //   - runtime, 1.75 KiB brotli: the `Icon` and `Flag` bases, `createIcon` and `createFlag`, the
-//     stroke maths, the view box reader and the accessibility rules, measured at 5692 bytes raw
-//     and 1559 bytes brotli. The headroom of 15% fits a small fix, while an inlined dependency
+//     stroke maths, the view box reader and the accessibility rules, measured at 5976 bytes raw
+//     and 1617 bytes brotli. The headroom of 11% fits a small fix, while an inlined dependency
 //     such as React fails.
 //   - meta, a budget per record: `dist/meta/index.mjs` grows with every icon and brand, so its
 //     size follows the set. The fixed part (the grid, the deep
