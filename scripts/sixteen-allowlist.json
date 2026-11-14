@@ -52,10 +52,6 @@
       "pairs": ["0-1"],
       "why": "the two sheets fuse where they overlap; it still reads as a copy with a plus"
     },
-    "crocodile": {
-      "pairs": ["0-2"],
-      "why": "the listed pair of elements closes at 16 px; the drawing still reads as a crocodile"
-    },
     "database-lock": {
       "pairs": ["0-2"],
       "why": "the lock badge fuses with the cylinder outline; it still reads as a locked database"
@@ -172,10 +168,6 @@
       "pairs": ["0-2"],
       "why": "the handle touches the outline; without it the drawing is a cabinet, and it still reads as a fridge"
     },
-    "garlic": {
-      "pairs": ["2-3", "2-4"],
-      "why": "the listed pair of elements closes at 16 px; the drawing still reads as garlic"
-    },
     "hail": {
       "pairs": ["0-3"],
       "why": "the right hailstone fuses with the cloud outline; it still reads as hail"
@@ -215,10 +207,6 @@
     "monkey": {
       "pairs": ["0-3", "1-3"],
       "why": "the listed pair of elements closes at 16 px; the drawing still reads as a monkey"
-    },
-    "nose": {
-      "pairs": ["4-6"],
-      "why": "the listed pair of elements closes at 16 px; the drawing still reads as a nose"
     },
     "nurse": {
       "pairs": ["0-1"],
@@ -295,10 +283,6 @@
     "webhook-off": {
       "pairs": ["1-2", "1-3"],
       "why": "the upper node fuses with the arc and the arrow beside it; it still reads as a disabled webhook"
-    },
-    "wheelbarrow": {
-      "pairs": ["0-1"],
-      "why": "the listed pair of elements closes at 16 px; the drawing still reads as a wheelbarrow"
     },
     "wifi-lock": {
       "pairs": ["0-3"],
