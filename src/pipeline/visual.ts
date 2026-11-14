@@ -34,7 +34,9 @@ export interface VisualTarget extends SheetRow {
 }
 
 /**
- * Every drawing of a set, icon variants in name order and then brand marks.
+ * Every drawing of a set, icon variants in name order and then brand marks. A country flag is
+ * not a target: it keeps its own colours and its own view box, which the strip's square cell and
+ * single ink do not fit.
  *
  * @param set - The icon set.
  * @returns The targets.

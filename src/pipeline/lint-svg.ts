@@ -64,6 +64,8 @@ export interface SvgSubject {
 export interface SvgReport {
   readonly issues: readonly LintIssue[]
   readonly elements: readonly DrawingElement[] | undefined
+  /** The view box of a flag, which keeps its own; absent for every other kind. */
+  readonly viewBox?: string | undefined
 }
 
 /** The root's attributes against the kind's fixed set. */

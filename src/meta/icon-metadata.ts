@@ -1,6 +1,6 @@
 /**
- * @fileoverview The typed metadata of the set: every icon and brand name as a union, the
- * record of each, and the categories. The records are generated from `icons/meta` and
+ * @fileoverview The typed metadata of the set: every icon, brand and flag name as a union,
+ * the record of each, and the categories. The records are generated from `icons/meta` and
  * `categories.json`; this module gives them their public types and freezes them.
  * @layer Metadata
  */
@@ -11,6 +11,8 @@ import {
   BRAND_NAMES as BRAND_NAME_LIST,
   BRANDS,
   CATEGORIES,
+  FLAG_NAMES as FLAG_NAME_LIST,
+  FLAGS,
   ICON_NAMES as ICON_NAME_LIST,
   ICONS
 } from './generated/metadata'
@@ -20,6 +22,9 @@ export type IconName = (typeof ICON_NAME_LIST)[number]
 
 /** The name of every brand mark, such as `github`. */
 export type BrandName = (typeof BRAND_NAME_LIST)[number]
+
+/** The name of every country flag, such as `us-flag`. */
+export type FlagName = (typeof FLAG_NAME_LIST)[number]
 
 /** The name of every category in `categories.json`, such as `navigation`. */
 export type IconCategoryName = (typeof CATEGORY_NAME_LIST)[number]
@@ -81,6 +86,23 @@ export interface BrandMetadata {
   readonly since: string
 }
 
+/** The metadata of one country flag. */
+export interface FlagMetadata {
+  /** The English name of the region, such as "United States". */
+  readonly title: string
+  /** The code of the flag in its source, upper case, such as `US`. */
+  readonly code: string
+  /** Where the drawing was taken from. */
+  readonly source: string
+  /** The license of the drawing. */
+  readonly license: string
+  /** The day the drawing was retrieved, `YYYY-MM-DD`. */
+  readonly retrievedAt: string
+  readonly tags: readonly string[]
+  /** The version that added the flag. */
+  readonly since: string
+}
+
 /** One category of `categories.json`. */
 export interface IconCategory {
   readonly name: IconCategoryName
@@ -92,6 +114,9 @@ export const ICON_NAMES: readonly IconName[] = deepFreeze(ICON_NAME_LIST)
 
 /** Every brand name, in name order. */
 export const BRAND_NAMES: readonly BrandName[] = deepFreeze(BRAND_NAME_LIST)
+
+/** Every flag name, in name order. */
+export const FLAG_NAMES: readonly FlagName[] = deepFreeze(FLAG_NAME_LIST)
 
 /** The categories, in the order of `categories.json`. */
 export const ICON_CATEGORIES: readonly IconCategory[] = deepFreeze(CATEGORIES)
@@ -110,3 +135,6 @@ export const ICON_METADATA: Readonly<Record<IconName, IconMetadata>> = deepFreez
 
 /** The metadata of every brand mark, keyed by name, frozen. */
 export const BRAND_METADATA: Readonly<Record<BrandName, BrandMetadata>> = deepFreeze(BRANDS)
+
+/** The metadata of every country flag, keyed by name, frozen. */
+export const FLAG_METADATA: Readonly<Record<FlagName, FlagMetadata>> = deepFreeze(FLAGS)

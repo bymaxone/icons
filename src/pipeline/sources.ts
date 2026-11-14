@@ -1,6 +1,6 @@
 /**
  * @fileoverview The drawing and metadata sources as the rest of the generator reads them,
- * and the one function that reads them from disk: `icons/{line,filled,sm,brands}/*.svg`,
+ * and the one function that reads them from disk: `icons/{line,filled,sm,brands,flags}/*.svg`,
  * `icons/meta/*.json`, `categories.json` and the schemas. Everything after this module
  * works on the in-memory value, so the rules and the outputs are tested without a disk.
  * @layer Pipeline
@@ -109,7 +109,8 @@ export function readSources(layout: SourceLayout): IconSources {
       line: readDirectory(layout, 'line', strays),
       filled: readDirectory(layout, 'filled', strays),
       sm: readDirectory(layout, 'sm', strays),
-      brands: readDirectory(layout, 'brands', strays)
+      brands: readDirectory(layout, 'brands', strays),
+      flags: readDirectory(layout, 'flags', strays)
     },
     meta: readDirectory(layout, 'meta', strays),
     categories: {
@@ -120,6 +121,7 @@ export function readSources(layout: SourceLayout): IconSources {
     schemas: {
       icon: readSchema(layout.root, 'icon'),
       brand: readSchema(layout.root, 'brand'),
+      flag: readSchema(layout.root, 'flag'),
       category: readSchema(layout.root, 'category')
     },
     strays

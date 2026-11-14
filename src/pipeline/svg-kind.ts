@@ -1,7 +1,7 @@
 /**
- * @fileoverview The four kinds of source SVG (`icons/line`, `icons/filled`, `icons/sm`,
- * `icons/brands`) and what each kind fixes: the paint, the variant it becomes, and the
- * root attributes the formatter writes on every file of the kind.
+ * @fileoverview The five kinds of source SVG (`icons/line`, `icons/filled`, `icons/sm`,
+ * `icons/brands`, `icons/flags`) and what each kind fixes: the paint, the variant it becomes,
+ * and the root attributes the formatter writes on every file of the kind.
  * @layer Pipeline
  */
 
@@ -9,10 +9,10 @@ import { ICON_GRID } from '../meta/icon-grid.ts'
 import type { Variant } from './naming.ts'
 
 /** A source directory under `icons/`, named for the drawings it holds. */
-export type SvgKind = 'line' | 'filled' | 'sm' | 'brands'
+export type SvgKind = 'line' | 'filled' | 'sm' | 'brands' | 'flags'
 
 /** Every source SVG directory, in the order outputs list them. */
-export const SVG_KINDS: readonly SvgKind[] = ['line', 'filled', 'sm', 'brands']
+export const SVG_KINDS: readonly SvgKind[] = ['line', 'filled', 'sm', 'brands', 'flags']
 
 /**
  * Maps a record with one value per kind into another, kind by kind.
@@ -29,7 +29,8 @@ export function mapKinds<T, U>(
     line: value(record.line, 'line'),
     filled: value(record.filled, 'filled'),
     sm: value(record.sm, 'sm'),
-    brands: value(record.brands, 'brands')
+    brands: value(record.brands, 'brands'),
+    flags: value(record.flags, 'flags')
   }
 }
 
@@ -44,7 +45,8 @@ export function kindEntries<T>(record: Readonly<Record<SvgKind, T>>): [SvgKind, 
     ['line', record.line],
     ['filled', record.filled],
     ['sm', record.sm],
-    ['brands', record.brands]
+    ['brands', record.brands],
+    ['flags', record.flags]
   ]
 }
 
@@ -53,12 +55,14 @@ export const KIND_VARIANT: Readonly<Record<SvgKind, Variant>> = {
   line: 'line',
   filled: 'filled',
   sm: 'sm',
-  brands: 'brand'
+  brands: 'brand',
+  flags: 'flag'
 }
 
 /**
  * Whether a kind is drawn with strokes. The line icons and the 16 px masters are; filled
- * icons and brand marks are filled shapes with no stroke at all.
+ * icons and brand marks are filled shapes with no stroke at all, and a flag paints each
+ * element itself.
  *
  * @param kind - The source directory.
  * @returns True for `line` and `sm`.
@@ -100,6 +104,12 @@ const SM_ROOT: Readonly<Record<string, string>> = {
 const FILL_ROOT: Readonly<Record<string, string>> = { ...CANVAS, fill: 'currentColor' }
 
 /**
+ * A flag's root holds the namespace and the view box of its source, which differs from flag
+ * to flag, so only the namespace is fixed here; the formatter keeps the file's own view box.
+ */
+const FLAG_ROOT: Readonly<Record<string, string>> = { xmlns: SVG_NAMESPACE }
+
+/**
  * The root attributes of a kind, in the order they are written. They match what the
  * `Icon` base renders for the same drawing, so a raw SVG file, a sprite symbol and a
  * component paint alike.
@@ -108,6 +118,7 @@ const FILL_ROOT: Readonly<Record<string, string>> = { ...CANVAS, fill: 'currentC
  * @returns The attribute names and values of the `<svg>` element.
  */
 export function rootAttributes(kind: SvgKind): Readonly<Record<string, string>> {
+  if (kind === 'flags') return FLAG_ROOT
   if (kind === 'sm') return SM_ROOT
   return isStrokeKind(kind) ? STROKE_ROOT : FILL_ROOT
 }

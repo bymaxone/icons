@@ -8,6 +8,7 @@
 import { optimize } from 'svgo'
 import type { CustomPlugin, XastChild, XastElement, XastParent, XastRoot } from 'svgo'
 
+import { normalizeFlag } from './svg-flag.ts'
 import { isStrokeKind, rootAttributes } from './svg-kind.ts'
 import type { SvgKind } from './svg-kind.ts'
 
@@ -147,6 +148,7 @@ function stripPaintPlugin(kind: SvgKind): CustomPlugin {
  * @throws {Error} When the text is not well-formed XML.
  */
 export function normalizeSvg(text: string, kind: SvgKind): string {
+  if (kind === 'flags') return normalizeFlag(text)
   return optimize(text, {
     floatPrecision: 3,
     js2svg: { pretty: true, indent: 2, eol: 'lf' },

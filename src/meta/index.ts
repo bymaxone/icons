@@ -8,6 +8,8 @@ export { ICON_GRID } from './icon-grid'
 export {
   BRAND_METADATA,
   BRAND_NAMES,
+  FLAG_METADATA,
+  FLAG_NAMES,
   ICON_CATEGORIES,
   ICON_METADATA,
   ICON_NAMES
@@ -17,6 +19,8 @@ export type { IconGrid } from './icon-grid'
 export type {
   BrandMetadata,
   BrandName,
+  FlagMetadata,
+  FlagName,
   IconAlias,
   IconCategory,
   IconCategoryName,

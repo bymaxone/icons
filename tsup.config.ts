@@ -57,6 +57,21 @@ const iconEntries = Object.fromEntries(
   })
 )
 
+// One entry per generated flag, `./flags/<name>`, emitted as `dist/flags/<name>/index.*` from the
+// same entries directory, so the flags share one declaration program like the icons do.
+const FLAGS_DIR = 'src/flags/generated'
+const flagNames = readdirSync(FLAGS_DIR, { withFileTypes: true })
+  .filter((entry) => entry.isFile() && entry.name.endsWith('.ts') && entry.name !== 'index.ts')
+  .map((entry) => entry.name.slice(0, -'.ts'.length))
+if (flagNames.length > 0) mkdirSync(ENTRIES_DIR, { recursive: true })
+const flagEntries = Object.fromEntries(
+  flagNames.map((name) => {
+    const file = `${ENTRIES_DIR}/flag-${name}.ts`
+    writeFileSync(file, `export * from '../${FLAGS_DIR}/${name}'\n`)
+    return [`flags/${name}/index`, file]
+  })
+)
+
 export default defineConfig([
   // Root entry: every icon component, re-exported from the icon entries, and the runtime.
   { ...shared, entry: { index: 'src/index.ts' } },
@@ -67,6 +82,9 @@ export default defineConfig([
   { ...shared, entry: { 'meta/index': 'src/meta/index.ts' } },
   // Brands entry: every brand mark component.
   { ...shared, entry: { 'brands/index': 'src/brands/index.ts' } },
-  // tsup refuses an empty entry list, so the icon entries exist only once an icon does.
-  ...(Object.keys(iconEntries).length > 0 ? [{ ...shared, entry: iconEntries }] : [])
+  // Flags entry: every country flag component, re-exported from the flag entries.
+  { ...shared, entry: { 'flags/index': 'src/flags/index.ts' } },
+  // tsup refuses an empty entry list, so the icon and flag entries exist only once one does.
+  ...(Object.keys(iconEntries).length > 0 ? [{ ...shared, entry: iconEntries }] : []),
+  ...(Object.keys(flagEntries).length > 0 ? [{ ...shared, entry: flagEntries }] : [])
 ])

@@ -24,6 +24,8 @@
     "paths": {
       "@bymax-one/icons": ["./src/index.ts"],
       "@bymax-one/icons/brands": ["./src/brands/index.ts"],
+      "@bymax-one/icons/flags": ["./src/flags/index.ts"],
+      "@bymax-one/icons/flags/*": ["./src/flags/generated/*.ts"],
       "@bymax-one/icons/icons/*": ["./src/icons/generated/*/index.ts"],
       "@bymax-one/icons/meta": ["./src/meta/index.ts"],
       "@bymax-one/icons/runtime": ["./src/runtime/index.ts"]

@@ -1,13 +1,13 @@
 /**
  * @fileoverview The data the generator writes: the metadata module behind `./meta`, and
- * the static outputs `dist/svg/<kind>/<name>.svg`, `dist/sprite.svg` and
+ * the static outputs `dist/svg/<kind>/<name>.svg` (a flag has no sprite symbol), `dist/sprite.svg` and
  * `dist/metadata.json`. The metadata module and `metadata.json` hold the same records.
  * @layer Pipeline
  */
 
 import { drawnVariants } from './icon-set.ts'
 import type { IconSet } from './icon-set.ts'
-import type { AliasSource, BrandMetaSource, IconMetaSource } from './metadata.ts'
+import type { AliasSource, BrandMetaSource, FlagMetaSource, IconMetaSource } from './metadata.ts'
 import { symbolId } from './naming.ts'
 import { KIND_VARIANT, rootAttributes } from './svg-kind.ts'
 import type { SvgKind } from './svg-kind.ts'
@@ -64,8 +64,14 @@ function brandRecord(meta: BrandMetaSource): Record<string, unknown> {
   }
 }
 
+/** One flag's published record, in a fixed key order with every optional field present. */
+function flagRecord(meta: FlagMetaSource): Record<string, unknown> {
+  const { title, code, source, license, retrievedAt, tags = [], since } = meta
+  return { title, code, source, license, retrievedAt, tags, since }
+}
+
 /**
- * The published records: every icon and brand keyed by name, and the categories. The key
+ * The published records: every icon, brand and flag keyed by name, and the categories. The key
  * order is fixed, so reordering the keys of a source file changes no output.
  *
  * @param set - The icon set.
@@ -74,11 +80,13 @@ function brandRecord(meta: BrandMetaSource): Record<string, unknown> {
 export function metadataRecords(set: IconSet): {
   icons: Record<string, unknown>
   brands: Record<string, unknown>
+  flags: Record<string, unknown>
   categories: { name: string; title: string }[]
 } {
   return {
     icons: Object.fromEntries(set.icons.map(({ name, meta }) => [name, iconRecord(meta)])),
     brands: Object.fromEntries(set.brands.map(({ name, meta }) => [name, brandRecord(meta)])),
+    flags: Object.fromEntries(set.flags.map(({ name, meta }) => [name, flagRecord(meta)])),
     categories: set.categories.map(({ name, title }) => ({ name, title }))
   }
 }
@@ -95,7 +103,7 @@ export function metadataRecords(set: IconSet): {
  * @returns The module's unformatted text.
  */
 export function metadataModule(set: IconSet): string {
-  const { icons, brands, categories } = metadataRecords(set)
+  const { icons, brands, flags, categories } = metadataRecords(set)
   const constant = (doc: string, name: string, value: unknown): string =>
     `/** ${doc} */\nexport const ${name} = ${JSON.stringify(value)} as const\n`
   const keyed = (doc: string, name: string, value: Record<string, unknown>): string => {
@@ -107,13 +115,14 @@ export function metadataModule(set: IconSet): string {
   }
   return [
     '/**',
-    ' * @fileoverview The metadata of every icon and brand mark, as data.',
+    ' * @fileoverview The metadata of every icon, brand mark and country flag, as data.',
     ' * Written by `pnpm generate` from icons/meta and categories.json: edit the sources, never this file.',
     ' * @layer Generated',
     ' */',
     '',
     constant('Every icon name, in name order.', 'ICON_NAMES', Object.keys(icons)),
     constant('Every brand name, in name order.', 'BRAND_NAMES', Object.keys(brands)),
+    constant('Every flag name, in name order.', 'FLAG_NAMES', Object.keys(flags)),
     constant(
       'Every category name, in the order of categories.json.',
       'CATEGORY_NAMES',
@@ -121,7 +130,8 @@ export function metadataModule(set: IconSet): string {
     ),
     constant('The categories, in the order of categories.json.', 'CATEGORIES', categories),
     keyed('The metadata of every icon, keyed by name.', 'ICONS', icons),
-    keyed('The metadata of every brand mark, keyed by name.', 'BRANDS', brands)
+    keyed('The metadata of every brand mark, keyed by name.', 'BRANDS', brands),
+    keyed('The metadata of every country flag, keyed by name.', 'FLAGS', flags)
   ].join('\n')
 }
 
@@ -161,7 +171,7 @@ export function sprite(set: IconSet): string {
 
 /**
  * Every static output, keyed by path inside the output directory: each raw SVG, the
- * sprite and `metadata.json`.
+ * sprite and `metadata.json`. The sprite holds `currentColor` drawings, so no flag is in it.
  *
  * @param set - The icon set.
  * @returns The files' text.
@@ -174,6 +184,7 @@ export function staticFiles(set: IconSet): Map<string, string> {
     }
   }
   for (const brand of set.brands) files.set(`svg/brands/${brand.name}.svg`, brand.drawing.text)
+  for (const flag of set.flags) files.set(`svg/flags/${flag.name}.svg`, flag.drawing.text)
   files.set('sprite.svg', sprite(set))
   files.set('metadata.json', `${JSON.stringify(metadataRecords(set), null, 2)}\n`)
   return files

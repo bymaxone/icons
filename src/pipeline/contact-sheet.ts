@@ -97,7 +97,11 @@ function text(x: number, y: number, fill: string, content: string): string {
   return `<text x="${x}" y="${y}" fill="${fill}" ${FONT}>${escaped}</text>`
 }
 
-/** The rows of the sheet: every icon variant in name order, then every brand mark. */
+/**
+ * The rows of the sheet: every icon variant in name order, then every brand mark. A country flag
+ * has no row: it keeps its own colours and view box, which the square cells and one ink of
+ * the sheet do not fit.
+ */
 export function sheetRows(set: IconSet): SheetRow[] {
   return [
     ...set.icons.flatMap((icon) =>

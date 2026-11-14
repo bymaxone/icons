@@ -14,21 +14,25 @@
  */
 export const KEBAB_CASE = /^[a-z][a-z0-9]*(?:-[a-z0-9]+)*$/
 
-/** A drawing of an icon: the 24 px line master, the filled variant, the 16 px master, or a brand mark. */
-export type Variant = 'line' | 'filled' | 'sm' | 'brand'
+/**
+ * A drawing: the 24 px line master, the filled variant, the 16 px master, a brand mark or a
+ * country flag.
+ */
+export type Variant = 'line' | 'filled' | 'sm' | 'brand' | 'flag'
 
 /**
  * The name a variant is created under: `lightning`, `lightning-filled`, `lightning-sm`,
- * `github-brand`. It becomes the `bx-icon-<name>` class and the sprite symbol id.
+ * `github-brand`. It becomes the `bx-icon-<name>` class and the sprite symbol id. A flag's
+ * name already ends in `-flag`, so it is the bare name, as the line master's is.
  *
  * @param name - The icon's kebab-case name.
  * @param variant - The drawing.
  * @returns The kebab-case variant name.
  */
 export function variantName(name: string, variant: Variant): string {
-  // The line master carries the bare name; every other variant appends its own name, so
-  // the variants of one icon never share a name.
-  return variant === 'line' ? name : `${name}-${variant}`
+  // The line master and a flag carry the bare name; every other variant appends its own name,
+  // so the variants of one icon never share a name.
+  return variant === 'line' || variant === 'flag' ? name : `${name}-${variant}`
 }
 
 /**
@@ -47,7 +51,7 @@ export function pascalCase(name: string): string {
 
 /**
  * The exported component name of a variant: `LightningIcon`, `LightningFilledIcon`,
- * `LightningSmIcon`, `GithubBrandIcon`. It equals the `displayName` `createIcon` derives.
+ * `LightningSmIcon`, `GithubBrandIcon`, `UsFlagIcon`. It equals the `displayName` `createIcon` derives.
  *
  * @param name - The icon's (or an alias's) kebab-case name.
  * @param variant - The drawing.
