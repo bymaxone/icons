@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/flag.schema.json",
+  "title": "South Africa",
+  "code": "ZA",
+  "source": "https://gitlab.com/catamphetamine/country-flag-icons/-/blob/v1.6.20/flags/3x2/ZA.svg",
+  "license": "MIT",
+  "retrievedAt": "2026-11-14",
+  "tags": ["za", "south africa"],
+  "since": "1.0.0"
+}

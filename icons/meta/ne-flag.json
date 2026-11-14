@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/flag.schema.json",
+  "title": "Niger",
+  "code": "NE",
+  "source": "https://gitlab.com/catamphetamine/country-flag-icons/-/blob/v1.6.20/flags/3x2/NE.svg",
+  "license": "MIT",
+  "retrievedAt": "2026-11-14",
+  "tags": ["ne", "niger"],
+  "since": "1.0.0"
+}

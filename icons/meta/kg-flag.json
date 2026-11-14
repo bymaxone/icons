@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/flag.schema.json",
+  "title": "Kyrgyzstan",
+  "code": "KG",
+  "source": "https://gitlab.com/catamphetamine/country-flag-icons/-/blob/v1.6.20/flags/3x2/KG.svg",
+  "license": "MIT",
+  "retrievedAt": "2026-11-14",
+  "tags": ["kg", "kyrgyzstan"],
+  "since": "1.0.0"
+}

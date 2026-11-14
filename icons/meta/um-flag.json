@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/flag.schema.json",
+  "title": "U.S. Outlying Islands",
+  "code": "UM",
+  "source": "https://gitlab.com/catamphetamine/country-flag-icons/-/blob/v1.6.20/flags/3x2/UM.svg",
+  "license": "MIT",
+  "retrievedAt": "2026-11-14",
+  "tags": ["um", "u.s. outlying islands"],
+  "since": "1.0.0"
+}

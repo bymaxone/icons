@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/flag.schema.json",
+  "title": "India",
+  "code": "IN",
+  "source": "https://gitlab.com/catamphetamine/country-flag-icons/-/blob/v1.6.20/flags/3x2/IN.svg",
+  "license": "MIT",
+  "retrievedAt": "2026-11-14",
+  "tags": ["in", "india"],
+  "since": "1.0.0"
+}

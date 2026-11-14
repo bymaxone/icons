@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/flag.schema.json",
+  "title": "Colombia",
+  "code": "CO",
+  "source": "https://gitlab.com/catamphetamine/country-flag-icons/-/blob/v1.6.20/flags/3x2/CO.svg",
+  "license": "MIT",
+  "retrievedAt": "2026-11-14",
+  "tags": ["co", "colombia"],
+  "since": "1.0.0"
+}

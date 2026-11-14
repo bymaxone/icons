@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/flag.schema.json",
+  "title": "Isle of Man",
+  "code": "IM",
+  "source": "https://gitlab.com/catamphetamine/country-flag-icons/-/blob/v1.6.20/flags/3x2/IM.svg",
+  "license": "MIT",
+  "retrievedAt": "2026-11-14",
+  "tags": ["im", "isle of man"],
+  "since": "1.0.0"
+}

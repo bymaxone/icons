@@ -1,0 +1,31 @@
+/**
+ * @fileoverview The Tokelau flag.
+ * Written by `pnpm generate` from icons/flags/tk-flag.svg: edit the source, never this file.
+ * @layer Generated
+ */
+
+import { createFlag } from '@bymax-one/icons/runtime'
+
+/**
+ * The Tokelau flag, from https://gitlab.com/catamphetamine/country-flag-icons/-/blob/v1.6.20/flags/3x2/TK.svg (MIT, retrieved 2026-11-14).
+ * It is reproduced as published by its source; see TRADEMARKS.md.
+ *
+ * @since 1.0.0
+ */
+export const TkFlagIcon = /* @__PURE__ */ createFlag('tk-flag', '0 85.333 512 341.333', [
+  ['path', { fill: '#0052b4', d: 'M0 85.337h512v341.326H0z' }],
+  [
+    'path',
+    {
+      fill: '#ffffff',
+      d: 'm210.715 174.377 3.684 11.338h11.919l-9.643 7.006 3.684 11.337-9.644-7.007-9.644 7.007 3.684-11.337-9.645-7.006h11.921zM116.816 281.971l4.605 14.172h14.9l-12.055 8.757 4.606 14.173-12.056-8.76-12.055 8.76 4.604-14.173-12.054-8.757h14.899zM144.696 119.679l4.604 14.172h14.901l-12.056 8.758 4.606 14.171-12.055-8.759-12.056 8.759 4.606-14.171-12.055-8.758h14.9zM69.539 175.331l4.604 14.172h14.9l-12.055 8.758 4.606 14.171-12.055-8.758-12.056 8.758 4.606-14.171-12.055-8.758h14.9z'
+    }
+  ],
+  [
+    'path',
+    {
+      fill: '#ffda44',
+      d: 'M483.386 354.503H117.801s109.234-88.562 310.593-220.938c.001 0-88.443 128.935 54.992 220.938zM117.801 366.089c-11.177 0-11.195 17.37 0 17.37h365.585c11.177 0 11.195-17.37 0-17.37H117.801z'
+    }
+  ]
+])

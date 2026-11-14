@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/flag.schema.json",
+  "title": "Norway",
+  "code": "NO",
+  "source": "https://gitlab.com/catamphetamine/country-flag-icons/-/blob/v1.6.20/flags/3x2/NO.svg",
+  "license": "MIT",
+  "retrievedAt": "2026-11-14",
+  "tags": ["no", "norway"],
+  "since": "1.0.0"
+}

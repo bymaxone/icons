@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/flag.schema.json",
+  "title": "Comoros",
+  "code": "KM",
+  "source": "https://gitlab.com/catamphetamine/country-flag-icons/-/blob/v1.6.20/flags/3x2/KM.svg",
+  "license": "MIT",
+  "retrievedAt": "2026-11-14",
+  "tags": ["km", "comoros"],
+  "since": "1.0.0"
+}

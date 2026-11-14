@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/flag.schema.json",
+  "title": "Norfolk Island",
+  "code": "NF",
+  "source": "https://gitlab.com/catamphetamine/country-flag-icons/-/blob/v1.6.20/flags/3x2/NF.svg",
+  "license": "MIT",
+  "retrievedAt": "2026-11-14",
+  "tags": ["nf", "norfolk island"],
+  "since": "1.0.0"
+}

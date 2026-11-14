@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/flag.schema.json",
+  "title": "United Arab Emirates",
+  "code": "AE",
+  "source": "https://gitlab.com/catamphetamine/country-flag-icons/-/blob/v1.6.20/flags/3x2/AE.svg",
+  "license": "MIT",
+  "retrievedAt": "2026-11-14",
+  "tags": ["ae", "united arab emirates"],
+  "since": "1.0.0"
+}

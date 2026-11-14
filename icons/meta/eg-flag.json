@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/flag.schema.json",
+  "title": "Egypt",
+  "code": "EG",
+  "source": "https://gitlab.com/catamphetamine/country-flag-icons/-/blob/v1.6.20/flags/3x2/EG.svg",
+  "license": "MIT",
+  "retrievedAt": "2026-11-14",
+  "tags": ["eg", "egypt"],
+  "since": "1.0.0"
+}

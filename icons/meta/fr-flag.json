@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/flag.schema.json",
+  "title": "France",
+  "code": "FR",
+  "source": "https://gitlab.com/catamphetamine/country-flag-icons/-/blob/v1.6.20/flags/3x2/FR.svg",
+  "license": "MIT",
+  "retrievedAt": "2026-11-14",
+  "tags": ["fr", "france"],
+  "since": "1.0.0"
+}

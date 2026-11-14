@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/flag.schema.json",
+  "title": "American Samoa",
+  "code": "AS",
+  "source": "https://gitlab.com/catamphetamine/country-flag-icons/-/blob/v1.6.20/flags/3x2/AS.svg",
+  "license": "MIT",
+  "retrievedAt": "2026-11-14",
+  "tags": ["as", "american samoa"],
+  "since": "1.0.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/flag.schema.json",
+  "title": "Türkiye",
+  "code": "TR",
+  "source": "https://gitlab.com/catamphetamine/country-flag-icons/-/blob/v1.6.20/flags/3x2/TR.svg",
+  "license": "MIT",
+  "retrievedAt": "2026-11-14",
+  "tags": ["tr", "türkiye", "turkey"],
+  "since": "1.0.0"
+}

@@ -1,0 +1,33 @@
+/**
+ * @fileoverview The Azerbaijan flag.
+ * Written by `pnpm generate` from icons/flags/az-flag.svg: edit the source, never this file.
+ * @layer Generated
+ */
+
+import { createFlag } from '@bymax-one/icons/runtime'
+
+/**
+ * The Azerbaijan flag, from https://gitlab.com/catamphetamine/country-flag-icons/-/blob/v1.6.20/flags/3x2/AZ.svg (MIT, retrieved 2026-11-14).
+ * It is reproduced as published by its source; see TRADEMARKS.md.
+ *
+ * @since 1.0.0
+ */
+export const AzFlagIcon = /* @__PURE__ */ createFlag('az-flag', '0 0 513 342', [
+  ['path', { fill: '#ef3340', d: 'M0 0h513v342H0z' }],
+  ['path', { fill: '#00b5e2', d: 'M0 0h513v114H0z' }],
+  ['path', { fill: '#509e2f', d: 'M0 228h513v114H0z' }],
+  [
+    'path',
+    {
+      fill: '#ffffff',
+      d: 'M265.6 212.6c-23 0-41.6-18.6-41.6-41.6s18.6-41.6 41.6-41.6c7.2 0 13.9 1.8 19.8 5-9.2-9-21.9-14.6-35.8-14.6-28.3 0-51.2 22.9-51.2 51.2s22.9 51.2 51.2 51.2c13.9 0 26.6-5.6 35.8-14.6-5.9 3.2-12.6 5-19.8 5z'
+    }
+  ],
+  [
+    'path',
+    {
+      fill: '#ffffff',
+      d: 'm297.6 142.2 5.5 15.5 14.9-7.1-7.1 14.9 15.5 5.5-15.5 5.5 7.1 14.9-14.9-7.1-5.5 15.5-5.5-15.5-14.9 7.1 7.1-14.9-15.5-5.5 15.5-5.5-7.1-14.9 14.9 7.1z'
+    }
+  ]
+])

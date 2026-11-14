@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/flag.schema.json",
+  "title": "Costa Rica",
+  "code": "CR",
+  "source": "https://gitlab.com/catamphetamine/country-flag-icons/-/blob/v1.6.20/flags/3x2/CR.svg",
+  "license": "MIT",
+  "retrievedAt": "2026-11-14",
+  "tags": ["cr", "costa rica"],
+  "since": "1.0.0"
+}

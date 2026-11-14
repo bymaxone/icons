@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/flag.schema.json",
+  "title": "Sint Maarten",
+  "code": "SX",
+  "source": "https://gitlab.com/catamphetamine/country-flag-icons/-/blob/v1.6.20/flags/3x2/SX.svg",
+  "license": "MIT",
+  "retrievedAt": "2026-11-14",
+  "tags": ["sx", "sint maarten"],
+  "since": "1.0.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/flag.schema.json",
+  "title": "Guadeloupe",
+  "code": "GP",
+  "source": "https://gitlab.com/catamphetamine/country-flag-icons/-/blob/v1.6.20/flags/3x2/GP.svg",
+  "license": "MIT",
+  "retrievedAt": "2026-11-14",
+  "tags": ["gp", "guadeloupe"],
+  "since": "1.0.0"
+}

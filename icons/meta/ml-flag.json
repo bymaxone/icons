@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/flag.schema.json",
+  "title": "Mali",
+  "code": "ML",
+  "source": "https://gitlab.com/catamphetamine/country-flag-icons/-/blob/v1.6.20/flags/3x2/ML.svg",
+  "license": "MIT",
+  "retrievedAt": "2026-11-14",
+  "tags": ["ml", "mali"],
+  "since": "1.0.0"
+}

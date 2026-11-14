@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/flag.schema.json",
+  "title": "Jamaica",
+  "code": "JM",
+  "source": "https://gitlab.com/catamphetamine/country-flag-icons/-/blob/v1.6.20/flags/3x2/JM.svg",
+  "license": "MIT",
+  "retrievedAt": "2026-11-14",
+  "tags": ["jm", "jamaica"],
+  "since": "1.0.0"
+}

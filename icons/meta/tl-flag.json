@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/flag.schema.json",
+  "title": "Timor-Leste",
+  "code": "TL",
+  "source": "https://gitlab.com/catamphetamine/country-flag-icons/-/blob/v1.6.20/flags/3x2/TL.svg",
+  "license": "MIT",
+  "retrievedAt": "2026-11-14",
+  "tags": ["tl", "timor-leste", "east timor"],
+  "since": "1.0.0"
+}

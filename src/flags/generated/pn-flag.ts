@@ -1,0 +1,79 @@
+/**
+ * @fileoverview The Pitcairn Islands flag.
+ * Written by `pnpm generate` from icons/flags/pn-flag.svg: edit the source, never this file.
+ * @layer Generated
+ */
+
+import { createFlag } from '@bymax-one/icons/runtime'
+
+/**
+ * The Pitcairn Islands flag, from https://gitlab.com/catamphetamine/country-flag-icons/-/blob/v1.6.20/flags/3x2/PN.svg (MIT, retrieved 2026-11-14).
+ * It is reproduced as published by its source; see TRADEMARKS.md.
+ *
+ * @since 1.0.0
+ */
+export const PnFlagIcon = /* @__PURE__ */ createFlag('pn-flag', '0 0 513 342', [
+  ['path', { fill: '#012169', d: 'M0 0h513v342H0z' }],
+  [
+    'path',
+    {
+      fill: '#96877d',
+      stroke: '#000000',
+      d: 'm400.7 134.5-16.7 5.6-16.7-5.6-5.6-13.9 5.6-13.9h33.4l-5.6 13.9z'
+    }
+  ],
+  [
+    'path',
+    {
+      fill: '#006ec7',
+      stroke: '#000000',
+      d: 'M345 134.5v61.2c0 29.8 39 39 39 39s39-9.1 39-39v-61.2h-78z'
+    }
+  ],
+  [
+    'path',
+    {
+      fill: '#337321',
+      stroke: '#000000',
+      d: 'M348.6 210.2c9.6 18.4 35.4 24.5 35.4 24.5s25.9-6.1 35.4-24.5l-35.4-59-35.4 59z'
+    }
+  ],
+  [
+    'path',
+    {
+      fill: '#f7e017',
+      stroke: '#000000',
+      d: 'm423 195.1-39-60.6-39 60.6v.6c0 5.5 1.3 10.3 3.5 14.5l35.4-55.1 35.4 55.1c2.2-4.2 3.5-9 3.5-14.5v-.6z'
+    }
+  ],
+  ['path', { fill: '#012169', d: 'M0 0h256.5v171H0z' }],
+  [
+    'path',
+    {
+      fill: '#ffffff',
+      d: 'M256.5 0v30.6l-45.3 25.2h45.3v59.4h-59.2l59.2 32.9V171h-26.7l-73.7-40.9V171h-55.7v-48.7L12.8 171H0v-30.6l45.3-25.2H0V55.8h59.2L0 22.9V0h26.7l73.7 40.9V0h55.7v48.7L243.7 0z'
+    }
+  ],
+  [
+    'path',
+    { fill: '#ffffff', d: 'M156.1 115.2 256.5 171v-15.8l-72-40zM100.4 55.8 0 0v15.8l72 40z' }
+  ],
+  [
+    'path',
+    { fill: '#d80027', d: 'M144.3 0h-32.1v69.5H0v32h112.2V171h32.1v-69.5h112.2v-32H144.3z' }
+  ],
+  [
+    'path',
+    {
+      fill: '#d80027',
+      d: 'M156.1 115.2 256.5 171v-15.8l-72-40zM72 115.2l-72 40V171l100.4-55.8zM100.4 55.8 0 0v15.8l72 40zM184.5 55.8l72-40V0L156.1 55.8z'
+    }
+  ],
+  [
+    'path',
+    {
+      fill: '#f7e017',
+      d: 'M375 189.5h18.3l.1 5.5h-5.8v25.2l12.3-6.1 3 5-18.9 9.7-18.4-9.8 2.9-5.1 12.6 6.3V195H375z'
+    }
+  ]
+])

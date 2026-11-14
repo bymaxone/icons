@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/flag.schema.json",
+  "title": "Bangladesh",
+  "code": "BD",
+  "source": "https://gitlab.com/catamphetamine/country-flag-icons/-/blob/v1.6.20/flags/3x2/BD.svg",
+  "license": "MIT",
+  "retrievedAt": "2026-11-14",
+  "tags": ["bd", "bangladesh"],
+  "since": "1.0.0"
+}

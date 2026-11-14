@@ -1,0 +1,42 @@
+/**
+ * @fileoverview The Burundi flag.
+ * Written by `pnpm generate` from icons/flags/bi-flag.svg: edit the source, never this file.
+ * @layer Generated
+ */
+
+import { createFlag } from '@bymax-one/icons/runtime'
+
+/**
+ * The Burundi flag, from https://gitlab.com/catamphetamine/country-flag-icons/-/blob/v1.6.20/flags/3x2/BI.svg (MIT, retrieved 2026-11-14).
+ * It is reproduced as published by its source; see TRADEMARKS.md.
+ *
+ * @since 1.0.0
+ */
+export const BiFlagIcon = /* @__PURE__ */ createFlag('bi-flag', '0 0 513 342', [
+  ['path', { fill: '#d80027', d: 'M0 0h513v342H0z' }],
+  ['path', { fill: '#47a644', d: 'M215.9 170.7 0 314.6V26.8zM513 26.8v287.8L297.1 170.7z' }],
+  [
+    'path',
+    {
+      fill: '#0052b4',
+      d: 'M513 26.8 296.1 170.7 513 314.6V342h-41.1L256 197.4 40.1 342H0v-27.4l215.9-143.9L0 26.8V0h40.1L256 143.9 471.9 0H513z'
+    }
+  ],
+  [
+    'path',
+    {
+      fill: '#ffffff',
+      d: 'M513 26.8 297.1 170.7 513 314.6V342h-40L256 197.4 39 342H0v-27.4l215.9-143.9L0 26.8V0h40.1L256 143.9 471.9 0H513z'
+    }
+  ],
+  ['circle', { cx: 251.6, cy: 170.7, r: 100.2, fill: '#ffffff' }],
+  [
+    'path',
+    {
+      fill: '#d80027',
+      stroke: '#47a644',
+      strokeWidth: 3,
+      d: 'm251.4 103.6 7.4 12.9h14.8l-7.4 12.8 7.4 12.8h-14.8l-7.4 12.9-7.4-12.9h-14.8l7.4-12.8-7.4-12.8H244zM290.2 170.3l7.4 12.9h14.8L305 196l7.4 12.8h-14.8l-7.4 12.9-7.4-12.9h-14.9l7.4-12.8-7.4-12.8h14.9zM213 170.3l7.4 12.9h14.9l-7.4 12.8 7.4 12.8h-14.9l-7.4 12.9-7.4-12.9h-14.8l7.4-12.8-7.4-12.8h14.8z'
+    }
+  ]
+])

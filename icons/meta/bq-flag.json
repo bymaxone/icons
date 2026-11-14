@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/flag.schema.json",
+  "title": "Caribbean Netherlands",
+  "code": "BQ",
+  "source": "https://gitlab.com/catamphetamine/country-flag-icons/-/blob/v1.6.20/flags/3x2/BQ.svg",
+  "license": "MIT",
+  "retrievedAt": "2026-11-14",
+  "tags": ["bq", "caribbean netherlands"],
+  "since": "1.0.0"
+}
