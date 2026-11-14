@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Clear cart",
+  "tags": ["cart x", "empty cart", "discard", "cancel order"],
+  "categories": ["commerce"],
+  "useCases": ["Empties the shopping cart", "Cancels a pending order"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

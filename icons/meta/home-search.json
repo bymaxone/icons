@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Find home",
+  "tags": ["home search", "find property", "listings", "house hunt"],
+  "categories": ["navigation"],
+  "useCases": ["Searches for a property", "Looks up a house in the listings"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

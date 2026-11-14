@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Remove link",
+  "tags": ["link x", "unlink", "broken link", "detach"],
+  "categories": ["actions"],
+  "useCases": ["Removes a link from an item", "Marks a broken URL"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

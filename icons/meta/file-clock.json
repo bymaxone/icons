@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "File history",
+  "tags": ["file clock", "versions", "recent", "revision"],
+  "categories": ["files"],
+  "useCases": ["Shows earlier versions of a document", "Marks a file with a pending date"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

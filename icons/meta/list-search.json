@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Search list",
+  "tags": ["list search", "find item", "filter", "look up"],
+  "categories": ["data"],
+  "useCases": ["Searches the items of a list", "Filters a collection by text"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

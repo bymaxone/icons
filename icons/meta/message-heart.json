@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Loved message",
+  "tags": ["message heart", "reaction", "kind words", "love"],
+  "categories": ["communication"],
+  "useCases": ["Reacts to a message with love", "Saves a kind comment"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

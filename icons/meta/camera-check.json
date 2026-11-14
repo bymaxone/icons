@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Camera check",
+  "tags": ["camera check", "photo verified", "approved", "capture ok"],
+  "categories": ["media"],
+  "useCases": ["Confirms a photo was taken", "Marks a verified capture"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

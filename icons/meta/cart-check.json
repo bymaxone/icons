@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Cart ready",
+  "tags": ["cart check", "checkout ready", "confirmed", "order ok"],
+  "categories": ["commerce"],
+  "useCases": ["Confirms the items in the cart", "Marks an order ready to pay"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

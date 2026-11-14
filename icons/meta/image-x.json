@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Broken image",
+  "tags": ["image x", "missing picture", "failed upload", "error"],
+  "categories": ["files", "media"],
+  "useCases": ["Shows a picture that failed to load", "Flags a rejected upload"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

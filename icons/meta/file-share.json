@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Share file",
+  "tags": ["file share", "send document", "export", "give access"],
+  "categories": ["files"],
+  "useCases": ["Shares a document with others", "Sends a file to a collaborator"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

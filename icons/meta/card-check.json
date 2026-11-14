@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Card verified",
+  "tags": ["card check", "approved payment", "verified", "valid"],
+  "categories": ["commerce"],
+  "useCases": ["Confirms a payment method is valid", "Marks an approved payment"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

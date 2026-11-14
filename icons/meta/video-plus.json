@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Add video",
+  "tags": ["video plus", "upload video", "new clip", "create"],
+  "categories": ["media"],
+  "useCases": ["Uploads a new video", "Adds a clip to a playlist"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

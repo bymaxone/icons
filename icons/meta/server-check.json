@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Server healthy",
+  "tags": ["server check", "online", "running", "healthy"],
+  "categories": ["data", "dev"],
+  "useCases": ["Confirms a server is running", "Marks a healthy host"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Add link",
+  "tags": ["link plus", "new link", "attach url", "connect"],
+  "categories": ["actions"],
+  "useCases": ["Attaches a new link to an item", "Connects two records"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

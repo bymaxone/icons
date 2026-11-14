@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Home energy",
+  "tags": ["home bolt", "electricity", "power", "utility"],
+  "categories": ["navigation"],
+  "useCases": ["Shows the power use of a house", "Marks an electric utility"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

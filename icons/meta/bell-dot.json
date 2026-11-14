@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Unread notification",
+  "tags": ["bell dot", "unread", "badge", "new alert"],
+  "categories": ["status", "communication"],
+  "useCases": ["Shows that there is a new alert", "Marks unread notifications"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

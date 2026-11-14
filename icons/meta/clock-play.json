@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Start timer",
+  "tags": ["clock play", "start timer", "resume", "begin"],
+  "categories": ["time", "status"],
+  "useCases": ["Starts a timer", "Resumes a paused countdown"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

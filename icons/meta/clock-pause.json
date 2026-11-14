@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Paused timer",
+  "tags": ["clock pause", "timer paused", "hold", "break"],
+  "categories": ["time", "status"],
+  "useCases": ["Pauses a running timer", "Marks a stopped countdown"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

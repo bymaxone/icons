@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Location off",
+  "tags": ["map pin off", "no location", "gps disabled", "hidden place"],
+  "categories": ["maps"],
+  "useCases": ["Shows that location sharing is off", "Marks a place without an address"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

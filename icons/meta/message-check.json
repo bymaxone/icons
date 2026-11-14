@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Message delivered",
+  "tags": ["message check", "sent", "read receipt", "delivered"],
+  "categories": ["communication"],
+  "useCases": ["Confirms a message was delivered", "Shows a read receipt"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

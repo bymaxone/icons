@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Clock disabled",
+  "tags": ["clock off", "timer off", "no deadline", "disabled"],
+  "categories": ["time", "status"],
+  "useCases": ["Turns off a timer", "Marks an item without a deadline"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

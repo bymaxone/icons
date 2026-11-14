@@ -1,0 +1,24 @@
+/**
+ * @fileoverview The `image-search` icon, line variant.
+ * Written by `pnpm generate` from icons/line/image-search.svg: edit the source, never this file.
+ * @layer Generated
+ */
+
+import { createIcon } from '@bymax-one/icons/runtime'
+
+/**
+ * The `image-search` icon, line variant: image search, find photo, reverse search, visual lookup.
+ *
+ * @since 0.1.0
+ */
+export const ImageSearchIcon = /* @__PURE__ */ createIcon('image-search', [
+  [
+    'path',
+    {
+      d: 'M7.25 5.25h10c3.25 0 4 .75 4 4v3.398m-9.436 6.602H7.25c-3.25 0-4-.75-4-4v-6c0-3.25.75-4 4-4'
+    }
+  ],
+  ['path', { d: 'm6.5 16 3.45-3.856c.65-.726.955-.731 1.625-.023l.589.622' }],
+  ['path', { d: 'M17.471 10.518q.029-.13.029-.268a1.25 1.25 0 0 0-2.5 0' }],
+  ['path', { d: 'M19.5 16.25a2.75 2.75 0 1 1-5.5 0 2.75 2.75 0 0 1 5.5 0m-.6 1.9 2.1 2.1' }]
+])

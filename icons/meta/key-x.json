@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Revoke key",
+  "tags": ["key x", "revoked", "invalid key", "deny"],
+  "categories": ["security"],
+  "useCases": ["Revokes an API key", "Marks an invalid credential"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

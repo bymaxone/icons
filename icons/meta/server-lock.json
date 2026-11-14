@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Secured server",
+  "tags": ["server lock", "protected host", "firewall", "private"],
+  "categories": ["data", "dev"],
+  "useCases": ["Marks a protected server", "Restricts access to a host"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

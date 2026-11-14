@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Inactive user",
+  "tags": ["user off", "deactivated", "disabled account", "offline"],
+  "categories": ["people"],
+  "useCases": ["Marks a deactivated account", "Shows a member who is away"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

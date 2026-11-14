@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Database off",
+  "tags": ["database off", "offline data", "disabled", "detached"],
+  "categories": ["data", "dev"],
+  "useCases": ["Shows a data source that is turned off", "Marks a detached database"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

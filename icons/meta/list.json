@@ -12,6 +12,10 @@
     {
       "name": "table-of-contents",
       "deprecated": false
+    },
+    {
+      "name": "list-details",
+      "deprecated": false
     }
   ],
   "variants": ["line"],

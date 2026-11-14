@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Image search",
+  "tags": ["image search", "find photo", "reverse search", "visual lookup"],
+  "categories": ["files", "media"],
+  "useCases": ["Searches a gallery for pictures", "Finds a photo by its content"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

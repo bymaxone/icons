@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Edit time",
+  "tags": ["clock edit", "change time", "adjust", "reschedule"],
+  "categories": ["time", "status"],
+  "useCases": ["Changes the time of an event", "Adjusts a logged duration"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

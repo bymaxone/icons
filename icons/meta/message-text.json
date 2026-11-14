@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Text message",
+  "tags": ["message text", "sms", "written chat", "content"],
+  "categories": ["communication"],
+  "useCases": ["Opens a text conversation", "Shows the body of a message"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

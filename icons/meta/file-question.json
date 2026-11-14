@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Unknown file",
+  "tags": ["file question", "unknown document", "needs review", "unidentified"],
+  "categories": ["files"],
+  "useCases": ["Flags a file that needs an answer", "Marks an unidentified document"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

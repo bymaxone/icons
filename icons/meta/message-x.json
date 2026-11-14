@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Delete message",
+  "tags": ["message x", "remove chat", "failed", "dismiss"],
+  "categories": ["communication"],
+  "useCases": ["Deletes a message from a thread", "Shows a message that failed to send"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

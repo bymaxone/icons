@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Cloud error",
+  "tags": ["cloud x", "sync failed", "offline", "disconnected"],
+  "categories": ["connectivity", "nature"],
+  "useCases": ["Shows a failed cloud sync", "Marks a lost connection to storage"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

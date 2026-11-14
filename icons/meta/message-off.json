@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Chat muted",
+  "tags": ["message off", "mute chat", "silenced", "disabled"],
+  "categories": ["communication"],
+  "useCases": ["Mutes a conversation", "Turns off comments on a post"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

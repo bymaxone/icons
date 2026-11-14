@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Remove team members",
+  "tags": ["users minus", "remove members", "leave group", "offboard"],
+  "categories": ["people"],
+  "useCases": ["Removes people from a group", "Ends access for a team"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Add team members",
+  "tags": ["users plus", "invite team", "new members", "grow group"],
+  "categories": ["people"],
+  "useCases": ["Invites several people at once", "Adds people to a group"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

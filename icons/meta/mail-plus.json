@@ -1,0 +1,18 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Mail with plus",
+  "tags": ["mail plus", "plus", "invite", "email"],
+  "categories": ["people"],
+  "useCases": ["Sends an invitation by email", "Shows a pending invite"],
+  "aliases": [
+    {
+      "name": "mail-invite",
+      "deprecated": true,
+      "deprecationReason": "Renamed to mail-plus, the object the drawing shows.",
+      "toBeRemovedInVersion": "2.0.0"
+    }
+  ],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

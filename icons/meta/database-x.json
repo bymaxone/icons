@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Database error",
+  "tags": ["database x", "query failed", "data error", "failed"],
+  "categories": ["data", "dev"],
+  "useCases": ["Shows a failed data source", "Marks a broken connection to the database"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

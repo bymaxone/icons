@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Server down",
+  "tags": ["server x", "outage", "offline", "failure"],
+  "categories": ["data", "dev"],
+  "useCases": ["Shows a server that is down", "Flags a failed host"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

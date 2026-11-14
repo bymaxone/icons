@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Cart unavailable",
+  "tags": ["cart off", "checkout disabled", "no purchase", "closed store"],
+  "categories": ["commerce"],
+  "useCases": ["Shows that buying is turned off", "Marks a store closed to orders"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

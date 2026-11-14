@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Tree list",
+  "tags": ["list tree", "hierarchy", "nested items", "indent"],
+  "categories": ["data"],
+  "useCases": ["Shows nested items in a hierarchy", "Expands a tree of categories"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

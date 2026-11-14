@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Locked database",
+  "tags": ["database lock", "protected data", "encrypted", "read only"],
+  "categories": ["data", "dev"],
+  "useCases": ["Marks a protected data source", "Shows a database locked for writes"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

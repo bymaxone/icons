@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Delete tag",
+  "tags": ["tag x", "discard label", "clear tag", "cancel"],
+  "categories": ["commerce"],
+  "useCases": ["Deletes a label from the list", "Discards an unused tag"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

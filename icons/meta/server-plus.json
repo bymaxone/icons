@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Add server",
+  "tags": ["server plus", "new host", "provision", "create instance"],
+  "categories": ["data", "dev"],
+  "useCases": ["Provisions a new server", "Adds a host to a cluster"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

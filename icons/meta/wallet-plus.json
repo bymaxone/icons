@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Add funds",
+  "tags": ["wallet plus", "top up", "deposit", "credit"],
+  "categories": ["commerce"],
+  "useCases": ["Adds money to a balance", "Tops up an account"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}
