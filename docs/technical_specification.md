@@ -213,8 +213,9 @@ Brand marks are the only third-party shapes in the package.
 - **Source:** path data from Simple Icons (CC0-1.0) where available, credited in `TRADEMARKS.md` even though CC0 does not require it.
 - **Per-brand metadata:** `source`, `guidelines`, `license`, `retrievedAt`.
 - **Notice:** `TRADEMARKS.md` states that marks belong to their owners, imply no endorsement, and are excluded from the MIT grant.
-- **List for 1.0:** google, apple, github; youtube, tiktok, instagram, facebook, x, threads, pinterest, vimeo; whatsapp, spotify, discord.
-- **Not in 1.0:** microsoft and linkedin, which Simple Icons removed at their owners' request, so no source with a clear licence exists; they return when one does. The decision is provisional and reversible.
+- **List for 1.0:** 110 marks (B4a's 14 and B7's 96), the files of `icons/brands`, each with its line in `TRADEMARKS.md`.
+- **Selection:** a brand is in only if Simple Icons 16.37.0 has its path, the owner's own guidelines page was opened and is about the use of the logo or brand, and the licence of the mark can be shipped. The page, its owner and the day it was read are in `docs/brands/guidelines-evidence.md`, and a provenance test holds every mark to them. A mark under a licence that asks for credit has it in `TRADEMARKS.md`. A lettering mark is tagged `wordmark`, for sizes larger than 24 px.
+- **Not in 1.0:** the brands that failed a rule, each with its reason, are in [`b7/brands-1.0.md`](./b7/brands-1.0.md), which includes microsoft and linkedin, removed by Simple Icons at their owners' request. A brand returns when its blocker lifts. The decision is provisional and reversible.
 - **Google:** the monochrome G is the default (Studio decision 103). Google's "Sign in with Google" branding guidelines require the standard colour G on the sign-in button and list monochrome versions as a "Don't". The risk is accepted by the founder and recorded in the Studio. An optional `google-color` mark was planned for the sign-in button (D3), but the current official Google sign-in asset uses a gradient G built with a mask, filters and a `foreignObject` conic-gradient, which the package format does not allow; `google-color` is deferred until an official solid-colour asset exists.
 
 ---
