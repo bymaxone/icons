@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Wallet disabled",
+  "tags": ["wallet off", "no funds", "frozen", "inactive"],
+  "categories": ["commerce"],
+  "useCases": ["Shows a frozen balance", "Marks a disabled payment account"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

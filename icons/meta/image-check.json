@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Image approved",
+  "tags": ["image check", "photo approved", "verified", "accepted"],
+  "categories": ["files", "media"],
+  "useCases": ["Approves an uploaded photo", "Marks a verified picture"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

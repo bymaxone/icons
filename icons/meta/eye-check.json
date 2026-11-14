@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Reviewed",
+  "tags": ["eye check", "reviewed", "seen", "approved"],
+  "categories": ["status"],
+  "useCases": ["Marks an item as reviewed", "Confirms a document was seen"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

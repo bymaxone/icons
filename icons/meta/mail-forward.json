@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Forward mail",
+  "tags": ["mail forward", "pass along", "resend", "redirect"],
+  "categories": ["communication"],
+  "useCases": ["Forwards a message to another person", "Redirects an email thread"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

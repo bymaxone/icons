@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Away from home",
+  "tags": ["home off", "vacant", "away", "inactive"],
+  "categories": ["navigation"],
+  "useCases": ["Marks a house as vacant", "Shows a household that is switched off"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

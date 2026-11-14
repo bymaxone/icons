@@ -1,0 +1,25 @@
+/**
+ * @fileoverview The `users-minus` icon, line variant.
+ * Written by `pnpm generate` from icons/line/users-minus.svg: edit the source, never this file.
+ * @layer Generated
+ */
+
+import { createIcon } from '@bymax-one/icons/runtime'
+
+/**
+ * The `users-minus` icon, line variant: users minus, remove members, leave group, offboard.
+ *
+ * @since 0.1.0
+ */
+export const UsersMinusIcon = /* @__PURE__ */ createIcon('users-minus', [
+  ['path', { d: 'M5.525 8.25a2.975 2.975 0 1 0 5.95 0 2.975 2.975 0 0 0-5.95 0' }],
+  [
+    'path',
+    {
+      d: 'm3.595 17.367.124-.592c.431-2.072 1.019-2.55 3.136-2.55h3.29c1.151 0 1.851.141 2.318.604m-.391 4.492a7 7 0 0 1-.259.004H5.188c-1.625 0-1.924-.367-1.593-1.958'
+    }
+  ],
+  ['path', { d: 'M14.5 6.5a2.75 2.75 0 1 0 5.5 0 2.75 2.75 0 0 0-5.5 0' }],
+  ['path', { d: 'M15.5 12.25H17c1.219 0 1.583.269 1.941 1.434l.169.548' }],
+  ['path', { d: 'M14.25 17.25h7' }]
+])

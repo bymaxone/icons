@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Key disabled",
+  "tags": ["key off", "inactive key", "suspended", "no access"],
+  "categories": ["security"],
+  "useCases": ["Shows a key that is switched off", "Suspends a credential"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

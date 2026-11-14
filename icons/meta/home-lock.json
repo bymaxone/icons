@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Locked home",
+  "tags": ["home lock", "secure house", "alarm armed", "private"],
+  "categories": ["navigation"],
+  "useCases": ["Shows a secured house", "Marks a private household"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Edit visibility",
+  "tags": ["eye edit", "edit view", "preview changes", "modify"],
+  "categories": ["status"],
+  "useCases": ["Edits what a viewer can see", "Changes the visibility of an item"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

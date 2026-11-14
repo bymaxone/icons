@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Timed lock",
+  "tags": ["lock clock", "auto lock", "session timeout", "scheduled"],
+  "categories": ["security", "status"],
+  "useCases": ["Locks an item after a delay", "Shows a session that expires"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

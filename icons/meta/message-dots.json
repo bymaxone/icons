@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Typing indicator",
+  "tags": ["message dots", "typing", "writing", "pending reply"],
+  "categories": ["communication"],
+  "useCases": ["Shows that someone is typing", "Marks a reply in progress"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

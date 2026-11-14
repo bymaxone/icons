@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Mail muted",
+  "tags": ["mail off", "muted", "unsubscribed", "no email"],
+  "categories": ["communication"],
+  "useCases": ["Turns off email notifications", "Marks an unsubscribed address"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

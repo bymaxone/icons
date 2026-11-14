@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Mail failed",
+  "tags": ["mail x", "delivery failed", "bounced", "rejected"],
+  "categories": ["communication"],
+  "useCases": ["Shows an email that bounced", "Flags a message that was not delivered"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

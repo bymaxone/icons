@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Smart home",
+  "tags": ["home signal", "wifi", "connected house", "network"],
+  "categories": ["navigation"],
+  "useCases": ["Shows a connected household", "Marks a home network in range"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

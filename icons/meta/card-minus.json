@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Remove card",
+  "tags": ["card minus", "remove payment", "delete card", "unlink"],
+  "categories": ["commerce"],
+  "useCases": ["Removes a saved payment method", "Unlinks a card from an account"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

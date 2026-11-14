@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Cloud warning",
+  "tags": ["cloud warning", "storage alert", "quota", "sync issue"],
+  "categories": ["connectivity", "nature"],
+  "useCases": ["Warns that storage is almost full", "Flags a sync problem"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

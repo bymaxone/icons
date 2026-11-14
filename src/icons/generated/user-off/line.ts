@@ -1,0 +1,23 @@
+/**
+ * @fileoverview The `user-off` icon, line variant.
+ * Written by `pnpm generate` from icons/line/user-off.svg: edit the source, never this file.
+ * @layer Generated
+ */
+
+import { createIcon } from '@bymax-one/icons/runtime'
+
+/**
+ * The `user-off` icon, line variant: user off, deactivated, disabled account, offline.
+ *
+ * @since 0.1.0
+ */
+export const UserOffIcon = /* @__PURE__ */ createIcon('user-off', [
+  ['path', { d: 'M13.935 9.667a3.5 3.5 0 1 0-4.859-4.841' }],
+  [
+    'path',
+    {
+      d: 'M14.999 19.25H6.75c-1.625 0-1.909-.364-1.515-1.94l.265-1.06c.579-2.319 1.26-2.941 3.489-2.996'
+    }
+  ],
+  ['path', { d: 'm3.75 3.75 16.5 16.5' }]
+])

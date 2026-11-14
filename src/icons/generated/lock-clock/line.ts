@@ -1,0 +1,23 @@
+/**
+ * @fileoverview The `lock-clock` icon, line variant.
+ * Written by `pnpm generate` from icons/line/lock-clock.svg: edit the source, never this file.
+ * @layer Generated
+ */
+
+import { createIcon } from '@bymax-one/icons/runtime'
+
+/**
+ * The `lock-clock` icon, line variant: lock clock, auto lock, session timeout, scheduled.
+ *
+ * @since 0.1.0
+ */
+export const LockClockIcon = /* @__PURE__ */ createIcon('lock-clock', [
+  [
+    'path',
+    {
+      d: 'M8.75 10.25h7c1.56 0 2.462.197 2.958.845M12.163 21.25H8.75c-2.844 0-3.5-.656-3.5-3.5v-4c0-2.844.656-3.5 3.5-3.5'
+    }
+  ],
+  ['path', { d: 'M9.25 10.25V7a3 3 0 1 1 6 0v3.25' }],
+  ['path', { d: 'M21 17.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0m-3.5-1.9v1.9h2.1' }]
+])

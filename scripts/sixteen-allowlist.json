@@ -36,6 +36,10 @@
       "pairs": ["0-1"],
       "why": "the crease fuses with the outline at the family's cut; the silhouette still reads as a document"
     },
+    "database-lock": {
+      "pairs": ["0-2"],
+      "why": "the lock badge fuses with the cylinder outline; it still reads as a locked database"
+    },
     "elephant": {
       "pairs": ["0-1", "1-2"],
       "why": "the ear fuses with the head outline and with the legs; it still reads as an elephant"
@@ -45,6 +49,10 @@
       "why": "the crease fuses with the outline at the family's cut; the silhouette still reads as a document"
     },
     "file-check": {
+      "pairs": ["0-1"],
+      "why": "the crease fuses with the outline at the family's cut; the silhouette still reads as a document"
+    },
+    "file-clock": {
       "pairs": ["0-1"],
       "why": "the crease fuses with the outline at the family's cut; the silhouette still reads as a document"
     },
@@ -84,7 +92,15 @@
       "pairs": ["0-1"],
       "why": "the crease fuses with the outline at the family's cut; the silhouette still reads as a document"
     },
+    "file-question": {
+      "pairs": ["0-1"],
+      "why": "the crease fuses with the outline at the family's cut; the silhouette still reads as a document"
+    },
     "file-search": {
+      "pairs": ["0-1"],
+      "why": "the crease fuses with the outline at the family's cut; the silhouette still reads as a document"
+    },
+    "file-share": {
       "pairs": ["0-1"],
       "why": "the crease fuses with the outline at the family's cut; the silhouette still reads as a document"
     },
@@ -97,6 +113,10 @@
       "why": "the crease fuses with the outline at the family's cut; the silhouette still reads as a document"
     },
     "file-upload": {
+      "pairs": ["0-1"],
+      "why": "the crease fuses with the outline at the family's cut; the silhouette still reads as a document"
+    },
+    "file-user": {
       "pairs": ["0-1"],
       "why": "the crease fuses with the outline at the family's cut; the silhouette still reads as a document"
     },
@@ -140,6 +160,10 @@
       "pairs": ["0-1"],
       "why": "the head arc fuses with the snout; it still reads as a hippo"
     },
+    "image-search": {
+      "pairs": ["2-3"],
+      "why": "the sun fuses with the lens; it still reads as an image search"
+    },
     "lightbulb": {
       "pairs": ["0-1"],
       "why": "still reads as the object in the blur"
@@ -176,6 +200,10 @@
       "pairs": ["0-2"],
       "why": "the mainsail fuses with the hull; it still reads as a sailboat"
     },
+    "server-lock": {
+      "pairs": ["1-2"],
+      "why": "the lock badge fuses with the lower rack; it still reads as a locked server"
+    },
     "shadow": {
       "pairs": ["0-1"],
       "why": "the shadow arc fuses with the circle it trails; it still reads as a shadow"
@@ -191,6 +219,10 @@
     "turtle": {
       "pairs": ["1-2"],
       "why": "the head fuses with the legs; it still reads as a turtle"
+    },
+    "wallet-plus": {
+      "pairs": ["0-2"],
+      "why": "the strap line fuses with the wallet outline; it still reads as a wallet with a plus"
     },
     "wifi-lock": {
       "pairs": ["0-3"],

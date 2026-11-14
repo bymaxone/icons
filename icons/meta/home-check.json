@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Home verified",
+  "tags": ["home check", "verified address", "confirmed", "at home"],
+  "categories": ["navigation"],
+  "useCases": ["Confirms a home address", "Marks a property as approved"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

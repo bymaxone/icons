@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Calendar with user",
+  "tags": ["calendar user", "appointment", "booking", "attendee"],
+  "categories": ["time"],
+  "useCases": ["Assigns a person to a date", "Shows who attends an event"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

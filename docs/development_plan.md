@@ -442,6 +442,7 @@ These rules apply to every phase. Phase sections only add rules specific to them
 - **B6-F2 ✅ (2026-11-12):** approved by the delegated auditor on behalf of the founder; food is closed for 1.0.
 - **B6-F3 ✅ (2026-11-13):** approved by the delegated auditor on behalf of the founder; `hand-point` is excluded because a single raised finger reads as an obscene gesture.
 - **B6-F4 ✅ (2026-11-13):** approved by the delegated auditor on behalf of the founder.
+- **B6-F5 ✅ (2026-11-13):** the family variants (the third top-up), approved by the delegated auditor on behalf of the founder; `mail-invite` is renamed `mail-plus`.
 - **Size:** XL
 
 ### B7: brand-marks

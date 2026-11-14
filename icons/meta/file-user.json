@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "User file",
+  "tags": ["file user", "profile document", "owner", "personal file"],
+  "categories": ["files"],
+  "useCases": ["Shows a document owned by a person", "Opens a personal record"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

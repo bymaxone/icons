@@ -1,0 +1,26 @@
+/**
+ * @fileoverview The `camera-check` icon, line variant.
+ * Written by `pnpm generate` from icons/line/camera-check.svg: edit the source, never this file.
+ * @layer Generated
+ */
+
+import { createIcon } from '@bymax-one/icons/runtime'
+
+/**
+ * The `camera-check` icon, line variant: camera check, photo verified, approved, capture ok.
+ *
+ * @since 0.1.0
+ */
+export const CameraCheckIcon = /* @__PURE__ */ createIcon('camera-check', [
+  [
+    'path',
+    {
+      d: 'M5.75 8.25h2.5l.883-1.471c.501-.836.842-1.029 1.817-1.029h2.6c.975 0 1.316.193 1.817 1.029l.883 1.471h2.5c2.031 0 2.5.469 2.5 2.5v1.752m-9.11 6.748H7.25c-3.25 0-4-.75-4-4v-4.5c0-2.031.469-2.5 2.5-2.5'
+    }
+  ],
+  [
+    'path',
+    { d: 'M10 13.75A2.25 2.25 0 0 0 12.25 16l.06-.001m1.941-1.219A2.25 2.25 0 1 0 10 13.75' }
+  ],
+  ['path', { d: 'M14.75 17.75 17 20l4.5-4.5' }]
+])

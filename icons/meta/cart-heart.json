@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Wishlist cart",
+  "tags": ["cart heart", "wishlist", "saved items", "favorite products"],
+  "categories": ["commerce"],
+  "useCases": ["Saves a product to a wish list", "Shows favorite items to buy"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

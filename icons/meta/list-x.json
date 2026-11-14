@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Clear list",
+  "tags": ["list x", "remove items", "cancel", "discard"],
+  "categories": ["data"],
+  "useCases": ["Removes the entries of a list", "Cancels a batch of items"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

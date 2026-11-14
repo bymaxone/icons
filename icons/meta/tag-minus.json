@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Remove tag",
+  "tags": ["tag minus", "untag", "delete label", "detach"],
+  "categories": ["commerce"],
+  "useCases": ["Removes a label from an item", "Detaches a tag from a record"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

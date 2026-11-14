@@ -23,3 +23,6 @@ export const ViewListIcon = ListIcon
 
 /** `table-of-contents`: an alias of {@link ListIcon}. */
 export const TableOfContentsIcon = ListIcon
+
+/** `list-details`: an alias of {@link ListIcon}. */
+export const ListDetailsIcon = ListIcon

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Tag disabled",
+  "tags": ["tag off", "no discount", "inactive label", "expired"],
+  "categories": ["commerce"],
+  "useCases": ["Marks an expired price offer", "Shows a label that is turned off"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Locked account",
+  "tags": ["user lock", "blocked account", "restricted", "suspended"],
+  "categories": ["people"],
+  "useCases": ["Marks a locked user account", "Restricts a profile to admins"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

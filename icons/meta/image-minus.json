@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Remove image",
+  "tags": ["image minus", "delete photo", "remove picture", "detach"],
+  "categories": ["files", "media"],
+  "useCases": ["Removes a picture from a gallery", "Detaches an image from a post"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

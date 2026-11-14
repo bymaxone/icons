@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "New home",
+  "tags": ["home plus", "add property", "new house", "create"],
+  "categories": ["navigation"],
+  "useCases": ["Adds a property to a list", "Creates a new household"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

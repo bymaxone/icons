@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Private chat",
+  "tags": ["message lock", "encrypted chat", "secret", "secure"],
+  "categories": ["communication"],
+  "useCases": ["Marks an encrypted conversation", "Locks a thread to its members"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

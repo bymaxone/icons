@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Message alert",
+  "tags": ["message warning", "suspicious chat", "report", "caution"],
+  "categories": ["communication"],
+  "useCases": ["Flags a message for review", "Warns about a risky conversation"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

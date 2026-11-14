@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Calendar off",
+  "tags": ["calendar off", "unavailable", "disabled", "no events"],
+  "categories": ["time"],
+  "useCases": ["Marks a calendar as turned off", "Shows a day without availability"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}
