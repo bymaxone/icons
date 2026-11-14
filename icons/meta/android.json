@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/brand.schema.json",
+  "title": "Android",
+  "source": "https://github.com/simple-icons/simple-icons/blob/16.37.0/icons/android.svg",
+  "guidelines": "https://developer.android.com/distribute/marketing-tools/brand-guidelines",
+  "license": "CC-BY-3.0",
+  "retrievedAt": "2026-11-14",
+  "tags": ["mobile", "google", "phone", "operating system"],
+  "since": "1.0.0"
+}

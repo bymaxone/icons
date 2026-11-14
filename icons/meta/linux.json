@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/brand.schema.json",
+  "title": "Linux",
+  "source": "https://github.com/simple-icons/simple-icons/blob/16.37.0/icons/linux.svg",
+  "guidelines": "https://www.linuxfoundation.org/legal/the-linux-mark",
+  "license": "CC0-1.0",
+  "retrievedAt": "2026-11-14",
+  "tags": ["operating system", "kernel", "tux", "open source"],
+  "since": "1.0.0"
+}

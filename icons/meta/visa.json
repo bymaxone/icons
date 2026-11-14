@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/brand.schema.json",
+  "title": "Visa",
+  "source": "https://github.com/simple-icons/simple-icons/blob/16.37.0/icons/visa.svg",
+  "guidelines": "https://corporate.visa.com/content/dam/VCOM/corporate/about-visa/documents/visa-brand-standards-sept2025.pdf",
+  "license": "CC0-1.0",
+  "retrievedAt": "2026-11-14",
+  "tags": ["wordmark", "credit card", "debit card", "payments", "card network"],
+  "since": "1.0.0"
+}

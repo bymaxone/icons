@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/brand.schema.json",
+  "title": "Firefox",
+  "source": "https://github.com/simple-icons/simple-icons/blob/16.37.0/icons/firefox.svg",
+  "guidelines": "https://www.mozilla.org/en-US/foundation/trademarks/policy/",
+  "license": "CC0-1.0",
+  "retrievedAt": "2026-11-14",
+  "tags": ["browser", "web", "mozilla", "gecko"],
+  "since": "1.0.0"
+}

@@ -104,12 +104,12 @@ export const BRANDS_BASE_BYTES = 5
 
 /**
  * The most brotli bytes one brand mark may cost the `./brands` entry, which holds the owner's
- * path data of every mark. The tree measures 333.7 bytes a mark, so this leaves about 20% for
+ * path data of every mark. The tree measures 386.9 bytes a mark, so this leaves about 20% for
  * a mark with a longer path.
  */
-export const BRANDS_MARK_BYTES = 400
+export const BRANDS_MARK_BYTES = 465
 
-/** The most brotli bytes the `./brands` entry may reach whatever the marks, room for about 160. */
+/** The most brotli bytes the `./brands` entry may reach whatever the marks, room for about 140. */
 export const BRANDS_CAP_BYTES = 64 * 1024
 
 /**

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/brand.schema.json",
+  "title": "Shopify",
+  "source": "https://github.com/simple-icons/simple-icons/blob/16.37.0/icons/shopify.svg",
+  "guidelines": "https://www.shopify.com/brand-assets",
+  "license": "CC0-1.0",
+  "retrievedAt": "2026-11-14",
+  "tags": ["ecommerce", "online store", "checkout", "shop"],
+  "since": "1.0.0"
+}

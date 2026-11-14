@@ -70,10 +70,10 @@ const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 //     2,000 of them at the measured cost; the arithmetic is `src/pipeline/meta-budget.ts`.
 //   - brands, a budget per mark: `dist/brands/index.mjs` holds the owner's path data of every mark, so
 //     its size follows the set. The fixed part measures 5 bytes brotli with no mark; the tree
-//     measures 22362 bytes with 67 marks, (22362 - 5) / 67 = 333.7 bytes brotli a mark, almost
-//     all of it path data. The budget is 400 bytes a mark, about 20% of headroom for a mark with
-//     a longer path, so the limit is 5 + 400 * marks, within a floor of 5 KiB and a sanity cap of
-//     64 KiB, room for about 160 marks; the arithmetic is `src/pipeline/meta-budget.ts`. An
+//     measures 42561 bytes with 110 marks, (42561 - 5) / 110 = 386.9 bytes brotli a mark, almost
+//     all of it path data. The budget is 465 bytes a mark, about 20% of headroom for a mark with
+//     a longer path, so the limit is 5 + 465 * marks, within a floor of 5 KiB and a sanity cap of
+//     64 KiB, room for about 140 marks; the arithmetic is `src/pipeline/meta-budget.ts`. An
 //     inline of the runtime still fails.
 //
 // Each icon component is measured by `scripts/check-component-size.mjs`, against the targets

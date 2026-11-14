@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/brand.schema.json",
+  "title": "App Store",
+  "source": "https://github.com/simple-icons/simple-icons/blob/16.37.0/icons/appstore.svg",
+  "guidelines": "https://developer.apple.com/app-store/marketing/guidelines/",
+  "license": "CC0-1.0",
+  "retrievedAt": "2026-11-14",
+  "tags": ["apple", "apps", "ios", "store"],
+  "since": "1.0.0"
+}

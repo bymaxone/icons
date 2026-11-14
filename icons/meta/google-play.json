@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/brand.schema.json",
+  "title": "Google Play",
+  "source": "https://github.com/simple-icons/simple-icons/blob/16.37.0/icons/googleplay.svg",
+  "guidelines": "https://partnermarketinghub.withgoogle.com/brands/google-play/google-play/lockups-icons-badges/",
+  "license": "CC0-1.0",
+  "retrievedAt": "2026-11-14",
+  "tags": ["android", "apps", "play store", "store"],
+  "since": "1.0.0"
+}
