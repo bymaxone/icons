@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Find book",
+  "tags": ["book search", "library lookup", "search titles", "browse catalog"],
+  "categories": ["files", "science"],
+  "useCases": ["Looks for a title in a library", "Searches a catalog of books"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

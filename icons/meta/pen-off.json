@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Editing locked",
+  "tags": ["pen off", "read only", "no writing", "disabled draw"],
+  "categories": ["editing", "text"],
+  "useCases": ["Shows that editing is disabled", "Marks a document as read only"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

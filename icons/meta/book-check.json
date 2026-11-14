@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Book read",
+  "tags": ["book check", "finished reading", "completed title", "read list"],
+  "categories": ["files", "science"],
+  "useCases": ["Marks a title as finished", "Confirms that a lesson was read"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

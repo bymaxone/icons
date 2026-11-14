@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Biometrics off",
+  "tags": ["fingerprint off", "no touch id", "disabled biometric", "password only"],
+  "categories": ["security"],
+  "useCases": ["Turns off sign in by fingerprint", "Shows that biometrics are unavailable"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

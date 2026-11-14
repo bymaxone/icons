@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Alarm done",
+  "tags": ["alarm clock check", "reminder done", "wake confirmed", "alert completed"],
+  "categories": ["time"],
+  "useCases": ["Confirms that a reminder was handled", "Marks an alarm as completed"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

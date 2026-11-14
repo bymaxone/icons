@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Webcam off",
+  "tags": ["webcam off", "video muted", "hidden camera", "privacy shutter"],
+  "categories": ["devices", "media"],
+  "useCases": ["Turns the webcam off", "Leaves a video call without a picture"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

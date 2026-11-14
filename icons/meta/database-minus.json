@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Remove data source",
+  "tags": ["database minus", "delete records", "drop storage", "detach dataset"],
+  "categories": ["data", "dev"],
+  "useCases": ["Removes a data source from a project", "Deletes records from storage"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

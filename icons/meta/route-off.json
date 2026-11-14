@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Route unavailable",
+  "tags": ["route off", "no directions", "closed road", "path blocked"],
+  "categories": ["maps", "navigation"],
+  "useCases": ["Shows that a path cannot be taken", "Cancels the planned trip"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

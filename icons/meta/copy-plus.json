@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Duplicate and add",
+  "tags": ["copy plus", "clone item", "extra copy", "multiply"],
+  "categories": ["actions"],
+  "useCases": ["Creates one more copy of an item", "Adds a duplicate to a collection"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

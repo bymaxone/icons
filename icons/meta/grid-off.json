@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Grid hidden",
+  "tags": ["grid off", "hide guides", "free layout", "no snapping"],
+  "categories": ["editing"],
+  "useCases": ["Hides the canvas grid", "Stops layers from snapping"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

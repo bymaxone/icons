@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Apartment",
+  "tags": ["apartment", "flat", "residential block", "housing"],
+  "categories": ["maps"],
+  "useCases": ["Shows a residential building", "Marks a unit in a block of flats"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

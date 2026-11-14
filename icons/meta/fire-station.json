@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Fire station",
+  "tags": ["fire station", "firefighters", "emergency service", "fire department"],
+  "categories": ["maps"],
+  "useCases": ["Marks the home of a fire brigade", "Shows an emergency service building"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Motorboat",
+  "tags": ["motorboat", "speedboat", "powerboat", "water vehicle"],
+  "categories": ["transport"],
+  "useCases": ["Shows a fast boat on the water", "Marks a water transport option"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

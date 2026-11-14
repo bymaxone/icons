@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Security scan",
+  "tags": ["shield search", "threat lookup", "audit protection", "inspect safety"],
+  "categories": ["security"],
+  "useCases": ["Scans an area for threats", "Looks into the protection status"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

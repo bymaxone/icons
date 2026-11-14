@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Alcohol free",
+  "tags": ["alcohol free", "no beer", "sober", "dry"],
+  "categories": ["food"],
+  "useCases": ["Labels a drink without alcohol", "Marks a place where drinks are banned"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

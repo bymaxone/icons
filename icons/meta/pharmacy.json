@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Pharmacy",
+  "tags": ["pharmacy", "drugstore", "chemist", "medicine shop"],
+  "categories": ["maps", "health"],
+  "useCases": ["Marks a place that sells medicine", "Finds a drugstore nearby"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

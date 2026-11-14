@@ -4,6 +4,12 @@
   "tags": ["list checks", "to do", "tasks done", "checkboxes"],
   "categories": ["actions", "status"],
   "useCases": ["Shows tasks that are ticked off", "Opens a to-do list"],
+  "aliases": [
+    {
+      "name": "list-check",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

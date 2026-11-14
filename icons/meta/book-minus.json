@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Remove book",
+  "tags": ["book minus", "drop title", "unshelve", "delete volume"],
+  "categories": ["files", "science"],
+  "useCases": ["Takes a title off a shelf", "Removes a volume from a reading list"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

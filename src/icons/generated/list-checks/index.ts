@@ -4,4 +4,4 @@
  * @layer Generated
  */
 
-export { ListChecksIcon } from './line'
+export { ListCheckIcon, ListChecksIcon } from './line'

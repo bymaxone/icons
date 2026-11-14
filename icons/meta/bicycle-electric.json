@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "E-bike",
+  "tags": ["e bike", "electric bicycle", "pedal assist", "green ride"],
+  "categories": ["transport"],
+  "useCases": ["Shows a battery assisted bicycle", "Marks an electric bike rental"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

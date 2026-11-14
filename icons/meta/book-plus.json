@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Add book",
+  "tags": ["book plus", "new title", "shelve", "add volume"],
+  "categories": ["files", "science"],
+  "useCases": ["Adds a title to a library", "Puts a volume on a reading list"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

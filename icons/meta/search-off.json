@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Search disabled",
+  "tags": ["search off", "no lookup", "hidden finder", "turn off query"],
+  "categories": ["navigation"],
+  "useCases": ["Turns off the search field", "Shows that lookups are unavailable"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

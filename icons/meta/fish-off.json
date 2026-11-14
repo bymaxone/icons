@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Fish free",
+  "tags": ["fish free", "no seafood", "allergen", "pescatarian no"],
+  "categories": ["nature", "food"],
+  "useCases": ["Labels a dish without fish", "Flags a meal free of seafood"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

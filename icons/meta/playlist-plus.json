@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Add to playlist",
+  "tags": ["playlist plus", "queue song", "new track", "extend list"],
+  "categories": ["audio", "media"],
+  "useCases": ["Adds a track to a playlist", "Queues another song to play"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

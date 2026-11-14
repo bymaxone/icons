@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Newest first",
+  "tags": ["arrow up clock", "sort by newest", "later time", "time ascending"],
+  "categories": ["arrows", "time"],
+  "useCases": ["Sorts items from oldest to newest", "Moves a task to an earlier time"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

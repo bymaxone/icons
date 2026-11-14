@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Electric car",
+  "tags": ["electric car", "ev", "zero emission", "plug in vehicle"],
+  "categories": ["transport"],
+  "useCases": ["Shows a battery powered vehicle", "Marks a zero emission ride"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

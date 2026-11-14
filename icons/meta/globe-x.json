@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Region removed",
+  "tags": ["globe x", "cancel language", "drop country", "unsupported area"],
+  "categories": ["connectivity", "maps"],
+  "useCases": ["Removes a language or region", "Marks an area that is not supported"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

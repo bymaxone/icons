@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Bullet train",
+  "tags": ["high speed train", "bullet train", "rail express", "intercity"],
+  "categories": ["transport"],
+  "useCases": ["Shows a fast intercity rail service", "Marks a express train route"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}
