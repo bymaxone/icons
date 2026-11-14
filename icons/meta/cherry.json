@@ -3,7 +3,7 @@
   "label": "Cherry",
   "tags": ["cherry", "fruit", "red", "pair"],
   "categories": ["food"],
-  "useCases": ["Lists a fruit flavour", "Marks a sweet topping"],
+  "useCases": ["Lists a fruit flavor", "Marks a sweet topping"],
   "aliases": [
     {
       "name": "cherries",

@@ -7,7 +7,7 @@
 import { createIcon } from '@bymax-one/icons/runtime'
 
 /**
- * The `pin` icon, line variant: pushpin, keep, stick, favourite.
+ * The `pin` icon, line variant: pushpin, keep, stick, favorite.
  *
  * @since 0.1.0
  */

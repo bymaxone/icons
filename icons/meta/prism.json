@@ -3,7 +3,7 @@
   "label": "Prism",
   "tags": ["prism", "3d", "light", "geometry"],
   "categories": ["shapes", "science"],
-  "useCases": ["Shows a three-dimensional solid", "Splits light into colours"],
+  "useCases": ["Shows a three-dimensional solid", "Splits light into colors"],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

@@ -3,7 +3,7 @@
   "label": "Fireplace",
   "tags": ["fireplace", "hearth", "chimney", "warmth"],
   "categories": ["household"],
-  "useCases": ["Marks a cosy living room", "Lists a heating feature"],
+  "useCases": ["Marks a cozy living room", "Lists a heating feature"],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

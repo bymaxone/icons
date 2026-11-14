@@ -22,7 +22,7 @@ import {
 } from './__tests__/support.ts'
 import type { Output } from './cli.ts'
 import { runMetaCheck } from './cli-meta-check.ts'
-import { META_ALLOWLIST } from './meta-check.ts'
+import { META_ALLOWLIST, RENAMES_REVIEWED } from './meta-check.ts'
 
 /** An output that records every line. */
 function capture(): Output & { logs: string[]; errors: string[] } {
@@ -33,7 +33,9 @@ function capture(): Output & { logs: string[]; errors: string[] } {
 
 const allowlist = (labels: unknown): string => JSON.stringify({ labels })
 
-/** Two icons with their own labels and use cases, a brand mark and an allowlist. */
+const reviewedManifest = (icons: unknown): string => JSON.stringify({ icons })
+
+/** Two icons with their own labels and use cases, a brand mark, an allowlist and a rename manifest listing nothing. */
 function repository(list: string, extra: Record<string, string> = {}, prefix = 'icons'): string {
   return scratchRepository({
     [`${prefix}/line/ring.svg`]: drawing('line', CIRCLE),
@@ -46,6 +48,7 @@ function repository(list: string, extra: Record<string, string> = {}, prefix = '
     }),
     [`${prefix}/meta/acme.json`]: brandMeta(),
     [META_ALLOWLIST]: list,
+    [RENAMES_REVIEWED]: reviewedManifest({}),
     ...extra
   })
 }
@@ -128,6 +131,7 @@ describe('runMetaCheck', () => {
     root = scratchRepository()
     cpSync(join(REPO_ROOT, 'icons'), join(root, 'icons'), { recursive: true })
     cpSync(join(REPO_ROOT, META_ALLOWLIST), join(root, META_ALLOWLIST), { recursive: true })
+    cpSync(join(REPO_ROOT, RENAMES_REVIEWED), join(root, RENAMES_REVIEWED), { recursive: true })
     const output = capture()
     expect(runMetaCheck([], root, output)).toBe(0)
     expect(output.errors).toStrictEqual([])
@@ -153,6 +157,46 @@ describe('runMetaCheck', () => {
     root = repository(text)
     expect(() => runMetaCheck([], root, capture())).toThrow(
       'scripts/meta-allowlist.json: expected { "labels": { "<label>": { "icons": ["<name>"], "why": "<justification>" } } }'
+    )
+  })
+
+  it('fails a renamed icon that is not in the review manifest, and a British spelling', () => {
+    /** Scenario: `ring` holds a deprecated "Renamed to" alias and a British tag; nothing is reviewed. */
+    root = repository(allowlist({}), {
+      'icons/meta/ring.json': iconMeta({
+        tags: ['colour'],
+        aliases: [
+          {
+            name: 'old-ring',
+            deprecated: true,
+            deprecationReason: 'Renamed to ring, the object.',
+            toBeRemovedInVersion: '2.0.0'
+          }
+        ]
+      })
+    })
+    const output = capture()
+    expect(runMetaCheck([], root, output)).toBe(1)
+    expect(output.errors).toStrictEqual([
+      'ring: renamed, but its categories were not reviewed against the drawing. Check them, then list the icon in scripts/renames-reviewed.json with the verdict.',
+      `ring: tag "colour": 'colour' is British; write 'color'.`,
+      '2 metadata problem(s).'
+    ])
+  })
+
+  it.each([
+    ['an array', '[]'],
+    ['null', 'null'],
+    ['no icons table', '{}'],
+    ['icons as an array', reviewedManifest([])],
+    ['icons as null', reviewedManifest(null)],
+    ['icons as a string', reviewedManifest('ring')],
+    ['a verdict that is not text', reviewedManifest({ ring: 3 })]
+  ])('rejects a rename manifest that is %s', (_label, text) => {
+    /** Scenario: the file does not have the shape `{ "icons": { "<name>": "<verdict>" } }`. */
+    root = repository(allowlist({}), { [RENAMES_REVIEWED]: text })
+    expect(() => runMetaCheck([], root, capture())).toThrow(
+      'scripts/renames-reviewed.json: expected { "icons": { "<name>": "<verdict on its categories>" } }'
     )
   })
 })

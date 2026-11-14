@@ -1,9 +1,9 @@
 {
   "$schema": "../../schemas/icon.schema.json",
   "label": "Droplet",
-  "tags": ["droplet", "drop", "water", "colour", "theme colour", "tint"],
-  "categories": ["system"],
-  "useCases": ["Changes the accent colour", "Shows the current accent"],
+  "tags": ["droplet", "drop", "water", "color", "theme color", "tint"],
+  "categories": ["nature", "editing"],
+  "useCases": ["Changes the accent color", "Shows the current accent"],
   "aliases": [
     {
       "name": "accent",

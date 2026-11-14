@@ -3,7 +3,7 @@
   "label": "Unstar",
   "tags": ["star", "off", "unfavorite", "remove"],
   "categories": ["status", "actions"],
-  "useCases": ["Removes a favourite", "Shows that rating is off"],
+  "useCases": ["Removes a favorite", "Shows that rating is off"],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

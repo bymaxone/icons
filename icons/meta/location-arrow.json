@@ -3,7 +3,7 @@
   "label": "Navigation",
   "tags": ["navigation", "direction", "compass", "heading"],
   "categories": ["maps", "navigation"],
-  "useCases": ["Starts turn-by-turn directions", "Centres the map on the current heading"],
+  "useCases": ["Starts turn-by-turn directions", "Centers the map on the current heading"],
   "aliases": [
     {
       "name": "navigation",

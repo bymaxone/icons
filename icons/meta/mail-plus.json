@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Mail with plus",
   "tags": ["mail plus", "plus", "invite", "email"],
-  "categories": ["people"],
+  "categories": ["communication", "people"],
   "useCases": ["Sends an invitation by email", "Shows a pending invite"],
   "aliases": [
     {

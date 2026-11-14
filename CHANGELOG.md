@@ -14,6 +14,9 @@ and deprecated, each rename with the alias that keeps the old name working.
 ### Changed
 
 - Twenty-six line icons are redrawn after a review at catalogue size, 24 px at 1x in the catalogue cell: `antenna`, `oven`, `garlic`, `salt`, `lasso`, `mailbox`, `wall`, `cctv`, `wheelbarrow`, `lip-sync`, `lifebuoy`, `nose`, the four `swipe-*`, `extend`, `prism`, `flip-vertical`, `flip-horizontal`, `screen-rotation`, `projector`, `puzzle`, `crocodile`, `elephant` and `monkey`. Eight niche icons that did not read there are out of 1.0: `bacon`, `butter`, `dumpling`, `shrimp`, `soda`, `cricket`, `crow` and `hedgehog`.
+- The categories of the renamed icons are reviewed and `check:meta` now refuses a renamed icon that is not on `scripts/renames-reviewed.json`: `paint-roller` is in `editing` and `tools`, `stairs` in `household` and `commerce`, `speedometer` in `data`, `commerce` and `transport`, `droplet` in `nature` and `editing`, `mail-plus` in `communication` and `people`, `shapes` in `shapes` and `editing`, and `captions` is in `media`.
+- Tags and use cases are in American English: 45 British spellings in 36 icons are fixed and `check:meta` refuses the ones on its list. The tag `place of interest` of `command` is now `cmd key`, and `fish-off` no longer carries `pescatarian no`.
+- Portuguese search terms are in Brazilian Portuguese and name the right object: for example `braces` is `chaves`, `peanut` is `amendoim`, `forward` is `encaminhar`, `popsicle` is `picolé`, and `picture-in-picture` is `imagem sobre imagem`.
 - Seven icons have a label of their own: no two icons share one except the pairs that are the
   same word, `plus` and `plus-circle` ("Add") and `more-vertical` and `more-horizontal`
   ("More options"). `heart` is "Love" (`thumbs-up` stays "Like"), `arrow-right` is "Continue"

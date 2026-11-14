@@ -7,7 +7,7 @@
 import { createIcon } from '@bymax-one/icons/runtime'
 
 /**
- * The `palette` icon, line variant: colours, paint, theme, swatches.
+ * The `palette` icon, line variant: colors, paint, theme, swatches.
  *
  * @since 0.1.0
  */

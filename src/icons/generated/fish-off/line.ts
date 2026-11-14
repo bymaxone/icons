@@ -7,7 +7,7 @@
 import { createIcon } from '@bymax-one/icons/runtime'
 
 /**
- * The `fish-off` icon, line variant: fish free, no seafood, allergen, pescatarian no.
+ * The `fish-off` icon, line variant: fish free, no seafood, allergen.
  *
  * @since 0.1.0
  */

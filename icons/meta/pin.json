@@ -1,7 +1,7 @@
 {
   "$schema": "../../schemas/icon.schema.json",
   "label": "Pin",
-  "tags": ["pushpin", "keep", "stick", "favourite"],
+  "tags": ["pushpin", "keep", "stick", "favorite"],
   "categories": ["actions"],
   "useCases": [
     "Pins an item to the top of a list",

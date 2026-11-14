@@ -3,7 +3,7 @@
   "label": "Copyleft",
   "tags": ["copyleft", "license", "open", "legal"],
   "categories": ["text", "dev"],
-  "useCases": ["Marks a copyleft licence", "Shows an open licence"],
+  "useCases": ["Marks a copyleft license", "Shows an open license"],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

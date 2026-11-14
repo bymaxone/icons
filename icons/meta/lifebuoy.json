@@ -3,7 +3,7 @@
   "label": "Lifebuoy",
   "tags": ["lifebuoy", "help", "support", "rescue"],
   "categories": ["communication", "status"],
-  "useCases": ["Opens the help centre", "Contacts support"],
+  "useCases": ["Opens the help center", "Contacts support"],
   "aliases": [
     {
       "name": "life-buoy",

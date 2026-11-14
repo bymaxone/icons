@@ -1,0 +1,13 @@
+{
+  "icons": {
+    "arrow-up-down": "arrows, actions: still right for a sort control drawn as two opposed arrows.",
+    "droplet": "nature, editing: a drop of water, and the tint or color control; 'system' came from the old accent name.",
+    "hourglass": "status, time: waiting is a status and the hourglass measures time.",
+    "mail-plus": "communication, people: an envelope first, the invitation meaning second.",
+    "paint-roller": "editing, tools: a roller paints; 'ai' came from the old style-preset name.",
+    "robot": "ai: a robot is the face of an assistant.",
+    "shapes": "shapes, editing: three geometric shapes; 'ai' came from the old variations name.",
+    "speedometer": "data, commerce, transport: a gauge reads a measurement; it also marks a cap and a vehicle dial.",
+    "stairs": "household, commerce: a staircase is part of a building; commerce keeps the plan and tier meaning."
+  }
+}

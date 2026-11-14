@@ -2,7 +2,7 @@
   "$schema": "../../schemas/icon.schema.json",
   "label": "Shapes",
   "tags": ["shapes", "circle", "square", "triangle", "options", "alternatives"],
-  "categories": ["shapes", "ai"],
+  "categories": ["shapes", "editing"],
   "useCases": ["Shows the variations of a result", "Generates alternatives"],
   "aliases": [
     {

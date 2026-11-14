@@ -7,7 +7,7 @@
 import { createIcon } from '@bymax-one/icons/runtime'
 
 /**
- * The `book-x` icon, line variant: book x, cancelled title, declined reading, removed volume.
+ * The `book-x` icon, line variant: book x, canceled title, declined reading, removed volume.
  *
  * @since 0.1.0
  */

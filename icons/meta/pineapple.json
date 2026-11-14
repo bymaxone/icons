@@ -3,7 +3,7 @@
   "label": "Pineapple",
   "tags": ["pineapple", "tropical", "crown", "fruit"],
   "categories": ["food"],
-  "useCases": ["Lists a tropical fruit", "Marks a summer flavour"],
+  "useCases": ["Lists a tropical fruit", "Marks a summer flavor"],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

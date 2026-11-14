@@ -3,7 +3,7 @@
   "label": "Heart off",
   "tags": ["heart off", "unlike", "disabled", "no favorite"],
   "categories": ["emotions", "status"],
-  "useCases": ["Removes an item from favourites", "Turns off likes"],
+  "useCases": ["Removes an item from favorites", "Turns off likes"],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

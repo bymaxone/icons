@@ -3,7 +3,7 @@
   "label": "High dynamic range",
   "tags": ["hdr", "dynamic range", "contrast", "display"],
   "categories": ["media"],
-  "useCases": ["Marks content with a wide colour range", "Switches the display to high contrast"],
+  "useCases": ["Marks content with a wide color range", "Switches the display to high contrast"],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

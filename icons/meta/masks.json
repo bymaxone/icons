@@ -1,7 +1,7 @@
 {
   "$schema": "../../schemas/icon.schema.json",
-  "label": "Theatre masks",
-  "tags": ["masks", "theatre", "drama", "comedy"],
+  "label": "Theater masks",
+  "tags": ["masks", "theater", "drama", "comedy"],
   "categories": ["emotions", "games"],
   "useCases": ["Marks a performing arts section", "Shows comedy and tragedy"],
   "variants": ["line"],
