@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Connected",
+  "tags": ["wifi check", "online ok", "network verified", "signal good"],
+  "categories": ["connectivity"],
+  "useCases": ["Confirms a working network connection", "Shows a verified wireless signal"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

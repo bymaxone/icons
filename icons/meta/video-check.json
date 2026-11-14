@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Video approved",
+  "tags": ["video check", "clip verified", "accepted footage", "review ok"],
+  "categories": ["media"],
+  "useCases": ["Approves a recorded clip", "Marks a reviewed video"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

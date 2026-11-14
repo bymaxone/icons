@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Unlike",
+  "tags": ["heart x", "dislike", "remove like", "withdraw love"],
+  "categories": ["status"],
+  "useCases": ["Removes a like from a post", "Takes an item off a wish list"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

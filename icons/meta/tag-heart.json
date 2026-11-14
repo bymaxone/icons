@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Favorite tag",
+  "tags": ["tag heart", "loved label", "preferred category", "saved price"],
+  "categories": ["commerce"],
+  "useCases": ["Saves a label as a favorite", "Marks a liked offer"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

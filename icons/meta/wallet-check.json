@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Payment confirmed",
+  "tags": ["wallet check", "paid", "funds ok", "settled"],
+  "categories": ["commerce"],
+  "useCases": ["Confirms that a payment went through", "Marks a settled balance"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

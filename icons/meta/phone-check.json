@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Call answered",
+  "tags": ["phone check", "number verified", "connected call", "confirmed contact"],
+  "categories": ["communication"],
+  "useCases": ["Confirms a call was answered", "Marks a verified phone number"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

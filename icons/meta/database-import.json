@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Import data",
+  "tags": ["database import", "load records", "bring in data", "ingest"],
+  "categories": ["data", "dev"],
+  "useCases": ["Loads records into a data source", "Brings an external dataset into a project"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

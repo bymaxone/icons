@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Cancel time",
+  "tags": ["clock x", "expired timer", "stop schedule", "missed deadline"],
+  "categories": ["time", "status"],
+  "useCases": ["Cancels a scheduled time", "Marks a deadline that was missed"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

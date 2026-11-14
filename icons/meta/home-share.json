@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Share home",
+  "tags": ["home share", "send house", "shared property", "open listing"],
+  "categories": ["navigation"],
+  "useCases": ["Shares a property with others", "Sends a household to a contact"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

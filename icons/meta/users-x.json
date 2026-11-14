@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Team removed",
+  "tags": ["users x", "dismissed members", "rejected group", "cancel team"],
+  "categories": ["people"],
+  "useCases": ["Rejects a group of people", "Marks a team as dismissed"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Starred message",
+  "tags": ["message star", "important chat", "pinned comment", "highlight"],
+  "categories": ["communication"],
+  "useCases": ["Marks a conversation as important", "Highlights a comment for later"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

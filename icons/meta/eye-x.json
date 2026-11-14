@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Hide view",
+  "tags": ["eye x", "conceal", "not visible", "closed view"],
+  "categories": ["status"],
+  "useCases": ["Hides an item from view", "Marks content that cannot be seen"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

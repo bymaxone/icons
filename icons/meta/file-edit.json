@@ -4,6 +4,12 @@
   "tags": ["file edit", "rewrite", "modify", "document"],
   "categories": ["files", "editing"],
   "useCases": ["Opens a document for changes", "Marks a file being edited"],
+  "aliases": [
+    {
+      "name": "file-pen",
+      "deprecated": false
+    }
+  ],
   "variants": ["line"],
   "opticalSizes": [24],
   "since": "0.1.0"

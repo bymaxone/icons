@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Share photo",
+  "tags": ["camera share", "send capture", "post snapshot", "upload shot"],
+  "categories": ["media"],
+  "useCases": ["Sends a captured photo to others", "Posts a snapshot to a gallery"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

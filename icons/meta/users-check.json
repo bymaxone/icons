@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Team approved",
+  "tags": ["users check", "team verified", "approved members", "group ok"],
+  "categories": ["people"],
+  "useCases": ["Confirms that a group of people is approved", "Marks a team as verified"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

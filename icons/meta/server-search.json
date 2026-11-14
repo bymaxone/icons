@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Find server",
+  "tags": ["server search", "locate host", "scan machines", "lookup instance"],
+  "categories": ["data", "dev"],
+  "useCases": ["Looks for a host in the infrastructure", "Scans a deployment for machines"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

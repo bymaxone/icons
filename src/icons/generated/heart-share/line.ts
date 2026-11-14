@@ -1,0 +1,22 @@
+/**
+ * @fileoverview The `heart-share` icon, line variant.
+ * Written by `pnpm generate` from icons/line/heart-share.svg: edit the source, never this file.
+ * @layer Generated
+ */
+
+import { createIcon } from '@bymax-one/icons/runtime'
+
+/**
+ * The `heart-share` icon, line variant: heart share, send kindness, pass on like, gift.
+ *
+ * @since 0.1.0
+ */
+export const HeartShareIcon = /* @__PURE__ */ createIcon('heart-share', [
+  [
+    'path',
+    {
+      d: 'M11.773 19.016 5.25 12.4c-1.5-1.55-1.65-4-.25-5.65 1.65-1.9 4.5-1.9 6.15 0L12.25 8l1.1-1.25c1.65-1.9 4.5-1.9 6.15 0 1.166 1.374 1.257 3.303.388 4.805'
+    }
+  ],
+  ['path', { d: 'M14.75 21.25v-1.5c0-2 1.25-3.25 3.25-3.25h3.25m-2-2 2 2-2 2' }]
+])

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Search cloud",
+  "tags": ["cloud search", "find online files", "storage lookup", "remote files"],
+  "categories": ["connectivity", "nature"],
+  "useCases": ["Looks for files in online storage", "Finds a synced document"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

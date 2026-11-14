@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Share image",
+  "tags": ["image share", "send picture", "post photo", "distribute"],
+  "categories": ["files", "media"],
+  "useCases": ["Sends a picture to other people", "Posts a photo to a shared space"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

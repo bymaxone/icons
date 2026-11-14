@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Remove email",
+  "tags": ["mail minus", "delete message", "discard email", "unsubscribe"],
+  "categories": ["communication"],
+  "useCases": ["Deletes an email from the inbox", "Removes an address from a mailing list"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

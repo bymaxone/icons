@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Inspect",
+  "tags": ["eye search", "examine", "look closer", "zoom view"],
+  "categories": ["status"],
+  "useCases": ["Inspects the details of an item", "Looks closer at a preview"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

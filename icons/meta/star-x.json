@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Remove favorite",
+  "tags": ["star x", "unfavorite", "clear rating", "drop highlight"],
+  "categories": ["status"],
+  "useCases": ["Removes an item from the favorites", "Clears a rating"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}

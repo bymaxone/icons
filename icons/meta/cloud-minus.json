@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Remove from cloud",
+  "tags": ["cloud minus", "free space", "delete online", "unsync"],
+  "categories": ["connectivity", "nature"],
+  "useCases": ["Removes a file from online storage", "Stops syncing an item"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "0.1.0"
+}
