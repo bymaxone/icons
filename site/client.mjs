@@ -150,7 +150,7 @@ function filter() {
   const { state } = finder
   const ranked = search(finder.docs, state.q, state)
   const rank = new Map(ranked.map((hit, index) => [hit.name, index]))
-  const shown = { icon: new Set(), brand: new Set() }
+  const shown = { icon: new Set(), brand: new Set(), flag: new Set() }
   for (const section of document.querySelectorAll('.group')) {
     const picked = state.categories.length === 0 || state.categories.includes(section.dataset.cat)
     let count = 0
@@ -175,7 +175,12 @@ function filter() {
   }
   document.getElementById('shown-icons').textContent = String(shown.icon.size)
   document.getElementById('shown-brands').textContent = String(shown.brand.size)
-  showEmpty(document.querySelector('.empty'), shown.icon.size + shown.brand.size === 0)
+  const shownFlags = document.getElementById('shown-flags')
+  if (shownFlags) shownFlags.textContent = String(shown.flag.size)
+  showEmpty(
+    document.querySelector('.empty'),
+    shown.icon.size + shown.brand.size + shown.flag.size === 0
+  )
   showActive()
   history.replaceState(
     null,

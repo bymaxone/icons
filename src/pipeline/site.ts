@@ -6,7 +6,13 @@
  * @layer Pipeline
  */
 
-import type { BrandMetadata, IconAlias, IconCategory, IconMetadata } from '../meta/icon-metadata.ts'
+import type {
+  BrandMetadata,
+  FlagMetadata,
+  IconAlias,
+  IconCategory,
+  IconMetadata
+} from '../meta/icon-metadata.ts'
 import { componentName } from './naming.ts'
 import type { Variant } from './naming.ts'
 
@@ -14,6 +20,7 @@ import type { Variant } from './naming.ts'
 export interface BuiltMetadata {
   readonly icons: Readonly<Record<string, IconMetadata>>
   readonly brands: Readonly<Record<string, BrandMetadata>>
+  readonly flags: Readonly<Record<string, FlagMetadata>>
   readonly categories: readonly IconCategory[]
 }
 
@@ -23,16 +30,16 @@ export interface CatalogDrawing {
   readonly component: string
 }
 
-/** An icon or a brand mark, as the catalog lists and searches it. */
+/** An icon, a brand mark or a country flag, as the catalog lists and searches it. */
 export interface CatalogEntry {
   readonly name: string
-  readonly kind: 'icon' | 'brand'
-  /** The name to show: the icon's name, or the brand's own title. */
+  readonly kind: 'icon' | 'brand' | 'flag'
+  /** The name to show: the icon's name, or the title of the brand or the flag. */
   readonly title: string
-  /** The accessible name for a standalone use: the icon's label, or the brand's title. */
+  /** The accessible name for a standalone use: the icon's label, or the title of the brand or the flag. */
   readonly label: string
   readonly drawings: readonly CatalogDrawing[]
-  /** Category names; a brand mark belongs to `brands`. */
+  /** Category names; a brand mark belongs to `brands` and a flag to `flags`. */
   readonly categories: readonly string[]
   readonly tags: readonly string[]
   readonly aliases: readonly IconAlias[]
@@ -40,13 +47,13 @@ export interface CatalogEntry {
   readonly since: string
 }
 
-/** A category the catalog filters by: the set's categories and the brands. */
+/** A category the catalog filters by: the set's categories, the brands and the flags. */
 export interface CatalogCategory {
   readonly name: string
   readonly title: string
 }
 
-/** The catalog: every entry in name order, icons first, and the categories to filter by. */
+/** The catalog: every entry in name order, icons first, then brands and flags, and the categories to filter by. */
 export interface Catalog {
   readonly entries: readonly CatalogEntry[]
   readonly categories: readonly CatalogCategory[]
@@ -54,6 +61,9 @@ export interface Catalog {
 
 /** The category every brand mark is listed under. */
 export const BRAND_CATEGORY: CatalogCategory = { name: 'brands', title: 'Brands' }
+
+/** The category every country flag is listed under. */
+export const FLAG_CATEGORY: CatalogCategory = { name: 'flags', title: 'Flags' }
 
 /**
  * Escapes a text for HTML, as element content or as a quoted attribute value.
@@ -75,8 +85,8 @@ export function escapeHtml(text: string): string {
  * Builds the catalog from the built metadata.
  *
  * @param metadata - The content of `dist/metadata.json`.
- * @returns Every icon in name order with its drawn variants, then every brand mark, and the
- *   categories followed by the brands category.
+ * @returns Every icon in name order with its drawn variants, then every brand mark and every
+ *   flag, and the categories followed by the brands and the flags categories.
  */
 export function catalogFrom(metadata: BuiltMetadata): Catalog {
   const icons = Object.entries(metadata.icons)
@@ -110,5 +120,22 @@ export function catalogFrom(metadata: BuiltMetadata): Catalog {
       useCases: [],
       since: brand.since
     }))
-  return { entries: [...icons, ...brands], categories: [...metadata.categories, BRAND_CATEGORY] }
+  const flags = Object.entries(metadata.flags)
+    .sort(([a], [b]) => a.localeCompare(b))
+    .map(([name, flag]): CatalogEntry => ({
+      name,
+      kind: 'flag',
+      title: flag.title,
+      label: flag.title,
+      drawings: [{ variant: 'flag', component: componentName(name, 'flag') }],
+      categories: [FLAG_CATEGORY.name],
+      tags: flag.tags,
+      aliases: [],
+      useCases: [],
+      since: flag.since
+    }))
+  return {
+    entries: [...icons, ...brands, ...flags],
+    categories: [...metadata.categories, BRAND_CATEGORY, FLAG_CATEGORY]
+  }
 }

@@ -1,6 +1,6 @@
 /**
  * @fileoverview The catalog's page templates: the home page with the construction specimen,
- * the search, the filters and the grid; one page per icon and brand mark; and the not-found
+ * the search, the filters and the grid; one page per icon, brand mark and flag; and the not-found
  * page. Every text from the metadata goes through `escapeHtml`; the only markup that is not
  * escaped is an icon's own SVG, rendered by the package's components.
  * @layer site
@@ -21,13 +21,20 @@ export const ACCENTS = ['ink', 'yellow', 'orange', 'red', 'green', 'blue', 'lila
 const SIZES = [16, 20, 24, 32]
 
 /** The variant names as the page writes them. */
-const VARIANT_LABEL = { line: 'Line', filled: 'Filled', sm: '16 px master', brand: 'Brand mark' }
+const VARIANT_LABEL = {
+  line: 'Line',
+  filled: 'Filled',
+  sm: '16 px master',
+  brand: 'Brand mark',
+  flag: 'Flag'
+}
 
 /** A name as a short label: `arrow-up-right` becomes `Arrow up right`. */
 const label = (name) => name.charAt(0).toUpperCase() + name.slice(1).replaceAll('-', ' ')
 
-/** The folder an entry's page sits in. */
-const folder = (entry) => (entry.kind === 'brand' ? 'brands' : 'icons')
+/** The folder an entry's page sits in, and the one of its raw SVG: icons, brands or flags. */
+const FOLDERS = { icon: 'icons', brand: 'brands', flag: 'flags' }
+const folder = (entry) => FOLDERS[entry.kind]
 
 /**
  * The shared page frame.
@@ -144,19 +151,24 @@ function toggles(name, setting, options, current) {
 }
 
 /** The introduction: the claim, the install command and the counts. */
-function intro(icons, brands, render) {
+function intro(icons, brands, flags, render) {
   const count = (variant) =>
     icons.filter((entry) => entry.drawings.some((d) => d.variant === variant)).length
   return `<div class="hero-text">
     <p class="eyebrow">An original icon set for React and the web</p>
     <h1>One grid.<br>One stroke.<br>Every part apart.</h1>
-    <p class="lede">${icons.length} icons and ${brands} brand marks, drawn on a 24 px grid with a 1.5 px stroke and a cut that keeps every part clear of the next. With filled variants, hand-tuned 16 px masters, React components that render in Server Components, raw SVG, a sprite and typed metadata.</p>
+    <p class="lede">${icons.length} icons${flags > 0 ? `, ${brands} brand marks and ${flags} country flags` : ` and ${brands} brand marks`}, drawn on a 24 px grid with a 1.5 px stroke and a cut that keeps every part clear of the next. With filled variants, hand-tuned 16 px masters, React components that render in Server Components, raw SVG, a sprite and typed metadata.</p>
     <div class="install"><code>pnpm add @bymax-one/icons</code><button type="button" class="copy" data-copy-text="pnpm add @bymax-one/icons" aria-label="Copy the install command">${render('CopyIcon')}</button></div>
     <dl class="facts">
       <div><dt>${icons.length}</dt><dd>icons</dd></div>
       <div><dt>${count('filled')}</dt><dd>filled variants</dd></div>
       <div><dt>${count('sm')}</dt><dd>16 px masters</dd></div>
-      <div><dt>${brands}</dt><dd>brand marks</dd></div>
+      <div><dt>${brands}</dt><dd>brand marks</dd></div>${
+        flags > 0
+          ? `
+      <div><dt>${flags}</dt><dd>country flags</dd></div>`
+          : ''
+      }
     </dl>
   </div>`
 }
@@ -164,14 +176,15 @@ function intro(icons, brands, render) {
 /**
  * The Type control: which entries are listed and which of their drawings is shown. All lists
  * every entry in line; Line every icon in line; Filled and 16 px only the icons that have that
- * drawing, drawn so; Brand only the brand marks.
+ * drawing, drawn so; Brand only the brand marks; Flag only the country flags.
  */
 const TYPES = [
   ['', 'All'],
   ['line', 'Line'],
   ['filled', 'Filled'],
   ['sm', '16 px'],
-  ['brand', 'Brand']
+  ['brand', 'Brand'],
+  ['flag', 'Flag']
 ]
 
 /** The icons offered when a search finds nothing, so the page is never blank. */
@@ -273,7 +286,7 @@ ${popular}
 }
 
 /**
- * The home page: the specimen, the controls and the grid of every icon and brand mark.
+ * The home page: the specimen, the controls and the grid of every icon, brand mark and flag.
  *
  * @param {import('../src/pipeline/site.ts').Catalog} catalog
  * @param {(component: string) => string} render
@@ -282,9 +295,10 @@ ${popular}
  */
 export function homePage(catalog, render, version) {
   const icons = catalog.entries.filter((entry) => entry.kind === 'icon')
-  const brands = catalog.entries.length - icons.length
+  const brands = catalog.entries.filter((entry) => entry.kind === 'brand').length
+  const flags = catalog.entries.filter((entry) => entry.kind === 'flag').length
   const body = `<section class="hero">
-  ${intro(icons, brands, render)}
+  ${intro(icons, brands, flags, render)}
   ${specimen(render)}
 </section>
 <section class="browse" aria-label="Browse">
@@ -293,7 +307,7 @@ export function homePage(catalog, render, version) {
     ${categoryNav(catalog, render)}
     <div class="sections">
       <p class="active" hidden>Filtered by <span id="active"></span> <button type="button" id="clear">Clear filters</button></p>
-      <p class="count" aria-live="polite">Showing <span id="shown-icons">${icons.length}</span> of ${icons.length} icons and <span id="shown-brands">${brands}</span> of ${brands} brand marks</p>
+      <p class="count" aria-live="polite">Showing <span id="shown-icons">${icons.length}</span> of ${icons.length} icons${flags > 0 ? `, <span id="shown-brands">${brands}</span> of ${brands} brand marks and <span id="shown-flags">${flags}</span> of ${flags} flags` : ` and <span id="shown-brands">${brands}</span> of ${brands} brand marks`}</p>
       ${catalog.categories.map((category) => categorySection(catalog, category, render)).join('\n')}
       ${emptyState(catalog, render)}
     </div>
@@ -301,7 +315,7 @@ export function homePage(catalog, render, version) {
 </section>`
   return layout({
     title: 'Bymax Icons: an original icon set for React and the web',
-    description: `${icons.length} original icons and ${brands} brand marks on one 24 px grid with a 1.5 px stroke: React components, raw SVG, a sprite and typed metadata.`,
+    description: `${icons.length} original icons${flags > 0 ? `, ${brands} brand marks and ${flags} country flags` : ` and ${brands} brand marks`} on one 24 px grid with a 1.5 px stroke: React components, raw SVG, a sprite and typed metadata.`,
     path: '',
     base: '',
     body,
@@ -315,9 +329,12 @@ function snippet(code, name, render) {
   return `<div class="code"><pre><code>${e(code)}</code></pre><button type="button" class="copy" data-copy-text="${e(code)}" aria-label="${e(name)}">${render('CopyIcon')}</button></div>`
 }
 
+/** The folder of the raw SVG of a drawing, where it is not the variant's own name. */
+const SVG_FOLDERS = { brand: 'brands', flag: 'flags' }
+
 /** The buttons under a drawing: copy its SVG and JSX, download its file. */
 function actions(entry, drawing, render) {
-  const svgPath = `../../svg/${drawing.variant === 'brand' ? 'brands' : drawing.variant}/${e(entry.name)}.svg`
+  const svgPath = `../../svg/${SVG_FOLDERS[drawing.variant] ?? drawing.variant}/${e(entry.name)}.svg`
   return `<span class="acts">
       <button type="button" class="btn" data-copy-svg="${svgPath}">${render('CopyIcon')}SVG</button>
       <button type="button" class="btn" data-copy-text="&lt;${drawing.component} /&gt;">${render('CopyIcon')}JSX</button>
@@ -327,7 +344,7 @@ function actions(entry, drawing, render) {
 
 /** The card of a 24 px drawing: large, then from 16 to 48 px. */
 function drawingCard(entry, drawing, render) {
-  return `<figure class="pv">
+  return `<figure class="pv" data-kind="${entry.kind}">
   <div class="big">${render(drawing.component)}</div>
   <div class="sizes">${[16, 20, 24, 32, 48].map((size) => `<span class="sz" data-size="${size}">${render(drawing.component)}<i>${size}</i></span>`).join('')}</div>
   <figcaption><span class="cap"><b>${VARIANT_LABEL[drawing.variant]}</b> <code>${drawing.component}</code></span>
@@ -364,9 +381,16 @@ function relatedTo(entry, catalog) {
     .map(({ other }) => other)
 }
 
+/** The package subpath each kind of entry is imported from. */
+const SUBPATHS = {
+  icon: '@bymax-one/icons',
+  brand: '@bymax-one/icons/brands',
+  flag: '@bymax-one/icons/flags'
+}
+
 /** How to use an entry: its import, a decorative use and a labelled one. */
 function usage(entry, render) {
-  const subpath = entry.kind === 'brand' ? '@bymax-one/icons/brands' : '@bymax-one/icons'
+  const subpath = SUBPATHS[entry.kind]
   const first = entry.drawings[0].component
   return `<section class="use">
       <h2>Use it</h2>
@@ -418,8 +442,11 @@ function relatedSection(entry, catalog, render) {
     : ''
 }
 
+/** What each kind of entry is called in a page description. */
+const KIND_NAMES = { icon: 'icon', brand: 'brand mark', flag: 'flag' }
+
 /**
- * The page of one icon or brand mark: its drawings, how to use it, and what the metadata
+ * The page of one icon, brand mark or flag: its drawings, how to use it, and what the metadata
  * says about it.
  *
  * @param {import('../src/pipeline/site.ts').CatalogEntry} entry
@@ -455,7 +482,7 @@ ${cards}
 </section>`
   return layout({
     title: `${entry.title}: Bymax Icons`,
-    description: `The ${entry.title} ${entry.kind === 'brand' ? 'brand mark' : 'icon'} of @bymax-one/icons, as a React component and raw SVG.`,
+    description: `The ${entry.title} ${KIND_NAMES[entry.kind]} of @bymax-one/icons, as a React component and raw SVG.`,
     path: `${folder(entry)}/${entry.name}/`,
     base: '../../',
     body,

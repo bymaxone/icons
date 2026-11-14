@@ -159,6 +159,26 @@
   width: 48px;
   height: 48px;
 }
+/* A flag is 3:2: each preview is as high as its size and one and a half times as wide. */
+.pv[data-kind='flag'] .big svg {
+  width: 180px;
+  height: 120px;
+}
+.pv[data-kind='flag'] .sz[data-size='16'] svg {
+  width: 24px;
+}
+.pv[data-kind='flag'] .sz[data-size='20'] svg {
+  width: 30px;
+}
+.pv[data-kind='flag'] .sz[data-size='24'] svg {
+  width: 36px;
+}
+.pv[data-kind='flag'] .sz[data-size='32'] svg {
+  width: 48px;
+}
+.pv[data-kind='flag'] .sz[data-size='48'] svg {
+  width: 72px;
+}
 .px-pair {
   gap: 36px;
   display: flex !important;
