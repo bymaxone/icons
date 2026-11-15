@@ -15,6 +15,7 @@ import {
   fold,
   highlight,
   mergeState,
+  listedCategories,
   nearCategories,
   passes,
   readState,
@@ -502,5 +503,46 @@ describe('searchIndex', () => {
     expect(() => searchIndex(catalog, { home: ['início'], user: [] })).toThrow(
       'No Portuguese search term for: trash, user'
     )
+  })
+})
+
+describe('listedCategories', () => {
+  it('lists the categories that hold an entry, in the order given', () => {
+    /** Scenario: under the Flag type only one category keeps entries, so only it is listed. */
+    expect(
+      listedCategories(
+        new Map([
+          ['arrows', 0],
+          ['flags', 250],
+          ['security', 0],
+          ['tools', 3]
+        ])
+      )
+    ).toStrictEqual(['flags', 'tools'])
+  })
+
+  it('lists a category with one entry and none that hold nothing', () => {
+    /** Scenario: the edge at one entry, and a count of zero that is not listed. */
+    expect(
+      listedCategories(
+        new Map([
+          ['a', 1],
+          ['b', 0]
+        ])
+      )
+    ).toStrictEqual(['a'])
+  })
+
+  it('lists nothing when every category is empty or there is none', () => {
+    /** Scenario: the navigation block is hidden when the list is empty. */
+    expect(
+      listedCategories(
+        new Map([
+          ['a', 0],
+          ['b', 0]
+        ])
+      )
+    ).toStrictEqual([])
+    expect(listedCategories(new Map())).toStrictEqual([])
   })
 })

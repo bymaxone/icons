@@ -149,7 +149,8 @@ For the founder. Every step runs on the founder's machine, logged in to npm as a
 
 9. **After.**
    - `bymax-studio-web` switches its dependency to `@bymax-one/icons@^1.0.0`.
-   - The README's npm badge and the catalog's "npm soon" become links to the package, in the next release.
+   - The README's npm badge becomes a link to the package, in the next release.
+   - The catalog header's "npm soon" (`site/pages.mjs`, the `soon` span) becomes a link to `https://www.npmjs.com/package/@bymax-one/icons`. It is in the site only, so it needs no package release.
 
 ---
 

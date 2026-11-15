@@ -243,6 +243,17 @@ export function suggestions(docs: readonly SearchDoc[], query: string, limit = 3
 }
 
 /**
+ * The categories that still hold an entry under the type and the search, in the order given:
+ * the navigation lists these and hides the rest, so no category leads to an empty grid.
+ *
+ * @param counts - Each category's name with the number of entries it shows.
+ * @returns The names of the categories with at least one entry.
+ */
+export function listedCategories(counts: ReadonlyMap<string, number>): string[] {
+  return [...counts].filter(([, count]) => count > 0).map(([name]) => name)
+}
+
+/**
  * The categories whose name or title is close to a word of the query, in the catalog's
  * order.
  *

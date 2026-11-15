@@ -9,6 +9,7 @@
 
 import {
   highlight,
+  listedCategories,
   mergeState,
   nearCategories,
   readState,
@@ -144,6 +145,15 @@ function showActive() {
   document.getElementById('active').textContent = names.join(', ')
 }
 
+/** Lists only the categories that hold an entry, in the navigation and in the jump list. */
+function listCategories(listed) {
+  const names = new Set(listed)
+  document.querySelector('.cats')?.toggleAttribute('hidden', names.size === 0)
+  for (const option of document.querySelectorAll('#jump option[value]:not([value=""])')) {
+    option.hidden = !names.has(option.value)
+  }
+}
+
 /** Shows the cells the search and the facets keep, ranked, and counts them by section. */
 function filter() {
   if (!finder.docs) return
@@ -151,6 +161,7 @@ function filter() {
   const ranked = search(finder.docs, state.q, state)
   const rank = new Map(ranked.map((hit, index) => [hit.name, index]))
   const shown = { icon: new Set(), brand: new Set(), flag: new Set() }
+  const counts = new Map()
   for (const section of document.querySelectorAll('.group')) {
     const picked = state.categories.length === 0 || state.categories.includes(section.dataset.cat)
     let count = 0
@@ -166,6 +177,7 @@ function filter() {
       }
     }
     section.hidden = count === 0
+    counts.set(section.dataset.cat, count)
     section.querySelector('[data-count]').textContent = count.toLocaleString('en-US')
     const nav = document.querySelector(`[data-count-nav="${section.dataset.cat}"]`)
     if (nav) {
@@ -173,6 +185,7 @@ function filter() {
       nav.parentElement.toggleAttribute('data-zero', count === 0)
     }
   }
+  listCategories(listedCategories(counts))
   document.getElementById('shown-icons').textContent = shown.icon.size.toLocaleString('en-US')
   document.getElementById('shown-brands').textContent = shown.brand.size.toLocaleString('en-US')
   const shownFlags = document.getElementById('shown-flags')

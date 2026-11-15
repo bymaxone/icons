@@ -577,7 +577,10 @@
   color: var(--muted);
 }
 .cats li[data-zero] {
-  opacity: 0.45;
+  display: none;
+}
+.cats[hidden] {
+  display: none;
 }
 .active {
   margin: 16px 0 0;
