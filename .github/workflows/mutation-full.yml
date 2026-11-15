@@ -33,11 +33,11 @@ jobs:
   full:
     uses: bymaxone/.github/.github/workflows/mutation-full.yml@v1
     with:
-      # With four shards, one runner finished in 42 minutes and the other three were still
-      # running at the 60-minute ceiling (the slices are balanced by file, not by cost), so
-      # eight shards get a 90-minute ceiling. Nothing blocks on this job, so a wide ceiling costs
+      # The plan balances the shards by the test time of an earlier report, and the real times
+      # did not follow it: of eight shards, seven finished in 15 to 53 minutes and one was
+      # cancelled at 90 (run 43766552785). Nothing blocks on this job, so a wide ceiling costs
       # only the minutes it uses, while a tight one costs the whole run and the baseline.
-      timeout-minutes: 90
+      timeout-minutes: 240
       # A cold run on one runner takes hours here (5,582 mutants); the aggregate job saves the
       # baseline the per-push job restores.
       shards: 8
