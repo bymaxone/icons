@@ -126,6 +126,32 @@ describe('flags', () => {
   })
 })
 
+describe('flag component names', () => {
+  it('reports a flag whose component name an icon also exports', () => {
+    /**
+     * Scenario: the flag `a-1-2-flag` exports `A12FlagIcon`, as the line icon `a-12-flag`
+     * does; the flag's component is claimed, so both files are reported.
+     */
+    const tree: SourceTree = {
+      line: { 'a-12-flag.svg': LINE },
+      flags: { 'a-1-2-flag.svg': FLAG },
+      meta: { 'a-12-flag.json': iconMeta(), 'a-1-2-flag.json': flagMeta() }
+    }
+    expect(issuesOf(tree, 'name-unique')).toStrictEqual([
+      {
+        file: 'icons/meta/a-12-flag.json',
+        rule: 'name-unique',
+        message: 'the component name A12FlagIcon is exported more than once'
+      },
+      {
+        file: 'icons/meta/a-1-2-flag.json',
+        rule: 'name-unique',
+        message: 'the component name A12FlagIcon is exported more than once'
+      }
+    ])
+  })
+})
+
 describe('flag-scope', () => {
   it.each(['line', 'filled', 'sm', 'brands'] as const)(
     'reports a flag name in icons/%s',

@@ -370,6 +370,12 @@ describe('readState and writeState', () => {
     expect(readState('?type=bogus').types).toStrictEqual([])
   })
 
+  it('knows the flag type', () => {
+    // Scenario: the Type control can pick flags, so an address naming flag keeps it.
+    expect(readState('?type=flag').types).toStrictEqual(['flag'])
+    expect(readState('?type=bogus,flag').types).toStrictEqual(['flag'])
+  })
+
   it('reads an older variant address as its type, unless a type is given', () => {
     // Scenario: ?variant=filled and ?variant=sm become the type; ?variant=line (every
     // entry, drawn in line) and an unknown variant name no type; an explicit type wins.
@@ -471,6 +477,19 @@ describe('searchIndex', () => {
           { field: 'use', text: 'moves up' }
         ]
       }
+    ])
+  })
+
+  it('gives a flag drawing the type words country flag', () => {
+    // Scenario: a flag is found by typing "country flag"; the type text is exactly that.
+    const catalog: Catalog = {
+      entries: [entry('se-flag', { drawings: [{ variant: 'flag', component: 'SeFlagIcon' }] })],
+      categories: []
+    }
+    const [indexed] = searchIndex(catalog, { 'se-flag': ['Suecia'] })
+    expect(indexed?.types).toStrictEqual(['flag'])
+    expect(indexed?.texts.filter((text) => text.field === 'type')).toStrictEqual([
+      { field: 'type', text: 'country flag' }
     ])
   })
 

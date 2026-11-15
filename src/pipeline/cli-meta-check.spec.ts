@@ -126,6 +126,26 @@ describe('runMetaCheck', () => {
     expect(output.errors.at(-1)).toMatch(/icon lint issue\(s\)\.$/)
   })
 
+  it('accepts a rename manifest whose verdicts are text', () => {
+    /** Scenario: a manifest with an entry per renamed icon, each verdict a string, has the documented shape. */
+    root = repository(allowlist({}), {
+      [RENAMES_REVIEWED]: reviewedManifest({ ring: 'categories fit the drawing' }),
+      'icons/meta/ring.json': iconMeta({
+        aliases: [
+          {
+            name: 'old-ring',
+            deprecated: true,
+            deprecationReason: 'Renamed to ring, the object.',
+            toBeRemovedInVersion: '2.0.0'
+          }
+        ]
+      })
+    })
+    const output = capture()
+    expect(runMetaCheck([], root, output)).toBe(0)
+    expect(output.errors).toStrictEqual([])
+  })
+
   it.each([
     ['an array', '[]'],
     ['null', 'null'],

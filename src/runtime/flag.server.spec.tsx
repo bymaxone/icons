@@ -113,6 +113,20 @@ describe('Flag server render: size', () => {
   })
 })
 
+describe('Flag element: the width prop', () => {
+  it('sets no width prop when none can be computed, and one when it can', () => {
+    /**
+     * Scenario: the element carries a `width` prop only when the size is a number and the view
+     * box is readable; a missing one is absent, not an `undefined` value (markup hides that).
+     */
+    const props = (size: number | string, viewBox: string): Record<string, unknown> =>
+      Flag({ flagNode: FIXTURE, viewBox, size }).props as Record<string, unknown>
+    expect('width' in props('1em', BOX)).toBe(false)
+    expect('width' in props(16, 'wide')).toBe(false)
+    expect(props(16, BOX)['width']).toBe(24)
+  })
+})
+
 describe('Flag server render: precedence', () => {
   it('lets a consumer width, height and viewBox win over size and the drawing', () => {
     /**
