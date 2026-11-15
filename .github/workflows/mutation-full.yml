@@ -38,3 +38,6 @@ jobs:
       # uses, while an under-tight one costs the whole run and leaves the week without a
       # measured baseline.
       timeout-minutes: 60
+      # A cold run on one runner takes hours here (5,582 mutants), so each of four runners takes
+      # a quarter of the files and the aggregate job saves the baseline the per-push job restores.
+      shards: 4
