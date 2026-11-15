@@ -189,9 +189,8 @@ function filter() {
       nav.textContent = count.toLocaleString('en-US')
     }
   }
-  // A category the type and the search leave empty is not listed, unless it is ticked; one the
-  // reader has not ticked stays listed while another is, so a second can be added.
-  listCategories(new Set([...listedCategories(available), ...state.categories]))
+  // The counts ignore the category facet, so ticking one category keeps the others listed.
+  listCategories(new Set(listedCategories(available, state.categories)))
   document.getElementById('shown-icons').textContent = shown.icon.size.toLocaleString('en-US')
   document.getElementById('shown-brands').textContent = shown.brand.size.toLocaleString('en-US')
   const shownFlags = document.getElementById('shown-flags')

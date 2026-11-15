@@ -243,14 +243,21 @@ export function suggestions(docs: readonly SearchDoc[], query: string, limit = 3
 }
 
 /**
- * The categories that still hold an entry under the type and the search, in the order given:
- * the navigation lists these and hides the rest, so no category leads to an empty grid.
+ * The categories the navigation lists, in the order given: those that hold an entry under the
+ * type and the search, and those the reader has ticked, so no category leads to an empty grid
+ * and a ticked one can always be unticked.
  *
- * @param counts - Each category's name with the number of entries it shows.
- * @returns The names of the categories with at least one entry.
+ * @param counts - Each category's name with the number of entries the type and the search keep.
+ * @param ticked - The categories the reader has ticked.
+ * @returns The names of the categories to list.
  */
-export function listedCategories(counts: ReadonlyMap<string, number>): string[] {
-  return [...counts].filter(([, count]) => count > 0).map(([name]) => name)
+export function listedCategories(
+  counts: ReadonlyMap<string, number>,
+  ticked: readonly string[] = []
+): string[] {
+  return [...counts]
+    .filter(([name, count]) => count > 0 || ticked.includes(name))
+    .map(([name]) => name)
 }
 
 /**

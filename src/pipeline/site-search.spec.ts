@@ -545,4 +545,19 @@ describe('listedCategories', () => {
     ).toStrictEqual([])
     expect(listedCategories(new Map())).toStrictEqual([])
   })
+
+  it('lists a ticked category even when it holds nothing', () => {
+    /** Scenario: a search leaves a ticked category empty, so it stays listed to be unticked. */
+    expect(
+      listedCategories(
+        new Map([
+          ['a', 0],
+          ['b', 0],
+          ['c', 2]
+        ]),
+        ['b']
+      )
+    ).toStrictEqual(['b', 'c'])
+    expect(listedCategories(new Map([['a', 0]]), ['x'])).toStrictEqual([])
+  })
 })
