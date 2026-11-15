@@ -517,7 +517,8 @@ describe('listedCategories', () => {
           ['flags', 250],
           ['security', 0],
           ['tools', 3]
-        ])
+        ]),
+        []
       )
     ).toStrictEqual(['flags', 'tools'])
   })
@@ -529,7 +530,8 @@ describe('listedCategories', () => {
         new Map([
           ['a', 1],
           ['b', 0]
-        ])
+        ]),
+        []
       )
     ).toStrictEqual(['a'])
   })
@@ -541,10 +543,11 @@ describe('listedCategories', () => {
         new Map([
           ['a', 0],
           ['b', 0]
-        ])
+        ]),
+        []
       )
     ).toStrictEqual([])
-    expect(listedCategories(new Map())).toStrictEqual([])
+    expect(listedCategories(new Map(), [])).toStrictEqual([])
   })
 
   it('lists a ticked category even when it holds nothing', () => {

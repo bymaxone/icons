@@ -276,7 +276,7 @@ export function suggestions(docs: readonly SearchDoc[], query: string, limit = 3
  */
 export function listedCategories(
   counts: ReadonlyMap<string, number>,
-  ticked: readonly string[] = []
+  ticked: readonly string[]
 ): string[] {
   return [...counts]
     .filter(([name, count]) => count > 0 || ticked.includes(name))
