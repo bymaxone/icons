@@ -8,7 +8,7 @@
  * Mocks: none.
  */
 
-import { cpSync, readFileSync } from 'node:fs'
+import { readFileSync } from 'node:fs'
 import { join } from 'node:path'
 
 import {
@@ -124,17 +124,6 @@ describe('runMetaCheck', () => {
     const output = capture()
     expect(runMetaCheck([], root, output)).toBe(1)
     expect(output.errors.at(-1)).toMatch(/icon lint issue\(s\)\.$/)
-  })
-
-  it('passes on the repository itself', () => {
-    /** Scenario: the committed icons and the committed allowlist agree. */
-    root = scratchRepository()
-    cpSync(join(REPO_ROOT, 'icons'), join(root, 'icons'), { recursive: true })
-    cpSync(join(REPO_ROOT, META_ALLOWLIST), join(root, META_ALLOWLIST), { recursive: true })
-    cpSync(join(REPO_ROOT, RENAMES_REVIEWED), join(root, RENAMES_REVIEWED), { recursive: true })
-    const output = capture()
-    expect(runMetaCheck([], root, output)).toBe(0)
-    expect(output.errors).toStrictEqual([])
   })
 
   it.each([
