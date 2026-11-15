@@ -15,6 +15,7 @@ import {
   fold,
   highlight,
   mergeState,
+  categoryCounts,
   listedCategories,
   nearCategories,
   passes,
@@ -559,5 +560,45 @@ describe('listedCategories', () => {
       )
     ).toStrictEqual(['b', 'c'])
     expect(listedCategories(new Map([['a', 0]]), ['x'])).toStrictEqual([])
+  })
+})
+
+describe('categoryCounts', () => {
+  const docs: SearchDoc[] = [
+    { name: 'one', types: ['line'], categories: ['a'], texts: [{ field: 'name', text: 'one' }] },
+    {
+      name: 'two',
+      types: ['line', 'filled'],
+      categories: ['b', 'c'],
+      texts: [{ field: 'name', text: 'two' }]
+    },
+    {
+      name: 'three',
+      types: ['filled'],
+      categories: ['c'],
+      texts: [{ field: 'name', text: 'three' }]
+    }
+  ]
+
+  it('counts every category whichever category is ticked', () => {
+    /** Scenario: ticking category a leaves b and c counted, so they stay available to tick. */
+    const counts = categoryCounts(docs, '', { types: [], categories: ['a'] })
+    expect(Object.fromEntries(counts)).toStrictEqual({ a: 1, b: 1, c: 2 })
+  })
+
+  it('applies the type and the query', () => {
+    /** Scenario: the type and the search still narrow what each category holds. */
+    expect(
+      Object.fromEntries(categoryCounts(docs, '', { types: ['filled'], categories: [] }))
+    ).toStrictEqual({
+      b: 1,
+      c: 2
+    })
+    expect(
+      Object.fromEntries(categoryCounts(docs, 'three', { types: [], categories: [] }))
+    ).toStrictEqual({
+      c: 1
+    })
+    expect(categoryCounts(docs, 'zzz', { types: [], categories: [] }).size).toBe(0)
   })
 })

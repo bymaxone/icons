@@ -8,6 +8,7 @@
  */
 
 import {
+  categoryCounts,
   highlight,
   listedCategories,
   mergeState,
@@ -163,18 +164,14 @@ function filter() {
   const { state } = finder
   const ranked = search(finder.docs, state.q, state)
   const rank = new Map(ranked.map((hit, index) => [hit.name, index]))
-  const inType = new Set(
-    search(finder.docs, state.q, { ...state, categories: [] }).map((hit) => hit.name)
-  )
+  const counted = categoryCounts(finder.docs, state.q, state)
   const shown = { icon: new Set(), brand: new Set(), flag: new Set() }
   const available = new Map()
   for (const section of document.querySelectorAll('.group')) {
     const picked = state.categories.length === 0 || state.categories.includes(section.dataset.cat)
     let count = 0
-    let kept = 0
     for (const cell of section.querySelectorAll('.cell')) {
       const at = rank.get(cell.dataset.name)
-      if (inType.has(cell.dataset.name)) kept += 1
       const visible = picked && at !== undefined
       cell.hidden = !visible
       cell.style.order = visible && state.q ? String(at) : ''
@@ -185,7 +182,7 @@ function filter() {
       }
     }
     section.hidden = count === 0
-    available.set(section.dataset.cat, kept)
+    available.set(section.dataset.cat, counted.get(section.dataset.cat) ?? 0)
     section.querySelector('[data-count]').textContent = count.toLocaleString('en-US')
     const nav = document.querySelector(`[data-count-nav="${section.dataset.cat}"]`)
     if (nav) {
