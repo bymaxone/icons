@@ -4,8 +4,9 @@
  * Layer: integration, on the repository's own `icons` directory (about 75 s each).
  * Goal: prove that the committed sources and metadata agree with `pnpm lint:icons` and `pnpm check:meta`.
  * Mocks: none.
- * The mutation run skips this file (`jest.stryker.config.ts`): it reads every icon and kills no
- * mutant that the fixture specs of `lint.spec.ts` and `cli-meta-check.spec.ts` do not kill.
+ * The mutation run skips this file (`jest.stryker.config.ts`): it reads every icon, so a mutant it
+ * reached would time out rather than be killed. A mutant only this sweep would catch shows up as a
+ * survivor and gets a fixture test in `lint.spec.ts` or `cli-meta-check.spec.ts`.
  */
 
 import { cpSync } from 'node:fs'
