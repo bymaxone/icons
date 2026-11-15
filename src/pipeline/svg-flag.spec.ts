@@ -112,6 +112,26 @@ describe('normalizeFlag: colours', () => {
     )
   })
 
+  it('keeps a six-digit hex on a colour attribute SVGO would shorten', () => {
+    /**
+     * Scenario: the formatter turns SVGO's hex shortening off, so `#aabbcc` stays six digits
+     * (SVGO would write `#abc` on `color` and `stop-color`, which the formatter does not own).
+     */
+    expect(
+      normalizeFlag(flag('<path color="#aabbcc" stop-color="#AABBCC" d="M0 0h1v1z"/>'))
+    ).toContain('<path d="M0 0h1v1z" color="#aabbcc" stop-color="#aabbcc"/>')
+  })
+
+  it('leaves a value that only ends or starts like a hex colour as it is', () => {
+    /**
+     * Scenario: a value is expanded only when the whole of it is a hex colour, so a prefix
+     * before a three-digit hex is not cut into the expansion.
+     */
+    expect(normalizeFlag(flag('<path fill="x#ABC" d="M0 0h1v1z"/>'))).toContain(
+      '<path fill="x#abc"'
+    )
+  })
+
   it('writes a stroke colour the same way', () => {
     /** Scenario: `stroke` is a colour attribute like `fill`. */
     expect(normalizeFlag(flag('<path stroke="#0F0" fill="none" d="M0 0h1v1z"/>'))).toContain(
@@ -136,6 +156,20 @@ describe('normalizeFlag: groups', () => {
       '<path fill="#d80027" fill-rule="evenodd" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M0 0h1v1z"/>'
     )
     expect(out).toContain('<circle cx="1" cy="1" r="1" fill="#d80027"')
+  })
+
+  it('flattens a group under the root and leaves a group inside another element', () => {
+    /**
+     * Scenario: only the groups among the children of the root are flattened; a group inside
+     * a nested `<svg>` is not the formatter's to touch, so both branches of the root test show.
+     */
+    const out = normalizeFlag(
+      flag(
+        '<g fill="#111"><path d="M0 0h1v1z"/></g><svg><g fill="#222"><path d="M1 1h1v1z"/></g></svg>'
+      )
+    )
+    expect(out).toContain('<path fill="#111111" d="M0 0h1v1z"/>')
+    expect(out).toContain('<g fill="#222222">')
   })
 
   it('lets an attribute of a child win over the group', () => {
