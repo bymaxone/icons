@@ -150,3 +150,27 @@ For the founder. Every step runs on the founder's machine, logged in to npm as a
 9. **After.**
    - `bymax-studio-web` switches its dependency to `@bymax-one/icons@^1.0.0`.
    - The README's npm badge and the catalog's "npm soon" become links to the package, in the next release.
+
+---
+
+## 10. Mutation testing
+
+The result of the cold run on `main`, with the fields below filled in from the first green run of `mutation-full.yml` after pull requests #69, #70 and #71. Until then the release does not claim a mutation score.
+
+| Field                             | Value                   |
+| --------------------------------- | ----------------------- |
+| Mutants (all)                     | TODO                    |
+| Killed                            | TODO                    |
+| Killed by timeout (counted apart) | TODO                    |
+| Runtime errors (counted apart)    | TODO                    |
+| Compile errors (not tested)       | TODO                    |
+| Survivors                         | TODO (the gate needs 0) |
+| Time of each of the eight shards  | TODO                    |
+| The run that backs these numbers  | TODO (Actions run URL)  |
+
+What was measured before that run:
+
+- A cold local run of 5,582 mutants left 184 survivors in eight files, with 33 timeouts, 143 runtime errors and 1,598 compile errors. Pull request #71 kills them.
+- The per-push gate on `main` had been cancelled for about 14 merges: its baseline is restored from a cache that is saved only after a run succeeds, and a run that fails never seeds it. A green cold run is what seeds it (pull request #70 splits that run across runners, #71 sets eight shards and a 90-minute ceiling).
+- Two repository sweeps of about 75 seconds each ran inside the Stryker suite, so a mutant they reached timed out instead of being killed. Pull request #69 moved them out of it.
+- A mutant killed by timeout does not prove a test catches the defect, so the timeouts are listed on their own and are not part of "killed".
