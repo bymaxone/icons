@@ -30,8 +30,8 @@ const DROPPED = ['class', 'clip-rule']
 /** Attributes of a group that are neither moved nor dropped, so it cannot be flattened. */
 const SVG_NAMESPACE = 'http://www.w3.org/2000/svg'
 
-// Stryker disable next-line Regex: SVGO has already written every colour in lower case, so a value this pattern misses (or matches loosely) leaves the formatter's output as it is.
-const HEX_COLOUR = /^#(?:[0-9a-fA-F]{3}|[0-9a-fA-F]{6})$/
+/** A three-digit hex colour; SVGO's colour conversion already writes a six-digit one in lower case. */
+const SHORT_HEX = /^#[0-9a-f]{3}$/i
 
 function isElement(node: XastChild): node is XastElement {
   return node.type === 'element'
@@ -71,12 +71,10 @@ function flattenChildren(children: readonly XastChild[]): XastChild[] {
   )
 }
 
-/** Writes a colour as lower-case `#rrggbb`, and leaves any other value as it is. */
+/** Writes a three-digit hex colour as lower-case `#rrggbb`, and leaves any other value as it is. */
 function hexColour(value: string): string {
-  if (!HEX_COLOUR.test(value)) return value
-  const digits = value.slice(1).toLowerCase()
-  const full = digits.length === 3 ? [...digits].map((digit) => digit + digit).join('') : digits
-  return `#${full}`
+  if (!SHORT_HEX.test(value)) return value
+  return `#${[...value.slice(1).toLowerCase()].map((digit) => digit + digit).join('')}`
 }
 
 /** Flattens the groups under the root `<svg>`. */

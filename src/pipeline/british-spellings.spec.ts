@@ -29,6 +29,17 @@ describe('BRITISH_SPELLINGS', () => {
     expect(BRITISH_SPELLINGS.get(british)).toBe(american)
   })
 
+  it('reads words across runs of separators and returns nothing for a text without letters', () => {
+    /** Scenario: runs of non-letters, digits and an empty text yield the listed words only. */
+    expect(britishWords('  colour,,  favour -- 12 grey ')).toStrictEqual([
+      { british: 'colour', american: 'color' },
+      { british: 'favour', american: 'favor' },
+      { british: 'grey', american: 'gray' }
+    ])
+    expect(britishWords('')).toStrictEqual([])
+    expect(britishWords('123 -- 45')).toStrictEqual([])
+  })
+
   it.each([...BRITISH_SPELLINGS])('flags %s and asks for %s', (british, american) => {
     /** Scenario: each listed spelling, alone and in a sentence in capitals, is found. */
     expect(britishWords(british)).toStrictEqual([{ british, american }])

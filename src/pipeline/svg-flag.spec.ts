@@ -132,6 +132,16 @@ describe('normalizeFlag: colours', () => {
     )
   })
 
+  it.each(['#ABCD', '#ABCDE', '#ABCDEFA', '#ABG'])('leaves the value %p as it is', (given) => {
+    /**
+     * Scenario: only a three-digit hex is expanded, so a longer or malformed value that starts
+     * like one is not doubled digit by digit (SVGO writes it in lower case).
+     */
+    expect(normalizeFlag(flag(`<path fill="${given}" d="M0 0h1v1z"/>`))).toContain(
+      `<path fill="${given.toLowerCase()}"`
+    )
+  })
+
   it('writes a stroke colour the same way', () => {
     /** Scenario: `stroke` is a colour attribute like `fill`. */
     expect(normalizeFlag(flag('<path stroke="#0F0" fill="none" d="M0 0h1v1z"/>'))).toContain(

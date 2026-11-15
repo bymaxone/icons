@@ -93,7 +93,7 @@ function rootMessages(root: SvgElementNode): string[] {
   if (box === undefined) {
     return [...wrong, ...extra, `the viewBox "${text}" is not four numbers with a positive size`]
   }
-  // Stryker disable next-line EqualityOperator: the ratio lies in [1, 2), where doubles are multiples of 2^-52, and 0.002 is not one, so the difference never equals the tolerance exactly.
+  // Stryker disable next-line EqualityOperator: only `>=` survives here. The ratio lies in [1, 2), where doubles are multiples of 2^-52, and 0.002 is not one, so the difference never equals the tolerance and `>` and `>=` agree.
   const off = Math.abs(box.width / box.height - 3 / 2) > FLAG_RATIO_TOLERANCE
   const ratio = off ? [`the viewBox "${text}" is not 3:2`] : []
   return [...wrong, ...extra, ...ratio]
