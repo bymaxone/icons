@@ -25,12 +25,14 @@ const config: Config = {
   testEnvironment: '@stryker-mutator/jest-runner/jest-env/node',
   // `check-api-surface.spec.ts`, `check-file-length.spec.ts` and
   // `strip-bundle-comments.spec.ts` run a repository script on fixture directories and
-  // touch no code in `src`, so they kill no mutant; `pnpm test` still runs them.
+  // touch no code in `src`, so they kill no mutant, and `repository-sweep.spec.ts` reads every icon (about
+  // 75 s a test) and kills nothing the fixture specs do not; `pnpm test` still runs them.
   testPathIgnorePatterns: [
     ...(base.testPathIgnorePatterns ?? ['/node_modules/']),
     '/check-api-surface\\.spec\\.ts$',
     '/check-file-length\\.spec\\.ts$',
-    '/strip-bundle-comments\\.spec\\.ts$'
+    '/strip-bundle-comments\\.spec\\.ts$',
+    '/repository-sweep\\.spec\\.ts$'
   ]
 }
 

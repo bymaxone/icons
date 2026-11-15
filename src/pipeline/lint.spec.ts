@@ -416,12 +416,11 @@ describe('lintSources: the icon set', () => {
 })
 
 describe('lintSources: the repository', () => {
-  it.each(['icons', 'fixtures/icons'])('finds no issue in %s', (icons) => {
-    /**
-     * Scenario: the committed sources and the test fixtures are clean, so `pnpm lint:icons`
-     * and the fixture build start green.
-     */
-    expect(lintSources(readSources({ root: REPO_ROOT, icons })).issues).toStrictEqual([])
+  it('finds no issue in fixtures/icons', () => {
+    /** Scenario: the test fixtures are clean, so the fixture build starts green. */
+    expect(
+      lintSources(readSources({ root: REPO_ROOT, icons: 'fixtures/icons' })).issues
+    ).toStrictEqual([])
   })
 })
 
