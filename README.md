@@ -42,10 +42,9 @@ set.
 
 > [!NOTE]
 > **Status: 1.0.0, the first published version.** The package holds 1,298 line icons, 51
-> filled variants, 45 hand-tuned 16 px masters, 110 brand marks and 250 country flags, in 32
-> icon categories, each as a component, a raw SVG file, a sprite symbol and a metadata
-> entry. React Native components are not part of 1.0; they are planned as a minor release
-> after it.
+> filled variants, 45 hand-tuned 16 px masters, 110 brand marks and 250 country flags, each
+> as a component, a raw SVG file, a sprite symbol and a metadata entry. React Native
+> components are not part of 1.0; they are planned as a minor release after it.
 
 The library has **zero direct dependencies**: `react` arrives as a peer dependency, so you
 control its version and the supply-chain surface stays minimal.
@@ -76,18 +75,18 @@ control its version and the supply-chain surface stays minimal.
 - ✅ **The design language, approved**: the twelve keystone icons (`home`, `search`, `play`,
   `plus`, `close`, `check`, `settings`, `user`, `file`, `folder`, `lightning`, `scene`) fix
   the signature of the set, a 1.5 px cut that keeps distinct parts from touching
-- ✅ **The line set**: 1,298 icons in the same language, from navigation, actions and
-  status, media, audio, files and editor, and the Studio, AI, formats, billing, people and
-  system sets to weather, food, sports, transport, places and objects, in 32 categories
-- ✅ **Filled variants** for 51 icons with a stateful meaning, with the same silhouette as
+- ✅ **The line set**: icons in the same language, from navigation and actions to media,
+  files, AI, people, weather, food, sports, transport and objects, in categories
+- ✅ **Filled variants** for icons with a stateful meaning, with the same silhouette as
   the line icon so switching causes no size jump
-- ✅ **Hand-tuned 16 px masters** for 45 icons used in dense UI, drawn separately rather
+- ✅ **Hand-tuned 16 px masters** for icons used in dense UI, drawn separately rather
   than scaled, at 16 px with the set's 1.5 px stroke
-- ✅ **Aliases**: 387 aliases in the metadata, each with a component of its own (`DeleteIcon`
-  for `trash`); 9 of them are deprecated, the old names of renamed icons, kept until 2.0.0
-- ✅ **Brand marks**: 110, in their owners' geometry from Simple Icons, monochrome
+- ✅ **Aliases**: each alias in the metadata has a component of its own (`DeleteIcon` for
+  `trash`); a deprecated alias is the old name of a renamed icon, kept until the version its
+  metadata names
+- ✅ **Brand marks**: in their owners' geometry from Simple Icons, monochrome
   `currentColor`, excluded from the MIT grant (see [`TRADEMARKS.md`](./TRADEMARKS.md))
-- ✅ **Country flags**: 250, the 249 assigned ISO 3166-1 codes and the European Union, from
+- ✅ **Country flags**: the assigned ISO 3166-1 codes and the European Union, from
   `country-flag-icons` (MIT), in colour and 3:2, each kept as its source publishes it (see
   [`TRADEMARKS.md`](./TRADEMARKS.md))
 
@@ -140,7 +139,6 @@ For example `<BrFlagIcon size={24} title="Brazil" />` after
 
 Every subpath is built, exported and checked on every pull request, and holds the full set.
 The root does not export brand marks or flags; they come from `./brands` and `./flags`.
-The packed tarball holds 7,973 files: 1.40 MiB packed, 7.5 MiB unpacked.
 
 ```
 @bymax-one/icons ──► @bymax-one/icons/icons/<name> ──► @bymax-one/icons/runtime ──► react (peer)
@@ -266,9 +264,8 @@ not offered.
 
 ## 📐 Design Language
 
-These rules are the identity of the set. They apply to every icon. The runtime, the build
-pipeline and the preview workflow enforce them, and the icon lint checks the ones a machine
-can check.
+These rules are the identity of the set. They apply to every icon, and the icon lint checks
+the ones a machine can check.
 
 ### Grid
 
@@ -373,8 +370,7 @@ stale copy fails the build. The org package checks then run on the packed tarbal
 
 An icon set is markup that consumers render inside their own pages, so what matters is that
 nothing it ships can carry executable content or reach outside the drawing. The properties
-below are fixed by the specification; the runtime, the pipeline and the preview workflow
-enforce them.
+below are fixed by the specification.
 
 ### Elements are built from data
 
@@ -453,13 +449,8 @@ it is a regression everywhere at once. The suite is held to a bar beyond "the te
   `check:api` requires an "Apply to a derived backend" CHANGELOG note when the built
   declarations change
 - ✅ **Bundle size budget** per subpath, measured on the brotli-compressed bundle. The
-  budgets are per drawing: the root costs 9.5 bytes brotli an icon over 1,298 icons (budget
-  12 above a base of 85, cap 28 kB); `./brands` 386.9 bytes a mark over 110 marks (budget
-  465 above a base of 5, cap 64 kB); `./flags` 2.9 bytes a flag over 250 flags (budget 3.5
-  above a base of 5, cap 8 kB, and no flag module above 2 kB); `./meta` 40.6 bytes a record
-  over 1,658 records (budget 52 above a base of 707, cap 112 kB). The runtime is 1.60 kB
-  (limit 1.75), the root re-exports 12.13 kB (limit 15.29), `./brands` 41.56 kB (limit
-  49.96), the `./flags` entry 0.72 kB (limit 0.86) and `./meta` 66.46 kB (limit 84.89)
+  budgets are per drawing, so a new drawing cannot grow a subpath without notice; the
+  numbers are in `scripts/check-size.mjs`
 - ✅ **Every icon renders**: a smoke test driven by the generated metadata renders every
   component, aliases included, in jsdom and in `react-dom/server` and checks the default
   accessibility attributes

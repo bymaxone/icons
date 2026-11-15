@@ -41,7 +41,7 @@ The same icons, brand marks and flags as React Native components, from the same 
 | `title`       | Becomes `accessibilityLabel` with `accessibilityRole="image"`, and the icon is exposed.                                                    |
 | no `title`    | A decorative icon sets `accessibilityElementsHidden` and `importantForAccessibility="no-hide-descendants"`, as the web sets `aria-hidden`. |
 
-**Colour.** The shapes keep `currentColor`, as on the web, and the component passes `color` to the root `<Svg>`. `react-native-svg` resolves `currentColor` from the root's `color` prop, so the API is the web's, and with no `color` the icon renders black. `color` is never required. A flag keeps its own colours and ignores `color`, as on the web.
+**Colour.** The shapes keep `currentColor`, as on the web, and the component passes `color` to the root `<Svg>`. `react-native-svg` resolves `currentColor` from the root's `color` prop, so the API is the web's, and with no `color` the icon renders black. `color` is never required. A flag keeps its own colours and takes no `color` prop, as on the web, where its props omit `color`.
 
 **Peer range.** `react-native-svg` is an optional peer with a minimum version: the first one that resolves `currentColor` from the root's `color`. The number is measured in the Expo test below and written here and in `peerDependencies`.
 
@@ -75,7 +75,7 @@ Decided by the auditor:
 
 1. **The subpath.** `./native` with the per-entry subpaths above, one version for web and native.
 2. **Colour.** `currentColor` on the shapes and `color` on the root `<Svg>`; black by default; no required `color`.
-3. **Flags.** In `./native` in 1.1.0 with the icons and the brands. A flag keeps its own viewBox and colours and ignores `color`.
+3. **Flags.** In `./native` in 1.1.0 with the icons and the brands. A flag keeps its own viewBox and colours and takes no `color` prop.
 4. **Accessibility.** Decorative by default and hidden; `title` gives `accessibilityLabel` and `accessibilityRole="image"`.
 
 Still open: the minimum `react-native-svg` version, measured in the Expo test. P6 starts only after the 1.0.0 release is merged.

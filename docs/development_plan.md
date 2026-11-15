@@ -2,7 +2,7 @@
 
 > **Version:** 1.0.0
 > **Last updated:** 2026-11-14
-> **Status:** Approved spec, execution under way (every drawing batch, B0 to B8, and P1 to P4 done; P5 prepared for the first publish; P0 awaits its GitHub settings)
+> **Status:** Approved spec, execution under way (the phase table holds the state of each phase; P5 is prepared for the first publish and P0 awaits its GitHub settings)
 > **Source spec:** [`technical_specification.md`](./technical_specification.md)
 > **Derived documents:** per-phase task files under `docs/tasks/` (one file per phase, scaffolded one phase at a time)
 
@@ -28,7 +28,7 @@
 > by hand; P0 still has the GitHub settings of task 0.6
 > **Blocked phases:** none
 >
-> Engineering phases are `P0` to `P6`; drawing batches are `B0` to `B4`. Every drawing batch
+> Engineering phases are `P0` to `P6`; drawing batches are the `B` rows of the phase table. Every drawing batch
 > closes on a founder-approval gate (section 4, rule 11), so a batch is ✅ only after that
 > approval is recorded.
 
@@ -458,10 +458,9 @@ These rules apply to every phase. Phase sections only add rules specific to them
 
 ### B8: country-flags
 
-- **Goal:** A `./flags` subpath with the 250 country flags (the 249 assigned ISO 3166-1 codes and the European Union) in 3:2 and in colour, from `country-flag-icons` (MIT), with its attribution and a provenance note per flag.
+- **Goal:** A `./flags` subpath with the country flags (the assigned ISO 3166-1 codes and the European Union) in 3:2 and in colour, from `country-flag-icons` (MIT), with its attribution and a provenance note per flag.
 - **Rules:** flags are official geometry, like brand marks; they have a lint profile of their own (spec section 5.1: several solid fills; no gradient, transform, mask, filter, `use` or `id`). The set, the names, the API and the profile were decided with the auditor on 2026-11-14 and are in spec section 5.1; the similarity and 16 px checks do not read flags.
-- **Pull requests (merged):** the spec (section 5.1, #61), the runtime (`createFlag`, #62), the profile, the schema and the gates (#63), the catalogue section (#64) and the import of the 250 flags (#67).
-- **B8 ✅ (2026-11-14):** 250 flags (the 249 assigned ISO 3166-1 codes and the European Union) in `icons/flags`, served from `./flags`, `./flags/<name>` and `./svg/flags`, with the README and `CLAUDE.md` rules ('no coloured icons', 'no third-party drawings') stating the flag exception.
+- **B8 ✅ (2026-11-14):** The country flags in `icons/flags`, served from `./flags`, `./flags/<name>` and `./svg/flags`, with the README and `CLAUDE.md` rules ('no coloured icons', 'no third-party drawings') stating the flag exception.
 - **Size:** L
 
 ### P5: hardening-release

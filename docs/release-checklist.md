@@ -74,7 +74,7 @@ To publish 0.1.0 instead, three things change on the branch before tagging:
 
 ## 6. README
 
-The README matches the API and the catalog. Every subpath is listed as ready, `./flags` and `./flags/<name>` included. The component names are listed by variant (`Icon`, `FilledIcon`, `SmIcon`, `BrandIcon`) and the flags as `<Code>FlagIcon`. The status note, the counts, the size budgets and the tarball figures are the ones measured in sections 1 to 3. `check:published` compiles the README's code snippets against `dist/`: 5 compiled. The metadata fields include `label`. The accessibility defaults match the runtime, and the README links to the catalog.
+The README matches the API and the catalog. Every subpath is listed as ready, `./flags` and `./flags/<name>` included. The component names are listed by variant (`Icon`, `FilledIcon`, `SmIcon`, `BrandIcon`) and the flags as `<Code>FlagIcon`. The README carries no count, size budget or tarball figure, so none of them can go stale; `check:published` compiles its code snippets against `dist/`. The metadata fields include `label`. The accessibility defaults match the runtime, and the README links to the catalog.
 
 ## 7. Security alerts
 
@@ -113,7 +113,7 @@ For the founder. Every step runs on the founder's machine, logged in to npm as a
 
 2. **A clean install.** Run `pnpm install --frozen-lockfile`.
 
-3. **The build and the gates.** Run `pnpm prepublishOnly`. It cleans, type-checks, lints, runs the icon lint, the generated check, the mutant markers and the tests at 100% coverage, then builds and runs the size, exports, published-surface and runtime checks.
+3. **The build and the gates.** Run `pnpm prepublishOnly`, which cleans, checks, tests, builds and runs the package gates (the script in `package.json` is the list).
 
    Then run `pnpm dogfood` and `pnpm check:api`. The second prints "No earlier published version", which is the expected result for a first release.
 
@@ -182,6 +182,6 @@ What was measured before that run:
 
 The sheets in [`contact-sheets/release-1.0/`](./contact-sheets/release-1.0/) were made from the built package of this commit:
 
-- `page-1.png` to `page-11.png`: all 1,298 line icons at 24 px, 1x, in the catalogue's cell and order.
+- `page-1.png` to `page-11.png`: every line icon at 24 px, 1x, in the catalogue's cell and order.
 - `flags-light-finland-greece-japan.png` and `flags-light-south-korea.png`: the Flags section of the catalogue in the light theme, 1x, with the hairline outline on the white-edged flags.
-- `flags-categories-listed.png`: the Flag type lists only the Flags category, which holds 250 entries; the other categories no longer show a count of zero.
+- `flags-categories-listed.png`: the Flag type lists only the Flags category; the other categories no longer show a count of zero.
