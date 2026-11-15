@@ -10,7 +10,7 @@ Each item carries the evidence it was checked with. The first publish is manual.
 
 `npm pack --dry-run --json` on the release branch:
 
-- 7,973 files, 1,466,774 bytes packed (1.40 MiB) and 7,911,446 bytes unpacked (7.5 MiB).
+- 7,973 files, 1,467,284 bytes packed (1.40 MiB) and 7,913,422 bytes unpacked (7.5 MiB).
 - Top level: `dist/`, `package.json`, `README.md`, `CHANGELOG.md`, `LICENSE` and `TRADEMARKS.md`. The dogfood gate checks that nothing else is in it.
 - No `src/`, `scripts/`, `fixtures/`, `icons/`, `site/`, `docs/` or `.github/`.
 
@@ -175,3 +175,13 @@ What was measured before that run:
 - The per-push gate on `main` had been cancelled for about 14 merges: its baseline is restored from a cache that is saved only after a run succeeds, and a run that fails never seeds it. A green cold run is what seeds it (pull request #70 splits that run across runners, #71 sets eight shards and a 90-minute ceiling).
 - Two repository sweeps of about 75 seconds each ran inside the Stryker suite, so a mutant they reached timed out instead of being killed. Pull request #69 moved them out of it.
 - A mutant killed by timeout does not prove a test catches the defect, so the timeouts are listed on their own and are not part of "killed".
+
+---
+
+## 11. The catalogue at the size a reader sees
+
+The sheets in [`contact-sheets/release-1.0/`](./contact-sheets/release-1.0/) were made from the built package of this commit:
+
+- `page-1.png` to `page-11.png`: all 1,298 line icons at 24 px, 1x, in the catalogue's cell and order.
+- `flags-light-finland-greece-japan.png` and `flags-light-south-korea.png`: the Flags section of the catalogue in the light theme, 1x, with the hairline outline on the white-edged flags.
+- `flags-categories-listed.png`: the Flag type lists only the Flags category, which holds 250 entries; the other categories no longer show a count of zero.
