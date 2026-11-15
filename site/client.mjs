@@ -145,10 +145,13 @@ function showActive() {
   document.getElementById('active').textContent = names.join(', ')
 }
 
-/** Lists only the categories that hold an entry, in the navigation and in the jump list. */
-function listCategories(listed) {
-  const names = new Set(listed)
+/** Lists only the given categories, in the navigation and in the jump list. */
+function listCategories(names) {
   document.querySelector('.cats')?.toggleAttribute('hidden', names.size === 0)
+  for (const item of document.querySelectorAll('.cats li')) {
+    const name = item.querySelector('[data-cat]')?.dataset.cat
+    item.toggleAttribute('data-zero', !names.has(name))
+  }
   for (const option of document.querySelectorAll('#jump option[value]:not([value=""])')) {
     option.hidden = !names.has(option.value)
   }
@@ -161,12 +164,14 @@ function filter() {
   const ranked = search(finder.docs, state.q, state)
   const rank = new Map(ranked.map((hit, index) => [hit.name, index]))
   const shown = { icon: new Set(), brand: new Set(), flag: new Set() }
-  const counts = new Map()
+  const available = new Map()
   for (const section of document.querySelectorAll('.group')) {
     const picked = state.categories.length === 0 || state.categories.includes(section.dataset.cat)
     let count = 0
+    let kept = 0
     for (const cell of section.querySelectorAll('.cell')) {
       const at = rank.get(cell.dataset.name)
+      if (at !== undefined) kept += 1
       const visible = picked && at !== undefined
       cell.hidden = !visible
       cell.style.order = visible && state.q ? String(at) : ''
@@ -177,15 +182,16 @@ function filter() {
       }
     }
     section.hidden = count === 0
-    counts.set(section.dataset.cat, count)
+    available.set(section.dataset.cat, kept)
     section.querySelector('[data-count]').textContent = count.toLocaleString('en-US')
     const nav = document.querySelector(`[data-count-nav="${section.dataset.cat}"]`)
     if (nav) {
       nav.textContent = count.toLocaleString('en-US')
-      nav.parentElement.toggleAttribute('data-zero', count === 0)
     }
   }
-  listCategories(listedCategories(counts))
+  // A category the type and the search leave empty is not listed, unless it is ticked; one the
+  // reader has not ticked stays listed while another is, so a second can be added.
+  listCategories(new Set([...listedCategories(available), ...state.categories]))
   document.getElementById('shown-icons').textContent = shown.icon.size.toLocaleString('en-US')
   document.getElementById('shown-brands').textContent = shown.brand.size.toLocaleString('en-US')
   const shownFlags = document.getElementById('shown-flags')
