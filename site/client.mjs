@@ -163,6 +163,9 @@ function filter() {
   const { state } = finder
   const ranked = search(finder.docs, state.q, state)
   const rank = new Map(ranked.map((hit, index) => [hit.name, index]))
+  const inType = new Set(
+    search(finder.docs, state.q, { ...state, categories: [] }).map((hit) => hit.name)
+  )
   const shown = { icon: new Set(), brand: new Set(), flag: new Set() }
   const available = new Map()
   for (const section of document.querySelectorAll('.group')) {
@@ -171,7 +174,7 @@ function filter() {
     let kept = 0
     for (const cell of section.querySelectorAll('.cell')) {
       const at = rank.get(cell.dataset.name)
-      if (at !== undefined) kept += 1
+      if (inType.has(cell.dataset.name)) kept += 1
       const visible = picked && at !== undefined
       cell.hidden = !visible
       cell.style.order = visible && state.q ? String(at) : ''
@@ -189,7 +192,8 @@ function filter() {
       nav.textContent = count.toLocaleString('en-US')
     }
   }
-  // The counts ignore the category facet, so ticking one category keeps the others listed.
+  // The counts come from a search that leaves the category facet out, so ticking one category
+  // keeps the others listed.
   listCategories(new Set(listedCategories(available, state.categories)))
   document.getElementById('shown-icons').textContent = shown.icon.size.toLocaleString('en-US')
   document.getElementById('shown-brands').textContent = shown.brand.size.toLocaleString('en-US')
