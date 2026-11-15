@@ -11,7 +11,7 @@ and deprecated, each rename with the alias that keeps the old name working.
 
 ## [Unreleased]
 
-## [1.0.0] - 2026-11-14
+## [1.0.0] - 2026-11-15
 
 The first published version: 1,298 line icons, 51 filled variants, 45 hand-tuned 16 px masters,
 110 brand marks and 250 country flags, as React 19 components, raw SVG, an SVG sprite and typed

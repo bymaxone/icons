@@ -74,7 +74,7 @@ To publish 0.1.0 instead, three things change on the branch before tagging:
 
 ## 6. README
 
-The README matches the API and the catalog. Every subpath is listed as ready, `./flags` and `./flags/<name>` included. The component names are listed by variant (`Icon`, `FilledIcon`, `SmIcon`, `BrandIcon`) and the flags as `<Code>FlagIcon`. The README carries no count, size budget or tarball figure, so none of them can go stale; `check:published` compiles its code snippets against `dist/`. The metadata fields include `label`. The accessibility defaults match the runtime, and the README links to the catalog.
+The README matches the API and the catalog. Every subpath is listed as ready, `./flags` and `./flags/<name>` included. The component names are listed by variant (`Icon`, `FilledIcon`, `SmIcon`, `BrandIcon`) and the flags as `<Code>FlagIcon`. The README states the counts of the package in its status line and no size budget or tarball figure; `check:published` compares those counts with `dist/metadata.json` and compiles its code snippets against `dist/`, so a release that changes a count must update that line. The metadata fields include `label`. The accessibility defaults match the runtime, and the README links to the catalog.
 
 ## 7. Security alerts
 
@@ -110,6 +110,8 @@ For the founder. Every step runs on the founder's machine, logged in to npm as a
    ```
 
    Use Node 24 and pnpm 11.20.0, the versions `package.json` names.
+
+   Check the date of the `## [1.0.0]` section in `CHANGELOG.md`, which ships in the tarball. If the publish happens on a later day, correct the date in a one-line pull request and use its squash commit in this step instead.
 
 2. **A clean install.** Run `pnpm install --frozen-lockfile`.
 
