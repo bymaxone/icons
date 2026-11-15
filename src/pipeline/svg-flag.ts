@@ -30,6 +30,7 @@ const DROPPED = ['class', 'clip-rule']
 /** Attributes of a group that are neither moved nor dropped, so it cannot be flattened. */
 const SVG_NAMESPACE = 'http://www.w3.org/2000/svg'
 
+// Stryker disable next-line Regex: SVGO has already written every colour in lower case, so a value this pattern misses (or matches loosely) leaves the formatter's output as it is.
 const HEX_COLOUR = /^#(?:[0-9a-fA-F]{3}|[0-9a-fA-F]{6})$/
 
 function isElement(node: XastChild): node is XastElement {

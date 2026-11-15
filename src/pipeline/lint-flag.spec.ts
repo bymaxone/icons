@@ -292,3 +292,173 @@ describe('lintFlag: precision', () => {
     ])
   })
 })
+
+/** A clean path, the body of a flag whose only variable part is the root or one attribute. */
+const PATH = '<path fill="#ffffff" d="M0 0h1v1z"/>'
+
+describe('lintFlag: the edges of each rule', () => {
+  it('reports a parse failure with the parser message, not the missing-root message', () => {
+    /**
+     * Scenario: a truncated file is reported with what the parser said; the catch must
+     * return the issue itself and not fall through to the "single root" message.
+     */
+    const report = lint('<svg xmlns="http://www.w3.org/2000/svg"><path d="M0 0"></svg>')
+    expect(report.issues[0]?.message).toContain('Error')
+    expect(report.issues[0]?.message).not.toBe('the file must hold a single <svg> root')
+  })
+
+  it.each(['0 0 15019 10000', '0 0 14981 10000', '0 0 3 2'])(
+    'accepts the view box %p, within the 0.2% tolerance',
+    (viewBox) => {
+      /** Scenario: a ratio just inside the tolerance on either side of 3:2 is accepted. */
+      expect(
+        messages(lint(written(PATH, `viewBox="${viewBox}"`)).issues, 'svg-root')
+      ).toStrictEqual([])
+    }
+  )
+
+  it.each(['0 0 15021 10000', '0 0 14979 10000'])(
+    'refuses the view box %p, just past the tolerance',
+    (viewBox) => {
+      /** Scenario: a ratio just past the tolerance on either side of 3:2 is refused. */
+      expect(
+        messages(lint(written(PATH, `viewBox="${viewBox}"`)).issues, 'svg-root')
+      ).toStrictEqual([`the viewBox "${viewBox}" is not 3:2`])
+    }
+  )
+
+  it.each(['0', '1', '0.5', '0.00', '1.0'])('accepts the opacity %p', (opacity) => {
+    /** Scenario: 0 and 1 are the bounds of an opacity and are both allowed. */
+    const text = written(`<path fill="#ffffff" opacity="${opacity}" d="M0 0h1v1z"/>`)
+    expect(messages(lint(text).issues, 'svg-fill')).toStrictEqual([])
+  })
+
+  it.each(['-0.01', '1.01'])('refuses the opacity %p, just outside 0 to 1', (opacity) => {
+    /** Scenario: a hair below 0 or above 1 is not an opacity. */
+    const text = written(`<path fill="#ffffff" opacity="${opacity}" d="M0 0h1v1z"/>`)
+    expect(messages(lint(text).issues, 'svg-fill')).toStrictEqual([
+      `<path> opacity="${opacity}" must be a number from 0 to 1`
+    ])
+  })
+
+  it('accepts a file of exactly the size limit and refuses one byte more', () => {
+    /** Scenario: at most 8 KiB is allowed, so the limit itself passes and the next byte fails. */
+    const fit = written(PATH)
+    const exact = written(PATH + ' '.repeat(FLAG_MAX_BYTES - Buffer.byteLength(fit)))
+    expect(Buffer.byteLength(exact)).toBe(FLAG_MAX_BYTES)
+    expect(messages(lint(exact).issues, 'svg-size')).toStrictEqual([])
+    const over = exact.replace('</svg>', ' </svg>')
+    expect(Buffer.byteLength(over)).toBe(FLAG_MAX_BYTES + 1)
+    expect(messages(lint(over).issues, 'svg-size')).toStrictEqual([
+      `the file holds ${FLAG_MAX_BYTES + 1} bytes: at most ${FLAG_MAX_BYTES}`
+    ])
+  })
+
+  it('accepts three decimals and refuses four', () => {
+    /** Scenario: at most three decimals, so 1.234 passes and 1.2345 fails, whatever the attribute. */
+    const three = written('<circle fill="#ffffff" cx="1.234" cy="1" r="1"/>')
+    expect(messages(lint(three).issues, 'svg-precision')).toStrictEqual([])
+    const four = written('<circle fill="#ffffff" cx="1.2345" cy="1" r="1"/>')
+    expect(messages(lint(four).issues, 'svg-precision')).toStrictEqual([
+      '<circle> cx holds 1.2345: at most 3 decimals, no exponent'
+    ])
+  })
+
+  it('reads an exponent whole, with its digits and its sign', () => {
+    /**
+     * Scenario: the message names the whole number, so a multi-digit mantissa and exponent
+     * and a signed exponent are matched in full.
+     */
+    const text = written('<path fill="#ffffff" d="M12e3 0h1e+5v1e-5z"/>')
+    expect(messages(lint(text).issues, 'svg-precision')).toStrictEqual([
+      '<path> d holds 12e3: at most 3 decimals, no exponent',
+      '<path> d holds 1e+5: at most 3 decimals, no exponent',
+      '<path> d holds 1e-5: at most 3 decimals, no exponent'
+    ])
+    const wide = written('<path fill="#ffffff" d="M1e55 0z"/>')
+    expect(messages(lint(wide).issues, 'svg-precision')).toStrictEqual([
+      '<path> d holds 1e55: at most 3 decimals, no exponent'
+    ])
+  })
+
+  it('does not read the colours or the keywords as numbers', () => {
+    /**
+     * Scenario: `#1e3456` and `#2e5555` look like exponents, and are colours; only geometry
+     * and stroke metrics are read for precision.
+     */
+    const text = written(
+      '<path fill="#1e3456" stroke="#2e5555" fill-rule="evenodd" d="M0 0h1v1z"/>'
+    )
+    expect(messages(lint(text).issues, 'svg-precision')).toStrictEqual([])
+  })
+
+  it('reads only the view box among the root attributes for precision', () => {
+    /**
+     * Scenario: another root attribute is refused as such, and its number is not also
+     * reported for precision.
+     */
+    const text = written(PATH, 'viewBox="0 0 513 342" width="1.23456"')
+    expect(messages(lint(text).issues, 'svg-precision')).toStrictEqual([])
+    expect(messages(lint(text).issues, 'svg-root')).toStrictEqual([
+      'root attribute width is not allowed'
+    ])
+  })
+})
+
+describe('lintFlag: each numeric attribute and the regular expressions', () => {
+  it.each([
+    ['cy', 'circle', '<circle fill="#ffffff" cx="1" cy="x" r="1"/>'],
+    ['ry', 'ellipse', '<ellipse fill="#ffffff" cx="1" cy="1" rx="1" ry="x"/>'],
+    ['x', 'rect', '<rect fill="#ffffff" x="x" y="1" width="1" height="1"/>'],
+    ['y', 'rect', '<rect fill="#ffffff" x="1" y="x" width="1" height="1"/>'],
+    ['ry', 'rect', '<rect fill="#ffffff" x="1" y="1" width="1" height="1" ry="x"/>']
+  ])('refuses %s="x" on a %s, the only bad number', (name, tag, body) => {
+    /** Scenario: each attribute is checked as a number on its own, the others being valid. */
+    expect(messages(lint(written(body)).issues, 'svg-fill')).toStrictEqual([
+      `<${tag}> ${name}="x" must be a number`
+    ])
+  })
+
+  it('allows ry on a rect', () => {
+    /** Scenario: a rect may carry a vertical corner radius beside the horizontal one. */
+    const text = written('<rect fill="#ffffff" x="1" y="1" width="2" height="2" rx="1" ry="1"/>')
+    expect(messages(lint(text).issues, 'svg-attribute')).toStrictEqual([])
+  })
+
+  it.each(['#abc', '#abcd', '#ggg', '#abcdef0', 'x#abcdef', '#ABCDEF', '#abcdeg'])(
+    'refuses the colour %p',
+    (fill) => {
+      /** Scenario: a colour is exactly six lower-case hexadecimal digits after `#`, no more or less. */
+      const text = written(`<path fill="${fill}" d="M0 0h1v1z"/>`)
+      expect(messages(lint(text).issues, 'svg-fill')).toStrictEqual([
+        `<path> fill="${fill}" must be #rrggbb or none`
+      ])
+    }
+  )
+
+  it('accepts a colour of six lower-case digits', () => {
+    /** Scenario: `#abcdef` and `#012345` are colours. */
+    const text = written('<path fill="#abcdef" stroke="#012345" d="M0 0h1v1z"/>')
+    expect(messages(lint(text).issues, 'svg-fill')).toStrictEqual([])
+  })
+
+  it.each(['1.', '.5', '-0', '1e5', '1e+5', '1e-5', '1e55', '.55', '12.25', '+1.5E10'])(
+    'accepts the number %p',
+    (value) => {
+      /** Scenario: every notation of an SVG number, with several digits where the regexp has `+`. */
+      const text = written(`<rect fill="#ffffff" width="${value}"/>`)
+      expect(messages(lint(text).issues, 'svg-fill')).toStrictEqual([])
+    }
+  )
+
+  it.each(['1e', 'a.5', 'x1', '1ex5', '1e+', '1.5.5', '.', '--1', '1e5e5'])(
+    'refuses the number %p',
+    (value) => {
+      /** Scenario: a letter before the point, an exponent with no digits or a stray letter is no number. */
+      const text = written(`<rect fill="#ffffff" width="${value}"/>`)
+      expect(messages(lint(text).issues, 'svg-fill')).toStrictEqual([
+        `<rect> width="${value}" must be a number`
+      ])
+    }
+  )
+})
