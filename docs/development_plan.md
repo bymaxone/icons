@@ -1,7 +1,7 @@
 # Development Plan: @bymax-one/icons
 
 > **Version:** 1.0.0
-> **Last updated:** 2026-11-14
+> **Last updated:** 2026-11-16
 > **Status:** Approved spec, execution under way (the phase table holds the state of each phase; P5 is prepared for the first publish and P0 awaits its GitHub settings)
 > **Source spec:** [`technical_specification.md`](./technical_specification.md)
 > **Derived documents:** per-phase task files under `docs/tasks/` (one file per phase, scaffolded one phase at a time)
@@ -53,7 +53,7 @@
 | B7   | brand-marks                       | ✅     | 100%     | L    | 2026-11-14   |
 | B8   | country-flags                     | ✅     | 100%     | L    | 2026-11-14   |
 | P5   | hardening-release                 | 🔄     | 90%      | M    | 2026-11-14   |
-| P6   | react-native                      | 📋     | 0%       | M    | 2026-11-08   |
+| P6   | react-native                      | ✅     | 100%     | M    | 2026-11-16   |
 
 ---
 

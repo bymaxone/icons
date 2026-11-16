@@ -11,6 +11,10 @@ and deprecated, each rename with the alias that keeps the old name working.
 
 ## [Unreleased]
 
+## [1.1.0] - 2026-11-16
+
+React Native components for the whole set, in a minor release: the web entries and their types do not change.
+
 ### Added
 
 - React Native components for every icon, brand mark and flag: `./native` for the icons, `./native/icons/<name>` for one icon's components, `./native/brands`, `./native/flags` and `./native/runtime` for the base and `createNativeIcon`. They are generated from the same drawings as the web components and render through `react-native-svg`, an optional peer dependency, so a web install adds nothing. The shapes keep `currentColor` and the component sets `color` on the root `<Svg>`; an icon with no `color` renders black, and a flag keeps its own colours. `size` is a number in density-independent pixels, a `title` becomes the `accessibilityLabel` of an image, and an icon with none is hidden from the accessibility tree. Apply to a consumer: nothing changes for a web install, and a React Native app adds `react-native-svg` (`>=15.11.1`) next to the package.
@@ -281,5 +285,6 @@ metadata.
   `pnpm family-sheet` renders the whole set by category; and a pull request that changes a
   drawing gets a preview comment with its render and its nearest matches.
 
-[Unreleased]: https://github.com/bymaxone/icons/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/bymaxone/icons/compare/v1.1.0...HEAD
+[1.1.0]: https://github.com/bymaxone/icons/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/bymaxone/icons/releases/tag/v1.0.0

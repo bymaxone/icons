@@ -154,6 +154,8 @@ For the founder. Every step runs on the founder's machine, logged in to npm as a
    - The README's npm badge becomes a link to the package, in the next release.
    - The catalog header's "npm soon" (`site/pages.mjs`, the `soon` span) becomes a link to `https://www.npmjs.com/package/@bymax-one/icons`. It is in the site only, so it needs no package release.
 
+10. **Then 1.1.0.** `main` carries version 1.1.0 (section 12). Tag `v1.1.0` only after step 6, because trusted publishing needs the package on npm; `release.yml` then publishes it with provenance.
+
 ---
 
 ## 10. Mutation testing
@@ -191,3 +193,43 @@ The sheets in [`contact-sheets/release-1.0/`](./contact-sheets/release-1.0/) wer
 - `page-1.png` to `page-11.png`: every line icon at 24 px, 1x, in the catalogue's cell and order.
 - `flags-light-finland-greece-japan.png` and `flags-light-south-korea.png`: the Flags section of the catalogue in the light theme, 1x, with the hairline outline on the white-edged flags.
 - `flags-categories-listed.png`: the Flag type lists only the Flags category; the other categories no longer show a count of zero.
+
+---
+
+## 12. Release 1.1.0: React Native
+
+> **Prepared**: 2026-11-16 · **Version**: 1.1.0, a minor release · **Order**: the founder publishes 1.0.0 by hand first (section 9); `v1.1.0` is tagged only after 1.0.0 is on npm.
+
+Trusted publishing needs the package on npm, so pushing `v1.1.0` before 1.0.0 is published would fail the workflow. After the 1.0.0 publish and its trusted-publisher setup, `release.yml` publishes 1.1.0 and `pnpm check:api` compares it with 1.0.0: the web declarations carry no difference, and the native entries are new.
+
+**The tarball** (`npm pack --dry-run --json` on the release branch): 14,181 files, 2,271,764 bytes packed and 12,634,946 bytes unpacked, against 7,973 files and 1,467,284 bytes packed for 1.0.0, a growth of 55% in packed size, because every drawing now ships a second renderer. The dogfood gate checks that the 14,181 entries sit under the allowed paths.
+
+**The gates**, on the release branch: `pnpm prepublishOnly` passes with 81 suites and 3,437 tests at 100% coverage; `pnpm dogfood` passes; `pnpm check:api` prints "No earlier published version", the expected result until 1.0.0 is on npm. `pnpm check:runtime` resolves 1,552 `./native` subpaths in ESM and CommonJS to the declared files, with exactly their names, and the 1,553 web subpaths still export their 4,379 names.
+
+**Size budgets.** Every `./native` entry is held to a budget in `scripts/check-size.mjs`, with a negative test: index 12.11 kB brotli (budget 14.50 kB), runtime 1.74 kB (2.10 kB), brands 41.60 kB (50.00 kB), flags 0.71 kB (0.90 kB); an icon module is held to the web budget of 1.5 KiB and a flag module to 2 KiB. The build peaks at 4.84 GB of resident memory, which fits a GitHub runner.
+
+**On a device**, the Expo bench from the packed tarball renders the seven rows (line, filled, 16 px master, brand, flag, per-icon subpath, title) at three sizes in the default colour and in red:
+
+| `react-native-svg` | React Native, architecture | Platforms                          |
+| ------------------ | -------------------------- | ---------------------------------- |
+| 15.16.0            | 0.88.1 on Expo SDK 58, New | iOS Simulator, Android 36 emulator |
+| 15.11.1            | 0.78.3, old                | iOS Simulator, Android 36 emulator |
+
+The peer floor is `>=15.11.1`: the npm tarball of 15.11.0 has no `scripts/rnsvg_utils.rb`, so `pod install` fails on it, and 15.11.1 was republished the same day. 15.11.0 also does not compile with the New Architecture on React Native 0.78, 0.79 or 0.88. Metro below React Native 0.79 needs `resolver.unstable_enablePackageExports: true`; the README says so.
+
+**Mutation.** The cold run on `main` (`mutation-full.yml`, commit `dfc68e1d`, the merge of the native runtime and the glob 14 toolchain): https://github.com/bymaxone/icons/actions/runs/43899908966, green.
+
+| Field                             | Value                                                                   |
+| --------------------------------- | ----------------------------------------------------------------------- |
+| Mutants (all)                     | 5,881                                                                   |
+| Killed                            | 4,020                                                                   |
+| Killed by timeout (counted apart) | 34                                                                      |
+| Runtime errors (counted apart)    | 175                                                                     |
+| Compile errors (not tested)       | 1,612                                                                   |
+| Ignored by a `Stryker disable`    | 40                                                                      |
+| Survivors                         | 0 (the gate needs 0)                                                    |
+| Score                             | 100                                                                     |
+| Time of each of the eight shards  | 47m54s, 37m35s, 34m24s, 46m58s, 49m28s, 53m02s, 71m51s, 42m33s (1 to 8) |
+| The whole run                     | 74m02s, with the aggregate job at 1m47s                                 |
+
+Against section 10 the run adds 265 mutants, all killed or counted apart, from the native runtime and the generator: the 5,616 of the first run grew to 5,881.
