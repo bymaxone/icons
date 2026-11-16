@@ -1,8 +1,8 @@
 # P6 React Native: specification draft
 
-> **Status**: draft for the auditor's decision, before any code · **Ships as**: 1.1.0, a minor release · **Source**: [`development_plan.md`](./development_plan.md) §5 (P6)
+> **Status**: built on `feat/p6-native`, open for the auditor's size and peer decisions · **Ships as**: 1.1.0, a minor release · **Source**: [`development_plan.md`](./development_plan.md) §5 (P6)
 
-Nothing here is built. Each item that depends on a measurement says what is measured, and the number is filled in when it is.
+Each item that depends on a measurement says what is measured, and the number is filled in when it is.
 
 ---
 
@@ -18,6 +18,7 @@ The same icons, brand marks and flags as React Native components, from the same 
 | `./native/icons/<name>` | One icon's components, for dynamic import | `react`, `react-native-svg` |
 | `./native/brands`       | The brand marks                           | `react`, `react-native-svg` |
 | `./native/flags`        | The flags                                 | `react`, `react-native-svg` |
+| `./native/runtime`      | The native base and `createNativeIcon`    | `react`, `react-native-svg` |
 
 - `react-native` and `react-native-svg` are optional peers (`peerDependenciesMeta`), so `dependencies` stays `{}` and a web consumer installs nothing new.
 - Metro resolves the subpath through the `exports` map. A `react-native` condition is added only if Metro needs it, and the Expo test below decides that.
@@ -43,7 +44,7 @@ The same icons, brand marks and flags as React Native components, from the same 
 
 **Colour.** The shapes keep `currentColor`, as on the web, and the component passes `color` to the root `<Svg>`. `react-native-svg` resolves `currentColor` from the root's `color` prop, so the API is the web's, and with no `color` the icon renders black. `color` is never required. A flag keeps its own colours and takes no `color` prop, as on the web, where its props omit `color`.
 
-**Peer range.** `react-native-svg` is an optional peer with a minimum version: the first one that resolves `currentColor` from the root's `color`. The number is measured in the Expo test below and written here and in `peerDependencies`.
+**Peer range.** `react-native-svg` is an optional peer, `>=15.0.0` for now. Measured: the sources of the eleven releases read (13.14.0, 14.1.0, 15.0.0, 15.2.0, 15.4.0, 15.6.0 and 15.8.0 to 15.12.0) all declare `color` on `<Svg>` and resolve the string `currentColor` in `extractBrush`, so the contract the components rely on is not new in 15.x. Rendered on a device only 15.16.1 is, with React Native 0.86.3 on Expo SDK 58 (`devDependencies` pin both); the lower bound is a source reading, not a device test, until the Expo test runs on an older release.
 
 Props that exist only for the DOM (`className`, `style` as a CSS object, `ref` to an SVG element) are left out of the native type, not ignored.
 
@@ -51,11 +52,13 @@ Props that exist only for the DOM (`className`, `style` as a CSS object, `ref` t
 
 - `pnpm generate` writes the native modules next to the web ones under `src/native/generated`, and `check:generated` covers them.
 - tsup builds `./native` to ESM and CJS with its declarations, `react` and `react-native-svg` external.
-- The size gate gets a budget per native entry, set 20% over the measured cost of the built entry. The number is measured on the first build and written here.
+- The size gate reports the native entries and holds no budget on them yet: the budget per entry is set 20% over the measured cost of the built entry, and the auditor decides the numbers.
 - `check:exports` and the published-surface check cover every `./native` subpath, and `attw` runs on them.
 - A Jest test renders every native icon through `react-test-renderer` with a mock of `react-native-svg`, and a second test checks that the rendered element tree has the same shapes as the web render of the same icon.
 - A colour test renders an icon with `color="red"` and checks that the root carries `color="red"` and the shapes still read `currentColor`; with no `color` the root has none. The Expo test then shows the shapes painted red on a device.
 - Coverage and mutation stay at 100% for the hand-written native code; the generated modules are excluded as they are on the web.
+- The native runtime holds its own copy of three small helpers, `resolveStrokeWidth`, the icon-name to component-name conversion and the view box parser, instead of widening `./runtime`; a parity spec runs both copies on the same inputs and fails when they differ.
+- A native component is documented `@since 1.1.0`, the release that introduced the entry, whatever version its drawing came in.
 
 ## 6. The Expo test from the tarball
 
@@ -78,7 +81,7 @@ Decided by the auditor:
 3. **Flags.** In `./native` in 1.1.0 with the icons and the brands. A flag keeps its own viewBox and colours and takes no `color` prop.
 4. **Accessibility.** Decorative by default and hidden; `title` gives `accessibilityLabel` and `accessibilityRole="image"`.
 
-Still open: the minimum `react-native-svg` version, measured in the Expo test. P6 starts only after the 1.0.0 release is merged.
+Still open: the size budgets of the native entries, the minimum `react-native-svg` version on a device, and the Android run of the Expo test. The 1.0.0 release is merged.
 
 ## 8. Out of scope
 
