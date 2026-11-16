@@ -516,6 +516,25 @@ These rules apply to every phase. Phase sections only add rules specific to them
 - **References:** spec §1.3, §10, §16, §17 (D6).
 - **Size:** M
 
+### 1.x tooling tasks
+
+Found while releasing 1.0.0 and not needed for it. Each one names the measurement that
+motivates it.
+
+- **Static mutants in the pipeline's tables.** Stryker counts a literal in a module-level
+  table as a static mutant and runs the whole suite against it. In the cold run the files
+  with the most test executions are `src/pipeline/british-spellings.ts` (the word table),
+  `src/pipeline/lint-flag.ts`, `src/pipeline/svg.ts`, `src/pipeline/svg-flag.ts` and
+  `src/pipeline/lint-svg.ts`. Make their tables data covered by one snapshot test, or move
+  them to a module with fewer statics, so a cold run shortens without `ignoreStatic`.
+- **The icon preview on a release pull request.** `Render the changed drawings` fails when the
+  event carries a base commit older than the branch's merge base, and it reaches its
+  15-minute timeout when a pull request changes every drawing, as a release does. It should
+  skip a pull request whose change is the whole set, or take a longer timeout.
+- **`check:lint-graph` reads standard output only.** The gate joins standard error to the
+  JSON it parses, so any resolver warning makes it report a blind rule; the gate should parse
+  standard output and print standard error beside it.
+
 ---
 
 ## 6. Open Questions
