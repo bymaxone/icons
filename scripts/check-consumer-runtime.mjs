@@ -283,14 +283,19 @@ function run(command, args, options = {}) {
  */
 function checkNative(packageDir, expected) {
   const subpaths = Object.keys(expected.nativeExports)
-  const esm = `${JSON.stringify(subpaths)}.map((s) => [s, import.meta.resolve(${JSON.stringify(packageName)} + s.slice(1))])`
-  const cjs = `${JSON.stringify(subpaths)}.map((s) => [s, require.resolve(${JSON.stringify(packageName)} + s.slice(1))])`
+  // The subpaths and the package name reach the script as an argument, not as code text.
+  const script = (resolve) =>
+    `const [subpaths, name] = JSON.parse(process.argv[1])
+console.log(JSON.stringify(subpaths.map((s) => [s, ${resolve}(name + s.slice(1))])))`
+  const argument = JSON.stringify([subpaths, packageName])
   const resolved = {}
-  for (const [format, script, flags] of [
-    ['esm', `console.log(JSON.stringify(${esm}))`, ['--input-type=module']],
-    ['cjs', `console.log(JSON.stringify(${cjs}))`, ['--input-type=commonjs']]
+  for (const [format, resolve, flag] of [
+    ['esm', 'import.meta.resolve', '--input-type=module'],
+    ['cjs', 'require.resolve', '--input-type=commonjs']
   ]) {
-    const pairs = JSON.parse(run('node', [...flags, '-e', script], { cwd: consumerDir }))
+    const pairs = JSON.parse(
+      run('node', [flag, '-e', script(resolve), argument], { cwd: consumerDir })
+    )
     for (const [subpath, location] of pairs) {
       const file = location.startsWith('file:') ? fileURLToPath(location) : location
       resolved[subpath] = { ...resolved[subpath], [format]: file }
