@@ -52,7 +52,7 @@ Props that exist only for the DOM (`className`, `style` as a CSS object, `ref` t
 
 - `pnpm generate` writes the native modules next to the web ones under `src/native/generated`, and `check:generated` covers them.
 - tsup builds `./native` to ESM and CJS with its declarations, `react` and `react-native-svg` external.
-- The size gate holds a budget on every native entry, enforced by `scripts/check-size.mjs`: the four entries sit 20% over their measured brotli size, and each icon and flag module has the budget of its web twin. `src/pipeline/check-size-native.spec.ts` proves an entry over budget fails the gate.
+- The size gate holds a budget on every native entry, enforced by `scripts/check-size.mjs`: the entry budgets sit above the measured brotli sizes, and each icon and flag module has the budget of its web twin. `src/pipeline/check-size-native.spec.ts` proves an entry over budget fails the gate.
 - `check:exports` and the published-surface check cover every `./native` subpath, and `attw` runs on them.
 - A Jest test renders every native icon through `react-test-renderer` with a mock of `react-native-svg`, and a second test checks that the rendered element tree has the same shapes as the web render of the same icon.
 - A colour test renders an icon with `color="red"` and checks that the root carries `color="red"` and the shapes still read `currentColor`; with no `color` the root has none. The Expo test then shows the shapes painted red on a device.
