@@ -165,7 +165,7 @@ config.resolver.unstable_enablePackageExports = true
 **What was tested.** 15.16.0 on Expo SDK 58 and React Native 0.88.1 (New Architecture), on iOS and
 Android; 15.11.1 on React Native 0.78.3 (old architecture), on iOS and Android. Which
 `react-native-svg` release builds with which React Native version and architecture is
-`react-native-svg`'s own matrix, not this package's: 15.11.x does not build with the New
+`react-native-svg`'s own matrix, not this package's: 15.11.0 does not build with the New
 Architecture on React Native 0.78 or later, so with the New Architecture use the release that
 supports your React Native version, and read the compatibility table in its README.
 
