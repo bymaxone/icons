@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `bat` icon, line variant: bat, nocturnal, cave, wings.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const BatIcon = /* @__PURE__ */ createNativeIcon('bat', [
   [

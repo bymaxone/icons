@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `list-checks` icon, line variant: list checks, to do, tasks done, checkboxes.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const ListChecksIcon = /* @__PURE__ */ createNativeIcon('list-checks', [
   ['path', { d: 'm3.75 6.25 1.5 1.5 2.5-2.5m-4 6.5 1.5 1.5 2.5-2.5' }],

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `lamp` icon, line variant: lamp, light, desk lamp, lighting.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const LampIcon = /* @__PURE__ */ createNativeIcon('lamp', [
   ['path', { d: 'M8.25 3.75h8l2.5 7.5h-13z' }],

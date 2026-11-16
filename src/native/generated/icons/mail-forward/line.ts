@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `mail-forward` icon, line variant: mail forward, pass along, resend, redirect.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const MailForwardIcon = /* @__PURE__ */ createNativeIcon('mail-forward', [
   [

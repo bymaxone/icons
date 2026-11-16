@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `milk-off` icon, line variant: dairy free, no milk, lactose free, allergen.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const MilkOffIcon = /* @__PURE__ */ createNativeIcon('milk-off', [
   [

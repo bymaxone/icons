@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `sailboat` icon, line variant: sailboat, boat, sail, sea.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const SailboatIcon = /* @__PURE__ */ createNativeIcon('sailboat', [
   ['path', { d: 'M11.25 4.25v11h-5.5z' }],

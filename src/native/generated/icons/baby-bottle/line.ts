@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `baby-bottle` icon, line variant: baby bottle, feeding, infant, milk.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const BabyBottleIcon = /* @__PURE__ */ createNativeIcon('baby-bottle', [
   ['path', { d: 'M9.25 8.25h6v10.5Q15.25 21 13 21h-1.5q-2.25 0-2.25-2.25z' }],

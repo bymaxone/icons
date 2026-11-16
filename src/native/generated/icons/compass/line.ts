@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `compass` icon, line variant: compass, explore, navigate, discover.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const CompassIcon = /* @__PURE__ */ createNativeIcon('compass', [
   ['path', { d: 'M13.872 3.906a8.5 8.5 0 0 1 6.722 6.722' }],

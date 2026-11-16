@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `split` icon, line variant: cut clip, razor, divide, playhead.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const SplitIcon = /* @__PURE__ */ createNativeIcon('split', [
   [

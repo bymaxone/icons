@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `stairs` icon, line variant: stairs, steps, levels, tier, subscription, pricing.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const StairsIcon = /* @__PURE__ */ createNativeIcon('stairs', [
   ['path', { d: 'M3.75 20.75h16.5v-16h-4v5h-4v5h-4v6' }]

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `basketball-hoop` icon, line variant: basketball hoop, backboard, net, court.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const BasketballHoopIcon = /* @__PURE__ */ createNativeIcon('basketball-hoop', [
   [

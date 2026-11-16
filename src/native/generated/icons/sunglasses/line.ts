@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `sunglasses` icon, line variant: sunglasses, summer, cool, eyewear.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const SunglassesIcon = /* @__PURE__ */ createNativeIcon('sunglasses', [
   ['path', { d: 'M3.25 9.25h18' }],

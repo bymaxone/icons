@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `salt` icon, line variant: salt, shaker, seasoning, sodium.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const SaltIcon = /* @__PURE__ */ createNativeIcon('salt', [
   ['path', { d: 'M8.25 7.25c0-2.5 1.5-4 4-4s4 1.5 4 4' }],

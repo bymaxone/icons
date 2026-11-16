@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `printer` icon, line variant: printer, print, paper, document.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const PrinterIcon = /* @__PURE__ */ createNativeIcon('printer', [
   ['path', { d: 'M7.75 8.25v-3q0-1.5 1.5-1.5h6q1.5 0 1.5 1.5v3' }],

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `ghost` icon, line variant: ghost, spooky, hidden, halloween.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const GhostIcon = /* @__PURE__ */ createNativeIcon('ghost', [
   ['path', { d: 'M5.25 21.25v-10a7 7 0 0 1 14 0v10l-2.25-2-2.5 2-2.25-2-2.25 2-2.5-2z' }],

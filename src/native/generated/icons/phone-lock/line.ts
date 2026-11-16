@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `phone-lock` icon, line variant: phone lock, secure device, screen lock, private line.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const PhoneLockIcon = /* @__PURE__ */ createNativeIcon('phone-lock', [
   [

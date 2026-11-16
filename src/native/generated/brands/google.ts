@@ -10,7 +10,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
  * The Google brand mark, from https://github.com/simple-icons/simple-icons/blob/16.37.0/icons/google.svg (CC0-1.0, retrieved 2026-11-11).
  * The mark belongs to its owner and is not covered by the MIT grant; see TRADEMARKS.md and https://about.google/brand-resource-center/brand-elements/.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const GoogleBrandIcon = /* @__PURE__ */ createNativeIcon(
   'google-brand',

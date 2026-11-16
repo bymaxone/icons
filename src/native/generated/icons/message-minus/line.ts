@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `message-minus` icon, line variant: message minus, delete chat, hide comment, drop reply.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const MessageMinusIcon = /* @__PURE__ */ createNativeIcon('message-minus', [
   [

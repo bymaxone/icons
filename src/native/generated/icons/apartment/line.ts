@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `apartment` icon, line variant: apartment, flat, residential block, housing.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const ApartmentIcon = /* @__PURE__ */ createNativeIcon('apartment', [
   ['path', { d: 'M5.25 21.25v-17c0-.75.25-1 1-1h8c.75 0 1 .25 1 1v17m0-12h3c.75 0 1 .25 1 1v11' }],

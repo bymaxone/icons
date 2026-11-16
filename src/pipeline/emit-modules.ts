@@ -41,6 +41,8 @@ export interface Flavour {
   readonly subpath: string
   /** How the icon barrel's description names the entry that re-exports it. */
   readonly entry: string
+  /** The version a component of this flavour was introduced in, when it is not its drawing's. */
+  readonly since?: string
 }
 
 /** The web modules, `createIcon` and `createFlag` from `./runtime`. */
@@ -163,7 +165,7 @@ function variantModule(
     '/**',
     ` * The \`${icon.name}\` icon, ${variant} variant: ${docText(icon.meta.tags.join(', '))}.`,
     ' *',
-    ` * @since ${icon.meta.since}`,
+    ` * @since ${flavour.since ?? icon.meta.since}`,
     ' */'
   ].join('\n')
   return [
@@ -215,7 +217,7 @@ function brandModule(brand: BrandEntry, flavour: Flavour): string {
     ` * The ${docText(meta.title)} brand mark, from ${docText(meta.source)} (${docText(meta.license)}, retrieved ${meta.retrievedAt}).`,
     ` * The mark belongs to its owner and is not covered by the MIT grant; see TRADEMARKS.md and ${docText(meta.guidelines)}.`,
     ' *',
-    ` * @since ${meta.since}`,
+    ` * @since ${flavour.since ?? meta.since}`,
     ' */'
   ].join('\n')
   return [
@@ -248,7 +250,7 @@ function flagModule(flag: FlagEntry, flavour: Flavour): string {
     ` * The ${docText(meta.title)} flag, from ${docText(meta.source)} (${docText(meta.license)}, retrieved ${meta.retrievedAt}).`,
     ' * It is reproduced as published by its source; see TRADEMARKS.md.',
     ' *',
-    ` * @since ${meta.since}`,
+    ` * @since ${flavour.since ?? meta.since}`,
     ' */'
   ].join('\n')
   const view = JSON.stringify(flag.viewBox)

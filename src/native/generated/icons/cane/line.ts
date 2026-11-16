@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `cane` icon, line variant: cane, walking stick, mobility, support.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const CaneIcon = /* @__PURE__ */ createNativeIcon('cane', [
   ['path', { d: 'M15.25 21.25v-13c0-2.5-1.5-4-3.5-4s-3.5 1.5-3.5 3.5' }]

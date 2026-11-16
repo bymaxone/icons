@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `pigeon` icon, line variant: pigeon, dove, city bird, message.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const PigeonIcon = /* @__PURE__ */ createNativeIcon('pigeon', [
   [

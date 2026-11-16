@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `octopus` icon, sm variant: octopus, mascot, agent avatar, agent.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const OctopusSmIcon = /* @__PURE__ */ createNativeIcon(
   'octopus-sm',

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `archive-box` icon, line variant: archive, box, store, put away.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const ArchiveBoxIcon = /* @__PURE__ */ createNativeIcon('archive-box', [
   [

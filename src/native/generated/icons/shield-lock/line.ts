@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `shield-lock` icon, line variant: shield, lock, secure, privacy.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const ShieldLockIcon = /* @__PURE__ */ createNativeIcon('shield-lock', [
   ['path', { d: 'M12.25 3.25 5.25 6v5.5c0 3.725 2.112 6.682 5.496 8.534M19.25 9.747V6l-7-2.75' }],

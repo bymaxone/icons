@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `lightning-stack` icon, filled variant: credits, bundle, top up, pack.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const LightningStackFilledIcon = /* @__PURE__ */ createNativeIcon(
   'lightning-stack-filled',

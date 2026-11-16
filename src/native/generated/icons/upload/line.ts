@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `upload` icon, line variant: import, send, tray, arrow up.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const UploadIcon = /* @__PURE__ */ createNativeIcon('upload', [
   [

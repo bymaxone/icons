@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `camera-check` icon, line variant: camera check, photo verified, approved, capture ok.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const CameraCheckIcon = /* @__PURE__ */ createNativeIcon('camera-check', [
   [

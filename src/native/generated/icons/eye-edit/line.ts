@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `eye-edit` icon, line variant: eye edit, edit view, preview changes, modify.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const EyeEditIcon = /* @__PURE__ */ createNativeIcon('eye-edit', [
   ['path', { d: 'M5.011 10.299a8.244 8.244 0 0 1 14.478 0' }],

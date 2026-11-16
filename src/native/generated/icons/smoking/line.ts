@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `smoking` icon, line variant: smoking, cigarette, smoke, area.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const SmokingIcon = /* @__PURE__ */ createNativeIcon('smoking', [
   [

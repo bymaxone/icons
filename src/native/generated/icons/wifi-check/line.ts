@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `wifi-check` icon, line variant: wifi check, online ok, network verified, signal good.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const WifiCheckIcon = /* @__PURE__ */ createNativeIcon('wifi-check', [
   ['path', { d: 'M5.224 11.947a10.5 10.5 0 0 1 14.052 0' }],

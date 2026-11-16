@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `snowman` icon, line variant: snowman, winter, snow, christmas.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const SnowmanIcon = /* @__PURE__ */ createNativeIcon('snowman', [
   ['circle', { cx: 12.25, cy: 7.25, r: 3 }],

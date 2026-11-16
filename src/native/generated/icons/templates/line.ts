@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `templates` icon, line variant: layout, starter, blueprint, preset.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const TemplatesIcon = /* @__PURE__ */ createNativeIcon('templates', [
   ['path', { d: 'M4.25 5.25h15.5' }],

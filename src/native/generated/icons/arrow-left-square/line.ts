@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `arrow-left-square` icon, line variant: arrow left square, left, back, boxed arrow.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const ArrowLeftSquareIcon = /* @__PURE__ */ createNativeIcon('arrow-left-square', [
   [

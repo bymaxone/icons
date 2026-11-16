@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `address-book` icon, line variant: address book, contacts, directory, people.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const AddressBookIcon = /* @__PURE__ */ createNativeIcon('address-book', [
   [

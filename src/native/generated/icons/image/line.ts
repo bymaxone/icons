@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `image` icon, line variant: picture, photo, landscape, media.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const ImageIcon = /* @__PURE__ */ createNativeIcon('image', [
   [

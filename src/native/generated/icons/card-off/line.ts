@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `card-off` icon, line variant: card off, payment disabled, no card, blocked.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const CardOffIcon = /* @__PURE__ */ createNativeIcon('card-off', [
   [

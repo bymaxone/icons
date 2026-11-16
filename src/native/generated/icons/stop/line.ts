@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `stop` icon, line variant: stop, halt, media control, square.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const StopIcon = /* @__PURE__ */ createNativeIcon('stop', [
   [

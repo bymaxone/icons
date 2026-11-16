@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `hotel` icon, line variant: hotel, lodging, stay, accommodation.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const HotelIcon = /* @__PURE__ */ createNativeIcon('hotel', [
   ['path', { d: 'M2.75 20.75h19' }],

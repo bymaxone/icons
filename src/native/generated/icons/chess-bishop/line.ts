@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `chess-bishop` icon, line variant: chess bishop, bishop, diagonal, chess.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const ChessBishopIcon = /* @__PURE__ */ createNativeIcon('chess-bishop', [
   [

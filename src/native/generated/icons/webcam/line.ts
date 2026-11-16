@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `webcam` icon, line variant: webcam, camera, video call, stream.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const WebcamIcon = /* @__PURE__ */ createNativeIcon('webcam', [
   ['circle', { cx: 12.25, cy: 9.75, r: 6.5 }],

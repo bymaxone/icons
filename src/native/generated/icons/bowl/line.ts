@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `bowl` icon, line variant: bowl, dish, soup, meal.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const BowlIcon = /* @__PURE__ */ createNativeIcon('bowl', [
   ['path', { d: 'M3.25 11.25h18c0 5-4 8.5-9 8.5s-9-3.5-9-8.5' }],

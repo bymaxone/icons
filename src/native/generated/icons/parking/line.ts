@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `parking` icon, line variant: parking, car park, lot, garage.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const ParkingIcon = /* @__PURE__ */ createNativeIcon('parking', [
   [

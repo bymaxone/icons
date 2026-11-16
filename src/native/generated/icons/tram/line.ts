@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `tram` icon, line variant: tram, streetcar, light rail, transit.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const TramIcon = /* @__PURE__ */ createNativeIcon('tram', [
   [

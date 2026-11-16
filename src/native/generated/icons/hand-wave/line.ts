@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `hand-wave` icon, line variant: waving hand, hello, goodbye, greeting.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const HandWaveIcon = /* @__PURE__ */ createNativeIcon('hand-wave', [
   [

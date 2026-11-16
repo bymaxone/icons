@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `webcam-off` icon, line variant: webcam off, video muted, hidden camera, privacy shutter.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const WebcamOffIcon = /* @__PURE__ */ createNativeIcon('webcam-off', [
   ['path', { d: 'M5.755 9.999a6.5 6.5 0 0 0 6.24 6.246m5.642-2.857A6.5 6.5 0 0 0 8.62 4.357' }],

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `equal-not` icon, line variant: equal not, not equal, different, inequality.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const EqualNotIcon = /* @__PURE__ */ createNativeIcon('equal-not', [
   ['path', { d: 'M5.75 9.25h13m-13 6h13' }],

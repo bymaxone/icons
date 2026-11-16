@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `file-text` icon, line variant: file, document, text, pdf.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const FileTextIcon = /* @__PURE__ */ createNativeIcon('file-text', [
   [

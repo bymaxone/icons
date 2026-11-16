@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `key-x` icon, line variant: key x, revoked, invalid key, deny.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const KeyXIcon = /* @__PURE__ */ createNativeIcon('key-x', [
   ['path', { d: 'M4 15.75a4.25 4.25 0 0 0 8.457.607m-.358-2.412A4.25 4.25 0 0 0 4 15.75' }],

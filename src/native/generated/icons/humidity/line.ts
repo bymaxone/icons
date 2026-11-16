@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `humidity` icon, line variant: humidity, moisture, air, damp.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const HumidityIcon = /* @__PURE__ */ createNativeIcon('humidity', [
   ['path', { d: 'M10.25 3.75 14.5 10A5.25 5.25 0 1 1 6 10z' }],

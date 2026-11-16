@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `layout-bottom` icon, line variant: layout bottom, bottom pane, footer panel, split.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const LayoutBottomIcon = /* @__PURE__ */ createNativeIcon('layout-bottom', [
   [

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `share` icon, line variant: send, network, nodes, social.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const ShareIcon = /* @__PURE__ */ createNativeIcon('share', [
   ['circle', { cx: 6, cy: 12.25, r: 3.25 }],

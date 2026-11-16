@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `home-share` icon, line variant: home share, send house, shared property, open listing.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const HomeShareIcon = /* @__PURE__ */ createNativeIcon('home-share', [
   [

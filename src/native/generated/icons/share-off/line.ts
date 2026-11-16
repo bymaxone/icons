@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `share-off` icon, line variant: share off, private item, no sending, unlinked.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const ShareOffIcon = /* @__PURE__ */ createNativeIcon('share-off', [
   ['path', { d: 'M2.75 12.25a3.25 3.25 0 0 0 6.316 1.08M4.934 9.179A3.25 3.25 0 0 0 2.75 12.25' }],

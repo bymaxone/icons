@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `registered` icon, line variant: registered, trademark, brand, legal.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const RegisteredIcon = /* @__PURE__ */ createNativeIcon('registered', [
   ['circle', { cx: 12.25, cy: 12.25, r: 8.5 }],

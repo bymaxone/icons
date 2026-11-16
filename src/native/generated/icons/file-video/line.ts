@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `file-video` icon, line variant: video file, movie file, clip, media.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const FileVideoIcon = /* @__PURE__ */ createNativeIcon('file-video', [
   [

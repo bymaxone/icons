@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `monitor` icon, line variant: screen, display, desktop, system theme.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const MonitorIcon = /* @__PURE__ */ createNativeIcon('monitor', [
   [

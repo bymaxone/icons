@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `snowflake` icon, line variant: snowflake, snow, cold, winter.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const SnowflakeIcon = /* @__PURE__ */ createNativeIcon('snowflake', [
   [

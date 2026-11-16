@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `cow` icon, line variant: cow, cattle, milk, farm.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const CowIcon = /* @__PURE__ */ createNativeIcon('cow', [
   ['path', { d: 'M6.328 12.281a6.001 6.001 0 0 1 11.845.007' }],

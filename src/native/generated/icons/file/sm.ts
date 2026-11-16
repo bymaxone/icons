@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `file` icon, sm variant: document, page, paper, sheet.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const FileSmIcon = /* @__PURE__ */ createNativeIcon(
   'file-sm',

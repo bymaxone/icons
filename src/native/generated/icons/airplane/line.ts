@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `airplane` icon, line variant: airplane, flight, travel, plane.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const AirplaneIcon = /* @__PURE__ */ createNativeIcon('airplane', [
   [

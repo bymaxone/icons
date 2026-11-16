@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `lock-open` icon, line variant: lock, open, unlocked, access.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const LockOpenIcon = /* @__PURE__ */ createNativeIcon('lock-open', [
   [

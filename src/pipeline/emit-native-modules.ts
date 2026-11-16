@@ -22,7 +22,8 @@ export const NATIVE_FLAVOUR: Flavour = {
   createIcon: 'createNativeIcon',
   createFlag: 'createNativeFlag',
   subpath: '@bymax-one/icons/native/',
-  entry: 'the `./native` entry'
+  entry: 'the `./native` entry',
+  since: '1.1.0'
 }
 
 /**

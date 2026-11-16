@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `character` icon, line variant: persona, cast, avatar, generated person.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const CharacterIcon = /* @__PURE__ */ createNativeIcon('character', [
   [

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `border-inner` icon, line variant: border, inner, table, grid.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const BorderInnerIcon = /* @__PURE__ */ createNativeIcon('border-inner', [
   ['path', { d: 'M12.25 4.75v15m-7.5-7.5h15' }],

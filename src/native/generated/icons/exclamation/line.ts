@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `exclamation` icon, line variant: exclamation, important, alert, attention.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const ExclamationIcon = /* @__PURE__ */ createNativeIcon('exclamation', [
   ['path', { d: 'M12.25 4.25v10.5' }],

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `database-search` icon, line variant: database, search, query, lookup.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const DatabaseSearchIcon = /* @__PURE__ */ createNativeIcon('database-search', [
   [

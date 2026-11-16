@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `shredder` icon, line variant: shredder, destroy, paper, delete.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const ShredderIcon = /* @__PURE__ */ createNativeIcon('shredder', [
   [

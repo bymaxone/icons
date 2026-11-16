@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `face-nerd` icon, line variant: nerd face, geek, glasses, smart.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const FaceNerdIcon = /* @__PURE__ */ createNativeIcon('face-nerd', [
   ['path', { d: 'M20.46 10.05a8.5 8.5 0 1 1-6.01-6.01' }],

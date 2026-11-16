@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `mouse-left-click` icon, line variant: mouse left click, click, primary button, pointer.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const MouseLeftClickIcon = /* @__PURE__ */ createNativeIcon('mouse-left-click', [
   [

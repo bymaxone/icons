@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `border-bottom` icon, line variant: border, bottom, table, cell.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const BorderBottomIcon = /* @__PURE__ */ createNativeIcon('border-bottom', [
   ['path', { d: 'M4.75 19.75h15' }],

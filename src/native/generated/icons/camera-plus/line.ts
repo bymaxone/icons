@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `camera-plus` icon, line variant: camera plus, photo, new, capture.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const CameraPlusIcon = /* @__PURE__ */ createNativeIcon('camera-plus', [
   [

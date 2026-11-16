@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `turtle` icon, line variant: turtle, shell, slow, reptile.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const TurtleIcon = /* @__PURE__ */ createNativeIcon('turtle', [
   ['path', { d: 'M5.25 15.25c0-4 3-7 7-7s7 3 7 7z' }],

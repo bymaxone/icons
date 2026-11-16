@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `user-search` icon, line variant: user search, find, people, lookup.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const UserSearchIcon = /* @__PURE__ */ createNativeIcon('user-search', [
   ['path', { d: 'M14.75 6.75a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0' }],

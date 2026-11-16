@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `fingerprint-off` icon, line variant: fingerprint off, no touch id, disabled biometric, password only.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const FingerprintOffIcon = /* @__PURE__ */ createNativeIcon('fingerprint-off', [
   ['path', { d: 'M4.25 11.25c0-.828.126-1.626.359-2.377m3.842-4.665A8 8 0 0 1 20.25 11.25v1.5' }],

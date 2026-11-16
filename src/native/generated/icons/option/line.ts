@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `option` icon, line variant: option, key, alt, modifier.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const OptionIcon = /* @__PURE__ */ createNativeIcon('option', [
   ['path', { d: 'M3.75 6.25h4.5l7 12h5.5' }],

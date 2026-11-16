@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `file-chart` icon, line variant: file chart, report, analytics, document.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const FileChartIcon = /* @__PURE__ */ createNativeIcon('file-chart', [
   [

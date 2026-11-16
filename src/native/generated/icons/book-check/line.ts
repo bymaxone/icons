@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `book-check` icon, line variant: book check, finished reading, completed title, read list.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const BookCheckIcon = /* @__PURE__ */ createNativeIcon('book-check', [
   [

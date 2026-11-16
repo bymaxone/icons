@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `oven` icon, line variant: oven, bake, cooking, kitchen.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const OvenIcon = /* @__PURE__ */ createNativeIcon('oven', [
   [

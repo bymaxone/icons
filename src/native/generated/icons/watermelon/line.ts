@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `watermelon` icon, line variant: watermelon, slice, summer, seeds.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const WatermelonIcon = /* @__PURE__ */ createNativeIcon('watermelon', [
   ['path', { d: 'M3.25 9.25a9 9 0 0 0 18 0z' }],

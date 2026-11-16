@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `sink` icon, line variant: sink, basin, faucet, washing.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const SinkIcon = /* @__PURE__ */ createNativeIcon('sink', [
   ['path', { d: 'M3.25 12.25h18v1c0 3.75-3 6.75-6.75 6.75H10c-3.75 0-6.75-3-6.75-6.75z' }],

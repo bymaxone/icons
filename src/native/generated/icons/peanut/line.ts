@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `peanut` icon, line variant: peanut, nut, legume, allergen.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const PeanutIcon = /* @__PURE__ */ createNativeIcon('peanut', [
   [

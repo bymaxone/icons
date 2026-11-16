@@ -10,7 +10,7 @@ import { createNativeFlag } from '@bymax-one/icons/native/runtime'
  * The San Marino flag, from https://gitlab.com/catamphetamine/country-flag-icons/-/blob/v1.6.20/flags/3x2/SM.svg (MIT, retrieved 2026-11-14).
  * It is reproduced as published by its source; see TRADEMARKS.md.
  *
- * @since 1.0.0
+ * @since 1.1.0
  */
 export const SmFlagIcon = /* @__PURE__ */ createNativeFlag('sm-flag', '0 85.333 512 341.333', [
   ['path', { fill: '#338af3', d: 'M0 85.34h512v341.326H0z' }],

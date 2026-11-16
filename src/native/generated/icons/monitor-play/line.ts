@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `monitor-play` icon, line variant: monitor play, play on desktop, cast video, screen show.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const MonitorPlayIcon = /* @__PURE__ */ createNativeIcon('monitor-play', [
   [

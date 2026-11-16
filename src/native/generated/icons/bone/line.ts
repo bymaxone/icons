@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `bone` icon, line variant: bone, dog, pet, skeleton.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const BoneIcon = /* @__PURE__ */ createNativeIcon('bone', [
   [

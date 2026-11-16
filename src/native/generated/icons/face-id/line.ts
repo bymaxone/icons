@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `face-id` icon, line variant: face id, face scan, biometric, unlock.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const FaceIdIcon = /* @__PURE__ */ createNativeIcon('face-id', [
   [

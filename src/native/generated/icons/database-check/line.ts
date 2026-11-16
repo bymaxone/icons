@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `database-check` icon, line variant: database check, verified, valid, data.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const DatabaseCheckIcon = /* @__PURE__ */ createNativeIcon('database-check', [
   [

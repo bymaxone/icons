@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `folder-check` icon, line variant: folder, check, done, synced folder.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const FolderCheckIcon = /* @__PURE__ */ createNativeIcon('folder-check', [
   [

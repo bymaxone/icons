@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `computer-tower` icon, line variant: computer tower, desktop pc, workstation, cpu case.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const ComputerTowerIcon = /* @__PURE__ */ createNativeIcon('computer-tower', [
   [

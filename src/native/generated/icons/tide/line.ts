@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `tide` icon, line variant: tide, sea level, coast, ebb.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const TideIcon = /* @__PURE__ */ createNativeIcon('tide', [
   [

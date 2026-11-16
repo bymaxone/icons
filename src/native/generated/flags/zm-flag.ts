@@ -10,7 +10,7 @@ import { createNativeFlag } from '@bymax-one/icons/native/runtime'
  * The Zambia flag, from https://gitlab.com/catamphetamine/country-flag-icons/-/blob/v1.6.20/flags/3x2/ZM.svg (MIT, retrieved 2026-11-14).
  * It is reproduced as published by its source; see TRADEMARKS.md.
  *
- * @since 1.0.0
+ * @since 1.1.0
  */
 export const ZmFlagIcon = /* @__PURE__ */ createNativeFlag('zm-flag', '0 85.333 512 341.333', [
   ['path', { fill: '#496e2d', d: 'M0 85.331h512v341.337H0z' }],

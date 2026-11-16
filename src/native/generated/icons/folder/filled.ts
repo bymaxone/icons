@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `folder` icon, filled variant: directory, collection, group, project.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const FolderFilledIcon = /* @__PURE__ */ createNativeIcon(
   'folder-filled',

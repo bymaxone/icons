@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `monument` icon, line variant: monument, landmark, memorial, sightseeing.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const MonumentIcon = /* @__PURE__ */ createNativeIcon('monument', [
   ['path', { d: 'm12.25 3.25 3 4.5v8h-6v-8z' }],

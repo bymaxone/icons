@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `time-zone` icon, line variant: time zone, world clock, region, hours.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const TimeZoneIcon = /* @__PURE__ */ createNativeIcon('time-zone', [
   ['path', { d: 'M11.971 19.453a7.209 7.209 0 1 1 7.482-7.478' }],

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `card-x` icon, line variant: card x, declined, payment failed, rejected.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const CardXIcon = /* @__PURE__ */ createNativeIcon('card-x', [
   [

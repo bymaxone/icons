@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `cart-minus` icon, line variant: cart minus, remove item, delete from basket, reduce.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const CartMinusIcon = /* @__PURE__ */ createNativeIcon('cart-minus', [
   [

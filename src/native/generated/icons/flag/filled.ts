@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `flag` icon, filled variant: flag, report, mark, milestone.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const FlagFilledIcon = /* @__PURE__ */ createNativeIcon(
   'flag-filled',

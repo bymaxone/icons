@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `penguin` icon, line variant: penguin, antarctic, flightless, ice.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const PenguinIcon = /* @__PURE__ */ createNativeIcon('penguin', [
   [

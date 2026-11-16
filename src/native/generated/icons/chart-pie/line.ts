@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `chart-pie` icon, line variant: chart, pie, share, breakdown.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const ChartPieIcon = /* @__PURE__ */ createNativeIcon('chart-pie', [
   ['path', { d: 'M18.5 13.25A7.25 7.25 0 1 1 11.25 6' }],

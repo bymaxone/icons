@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `piano` icon, line variant: piano, keys, music, instrument.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const PianoIcon = /* @__PURE__ */ createNativeIcon('piano', [
   [

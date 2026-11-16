@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `tennis-ball` icon, line variant: tennis ball, tennis, sport, court.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const TennisBallIcon = /* @__PURE__ */ createNativeIcon('tennis-ball', [
   ['circle', { cx: 12.25, cy: 12.25, r: 8.5 }],

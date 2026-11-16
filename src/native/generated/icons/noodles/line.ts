@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `noodles` icon, line variant: noodles, ramen, pasta, bowl of noodles.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const NoodlesIcon = /* @__PURE__ */ createNativeIcon('noodles', [
   ['path', { d: 'M3.75 12.25h17c0 4.75-3.75 8.25-8.5 8.25s-8.5-3.5-8.5-8.25' }],

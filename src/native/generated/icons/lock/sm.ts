@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `lock` icon, sm variant: locked, private, secure, padlock.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const LockSmIcon = /* @__PURE__ */ createNativeIcon(
   'lock-sm',

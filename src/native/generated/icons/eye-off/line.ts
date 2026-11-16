@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `eye-off` icon, line variant: hidden, hide, invisible, conceal.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const EyeOffIcon = /* @__PURE__ */ createNativeIcon('eye-off', [
   ['path', { d: 'M5.011 10.299a8 8 0 0 1 .394-.651M10.443 6.2a8.245 8.245 0 0 1 9.046 4.099' }],

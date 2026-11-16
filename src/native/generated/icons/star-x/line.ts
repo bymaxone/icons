@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `star-x` icon, line variant: star x, unfavorite, clear rating, drop highlight.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const StarXIcon = /* @__PURE__ */ createNativeIcon('star-x', [
   [

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `mouse-off` icon, line variant: mouse off, no mouse, disabled, pointer.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const MouseOffIcon = /* @__PURE__ */ createNativeIcon('mouse-off', [
   [

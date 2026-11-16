@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `zoom-in` icon, line variant: magnify, enlarge, plus, scale up.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const ZoomInIcon = /* @__PURE__ */ createNativeIcon('zoom-in', [
   ['circle', { cx: 9.75, cy: 9.75, r: 6.5 }],

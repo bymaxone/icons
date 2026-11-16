@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `webhook` icon, line variant: webhook, integration, callback, api.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const WebhookIcon = /* @__PURE__ */ createNativeIcon('webhook', [
   ['circle', { cx: 6.25, cy: 17.75, r: 2.5 }],

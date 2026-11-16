@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `signpost` icon, line variant: signpost, directions, sign, way.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const SignpostIcon = /* @__PURE__ */ createNativeIcon('signpost', [
   ['path', { d: 'M12.25 21.25V3.75' }],

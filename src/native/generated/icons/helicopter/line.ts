@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `helicopter` icon, line variant: helicopter, flight, aviation, rescue.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const HelicopterIcon = /* @__PURE__ */ createNativeIcon('helicopter', [
   ['path', { d: 'M3.75 4.75h15' }],

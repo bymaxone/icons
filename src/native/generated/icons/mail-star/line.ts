@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `mail-star` icon, line variant: mail star, important email, favorite message, flagged mail.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const MailStarIcon = /* @__PURE__ */ createNativeIcon('mail-star', [
   [

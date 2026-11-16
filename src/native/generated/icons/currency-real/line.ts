@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `currency-real` icon, line variant: real, currency, money, brl.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const CurrencyRealIcon = /* @__PURE__ */ createNativeIcon('currency-real', [
   ['path', { d: 'M3.75 19.25v-14h4.5a3.5 3.5 0 0 1 0 7h-4.5m4 0 3 7' }],

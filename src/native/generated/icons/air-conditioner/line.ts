@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `air-conditioner` icon, line variant: air conditioner, ac unit, cooling, climate.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const AirConditionerIcon = /* @__PURE__ */ createNativeIcon('air-conditioner', [
   [

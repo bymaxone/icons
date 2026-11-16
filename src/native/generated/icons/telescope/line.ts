@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `telescope` icon, line variant: telescope, astronomy, discover, observe.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const TelescopeIcon = /* @__PURE__ */ createNativeIcon('telescope', [
   ['path', { d: 'M6.014 8.184 17.796 2.69l1.69 3.626L7.704 11.81Z' }],

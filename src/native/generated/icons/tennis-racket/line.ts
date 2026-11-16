@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `tennis-racket` icon, line variant: tennis racket, racquet, court, match.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const TennisRacketIcon = /* @__PURE__ */ createNativeIcon('tennis-racket', [
   ['path', { d: 'M10.788 5.788a5.25 6.5 45 1 0 7.424 7.424 5.25 6.5 45 1 0-7.424-7.424' }],

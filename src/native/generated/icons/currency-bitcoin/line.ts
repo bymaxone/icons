@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `currency-bitcoin` icon, line variant: bitcoin, crypto, currency, coin.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const CurrencyBitcoinIcon = /* @__PURE__ */ createNativeIcon('currency-bitcoin', [
   [

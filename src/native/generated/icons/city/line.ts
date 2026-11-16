@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `city` icon, line variant: city, skyline, buildings, urban.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const CityIcon = /* @__PURE__ */ createNativeIcon('city', [
   ['path', { d: 'M3.25 20.75h18' }],

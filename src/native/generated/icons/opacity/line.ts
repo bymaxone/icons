@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `opacity` icon, line variant: opacity, transparency, alpha, fade.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const OpacityIcon = /* @__PURE__ */ createNativeIcon('opacity', [
   [

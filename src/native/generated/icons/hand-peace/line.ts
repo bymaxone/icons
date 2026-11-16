@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `hand-peace` icon, line variant: peace hand, victory, two fingers, v sign.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const HandPeaceIcon = /* @__PURE__ */ createNativeIcon('hand-peace', [
   [

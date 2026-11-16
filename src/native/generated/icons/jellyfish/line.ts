@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `jellyfish` icon, line variant: jellyfish, tentacles, sea, sting.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const JellyfishIcon = /* @__PURE__ */ createNativeIcon('jellyfish', [
   ['path', { d: 'M4.75 12.25a7.5 7.5 0 0 1 15 0z' }],

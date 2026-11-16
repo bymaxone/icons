@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `rewind` icon, line variant: rewind, back, media, replay.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const RewindIcon = /* @__PURE__ */ createNativeIcon('rewind', [
   [

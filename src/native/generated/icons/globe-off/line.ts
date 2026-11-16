@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `globe-off` icon, line variant: globe off, no internet, disabled region, language off.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const GlobeOffIcon = /* @__PURE__ */ createNativeIcon('globe-off', [
   [

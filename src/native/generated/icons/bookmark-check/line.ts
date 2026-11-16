@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `bookmark-check` icon, line variant: bookmark, check, saved, read later.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const BookmarkCheckIcon = /* @__PURE__ */ createNativeIcon('bookmark-check', [
   ['path', { d: 'M7.25 5.75c0-1.5.5-2 2-2h6c1.5 0 2 .5 2 2v14.5l-5-3.5-5 3.5z' }],

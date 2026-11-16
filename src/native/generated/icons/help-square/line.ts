@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `help-square` icon, line variant: help square, question, support, faq.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const HelpSquareIcon = /* @__PURE__ */ createNativeIcon('help-square', [
   [

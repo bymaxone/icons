@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `atm` icon, line variant: atm, cash machine, withdraw, bank.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const AtmIcon = /* @__PURE__ */ createNativeIcon('atm', [
   [

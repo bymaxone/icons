@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `arrow-down-square` icon, line variant: arrow down square, down, download, boxed arrow.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const ArrowDownSquareIcon = /* @__PURE__ */ createNativeIcon('arrow-down-square', [
   [

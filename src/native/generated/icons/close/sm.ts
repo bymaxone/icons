@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `close` icon, sm variant: x, cross, dismiss, cancel.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const CloseSmIcon = /* @__PURE__ */ createNativeIcon(
   'close-sm',

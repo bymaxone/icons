@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `equal` icon, line variant: equal, equals, math, same.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const EqualIcon = /* @__PURE__ */ createNativeIcon('equal', [
   ['path', { d: 'M5.75 9.25h13m-13 6h13' }]

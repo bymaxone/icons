@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `video-check` icon, line variant: video check, clip verified, accepted footage, review ok.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const VideoCheckIcon = /* @__PURE__ */ createNativeIcon('video-check', [
   [

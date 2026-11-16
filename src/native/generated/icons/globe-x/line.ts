@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `globe-x` icon, line variant: globe x, cancel language, drop country, unsupported area.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const GlobeXIcon = /* @__PURE__ */ createNativeIcon('globe-x', [
   [

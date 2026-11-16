@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `clock-pause` icon, line variant: clock pause, timer paused, hold, break.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const ClockPauseIcon = /* @__PURE__ */ createNativeIcon('clock-pause', [
   [

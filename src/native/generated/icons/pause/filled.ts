@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `pause` icon, filled variant: pause, hold, media control, bars.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const PauseFilledIcon = /* @__PURE__ */ createNativeIcon(
   'pause-filled',

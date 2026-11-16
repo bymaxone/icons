@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `database-x` icon, line variant: database x, query failed, data error, failed.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const DatabaseXIcon = /* @__PURE__ */ createNativeIcon('database-x', [
   [

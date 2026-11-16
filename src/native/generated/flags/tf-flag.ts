@@ -10,7 +10,7 @@ import { createNativeFlag } from '@bymax-one/icons/native/runtime'
  * The French Southern Territories flag, from https://gitlab.com/catamphetamine/country-flag-icons/-/blob/v1.6.20/flags/3x2/TF.svg (MIT, retrieved 2026-11-14).
  * It is reproduced as published by its source; see TRADEMARKS.md.
  *
- * @since 1.0.0
+ * @since 1.1.0
  */
 export const TfFlagIcon = /* @__PURE__ */ createNativeFlag('tf-flag', '0 0 22.5 15', [
   ['path', { fill: '#ffffff', d: 'M0 0h21v15H0V0z' }],

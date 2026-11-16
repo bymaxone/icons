@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `traffic-light` icon, line variant: traffic light, signal, stoplight, road.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const TrafficLightIcon = /* @__PURE__ */ createNativeIcon('traffic-light', [
   [

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `clock-off` icon, line variant: clock off, timer off, no deadline, disabled.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const ClockOffIcon = /* @__PURE__ */ createNativeIcon('clock-off', [
   [

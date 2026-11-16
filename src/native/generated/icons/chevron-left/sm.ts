@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `chevron-left` icon, sm variant: caret, back, previous, left.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const ChevronLeftSmIcon = /* @__PURE__ */ createNativeIcon(
   'chevron-left-sm',

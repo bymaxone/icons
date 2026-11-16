@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `cloud-minus` icon, line variant: cloud minus, free space, delete online, unsync.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const CloudMinusIcon = /* @__PURE__ */ createNativeIcon('cloud-minus', [
   [

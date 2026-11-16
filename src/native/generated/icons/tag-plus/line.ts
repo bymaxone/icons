@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `tag-plus` icon, line variant: tag plus, add tag, new label, categorize.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const TagPlusIcon = /* @__PURE__ */ createNativeIcon('tag-plus', [
   [

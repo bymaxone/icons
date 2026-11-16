@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `treasure-chest` icon, line variant: treasure chest, loot, reward, box.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const TreasureChestIcon = /* @__PURE__ */ createNativeIcon('treasure-chest', [
   ['path', { d: 'M3.25 11.75h18v7.5q0 1.5-1.5 1.5h-15q-1.5 0-1.5-1.5z' }],

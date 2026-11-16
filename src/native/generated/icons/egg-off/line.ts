@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `egg-off` icon, line variant: egg free, no eggs, allergen, vegan diet.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const EggOffIcon = /* @__PURE__ */ createNativeIcon('egg-off', [
   [

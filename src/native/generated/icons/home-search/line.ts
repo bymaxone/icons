@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `home-search` icon, line variant: home search, find property, listings, house hunt.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const HomeSearchIcon = /* @__PURE__ */ createNativeIcon('home-search', [
   [

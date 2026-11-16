@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `list-x` icon, line variant: list x, remove items, cancel, discard.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const ListXIcon = /* @__PURE__ */ createNativeIcon('list-x', [
   ['path', { d: 'M9.25 6.25h10.5m-10.5 6h4.08m3.34 0h1.92m-9.34 6h3.3' }],

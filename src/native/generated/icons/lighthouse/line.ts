@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `lighthouse` icon, line variant: lighthouse, beacon, coast, guide.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const LighthouseIcon = /* @__PURE__ */ createNativeIcon('lighthouse', [
   ['path', { d: 'm9.25 21.25 1.5-12h3l1.5 12z' }],

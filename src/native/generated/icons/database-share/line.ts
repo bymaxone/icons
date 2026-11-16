@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `database-share` icon, line variant: database share, publish records, open dataset, give access.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const DatabaseShareIcon = /* @__PURE__ */ createNativeIcon('database-share', [
   [

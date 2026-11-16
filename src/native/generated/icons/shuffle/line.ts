@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `shuffle` icon, line variant: shuffle, random, mix, playlist.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const ShuffleIcon = /* @__PURE__ */ createNativeIcon('shuffle', [
   ['path', { d: 'M3.75 7.25h2.5c2 0 3 .75 4 2.25l3.5 5.5c1 1.5 2 2.25 4 2.25h2.5' }],

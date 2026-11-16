@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `trackpad` icon, line variant: trackpad, touchpad, laptop mouse, pointer pad.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const TrackpadIcon = /* @__PURE__ */ createNativeIcon('trackpad', [
   [

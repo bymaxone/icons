@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `scene` icon, line variant: clapperboard, take, episode, film.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const SceneIcon = /* @__PURE__ */ createNativeIcon('scene', [
   ['path', { d: 'M3.75 12.75h12.5c3 0 3.5.5 3.5 3.5s-.5 3.5-3.5 3.5h-8.5c-3 0-3.5-.5-3.5-3.5z' }],

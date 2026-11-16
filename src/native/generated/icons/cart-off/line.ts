@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `cart-off` icon, line variant: cart off, checkout disabled, no purchase, closed store.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const CartOffIcon = /* @__PURE__ */ createNativeIcon('cart-off', [
   [

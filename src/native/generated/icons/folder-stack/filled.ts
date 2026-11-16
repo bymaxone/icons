@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `folder-stack` icon, filled variant: folders, projects, collection, all files.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const FolderStackFilledIcon = /* @__PURE__ */ createNativeIcon(
   'folder-stack-filled',

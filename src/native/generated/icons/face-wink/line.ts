@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `face-wink` icon, line variant: winking face, wink, flirt, hint.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const FaceWinkIcon = /* @__PURE__ */ createNativeIcon('face-wink', [
   ['path', { d: 'M20.46 10.05a8.5 8.5 0 1 1-6.01-6.01' }],

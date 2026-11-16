@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `info-square` icon, line variant: info square, information, details, help.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const InfoSquareIcon = /* @__PURE__ */ createNativeIcon('info-square', [
   [

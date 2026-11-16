@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `hard-drive` icon, line variant: hard drive, disk, storage, drive.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const HardDriveIcon = /* @__PURE__ */ createNativeIcon('hard-drive', [
   [

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `link-minus` icon, line variant: link minus, remove url, shorten, disconnect.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const LinkMinusIcon = /* @__PURE__ */ createNativeIcon('link-minus', [
   [

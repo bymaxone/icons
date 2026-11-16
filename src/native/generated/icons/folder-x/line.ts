@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `folder-x` icon, line variant: folder x, delete, error, close.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const FolderXIcon = /* @__PURE__ */ createNativeIcon('folder-x', [
   [

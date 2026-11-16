@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `lip-sync` icon, line variant: mouth, lips, dub, speech.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const LipSyncIcon = /* @__PURE__ */ createNativeIcon('lip-sync', [
   [

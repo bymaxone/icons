@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `radar` icon, line variant: radar, scan, detect, nearby.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const RadarIcon = /* @__PURE__ */ createNativeIcon('radar', [
   ['circle', { cx: 12.25, cy: 12.25, r: 8.5 }],

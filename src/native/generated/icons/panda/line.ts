@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `panda` icon, line variant: panda, bamboo, black and white, china.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const PandaIcon = /* @__PURE__ */ createNativeIcon('panda', [
   ['path', { d: 'M18.25 13.25a6 6 0 1 1-12 0 6 6 0 0 1 12 0' }],

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `ship` icon, line variant: ship, vessel, cargo, sea.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const ShipIcon = /* @__PURE__ */ createNativeIcon('ship', [
   ['path', { d: 'M3.25 14.25h18l-2.5 5.5h-13z' }],

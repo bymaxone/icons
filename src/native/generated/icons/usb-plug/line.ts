@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `usb-plug` icon, line variant: usb, plug, connector, cable.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const UsbPlugIcon = /* @__PURE__ */ createNativeIcon('usb-plug', [
   ['path', { d: 'M9.75 8.75v-4.5c0-.75.25-1 1-1h3c.75 0 1 .25 1 1v4.5' }],

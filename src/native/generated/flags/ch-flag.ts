@@ -10,7 +10,7 @@ import { createNativeFlag } from '@bymax-one/icons/native/runtime'
  * The Switzerland flag, from https://gitlab.com/catamphetamine/country-flag-icons/-/blob/v1.6.20/flags/3x2/CH.svg (MIT, retrieved 2026-11-14).
  * It is reproduced as published by its source; see TRADEMARKS.md.
  *
- * @since 1.0.0
+ * @since 1.1.0
  */
 export const ChFlagIcon = /* @__PURE__ */ createNativeFlag('ch-flag', '0 0 768 512', [
   ['path', { fill: '#ff0000', d: 'M0 0h768v512H0V0z' }],

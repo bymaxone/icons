@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `ampersand` icon, line variant: ampersand, and, symbol, character.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const AmpersandIcon = /* @__PURE__ */ createNativeIcon('ampersand', [
   [

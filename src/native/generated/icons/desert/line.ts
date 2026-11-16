@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `desert` icon, line variant: desert, dunes, dry, sand.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const DesertIcon = /* @__PURE__ */ createNativeIcon('desert', [
   ['path', { d: 'M3.25 20.25q5.25-5.25 12-3.75 3 .75 6 3.75' }],

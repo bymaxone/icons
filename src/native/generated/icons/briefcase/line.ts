@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `briefcase` icon, line variant: briefcase, work, business, job.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const BriefcaseIcon = /* @__PURE__ */ createNativeIcon('briefcase', [
   [

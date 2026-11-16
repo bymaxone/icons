@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `binary` icon, line variant: binary, bits, zero one, code.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const BinaryIcon = /* @__PURE__ */ createNativeIcon('binary', [
   ['path', { d: 'm4.75 7.25 1.75-1.5v12.5m11.25-11 1.75-1.5v12.5' }],

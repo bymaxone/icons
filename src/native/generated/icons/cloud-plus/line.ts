@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `cloud-plus` icon, line variant: cloud plus, new storage, upload space, extend.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const CloudPlusIcon = /* @__PURE__ */ createNativeIcon('cloud-plus', [
   [

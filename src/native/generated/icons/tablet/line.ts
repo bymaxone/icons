@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `tablet` icon, line variant: tablet, device, ipad, screen.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const TabletIcon = /* @__PURE__ */ createNativeIcon('tablet', [
   [

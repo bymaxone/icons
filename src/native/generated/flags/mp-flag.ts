@@ -10,7 +10,7 @@ import { createNativeFlag } from '@bymax-one/icons/native/runtime'
  * The Northern Mariana Islands flag, from https://gitlab.com/catamphetamine/country-flag-icons/-/blob/v1.6.20/flags/3x2/MP.svg (MIT, retrieved 2026-11-14).
  * It is reproduced as published by its source; see TRADEMARKS.md.
  *
- * @since 1.0.0
+ * @since 1.1.0
  */
 export const MpFlagIcon = /* @__PURE__ */ createNativeFlag('mp-flag', '0 0 750 500', [
   ['path', { fill: '#0071bc', d: 'M0 0h750v500H0V0z' }],

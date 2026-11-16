@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `volleyball` icon, line variant: volleyball, ball, sport, beach.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const VolleyballIcon = /* @__PURE__ */ createNativeIcon('volleyball', [
   ['circle', { cx: 12.25, cy: 12.25, r: 8.5 }],

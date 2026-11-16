@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `dumbbell` icon, line variant: dumbbell, gym, strength, workout.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const DumbbellIcon = /* @__PURE__ */ createNativeIcon('dumbbell', [
   [

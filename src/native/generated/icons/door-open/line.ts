@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `door-open` icon, line variant: door, open, enter, exit.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const DoorOpenIcon = /* @__PURE__ */ createNativeIcon('door-open', [
   ['path', { d: 'M6.25 21.25v-17h12v17' }],

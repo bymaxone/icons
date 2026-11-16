@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `fox` icon, line variant: fox, cunning, red, wildlife.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const FoxIcon = /* @__PURE__ */ createNativeIcon('fox', [
   ['path', { d: 'm5.25 4.25 3.5 4.25h7l3.5-4.25.5 7.25-7.5 8.75-7.5-8.75z' }],

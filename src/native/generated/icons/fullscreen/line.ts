@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `fullscreen` icon, line variant: maximize, expand, enlarge, corners.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const FullscreenIcon = /* @__PURE__ */ createNativeIcon('fullscreen', [
   ['path', { d: 'M4.25 9.75V7c0-2.234.516-2.75 2.75-2.75h2.75' }],

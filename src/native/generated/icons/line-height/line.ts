@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `line-height` icon, line variant: line height, spacing, leading, text.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const LineHeightIcon = /* @__PURE__ */ createNativeIcon('line-height', [
   ['path', { d: 'M11.25 7.25h9m-9 5h9m-9 5h9' }],

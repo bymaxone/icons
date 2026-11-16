@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `onion` icon, line variant: onion, bulb, layers, vegetable.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const OnionIcon = /* @__PURE__ */ createNativeIcon('onion', [
   [

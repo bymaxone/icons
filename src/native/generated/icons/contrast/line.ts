@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `contrast` icon, line variant: contrast, theme, tone, brightness.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const ContrastIcon = /* @__PURE__ */ createNativeIcon('contrast', [
   ['circle', { cx: 12.25, cy: 12.25, r: 8.25 }],

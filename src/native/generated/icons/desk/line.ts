@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `desk` icon, line variant: desk, table, workspace, office.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const DeskIcon = /* @__PURE__ */ createNativeIcon('desk', [
   ['path', { d: 'M3.25 9.25h18' }],

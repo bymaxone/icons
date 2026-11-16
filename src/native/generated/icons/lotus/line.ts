@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `lotus` icon, line variant: lotus, water lily, calm, bloom.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const LotusIcon = /* @__PURE__ */ createNativeIcon('lotus', [
   [

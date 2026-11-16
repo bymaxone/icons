@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `folder-code` icon, line variant: folder code, project, source, repository.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const FolderCodeIcon = /* @__PURE__ */ createNativeIcon('folder-code', [
   [

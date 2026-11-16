@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `heat-wave` icon, line variant: heat wave, hot, sun, high temperature.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const HeatWaveIcon = /* @__PURE__ */ createNativeIcon('heat-wave', [
   [

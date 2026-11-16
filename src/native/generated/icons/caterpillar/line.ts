@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `caterpillar` icon, line variant: caterpillar, larva, leaf, crawl.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const CaterpillarIcon = /* @__PURE__ */ createNativeIcon('caterpillar', [
   ['circle', { cx: 18.25, cy: 9.25, r: 2.75 }],

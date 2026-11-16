@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `cpu` icon, line variant: cpu, chip, processor, compute.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const CpuIcon = /* @__PURE__ */ createNativeIcon('cpu', [
   [

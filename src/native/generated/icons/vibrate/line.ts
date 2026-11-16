@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `vibrate` icon, line variant: vibrate, haptic, phone buzz, silent.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const VibrateIcon = /* @__PURE__ */ createNativeIcon('vibrate', [
   [

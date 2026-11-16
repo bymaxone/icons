@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `ferris-wheel` icon, line variant: ferris wheel, fair, amusement, ride.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const FerrisWheelIcon = /* @__PURE__ */ createNativeIcon('ferris-wheel', [
   ['circle', { cx: 12.25, cy: 10.25, r: 6.5 }],

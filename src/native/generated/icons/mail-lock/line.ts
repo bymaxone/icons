@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `mail-lock` icon, line variant: mail lock, encrypted email, private message, secure.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const MailLockIcon = /* @__PURE__ */ createNativeIcon('mail-lock', [
   [

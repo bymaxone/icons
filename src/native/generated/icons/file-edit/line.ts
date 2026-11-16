@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `file-edit` icon, line variant: file edit, rewrite, modify, document.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const FileEditIcon = /* @__PURE__ */ createNativeIcon('file-edit', [
   [

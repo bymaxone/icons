@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `flip-horizontal` icon, line variant: flip, mirror, horizontal, reflect.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const FlipHorizontalIcon = /* @__PURE__ */ createNativeIcon('flip-horizontal', [
   ['path', { d: 'm9.75 6.25-6.25 6 6.25 6z' }],

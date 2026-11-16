@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `clover` icon, line variant: clover, luck, plant, shamrock.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const CloverIcon = /* @__PURE__ */ createNativeIcon('clover', [
   ['circle', { cx: 12.25, cy: 8.75, r: 3 }],

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `git-compare` icon, line variant: git, compare, diff, branches.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const GitCompareIcon = /* @__PURE__ */ createNativeIcon('git-compare', [
   ['circle', { cx: 6.25, cy: 6.25, r: 2 }],

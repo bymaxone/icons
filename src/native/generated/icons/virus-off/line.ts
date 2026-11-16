@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `virus-off` icon, line variant: virus off, clean system, no infection, malware removed.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const VirusOffIcon = /* @__PURE__ */ createNativeIcon('virus-off', [
   ['path', { d: 'M8 12.25a4.25 4.25 0 0 0 4.244 4.25m4.256-4.259A4.25 4.25 0 0 0 12.25 8h-.003' }],

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `mail-warning` icon, line variant: mail warning, email problem, delivery issue, suspicious message.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const MailWarningIcon = /* @__PURE__ */ createNativeIcon('mail-warning', [
   [

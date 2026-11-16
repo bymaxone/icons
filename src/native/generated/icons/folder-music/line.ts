@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `folder-music` icon, line variant: folder music, songs, audio library, playlist.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const FolderMusicIcon = /* @__PURE__ */ createNativeIcon('folder-music', [
   [

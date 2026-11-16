@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `version` icon, line variant: versions, revision, stack, snapshot.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const VersionIcon = /* @__PURE__ */ createNativeIcon('version', [
   [

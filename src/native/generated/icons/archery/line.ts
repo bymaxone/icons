@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `archery` icon, line variant: archery, bow and arrow, target, aim.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const ArcheryIcon = /* @__PURE__ */ createNativeIcon('archery', [
   ['path', { d: 'M7.25 3.25q7.5 3.75 7.5 9c0 5.25-2.5 6.5-7.5 9' }],

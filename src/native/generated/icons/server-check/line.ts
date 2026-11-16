@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `server-check` icon, line variant: server check, online, running, healthy.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const ServerCheckIcon = /* @__PURE__ */ createNativeIcon('server-check', [
   [

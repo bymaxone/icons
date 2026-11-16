@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `cherry` icon, line variant: cherry, fruit, red, pair.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const CherryIcon = /* @__PURE__ */ createNativeIcon('cherry', [
   ['circle', { cx: 7.5, cy: 16.75, r: 3 }],

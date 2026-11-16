@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `message-warning` icon, line variant: message warning, suspicious chat, report, caution.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const MessageWarningIcon = /* @__PURE__ */ createNativeIcon('message-warning', [
   [

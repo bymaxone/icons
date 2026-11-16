@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `face-angry` icon, line variant: angry face, mad, furious, rage.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const FaceAngryIcon = /* @__PURE__ */ createNativeIcon('face-angry', [
   ['path', { d: 'M20.46 10.05a8.5 8.5 0 1 1-6.01-6.01' }],

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `remote-control` icon, line variant: remote control, tv remote, buttons, device.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const RemoteControlIcon = /* @__PURE__ */ createNativeIcon('remote-control', [
   [

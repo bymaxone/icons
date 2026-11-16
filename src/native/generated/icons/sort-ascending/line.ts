@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `sort-ascending` icon, line variant: sort ascending, order, a to z, increasing.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const SortAscendingIcon = /* @__PURE__ */ createNativeIcon('sort-ascending', [
   ['path', { d: 'M6.25 19.75v-15m-3 3 3-3 3 3' }],

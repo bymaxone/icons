@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `users-x` icon, line variant: users x, dismissed members, rejected group, cancel team.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const UsersXIcon = /* @__PURE__ */ createNativeIcon('users-x', [
   ['path', { d: 'M5.525 8.25a2.975 2.975 0 1 0 5.95 0 2.975 2.975 0 0 0-5.95 0' }],

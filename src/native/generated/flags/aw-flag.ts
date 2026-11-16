@@ -10,7 +10,7 @@ import { createNativeFlag } from '@bymax-one/icons/native/runtime'
  * The Aruba flag, from https://gitlab.com/catamphetamine/country-flag-icons/-/blob/v1.6.20/flags/3x2/AW.svg (MIT, retrieved 2026-11-14).
  * It is reproduced as published by its source; see TRADEMARKS.md.
  *
- * @since 1.0.0
+ * @since 1.1.0
  */
 export const AwFlagIcon = /* @__PURE__ */ createNativeFlag('aw-flag', '0 0 363 242', [
   ['path', { fill: '#338af3', d: 'M0 0h363v242H0z' }],

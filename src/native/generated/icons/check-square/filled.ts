@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `check-square` icon, filled variant: checkbox, checked, done, select.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const CheckSquareFilledIcon = /* @__PURE__ */ createNativeIcon(
   'check-square-filled',

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `pill` icon, line variant: pill, medicine, capsule, dose.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const PillIcon = /* @__PURE__ */ createNativeIcon('pill', [
   ['path', { d: 'm9.725 19.725 10-10a3.5 3.5 0 0 0-4.95-4.95l-10 10a3.5 3.5 0 0 0 4.95 4.95' }],

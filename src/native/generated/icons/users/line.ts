@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `users` icon, line variant: team, people, members, group.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const UsersIcon = /* @__PURE__ */ createNativeIcon('users', [
   ['circle', { cx: 8.5, cy: 8.25, r: 2.975 }],

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `palette` icon, line variant: colors, paint, theme, swatches.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const PaletteIcon = /* @__PURE__ */ createNativeIcon('palette', [
   ['path', { d: 'M16.75 20.044A9 9 0 1 1 20.044 7.75l-2.294 5a2 2 0 0 1 0 4z' }],

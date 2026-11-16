@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `ev-station` icon, line variant: ev station, charging, electric, plug.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const EvStationIcon = /* @__PURE__ */ createNativeIcon('ev-station', [
   ['path', { d: 'M4.75 21.25v-16c0-1.5.5-2 2-2h5c1.5 0 2 .5 2 2v16' }],

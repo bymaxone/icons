@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `crown` icon, filled variant: owner, premium, admin, king.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const CrownFilledIcon = /* @__PURE__ */ createNativeIcon(
   'crown-filled',

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `folder-heart` icon, line variant: folder heart, favorite folder, liked, loved.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const FolderHeartIcon = /* @__PURE__ */ createNativeIcon('folder-heart', [
   [

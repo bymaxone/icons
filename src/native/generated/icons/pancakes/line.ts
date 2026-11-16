@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `pancakes` icon, line variant: pancakes, stack, syrup, brunch.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const PancakesIcon = /* @__PURE__ */ createNativeIcon('pancakes', [
   [

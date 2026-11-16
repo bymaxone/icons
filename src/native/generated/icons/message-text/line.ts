@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `message-text` icon, line variant: message text, sms, written chat, content.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const MessageTextIcon = /* @__PURE__ */ createNativeIcon('message-text', [
   [

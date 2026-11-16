@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `arrow-left-right` icon, line variant: swap, exchange, left right, transfer.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const ArrowLeftRightIcon = /* @__PURE__ */ createNativeIcon('arrow-left-right', [
   ['path', { d: 'M4.25 8.25h15m-3.5-3.5 3.5 3.5-3.5 3.5' }],

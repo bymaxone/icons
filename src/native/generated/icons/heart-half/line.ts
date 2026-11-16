@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `heart-half` icon, line variant: heart half, partial, rating, health.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const HeartHalfIcon = /* @__PURE__ */ createNativeIcon('heart-half', [
   [

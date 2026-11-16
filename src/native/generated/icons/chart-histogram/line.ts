@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `chart-histogram` icon, line variant: chart histogram, distribution, frequency, bins.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const ChartHistogramIcon = /* @__PURE__ */ createNativeIcon('chart-histogram', [
   ['path', { d: 'M3.75 3.75v16.5h16.5' }],

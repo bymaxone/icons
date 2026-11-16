@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `iv-drip` icon, line variant: iv drip, infusion, saline, drip bag.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const IvDripIcon = /* @__PURE__ */ createNativeIcon('iv-drip', [
   ['path', { d: 'M8.25 3.25h8v8c0 1.5-1 2.5-2.5 2.5h-3c-1.5 0-2.5-1-2.5-2.5z' }],

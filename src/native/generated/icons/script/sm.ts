@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `script` icon, sm variant: screenplay, document, text, dialogue.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const ScriptSmIcon = /* @__PURE__ */ createNativeIcon(
   'script-sm',

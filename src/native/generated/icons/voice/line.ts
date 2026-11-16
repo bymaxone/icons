@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `voice` icon, line variant: speech, voice over, talk, speaking.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const VoiceIcon = /* @__PURE__ */ createNativeIcon('voice', [
   [

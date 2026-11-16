@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `dialpad` icon, line variant: dialpad, keypad, number pad, dial.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const DialpadIcon = /* @__PURE__ */ createNativeIcon('dialpad', [
   ['path', { d: 'M7.25 5.25h.01' }],

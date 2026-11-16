@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `tent` icon, line variant: tent, camping, outdoor, travel.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const TentIcon = /* @__PURE__ */ createNativeIcon('tent', [
   ['path', { d: 'M2.75 20.25h19' }],

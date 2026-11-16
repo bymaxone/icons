@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `invoice-check` icon, line variant: invoice check, paid bill, settled, payment done.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const InvoiceCheckIcon = /* @__PURE__ */ createNativeIcon('invoice-check', [
   ['path', { d: 'M5.25 3.25h13v18L16 19.75l-2.25 1.5-2.25-1.5-2.25 1.5L7 19.75l-1.75 1.5z' }],

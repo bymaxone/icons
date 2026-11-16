@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `fingerprint` icon, line variant: fingerprint, biometric, identity, touch id.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const FingerprintIcon = /* @__PURE__ */ createNativeIcon('fingerprint', [
   ['path', { d: 'M4.25 11.25a8 8 0 0 1 16 0v1.5' }],

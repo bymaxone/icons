@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `kettle` icon, line variant: kettle, boil, tea, heat water.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const KettleIcon = /* @__PURE__ */ createNativeIcon('kettle', [
   ['path', { d: 'M6.25 20.25h11l-.75-8.5c-.25-2.25-1.75-3.5-4.25-3.5s-4 1.25-4.25 3.5z' }],

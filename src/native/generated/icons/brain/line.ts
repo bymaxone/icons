@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `brain` icon, line variant: brain, mind, think, memory.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const BrainIcon = /* @__PURE__ */ createNativeIcon('brain', [
   [

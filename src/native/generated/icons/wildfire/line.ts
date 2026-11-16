@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `wildfire` icon, line variant: wildfire, forest fire, blaze, smoke.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const WildfireIcon = /* @__PURE__ */ createNativeIcon('wildfire', [
   [

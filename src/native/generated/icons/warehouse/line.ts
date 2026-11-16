@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `warehouse` icon, line variant: warehouse, storage, stock, logistics.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const WarehouseIcon = /* @__PURE__ */ createNativeIcon('warehouse', [
   ['path', { d: 'M3.25 21.25v-13l9-4 9 4v13' }],

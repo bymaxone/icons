@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `ticket` icon, line variant: ticket, pass, event, admission.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const TicketIcon = /* @__PURE__ */ createNativeIcon('ticket', [
   [

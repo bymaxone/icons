@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `currency-rupee` icon, line variant: rupee, currency, money, inr.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const CurrencyRupeeIcon = /* @__PURE__ */ createNativeIcon('currency-rupee', [
   ['path', { d: 'M7.25 4.25h10m-10 4.5h10' }],

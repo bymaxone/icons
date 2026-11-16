@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `border-vertical` icon, line variant: border vertical, columns, lines, table.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const BorderVerticalIcon = /* @__PURE__ */ createNativeIcon('border-vertical', [
   ['path', { d: 'M12.25 4.75v15' }],

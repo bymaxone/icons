@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `sliders` icon, line variant: sliders, settings, filters, adjust, controls.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const SlidersIcon = /* @__PURE__ */ createNativeIcon('sliders', [
   ['path', { d: 'M3.75 6.25h3.5m6 0h7.25' }],

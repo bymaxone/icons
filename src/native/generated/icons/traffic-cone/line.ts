@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `traffic-cone` icon, line variant: traffic cone, roadwork, caution, barrier.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const TrafficConeIcon = /* @__PURE__ */ createNativeIcon('traffic-cone', [
   ['path', { d: 'M3.75 20.25h17' }],

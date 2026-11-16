@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `droplet` icon, line variant: droplet, drop, water, color, theme color, tint.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const DropletIcon = /* @__PURE__ */ createNativeIcon('droplet', [
   ['path', { d: 'm12.25 3.25 5.244 7.159a6.5 6.5 0 1 1-10.488 0z' }],

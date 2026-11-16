@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `clock-edit` icon, line variant: clock edit, change time, adjust, reschedule.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const ClockEditIcon = /* @__PURE__ */ createNativeIcon('clock-edit', [
   [

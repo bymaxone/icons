@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `pencil` icon, sm variant: edit, write, rename, modify.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const PencilSmIcon = /* @__PURE__ */ createNativeIcon(
   'pencil-sm',

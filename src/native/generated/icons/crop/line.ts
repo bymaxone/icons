@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `crop` icon, line variant: trim, frame, cut, resize.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const CropIcon = /* @__PURE__ */ createNativeIcon('crop', [
   ['path', { d: 'M7.75 2.75v11.5a2 2 0 0 0 2 2h11.5' }],

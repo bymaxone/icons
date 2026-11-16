@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `info` icon, sm variant: information, details, about, help.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const InfoSmIcon = /* @__PURE__ */ createNativeIcon(
   'info-sm',

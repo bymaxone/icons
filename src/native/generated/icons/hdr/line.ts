@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `hdr` icon, line variant: hdr, dynamic range, contrast, display.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const HdrIcon = /* @__PURE__ */ createNativeIcon('hdr', [
   ['path', { d: 'M2.75 8.25v7.5m3.5-7.5v7.5M2.75 12h3.5' }],

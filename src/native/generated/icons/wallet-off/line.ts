@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `wallet-off` icon, line variant: wallet off, no funds, frozen, inactive.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const WalletOffIcon = /* @__PURE__ */ createNativeIcon('wallet-off', [
   [

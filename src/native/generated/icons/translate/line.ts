@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `translate` icon, line variant: translate, language, localize, i18n.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const TranslateIcon = /* @__PURE__ */ createNativeIcon('translate', [
   [

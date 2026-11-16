@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `elevator` icon, line variant: elevator, lift, floor, building.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const ElevatorIcon = /* @__PURE__ */ createNativeIcon('elevator', [
   [

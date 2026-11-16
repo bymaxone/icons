@@ -10,7 +10,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
  * The Ubuntu brand mark, from https://github.com/simple-icons/simple-icons/blob/16.37.0/icons/ubuntu.svg (CC0-1.0, retrieved 2026-11-14).
  * The mark belongs to its owner and is not covered by the MIT grant; see TRADEMARKS.md and https://design.ubuntu.com/brand.
  *
- * @since 1.0.0
+ * @since 1.1.0
  */
 export const UbuntuBrandIcon = /* @__PURE__ */ createNativeIcon(
   'ubuntu-brand',

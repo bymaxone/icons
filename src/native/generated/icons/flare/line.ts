@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `flare` icon, line variant: flare, glare, spark, light.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const FlareIcon = /* @__PURE__ */ createNativeIcon('flare', [
   ['path', { d: 'M12.25 12.25h.01' }],

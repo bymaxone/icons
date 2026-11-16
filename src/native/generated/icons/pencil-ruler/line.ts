@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `pencil-ruler` icon, line variant: pencil, ruler, design, draft.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const PencilRulerIcon = /* @__PURE__ */ createNativeIcon('pencil-ruler', [
   [

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `spellcheck` icon, line variant: spellcheck, proofread, typos, grammar.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const SpellcheckIcon = /* @__PURE__ */ createNativeIcon('spellcheck', [
   ['path', { d: 'm3.75 14.25 3.75-10 3.75 10M5 10.75h5' }],

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `mouse` icon, line variant: mouse, pointer device, click, peripheral.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const MouseIcon = /* @__PURE__ */ createNativeIcon('mouse', [
   [

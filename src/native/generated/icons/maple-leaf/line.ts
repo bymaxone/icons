@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `maple-leaf` icon, line variant: maple leaf, autumn, canada, foliage.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const MapleLeafIcon = /* @__PURE__ */ createNativeIcon('maple-leaf', [
   ['path', { d: 'M12.263 19.913v-5.95' }],

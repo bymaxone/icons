@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `home-x` icon, line variant: home x, leave start, cancel house, dismiss.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const HomeXIcon = /* @__PURE__ */ createNativeIcon('home-x', [
   [

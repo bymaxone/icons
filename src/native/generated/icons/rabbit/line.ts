@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `rabbit` icon, line variant: rabbit, bunny, animal, fast.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const RabbitIcon = /* @__PURE__ */ createNativeIcon('rabbit', [
   ['path', { d: 'M17.25 15.75c0 3-2.25 5-5 5s-5-2-5-5 2.25-4.5 5-4.5 5 1.5 5 4.5' }],

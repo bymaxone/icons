@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `headset-off` icon, line variant: headset off, muted, disconnected, support.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const HeadsetOffIcon = /* @__PURE__ */ createNativeIcon('headset-off', [
   [

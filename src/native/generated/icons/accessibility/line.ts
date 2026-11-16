@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `accessibility` icon, line variant: accessibility, a11y, inclusive, person.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const AccessibilityIcon = /* @__PURE__ */ createNativeIcon('accessibility', [
   ['circle', { cx: 12.25, cy: 4.75, r: 1.75 }],

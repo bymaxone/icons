@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `money-bag` icon, line variant: money bag, cash sack, savings, funds.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const MoneyBagIcon = /* @__PURE__ */ createNativeIcon('money-bag', [
   ['path', { d: 'M9.25 3.25h6l-1.5 3.5h-3z' }],

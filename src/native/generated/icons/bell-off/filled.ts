@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `bell-off` icon, filled variant: bell, mute, silent, notifications.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const BellOffFilledIcon = /* @__PURE__ */ createNativeIcon(
   'bell-off-filled',

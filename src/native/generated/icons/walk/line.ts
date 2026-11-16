@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `walk` icon, line variant: walk, pedestrian, steps, stroll.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const WalkIcon = /* @__PURE__ */ createNativeIcon('walk', [
   ['circle', { cx: 13.25, cy: 4.75, r: 1.75 }],

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `plant` icon, line variant: plant, sprout, growth, pot.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const PlantIcon = /* @__PURE__ */ createNativeIcon('plant', [
   ['path', { d: 'M12.25 21.25v-10' }],

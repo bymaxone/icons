@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `filter-plus` icon, line variant: filter plus, add filter, refine, criteria.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const FilterPlusIcon = /* @__PURE__ */ createNativeIcon('filter-plus', [
   [

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `incognito` icon, line variant: incognito, private browsing, hat, anonymous.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const IncognitoIcon = /* @__PURE__ */ createNativeIcon('incognito', [
   ['path', { d: 'M4.25 11.25h16' }],

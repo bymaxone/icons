@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `cloud-moon` icon, line variant: cloud moon, night, weather, evening.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const CloudMoonIcon = /* @__PURE__ */ createNativeIcon('cloud-moon', [
   ['path', { d: 'M10.25 3.75a4.5 4.5 0 0 0-4.586 5.667m2.99-2.393A3.6 3.6 0 0 1 10.25 3.75' }],

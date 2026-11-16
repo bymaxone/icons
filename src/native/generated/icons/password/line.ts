@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `password` icon, line variant: password, asterisks, secret, input.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const PasswordIcon = /* @__PURE__ */ createNativeIcon('password', [
   [

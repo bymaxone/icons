@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `caravan` icon, line variant: caravan, camper, trailer, trip.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const CaravanIcon = /* @__PURE__ */ createNativeIcon('caravan', [
   [

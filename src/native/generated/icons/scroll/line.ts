@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `scroll` icon, line variant: scroll, parchment, document, ancient.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const ScrollIcon = /* @__PURE__ */ createNativeIcon('scroll', [
   [

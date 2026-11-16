@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `card` icon, filled variant: credit card, payment, debit, billing.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const CardFilledIcon = /* @__PURE__ */ createNativeIcon(
   'card-filled',

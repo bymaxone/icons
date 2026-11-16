@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `extend` icon, line variant: lengthen, continue, duration, arrow right.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const ExtendIcon = /* @__PURE__ */ createNativeIcon('extend', [
   [

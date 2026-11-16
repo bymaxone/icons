@@ -10,7 +10,7 @@ import { createNativeFlag } from '@bymax-one/icons/native/runtime'
  * The Monaco flag, from https://gitlab.com/catamphetamine/country-flag-icons/-/blob/v1.6.20/flags/3x2/MC.svg (MIT, retrieved 2026-11-14).
  * It is reproduced as published by its source; see TRADEMARKS.md.
  *
- * @since 1.0.0
+ * @since 1.1.0
  */
 export const McFlagIcon = /* @__PURE__ */ createNativeFlag('mc-flag', '0 0 513 342', [
   ['path', { fill: '#ffffff', d: 'M0 171h513v171H0z' }],

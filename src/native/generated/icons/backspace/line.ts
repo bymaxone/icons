@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `backspace` icon, line variant: backspace, delete left, erase, key.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const BackspaceIcon = /* @__PURE__ */ createNativeIcon('backspace', [
   [

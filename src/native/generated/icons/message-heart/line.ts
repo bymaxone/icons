@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `message-heart` icon, line variant: message heart, reaction, kind words, love.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const MessageHeartIcon = /* @__PURE__ */ createNativeIcon('message-heart', [
   [

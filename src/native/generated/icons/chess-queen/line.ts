@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `chess-queen` icon, line variant: chess queen, queen, chess, strongest.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const ChessQueenIcon = /* @__PURE__ */ createNativeIcon('chess-queen', [
   ['path', { d: 'm6.25 7.25 2 7h8l2-7-3.5 3.5-2.5-5-2.5 5z' }],

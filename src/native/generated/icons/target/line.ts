@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `target` icon, line variant: target, goal, objective, aim.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const TargetIcon = /* @__PURE__ */ createNativeIcon('target', [
   ['circle', { cx: 12.25, cy: 12.25, r: 8.5 }],

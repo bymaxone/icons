@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `templates` icon, sm variant: layout, starter, blueprint, preset.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const TemplatesSmIcon = /* @__PURE__ */ createNativeIcon(
   'templates-sm',

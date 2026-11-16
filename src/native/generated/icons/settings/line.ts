@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `settings` icon, line variant: gear, cog, preferences, configuration.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const SettingsIcon = /* @__PURE__ */ createNativeIcon('settings', [
   [

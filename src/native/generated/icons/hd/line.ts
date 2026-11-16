@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `hd` icon, line variant: hd, high definition, resolution, quality.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const HdIcon = /* @__PURE__ */ createNativeIcon('hd', [
   [

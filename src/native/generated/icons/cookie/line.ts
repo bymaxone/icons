@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `cookie` icon, line variant: cookie, biscuit, browser cookie, consent.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const CookieIcon = /* @__PURE__ */ createNativeIcon('cookie', [
   ['path', { d: 'M20.75 12.25a8.5 8.5 0 1 1-8.5-8.5 3 3 0 0 0 3.5 3.5 3 3 0 0 0 5 5' }],

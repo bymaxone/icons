@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `laptop` icon, line variant: laptop, computer, device, desktop.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const LaptopIcon = /* @__PURE__ */ createNativeIcon('laptop', [
   [

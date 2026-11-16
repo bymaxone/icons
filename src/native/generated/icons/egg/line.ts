@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `egg` icon, line variant: egg, food, easter, hatch.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const EggIcon = /* @__PURE__ */ createNativeIcon('egg', [
   ['path', { d: 'M12.25 3.25c-4 0-7 6.5-7 11 0 4 3 7 7 7s7-3 7-7c0-4.5-3-11-7-11' }],

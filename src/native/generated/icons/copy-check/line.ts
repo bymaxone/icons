@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `copy-check` icon, line variant: copy check, duplicated ok, clipboard done, paste ready.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const CopyCheckIcon = /* @__PURE__ */ createNativeIcon('copy-check', [
   [

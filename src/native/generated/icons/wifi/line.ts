@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `wifi` icon, line variant: wifi, wireless, network, connection.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const WifiIcon = /* @__PURE__ */ createNativeIcon('wifi', [
   ['path', { d: 'M5.224 11.947a10.5 10.5 0 0 1 14.052 0' }],

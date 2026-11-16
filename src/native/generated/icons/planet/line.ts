@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `planet` icon, line variant: planet, saturn, space, orbit.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const PlanetIcon = /* @__PURE__ */ createNativeIcon('planet', [
   ['circle', { cx: 12.25, cy: 12.25, r: 5.5 }],

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `lightbulb` icon, line variant: lightbulb, idea, light, tip.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const LightbulbIcon = /* @__PURE__ */ createNativeIcon('lightbulb', [
   ['path', { d: 'M9.25 16.25c0-2-3-3.5-3-7.25a6 6 0 0 1 12 0c0 3.75-3 5.25-3 7.25z' }],

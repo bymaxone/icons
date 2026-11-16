@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `shield-search` icon, line variant: shield search, threat lookup, audit protection, inspect safety.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const ShieldSearchIcon = /* @__PURE__ */ createNativeIcon('shield-search', [
   [

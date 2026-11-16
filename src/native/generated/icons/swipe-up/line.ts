@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `swipe-up` icon, line variant: swipe up, gesture, touch, scroll.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const SwipeUpIcon = /* @__PURE__ */ createNativeIcon('swipe-up', [
   [

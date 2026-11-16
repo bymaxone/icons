@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `reference-card` icon, line variant: reference, card, mood, inspiration.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const ReferenceCardIcon = /* @__PURE__ */ createNativeIcon('reference-card', [
   [

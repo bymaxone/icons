@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `user-off` icon, line variant: user off, deactivated, disabled account, offline.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const UserOffIcon = /* @__PURE__ */ createNativeIcon('user-off', [
   ['path', { d: 'M13.935 9.667a3.5 3.5 0 1 0-4.859-4.841' }],

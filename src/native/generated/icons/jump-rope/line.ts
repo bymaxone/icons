@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `jump-rope` icon, line variant: jump rope, skipping, cardio, workout.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const JumpRopeIcon = /* @__PURE__ */ createNativeIcon('jump-rope', [
   [

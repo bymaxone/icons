@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `hamburger` icon, line variant: hamburger, burger, fast food, meal.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const HamburgerIcon = /* @__PURE__ */ createNativeIcon('hamburger', [
   ['path', { d: 'M5.25 9.75c0-3 3-5 7-5s7 2 7 5z' }],

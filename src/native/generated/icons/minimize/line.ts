@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `minimize` icon, line variant: exit full screen, shrink, collapse, corners.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const MinimizeIcon = /* @__PURE__ */ createNativeIcon('minimize', [
   ['path', { d: 'M9.75 4.25V7c0 2.234-.516 2.75-2.75 2.75H4.25' }],

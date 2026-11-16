@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `cable-car` icon, line variant: cable car, gondola, mountain, lift.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const CableCarIcon = /* @__PURE__ */ createNativeIcon('cable-car', [
   ['path', { d: 'm2.75 4.25 19 4' }],

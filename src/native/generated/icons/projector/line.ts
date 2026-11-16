@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `projector` icon, line variant: projector, presentation, screen, beam.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const ProjectorIcon = /* @__PURE__ */ createNativeIcon('projector', [
   [

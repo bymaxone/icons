@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `hand-sanitizer` icon, line variant: hand sanitizer, hygiene, gel, clean.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const HandSanitizerIcon = /* @__PURE__ */ createNativeIcon('hand-sanitizer', [
   ['path', { d: 'M7.25 11.25h10v8.5q0 1.5-1.5 1.5h-7q-1.5 0-1.5-1.5z' }],

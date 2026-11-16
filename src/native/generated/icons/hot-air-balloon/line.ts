@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `hot-air-balloon` icon, line variant: hot air balloon, flight, adventure, sky.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const HotAirBalloonIcon = /* @__PURE__ */ createNativeIcon('hot-air-balloon', [
   [

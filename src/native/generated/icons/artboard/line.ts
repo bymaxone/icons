@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `artboard` icon, line variant: artboard, canvas, design, frame.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const ArtboardIcon = /* @__PURE__ */ createNativeIcon('artboard', [
   [

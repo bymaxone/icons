@@ -10,7 +10,7 @@ import { createNativeFlag } from '@bymax-one/icons/native/runtime'
  * The Cuba flag, from https://gitlab.com/catamphetamine/country-flag-icons/-/blob/v1.6.20/flags/3x2/CU.svg (MIT, retrieved 2026-11-14).
  * It is reproduced as published by its source; see TRADEMARKS.md.
  *
- * @since 1.0.0
+ * @since 1.1.0
  */
 export const CuFlagIcon = /* @__PURE__ */ createNativeFlag('cu-flag', '0 0 513 342', [
   ['path', { fill: '#ff9811', d: 'M0-40.8v422.9-211.4z' }],

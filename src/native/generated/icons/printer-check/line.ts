@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `printer-check` icon, line variant: printer check, job done, printed ok, finished printing.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const PrinterCheckIcon = /* @__PURE__ */ createNativeIcon('printer-check', [
   ['path', { d: 'M7.75 8.25v-3q0-1.5 1.5-1.5h6q1.5 0 1.5 1.5v3' }],

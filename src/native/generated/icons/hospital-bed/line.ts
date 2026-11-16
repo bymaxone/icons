@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `hospital-bed` icon, line variant: hospital bed, ward, patient, admission.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const HospitalBedIcon = /* @__PURE__ */ createNativeIcon('hospital-bed', [
   ['path', { d: 'M3.25 6.25v14m0-4h18v4m0-4v-3c0-1.25-.5-1.75-1.75-1.75H12v4.75' }],

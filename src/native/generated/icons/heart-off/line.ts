@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `heart-off` icon, line variant: heart off, unlike, disabled, no favorite.
  *
- * @since 0.1.0
+ * @since 1.1.0
  */
 export const HeartOffIcon = /* @__PURE__ */ createNativeIcon('heart-off', [
   [
