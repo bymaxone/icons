@@ -43,8 +43,9 @@ set.
 > [!NOTE]
 > **Status: 1.0.0, the first published version.** The package holds 1,298 line icons, 51
 > filled variants, 45 hand-tuned 16 px masters, 110 brand marks and 250 country flags, each
-> as a component, a raw SVG file, a sprite symbol and a metadata entry. React Native
-> components are not part of 1.0; they are planned as a minor release after it.
+> as a component, a raw SVG file and a metadata entry; every drawing except a flag is also a
+> sprite symbol, because the sprite holds `currentColor` drawings. React Native components
+> are not part of 1.0; they are planned as a minor release after it.
 
 The library has **zero direct dependencies**: `react` arrives as a peer dependency, so you
 control its version and the supply-chain surface stays minimal.
