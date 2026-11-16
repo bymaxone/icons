@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `lightning-off` icon, line variant: lightning, off, no power, disabled.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const LightningOffIcon = /* @__PURE__ */ createIcon('lightning-off', [
   [

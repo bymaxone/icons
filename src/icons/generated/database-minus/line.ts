@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `database-minus` icon, line variant: database minus, delete records, drop storage, detach dataset.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const DatabaseMinusIcon = /* @__PURE__ */ createIcon('database-minus', [
   [

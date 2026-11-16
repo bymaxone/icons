@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `paint-roller` icon, line variant: paint roller, roller, paint, style.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const PaintRollerIcon = /* @__PURE__ */ createIcon('paint-roller', [
   [

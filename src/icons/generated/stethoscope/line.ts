@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `stethoscope` icon, line variant: stethoscope, doctor, checkup, medical.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const StethoscopeIcon = /* @__PURE__ */ createIcon('stethoscope', [
   ['path', { d: 'M6.25 3.25v4.5a3.5 3.5 0 0 0 7 0v-4.5' }],

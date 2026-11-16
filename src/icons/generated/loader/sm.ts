@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `loader` icon, sm variant: loading, spinner, progress, busy.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const LoaderSmIcon = /* @__PURE__ */ createIcon(
   'loader-sm',

@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `beetle` icon, line variant: beetle, insect, shell, bug.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const BeetleIcon = /* @__PURE__ */ createIcon('beetle', [
   ['path', { d: 'M7.25 12.25c0-3 2.25-5 5-5s5 2 5 5v3c0 3-2.25 5.5-5 5.5s-5-2.5-5-5.5z' }],

@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `video` icon, line variant: camera, record, clip, movie.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const VideoIcon = /* @__PURE__ */ createIcon('video', [
   [

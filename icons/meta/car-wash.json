@@ -6,5 +6,5 @@
   "useCases": ["Marks a place that cleans vehicles", "Offers a washing service for a car"],
   "variants": ["line"],
   "opticalSizes": [24],
-  "since": "0.1.0"
+  "since": "1.0.0"
 }

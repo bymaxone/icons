@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `crib` icon, line variant: crib, cot, nursery, baby bed.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const CribIcon = /* @__PURE__ */ createIcon('crib', [
   ['path', { d: 'M4.25 5.25v15.5m16-15.5v15.5' }],

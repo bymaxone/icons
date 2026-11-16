@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `cat` icon, line variant: cat, pet, animal, kitten.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const CatIcon = /* @__PURE__ */ createIcon('cat', [
   ['circle', { cx: 12.25, cy: 13.5, r: 5.5 }],

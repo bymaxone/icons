@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `chevrons-down` icon, line variant: chevrons down, double chevron, scroll down, more.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const ChevronsDownIcon = /* @__PURE__ */ createIcon('chevrons-down', [
   ['path', { d: 'm6.25 5.75 6 6 6-6m-12 6.5 6 6 6-6' }]

@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `message-share` icon, line variant: message share, send chat, pass on comment, distribute.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const MessageShareIcon = /* @__PURE__ */ createIcon('message-share', [
   [

@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `sliders` icon, line variant: sliders, settings, filters, adjust, controls.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const SlidersIcon = /* @__PURE__ */ createIcon('sliders', [
   ['path', { d: 'M3.75 6.25h3.5m6 0h7.25' }],

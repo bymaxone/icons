@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `bee` icon, line variant: bee, honey, insect, pollinator.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const BeeIcon = /* @__PURE__ */ createIcon('bee', [
   ['path', { d: 'M12.25 9.25c3 0 4.5 2.75 4.5 6s-1.5 6-4.5 6-4.5-2.75-4.5-6 1.5-6 4.5-6' }],

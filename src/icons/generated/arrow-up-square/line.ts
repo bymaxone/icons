@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `arrow-up-square` icon, line variant: arrow up square, up, upload, boxed arrow.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const ArrowUpSquareIcon = /* @__PURE__ */ createIcon('arrow-up-square', [
   [

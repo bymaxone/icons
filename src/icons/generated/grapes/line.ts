@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `grapes` icon, line variant: grapes, bunch, vine, fruit.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const GrapesIcon = /* @__PURE__ */ createIcon('grapes', [
   ['circle', { cx: 9, cy: 8.5, r: 1.75 }],

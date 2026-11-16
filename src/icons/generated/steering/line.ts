@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `steering` icon, line variant: steering, wheel, drive, car.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const SteeringIcon = /* @__PURE__ */ createIcon('steering', [
   ['circle', { cx: 12.25, cy: 12.25, r: 8.5 }],

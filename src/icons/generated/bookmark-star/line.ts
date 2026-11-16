@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `bookmark-star` icon, line variant: bookmark star, best saved, priority save, featured mark.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const BookmarkStarIcon = /* @__PURE__ */ createIcon('bookmark-star', [
   ['path', { d: 'M7.25 5.75c0-1.5.5-2 2-2h6c1.5 0 2 .5 2 2v5.43m-5.857 6.17-4.143 2.9V5.75' }],

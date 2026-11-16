@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `role` icon, line variant: permission, access, badge, member role.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const RoleIcon = /* @__PURE__ */ createIcon('role', [
   ['path', { d: 'M12.4 6.75a3.15 3.15 0 0 1-6.3 0 3.15 3.15 0 0 1 6.3 0' }],

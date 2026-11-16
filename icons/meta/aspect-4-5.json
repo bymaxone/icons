@@ -6,5 +6,5 @@
   "useCases": ["Sets a 4:5 video format", "Labels a tall feed format"],
   "variants": ["line"],
   "opticalSizes": [24],
-  "since": "0.1.0"
+  "since": "1.0.0"
 }

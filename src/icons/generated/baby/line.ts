@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `baby` icon, line variant: baby, infant, child, newborn.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const BabyIcon = /* @__PURE__ */ createIcon('baby', [
   ['circle', { cx: 12.25, cy: 6.75, r: 3 }],

@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `file-warning` icon, line variant: file warning, document problem, file issue, caution.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const FileWarningIcon = /* @__PURE__ */ createIcon('file-warning', [
   [

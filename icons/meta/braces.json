@@ -6,5 +6,5 @@
   "useCases": ["Marks a block of code or an object", "Wraps a group of values"],
   "variants": ["line"],
   "opticalSizes": [24],
-  "since": "0.1.0"
+  "since": "1.0.0"
 }

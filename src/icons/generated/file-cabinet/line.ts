@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `file-cabinet` icon, line variant: file cabinet, filing, archive drawers, records.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const FileCabinetIcon = /* @__PURE__ */ createIcon('file-cabinet', [
   [

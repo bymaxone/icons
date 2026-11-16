@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `hexagon` icon, line variant: hexagon, shape, polygon, six sides.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const HexagonIcon = /* @__PURE__ */ createIcon('hexagon', [
   [

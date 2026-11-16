@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `graduation-cap` icon, line variant: graduation cap, education, degree, student.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const GraduationCapIcon = /* @__PURE__ */ createIcon('graduation-cap', [
   ['path', { d: 'm12.25 4.75 9.5 4.5-9.5 4.5-9.5-4.5z' }],

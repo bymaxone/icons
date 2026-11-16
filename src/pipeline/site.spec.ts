@@ -99,6 +99,23 @@ describe('catalogFrom', () => {
     ])
   })
 
+  it('lists the flags by the English name of the country, not by its code', () => {
+    /**
+     * Scenario: Austria (at) comes before Australia (au) by code and after it by name, and a
+     * reader scanning the Flags section looks for the name; the order is the name's, with
+     * the accented names (Aland) among the A names.
+     */
+    const flags = {
+      'at-flag': { ...FLAG, title: 'Austria', code: 'AT' },
+      'au-flag': { ...FLAG, title: 'Australia', code: 'AU' },
+      'ax-flag': { ...FLAG, title: 'Åland Islands', code: 'AX' }
+    }
+    const named = catalogFrom({ ...METADATA, flags }).entries.filter(
+      (entry) => entry.kind === 'flag'
+    )
+    expect(named.map((entry) => entry.title)).toEqual(['Åland Islands', 'Australia', 'Austria'])
+  })
+
   it('describes an icon with its drawings, metadata and search words', () => {
     /**
      * Scenario: each drawn variant names the component that renders it; the label is the

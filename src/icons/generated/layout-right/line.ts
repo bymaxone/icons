@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `layout-right` icon, line variant: layout right, side panel, inspector, columns.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const LayoutRightIcon = /* @__PURE__ */ createIcon('layout-right', [
   [

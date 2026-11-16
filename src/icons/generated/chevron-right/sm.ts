@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `chevron-right` icon, sm variant: caret, forward, next, right.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const ChevronRightSmIcon = /* @__PURE__ */ createIcon(
   'chevron-right-sm',

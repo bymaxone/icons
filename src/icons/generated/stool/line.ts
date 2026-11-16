@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `stool` icon, line variant: stool, seat, bar stool, three legs.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const StoolIcon = /* @__PURE__ */ createIcon('stool', [
   [

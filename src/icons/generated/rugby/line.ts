@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `rugby` icon, line variant: rugby ball, oval ball, scrum, try.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const RugbyIcon = /* @__PURE__ */ createIcon('rugby', [
   ['path', { d: 'M5.532 18.968A9.5 5.25-45 1 0 18.968 5.532 9.5 5.25-45 1 0 5.532 18.968' }],

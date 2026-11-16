@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `prompt` icon, line variant: input, command, instruction, terminal.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const PromptIcon = /* @__PURE__ */ createIcon('prompt', [
   [

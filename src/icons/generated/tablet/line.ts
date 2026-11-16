@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `tablet` icon, line variant: tablet, device, ipad, screen.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const TabletIcon = /* @__PURE__ */ createIcon('tablet', [
   [

@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `coins` icon, line variant: coins, money, balance, payment.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const CoinsIcon = /* @__PURE__ */ createIcon('coins', [
   [

@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `file-chart` icon, line variant: file chart, report, analytics, document.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const FileChartIcon = /* @__PURE__ */ createIcon('file-chart', [
   [

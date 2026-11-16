@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `tornado` icon, line variant: tornado, storm, whirlwind, weather.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const TornadoIcon = /* @__PURE__ */ createIcon('tornado', [
   ['path', { d: 'M3.25 5.25c5 1 11 1 17 0' }],

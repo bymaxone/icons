@@ -6,5 +6,5 @@
   "useCases": ["Changes the role of a member", "Shows the permissions of a role"],
   "variants": ["line"],
   "opticalSizes": [24],
-  "since": "0.1.0"
+  "since": "1.0.0"
 }

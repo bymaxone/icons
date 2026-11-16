@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `align-top` icon, line variant: align top, top edge, layout, position.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const AlignTopIcon = /* @__PURE__ */ createIcon('align-top', [
   ['path', { d: 'M4.25 4.25h16' }],

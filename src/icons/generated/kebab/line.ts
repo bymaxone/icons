@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `kebab` icon, line variant: kebab, skewer, grill, meat.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const KebabIcon = /* @__PURE__ */ createIcon('kebab', [
   ['path', { d: 'M12.25 2.75v18.5' }],

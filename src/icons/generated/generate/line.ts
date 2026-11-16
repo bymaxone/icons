@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `generate` icon, line variant: magic wand, create, make, ai.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const GenerateIcon = /* @__PURE__ */ createIcon('generate', [
   ['path', { d: 'm3.25 21.25 10-10' }],

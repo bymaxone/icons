@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `chess-rook` icon, line variant: chess rook, rook, tower, castle piece.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const ChessRookIcon = /* @__PURE__ */ createIcon('chess-rook', [
   [

@@ -6,5 +6,5 @@
   "useCases": ["Removes a language or region", "Marks an area that is not supported"],
   "variants": ["line"],
   "opticalSizes": [24],
-  "since": "0.1.0"
+  "since": "1.0.0"
 }

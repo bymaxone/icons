@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `fire-station` icon, line variant: fire station, firefighters, emergency service, fire department.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const FireStationIcon = /* @__PURE__ */ createIcon('fire-station', [
   ['path', { d: 'M3.25 21.25v-13l9-5 9 5v13' }],

@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `paw` icon, line variant: paw, pet, animal, footprint.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const PawIcon = /* @__PURE__ */ createIcon('paw', [
   [

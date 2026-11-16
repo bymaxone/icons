@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `play-circle` icon, line variant: play, start, video, circle.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const PlayCircleIcon = /* @__PURE__ */ createIcon('play-circle', [
   ['circle', { cx: 12.25, cy: 12.25, r: 8.5 }],

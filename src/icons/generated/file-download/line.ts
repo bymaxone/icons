@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `file-download` icon, line variant: file, download, save, export.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const FileDownloadIcon = /* @__PURE__ */ createIcon('file-download', [
   [

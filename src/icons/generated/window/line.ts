@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `window` icon, line variant: window, browser, app, frame.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const WindowIcon = /* @__PURE__ */ createIcon('window', [
   [

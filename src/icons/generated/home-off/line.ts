@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `home-off` icon, line variant: home off, vacant, away, inactive.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const HomeOffIcon = /* @__PURE__ */ createIcon('home-off', [
   [

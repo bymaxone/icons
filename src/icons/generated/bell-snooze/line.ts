@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `bell-snooze` icon, line variant: bell snooze, remind later, postpone, quiet.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const BellSnoozeIcon = /* @__PURE__ */ createIcon('bell-snooze', [
   [

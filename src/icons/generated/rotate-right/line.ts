@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `rotate-right` icon, line variant: rotate right, clockwise, turn, image.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const RotateRightIcon = /* @__PURE__ */ createIcon('rotate-right', [
   ['path', { d: 'M16.25 9.25h3.5v-3.5' }],

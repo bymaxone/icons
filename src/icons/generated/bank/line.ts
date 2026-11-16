@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `bank` icon, line variant: bank, finance, institution, account.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const BankIcon = /* @__PURE__ */ createIcon('bank', [
   ['path', { d: 'm3.25 9.25 9-5.5 9 5.5z' }],

@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `sofa` icon, line variant: sofa, couch, living room, furniture.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const SofaIcon = /* @__PURE__ */ createIcon('sofa', [
   ['path', { d: 'M5.25 11.25v-3Q5.25 6 7.5 6H17q2.25 0 2.25 2.25v3' }],

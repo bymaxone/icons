@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `camera-share` icon, line variant: camera share, send capture, post snapshot, upload shot.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const CameraShareIcon = /* @__PURE__ */ createIcon('camera-share', [
   [

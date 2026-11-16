@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `test-tube-rack` icon, line variant: test tube rack, lab samples, tubes, experiment.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const TestTubeRackIcon = /* @__PURE__ */ createIcon('test-tube-rack', [
   ['path', { d: 'M3.25 11.25h18m-16 0v9m14-9v9' }],

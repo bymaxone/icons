@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `filter-off` icon, line variant: filter off, clear filter, no filter, reset.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const FilterOffIcon = /* @__PURE__ */ createIcon('filter-off', [
   ['path', { d: 'M9.01 4.75h9.74c1.625 0 1.764.291.739 1.552l-4.002 4.926' }],

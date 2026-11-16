@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `face-kiss` icon, line variant: kissing face, kiss, affection, blow a kiss.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const FaceKissIcon = /* @__PURE__ */ createIcon('face-kiss', [
   ['path', { d: 'M20.46 10.05a8.5 8.5 0 1 1-6.01-6.01' }],

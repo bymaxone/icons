@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `meh` icon, line variant: meh, neutral, indifferent, face.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const MehIcon = /* @__PURE__ */ createIcon('meh', [
   ['path', { d: 'M20.46 10.05a8.5 8.5 0 1 1-6.01-6.01' }],

@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `trash` icon, sm variant: delete, remove, bin, discard.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const TrashSmIcon = /* @__PURE__ */ createIcon(
   'trash-sm',

@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `pyramid` icon, line variant: pyramid, egypt, shape, monument.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const PyramidIcon = /* @__PURE__ */ createIcon('pyramid', [
   ['path', { d: 'm12.25 3.25-9.5 15 9.5 3 9.5-3z' }],

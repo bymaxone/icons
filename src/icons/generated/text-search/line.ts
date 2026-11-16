@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `text-search` icon, line variant: text search, look up words, search document, locate phrase.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const TextSearchIcon = /* @__PURE__ */ createIcon('text-search', [
   ['path', { d: 'M4.75 4.75h15' }],

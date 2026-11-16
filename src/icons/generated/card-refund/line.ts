@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `card-refund` icon, line variant: card refund, money back, chargeback, returned payment.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const CardRefundIcon = /* @__PURE__ */ createIcon('card-refund', [
   [

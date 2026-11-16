@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `sunrise` icon, line variant: sunrise, morning, dawn, sun.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const SunriseIcon = /* @__PURE__ */ createIcon('sunrise', [
   ['path', { d: 'M3.25 19.25h18' }],

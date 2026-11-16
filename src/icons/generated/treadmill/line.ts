@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `treadmill` icon, line variant: treadmill, running machine, cardio, gym.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const TreadmillIcon = /* @__PURE__ */ createIcon('treadmill', [
   ['circle', { cx: 9.75, cy: 4.75, r: 1.5 }],

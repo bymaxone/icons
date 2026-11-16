@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `tsunami` icon, line variant: tsunami, wave, flood, disaster.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const TsunamiIcon = /* @__PURE__ */ createIcon('tsunami', [
   ['path', { d: 'M3.25 20.25h18' }],

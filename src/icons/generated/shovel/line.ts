@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `shovel` icon, line variant: shovel, dig, garden, tool.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const ShovelIcon = /* @__PURE__ */ createIcon('shovel', [
   ['path', { d: 'M17.75 3.75 20.5 6.5m-1.38-1.38L11.25 13' }],

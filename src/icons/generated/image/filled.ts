@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `image` icon, filled variant: picture, photo, landscape, media.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const ImageFilledIcon = /* @__PURE__ */ createIcon(
   'image-filled',

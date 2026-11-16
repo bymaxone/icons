@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `volume` icon, sm variant: speaker, sound, audio, loud.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const VolumeSmIcon = /* @__PURE__ */ createIcon(
   'volume-sm',

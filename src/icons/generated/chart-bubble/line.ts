@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `chart-bubble` icon, line variant: chart bubble, bubbles, scatter, size.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const ChartBubbleIcon = /* @__PURE__ */ createIcon('chart-bubble', [
   ['circle', { cx: 8.25, cy: 14.25, r: 4.25 }],

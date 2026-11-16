@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `key-off` icon, line variant: key off, inactive key, suspended, no access.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const KeyOffIcon = /* @__PURE__ */ createIcon('key-off', [
   ['path', { d: 'M4 15.75a4.25 4.25 0 0 0 8.401.916m-5.058-5.069A4.25 4.25 0 0 0 4 15.75' }],

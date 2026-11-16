@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `clipboard-minus` icon, line variant: clipboard minus, list, remove, task.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const ClipboardMinusIcon = /* @__PURE__ */ createIcon('clipboard-minus', [
   [

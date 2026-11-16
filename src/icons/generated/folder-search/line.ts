@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `folder-search` icon, line variant: folder, search, find, browse.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const FolderSearchIcon = /* @__PURE__ */ createIcon('folder-search', [
   [

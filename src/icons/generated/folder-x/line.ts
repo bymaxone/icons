@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `folder-x` icon, line variant: folder x, delete, error, close.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const FolderXIcon = /* @__PURE__ */ createIcon('folder-x', [
   [

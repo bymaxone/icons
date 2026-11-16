@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `podium` icon, line variant: podium, ranking, winner, leaderboard.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const PodiumIcon = /* @__PURE__ */ createIcon('podium', [
   ['path', { d: 'M3.25 20.25v-6h6v-4h6v5h6v5z' }],

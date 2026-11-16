@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `calculator` icon, line variant: calculator, calculate, math, sum.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const CalculatorIcon = /* @__PURE__ */ createIcon('calculator', [
   [

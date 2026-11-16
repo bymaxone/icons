@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `user-square` icon, line variant: user, contact, card, profile.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const UserSquareIcon = /* @__PURE__ */ createIcon('user-square', [
   [

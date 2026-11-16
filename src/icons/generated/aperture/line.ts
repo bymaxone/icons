@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `aperture` icon, line variant: aperture, camera, lens, shutter.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const ApertureIcon = /* @__PURE__ */ createIcon('aperture', [
   ['circle', { cx: 12.25, cy: 12.25, r: 7.75 }],

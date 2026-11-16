@@ -6,5 +6,5 @@
   "useCases": ["Shows a breakfast dish", "Marks a cooking step"],
   "variants": ["line"],
   "opticalSizes": [24],
-  "since": "0.1.0"
+  "since": "1.0.0"
 }

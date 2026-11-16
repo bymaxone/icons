@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `volcano` icon, line variant: volcano, eruption, lava, mountain.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const VolcanoIcon = /* @__PURE__ */ createIcon('volcano', [
   ['path', { d: 'm2.75 20.25 5.5-11h2l1 1.5 1-1.5h2l5.5 11z' }],

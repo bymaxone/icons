@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `broccoli` icon, line variant: broccoli, vegetable, green, florets.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const BroccoliIcon = /* @__PURE__ */ createIcon('broccoli', [
   [

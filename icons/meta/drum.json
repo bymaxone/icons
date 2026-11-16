@@ -6,5 +6,5 @@
   "useCases": ["Shows a percussion instrument", "Marks a rhythm section of a song"],
   "variants": ["line"],
   "opticalSizes": [24],
-  "since": "0.1.0"
+  "since": "1.0.0"
 }

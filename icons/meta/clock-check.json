@@ -6,5 +6,5 @@
   "useCases": ["Confirms that a time slot is booked", "Marks a task finished on time"],
   "variants": ["line"],
   "opticalSizes": [24],
-  "since": "0.1.0"
+  "since": "1.0.0"
 }

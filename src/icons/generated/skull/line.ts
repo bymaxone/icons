@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `skull` icon, line variant: skull, danger, poison, halloween.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const SkullIcon = /* @__PURE__ */ createIcon('skull', [
   [

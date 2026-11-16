@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `cctv` icon, line variant: cctv, surveillance, security camera, monitoring.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const CctvIcon = /* @__PURE__ */ createIcon('cctv', [
   ['path', { d: 'm8.458 3.969 9.397 3.42-1.916 5.262-9.397-3.42Z' }],

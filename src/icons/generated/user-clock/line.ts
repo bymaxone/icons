@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `user-clock` icon, line variant: user clock, waiting account, late member, awaiting approval.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const UserClockIcon = /* @__PURE__ */ createIcon('user-clock', [
   ['path', { d: 'M8.5 6.75a3.5 3.5 0 1 0 7 0 3.5 3.5 0 0 0-7 0' }],

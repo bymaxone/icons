@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `yoga` icon, line variant: yoga, pose, stretch, wellness.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const YogaIcon = /* @__PURE__ */ createIcon('yoga', [
   ['circle', { cx: 12.25, cy: 4.75, r: 1.75 }],

@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `warehouse` icon, line variant: warehouse, storage, stock, logistics.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const WarehouseIcon = /* @__PURE__ */ createIcon('warehouse', [
   ['path', { d: 'M3.25 21.25v-13l9-4 9 4v13' }],

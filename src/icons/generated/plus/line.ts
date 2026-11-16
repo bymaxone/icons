@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `plus` icon, line variant: add, new, create, more.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const PlusIcon = /* @__PURE__ */ createIcon('plus', [
   ['line', { x1: 12.25, x2: 12.25, y1: 5.75, y2: 18.75 }],

@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `moon-stars` icon, line variant: moon stars, night, sleep, sky.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const MoonStarsIcon = /* @__PURE__ */ createIcon('moon-stars', [
   ['path', { d: 'M17.988 14.699a7.75 7.75 0 1 1-8.187-8.187 5.75 5.75 0 1 0 8.187 8.187' }],

@@ -8,7 +8,9 @@
  */
 
 import {
+  categoryCounts,
   highlight,
+  listedCategories,
   mergeState,
   nearCategories,
   readState,
@@ -144,13 +146,27 @@ function showActive() {
   document.getElementById('active').textContent = names.join(', ')
 }
 
+/** Lists only the given categories, in the navigation and in the jump list. */
+function listCategories(names) {
+  document.querySelector('.cats')?.toggleAttribute('hidden', names.size === 0)
+  for (const item of document.querySelectorAll('.cats li')) {
+    const name = item.querySelector('[data-cat]')?.dataset.cat
+    item.toggleAttribute('data-zero', !names.has(name))
+  }
+  for (const option of document.querySelectorAll('#jump option[value]:not([value=""])')) {
+    option.hidden = !names.has(option.value)
+  }
+}
+
 /** Shows the cells the search and the facets keep, ranked, and counts them by section. */
 function filter() {
   if (!finder.docs) return
   const { state } = finder
   const ranked = search(finder.docs, state.q, state)
   const rank = new Map(ranked.map((hit, index) => [hit.name, index]))
+  const counted = categoryCounts(finder.docs, state.q, state)
   const shown = { icon: new Set(), brand: new Set(), flag: new Set() }
+  const available = new Map()
   for (const section of document.querySelectorAll('.group')) {
     const picked = state.categories.length === 0 || state.categories.includes(section.dataset.cat)
     let count = 0
@@ -166,17 +182,20 @@ function filter() {
       }
     }
     section.hidden = count === 0
-    section.querySelector('[data-count]').textContent = String(count)
+    available.set(section.dataset.cat, counted.get(section.dataset.cat) ?? 0)
+    section.querySelector('[data-count]').textContent = count.toLocaleString('en-US')
     const nav = document.querySelector(`[data-count-nav="${section.dataset.cat}"]`)
     if (nav) {
-      nav.textContent = String(count)
-      nav.parentElement.toggleAttribute('data-zero', count === 0)
+      nav.textContent = count.toLocaleString('en-US')
     }
   }
-  document.getElementById('shown-icons').textContent = String(shown.icon.size)
-  document.getElementById('shown-brands').textContent = String(shown.brand.size)
+  // The counts come from a search that leaves the category facet out, so ticking one category
+  // keeps the others listed.
+  listCategories(new Set(listedCategories(available, state.categories)))
+  document.getElementById('shown-icons').textContent = shown.icon.size.toLocaleString('en-US')
+  document.getElementById('shown-brands').textContent = shown.brand.size.toLocaleString('en-US')
   const shownFlags = document.getElementById('shown-flags')
-  if (shownFlags) shownFlags.textContent = String(shown.flag.size)
+  if (shownFlags) shownFlags.textContent = shown.flag.size.toLocaleString('en-US')
   showEmpty(
     document.querySelector('.empty'),
     shown.icon.size + shown.brand.size + shown.flag.size === 0

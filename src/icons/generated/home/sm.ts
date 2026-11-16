@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `home` icon, sm variant: house, start, main page, dashboard home.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const HomeSmIcon = /* @__PURE__ */ createIcon(
   'home-sm',

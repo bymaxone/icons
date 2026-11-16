@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `swan` icon, line variant: swan, elegant, lake, white bird.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const SwanIcon = /* @__PURE__ */ createIcon('swan', [
   [

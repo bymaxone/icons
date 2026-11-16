@@ -6,7 +6,7 @@
   "useCases": ["Completes a checklist", "Marks a task as done"],
   "variants": ["line"],
   "opticalSizes": [24],
-  "since": "0.1.0",
+  "since": "1.0.0",
   "aliases": [
     {
       "name": "task",

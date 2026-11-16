@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `stamp` icon, line variant: stamp, approved, official, mark.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const StampIcon = /* @__PURE__ */ createIcon('stamp', [
   [

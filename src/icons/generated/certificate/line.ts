@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `certificate` icon, line variant: certificate, diploma, award, credential.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const CertificateIcon = /* @__PURE__ */ createIcon('certificate', [
   [

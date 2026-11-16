@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `fire-hydrant` icon, line variant: fire hydrant, water supply, emergency, street.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const FireHydrantIcon = /* @__PURE__ */ createIcon('fire-hydrant', [
   ['path', { d: 'M8.25 20.25v-11a4 4 0 0 1 8 0v11' }],

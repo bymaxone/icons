@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `character` icon, filled variant: persona, cast, avatar, generated person.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const CharacterFilledIcon = /* @__PURE__ */ createIcon(
   'character-filled',

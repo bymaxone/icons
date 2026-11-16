@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `merge` icon, line variant: merge, git, join, combine.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const MergeIcon = /* @__PURE__ */ createIcon('merge', [
   ['circle', { cx: 6.75, cy: 5.25, r: 1.75 }],

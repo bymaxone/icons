@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `network-off` icon, line variant: network off, detached nodes, broken topology, service outage.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const NetworkOffIcon = /* @__PURE__ */ createIcon('network-off', [
   [

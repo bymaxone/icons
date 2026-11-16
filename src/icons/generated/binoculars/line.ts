@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `binoculars` icon, line variant: binoculars, explore, look ahead, watch.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const BinocularsIcon = /* @__PURE__ */ createIcon('binoculars', [
   ['circle', { cx: 6.75, cy: 16.75, r: 3.25 }],

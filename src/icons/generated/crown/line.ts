@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `crown` icon, line variant: owner, premium, admin, king.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const CrownIcon = /* @__PURE__ */ createIcon('crown', [
   [

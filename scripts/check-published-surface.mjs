@@ -443,10 +443,42 @@ function checkChangelog() {
 }
 
 // ---------------------------------------------------------------------------
+// 4. The counts in the README's status line are the package's own.
+// ---------------------------------------------------------------------------
+
+/** The README's status line against `dist/metadata.json`, so a count cannot go stale silently. */
+function checkCounts() {
+  const line = README.replace(/^>/gm, '')
+    .replace(/\s+/g, ' ')
+    .match(
+      /holds ([\d,]+) line icons, ([\d,]+) filled variants, ([\d,]+) hand-tuned 16 px masters, ([\d,]+) brand marks and ([\d,]+) country flags/
+    )
+  if (!line) return fail('readme counts', 'the status line no longer states the five counts')
+  const meta = JSON.parse(readFileSync(join(ROOT, 'dist', 'metadata.json'), 'utf8'))
+  const icons = Object.values(meta.icons)
+  const actual = [
+    icons.length,
+    icons.filter((icon) => icon.variants.includes('filled')).length,
+    icons.filter((icon) => icon.variants.includes('sm')).length,
+    Object.keys(meta.brands).length,
+    Object.keys(meta.flags).length
+  ]
+  const named = ['line icons', 'filled variants', '16 px masters', 'brand marks', 'country flags']
+  named.forEach((name, i) => {
+    const stated = Number(line[i + 1].replaceAll(',', ''))
+    if (stated !== actual[i]) {
+      fail('readme counts', `the README states ${stated} ${name}, the package has ${actual[i]}`)
+    }
+  })
+  console.log(`  readme counts: ${actual.map((n) => n.toLocaleString('en-US')).join(' / ')}`)
+}
+
+// ---------------------------------------------------------------------------
 
 console.log(`Published-surface gate — ${PKG.name}@${PKG.version}`)
 await checkLinks()
 checkChangelog()
+checkCounts()
 checkSnippets(fail)
 
 if (failures.length > 0) {

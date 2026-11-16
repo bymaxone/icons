@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `lightbulb-off` icon, line variant: lightbulb off, dark, no idea, disabled.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const LightbulbOffIcon = /* @__PURE__ */ createIcon('lightbulb-off', [
   [

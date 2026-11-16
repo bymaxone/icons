@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `message-heart` icon, line variant: message heart, reaction, kind words, love.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const MessageHeartIcon = /* @__PURE__ */ createIcon('message-heart', [
   [

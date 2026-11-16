@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `storyboard` icon, line variant: panels, frames, sequence, plan.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const StoryboardIcon = /* @__PURE__ */ createIcon('storyboard', [
   [

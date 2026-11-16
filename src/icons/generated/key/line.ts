@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `key` icon, line variant: key, password, access, credential.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const KeyIcon = /* @__PURE__ */ createIcon('key', [
   ['circle', { cx: 8.25, cy: 15.75, r: 4.25 }],

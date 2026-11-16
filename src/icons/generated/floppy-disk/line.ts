@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `floppy-disk` icon, line variant: save, disk, store, persist.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const FloppyDiskIcon = /* @__PURE__ */ createIcon('floppy-disk', [
   [

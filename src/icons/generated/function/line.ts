@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `function` icon, line variant: function, formula, math, fx.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const FunctionIcon = /* @__PURE__ */ createIcon('function', [
   ['path', { d: 'M15.75 4.25q-3.75-.75-4.5 3l-2 10q-.75 3.75-4.5 3' }],

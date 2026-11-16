@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `chess-pawn` icon, line variant: chess pawn, pawn, chess, piece.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const ChessPawnIcon = /* @__PURE__ */ createIcon('chess-pawn', [
   ['circle', { cx: 12.25, cy: 6.25, r: 2.5 }],

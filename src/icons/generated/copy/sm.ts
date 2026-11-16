@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `copy` icon, sm variant: clipboard, copy to clipboard, cards.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const CopySmIcon = /* @__PURE__ */ createIcon(
   'copy-sm',

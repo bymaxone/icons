@@ -53,7 +53,7 @@ export interface CatalogCategory {
   readonly title: string
 }
 
-/** The catalog: every entry in name order, icons first, then brands and flags, and the categories to filter by. */
+/** The catalog: every icon and brand in name order, then the flags in the order of their English names, and the categories to filter by. */
 export interface Catalog {
   readonly entries: readonly CatalogEntry[]
   readonly categories: readonly CatalogCategory[]
@@ -85,11 +85,13 @@ export function escapeHtml(text: string): string {
  * Builds the catalog entries of the flags.
  *
  * @param flags - The `flags` table of `dist/metadata.json`.
- * @returns One entry per flag in name order, filed under the flags category.
+ * @returns One entry per flag in the alphabetical order of its English name, filed under the flags
+ *   category.
  */
 function flagEntries(flags: BuiltMetadata['flags']): CatalogEntry[] {
+  const english = new Intl.Collator('en')
   return Object.entries(flags)
-    .sort(([a], [b]) => a.localeCompare(b))
+    .sort(([, a], [, b]) => english.compare(a.title, b.title))
     .map(([name, flag]): CatalogEntry => ({
       name,
       kind: 'flag',
@@ -109,7 +111,7 @@ function flagEntries(flags: BuiltMetadata['flags']): CatalogEntry[] {
  *
  * @param metadata - The content of `dist/metadata.json`.
  * @returns Every icon in name order with its drawn variants, then every brand mark and every
- *   flag, and the categories followed by the brands and the flags categories.
+ *   flag by its English name, and the categories followed by the brands and the flags categories.
  */
 export function catalogFrom(metadata: BuiltMetadata): Catalog {
   const icons = Object.entries(metadata.icons)

@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `playing-cards` icon, line variant: cards, deck, game, poker.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const PlayingCardsIcon = /* @__PURE__ */ createIcon('playing-cards', [
   ['path', { d: 'm2.75 7.25 3.918-1.399M6.497 18.96 2.75 7.25' }],

@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `scale` icon, line variant: scale, balance, justice, compare.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const ScaleIcon = /* @__PURE__ */ createIcon('scale', [
   ['path', { d: 'M12.25 4.25v16' }],

@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `tools` icon, line variant: tools, wrench, screwdriver, settings.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const ToolsIcon = /* @__PURE__ */ createIcon('tools', [
   [

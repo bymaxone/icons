@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `copyleft` icon, line variant: copyleft, license, open, legal.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const CopyleftIcon = /* @__PURE__ */ createIcon('copyleft', [
   ['circle', { cx: 12.25, cy: 12.25, r: 8.5 }],

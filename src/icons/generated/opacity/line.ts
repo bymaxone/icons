@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `opacity` icon, line variant: opacity, transparency, alpha, fade.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const OpacityIcon = /* @__PURE__ */ createIcon('opacity', [
   [

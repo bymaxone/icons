@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `copy` icon, line variant: clipboard, copy to clipboard, cards.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const CopyIcon = /* @__PURE__ */ createIcon('copy', [
   [

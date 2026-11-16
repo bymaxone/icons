@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `thermometer-hot` icon, line variant: thermometer hot, high temperature, fever, heat.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const ThermometerHotIcon = /* @__PURE__ */ createIcon('thermometer-hot', [
   ['path', { d: 'M8.25 13.25v-8.5a2 2 0 0 1 4 0v8.5a4.5 4.5 0 1 1-4 0' }],

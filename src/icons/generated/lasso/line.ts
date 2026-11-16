@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `lasso` icon, line variant: lasso, free select, selection, loop.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const LassoIcon = /* @__PURE__ */ createIcon('lasso', [
   ['ellipse', { cx: 11.25, cy: 8.25, rx: 7, ry: 4.5 }],

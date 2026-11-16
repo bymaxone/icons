@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `deer` icon, line variant: deer, antlers, forest, wildlife.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const DeerIcon = /* @__PURE__ */ createIcon('deer', [
   ['path', { d: 'M9.75 11.25h5l-.75 6.5c-.25 1.75-1 2.75-1.75 2.75s-1.5-1-1.75-2.75z' }],

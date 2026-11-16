@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `candle` icon, line variant: candle, flame, light, memorial.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const CandleIcon = /* @__PURE__ */ createIcon('candle', [
   [

@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `bird` icon, line variant: bird, wings, animal, fly.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const BirdIcon = /* @__PURE__ */ createIcon('bird', [
   [

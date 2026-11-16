@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `git-pull-request-closed` icon, line variant: pull request closed, rejected, git, review.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const GitPullRequestClosedIcon = /* @__PURE__ */ createIcon('git-pull-request-closed', [
   ['circle', { cx: 6.75, cy: 5.25, r: 1.75 }],

@@ -6,5 +6,5 @@
   "useCases": ["Shows a change that is not ready for review", "Marks a work in progress proposal"],
   "variants": ["line"],
   "opticalSizes": [24],
-  "since": "0.1.0"
+  "since": "1.0.0"
 }

@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `medical-chart` icon, line variant: medical chart, patient record, clipboard, charting.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const MedicalChartIcon = /* @__PURE__ */ createIcon('medical-chart', [
   [

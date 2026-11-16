@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `replace` icon, line variant: replace, swap text, substitute, find and replace.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const ReplaceIcon = /* @__PURE__ */ createIcon('replace', [
   [

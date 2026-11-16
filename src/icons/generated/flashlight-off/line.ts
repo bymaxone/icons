@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `flashlight-off` icon, line variant: flashlight off, torch, dark, disabled.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const FlashlightOffIcon = /* @__PURE__ */ createIcon('flashlight-off', [
   ['path', { d: 'M7.51 3.25h9.74v2.5l-2 3.5h-1.749' }],

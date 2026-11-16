@@ -6,5 +6,5 @@
   "useCases": ["Attaches a new link to an item", "Connects two records"],
   "variants": ["line"],
   "opticalSizes": [24],
-  "since": "0.1.0"
+  "since": "1.0.0"
 }

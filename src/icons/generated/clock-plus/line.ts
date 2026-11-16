@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `clock-plus` icon, line variant: clock plus, extend, add time, delay.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const ClockPlusIcon = /* @__PURE__ */ createIcon('clock-plus', [
   [

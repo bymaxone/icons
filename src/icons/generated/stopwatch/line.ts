@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `stopwatch` icon, line variant: stopwatch, timer, duration, measure.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const StopwatchIcon = /* @__PURE__ */ createIcon('stopwatch', [
   [

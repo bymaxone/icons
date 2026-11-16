@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `resolution` icon, line variant: size, quality, pixels, scale.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const ResolutionIcon = /* @__PURE__ */ createIcon('resolution', [
   [

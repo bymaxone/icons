@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `version` icon, line variant: versions, revision, stack, snapshot.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const VersionIcon = /* @__PURE__ */ createIcon('version', [
   [

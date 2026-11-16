@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `playlist-plus` icon, line variant: playlist plus, queue song, new track, extend list.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const PlaylistPlusIcon = /* @__PURE__ */ createIcon('playlist-plus', [
   ['path', { d: 'M3.75 6.25h10m-10 5h10m-10 5h6' }],

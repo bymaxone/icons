@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `file-minus` icon, line variant: file, remove, minus, delete file.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const FileMinusIcon = /* @__PURE__ */ createIcon('file-minus', [
   [

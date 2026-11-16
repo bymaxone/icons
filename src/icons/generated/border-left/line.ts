@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `border-left` icon, line variant: border, left, table, cell.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const BorderLeftIcon = /* @__PURE__ */ createIcon('border-left', [
   ['path', { d: 'M4.75 4.75v15' }],

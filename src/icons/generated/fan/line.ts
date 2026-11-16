@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `fan` icon, line variant: fan, cooling, air, ventilation.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const FanIcon = /* @__PURE__ */ createIcon('fan', [
   ['circle', { cx: 12.25, cy: 12.25, r: 2.25 }],

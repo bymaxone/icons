@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `eye` icon, line variant: visible, show, view, preview.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const EyeIcon = /* @__PURE__ */ createIcon('eye', [
   ['path', { d: 'M5.011 10.299a8.245 8.245 0 0 1 14.478 0' }],

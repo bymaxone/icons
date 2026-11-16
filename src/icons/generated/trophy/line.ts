@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `trophy` icon, line variant: trophy, winner, prize, cup.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const TrophyIcon = /* @__PURE__ */ createIcon('trophy', [
   ['path', { d: 'M7.75 4.25h9v5a4.5 4.5 0 0 1-9 0z' }],

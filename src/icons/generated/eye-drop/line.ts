@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `eye-drop` icon, line variant: eye drop, dropper, eyecare, lubricant.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const EyeDropIcon = /* @__PURE__ */ createIcon('eye-drop', [
   ['path', { d: 'M10.25 3.25h4v3h-4z' }],

@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `moon` icon, filled variant: dark mode, night, theme, crescent.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const MoonFilledIcon = /* @__PURE__ */ createIcon(
   'moon-filled',

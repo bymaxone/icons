@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `shower` icon, line variant: shower, bath, water, bathroom.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const ShowerIcon = /* @__PURE__ */ createIcon('shower', [
   ['path', { d: 'M5.25 21.25v-14q0-3 3-3c3 0 3 1 3 3v1.5' }],

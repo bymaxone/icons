@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `image-check` icon, line variant: image check, photo approved, verified, accepted.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const ImageCheckIcon = /* @__PURE__ */ createIcon('image-check', [
   [

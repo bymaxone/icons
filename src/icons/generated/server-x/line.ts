@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `server-x` icon, line variant: server x, outage, offline, failure.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const ServerXIcon = /* @__PURE__ */ createIcon('server-x', [
   [

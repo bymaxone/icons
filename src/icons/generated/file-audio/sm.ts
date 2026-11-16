@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `file-audio` icon, sm variant: audio file, sound file, music file, media.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const FileAudioSmIcon = /* @__PURE__ */ createIcon(
   'file-audio-sm',

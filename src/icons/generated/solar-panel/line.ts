@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `solar-panel` icon, line variant: solar panel, energy, renewable, sun.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const SolarPanelIcon = /* @__PURE__ */ createIcon('solar-panel', [
   ['path', { d: 'M5.75 4.75h13l1.75 9H4z' }],

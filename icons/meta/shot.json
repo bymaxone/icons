@@ -6,5 +6,5 @@
   "useCases": ["Marks a single shot of a scene", "Opens the framing of a shot"],
   "variants": ["line"],
   "opticalSizes": [24],
-  "since": "0.1.0"
+  "since": "1.0.0"
 }

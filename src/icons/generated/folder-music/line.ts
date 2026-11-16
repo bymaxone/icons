@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `folder-music` icon, line variant: folder music, songs, audio library, playlist.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const FolderMusicIcon = /* @__PURE__ */ createIcon('folder-music', [
   [

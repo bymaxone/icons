@@ -6,5 +6,5 @@
   "useCases": ["Points up and to the left", "Moves an item toward the top left"],
   "variants": ["line"],
   "opticalSizes": [24],
-  "since": "0.1.0"
+  "since": "1.0.0"
 }

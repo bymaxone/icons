@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `basketball-hoop` icon, line variant: basketball hoop, backboard, net, court.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const BasketballHoopIcon = /* @__PURE__ */ createIcon('basketball-hoop', [
   [

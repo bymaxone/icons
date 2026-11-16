@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `chevrons-right` icon, line variant: chevrons right, double chevron, last, forward.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const ChevronsRightIcon = /* @__PURE__ */ createIcon('chevrons-right', [
   ['path', { d: 'm5.75 6.25 6 6-6 6m6.5-12 6 6-6 6' }]

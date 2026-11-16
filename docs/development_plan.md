@@ -1,8 +1,8 @@
 # Development Plan: @bymax-one/icons
 
 > **Version:** 1.0.0
-> **Last updated:** 2026-11-11
-> **Status:** Approved spec, execution under way (P1, P2, B0, P3, B1, B2, B3, B4 and P4 done; P5 next; P0 awaits its GitHub settings)
+> **Last updated:** 2026-11-14
+> **Status:** Approved spec, execution under way (the phase table holds the state of each phase; P5 is prepared for the first publish and P0 awaits its GitHub settings)
 > **Source spec:** [`technical_specification.md`](./technical_specification.md)
 > **Derived documents:** per-phase task files under `docs/tasks/` (one file per phase, scaffolded one phase at a time)
 
@@ -23,12 +23,12 @@
 
 ## 1. Progress Dashboard
 
-> **Overall progress: 10 / 14 phases (71%)**
-> **Active phase:** B5 (general icons), before the release of P5; P0 still has
-> the GitHub settings of task 0.6
+> **Overall progress: 14 / 18 phases (78%)**
+> **Active phase:** P5 (hardening-release), up to the first publish, which the founder makes
+> by hand; P0 still has the GitHub settings of task 0.6
 > **Blocked phases:** none
 >
-> Engineering phases are `P0` to `P6`; drawing batches are `B0` to `B4`. Every drawing batch
+> Engineering phases are `P0` to `P6`; drawing batches are the `B` rows of the phase table. Every drawing batch
 > closes on a founder-approval gate (section 4, rule 11), so a batch is ✅ only after that
 > approval is recorded.
 
@@ -51,8 +51,8 @@
 | B5   | general-icons                     | ✅     | 100%     | L    | 2026-11-11   |
 | B6   | icon-expansion                    | ✅     | 100%     | XL   | 2026-11-14   |
 | B7   | brand-marks                       | ✅     | 100%     | L    | 2026-11-14   |
-| B8   | country-flags                     | 📋     | 0%       | L    | 2026-11-12   |
-| P5   | hardening-release                 | 🔄     | 25%      | M    | 2026-11-11   |
+| B8   | country-flags                     | ✅     | 100%     | L    | 2026-11-14   |
+| P5   | hardening-release                 | 🔄     | 90%      | M    | 2026-11-14   |
 | P6   | react-native                      | 📋     | 0%       | M    | 2026-11-08   |
 
 ---
@@ -74,8 +74,8 @@ design-language gate: nothing else is drawn until the founder approves it. The v
 (P3) then makes contact sheets, visual regression and the similarity check routine for the
 batches that follow. B2 fixes the list of 16 px masters that B4 draws. The catalog (P4) is
 built on the complete set, and P5 hardens and publishes `1.0.0`. P6 adds the React Native
-components after the release; it needs the complete set of B4 and the published package of
-P5 (decision D6).
+components as a minor release after `1.0.0`; it needs the complete set of B4 and does not
+wait for the publish of P5 (decision D6).
 
 ---
 
@@ -458,9 +458,9 @@ These rules apply to every phase. Phase sections only add rules specific to them
 
 ### B8: country-flags
 
-- **Goal:** A `./flags` subpath with the 250 country flags (the 249 assigned ISO 3166-1 codes and the European Union) in 3:2 and in colour, from `country-flag-icons` (MIT), with its attribution and a provenance note per flag.
+- **Goal:** A `./flags` subpath with the country flags (the assigned ISO 3166-1 codes and the European Union) in 3:2 and in colour, from `country-flag-icons` (MIT), with its attribution and a provenance note per flag.
 - **Rules:** flags are official geometry, like brand marks; they have a lint profile of their own (spec section 5.1: several solid fills; no gradient, transform, mask, filter, `use` or `id`). The set, the names, the API and the profile were decided with the auditor on 2026-11-14 and are in spec section 5.1; the similarity and 16 px checks do not read flags.
-- **Pull requests:** the spec (section 5.1), the runtime (`createFlag`), the profile, the schema and the gates, then the import in batches, then the catalogue section. The rules that README and `CLAUDE.md` state ('no coloured icons', 'no third-party drawings') change with the runtime pull request, when flags exist.
+- **B8 ✅ (2026-11-14):** The country flags in `icons/flags`, served from `./flags`, `./flags/<name>` and `./svg/flags`, with the README and `CLAUDE.md` rules ('no coloured icons', 'no third-party drawings') stating the flag exception.
 - **Size:** L
 
 ### P5: hardening-release
@@ -509,7 +509,8 @@ These rules apply to every phase. Phase sections only add rules specific to them
     on iOS and Android; how it was verified is recorded in the phase's task file.
   - The size and attw gates cover `./native`.
   - The README gains a React Native section.
-- **Context / preconditions:** P5 done (1.0.0 published) and B4 done (the complete set).
+- **Context / preconditions:** B4 done (the complete set). P6 does not wait for the publish of
+  `1.0.0`; it ships as `1.1.0`, a minor release.
 - **Rules-of-phase:** the native components are generated from the same sources as the web
   ones; no drawing is maintained twice.
 - **References:** spec §1.3, §10, §16, §17 (D6).

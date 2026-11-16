@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `square-arrow-up-right` icon, line variant: external link, open, new window, outside.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const SquareArrowUpRightIcon = /* @__PURE__ */ createIcon('square-arrow-up-right', [
   [

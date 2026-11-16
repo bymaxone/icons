@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `disc` icon, line variant: disc, cd, album, record.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const DiscIcon = /* @__PURE__ */ createIcon('disc', [
   ['circle', { cx: 12.25, cy: 12.25, r: 8.5 }],

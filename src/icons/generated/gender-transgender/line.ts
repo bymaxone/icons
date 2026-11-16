@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `gender-transgender` icon, line variant: gender transgender, symbol, identity, gender.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const GenderTransgenderIcon = /* @__PURE__ */ createIcon('gender-transgender', [
   ['circle', { cx: 12.25, cy: 13.75, r: 4.5 }],

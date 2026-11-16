@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `mask` icon, line variant: clip, matte, stencil, reveal.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const MaskIcon = /* @__PURE__ */ createIcon('mask', [
   [

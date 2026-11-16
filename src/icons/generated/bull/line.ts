@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `bull` icon, line variant: bull, horns, ring, cattle.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const BullIcon = /* @__PURE__ */ createIcon('bull', [
   ['path', { d: 'M18.25 13.25a6 6 0 1 1-12 0 6 6 0 0 1 12 0' }],

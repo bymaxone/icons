@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `swimming` icon, line variant: swimming, swimmer, pool, water sport.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const SwimmingIcon = /* @__PURE__ */ createIcon('swimming', [
   ['circle', { cx: 16.75, cy: 6.75, r: 1.75 }],

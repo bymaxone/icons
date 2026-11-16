@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `rainbow` icon, line variant: rainbow, colors, after rain, pride.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const RainbowIcon = /* @__PURE__ */ createIcon('rainbow', [
   ['path', { d: 'M3.25 18.25a9 9 0 0 1 15.197-6.526' }],

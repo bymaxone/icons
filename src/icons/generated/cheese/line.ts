@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `cheese` icon, line variant: cheese, dairy, food, snack.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const CheeseIcon = /* @__PURE__ */ createIcon('cheese', [
   [

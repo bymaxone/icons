@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `protractor` icon, line variant: protractor, angle, geometry, degrees.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const ProtractorIcon = /* @__PURE__ */ createIcon('protractor', [
   ['path', { d: 'M3.25 17.25a9 9 0 0 1 18 0z' }],

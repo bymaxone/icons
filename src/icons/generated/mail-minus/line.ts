@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `mail-minus` icon, line variant: mail minus, delete message, discard email, unsubscribe.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const MailMinusIcon = /* @__PURE__ */ createIcon('mail-minus', [
   [

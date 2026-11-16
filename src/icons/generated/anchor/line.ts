@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `anchor` icon, line variant: anchor, harbor, ship, link anchor.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const AnchorIcon = /* @__PURE__ */ createIcon('anchor', [
   ['circle', { cx: 12.25, cy: 5.25, r: 1.75 }],

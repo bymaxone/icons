@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `fish` icon, line variant: fish, sea, seafood, aquarium.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const FishIcon = /* @__PURE__ */ createIcon('fish', [
   [

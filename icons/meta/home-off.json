@@ -6,5 +6,5 @@
   "useCases": ["Marks a house as vacant", "Shows a household that is switched off"],
   "variants": ["line"],
   "opticalSizes": [24],
-  "since": "0.1.0"
+  "since": "1.0.0"
 }

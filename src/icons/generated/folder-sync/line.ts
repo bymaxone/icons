@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `folder-sync` icon, line variant: folder sync, sync folder, backup, mirror.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const FolderSyncIcon = /* @__PURE__ */ createIcon('folder-sync', [
   [

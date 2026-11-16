@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `database-x` icon, line variant: database x, query failed, data error, failed.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const DatabaseXIcon = /* @__PURE__ */ createIcon('database-x', [
   [

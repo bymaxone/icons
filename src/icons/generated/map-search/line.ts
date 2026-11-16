@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `map-search` icon, line variant: map search, find place, look up, location.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const MapSearchIcon = /* @__PURE__ */ createIcon('map-search', [
   ['path', { d: 'm4.25 6.75 5-2.25 6 2.25 5-2.25v8.766m-7.213 5.154L9.25 17l-5 2.25V6.75' }],

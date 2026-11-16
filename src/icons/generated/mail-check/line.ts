@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `mail-check` icon, line variant: mail check, delivered, verified email, confirmed.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const MailCheckIcon = /* @__PURE__ */ createIcon('mail-check', [
   [

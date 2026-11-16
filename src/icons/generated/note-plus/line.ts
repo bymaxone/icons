@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `note-plus` icon, line variant: note plus, new memo, jot down, extra comment.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const NotePlusIcon = /* @__PURE__ */ createIcon('note-plus', [
   [

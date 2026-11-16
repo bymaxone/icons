@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `inbox` icon, line variant: inbox, tray, messages, incoming.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const InboxIcon = /* @__PURE__ */ createIcon('inbox', [
   ['path', { d: 'M3.75 13.25h4.5l1.5 2.5h5l1.5-2.5h4.5' }],

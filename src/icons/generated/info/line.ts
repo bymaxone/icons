@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `info` icon, line variant: information, details, about, help.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const InfoIcon = /* @__PURE__ */ createIcon('info', [
   ['circle', { cx: 12.25, cy: 12.25, r: 8.5 }],

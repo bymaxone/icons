@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `star` icon, line variant: star, favorite, rate, highlight.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const StarIcon = /* @__PURE__ */ createIcon('star', [
   [

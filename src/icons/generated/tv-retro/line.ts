@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `tv-retro` icon, line variant: retro tv, old television, crt screen, vintage set.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const TvRetroIcon = /* @__PURE__ */ createIcon('tv-retro', [
   [

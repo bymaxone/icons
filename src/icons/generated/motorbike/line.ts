@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `motorbike` icon, line variant: motorbike, motorcycle, ride, delivery.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const MotorbikeIcon = /* @__PURE__ */ createIcon('motorbike', [
   ['circle', { cx: 5.75, cy: 17.5, r: 2.75 }],

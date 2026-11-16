@@ -150,6 +150,9 @@ function toggles(name, setting, options, current) {
   return `<div class="seg" role="group" aria-label="${name}">${buttons}</div>`
 }
 
+/** A count as the reader writes it, with its thousands separator: 1,298. */
+const n = (value) => value.toLocaleString('en-US')
+
 /** The introduction: the claim, the install command and the counts. */
 function intro(icons, brands, flags, render) {
   const count = (variant) =>
@@ -157,16 +160,16 @@ function intro(icons, brands, flags, render) {
   return `<div class="hero-text">
     <p class="eyebrow">An original icon set for React and the web</p>
     <h1>One grid.<br>One stroke.<br>Every part apart.</h1>
-    <p class="lede">${icons.length} icons${flags > 0 ? `, ${brands} brand marks and ${flags} country flags` : ` and ${brands} brand marks`}, drawn on a 24 px grid with a 1.5 px stroke and a cut that keeps every part clear of the next. With filled variants, hand-tuned 16 px masters, React components that render in Server Components, raw SVG, a sprite and typed metadata.</p>
+    <p class="lede">${n(icons.length)} icons${flags > 0 ? `, ${n(brands)} brand marks and ${n(flags)} country flags` : ` and ${n(brands)} brand marks`}, drawn on a 24 px grid with a 1.5 px stroke and a cut that keeps every part clear of the next. With filled variants, hand-tuned 16 px masters, React components that render in Server Components, raw SVG, a sprite and typed metadata.</p>
     <div class="install"><code>pnpm add @bymax-one/icons</code><button type="button" class="copy" data-copy-text="pnpm add @bymax-one/icons" aria-label="Copy the install command">${render('CopyIcon')}</button></div>
     <dl class="facts">
-      <div><dt>${icons.length}</dt><dd>icons</dd></div>
-      <div><dt>${count('filled')}</dt><dd>filled variants</dd></div>
-      <div><dt>${count('sm')}</dt><dd>16 px masters</dd></div>
-      <div><dt>${brands}</dt><dd>brand marks</dd></div>${
+      <div><dt>${n(icons.length)}</dt><dd>icons</dd></div>
+      <div><dt>${n(count('filled'))}</dt><dd>filled variants</dd></div>
+      <div><dt>${n(count('sm'))}</dt><dd>16 px masters</dd></div>
+      <div><dt>${n(brands)}</dt><dd>brand marks</dd></div>${
         flags > 0
           ? `
-      <div><dt>${flags}</dt><dd>country flags</dd></div>`
+      <div><dt>${n(flags)}</dt><dd>country flags</dd></div>`
           : ''
       }
     </dl>
@@ -244,7 +247,7 @@ function categoryNav(catalog, render) {
   const items = catalog.categories
     .map((category) => {
       const count = membersOf(catalog, category).length
-      return `<li><input type="checkbox" id="pick-${e(category.name)}" data-cat="${e(category.name)}" aria-label="Show only ${e(category.title)}"><a href="#cat-${e(category.name)}" data-nav="${e(category.name)}">${e(category.title)}</a><span class="num" data-count-nav="${e(category.name)}">${count}</span></li>`
+      return `<li><input type="checkbox" id="pick-${e(category.name)}" data-cat="${e(category.name)}" aria-label="Show only ${e(category.title)}"><a href="#cat-${e(category.name)}" data-nav="${e(category.name)}">${e(category.title)}</a><span class="num" data-count-nav="${e(category.name)}">${n(count)}</span></li>`
     })
     .join('')
   const options = catalog.categories
@@ -261,7 +264,7 @@ function categoryNav(catalog, render) {
 function categorySection(catalog, category, render) {
   const members = membersOf(catalog, category)
   return `<section class="group" id="cat-${e(category.name)}" data-cat="${e(category.name)}" aria-labelledby="h-${e(category.name)}">
-    <h2 id="h-${e(category.name)}">${e(category.title)} <span class="num" data-count="${e(category.name)}">${members.length}</span></h2>
+    <h2 id="h-${e(category.name)}">${e(category.title)} <span class="num" data-count="${e(category.name)}">${n(members.length)}</span></h2>
     <ul class="grid">
 ${members.map((entry) => cell(entry, render)).join('\n')}
     </ul>
@@ -307,7 +310,7 @@ export function homePage(catalog, render, version) {
     ${categoryNav(catalog, render)}
     <div class="sections">
       <p class="active" hidden>Filtered by <span id="active"></span> <button type="button" id="clear">Clear filters</button></p>
-      <p class="count" aria-live="polite">Showing <span id="shown-icons">${icons.length}</span> of ${icons.length} icons${flags > 0 ? `, <span id="shown-brands">${brands}</span> of ${brands} brand marks and <span id="shown-flags">${flags}</span> of ${flags} flags` : ` and <span id="shown-brands">${brands}</span> of ${brands} brand marks`}</p>
+      <p class="count" aria-live="polite">Showing <span id="shown-icons">${n(icons.length)}</span> of ${n(icons.length)} icons${flags > 0 ? `, <span id="shown-brands">${n(brands)}</span> of ${n(brands)} brand marks and <span id="shown-flags">${n(flags)}</span> of ${n(flags)} flags` : ` and <span id="shown-brands">${n(brands)}</span> of ${n(brands)} brand marks`}</p>
       ${catalog.categories.map((category) => categorySection(catalog, category, render)).join('\n')}
       ${emptyState(catalog, render)}
     </div>
@@ -315,7 +318,7 @@ export function homePage(catalog, render, version) {
 </section>`
   return layout({
     title: 'Bymax Icons: an original icon set for React and the web',
-    description: `${icons.length} original icons${flags > 0 ? `, ${brands} brand marks and ${flags} country flags` : ` and ${brands} brand marks`} on one 24 px grid with a 1.5 px stroke: React components, raw SVG, a sprite and typed metadata.`,
+    description: `${n(icons.length)} original icons${flags > 0 ? `, ${n(brands)} brand marks and ${n(flags)} country flags` : ` and ${n(brands)} brand marks`} on one 24 px grid with a 1.5 px stroke: React components, raw SVG, a sprite and typed metadata.`,
     path: '',
     base: '',
     body,
@@ -365,8 +368,24 @@ function masterCard(entry, drawing, render) {
 </figure>`
 }
 
-/** The entries most like this one: shared tags first, then a shared category. */
+/** How many entries a page lists as related. */
+const RELATED = 12
+
+/**
+ * The entries most like this one: shared tags first, then a shared category. Every flag shares
+ * the flags category and nothing else, so a flag lists its neighbours in the alphabet instead,
+ * the catalog's own order of flags.
+ */
 function relatedTo(entry, catalog) {
+  if (entry.kind === 'flag') {
+    const flags = catalog.entries.filter((other) => other.kind === 'flag')
+    const at = flags.indexOf(entry)
+    const from = Math.max(0, Math.min(at - RELATED / 2, flags.length - RELATED - 1))
+    return flags
+      .slice(from, from + RELATED + 1)
+      .filter((other) => other !== entry)
+      .slice(0, RELATED)
+  }
   return catalog.entries
     .filter((other) => other !== entry)
     .map((other) => ({
@@ -377,7 +396,7 @@ function relatedTo(entry, catalog) {
     }))
     .filter(({ score }) => score > 0)
     .sort((a, b) => b.score - a.score || a.other.name.localeCompare(b.other.name))
-    .slice(0, 12)
+    .slice(0, RELATED)
     .map(({ other }) => other)
 }
 

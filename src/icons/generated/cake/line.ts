@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `cake` icon, line variant: cake, birthday, party, celebration.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const CakeIcon = /* @__PURE__ */ createIcon('cake', [
   ['path', { d: 'M5.25 21.25v-6.5c0-1.5.5-2 2-2h10c1.5 0 2 .5 2 2v6.5' }],

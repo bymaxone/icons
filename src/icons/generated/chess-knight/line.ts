@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `chess-knight` icon, line variant: chess, knight, strategy, game.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const ChessKnightIcon = /* @__PURE__ */ createIcon('chess-knight', [
   ['path', { d: 'M7.25 20.25h11' }],

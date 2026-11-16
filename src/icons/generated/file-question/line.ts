@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `file-question` icon, line variant: file question, unknown document, needs review, unidentified.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const FileQuestionIcon = /* @__PURE__ */ createIcon('file-question', [
   [

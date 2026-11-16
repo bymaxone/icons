@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `grip` icon, line variant: drag, handle, reorder, dots.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const GripIcon = /* @__PURE__ */ createIcon('grip', [
   ['circle', { cx: 9.25, cy: 5.75, r: 0.75 }],

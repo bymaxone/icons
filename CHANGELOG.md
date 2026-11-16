@@ -11,6 +11,12 @@ and deprecated, each rename with the alias that keeps the old name working.
 
 ## [Unreleased]
 
+## [1.0.0] - 2026-11-15
+
+The first published version: 1,298 line icons, 51 filled variants, 45 hand-tuned 16 px masters,
+110 brand marks and 250 country flags, as React 19 components, raw SVG, an SVG sprite and typed
+metadata.
+
 ### Changed
 
 - Five of the redrawn icons are out of 1.0 because their single redraw still did not read at 24 px in the catalogue cell: `wheelbarrow`, `garlic`, `nose`, `screen-rotation` and `crocodile`. The line set is 1,298.
@@ -81,7 +87,7 @@ and deprecated, each rename with the alias that keeps the old name working.
 - Brand marks, the third of three batches (B7): payments, operating systems and browsers, and stores, 21 marks: `android`, `apple-pay`, `appstore`, `arch-linux`, `brave`, `ebay`, `firefox`, `google-pay`, `google-play`, `ios`, `klarna`, `linux`, `macos`, `opera`, `safari`, `samsungpay`, `shopify`, `square-payments`, `steam`, `ubuntu`, `visa`. `android` is under a Creative Commons licence and is credited in `TRADEMARKS.md`. `ios`, `macos`, `visa`, `ebay`, `samsungpay`, `apple-pay` and `google-pay` are wordmarks, tagged so, meant for sizes larger than 24 px. Each carries its guidelines page and a line in `TRADEMARKS.md`, as in the first batch.
 - `createFlag`, the `Flag` base and the types of a flag drawing (`FlagProps`, `FlagNode`, `FlagComponent` and their parts) on `./runtime`, for the country flags of B8 (spec section 5.1): a flag takes the props of an icon without `color`, `strokeWidth` and `absoluteStrokeWidth`, and its `size` is the height, 16 by default, so a 3:2 flag is 24 by 16.
 - The generator, the lint and `./meta` know the country flags of B8 (spec section 5.1): a flag is `icons/flags/<name>.svg` beside `icons/meta/<name>.json` under `schemas/flag.schema.json`, formatted without rewriting its path data, linted by the `flag` profile (its own 3:2 view box, `#rrggbb` colours, the allowed shapes and paint, 8 KiB), written as `src/flags/generated/<name>.ts`, `svg/flags/<name>.svg` and a `flags` table of `metadata.json`, and published as `./flags` and `./flags/<name>`, with `FLAG_NAMES` and `FLAG_METADATA` on `./meta`. The similarity check, the 16 px check, the visual baselines and the contact sheet do not read flags.
-- The catalogue site knows the country flags: a Flags category (Bandeiras in Portuguese), a Flag type filter, a page per flag at `flags/<name>/` with its import from `@bymax-one/icons/flags`, and cells and previews drawn 3:2 with a hairline outline, so a white edge stays visible on the light page. A flag is found by its English name, its Portuguese terms and its code.
+- The catalogue site knows the country flags: a Flags category (Bandeiras in Portuguese), a Flag type filter, a page per flag at `flags/<name>/` with its import from `@bymax-one/icons/flags`, and cells and previews drawn 3:2 with a hairline outline, so a white edge stays visible on the light page. The flags are listed by the English name of the country, and a flag page lists its neighbours in that order as related. A flag is found by its English name, its Portuguese terms and its code. Counts have a thousands separator (1,298).
 - Country flags (B8): the 249 assigned ISO 3166-1 codes and the European Union, 250 flags from `country-flag-icons` 1.6.20 (MIT), on `./flags` and `./flags/<name>` as `UsFlagIcon`, `BrFlagIcon` and the rest of `<Code>FlagIcon`, named `<code>-flag` in the metadata, the raw SVG (`svg/flags/<name>.svg`) and the catalogue, with `FLAG_NAMES` and `FLAG_METADATA` on `./meta`. Each is rendered byte for byte as its source and keeps its path data; the MIT notice and the deferred codes (Kosovo, the de facto states, the reserved codes and the subdivisions) are in `TRADEMARKS.md`. A flag's `size` is its height, 16 by default. The `./flags` entry is budgeted per flag, 3.5 bytes brotli, and each flag's module at 2 KiB.
 - `style` is renamed `paint-roller`, the object the drawing shows; the drawing is unchanged and `style` stays a deprecated alias, removed in 2.0.0, whose component still renders the drawing.
 
@@ -269,3 +275,6 @@ and deprecated, each rename with the alias that keeps the old name working.
   Lucide, Tabler, Phosphor and Heroicons and flags close matches for review;
   `pnpm family-sheet` renders the whole set by category; and a pull request that changes a
   drawing gets a preview comment with its render and its nearest matches.
+
+[Unreleased]: https://github.com/bymaxone/icons/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/bymaxone/icons/releases/tag/v1.0.0

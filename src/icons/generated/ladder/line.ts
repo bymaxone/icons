@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `ladder` icon, line variant: ladder, climb, steps, height.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const LadderIcon = /* @__PURE__ */ createIcon('ladder', [
   ['path', { d: 'M7.25 3.25v18m10-18v18' }],

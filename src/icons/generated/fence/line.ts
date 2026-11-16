@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `fence` icon, line variant: fence, barrier, garden, boundary.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const FenceIcon = /* @__PURE__ */ createIcon('fence', [
   [

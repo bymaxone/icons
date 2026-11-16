@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `database-plus` icon, line variant: database plus, new database, add data, storage.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const DatabasePlusIcon = /* @__PURE__ */ createIcon('database-plus', [
   [

@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `pause-circle` icon, line variant: pause, hold, video, circle.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const PauseCircleIcon = /* @__PURE__ */ createIcon('pause-circle', [
   ['circle', { cx: 12.25, cy: 12.25, r: 8.5 }],

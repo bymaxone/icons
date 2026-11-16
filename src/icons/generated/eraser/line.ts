@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `eraser` icon, line variant: erase, remove, clean, rubber.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const EraserIcon = /* @__PURE__ */ createIcon('eraser', [
   ['path', { d: 'm14.25 3.75 6.5 6.5-9 9h-3.5l-4.5-4.5z' }],

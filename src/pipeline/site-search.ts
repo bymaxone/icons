@@ -214,6 +214,29 @@ export function search(
 }
 
 /**
+ * How many entries each category holds under the query and the type, whichever categories are
+ * ticked: a category facet narrows the grid, not the list of categories to pick from.
+ *
+ * @param docs - The index.
+ * @param query - What the reader typed.
+ * @param filters - The picked facets; its categories are not applied.
+ * @returns The count of every category that holds at least one match.
+ */
+export function categoryCounts(
+  docs: readonly SearchDoc[],
+  query: string,
+  filters: SearchFilters
+): Map<string, number> {
+  const found = new Set(search(docs, query, { ...filters, categories: [] }).map((hit) => hit.name))
+  const counts = new Map<string, number>()
+  for (const doc of docs) {
+    if (!found.has(doc.name)) continue
+    for (const category of doc.categories) counts.set(category, (counts.get(category) ?? 0) + 1)
+  }
+  return counts
+}
+
+/**
  * The words of the index closest to each word of a query that found nothing: a reader's
  * "did you mean". Words of the name, aliases, label, Portuguese terms and tags count, up to
  * one edit more than a search forgives, so a short word is not answered with a far one.
@@ -240,6 +263,24 @@ export function suggestions(docs: readonly SearchDoc[], query: string, limit = 3
   }
   scored.sort(([a, x], [b, y]) => x - y || a.localeCompare(b))
   return [...new Set(scored.map(([word]) => word))].slice(0, limit)
+}
+
+/**
+ * The categories the navigation lists, in the order given: those that hold an entry under the
+ * type and the search, and those the reader has ticked, so no category leads to an empty grid
+ * and a ticked one can always be unticked.
+ *
+ * @param counts - Each category's name with the number of entries the type and the search keep.
+ * @param ticked - The categories the reader has ticked.
+ * @returns The names of the categories to list.
+ */
+export function listedCategories(
+  counts: ReadonlyMap<string, number>,
+  ticked: readonly string[]
+): string[] {
+  return [...counts]
+    .filter(([name, count]) => count > 0 || ticked.includes(name))
+    .map(([name]) => name)
 }
 
 /**

@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `check-circle` icon, line variant: success, done, complete, approved.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const CheckCircleIcon = /* @__PURE__ */ createIcon('check-circle', [
   [

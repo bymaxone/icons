@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `circle-slash` icon, line variant: ban, blocked, forbidden, not allowed.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const CircleSlashIcon = /* @__PURE__ */ createIcon('circle-slash', [
   ['circle', { cx: 12.25, cy: 12.25, r: 8.5 }],

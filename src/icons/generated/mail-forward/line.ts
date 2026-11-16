@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `mail-forward` icon, line variant: mail forward, pass along, resend, redirect.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const MailForwardIcon = /* @__PURE__ */ createIcon('mail-forward', [
   [

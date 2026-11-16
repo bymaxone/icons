@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `battery-medium` icon, line variant: battery medium, half, charge, power.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const BatteryMediumIcon = /* @__PURE__ */ createIcon('battery-medium', [
   [

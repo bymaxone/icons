@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `robot` icon, line variant: robot, bot, assistant, automation, ai agent.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const RobotIcon = /* @__PURE__ */ createIcon('robot', [
   [

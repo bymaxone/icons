@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `grid-off` icon, line variant: grid off, hide guides, free layout, no snapping.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const GridOffIcon = /* @__PURE__ */ createIcon('grid-off', [
   ['path', { d: 'M8.25 12.51v8.74' }],

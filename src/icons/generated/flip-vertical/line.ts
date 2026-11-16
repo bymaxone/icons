@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `flip-vertical` icon, line variant: flip, mirror, vertical, reflect.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const FlipVerticalIcon = /* @__PURE__ */ createIcon('flip-vertical', [
   ['path', { d: 'm6.25 9.75 6-6.25 6 6.25z' }],

@@ -6,5 +6,5 @@
   "useCases": ["Opens a long document", "Shows a rolled sheet of text"],
   "variants": ["line"],
   "opticalSizes": [24],
-  "since": "0.1.0"
+  "since": "1.0.0"
 }

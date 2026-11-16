@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `blood-bag` icon, line variant: blood bag, donation, transfusion, plasma.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const BloodBagIcon = /* @__PURE__ */ createIcon('blood-bag', [
   ['path', { d: 'M6.25 4.25h12v10c0 3-2.5 5-6 5s-6-2-6-5z' }],

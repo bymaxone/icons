@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `x-square` icon, line variant: x, square, close, remove.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const XSquareIcon = /* @__PURE__ */ createIcon('x-square', [
   [

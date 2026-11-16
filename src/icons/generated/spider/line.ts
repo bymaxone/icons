@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `spider` icon, line variant: spider, web, arachnid, legs.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const SpiderIcon = /* @__PURE__ */ createIcon('spider', [
   ['circle', { cx: 12.25, cy: 13.25, r: 3.25 }],

@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `message` icon, filled variant: chat, comment, speech bubble, conversation.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const MessageFilledIcon = /* @__PURE__ */ createIcon(
   'message-filled',

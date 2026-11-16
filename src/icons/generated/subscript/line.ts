@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `subscript` icon, line variant: subscript, text, format, lower.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const SubscriptIcon = /* @__PURE__ */ createIcon('subscript', [
   ['path', { d: 'm4.75 6.25 8 10m0-10-8 10' }],

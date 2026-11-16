@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `home-plus` icon, line variant: home plus, add property, new house, create.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const HomePlusIcon = /* @__PURE__ */ createIcon('home-plus', [
   [

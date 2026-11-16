@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `at-sign` icon, line variant: at, mention, email, handle.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const AtSignIcon = /* @__PURE__ */ createIcon('at-sign', [
   ['circle', { cx: 12.25, cy: 12.25, r: 3.25 }],

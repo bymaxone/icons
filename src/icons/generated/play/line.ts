@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `play` icon, line variant: start, media, video, resume.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const PlayIcon = /* @__PURE__ */ createIcon('play', [
   [

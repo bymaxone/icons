@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `ear-off` icon, line variant: ear off, deaf, hearing loss, mute.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const EarOffIcon = /* @__PURE__ */ createIcon('ear-off', [
   [

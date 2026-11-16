@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `pig` icon, line variant: pig, farm, snout, pork.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const PigIcon = /* @__PURE__ */ createIcon('pig', [
   ['path', { d: 'M6.26 12.909a6 6 0 0 1 11.981.007' }],

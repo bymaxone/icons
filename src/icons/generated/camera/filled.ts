@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `camera` icon, filled variant: photo, capture, snapshot, picture.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const CameraFilledIcon = /* @__PURE__ */ createIcon(
   'camera-filled',

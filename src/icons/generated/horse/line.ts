@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `horse` icon, line variant: horse, animal, riding, stable.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const HorseIcon = /* @__PURE__ */ createIcon('horse', [
   [

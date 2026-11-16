@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `package` icon, line variant: package, box, parcel, product.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const PackageIcon = /* @__PURE__ */ createIcon('package', [
   ['path', { d: 'm12.25 2.75 8 4.25v10.25l-8 4.25-8-4.25V7z' }],

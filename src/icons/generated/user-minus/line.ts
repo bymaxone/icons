@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `user-minus` icon, line variant: user, remove, minus, member.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const UserMinusIcon = /* @__PURE__ */ createIcon('user-minus', [
   ['path', { d: 'M12.4 6.75a3.15 3.15 0 0 1-6.3 0 3.15 3.15 0 0 1 6.3 0' }],

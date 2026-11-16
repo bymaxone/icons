@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `hippo` icon, line variant: hippo, river, heavy, safari.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const HippoIcon = /* @__PURE__ */ createIcon('hippo', [
   ['path', { d: 'M6.334 12.241a6.002 6.002 0 0 1 11.833.007' }],

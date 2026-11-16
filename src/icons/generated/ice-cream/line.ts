@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `ice-cream` icon, line variant: ice cream, dessert, sweet, summer.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const IceCreamIcon = /* @__PURE__ */ createIcon('ice-cream', [
   ['path', { d: 'm7.75 11.25 4.5 10 4.5-10' }],

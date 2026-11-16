@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `forklift` icon, line variant: forklift, warehouse, pallet, logistics.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const ForkliftIcon = /* @__PURE__ */ createIcon('forklift', [
   ['circle', { cx: 6.25, cy: 18.75, r: 2.25 }],

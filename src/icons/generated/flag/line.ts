@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `flag` icon, line variant: flag, report, mark, milestone.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const FlagIcon = /* @__PURE__ */ createIcon('flag', [
   [

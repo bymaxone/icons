@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `skyscraper` icon, line variant: skyscraper, tower, high rise, downtown.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const SkyscraperIcon = /* @__PURE__ */ createIcon('skyscraper', [
   ['path', { d: 'M7.25 21.25v-15l5-3 5 3v15' }],

@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `masks` icon, line variant: masks, theater, drama, comedy.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const MasksIcon = /* @__PURE__ */ createIcon('masks', [
   [

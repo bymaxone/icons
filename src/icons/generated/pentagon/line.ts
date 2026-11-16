@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `pentagon` icon, line variant: pentagon, shape, polygon, five sides.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const PentagonIcon = /* @__PURE__ */ createIcon('pentagon', [
   [

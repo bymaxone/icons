@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `battery-warning` icon, line variant: battery warning, low power, charge, alert.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const BatteryWarningIcon = /* @__PURE__ */ createIcon('battery-warning', [
   [

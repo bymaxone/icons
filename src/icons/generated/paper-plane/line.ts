@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `paper-plane` icon, line variant: send, paper plane, submit, message.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const PaperPlaneIcon = /* @__PURE__ */ createIcon('paper-plane', [
   ['path', { d: 'm20.75 3.75-17 6.75L11 13.25l2.75 7.25z' }],

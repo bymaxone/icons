@@ -6,5 +6,5 @@
   "useCases": ["Undoes the last change", "Reverts an edit in the editor"],
   "variants": ["line"],
   "opticalSizes": [24],
-  "since": "0.1.0"
+  "since": "1.0.0"
 }

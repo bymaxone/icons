@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `timeline` icon, sm variant: tracks, clips, sequence, editor.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const TimelineSmIcon = /* @__PURE__ */ createIcon(
   'timeline-sm',

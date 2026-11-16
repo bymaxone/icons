@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `git-pull-request-draft` icon, line variant: git pull request draft, draft, review, merge.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const GitPullRequestDraftIcon = /* @__PURE__ */ createIcon('git-pull-request-draft', [
   ['circle', { cx: 6.75, cy: 5.25, r: 1.75 }],

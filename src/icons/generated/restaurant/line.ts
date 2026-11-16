@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `restaurant` icon, line variant: restaurant, dining, fork knife, meal.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const RestaurantIcon = /* @__PURE__ */ createIcon('restaurant', [
   ['path', { d: 'M6.25 3.25v5a2.5 2.5 0 0 0 5 0v-5m-2.5 0v18' }],

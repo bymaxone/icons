@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `mouse-off` icon, line variant: mouse off, no mouse, disabled, pointer.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const MouseOffIcon = /* @__PURE__ */ createIcon('mouse-off', [
   [

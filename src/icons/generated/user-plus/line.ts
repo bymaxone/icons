@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `user-plus` icon, line variant: add user, invite, new member, person plus.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const UserPlusIcon = /* @__PURE__ */ createIcon('user-plus', [
   ['path', { d: 'M12.4 6.75a3.15 3.15 0 0 1-6.3 0 3.15 3.15 0 0 1 6.3 0' }],

@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `train` icon, line variant: train, rail, metro, transit.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const TrainIcon = /* @__PURE__ */ createIcon('train', [
   [

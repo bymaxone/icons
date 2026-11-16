@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `network` icon, line variant: network, topology, nodes, infrastructure.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const NetworkIcon = /* @__PURE__ */ createIcon('network', [
   [

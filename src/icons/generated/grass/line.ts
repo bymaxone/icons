@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `grass` icon, line variant: grass, lawn, blades, meadow.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const GrassIcon = /* @__PURE__ */ createIcon('grass', [
   ['path', { d: 'M3.25 20.25h18' }],

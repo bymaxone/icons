@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `hand-fist` icon, line variant: raised fist, solidarity, strength, power.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const HandFistIcon = /* @__PURE__ */ createIcon('hand-fist', [
   [

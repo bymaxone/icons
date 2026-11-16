@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `alert-triangle` icon, line variant: warning, caution, danger, exclamation.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const AlertTriangleIcon = /* @__PURE__ */ createIcon('alert-triangle', [
   [

@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `keyframe` icon, line variant: diamond, animation, key, point.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const KeyframeIcon = /* @__PURE__ */ createIcon('keyframe', [
   [

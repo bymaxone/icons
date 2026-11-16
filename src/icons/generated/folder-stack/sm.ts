@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `folder-stack` icon, sm variant: folders, projects, collection, all files.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const FolderStackSmIcon = /* @__PURE__ */ createIcon(
   'folder-stack-sm',

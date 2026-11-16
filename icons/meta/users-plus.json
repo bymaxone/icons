@@ -6,5 +6,5 @@
   "useCases": ["Invites several people at once", "Adds people to a group"],
   "variants": ["line"],
   "opticalSizes": [24],
-  "since": "0.1.0"
+  "since": "1.0.0"
 }

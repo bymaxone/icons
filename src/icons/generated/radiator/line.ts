@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `radiator` icon, line variant: radiator, heater, warmth, fins.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const RadiatorIcon = /* @__PURE__ */ createIcon('radiator', [
   [

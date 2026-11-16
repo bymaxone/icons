@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `chili` icon, line variant: chili, pepper, spicy, hot.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const ChiliIcon = /* @__PURE__ */ createIcon('chili', [
   [

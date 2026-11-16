@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `spade` icon, line variant: spade, card suit, cards, games.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const SpadeIcon = /* @__PURE__ */ createIcon('spade', [
   [

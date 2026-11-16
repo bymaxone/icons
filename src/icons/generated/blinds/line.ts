@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `blinds` icon, line variant: blinds, window, shade, slats.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const BlindsIcon = /* @__PURE__ */ createIcon('blinds', [
   ['path', { d: 'M3.25 4.25h18' }],

@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `clipboard-x` icon, line variant: clipboard x, failed, rejected, form.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const ClipboardXIcon = /* @__PURE__ */ createIcon('clipboard-x', [
   [

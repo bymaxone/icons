@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `book-check` icon, line variant: book check, finished reading, completed title, read list.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const BookCheckIcon = /* @__PURE__ */ createIcon('book-check', [
   [

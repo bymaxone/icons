@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `repeat-off` icon, line variant: repeat off, no loop, playback, once.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const RepeatOffIcon = /* @__PURE__ */ createIcon('repeat-off', [
   [

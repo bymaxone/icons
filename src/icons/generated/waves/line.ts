@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `waves` icon, line variant: waves, sea, water, ocean.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const WavesIcon = /* @__PURE__ */ createIcon('waves', [
   [

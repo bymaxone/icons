@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `copy-plus` icon, line variant: copy plus, clone item, extra copy, multiply.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const CopyPlusIcon = /* @__PURE__ */ createIcon('copy-plus', [
   [

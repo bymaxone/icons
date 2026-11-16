@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `x-octagon` icon, line variant: x octagon, stop, error, critical.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const XOctagonIcon = /* @__PURE__ */ createIcon('x-octagon', [
   [

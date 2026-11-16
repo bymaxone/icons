@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `library` icon, sm variant: books, shelf, assets, collection.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const LibrarySmIcon = /* @__PURE__ */ createIcon(
   'library-sm',

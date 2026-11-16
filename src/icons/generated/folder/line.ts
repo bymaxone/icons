@@ -9,7 +9,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 /**
  * The `folder` icon, line variant: directory, collection, group, project.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 export const FolderIcon = /* @__PURE__ */ createIcon('folder', [
   [
