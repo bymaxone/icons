@@ -83,7 +83,10 @@ export default [
       'import-x/resolver-next': [
         createTypeScriptImportResolver({
           alwaysTryTypes: true,
-          project: ['./tsconfig.json', './tsconfig.native.json']
+          project: ['./tsconfig.json', './tsconfig.native.json'],
+          // Two projects are the design: the native tree has no DOM types. The resolver's
+          // warning about it goes to stderr, where it would corrupt the JSON the graph gate reads.
+          noWarnOnMultipleProjects: true
         }),
         createNodeResolver({
           extensions: ['.js', '.ts', '.tsx']
