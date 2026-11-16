@@ -1,4 +1,4 @@
-import { mkdirSync, readdirSync, rmSync, writeFileSync } from 'node:fs'
+import { existsSync, mkdirSync, readdirSync, rmSync, writeFileSync } from 'node:fs'
 
 import { defineConfig } from 'tsup'
 import type { Options } from 'tsup'
@@ -20,7 +20,12 @@ const shared: Options = {
   outExtension: ({ format }) => ({
     js: format === 'esm' ? '.mjs' : '.cjs'
   }),
-  external: ['react', 'react/jsx-runtime', /^@bymax-one\/icons(?:\/|$)/],
+  external: [
+    'react',
+    'react/jsx-runtime',
+    /^react-native(?:-svg)?(?:\/|$)/,
+    /^@bymax-one\/icons(?:\/|$)/
+  ],
   target: 'es2022',
   clean: false,
   splitting: false,
@@ -48,7 +53,7 @@ const iconNames = readdirSync(ICONS_DIR, { withFileTypes: true })
   .filter((entry) => entry.isDirectory())
   .map((entry) => entry.name)
 rmSync(ENTRIES_DIR, { recursive: true, force: true })
-if (iconNames.length > 0) mkdirSync(ENTRIES_DIR)
+mkdirSync(ENTRIES_DIR)
 const iconEntries = Object.fromEntries(
   iconNames.map((name) => {
     const file = `${ENTRIES_DIR}/${name}.ts`
@@ -72,6 +77,36 @@ const flagEntries = Object.fromEntries(
   })
 )
 
+// The React Native entries, `./native/icons/<name>` and `./native/flags/<name>`, come from the
+// same entries directory, so the native components share one declaration program as well. They
+// build with the native tsconfig, because the web one cannot see `src/native`: the types of
+// `react-native` conflict with `lib.dom`. `react-native` and `react-native-svg` stay external.
+const native: Options = { ...shared, tsconfig: 'tsconfig.build.native.json' }
+const NATIVE_ICONS_DIR = 'src/native/generated/icons'
+// A build with no native tree has no native entries, like a build with no icon.
+const listDirectory = (dir: string) =>
+  existsSync(dir) ? readdirSync(dir, { withFileTypes: true }) : []
+const nativeIconEntries = Object.fromEntries(
+  listDirectory(NATIVE_ICONS_DIR)
+    .filter((entry) => entry.isDirectory())
+    .map((entry) => {
+      const file = `${ENTRIES_DIR}/native-icon-${entry.name}.ts`
+      writeFileSync(file, `export * from '../${NATIVE_ICONS_DIR}/${entry.name}/index'\n`)
+      return [`native/icons/${entry.name}/index`, file]
+    })
+)
+const NATIVE_FLAGS_DIR = 'src/native/generated/flags'
+const nativeFlagEntries = Object.fromEntries(
+  listDirectory(NATIVE_FLAGS_DIR)
+    .filter((entry) => entry.isFile() && entry.name.endsWith('.ts') && entry.name !== 'index.ts')
+    .map((entry) => {
+      const name = entry.name.slice(0, -'.ts'.length)
+      const file = `${ENTRIES_DIR}/native-flag-${name}.ts`
+      writeFileSync(file, `export * from '../${NATIVE_FLAGS_DIR}/${name}'\n`)
+      return [`native/flags/${name}/index`, file]
+    })
+)
+
 export default defineConfig([
   // Root entry: every icon component, re-exported from the icon entries, and the runtime.
   { ...shared, entry: { index: 'src/index.ts' } },
@@ -86,5 +121,12 @@ export default defineConfig([
   { ...shared, entry: { 'flags/index': 'src/flags/index.ts' } },
   // tsup refuses an empty entry list, so the icon and flag entries exist only once one does.
   ...(Object.keys(iconEntries).length > 0 ? [{ ...shared, entry: iconEntries }] : []),
-  ...(Object.keys(flagEntries).length > 0 ? [{ ...shared, entry: flagEntries }] : [])
+  ...(Object.keys(flagEntries).length > 0 ? [{ ...shared, entry: flagEntries }] : []),
+  // React Native entries: the components, the runtime, the brand marks and the flags.
+  { ...native, entry: { 'native/index': 'src/native/index.ts' } },
+  { ...native, entry: { 'native/runtime/index': 'src/native/runtime/index.ts' } },
+  { ...native, entry: { 'native/brands/index': 'src/native/brands/index.ts' } },
+  { ...native, entry: { 'native/flags/index': 'src/native/flags/index.ts' } },
+  ...(Object.keys(nativeIconEntries).length > 0 ? [{ ...native, entry: nativeIconEntries }] : []),
+  ...(Object.keys(nativeFlagEntries).length > 0 ? [{ ...native, entry: nativeFlagEntries }] : [])
 ])
