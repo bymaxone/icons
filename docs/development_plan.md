@@ -521,11 +521,12 @@ These rules apply to every phase. Phase sections only add rules specific to them
 Found while releasing 1.0.0 and not needed for it. Each one names the measurement that
 motivates it.
 
-- **Static mutants in two large tables.** Stryker counts a literal in a module-level table as
-  a static mutant and estimates that such mutants take most of the test time. The tables in
-  `src/meta/icon-grid.ts` and `src/pipeline/generate.ts` are of that kind. Make them data
-  covered by one snapshot test, or move them to a module with fewer statics, so a cold run
-  shortens without `ignoreStatic`.
+- **Static mutants in the pipeline's tables.** Stryker counts a literal in a module-level
+  table as a static mutant and runs the whole suite against it. In the cold run the files
+  with the most test executions are `src/pipeline/british-spellings.ts` (the word table),
+  `src/pipeline/lint-flag.ts`, `src/pipeline/svg.ts`, `src/pipeline/svg-flag.ts` and
+  `src/pipeline/lint-svg.ts`. Make their tables data covered by one snapshot test, or move
+  them to a module with fewer statics, so a cold run shortens without `ignoreStatic`.
 - **The icon preview on a release pull request.** `Render the changed drawings` fails when the
   event carries a base commit older than the branch's merge base, and it reaches its
   15-minute timeout when a pull request changes every drawing, as a release does. It should
