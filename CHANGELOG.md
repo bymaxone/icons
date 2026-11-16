@@ -19,8 +19,12 @@ React Native components for the whole set, in a minor release: the web entries a
 
 ### Added
 
-- React Native components for every icon, brand mark and flag: `./native` for the icons, `./native/icons/<name>` for one icon's components, `./native/brands`, `./native/flags` and `./native/runtime` for the base and `createNativeIcon`. They are generated from the same drawings as the web components and render through `react-native-svg`, an optional peer dependency, so a web install adds nothing. The shapes keep `currentColor` and the component sets `color` on the root `<Svg>`; an icon with no `color` renders black, and a flag keeps its own colours. `size` is a number in density-independent pixels, a `title` becomes the `accessibilityLabel` of an image, and an icon with none is hidden from the accessibility tree. Apply to a consumer: nothing changes for a web install, and a React Native app adds `react-native-svg` (`>=15.11.1`) next to the package.
+- React Native components for every icon, brand mark and flag: `./native` for the icons, `./native/icons/<name>` for one icon's components, `./native/brands`, `./native/flags` and `./native/runtime` for the base and `createNativeIcon`. They are generated from the same drawings as the web components and render through `react-native-svg`, an optional peer dependency, so a web install adds nothing. The shapes keep `currentColor` and the component sets `color` on the root `<Svg>`; an icon with no `color` renders black, and a flag keeps its own colours. `size` is a number in density-independent pixels, a `title` becomes the `accessibilityLabel` of an image, and an icon with none is hidden from the accessibility tree.
 - The packed tarball grows from about 1.47 MB to about 2.27 MB (+55%) and from 7,973 to 14,181 files, because every drawing now ships a second renderer; the build peaks at 4.84 GB of resident memory. The web entries are unchanged, and each `./native` entry has its own size budget.
+
+#### Apply to a consumer
+
+Nothing changes for a web install. A React Native app adds `react-native-svg` (`>=15.11.1`) next to the package.
 
 ## [1.0.0] - 2026-11-15
 
