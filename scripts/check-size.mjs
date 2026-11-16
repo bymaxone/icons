@@ -178,6 +178,27 @@ for (const icon of icons) {
   measure(`module ${icon}`, readArtifact(`dist/icons/${icon}/index.mjs`), MODULE_BUDGET)
 }
 
+// React Native entries: report-only. The rows print the measured size and carry no budget, so
+// they never fail the gate; the budgets are set from these numbers once they are reviewed.
+const nativeRows = []
+const nativeFirstIcon = icons[0]
+const nativeFirstFlag = flagEntries.map((entry) => entry.name).sort()[0]
+for (const [name, path] of [
+  ['native (re-exports)', 'dist/native/index.mjs'],
+  ['native/runtime', 'dist/native/runtime/index.mjs'],
+  ['native/brands', 'dist/native/brands/index.mjs'],
+  ['native/flags (re-exports)', 'dist/native/flags/index.mjs'],
+  ...(nativeFirstIcon === undefined
+    ? []
+    : [[`native/icons/${nativeFirstIcon}`, `dist/native/icons/${nativeFirstIcon}/index.mjs`]]),
+  ...(nativeFirstFlag === undefined
+    ? []
+    : [[`native/flags/${nativeFirstFlag}`, `dist/native/flags/${nativeFirstFlag}/index.mjs`]])
+]) {
+  const raw = readArtifact(path)
+  nativeRows.push({ name, raw: raw.length, brotli: brotliCompressSync(raw, BROTLI_OPTS).length })
+}
+
 const pad = (s, n) => String(s).padEnd(n)
 const padL = (s, n) => String(s).padStart(n)
 
@@ -191,6 +212,11 @@ for (const r of rows) {
   console.log(
     `  ${pad(r.name, 32)}${padL(fmt(r.raw), 12)}${padL(fmt(r.brotli), 12)}${padL(fmt(r.limit), 12)}  ${status}`
   )
+}
+console.log('')
+console.log(`  ${pad('Native (report only)', 32)}${padL('Raw', 12)}${padL('Brotli', 12)}`)
+for (const r of nativeRows) {
+  console.log(`  ${pad(r.name, 32)}${padL(fmt(r.raw), 12)}${padL(fmt(r.brotli), 12)}`)
 }
 if (icons.length === 0) {
   console.log('  No icon module in dist/icons: the module budget applies once one is built.')

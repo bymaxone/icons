@@ -55,8 +55,20 @@ try {
 
   const metadata = JSON.parse(readFileSync(join(rootDir, 'dist', 'metadata.json'), 'utf8'))
   const icons = Object.keys(metadata.icons).map((name) => `./icons/${name}`)
+  // The React Native entries are checked as well: the fixed ones and every icon, not each flag
+  // (the web flags are not listed either). attw only reads their declarations, so the optional
+  // `react-native-svg` peer need not be installed for it.
+  const native = [
+    './native',
+    './native/runtime',
+    './native/brands',
+    './native/flags',
+    ...Object.keys(metadata.icons).map((name) => `./native/icons/${name}`)
+  ]
   const entrypoints = [
-    ...(icons.length > 0 ? ['--include-entrypoints', ...icons] : []),
+    '--include-entrypoints',
+    ...icons,
+    ...native,
     '--exclude-entrypoints',
     './sprite.svg'
   ]

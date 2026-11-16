@@ -42,6 +42,7 @@ import { tmpdir } from 'node:os'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
+import { declaredFile, nativeEntries, nativeFailures } from './native-bundle-names.mjs'
 import { packageExpectations } from './package-expectations.mjs'
 
 const rootDir = join(dirname(fileURLToPath(import.meta.url)), '..')
@@ -183,6 +184,13 @@ renderToPipeableStream(tree, {}, {
 /** The bundles of every subpath that has JavaScript, by path in the package. */
 function bundles(expected) {
   const entries = ['index', 'meta/index', 'brands/index', 'flags/index']
+  // The native runtime is the one bundle that imports react (and react-native-svg); the others
+  // import neither, and `scanBundles` reads the runtime on its own.
+  entries.push(
+    ...nativeEntries(Object.keys(expected.nativeExports)).filter(
+      (entry) => entry !== 'native/runtime/index'
+    )
+  )
   for (const subpath of Object.keys(expected.exports)) {
     if (subpath.startsWith('./icons/') || subpath.startsWith('./flags/')) {
       entries.push(`${subpath.slice(2)}/index`)
@@ -205,7 +213,9 @@ function scanBundles(packageDir, expected) {
   const failures = []
   const runtime = {
     'dist/runtime/index.mjs': /^import\s+\{([^}]*)\}\s+from\s+'react';?$/gm,
-    'dist/runtime/index.cjs': /^var\s+(\w+)\s*=\s*require\('react'\);?$/gm
+    'dist/runtime/index.cjs': /^var\s+(\w+)\s*=\s*require\('react'\);?$/gm,
+    'dist/native/runtime/index.mjs': /^import\s+\{([^}]*)\}\s+from\s+'react';?$/gm,
+    'dist/native/runtime/index.cjs': /^var\s+(\w+)\s*=\s*require\('react'\);?$/gm
   }
   for (const [file, pattern] of Object.entries(runtime)) {
     const source = readFileSync(join(packageDir, file), 'utf8')
@@ -224,6 +234,9 @@ function scanBundles(packageDir, expected) {
     if (/['"]use client['"]/.test(source)) failures.push(`${file} holds a 'use client' directive`)
     if (/from\s+['"]react['"]|require\(['"]react['"]\)/.test(source))
       failures.push(`${file} imports react`)
+    if (file.startsWith('dist/native/') && /['"]react-native(?:-svg)?['"]/.test(source)) {
+      failures.push(`${file} imports react-native or react-native-svg, which only the runtime may`)
+    }
   }
   return failures
 }
@@ -261,6 +274,32 @@ ${probeBody}`
 
 function run(command, args, options = {}) {
   return execFileSync(command, args, { encoding: 'utf8', stdio: 'pipe', ...options })
+}
+
+/**
+ * Resolves every native subpath from the consumer, in ESM and in CommonJS, without loading it.
+ * The native entries import `react-native-svg`, Flow source that Node cannot run, so this gate
+ * asks the resolver where each specifier lands and reads the export names off the bundle.
+ */
+function checkNative(packageDir, expected) {
+  const subpaths = Object.keys(expected.nativeExports)
+  const esm = `${JSON.stringify(subpaths)}.map((s) => [s, import.meta.resolve(${JSON.stringify(packageName)} + s.slice(1))])`
+  const cjs = `${JSON.stringify(subpaths)}.map((s) => [s, require.resolve(${JSON.stringify(packageName)} + s.slice(1))])`
+  const resolved = {}
+  for (const [format, script, flags] of [
+    ['esm', `console.log(JSON.stringify(${esm}))`, ['--input-type=module']],
+    ['cjs', `console.log(JSON.stringify(${cjs}))`, ['--input-type=commonjs']]
+  ]) {
+    const pairs = JSON.parse(run('node', [...flags, '-e', script], { cwd: consumerDir }))
+    for (const [subpath, location] of pairs) {
+      const file = location.startsWith('file:') ? fileURLToPath(location) : location
+      resolved[subpath] = { ...resolved[subpath], [format]: file }
+    }
+  }
+  const declared = JSON.parse(readFileSync(join(packageDir, 'package.json'), 'utf8')).exports
+  return nativeFailures(expected.nativeExports, resolved, (subpath, format) =>
+    declaredFile(declared, subpath, format)
+  )
 }
 
 function cleanup() {
@@ -322,6 +361,15 @@ try {
   else {
     console.log(
       "  ✓ no bundle has 'use client'; the runtime imports only createElement, and no other bundle imports react"
+    )
+  }
+
+  const nativeProblems = checkNative(packageDir, expected)
+  for (const problem of nativeProblems) console.error(`  ✗ native: ${problem}`)
+  if (nativeProblems.length) failed = true
+  else {
+    console.log(
+      `  ✓ native: ${Object.keys(expected.nativeExports).length} subpath(s) resolve in ESM and CommonJS to the declared files and export exactly their names (resolved and read from the bundle, not loaded: react-native-svg cannot run under Node)`
     )
   }
 
