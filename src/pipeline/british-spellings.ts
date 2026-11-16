@@ -99,7 +99,7 @@ export const BRITISH_SPELLINGS: ReadonlyMap<string, string> = new Map([
  * @returns The listed words found, each with the American form to write instead.
  */
 export function britishWords(text: string): { british: string; american: string }[] {
-  return (text.toLowerCase().match(/[a-z]+/g) ?? []).flatMap((word) => {
+  return Array.from(text.toLowerCase().matchAll(/[a-z]+/g), ([word]) => word).flatMap((word) => {
     const american = BRITISH_SPELLINGS.get(word)
     return american === undefined ? [] : [{ british: word, american }]
   })
