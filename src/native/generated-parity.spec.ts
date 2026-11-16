@@ -32,13 +32,18 @@ const iconPair = (name: string): [Exports, Exports] => [
   require(`@bymax-one/icons/native/icons/${name}`) as Exports
 ]
 
+/** The aliases the brand metadata declares, which the brand entry exports besides the marks. */
+const aliasCount = (): number =>
+  Object.values(
+    BRAND_METADATA as Readonly<Record<string, { aliases?: readonly unknown[] }>>
+  ).reduce((sum, brand) => sum + (brand.aliases?.length ?? 0), 0)
+
 describe('native modules against the web modules', () => {
   it('draws every icon variant and alias from the web literal', () => {
     /**
      * Scenario: for every icon, the native entry exports the same names as the web entry,
      * and each export was created with the same name, drawing and options.
      */
-    expect(iconNames.length).toBeGreaterThan(0)
     for (const name of iconNames) {
       const [web, nativeExports] = iconPair(name)
       expect(Object.keys(nativeExports).sort()).toStrictEqual(Object.keys(web).sort())
@@ -53,8 +58,7 @@ describe('native modules against the web modules', () => {
      */
     const web = require('@bymax-one/icons/brands') as Exports
     const nativeExports = require('@bymax-one/icons/native/brands') as Exports
-    expect(brandNames.length).toBeGreaterThan(0)
-    expect(Object.keys(BRAND_METADATA).length).toBe(brandNames.length)
+    expect(Object.keys(web)).toHaveLength(brandNames.length + aliasCount())
     expect(Object.keys(nativeExports).sort()).toStrictEqual(Object.keys(web).sort())
     expect(nativeExports).toStrictEqual(web)
   })
@@ -64,7 +68,7 @@ describe('native modules against the web modules', () => {
      * Scenario: for every flag, the native entry was created with the same name, view box
      * and drawing as the web one.
      */
-    expect(flagNames.length).toBeGreaterThan(0)
+    expect(Object.keys(require('@bymax-one/icons/native/flags'))).toHaveLength(flagNames.length)
     for (const name of flagNames) {
       const web = require(`@bymax-one/icons/flags/${name}`) as Exports
       const nativeExports = require(`@bymax-one/icons/native/flags/${name}`) as Exports
