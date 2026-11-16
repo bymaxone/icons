@@ -28,6 +28,11 @@
       "@bymax-one/icons/flags/*": ["./src/flags/generated/*.ts"],
       "@bymax-one/icons/icons/*": ["./src/icons/generated/*/index.ts"],
       "@bymax-one/icons/meta": ["./src/meta/index.ts"],
+      "@bymax-one/icons/native": ["./src/native/index.ts"],
+      "@bymax-one/icons/native/brands": ["./src/native/brands/index.ts"],
+      "@bymax-one/icons/native/flags": ["./src/native/flags/index.ts"],
+      "@bymax-one/icons/native/flags/*": ["./src/native/generated/flags/*.ts"],
+      "@bymax-one/icons/native/icons/*": ["./src/native/generated/icons/*/index.ts"],
       "@bymax-one/icons/native/runtime": ["./src/native/runtime/index.ts"],
       "@bymax-one/icons/runtime": ["./src/runtime/index.ts"]
     }

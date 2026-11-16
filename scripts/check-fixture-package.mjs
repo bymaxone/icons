@@ -46,6 +46,7 @@ const GENERATED = [
   'src/icons/generated/',
   'src/brands/generated/',
   'src/flags/generated/',
+  'src/native/generated/',
   'src/meta/generated/'
 ]
 
@@ -64,12 +65,16 @@ const STEPS = [
     [
       ['tsc', '--noEmit'],
       ['tsc', '--noEmit', '-p', 'tsconfig.build.json'],
-      ['tsc', '--noEmit', '-p', 'tsconfig.meta.json']
+      ['tsc', '--noEmit', '-p', 'tsconfig.meta.json'],
+      ['tsc', '--noEmit', '-p', 'tsconfig.native.json']
     ]
   ],
   ['ESLint on the generated modules', [['eslint', '--max-warnings', '0', ...GENERATED]]],
   ['Prettier on the generated modules', [['prettier', '--check', ...GENERATED]]],
-  ['render smoke test and entry specs', [['jest', 'src/icons', 'src/index.spec.ts', 'src/meta']]],
+  [
+    'render smoke test and entry specs',
+    [['jest', 'src/icons', 'src/native', 'src/index.spec.ts', 'src/meta']]
+  ],
   [
     'build',
     [

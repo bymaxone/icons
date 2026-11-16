@@ -19,8 +19,43 @@ export const GENERATED_DIRECTORIES = [
   'src/icons/generated',
   'src/brands/generated',
   'src/flags/generated',
+  'src/native/generated',
   'src/meta/generated'
 ] as const
+
+/**
+ * What differs between the web modules and the React Native ones: where they are written,
+ * the runtime they import, the factories they call and the subpaths their barrels use. The
+ * drawing, the paint, the aliases and the documentation are shared, so they cannot differ.
+ */
+export interface Flavour {
+  /** Where the icon, brand and flag modules are written, from the repository root. */
+  readonly directories: { readonly icons: string; readonly brands: string; readonly flags: string }
+  /** The specifier of the runtime the modules import. */
+  readonly runtime: string
+  /** The factory that creates an icon or brand component. */
+  readonly createIcon: string
+  /** The factory that creates a flag component. */
+  readonly createFlag: string
+  /** The specifier prefix of the icon and flag subpaths the barrels re-export through. */
+  readonly subpath: string
+  /** How the icon barrel's description names the entry that re-exports it. */
+  readonly entry: string
+}
+
+/** The web modules, `createIcon` and `createFlag` from `./runtime`. */
+export const WEB_FLAVOUR: Flavour = {
+  directories: {
+    icons: 'src/icons/generated',
+    brands: 'src/brands/generated',
+    flags: 'src/flags/generated'
+  },
+  runtime: '@bymax-one/icons/runtime',
+  createIcon: 'createIcon',
+  createFlag: 'createFlag',
+  subpath: '@bymax-one/icons/',
+  entry: 'the root entry'
+}
 
 /** The SVG attributes whose React prop name differs from the attribute name. */
 const PROP_NAMES: ReadonlyMap<string, string> = new Map([
@@ -52,7 +87,7 @@ const NUMERIC_ATTRIBUTES = new Set([
 ])
 
 /** Keeps metadata text from closing the JSDoc block it is written into. */
-const docText = (text: string): string => text.replaceAll('*/', '*\\/')
+export const docText = (text: string): string => text.replaceAll('*/', '*\\/')
 
 /** One attribute value as a literal: a number when it is one, a string otherwise. */
 function valueLiteral(name: string, value: string): string {
@@ -78,7 +113,7 @@ export function iconNodeLiteral(elements: readonly DrawingElement[]): string {
 }
 
 /** The file header every generated module opens with. */
-function header(description: string, source: string): string {
+export function header(description: string, source: string): string {
   return [
     '/**',
     ` * @fileoverview ${description}`,
@@ -90,7 +125,11 @@ function header(description: string, source: string): string {
 }
 
 /** The exports of every alias of one variant. */
-function aliasExports(icon: string, aliases: readonly AliasSource[], variant: Variant): string[] {
+export function aliasExports(
+  icon: string,
+  aliases: readonly AliasSource[],
+  variant: Variant
+): string[] {
   const target = componentName(icon, variant)
   return aliases.map((alias) => {
     const doc = alias.deprecated
@@ -105,14 +144,19 @@ function aliasExports(icon: string, aliases: readonly AliasSource[], variant: Va
  * fill, and a 16 px master declares the size it is made for, so it renders at 16 px with
  * the set's 1.5 px stroke by default.
  */
-const VARIANT_OPTIONS: Readonly<Record<IconVariantName, string>> = {
+export const VARIANT_OPTIONS: Readonly<Record<IconVariantName, string>> = {
   line: '',
   filled: `, { paint: 'fill' }`,
   sm: `, { masterSize: ${ICON_GRID.smSize} }`
 }
 
 /** One variant module: the component, created from its drawing, and its aliases. */
-function variantModule(icon: IconEntry, variant: IconVariantName, drawing: Drawing): string {
+function variantModule(
+  icon: IconEntry,
+  variant: IconVariantName,
+  drawing: Drawing,
+  flavour: Flavour
+): string {
   const name = componentName(icon.name, variant)
   const options = VARIANT_OPTIONS[variant]
   const doc = [
@@ -124,15 +168,15 @@ function variantModule(icon: IconEntry, variant: IconVariantName, drawing: Drawi
   ].join('\n')
   return [
     header(`The \`${icon.name}\` icon, ${variant} variant.`, drawing.path),
-    "import { createIcon } from '@bymax-one/icons/runtime'\n",
+    `import { ${flavour.createIcon} } from '${flavour.runtime}'\n`,
     doc,
-    `export const ${name} = /* @__PURE__ */ createIcon(${JSON.stringify(variantName(icon.name, variant))}, ${iconNodeLiteral(drawing.elements)}${options})\n`,
+    `export const ${name} = /* @__PURE__ */ ${flavour.createIcon}(${JSON.stringify(variantName(icon.name, variant))}, ${iconNodeLiteral(drawing.elements)}${options})\n`,
     ...aliasExports(icon.name, icon.meta.aliases ?? [], variant)
   ].join('\n')
 }
 
 /** The names a variant module exports: the component and one per alias. */
-function variantExports(icon: IconEntry, variant: Variant): string[] {
+export function variantExports(icon: IconEntry, variant: Variant): string[] {
   const names = [icon.name, ...(icon.meta.aliases ?? []).map((alias) => alias.name)]
   return names.map((name) => componentName(name, variant)).sort()
 }
@@ -150,19 +194,21 @@ function iconEntryModule(icon: IconEntry): string {
 }
 
 /** The icon re-exports of the root entry, each icon through its own subpath. */
-function rootBarrel(set: IconSet): string {
+function rootBarrel(set: IconSet, flavour: Flavour): string {
   const lines = set.icons.map((icon) => {
     const names = drawnVariants(icon).flatMap(([variant]) => variantExports(icon, variant))
-    return `export { ${names.sort().join(', ')} } from '@bymax-one/icons/icons/${icon.name}'`
+    return `export { ${names.sort().join(', ')} } from '${flavour.subpath}icons/${icon.name}'`
   })
   const body = lines.length === 0 ? ['export {}'] : lines
-  return [header('The icon components the root entry re-exports.', 'icons/meta'), ...body, ''].join(
-    '\n'
-  )
+  return [
+    header(`The icon components ${flavour.entry} re-exports.`, 'icons/meta'),
+    ...body,
+    ''
+  ].join('\n')
 }
 
 /** One brand module. */
-function brandModule(brand: BrandEntry): string {
+function brandModule(brand: BrandEntry, flavour: Flavour): string {
   const { meta } = brand
   const doc = [
     '/**',
@@ -174,9 +220,9 @@ function brandModule(brand: BrandEntry): string {
   ].join('\n')
   return [
     header(`The ${docText(meta.title)} brand mark.`, brand.drawing.path),
-    "import { createIcon } from '@bymax-one/icons/runtime'\n",
+    `import { ${flavour.createIcon} } from '${flavour.runtime}'\n`,
     doc,
-    `export const ${componentName(brand.name, 'brand')} = /* @__PURE__ */ createIcon(${JSON.stringify(variantName(brand.name, 'brand'))}, ${iconNodeLiteral(brand.drawing.elements)}, { paint: 'fill' })\n`,
+    `export const ${componentName(brand.name, 'brand')} = /* @__PURE__ */ ${flavour.createIcon}(${JSON.stringify(variantName(brand.name, 'brand'))}, ${iconNodeLiteral(brand.drawing.elements)}, { paint: 'fill' })\n`,
     ...aliasExports(brand.name, meta.aliases ?? [], 'brand')
   ].join('\n')
 }
@@ -195,7 +241,7 @@ function brandsBarrel(set: IconSet): string {
 }
 
 /** One flag module: the component, created from its drawing and its own view box. */
-function flagModule(flag: FlagEntry): string {
+function flagModule(flag: FlagEntry, flavour: Flavour): string {
   const { meta } = flag
   const doc = [
     '/**',
@@ -208,45 +254,57 @@ function flagModule(flag: FlagEntry): string {
   const view = JSON.stringify(flag.viewBox)
   return [
     header(`The ${docText(meta.title)} flag.`, flag.drawing.path),
-    "import { createFlag } from '@bymax-one/icons/runtime'\n",
+    `import { ${flavour.createFlag} } from '${flavour.runtime}'\n`,
     doc,
-    `export const ${componentName(flag.name, 'flag')} = /* @__PURE__ */ createFlag(${JSON.stringify(variantName(flag.name, 'flag'))}, ${view}, ${iconNodeLiteral(flag.drawing.elements)})\n`
+    `export const ${componentName(flag.name, 'flag')} = /* @__PURE__ */ ${flavour.createFlag}(${JSON.stringify(variantName(flag.name, 'flag'))}, ${view}, ${iconNodeLiteral(flag.drawing.elements)})\n`
   ].join('\n')
 }
 
 /** The flag barrel, each flag through its own subpath, so it exists once in the package. */
-function flagsBarrel(set: IconSet): string {
+function flagsBarrel(set: IconSet, flavour: Flavour): string {
   const lines = set.flags.map(
     (flag) =>
-      `export { ${componentName(flag.name, 'flag')} } from '@bymax-one/icons/flags/${flag.name}'`
+      `export { ${componentName(flag.name, 'flag')} } from '${flavour.subpath}flags/${flag.name}'`
   )
   const body = lines.length === 0 ? ['export {}'] : lines
   return [header('Every country flag component.', 'icons/flags'), ...body, ''].join('\n')
 }
 
 /**
- * Every generated module except the metadata, keyed by path from the repository root.
+ * The component modules of one flavour, keyed by path from the repository root.
+ *
+ * @param set - The icon set.
+ * @param flavour - Where the modules go and which runtime they use.
+ * @returns The modules' unformatted text.
+ */
+export function flavouredModules(set: IconSet, flavour: Flavour): Map<string, string> {
+  const { icons, brands, flags } = flavour.directories
+  const files = new Map<string, string>([
+    [`${icons}/index.ts`, rootBarrel(set, flavour)],
+    [`${brands}/index.ts`, brandsBarrel(set)],
+    [`${flags}/index.ts`, flagsBarrel(set, flavour)]
+  ])
+  for (const icon of set.icons) {
+    files.set(`${icons}/${icon.name}/index.ts`, iconEntryModule(icon))
+    for (const [variant, drawing] of drawnVariants(icon)) {
+      files.set(
+        `${icons}/${icon.name}/${variant}.ts`,
+        variantModule(icon, variant, drawing, flavour)
+      )
+    }
+  }
+  for (const brand of set.brands)
+    files.set(`${brands}/${brand.name}.ts`, brandModule(brand, flavour))
+  for (const flag of set.flags) files.set(`${flags}/${flag.name}.ts`, flagModule(flag, flavour))
+  return files
+}
+
+/**
+ * Every web component module, keyed by path from the repository root.
  *
  * @param set - The icon set.
  * @returns The modules' unformatted text.
  */
 export function componentModules(set: IconSet): Map<string, string> {
-  const files = new Map<string, string>([
-    ['src/icons/generated/index.ts', rootBarrel(set)],
-    ['src/brands/generated/index.ts', brandsBarrel(set)],
-    ['src/flags/generated/index.ts', flagsBarrel(set)]
-  ])
-  for (const icon of set.icons) {
-    files.set(`src/icons/generated/${icon.name}/index.ts`, iconEntryModule(icon))
-    for (const [variant, drawing] of drawnVariants(icon)) {
-      files.set(
-        `src/icons/generated/${icon.name}/${variant}.ts`,
-        variantModule(icon, variant, drawing)
-      )
-    }
-  }
-  for (const brand of set.brands)
-    files.set(`src/brands/generated/${brand.name}.ts`, brandModule(brand))
-  for (const flag of set.flags) files.set(`src/flags/generated/${flag.name}.ts`, flagModule(flag))
-  return files
+  return flavouredModules(set, WEB_FLAVOUR)
 }
