@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "lib": ["ES2022"],
+    "types": ["jest"],
+    "noEmit": true
+  },
+  "include": ["src/native/**/*"],
+  "exclude": ["node_modules", "dist"]
+}

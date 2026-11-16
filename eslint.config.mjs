@@ -47,7 +47,7 @@ export default [
     languageOptions: {
       parser: tsParser,
       parserOptions: {
-        project: './tsconfig.json',
+        project: ['./tsconfig.json', './tsconfig.native.json'],
         tsconfigRootDir: import.meta.dirname,
         ecmaVersion: 2022,
         sourceType: 'module',
@@ -83,7 +83,7 @@ export default [
       'import-x/resolver-next': [
         createTypeScriptImportResolver({
           alwaysTryTypes: true,
-          project: './tsconfig.json'
+          project: ['./tsconfig.json', './tsconfig.native.json']
         }),
         createNodeResolver({
           extensions: ['.js', '.ts', '.tsx']
