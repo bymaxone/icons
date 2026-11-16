@@ -1,0 +1,24 @@
+/**
+ * @fileoverview The `more-vertical` icon, line variant.
+ * Written by `pnpm generate` from icons/line/more-vertical.svg: edit the source, never this file.
+ * @layer Generated
+ */
+
+import { createNativeIcon } from '@bymax-one/icons/native/runtime'
+
+/**
+ * The `more-vertical` icon, line variant: kebab, overflow, options, dots.
+ *
+ * @since 0.1.0
+ */
+export const MoreVerticalIcon = /* @__PURE__ */ createNativeIcon('more-vertical', [
+  ['circle', { cx: 12.25, cy: 5.25, r: 0.75 }],
+  ['circle', { cx: 12.25, cy: 12.25, r: 0.75 }],
+  ['circle', { cx: 12.25, cy: 19.25, r: 0.75 }]
+])
+
+/** `dots-vertical`: an alias of {@link MoreVerticalIcon}. */
+export const DotsVerticalIcon = MoreVerticalIcon
+
+/** `ellipsis-vertical`: an alias of {@link MoreVerticalIcon}. */
+export const EllipsisVerticalIcon = MoreVerticalIcon

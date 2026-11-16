@@ -1,0 +1,24 @@
+/**
+ * @fileoverview The `chevron-left` icon, sm variant.
+ * Written by `pnpm generate` from icons/sm/chevron-left.svg: edit the source, never this file.
+ * @layer Generated
+ */
+
+import { createNativeIcon } from '@bymax-one/icons/native/runtime'
+
+/**
+ * The `chevron-left` icon, sm variant: caret, back, previous, left.
+ *
+ * @since 0.1.0
+ */
+export const ChevronLeftSmIcon = /* @__PURE__ */ createNativeIcon(
+  'chevron-left-sm',
+  [['path', { d: 'm15.375 7.5-5.25 5.25 5.25 5.25' }]],
+  { masterSize: 16 }
+)
+
+/** `caret-left`: an alias of {@link ChevronLeftSmIcon}. */
+export const CaretLeftSmIcon = ChevronLeftSmIcon
+
+/** `less-than`: an alias of {@link ChevronLeftSmIcon}. */
+export const LessThanSmIcon = ChevronLeftSmIcon

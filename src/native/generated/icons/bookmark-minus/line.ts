@@ -1,0 +1,20 @@
+/**
+ * @fileoverview The `bookmark-minus` icon, line variant.
+ * Written by `pnpm generate` from icons/line/bookmark-minus.svg: edit the source, never this file.
+ * @layer Generated
+ */
+
+import { createNativeIcon } from '@bymax-one/icons/native/runtime'
+
+/**
+ * The `bookmark-minus` icon, line variant: bookmark, minus, unsave, remove.
+ *
+ * @since 0.1.0
+ */
+export const BookmarkMinusIcon = /* @__PURE__ */ createNativeIcon('bookmark-minus', [
+  ['path', { d: 'M7.25 5.75c0-1.5.5-2 2-2h6c1.5 0 2 .5 2 2v14.5l-5-3.5-5 3.5z' }],
+  ['path', { d: 'M10.25 9.25h4' }]
+])
+
+/** `bookmark-remove`: an alias of {@link BookmarkMinusIcon}. */
+export const BookmarkRemoveIcon = BookmarkMinusIcon
