@@ -44,7 +44,7 @@ The same icons, brand marks and flags as React Native components, from the same 
 
 **Colour.** The shapes keep `currentColor`, as on the web, and the component passes `color` to the root `<Svg>`. `react-native-svg` resolves `currentColor` from the root's `color` prop, so the API is the web's, and with no `color` the icon renders black. `color` is never required. A flag keeps its own colours and takes no `color` prop, as on the web, where its props omit `color`.
 
-**Peer range.** `react-native-svg` is an optional peer, `>=15.11.0`, the floor the auditor set from the release notes of the fixes to caller `currentColor`, overflow and stale rendering. Measured: the sources of the eleven releases read (13.14.0, 14.1.0, 15.0.0, 15.2.0, 15.4.0, 15.6.0 and 15.8.0 to 15.12.0) all declare `color` on `<Svg>` and resolve the string `currentColor` in `extractBrush`, so the contract the components rely on is not new in 15.x. Rendered on a device, only 15.16.0 is, on React Native 0.88.1 and Expo SDK 58.0.25 on the iOS Simulator; the `devDependencies` pin React Native 0.86.3 and 15.16.1 for the type check and the Jest mocks. The lower bound is a source reading, not a device test, until the Expo test runs on an older release.
+**Peer range.** `react-native-svg` is an optional peer, `>=15.11.1`: the first release that resolves `currentColor` from the root's `color` and whose npm tarball is complete (15.11.0 has no `scripts/rnsvg_utils.rb`, so `pod install` fails; 15.11.1 was republished the same day). Measured: the sources of the eleven releases read (13.14.0 to 15.12.0) all declare `color` on `<Svg>` and resolve `currentColor` in `extractBrush`. Rendered on devices, all seven rows of the Expo bench: 15.16.0 on Expo SDK 58 and React Native 0.88.1 (New Architecture), iOS and Android; 15.11.1 on React Native 0.78.3 (old architecture), iOS and Android. 15.11.0 does not compile with the New Architecture on React Native 0.78.3, 0.79.6 or 0.88.1 (`RNSVGLayoutableShadowNode.cpp`, `StyleLength` to `Style::SizeLength`); compatibility between `react-native-svg` and a React Native version is that package's matrix. Metro below React Native 0.79 needs `resolver.unstable_enablePackageExports: true` to resolve the subpaths. The `devDependencies` pin React Native 0.86.3 and 15.16.1 for the type check and the Jest mocks.
 
 Props that exist only for the DOM (`className`, `style` as a CSS object, `ref` to an SVG element) are left out of the native type, not ignored.
 
@@ -81,7 +81,7 @@ Decided by the auditor:
 3. **Flags.** In 1.1.0 with the icons and the brands, from `./native/flags`. A flag keeps its own viewBox and colours and takes no `color` prop.
 4. **Accessibility.** Decorative by default and hidden; `title` gives `accessibilityLabel` and `accessibilityRole="image"`.
 
-Still open: the Expo test on `react-native-svg` 15.11.0 and the Android run of it, whose results replace the "source reading" sentence above.
+Nothing is open.
 
 ## 8. Out of scope
 
