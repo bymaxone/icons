@@ -9,6 +9,8 @@ as the GitHub Release body, so each released version needs a matching
 `## [X.Y.Z]` heading here. Every release section lists the icons it added, renamed
 and deprecated, each rename with the alias that keeps the old name working.
 
+The date of a section is the day the release was prepared, not the day the version is published.
+
 ## [Unreleased]
 
 ## [1.1.0] - 2026-11-16

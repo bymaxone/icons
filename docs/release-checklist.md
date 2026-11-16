@@ -111,7 +111,7 @@ For the founder. Every step runs on the founder's machine, logged in to npm as a
 
    Use Node 24 and pnpm 11.20.0, the versions `package.json` names.
 
-   Check the date of the `## [1.0.0]` section in `CHANGELOG.md`, which ships in the tarball. If the publish happens on a later day, correct the date in a one-line pull request and use its squash commit in this step instead.
+   The date of the `## [1.0.0]` section in `CHANGELOG.md` is the day the release was prepared, not the day of the publish. Leave it as it is: the tarball must come from this exact commit, and a date-correction commit on `main` would carry version 1.1.0.
 
 2. **A clean install.** Run `pnpm install --frozen-lockfile`.
 
