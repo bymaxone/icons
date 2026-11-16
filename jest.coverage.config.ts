@@ -35,6 +35,13 @@ const config: Config = {
     '^@bymax-one/icons/flags/([a-z0-9-]+)$': '<rootDir>/src/flags/generated/$1.ts',
     '^@bymax-one/icons/icons/([a-z0-9-]+)$': '<rootDir>/src/icons/generated/$1/index.ts',
     '^@bymax-one/icons/meta$': '<rootDir>/src/meta/index.ts',
+    '^@bymax-one/icons/native$': '<rootDir>/src/native/index.ts',
+    '^@bymax-one/icons/native/brands$': '<rootDir>/src/native/brands/index.ts',
+    '^@bymax-one/icons/native/flags$': '<rootDir>/src/native/flags/index.ts',
+    '^@bymax-one/icons/native/flags/([a-z0-9-]+)$': '<rootDir>/src/native/generated/flags/$1.ts',
+    '^@bymax-one/icons/native/icons/([a-z0-9-]+)$':
+      '<rootDir>/src/native/generated/icons/$1/index.ts',
+    '^@bymax-one/icons/native/runtime$': '<rootDir>/src/native/runtime/index.ts',
     '^@bymax-one/icons/runtime$': '<rootDir>/src/runtime/index.ts'
   },
   transform: {

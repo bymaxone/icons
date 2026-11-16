@@ -30,6 +30,8 @@ const namesOf = (name, record) => [name, ...record.aliases.map((alias) => alias.
 const ROOT_RUNTIME = ['Icon', 'createIcon']
 /** The runtime names every build exports: the root's and the country flag base and factory. */
 const RUNTIME = ['Flag', 'Icon', 'createFlag', 'createIcon']
+/** The runtime names the React Native entries export: the bases and their factories. */
+const NATIVE_RUNTIME = ['NativeFlag', 'NativeIcon', 'createNativeFlag', 'createNativeIcon']
 const META = [
   'BRAND_METADATA',
   'BRAND_NAMES',
@@ -48,6 +50,7 @@ const META = [
  * @returns {{
  *   metadata: { icons: Record<string, any>, brands: Record<string, any>, flags: Record<string, any> },
  *   exports: Record<string, string[]>,
+ *   nativeExports: Record<string, string[]>,
  *   components: { subpath: string, name: string, className: string }[],
  *   symbols: string[],
  *   svgFiles: string[]
@@ -105,5 +108,24 @@ export function packageExpectations(packageDir) {
   }
   exports.set('./flags', flagExports.sort())
   exports.set('.', ['ICON_GRID', ...ROOT_RUNTIME, ...iconExports].sort())
-  return { metadata, exports: Object.fromEntries(exports), components, symbols, svgFiles }
+  // The React Native entries export the same component names as the web ones. They are kept
+  // apart from `exports` because they cannot be loaded under Node: `react-native-svg` is Flow
+  // source that only Metro compiles, so the gates resolve them and read their export names from
+  // the bundle text instead (see `native-bundle-names.mjs`).
+  const nativeExports = new Map([['./native/runtime', NATIVE_RUNTIME]])
+  for (const [subpath, names] of exports) {
+    if (subpath.startsWith('./icons/')) nativeExports.set(`./native${subpath.slice(1)}`, names)
+    if (subpath.startsWith('./flags/')) nativeExports.set(`./native${subpath.slice(1)}`, names)
+  }
+  nativeExports.set('./native/brands', exports.get('./brands'))
+  nativeExports.set('./native/flags', exports.get('./flags'))
+  nativeExports.set('./native', [...NATIVE_RUNTIME, ...iconExports].sort())
+  return {
+    metadata,
+    exports: Object.fromEntries(exports),
+    nativeExports: Object.fromEntries(nativeExports),
+    components,
+    symbols,
+    svgFiles
+  }
 }

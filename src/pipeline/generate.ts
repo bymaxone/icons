@@ -15,6 +15,7 @@ import { format } from 'prettier/standalone'
 
 import { metadataModule, staticFiles } from './emit-data.ts'
 import { componentModules, GENERATED_DIRECTORIES } from './emit-modules.ts'
+import { nativeComponentModules } from './emit-native-modules.ts'
 import type { IconSet } from './icon-set.ts'
 import type { IconSources } from './sources.ts'
 import { kindEntries } from './svg-kind.ts'
@@ -73,6 +74,7 @@ function prettierOptions(root: string): Options {
 export async function generatedModules(root: string, set: IconSet): Promise<Map<string, string>> {
   const raw = new Map([
     ...componentModules(set),
+    ...nativeComponentModules(set),
     ['src/meta/generated/metadata.ts', metadataModule(set)]
   ])
   const options = prettierOptions(root)

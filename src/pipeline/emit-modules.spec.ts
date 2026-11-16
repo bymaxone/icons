@@ -316,7 +316,7 @@ describe('componentModules', () => {
     )
   })
 
-  it('names the four generated directories', () => {
+  it('names the five generated directories', () => {
     /**
      * Scenario: a generation replaces these directories, and the stale-copy check reads
      * them; nothing else under `src` is generated.
@@ -325,6 +325,7 @@ describe('componentModules', () => {
       'src/icons/generated',
       'src/brands/generated',
       'src/flags/generated',
+      'src/native/generated',
       'src/meta/generated'
     ])
   })

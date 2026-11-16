@@ -1,0 +1,26 @@
+/**
+ * @fileoverview The `aspect-16-9` icon, line variant.
+ * Written by `pnpm generate` from icons/line/aspect-16-9.svg: edit the source, never this file.
+ * @layer Generated
+ */
+
+import { createNativeIcon } from '@bymax-one/icons/native/runtime'
+
+/**
+ * The `aspect-16-9` icon, line variant: landscape, widescreen, ratio, horizontal.
+ *
+ * @since 1.1.0
+ */
+export const Aspect169Icon = /* @__PURE__ */ createNativeIcon('aspect-16-9', [
+  [
+    'path',
+    {
+      d: 'M5 7h14.5c1.625 0 2 .375 2 2v6.5c0 1.625-.375 2-2 2H5c-1.625 0-2-.375-2-2V9c0-1.625.375-2 2-2'
+    }
+  ],
+  ['path', { d: 'M6 12v-2h2' }],
+  ['path', { d: 'M18.5 12.5v2h-2' }]
+])
+
+/** `aspect-ratio`: an alias of {@link Aspect169Icon}. */
+export const AspectRatioIcon = Aspect169Icon

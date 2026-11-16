@@ -34,6 +34,7 @@ import { fileURLToPath } from 'node:url'
 import { execSync, spawnSync } from 'node:child_process'
 import { createRequire } from 'node:module'
 
+import { bundleExportNames } from './native-bundle-names.mjs'
 import { packageExpectations } from './package-expectations.mjs'
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
@@ -52,6 +53,11 @@ if (!existsSync(resolve(ROOT, 'dist', 'metadata.json'))) {
 const EXPECTED = packageExpectations(ROOT)
 const EXPECTED_EXPORTS = EXPECTED.exports
 const SUBPATHS = Object.keys(EXPECTED_EXPORTS)
+// The React Native subpaths. They import `react-native-svg`, Flow source that Node cannot run
+// and that the consumer below does not install, so they are checked for their artifacts, for
+// the names their bundles export (read from the text) and for resolution, never loaded.
+const NATIVE_EXPORTS = EXPECTED.nativeExports
+const NATIVE_SUBPATHS = Object.keys(NATIVE_EXPORTS)
 
 // React is the package's peer, so the consumer installs it beside the tarball, at
 // the versions this repository tests against: the render below then exercises the
@@ -100,12 +106,14 @@ function specifierFor(subpath) {
  * never emitted, which is the half a single shared `types` entry used to hide.
  */
 function distArtifactsFor(subpath) {
-  // `./icons/<name>` and `./flags/<name>` are served by the `./icons/*` and `./flags/*`
-  // patterns: the `*` stands for the name.
+  // `./icons/<name>`, `./flags/<name>` and their `./native/` counterparts are served by
+  // the matching `*` patterns: the `*` stands for the name.
   const declared = new Map(Object.entries(pkg.exports))
-  const prefix = ['./icons/', './flags/'].find((p) => subpath.startsWith(p))
-  const pattern = prefix === undefined ? undefined : declared.get(`${prefix}*`)
-  const name = prefix === undefined ? '' : subpath.slice(prefix.length)
+  const patternKey = ['./icons/', './flags/', './native/icons/', './native/flags/']
+    .map((prefix) => `${prefix}*`)
+    .find((key) => subpath.startsWith(key.slice(0, -1)))
+  const pattern = patternKey === undefined ? undefined : declared.get(patternKey)
+  const name = patternKey === undefined ? '' : subpath.slice(patternKey.length - 1)
   const entry =
     pattern === undefined
       ? declared.get(subpath)
@@ -138,7 +146,7 @@ function distArtifactsFor(subpath) {
 
 function checkBuildArtifacts() {
   section('1. Build artifacts')
-  for (const subpath of SUBPATHS) {
+  for (const subpath of [...SUBPATHS, ...NATIVE_SUBPATHS]) {
     const { esmTypes, cjsTypes, esm, cjs } = distArtifactsFor(subpath)
     for (const f of [esmTypes, cjsTypes, esm, cjs]) {
       const abs = resolve(ROOT, f)
@@ -173,11 +181,35 @@ async function checkNamedExports() {
   }
 }
 
+function checkNativeNamedExports() {
+  for (const [subpath, expected] of Object.entries(NATIVE_EXPORTS)) {
+    const { esm, cjs } = distArtifactsFor(subpath)
+    section(`2/3. Native export names read from the bundles: ${subpath}`)
+    for (const [label, file] of [
+      ['ESM', esm],
+      ['CJS', cjs]
+    ]) {
+      const found = bundleExportNames(resolve(ROOT, file))
+      const missing = expected.filter((name) => !found.includes(name))
+      const extra = found.filter((name) => !expected.includes(name))
+      if (missing.length === 0 && extra.length === 0) {
+        pass(`${label} bundle exports exactly ${expected.length} name(s)`)
+      } else {
+        fail(
+          `${label} ${subpath}: missing ${JSON.stringify(missing.slice(0, 5))}, extra ${JSON.stringify(extra.slice(0, 5))}`
+        )
+      }
+    }
+  }
+}
+
 function packTarball() {
   packOutDir = mkdtempSync(join(tmpdir(), 'dogfood-pack-'))
   const packJson = execSync(`npm pack --json --pack-destination "${packOutDir}"`, {
     cwd: ROOT,
-    encoding: 'utf8'
+    encoding: 'utf8',
+    // The JSON lists every packed file, and the list outgrew the 1 MiB default.
+    maxBuffer: 64 * 1024 * 1024
   })
   const [result] = JSON.parse(packJson)
   return { tarballPath: resolve(packOutDir, result.filename), files: result.files }
@@ -234,6 +266,40 @@ function checkConsumerResolution() {
   })
   if (cjsResult.status === 0) pass('CJS specifiers resolve via exports map from consumer cwd')
   else fail(`Consumer CJS require failed (code ${cjsResult.status}): ${cjsResult.stderr}`)
+
+  // Native subpaths are resolved, not loaded (see NATIVE_SUBPATHS), and the resolved file must exist.
+  const nativeSpecifiers = JSON.stringify(NATIVE_SUBPATHS.map(specifierFor))
+  const nativeEsmProbe = [
+    "import { existsSync } from 'node:fs'",
+    "import { fileURLToPath } from 'node:url'",
+    `for (const s of ${nativeSpecifiers}) {`,
+    '  if (!existsSync(fileURLToPath(import.meta.resolve(s)))) { console.error(s); process.exit(5) }',
+    '}'
+  ].join('\n')
+  const nativeEsm = spawnSync('node', ['--input-type=module', '-e', nativeEsmProbe], {
+    cwd: consumerDir,
+    encoding: 'utf8',
+    timeout: 30_000
+  })
+  if (nativeEsm.status === 0) {
+    pass(
+      `${NATIVE_SUBPATHS.length} native specifiers resolve in ESM without react-native-svg installed`
+    )
+  } else fail(`Consumer native ESM resolve failed (code ${nativeEsm.status}): ${nativeEsm.stderr}`)
+  const nativeCjs = spawnSync(
+    'node',
+    [
+      '--input-type=commonjs',
+      '-e',
+      `${nativeSpecifiers}.forEach((s) => { if (!require('node:fs').existsSync(require.resolve(s))) process.exit(5) })`
+    ],
+    { cwd: consumerDir, encoding: 'utf8', timeout: 30_000 }
+  )
+  if (nativeCjs.status === 0) {
+    pass(
+      `${NATIVE_SUBPATHS.length} native specifiers resolve in CJS without react-native-svg installed`
+    )
+  } else fail(`Consumer native CJS resolve failed (code ${nativeCjs.status}): ${nativeCjs.stderr}`)
 }
 
 function checkConsumerRender() {
@@ -295,6 +361,7 @@ function cleanup() {
 
 checkBuildArtifacts()
 await checkNamedExports()
+checkNativeNamedExports()
 try {
   checkConsumerInstall()
 } catch (err) {

@@ -1,0 +1,19 @@
+/**
+ * @fileoverview The `chevrons-right` icon, line variant.
+ * Written by `pnpm generate` from icons/line/chevrons-right.svg: edit the source, never this file.
+ * @layer Generated
+ */
+
+import { createNativeIcon } from '@bymax-one/icons/native/runtime'
+
+/**
+ * The `chevrons-right` icon, line variant: chevrons right, double chevron, last, forward.
+ *
+ * @since 1.1.0
+ */
+export const ChevronsRightIcon = /* @__PURE__ */ createNativeIcon('chevrons-right', [
+  ['path', { d: 'm5.75 6.25 6 6-6 6m6.5-12 6 6-6 6' }]
+])
+
+/** `chevron-double-right`: an alias of {@link ChevronsRightIcon}. */
+export const ChevronDoubleRightIcon = ChevronsRightIcon

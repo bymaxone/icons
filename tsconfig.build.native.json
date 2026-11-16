@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig.native.json",
+  "compilerOptions": {
+    "skipLibCheck": true,
+    "types": []
+  },
+  "include": ["src/native/**/*", ".tsup-entries/**/*"],
+  "exclude": ["node_modules", "dist", "**/*.spec.ts", "**/*.spec.tsx"]
+}

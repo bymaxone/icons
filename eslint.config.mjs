@@ -47,7 +47,7 @@ export default [
     languageOptions: {
       parser: tsParser,
       parserOptions: {
-        project: './tsconfig.json',
+        project: ['./tsconfig.json', './tsconfig.native.json'],
         tsconfigRootDir: import.meta.dirname,
         ecmaVersion: 2022,
         sourceType: 'module',
@@ -83,7 +83,10 @@ export default [
       'import-x/resolver-next': [
         createTypeScriptImportResolver({
           alwaysTryTypes: true,
-          project: './tsconfig.json'
+          project: ['./tsconfig.json', './tsconfig.native.json'],
+          // Two projects are the design: the native tree has no DOM types. The resolver's
+          // warning about it goes to stderr, where it would corrupt the JSON the graph gate reads.
+          noWarnOnMultipleProjects: true
         }),
         createNodeResolver({
           extensions: ['.js', '.ts', '.tsx']

@@ -37,7 +37,9 @@ import {
   rootLimit
 } from '../src/pipeline/meta-budget.ts'
 
-const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
+// `SIZE_GATE_ROOT` points the gate at another tree: the spec of the native budgets runs it on a
+// small built package it assembles, so a budget that fails is proven to fail.
+const ROOT = process.env.SIZE_GATE_ROOT ?? resolve(dirname(fileURLToPath(import.meta.url)), '..')
 
 // Budgets are in bytes (KiB units, `n * 1024`, matching the table's /1024
 // display) measured against the brotli'd .mjs bundle: what a consumer's
@@ -176,6 +178,37 @@ const iconsDir = resolve(ROOT, 'dist', 'icons')
 const icons = existsSync(iconsDir) ? readdirSync(iconsDir).sort() : []
 for (const icon of icons) {
   measure(`module ${icon}`, readArtifact(`dist/icons/${icon}/index.mjs`), MODULE_BUDGET)
+}
+
+// React Native entries, each held to a budget above its measured brotli size. They are fixed
+// numbers, as the runtime's is: the native index re-exports every icon, so it moves with the set,
+// and a growing set raises it here with a reviewed number rather than a formula. Measured on 1,298
+// icon modules, 250 flag modules and 110 marks: index 12,397 bytes, runtime 1,786, brands 42,602,
+// flags 732; the largest native icon module is `octopus` at 932 and the largest flag `sa-flag` at
+// 1,504, so the per-module budgets are the web's (1.5 KiB and 2 KiB).
+const NATIVE_BUDGETS = [
+  ['native (re-exports)', 'dist/native/index.mjs', 14.5 * 1024],
+  ['native/runtime', 'dist/native/runtime/index.mjs', 2.1 * 1024],
+  ['native/brands', 'dist/native/brands/index.mjs', 50 * 1024],
+  ['native/flags (re-exports)', 'dist/native/flags/index.mjs', 0.9 * 1024]
+]
+for (const [name, path, limit] of NATIVE_BUDGETS) measure(name, readArtifact(path), limit)
+
+// One directory per native icon and per native flag, each held to the budget of its web twin.
+for (const [dir, limit] of [
+  ['icons', MODULE_BUDGET],
+  ['flags', FLAG_MODULE_BYTES]
+]) {
+  const nativeDir = resolve(ROOT, 'dist', 'native', dir)
+  if (!existsSync(nativeDir)) continue
+  for (const entry of readdirSync(nativeDir, { withFileTypes: true })) {
+    if (!entry.isDirectory()) continue
+    measure(
+      `native/${dir}/${entry.name}`,
+      readArtifact(`dist/native/${dir}/${entry.name}/index.mjs`),
+      limit
+    )
+  }
 }
 
 const pad = (s, n) => String(s).padEnd(n)

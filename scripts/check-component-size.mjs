@@ -18,4 +18,8 @@ import { fileURLToPath } from 'node:url'
 import { runComponentSize } from '../src/pipeline/cli-component-size.ts'
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..')
+// The React Native components are not bundled here: their entries import `react-native-svg`,
+// which the in-memory bundle cannot resolve to anything measurable without a Metro build. The
+// native entries are budgeted per module by `check-size.mjs`.
+console.log('Native components: skipped, budgeted per module by check-size.mjs.')
 process.exitCode = await runComponentSize(root, console)

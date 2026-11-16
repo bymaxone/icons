@@ -11,6 +11,11 @@ and deprecated, each rename with the alias that keeps the old name working.
 
 ## [Unreleased]
 
+### Added
+
+- React Native components for every icon, brand mark and flag: `./native` for the icons, `./native/icons/<name>` for one icon's components, `./native/brands`, `./native/flags` and `./native/runtime` for the base and `createNativeIcon`. They are generated from the same drawings as the web components and render through `react-native-svg`, an optional peer dependency, so a web install adds nothing. The shapes keep `currentColor` and the component sets `color` on the root `<Svg>`; an icon with no `color` renders black, and a flag keeps its own colours. `size` is a number in density-independent pixels, a `title` becomes the `accessibilityLabel` of an image, and an icon with none is hidden from the accessibility tree. Apply to a consumer: nothing changes for a web install, and a React Native app adds `react-native-svg` (`>=15.11.1`) next to the package.
+- The packed tarball grows from 1,467,284 to 2,271,128 bytes (+55%) and from 7,973 to 14,181 files, because every drawing now ships a second renderer; the build peaks at 4.84 GB of resident memory. The web entries are unchanged, and each `./native` entry has its own size budget.
+
 ## [1.0.0] - 2026-11-15
 
 The first published version: 1,298 line icons, 51 filled variants, 45 hand-tuned 16 px masters,

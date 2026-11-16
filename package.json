@@ -92,6 +92,66 @@
         "default": "./dist/icons/*/index.cjs"
       }
     },
+    "./native": {
+      "import": {
+        "types": "./dist/native/index.d.ts",
+        "default": "./dist/native/index.mjs"
+      },
+      "require": {
+        "types": "./dist/native/index.d.cts",
+        "default": "./dist/native/index.cjs"
+      }
+    },
+    "./native/runtime": {
+      "import": {
+        "types": "./dist/native/runtime/index.d.ts",
+        "default": "./dist/native/runtime/index.mjs"
+      },
+      "require": {
+        "types": "./dist/native/runtime/index.d.cts",
+        "default": "./dist/native/runtime/index.cjs"
+      }
+    },
+    "./native/brands": {
+      "import": {
+        "types": "./dist/native/brands/index.d.ts",
+        "default": "./dist/native/brands/index.mjs"
+      },
+      "require": {
+        "types": "./dist/native/brands/index.d.cts",
+        "default": "./dist/native/brands/index.cjs"
+      }
+    },
+    "./native/flags": {
+      "import": {
+        "types": "./dist/native/flags/index.d.ts",
+        "default": "./dist/native/flags/index.mjs"
+      },
+      "require": {
+        "types": "./dist/native/flags/index.d.cts",
+        "default": "./dist/native/flags/index.cjs"
+      }
+    },
+    "./native/flags/*": {
+      "import": {
+        "types": "./dist/native/flags/*/index.d.ts",
+        "default": "./dist/native/flags/*/index.mjs"
+      },
+      "require": {
+        "types": "./dist/native/flags/*/index.d.cts",
+        "default": "./dist/native/flags/*/index.cjs"
+      }
+    },
+    "./native/icons/*": {
+      "import": {
+        "types": "./dist/native/icons/*/index.d.ts",
+        "default": "./dist/native/icons/*/index.mjs"
+      },
+      "require": {
+        "types": "./dist/native/icons/*/index.d.cts",
+        "default": "./dist/native/icons/*/index.cjs"
+      }
+    },
     "./svg/*": "./dist/svg/*",
     "./sprite.svg": "./dist/sprite.svg",
     "./metadata.json": "./dist/metadata.json",
@@ -125,6 +185,30 @@
       "icons/*": [
         "./dist/icons/*/index.d.cts",
         "./dist/icons/*/index.d.ts"
+      ],
+      "native": [
+        "./dist/native/index.d.cts",
+        "./dist/native/index.d.ts"
+      ],
+      "native/runtime": [
+        "./dist/native/runtime/index.d.cts",
+        "./dist/native/runtime/index.d.ts"
+      ],
+      "native/brands": [
+        "./dist/native/brands/index.d.cts",
+        "./dist/native/brands/index.d.ts"
+      ],
+      "native/flags": [
+        "./dist/native/flags/index.d.cts",
+        "./dist/native/flags/index.d.ts"
+      ],
+      "native/flags/*": [
+        "./dist/native/flags/*/index.d.cts",
+        "./dist/native/flags/*/index.d.ts"
+      ],
+      "native/icons/*": [
+        "./dist/native/icons/*/index.d.cts",
+        "./dist/native/icons/*/index.d.ts"
       ],
       "metadata.json": [
         "./dist/metadata.json"
@@ -170,7 +254,7 @@
     "test:cov": "jest --coverage",
     "test:cov:all": "jest --config jest.coverage.config.ts --coverage",
     "test:watch": "jest --watch",
-    "typecheck": "tsc --noEmit && tsc --noEmit -p tsconfig.build.json && tsc --noEmit -p tsconfig.meta.json"
+    "typecheck": "tsc --noEmit && tsc --noEmit -p tsconfig.build.json && tsc --noEmit -p tsconfig.meta.json && tsc --noEmit -p tsconfig.native.json"
   },
   "lint-staged": {
     "*.{ts,tsx,js,mjs,cjs}": [
@@ -183,7 +267,8 @@
   },
   "dependencies": {},
   "peerDependencies": {
-    "react": "^19.0.0"
+    "react": "^19.0.0",
+    "react-native-svg": ">=15.11.1"
   },
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.18.5",
@@ -224,6 +309,8 @@
     "prettier": "^3.8.3",
     "react": "^19.2.6",
     "react-dom": "^19.3.1",
+    "react-native": "~0.86.3",
+    "react-native-svg": "15.16.1",
     "react-server-dom-webpack": "^19.3.1",
     "simple-icons": "16.37.0",
     "svgo": "^4.1.0",
@@ -254,5 +341,10 @@
     "access": "public",
     "provenance": true,
     "registry": "https://registry.npmjs.org/"
+  },
+  "peerDependenciesMeta": {
+    "react-native-svg": {
+      "optional": true
+    }
   }
 }

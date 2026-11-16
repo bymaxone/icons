@@ -120,23 +120,70 @@ control its version and the supply-chain surface stays minimal.
 
 ## 📦 Subpath Exports
 
-| Subpath           | Contents                                                                 | Status |
-| ----------------- | ------------------------------------------------------------------------ | ------ |
-| `.`               | Every line, filled and 16 px component, the `Icon` base and the types    | Ready  |
-| `./runtime`       | The `Icon` base, `createIcon` and their types                            | Ready  |
-| `./meta`          | Typed metadata and the `IconName` union, with no React import            | Ready  |
-| `./icons/<name>`  | One icon's components, for consumers that avoid barrels                  | Ready  |
-| `./brands`        | Brand components                                                         | Ready  |
-| `./flags`         | Country flag components (`BrFlagIcon`), 16 px high by default            | Ready  |
-| `./flags/<name>`  | One flag's component, for a dynamic import                               | Ready  |
-| `./svg/*`         | Raw SVG files (`svg/line/<name>.svg`, `filled`, `sm`, `brands`, `flags`) | Ready  |
-| `./sprite.svg`    | The SVG sprite, one `<symbol>` per drawing                               | Ready  |
-| `./metadata.json` | Merged metadata of every icon, brand and flag                            | Ready  |
+| Subpath                 | Contents                                                                     | Status |
+| ----------------------- | ---------------------------------------------------------------------------- | ------ |
+| `.`                     | Every line, filled and 16 px component, the `Icon` base and the types        | Ready  |
+| `./runtime`             | The `Icon` base, `createIcon` and their types                                | Ready  |
+| `./meta`                | Typed metadata and the `IconName` union, with no React import                | Ready  |
+| `./icons/<name>`        | One icon's components, for consumers that avoid barrels                      | Ready  |
+| `./brands`              | Brand components                                                             | Ready  |
+| `./flags`               | Country flag components (`BrFlagIcon`), 16 px high by default                | Ready  |
+| `./flags/<name>`        | One flag's component, for a dynamic import                                   | Ready  |
+| `./native`              | Every line, filled and 16 px icon as a React Native component, and the bases | Ready  |
+| `./native/icons/<name>` | One icon's React Native components, for a dynamic import                     | Ready  |
+| `./native/brands`       | Brand components for React Native                                            | Ready  |
+| `./native/flags`        | Flag components for React Native                                             | Ready  |
+| `./native/runtime`      | The native base, `createNativeIcon` and their types                          | Ready  |
+| `./svg/*`               | Raw SVG files (`svg/line/<name>.svg`, `filled`, `sm`, `brands`, `flags`)     | Ready  |
+| `./sprite.svg`          | The SVG sprite, one `<symbol>` per drawing                                   | Ready  |
+| `./metadata.json`       | Merged metadata of every icon, brand and flag                                | Ready  |
 
 A flag takes the props of an icon without `color`, `strokeWidth` and `absoluteStrokeWidth`, since
 it keeps its own colours, and its `size` is its height: 16 by default, so a 3:2 flag is 24 by 16.
 For example `<BrFlagIcon size={24} title="Brazil" />` after
 `import { BrFlagIcon } from '@bymax-one/icons/flags'`.
+
+### React Native
+
+The same drawings are components for React Native: icons from `./native`, brand marks from
+`./native/brands` and flags from `./native/flags`, with `react-native-svg` as an optional peer: a web consumer installs nothing new. The shapes keep `currentColor` and the
+component sets `color` on the root `<Svg>`, so `color` works as it does on the web and an icon
+with none renders black. `size` is a number in density-independent pixels. A `title` becomes
+the `accessibilityLabel` of an image; with none the icon is hidden from the accessibility tree.
+A flag keeps its own colours and takes no `color`.
+
+**What the package needs.** `react-native-svg` `>=15.11.1`: the first release whose
+published tarball is complete (15.11.0 ships
+without `scripts/rnsvg_utils.rb`, so `pod install` fails on it). Metro must resolve the package's
+`exports` map: React Native 0.79 and Expo SDK 53 do it by default, and on an earlier React
+Native you set it in `metro.config.js`:
+
+```js
+config.resolver.unstable_enablePackageExports = true
+```
+
+**What was tested.** 15.16.0 on Expo SDK 58 and React Native 0.88.1 (New Architecture), on iOS and
+Android; 15.11.1 on React Native 0.78.3 (old architecture), on iOS and Android. Which
+`react-native-svg` release builds with which React Native version and architecture is
+`react-native-svg`'s own matrix, not this package's: 15.11.0 does not build with the New
+Architecture on React Native 0.78 or later, so with the New Architecture use the release that
+supports your React Native version, and read the compatibility table in its README.
+
+```tsx
+import { LightningIcon } from '@bymax-one/icons/native'
+import { GithubBrandIcon } from '@bymax-one/icons/native/brands'
+import { BrFlagIcon } from '@bymax-one/icons/native/flags'
+
+export function NativeBadges() {
+  return (
+    <>
+      <LightningIcon size={24} color="#0a7d33" title="Credits" />
+      <GithubBrandIcon size={20} />
+      <BrFlagIcon size={24} title="Brazil" />
+    </>
+  )
+}
+```
 
 Every subpath is built, exported and checked on every pull request, and holds the full set.
 The root does not export brand marks or flags; they come from `./brands` and `./flags`.
@@ -165,10 +212,11 @@ pnpm add @bymax-one/icons react
 
 ### Peer dependency matrix
 
-| Package | Version    | Needed by                          |
-| ------- | ---------- | ---------------------------------- |
-| Node.js | `>=24.0.0` | Tooling and builds                 |
-| `react` | `^19.0.0`  | The root, `./brands` and `./flags` |
+| Package            | Version                | Needed by                          |
+| ------------------ | ---------------------- | ---------------------------------- |
+| Node.js            | `>=24.0.0`             | Tooling and builds                 |
+| `react`            | `^19.0.0`              | The root, `./brands` and `./flags` |
+| `react-native-svg` | `>=15.11.1` (optional) | The `./native` entries             |
 
 ---
 

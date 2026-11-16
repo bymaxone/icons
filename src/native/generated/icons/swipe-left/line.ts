@@ -1,0 +1,22 @@
+/**
+ * @fileoverview The `swipe-left` icon, line variant.
+ * Written by `pnpm generate` from icons/line/swipe-left.svg: edit the source, never this file.
+ * @layer Generated
+ */
+
+import { createNativeIcon } from '@bymax-one/icons/native/runtime'
+
+/**
+ * The `swipe-left` icon, line variant: swipe left, gesture, touch, slide.
+ *
+ * @since 1.1.0
+ */
+export const SwipeLeftIcon = /* @__PURE__ */ createNativeIcon('swipe-left', [
+  [
+    'path',
+    {
+      d: 'M13.75 17.25V13a1.5 1.5 0 0 1 3 0v3.75a1.25 1.25 0 0 1 2.25 0 1.25 1.25 0 0 1 2.25.25v2.5c0 1.75-1.25 2.75-2.75 2.75h-2.75c-1.5 0-2.5-.5-3.25-1.5l-1-1.5c-.5-.75.25-1.5 1.25-1z'
+    }
+  ],
+  ['path', { d: 'M18.75 6.25H5.25m3-3-3 3 3 3' }]
+])
