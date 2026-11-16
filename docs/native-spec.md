@@ -57,7 +57,7 @@ Props that exist only for the DOM (`className`, `style` as a CSS object, `ref` t
 - A Jest test renders every native icon through `react-test-renderer` with a mock of `react-native-svg`, and a second test checks that the rendered element tree has the same shapes as the web render of the same icon.
 - A colour test renders an icon with `color="red"` and checks that the root carries `color="red"` and the shapes still read `currentColor`; with no `color` the root has none. The Expo test then shows the shapes painted red on a device.
 - Coverage and mutation stay at 100% for the hand-written native code; the generated modules are excluded as they are on the web.
-- The native runtime holds its own copy of three small helpers, `resolveStrokeWidth`, the icon-name to component-name conversion and the view box parser, instead of widening `./runtime`; a parity spec runs both copies on the same inputs and fails when they differ.
+- The native runtime holds its own copy of the helpers it shares with the web runtime instead of widening `./runtime`; `helpers-parity.spec.ts` runs both copies on the same inputs and fails when they differ.
 - A native component is documented `@since 1.1.0`, the release that introduced the entry, whatever version its drawing came in.
 
 ## 6. The Expo test from the tarball
@@ -81,7 +81,7 @@ Decided by the auditor:
 3. **Flags.** In `./native` in 1.1.0 with the icons and the brands. A flag keeps its own viewBox and colours and takes no `color` prop.
 4. **Accessibility.** Decorative by default and hidden; `title` gives `accessibilityLabel` and `accessibilityRole="image"`.
 
-Still open: the size budgets of the native entries, the minimum `react-native-svg` version on a device, and the Android run of the Expo test. The 1.0.0 release is merged.
+Still open: the size budgets of the native entries, the minimum `react-native-svg` version on a device, and the Android run of the Expo test.
 
 ## 8. Out of scope
 
