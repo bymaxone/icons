@@ -195,11 +195,11 @@ pnpm add @bymax-one/icons react
 
 ### Peer dependency matrix
 
-| Package            | Version               | Needed by                          |
-| ------------------ | --------------------- | ---------------------------------- |
-| Node.js            | `>=24.0.0`            | Tooling and builds                 |
-| `react`            | `^19.0.0`             | The root, `./brands` and `./flags` |
-| `react-native-svg` | `>=15.0.0` (optional) | The `./native` entries             |
+| Package            | Version                | Needed by                          |
+| ------------------ | ---------------------- | ---------------------------------- |
+| Node.js            | `>=24.0.0`             | Tooling and builds                 |
+| `react`            | `^19.0.0`              | The root, `./brands` and `./flags` |
+| `react-native-svg` | `>=15.11.0` (optional) | The `./native` entries             |
 
 ---
 

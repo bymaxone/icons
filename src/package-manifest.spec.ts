@@ -54,7 +54,7 @@ describe('package.json', () => {
      * Scenario: a web consumer installs nothing new, so the native renderer is an optional
      * peer; react-native is required by react-native-svg and is never declared here.
      */
-    expect(manifest.peerDependencies?.['react-native-svg']).toBe('>=15.0.0')
+    expect(manifest.peerDependencies?.['react-native-svg']).toBe('>=15.11.0')
     expect(manifest.peerDependenciesMeta).toEqual({ 'react-native-svg': { optional: true } })
     expect(Object.keys(manifest.peerDependencies ?? {})).not.toContain('react-native')
   })
