@@ -180,7 +180,7 @@ for (const icon of icons) {
   measure(`module ${icon}`, readArtifact(`dist/icons/${icon}/index.mjs`), MODULE_BUDGET)
 }
 
-// React Native entries, each held to a budget 20% above its measured brotli size. They are fixed
+// React Native entries, each held to a budget above its measured brotli size. They are fixed
 // numbers, as the runtime's is: the native index re-exports every icon, so it moves with the set,
 // and a growing set raises it here with a reviewed number rather than a formula. Measured on 1,298
 // icon modules, 250 flag modules and 110 marks: index 12,397 bytes, runtime 1,786, brands 42,602,
