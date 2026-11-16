@@ -14,7 +14,7 @@ The same icons, brand marks and flags as React Native components, from the same 
 
 | Subpath                 | Holds                                     | Peer dependencies           |
 | ----------------------- | ----------------------------------------- | --------------------------- |
-| `./native`              | Every native component, named exports     | `react`, `react-native-svg` |
+| `./native`              | Every icon component, the native bases    | `react`, `react-native-svg` |
 | `./native/icons/<name>` | One icon's components, for dynamic import | `react`, `react-native-svg` |
 | `./native/brands`       | The brand marks                           | `react`, `react-native-svg` |
 | `./native/flags`        | The flags                                 | `react`, `react-native-svg` |
@@ -78,7 +78,7 @@ Decided by the auditor:
 
 1. **The subpath.** `./native` with the per-entry subpaths above, one version for web and native.
 2. **Colour.** `currentColor` on the shapes and `color` on the root `<Svg>`; black by default; no required `color`.
-3. **Flags.** In `./native` in 1.1.0 with the icons and the brands. A flag keeps its own viewBox and colours and takes no `color` prop.
+3. **Flags.** In 1.1.0 with the icons and the brands, from `./native/flags`. A flag keeps its own viewBox and colours and takes no `color` prop.
 4. **Accessibility.** Decorative by default and hidden; `title` gives `accessibilityLabel` and `accessibilityRole="image"`.
 
 Still open: the size budgets of the native entries, the minimum `react-native-svg` version on a device, and the Android run of the Expo test.

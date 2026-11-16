@@ -120,23 +120,23 @@ control its version and the supply-chain surface stays minimal.
 
 ## 📦 Subpath Exports
 
-| Subpath                 | Contents                                                                 | Status |
-| ----------------------- | ------------------------------------------------------------------------ | ------ |
-| `.`                     | Every line, filled and 16 px component, the `Icon` base and the types    | Ready  |
-| `./runtime`             | The `Icon` base, `createIcon` and their types                            | Ready  |
-| `./meta`                | Typed metadata and the `IconName` union, with no React import            | Ready  |
-| `./icons/<name>`        | One icon's components, for consumers that avoid barrels                  | Ready  |
-| `./brands`              | Brand components                                                         | Ready  |
-| `./flags`               | Country flag components (`BrFlagIcon`), 16 px high by default            | Ready  |
-| `./flags/<name>`        | One flag's component, for a dynamic import                               | Ready  |
-| `./native`              | Every icon, brand and flag as a React Native component                   | Ready  |
-| `./native/icons/<name>` | One icon's React Native components, for a dynamic import                 | Ready  |
-| `./native/brands`       | Brand components for React Native                                        | Ready  |
-| `./native/flags`        | Flag components for React Native                                         | Ready  |
-| `./native/runtime`      | The native base, `createNativeIcon` and their types                      | Ready  |
-| `./svg/*`               | Raw SVG files (`svg/line/<name>.svg`, `filled`, `sm`, `brands`, `flags`) | Ready  |
-| `./sprite.svg`          | The SVG sprite, one `<symbol>` per drawing                               | Ready  |
-| `./metadata.json`       | Merged metadata of every icon, brand and flag                            | Ready  |
+| Subpath                 | Contents                                                                     | Status |
+| ----------------------- | ---------------------------------------------------------------------------- | ------ |
+| `.`                     | Every line, filled and 16 px component, the `Icon` base and the types        | Ready  |
+| `./runtime`             | The `Icon` base, `createIcon` and their types                                | Ready  |
+| `./meta`                | Typed metadata and the `IconName` union, with no React import                | Ready  |
+| `./icons/<name>`        | One icon's components, for consumers that avoid barrels                      | Ready  |
+| `./brands`              | Brand components                                                             | Ready  |
+| `./flags`               | Country flag components (`BrFlagIcon`), 16 px high by default                | Ready  |
+| `./flags/<name>`        | One flag's component, for a dynamic import                                   | Ready  |
+| `./native`              | Every line, filled and 16 px icon as a React Native component, and the bases | Ready  |
+| `./native/icons/<name>` | One icon's React Native components, for a dynamic import                     | Ready  |
+| `./native/brands`       | Brand components for React Native                                            | Ready  |
+| `./native/flags`        | Flag components for React Native                                             | Ready  |
+| `./native/runtime`      | The native base, `createNativeIcon` and their types                          | Ready  |
+| `./svg/*`               | Raw SVG files (`svg/line/<name>.svg`, `filled`, `sm`, `brands`, `flags`)     | Ready  |
+| `./sprite.svg`          | The SVG sprite, one `<symbol>` per drawing                                   | Ready  |
+| `./metadata.json`       | Merged metadata of every icon, brand and flag                                | Ready  |
 
 A flag takes the props of an icon without `color`, `strokeWidth` and `absoluteStrokeWidth`, since
 it keeps its own colours, and its `size` is its height: 16 by default, so a 3:2 flag is 24 by 16.
@@ -145,8 +145,8 @@ For example `<BrFlagIcon size={24} title="Brazil" />` after
 
 ### React Native
 
-The same drawings are components for React Native, from `./native`, with `react-native-svg` as an
-optional peer: a web consumer installs nothing new. The shapes keep `currentColor` and the
+The same drawings are components for React Native: icons from `./native`, brand marks from
+`./native/brands` and flags from `./native/flags`, with `react-native-svg` as an optional peer: a web consumer installs nothing new. The shapes keep `currentColor` and the
 component sets `color` on the root `<Svg>`, so `color` works as it does on the web and an icon
 with none renders black. `size` is a number in density-independent pixels. A `title` becomes
 the `accessibilityLabel` of an image; with none the icon is hidden from the accessibility tree.
