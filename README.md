@@ -152,8 +152,8 @@ with none renders black. `size` is a number in density-independent pixels. A `ti
 the `accessibilityLabel` of an image; with none the icon is hidden from the accessibility tree.
 A flag keeps its own colours and takes no `color`.
 
-**What the package needs.** `react-native-svg` `>=15.11.1`: the first release that resolves
-`currentColor` from the root's `color` and whose published tarball is complete (15.11.0 ships
+**What the package needs.** `react-native-svg` `>=15.11.1`: the first release whose
+published tarball is complete (15.11.0 ships
 without `scripts/rnsvg_utils.rb`, so `pod install` fails on it). Metro must resolve the package's
 `exports` map: React Native 0.79 and Expo SDK 53 do it by default, and on an earlier React
 Native you set it in `metro.config.js`:
