@@ -202,7 +202,7 @@ The sheets in [`contact-sheets/release-1.0/`](./contact-sheets/release-1.0/) wer
 
 Trusted publishing needs the package on npm, so pushing `v1.1.0` before 1.0.0 is published would fail the workflow. After the 1.0.0 publish and its trusted-publisher setup, `release.yml` publishes 1.1.0 and `pnpm check:api` compares it with 1.0.0: the web declarations carry no difference, and the native entries are new.
 
-**The tarball** (`npm pack --dry-run --json` on the release branch): 14,181 files, 2,271,764 bytes packed and 12,634,946 bytes unpacked, against 7,973 files and 1,467,284 bytes packed for 1.0.0, a growth of 55% in packed size, because every drawing now ships a second renderer. The dogfood gate checks that the 14,181 entries sit under the allowed paths.
+**The tarball** (`npm pack --dry-run --json` on the release branch): 14,181 files, 2,271,761 bytes packed and 12,634,948 bytes unpacked, against 7,973 files and 1,467,284 bytes packed for 1.0.0, a growth of 55% in packed size, because every drawing now ships a second renderer. The dogfood gate checks that the 14,181 entries sit under the allowed paths.
 
 **The gates**, on the release branch: `pnpm prepublishOnly` passes with 81 suites and 3,437 tests at 100% coverage; `pnpm dogfood` passes; `pnpm check:api` prints "No earlier published version", the expected result until 1.0.0 is on npm. `pnpm check:runtime` resolves 1,552 `./native` subpaths in ESM and CommonJS to the declared files, with exactly their names, and the 1,553 web subpaths still export their 4,379 names.
 
