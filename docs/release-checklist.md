@@ -119,7 +119,7 @@ For the founder. Every step runs on the founder's machine, logged in to npm as a
 
    Then run `pnpm dogfood` and `pnpm check:api`. The second prints "No earlier published version", which is the expected result for a first release.
 
-4. **Keep the local pack to compare against.** Run `npm pack --pack-destination /tmp/icons-local`.
+4. **Keep the local pack to compare against.** Run `mkdir -p /tmp/icons-local && npm pack --pack-destination /tmp/icons-local`; npm does not create the directory.
 
 5. **Publish.** Run `npm publish --access public --provenance=false --otp <code>`.
    - Provenance is generated only by a CI run with an OIDC identity. `publishConfig` asks for it, so a local publish must turn it off explicitly.
