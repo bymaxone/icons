@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `regenerate` icon, line variant: retry, redo, reroll, ai.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const RegenerateIcon = /* @__PURE__ */ createNativeIcon('regenerate', [
   ['path', { d: 'M16.5 4.889a8.5 8.5 0 1 1-8.5 0m-3.381-.906L8 4.889 7.094 8.27' }],

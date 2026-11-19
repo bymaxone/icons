@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `dinosaur` icon, line variant: dinosaur, fossil, prehistoric, reptile.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const DinosaurIcon = /* @__PURE__ */ createNativeIcon('dinosaur', [
   [

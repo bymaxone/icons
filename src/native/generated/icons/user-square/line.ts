@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `user-square` icon, line variant: user, contact, card, profile.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const UserSquareIcon = /* @__PURE__ */ createNativeIcon('user-square', [
   [

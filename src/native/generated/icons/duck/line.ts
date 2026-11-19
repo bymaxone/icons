@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `duck` icon, line variant: duck, bird, pond, quack.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const DuckIcon = /* @__PURE__ */ createNativeIcon('duck', [
   [

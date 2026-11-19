@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `chevron-right` icon, line variant: caret, forward, next, right.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const ChevronRightIcon = /* @__PURE__ */ createNativeIcon('chevron-right', [
   ['path', { d: 'm9.25 6.25 6 6-6 6' }]

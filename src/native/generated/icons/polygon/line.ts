@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `polygon` icon, line variant: polygon, shape, vertices, geometry.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const PolygonIcon = /* @__PURE__ */ createNativeIcon('polygon', [
   ['path', { d: 'm10.64 6.86.72-.22m5.71 3.02.36 1.18m-3.04 5.86-1.78.6m-5.22-3.07-.28-1.46' }],

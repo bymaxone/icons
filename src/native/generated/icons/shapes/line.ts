@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `shapes` icon, line variant: shapes, circle, square, triangle, options, alternatives.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const ShapesIcon = /* @__PURE__ */ createNativeIcon('shapes', [
   ['circle', { cx: 7.75, cy: 7.25, r: 3 }],

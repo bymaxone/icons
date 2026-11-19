@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `strawberry` icon, line variant: strawberry, berry, red fruit, seeds.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const StrawberryIcon = /* @__PURE__ */ createNativeIcon('strawberry', [
   [

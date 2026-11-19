@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `high-speed-train` icon, line variant: high speed train, bullet train, rail express, intercity.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const HighSpeedTrainIcon = /* @__PURE__ */ createNativeIcon('high-speed-train', [
   [

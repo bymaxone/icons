@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `list-plus` icon, line variant: list plus, new item, append, create entry.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const ListPlusIcon = /* @__PURE__ */ createNativeIcon('list-plus', [
   ['path', { d: 'M9.25 6.25h10.5m-10.5 6h5.9m-5.9 6h2.16' }],

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `paperclip` icon, line variant: attach, attachment, clip, file.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const PaperclipIcon = /* @__PURE__ */ createNativeIcon('paperclip', [
   [

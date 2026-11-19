@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `file-question` icon, line variant: file question, unknown document, needs review, unidentified.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const FileQuestionIcon = /* @__PURE__ */ createNativeIcon('file-question', [
   [

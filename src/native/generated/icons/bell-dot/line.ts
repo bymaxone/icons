@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `bell-dot` icon, line variant: bell dot, unread, badge, new alert.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const BellDotIcon = /* @__PURE__ */ createNativeIcon('bell-dot', [
   [

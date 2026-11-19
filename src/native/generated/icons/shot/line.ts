@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `shot` icon, line variant: framing, viewfinder, subject, take.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const ShotIcon = /* @__PURE__ */ createNativeIcon('shot', [
   ['path', { d: 'M3.25 9.25v-2c0-1.625.375-2 2-2h2' }],

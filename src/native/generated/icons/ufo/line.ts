@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `ufo` icon, line variant: ufo, alien, spaceship, flying saucer.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const UfoIcon = /* @__PURE__ */ createNativeIcon('ufo', [
   [

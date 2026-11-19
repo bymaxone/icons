@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `fast-forward` icon, line variant: fast forward, skip ahead, media, speed.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const FastForwardIcon = /* @__PURE__ */ createNativeIcon('fast-forward', [
   [

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `set-square` icon, line variant: set square, triangle ruler, drafting, right angle.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const SetSquareIcon = /* @__PURE__ */ createNativeIcon('set-square', [
   ['path', { d: 'M4.25 20.25v-16l16 16z' }],

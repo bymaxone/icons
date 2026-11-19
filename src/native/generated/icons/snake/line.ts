@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `snake` icon, line variant: snake, serpent, reptile, slither.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const SnakeIcon = /* @__PURE__ */ createNativeIcon('snake', [
   [

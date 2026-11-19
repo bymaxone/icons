@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `crane` icon, line variant: crane, construction, lift, site.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const CraneIcon = /* @__PURE__ */ createNativeIcon('crane', [
   ['path', { d: 'M7.25 21.25v-16m3 16v-16' }],

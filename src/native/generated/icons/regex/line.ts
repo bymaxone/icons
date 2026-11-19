@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `regex` icon, line variant: regex, pattern, match, wildcard.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const RegexIcon = /* @__PURE__ */ createNativeIcon('regex', [
   ['path', { d: 'M15.25 4.25v7m-3-5.25 6 3.5m0-3.5-6 3.5' }],

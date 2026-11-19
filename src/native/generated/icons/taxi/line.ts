@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `taxi` icon, line variant: taxi, cab, ride, fare.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const TaxiIcon = /* @__PURE__ */ createNativeIcon('taxi', [
   ['path', { d: 'm5.25 11.25 1.5-4c.25-1 .75-1.5 1.75-1.5H16c1 0 1.5.5 1.75 1.5l1.5 4' }],

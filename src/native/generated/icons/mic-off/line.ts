@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `mic-off` icon, line variant: mute microphone, muted, audio input off, silence.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const MicOffIcon = /* @__PURE__ */ createNativeIcon('mic-off', [
   [

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `arrow-up-clock` icon, line variant: arrow up clock, sort by newest, later time, time ascending.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const ArrowUpClockIcon = /* @__PURE__ */ createNativeIcon('arrow-up-clock', [
   ['path', { d: 'm5.75 11.25 6.5-6.5 6.327 6.327M12.25 4.75v8.9' }],

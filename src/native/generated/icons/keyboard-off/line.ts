@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `keyboard-off` icon, line variant: keyboard off, disabled, hidden, typing.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const KeyboardOffIcon = /* @__PURE__ */ createNativeIcon('keyboard-off', [
   [

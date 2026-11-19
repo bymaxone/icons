@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `dashboard` icon, filled variant: overview, panels, tiles, home screen.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const DashboardFilledIcon = /* @__PURE__ */ createNativeIcon(
   'dashboard-filled',

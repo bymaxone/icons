@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `bowling-pin` icon, line variant: bowling pin, strike, alley, pins.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const BowlingPinIcon = /* @__PURE__ */ createNativeIcon('bowling-pin', [
   [

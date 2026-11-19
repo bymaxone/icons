@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `rocket-launch` icon, line variant: rocket launch, liftoff, space, start.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const RocketLaunchIcon = /* @__PURE__ */ createNativeIcon('rocket-launch', [
   [

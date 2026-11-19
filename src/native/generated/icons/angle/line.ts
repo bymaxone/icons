@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `angle` icon, line variant: angle, degrees, geometry, corner.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const AngleIcon = /* @__PURE__ */ createNativeIcon('angle', [
   ['path', { d: 'M4.25 4.25v16h16' }],

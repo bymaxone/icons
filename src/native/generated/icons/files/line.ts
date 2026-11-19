@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `files` icon, line variant: files, documents, pages, several files.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const FilesIcon = /* @__PURE__ */ createNativeIcon('files', [
   [

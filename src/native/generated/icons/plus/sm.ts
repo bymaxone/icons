@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `plus` icon, sm variant: add, new, create, more.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const PlusSmIcon = /* @__PURE__ */ createNativeIcon(
   'plus-sm',

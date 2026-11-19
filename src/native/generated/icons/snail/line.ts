@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `snail` icon, line variant: snail, slow, shell, nature.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const SnailIcon = /* @__PURE__ */ createNativeIcon('snail', [
   ['path', { d: 'M3.25 18.75h13.5c2.5 0 4-1.5 4-4v-6' }],

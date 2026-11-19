@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `face-mask` icon, line variant: face mask, protection, hygiene, health.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const FaceMaskIcon = /* @__PURE__ */ createNativeIcon('face-mask', [
   ['path', { d: 'M6.25 8.25h12c.75 0 1 .25 1 1v5c0 2.5-3 4.5-7 4.5s-7-2-7-4.5v-5c0-.75.25-1 1-1' }],

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `layers` icon, line variant: stack, levels, arrange, sheets.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const LayersIcon = /* @__PURE__ */ createNativeIcon('layers', [
   [

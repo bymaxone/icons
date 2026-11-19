@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `camera-off` icon, line variant: camera, photo, off, disabled.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const CameraOffIcon = /* @__PURE__ */ createNativeIcon('camera-off', [
   [

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `elephant` icon, line variant: elephant, trunk, safari, large.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const ElephantIcon = /* @__PURE__ */ createNativeIcon('elephant', [
   ['path', { d: 'M10.25 5.25h6.5c2.5 0 4.5 2 4.5 4.5v9h-3.5v-4h-5.5v4h-3.5v-5.5' }],

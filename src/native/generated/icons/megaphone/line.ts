@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `megaphone` icon, line variant: megaphone, announce, broadcast, campaign.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const MegaphoneIcon = /* @__PURE__ */ createNativeIcon('megaphone', [
   [

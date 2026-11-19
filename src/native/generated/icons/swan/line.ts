@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `swan` icon, line variant: swan, elegant, lake, white bird.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const SwanIcon = /* @__PURE__ */ createNativeIcon('swan', [
   [

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `mountain` icon, line variant: mountain, peak, hiking, summit.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const MountainIcon = /* @__PURE__ */ createNativeIcon('mountain', [
   ['path', { d: 'm2.75 19.75 6.5-11 3.5 5.75 2.5-3.5 6 8.75z' }],

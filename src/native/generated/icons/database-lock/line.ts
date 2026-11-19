@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `database-lock` icon, line variant: database lock, protected data, encrypted, read only.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const DatabaseLockIcon = /* @__PURE__ */ createNativeIcon('database-lock', [
   [

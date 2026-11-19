@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `swipe-left` icon, line variant: swipe left, gesture, touch, slide.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const SwipeLeftIcon = /* @__PURE__ */ createNativeIcon('swipe-left', [
   [

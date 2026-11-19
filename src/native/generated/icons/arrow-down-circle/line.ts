@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `arrow-down-circle` icon, line variant: arrow, down, circle, download.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const ArrowDownCircleIcon = /* @__PURE__ */ createNativeIcon('arrow-down-circle', [
   ['circle', { cx: 12.25, cy: 12.25, r: 8.5 }],

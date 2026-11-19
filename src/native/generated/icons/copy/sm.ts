@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `copy` icon, sm variant: clipboard, copy to clipboard, cards.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const CopySmIcon = /* @__PURE__ */ createNativeIcon(
   'copy-sm',

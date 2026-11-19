@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `gift` icon, line variant: present, reward, bonus, promo.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const GiftIcon = /* @__PURE__ */ createNativeIcon('gift', [
   [

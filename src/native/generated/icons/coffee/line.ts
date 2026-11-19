@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `coffee` icon, line variant: coffee, cup, break, cafe.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const CoffeeIcon = /* @__PURE__ */ createNativeIcon('coffee', [
   ['path', { d: 'M4.75 9.25h11v6c0 3-2 5-5 5h-1c-3 0-5-2-5-5z' }],

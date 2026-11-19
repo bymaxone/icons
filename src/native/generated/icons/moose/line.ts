@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `moose` icon, line variant: moose, antlers, north, elk.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const MooseIcon = /* @__PURE__ */ createNativeIcon('moose', [
   ['path', { d: 'M9.75 12.25h5l-.5 4.5C14 19 13 20.5 12.25 20.5s-1.75-1.5-2-3.75z' }],

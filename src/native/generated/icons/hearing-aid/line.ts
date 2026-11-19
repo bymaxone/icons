@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `hearing-aid` icon, line variant: hearing aid, ear device, audiology, amplifier.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const HearingAidIcon = /* @__PURE__ */ createNativeIcon('hearing-aid', [
   [

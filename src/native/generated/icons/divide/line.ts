@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `divide` icon, line variant: divide, division, math, operator.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const DivideIcon = /* @__PURE__ */ createNativeIcon('divide', [
   ['path', { d: 'M4.75 12.25h15' }],

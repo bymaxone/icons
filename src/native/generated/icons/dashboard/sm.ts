@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `dashboard` icon, sm variant: overview, panels, tiles, home screen.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const DashboardSmIcon = /* @__PURE__ */ createNativeIcon(
   'dashboard-sm',

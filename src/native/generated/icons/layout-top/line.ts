@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `layout-top` icon, line variant: layout top, top pane, header panel, split.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const LayoutTopIcon = /* @__PURE__ */ createNativeIcon('layout-top', [
   [

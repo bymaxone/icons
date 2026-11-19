@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `stopwatch` icon, line variant: stopwatch, timer, duration, measure.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const StopwatchIcon = /* @__PURE__ */ createNativeIcon('stopwatch', [
   [

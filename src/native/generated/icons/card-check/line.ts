@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `card-check` icon, line variant: card check, approved payment, verified, valid.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const CardCheckIcon = /* @__PURE__ */ createNativeIcon('card-check', [
   [

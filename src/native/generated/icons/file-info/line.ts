@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `file-info` icon, line variant: file info, document properties, metadata, about file.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const FileInfoIcon = /* @__PURE__ */ createNativeIcon('file-info', [
   [

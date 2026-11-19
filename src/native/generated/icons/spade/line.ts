@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `spade` icon, line variant: spade, card suit, cards, games.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const SpadeIcon = /* @__PURE__ */ createNativeIcon('spade', [
   [

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `face-cool` icon, line variant: cool face, sunglasses, confident, relaxed.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const FaceCoolIcon = /* @__PURE__ */ createNativeIcon('face-cool', [
   ['path', { d: 'M20.46 10.05a8.5 8.5 0 1 1-6.01-6.01' }],

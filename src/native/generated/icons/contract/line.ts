@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `contract` icon, line variant: contract, agreement, signature, legal.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const ContractIcon = /* @__PURE__ */ createNativeIcon('contract', [
   [

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `chevron-up` icon, line variant: caret, collapse, up, expand less.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const ChevronUpIcon = /* @__PURE__ */ createNativeIcon('chevron-up', [
   ['path', { d: 'm6.25 15.25 6-6 6 6' }]

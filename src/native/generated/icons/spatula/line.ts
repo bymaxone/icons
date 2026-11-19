@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `spatula` icon, line variant: spatula, turner, flip, spreader.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const SpatulaIcon = /* @__PURE__ */ createNativeIcon('spatula', [
   [

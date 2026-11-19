@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `motorboat` icon, line variant: motorboat, speedboat, powerboat, water vehicle.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const MotorboatIcon = /* @__PURE__ */ createNativeIcon('motorboat', [
   ['path', { d: 'M3.25 14.75h17.5l-2.5 4.5H5.75z' }],

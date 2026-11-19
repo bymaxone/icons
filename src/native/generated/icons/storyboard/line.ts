@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `storyboard` icon, line variant: panels, frames, sequence, plan.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const StoryboardIcon = /* @__PURE__ */ createNativeIcon('storyboard', [
   [

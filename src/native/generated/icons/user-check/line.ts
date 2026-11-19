@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `user-check` icon, line variant: user, verified, approved, check.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const UserCheckIcon = /* @__PURE__ */ createNativeIcon('user-check', [
   ['path', { d: 'M12.4 6.75a3.15 3.15 0 0 1-6.3 0 3.15 3.15 0 0 1 6.3 0' }],

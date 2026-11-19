@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `stool` icon, line variant: stool, seat, bar stool, three legs.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const StoolIcon = /* @__PURE__ */ createNativeIcon('stool', [
   [

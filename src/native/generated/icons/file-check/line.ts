@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `file-check` icon, line variant: file, check, approved, done.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const FileCheckIcon = /* @__PURE__ */ createNativeIcon('file-check', [
   [

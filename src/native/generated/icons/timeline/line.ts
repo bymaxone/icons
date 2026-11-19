@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `timeline` icon, line variant: tracks, clips, sequence, editor.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const TimelineIcon = /* @__PURE__ */ createNativeIcon('timeline', [
   [

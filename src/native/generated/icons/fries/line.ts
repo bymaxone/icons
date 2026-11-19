@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `fries` icon, line variant: fries, chips, fast food, side.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const FriesIcon = /* @__PURE__ */ createNativeIcon('fries', [
   ['path', { d: 'M6.75 11.25h11l-1.5 10h-8z' }],

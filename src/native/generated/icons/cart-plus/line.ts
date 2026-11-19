@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `cart-plus` icon, line variant: cart plus, add to cart, basket, buy.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const CartPlusIcon = /* @__PURE__ */ createNativeIcon('cart-plus', [
   [

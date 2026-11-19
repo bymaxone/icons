@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `chevron-down` icon, sm variant: caret, expand, down, dropdown.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const ChevronDownSmIcon = /* @__PURE__ */ createNativeIcon(
   'chevron-down-sm',

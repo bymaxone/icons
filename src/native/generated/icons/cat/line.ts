@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `cat` icon, line variant: cat, pet, animal, kitten.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const CatIcon = /* @__PURE__ */ createNativeIcon('cat', [
   ['circle', { cx: 12.25, cy: 13.5, r: 5.5 }],

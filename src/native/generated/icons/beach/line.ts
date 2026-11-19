@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `beach` icon, line variant: beach, umbrella, sand, holiday.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const BeachIcon = /* @__PURE__ */ createNativeIcon('beach', [
   ['path', { d: 'M3.25 20.25h18' }],

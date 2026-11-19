@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `syringe` icon, line variant: syringe, vaccine, injection, shot.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const SyringeIcon = /* @__PURE__ */ createNativeIcon('syringe', [
   ['path', { d: 'm7.654 14.371 6.717-6.717 2.475 2.475-6.717 6.717Z' }],

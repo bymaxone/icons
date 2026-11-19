@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `color-picker` icon, line variant: color picker, eyedropper, sample, pipette.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const ColorPickerIcon = /* @__PURE__ */ createNativeIcon('color-picker', [
   [

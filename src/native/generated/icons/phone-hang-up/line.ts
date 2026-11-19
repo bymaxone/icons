@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `phone-hang-up` icon, line variant: phone, hang up, end call, reject.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const PhoneHangUpIcon = /* @__PURE__ */ createNativeIcon('phone-hang-up', [
   [

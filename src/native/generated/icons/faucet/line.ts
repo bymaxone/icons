@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `faucet` icon, line variant: faucet, tap, water, sink.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const FaucetIcon = /* @__PURE__ */ createNativeIcon('faucet', [
   ['path', { d: 'M3.75 7.25v6m0-3h9.5c2.5 0 4.5 2 4.5 4.5v.75' }],

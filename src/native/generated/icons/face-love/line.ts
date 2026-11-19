@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `face-love` icon, line variant: face in love, heart eyes, adore, crush.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const FaceLoveIcon = /* @__PURE__ */ createNativeIcon('face-love', [
   ['path', { d: 'M20.46 10.05a8.5 8.5 0 1 1-6.01-6.01' }],

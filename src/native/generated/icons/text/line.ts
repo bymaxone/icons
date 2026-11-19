@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `text` icon, line variant: type, letter t, font, title.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const TextIcon = /* @__PURE__ */ createNativeIcon('text', [
   ['path', { d: 'M4.75 4.75h15' }],

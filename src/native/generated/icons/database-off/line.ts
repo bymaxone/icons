@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `database-off` icon, line variant: database off, offline data, disabled, detached.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const DatabaseOffIcon = /* @__PURE__ */ createNativeIcon('database-off', [
   [

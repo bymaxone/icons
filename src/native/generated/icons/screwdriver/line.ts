@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `screwdriver` icon, line variant: screwdriver, repair, tool, fix.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const ScrewdriverIcon = /* @__PURE__ */ createNativeIcon('screwdriver', [
   [

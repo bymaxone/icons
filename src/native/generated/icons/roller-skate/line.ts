@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `roller-skate` icon, line variant: roller skate, quad skate, wheels, rink.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const RollerSkateIcon = /* @__PURE__ */ createNativeIcon('roller-skate', [
   ['path', { d: 'M5.25 3.25h5v7l7 2c1.75.5 3 2 3 3.75v.75h-15z' }],

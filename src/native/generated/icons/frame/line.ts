@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `frame` icon, line variant: film frame, still, perforation, picture.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const FrameIcon = /* @__PURE__ */ createNativeIcon('frame', [
   [

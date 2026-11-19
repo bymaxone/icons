@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `gamepad` icon, line variant: gamepad, controller, game, console.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const GamepadIcon = /* @__PURE__ */ createNativeIcon('gamepad', [
   [

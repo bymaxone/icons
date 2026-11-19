@@ -10,7 +10,7 @@ import { createNativeFlag } from '@bymax-one/icons/native/runtime'
  * The French Guiana flag, from https://gitlab.com/catamphetamine/country-flag-icons/-/blob/v1.6.20/flags/3x2/GF.svg (MIT, retrieved 2026-11-14).
  * It is reproduced as published by its source; see TRADEMARKS.md.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const GfFlagIcon = /* @__PURE__ */ createNativeFlag('gf-flag', '0 0 90 60', [
   ['path', { fill: '#fdeb01', d: 'm0 0 90 60H0z' }],

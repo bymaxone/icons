@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `playlist-play` icon, line variant: playlist play, queue, tracks, audio.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const PlaylistPlayIcon = /* @__PURE__ */ createNativeIcon('playlist-play', [
   ['path', { d: 'M3.75 6.25h13m-13 5h13m-13 5h7' }],

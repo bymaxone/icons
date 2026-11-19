@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `battery-full` icon, line variant: battery, full, charged, power.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const BatteryFullIcon = /* @__PURE__ */ createNativeIcon('battery-full', [
   [

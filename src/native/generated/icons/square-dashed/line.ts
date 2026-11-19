@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `square-dashed` icon, line variant: square dashed, placeholder, selection, outline.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const SquareDashedIcon = /* @__PURE__ */ createNativeIcon('square-dashed', [
   [

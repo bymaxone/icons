@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `search-x` icon, line variant: search x, nothing found, empty query, clear lookup.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const SearchXIcon = /* @__PURE__ */ createNativeIcon('search-x', [
   ['path', { d: 'M3.25 9.75a6.5 6.5 0 0 0 8.915 6.037m3.732-3.92A6.5 6.5 0 1 0 3.25 9.75' }],

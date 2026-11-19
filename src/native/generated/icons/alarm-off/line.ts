@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `alarm-off` icon, line variant: alarm off, silenced, disabled, clock.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const AlarmOffIcon = /* @__PURE__ */ createNativeIcon('alarm-off', [
   [

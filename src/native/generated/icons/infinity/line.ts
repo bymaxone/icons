@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `infinity` icon, line variant: infinity, loop, endless, unlimited.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const InfinityIcon = /* @__PURE__ */ createNativeIcon('infinity', [
   [

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `antenna` icon, line variant: antenna, signal, reception, tower.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const AntennaIcon = /* @__PURE__ */ createNativeIcon('antenna', [
   ['path', { d: 'm8.25 21.25 4-11.75 4 11.75' }],

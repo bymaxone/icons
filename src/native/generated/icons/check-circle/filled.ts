@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `check-circle` icon, filled variant: success, done, complete, approved.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const CheckCircleFilledIcon = /* @__PURE__ */ createNativeIcon(
   'check-circle-filled',

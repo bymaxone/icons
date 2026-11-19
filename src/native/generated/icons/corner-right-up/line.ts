@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `corner-right-up` icon, line variant: corner, arrow, right, up.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const CornerRightUpIcon = /* @__PURE__ */ createNativeIcon('corner-right-up', [
   ['path', { d: 'M4.75 19.75h6.5c2.5 0 3.5-1 3.5-3.5V4.75' }],

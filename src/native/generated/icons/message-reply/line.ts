@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `message-reply` icon, line variant: message reply, respond, answer, thread.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const MessageReplyIcon = /* @__PURE__ */ createNativeIcon('message-reply', [
   [

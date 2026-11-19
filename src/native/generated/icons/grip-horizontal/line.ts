@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `grip-horizontal` icon, line variant: grip horizontal, drag handle, resize, dots.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const GripHorizontalIcon = /* @__PURE__ */ createNativeIcon('grip-horizontal', [
   ['path', { d: 'M5.75 9.25h.01' }],

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `police-station` icon, line variant: police station, law enforcement, precinct, public safety.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const PoliceStationIcon = /* @__PURE__ */ createNativeIcon('police-station', [
   ['path', { d: 'M3.25 21.25v-12l9-6 9 6v12' }],

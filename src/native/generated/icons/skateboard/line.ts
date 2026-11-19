@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `skateboard` icon, line variant: skateboard, skate, board, street.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const SkateboardIcon = /* @__PURE__ */ createNativeIcon('skateboard', [
   ['path', { d: 'M3.25 11.25c0 1.25.75 1.75 2 1.75h14c1.25 0 2-.5 2-1.75' }],

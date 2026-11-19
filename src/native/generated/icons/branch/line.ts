@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `branch` icon, line variant: branch, git, version, fork.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const BranchIcon = /* @__PURE__ */ createNativeIcon('branch', [
   ['circle', { cx: 7.25, cy: 5.25, r: 1.75 }],

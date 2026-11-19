@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `search-off` icon, line variant: search off, no lookup, hidden finder, turn off query.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const SearchOffIcon = /* @__PURE__ */ createNativeIcon('search-off', [
   [

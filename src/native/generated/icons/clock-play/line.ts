@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `clock-play` icon, line variant: clock play, start timer, resume, begin.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const ClockPlayIcon = /* @__PURE__ */ createNativeIcon('clock-play', [
   [

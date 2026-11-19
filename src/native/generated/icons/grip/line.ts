@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `grip` icon, line variant: drag, handle, reorder, dots.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const GripIcon = /* @__PURE__ */ createNativeIcon('grip', [
   ['circle', { cx: 9.25, cy: 5.75, r: 0.75 }],

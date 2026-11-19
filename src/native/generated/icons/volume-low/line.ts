@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `volume-low` icon, line variant: volume low, quiet, speaker, sound.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const VolumeLowIcon = /* @__PURE__ */ createNativeIcon('volume-low', [
   ['path', { d: 'M2.75 9.75h3.5v5h-3.5z' }],

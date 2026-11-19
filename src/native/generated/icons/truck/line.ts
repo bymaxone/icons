@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `truck` icon, line variant: truck, delivery, shipping, transport.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const TruckIcon = /* @__PURE__ */ createNativeIcon('truck', [
   [

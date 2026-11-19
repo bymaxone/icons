@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `police-badge` icon, line variant: police badge, shield, authority, law.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const PoliceBadgeIcon = /* @__PURE__ */ createNativeIcon('police-badge', [
   ['path', { d: 'M12.25 3.25 5.25 6v5.5c0 4.25 2.75 7.5 7 9.25 4.25-1.75 7-5 7-9.25V6z' }],

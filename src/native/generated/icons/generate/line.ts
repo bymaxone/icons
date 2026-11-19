@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `generate` icon, line variant: magic wand, create, make, ai.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const GenerateIcon = /* @__PURE__ */ createNativeIcon('generate', [
   ['path', { d: 'm3.25 21.25 10-10' }],

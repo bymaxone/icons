@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `parking-meter` icon, line variant: parking meter, pay, street, time limit.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const ParkingMeterIcon = /* @__PURE__ */ createNativeIcon('parking-meter', [
   ['path', { d: 'M8.25 3.25h8q1.5 0 1.5 1.5v7q0 1.5-1.5 1.5h-8q-1.5 0-1.5-1.5v-7q0-1.5 1.5-1.5' }],

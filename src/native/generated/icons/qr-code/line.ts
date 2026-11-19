@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `qr-code` icon, line variant: qr code, scan, share, code.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const QrCodeIcon = /* @__PURE__ */ createNativeIcon('qr-code', [
   [

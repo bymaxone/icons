@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `pen` icon, line variant: pen, write, fountain pen, sign.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const PenIcon = /* @__PURE__ */ createNativeIcon('pen', [
   ['path', { d: 'm12.25 21.25 5-8.5-2.75-7.5H10l-2.75 7.5z' }],

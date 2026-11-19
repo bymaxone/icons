@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `tag-off` icon, line variant: tag off, no discount, inactive label, expired.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const TagOffIcon = /* @__PURE__ */ createNativeIcon('tag-off', [
   [

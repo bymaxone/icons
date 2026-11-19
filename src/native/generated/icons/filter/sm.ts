@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `filter` icon, sm variant: funnel, narrow, refine, query.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const FilterSmIcon = /* @__PURE__ */ createNativeIcon(
   'filter-sm',

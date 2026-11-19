@@ -10,7 +10,7 @@ import { createNativeFlag } from '@bymax-one/icons/native/runtime'
  * The South Georgia & South Sandwich Islands flag, from https://gitlab.com/catamphetamine/country-flag-icons/-/blob/v1.6.20/flags/3x2/GS.svg (MIT, retrieved 2026-11-14).
  * It is reproduced as published by its source; see TRADEMARKS.md.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const GsFlagIcon = /* @__PURE__ */ createNativeFlag('gs-flag', '0 0 513 342', [
   ['path', { fill: '#012169', d: 'M0 0h513v342H0z' }],

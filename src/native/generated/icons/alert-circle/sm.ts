@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `alert-circle` icon, sm variant: error, problem, exclamation, attention.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const AlertCircleSmIcon = /* @__PURE__ */ createNativeIcon(
   'alert-circle-sm',

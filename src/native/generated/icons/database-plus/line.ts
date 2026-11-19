@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `database-plus` icon, line variant: database plus, new database, add data, storage.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const DatabasePlusIcon = /* @__PURE__ */ createNativeIcon('database-plus', [
   [

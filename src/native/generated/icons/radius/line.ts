@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `radius` icon, line variant: radius, corner, circle, measure.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const RadiusIcon = /* @__PURE__ */ createNativeIcon('radius', [
   ['circle', { cx: 12.25, cy: 12.25, r: 8.5 }],

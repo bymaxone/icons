@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `blood-test` icon, line variant: blood test, sample, lab work, vial.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const BloodTestIcon = /* @__PURE__ */ createNativeIcon('blood-test', [
   ['path', { d: 'M10.25 3.25h4m-3 0V15.5a1 1 0 0 0 2 0V3.25' }],

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `rolling-pin` icon, line variant: rolling pin, dough, baking, roller.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const RollingPinIcon = /* @__PURE__ */ createNativeIcon('rolling-pin', [
   ['path', { d: 'm6.25 15.25 3 3 9-9-3-3z' }],

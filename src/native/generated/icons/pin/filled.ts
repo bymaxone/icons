@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `pin` icon, filled variant: pushpin, keep, stick, favorite.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const PinFilledIcon = /* @__PURE__ */ createNativeIcon(
   'pin-filled',

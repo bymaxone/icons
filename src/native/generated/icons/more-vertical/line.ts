@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `more-vertical` icon, line variant: kebab, overflow, options, dots.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const MoreVerticalIcon = /* @__PURE__ */ createNativeIcon('more-vertical', [
   ['circle', { cx: 12.25, cy: 5.25, r: 0.75 }],

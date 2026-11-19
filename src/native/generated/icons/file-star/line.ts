@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `file-star` icon, line variant: file star, favorite file, important, pinned.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const FileStarIcon = /* @__PURE__ */ createNativeIcon('file-star', [
   [

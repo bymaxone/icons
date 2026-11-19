@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `candy` icon, line variant: candy, sweet, wrapped, treat.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const CandyIcon = /* @__PURE__ */ createNativeIcon('candy', [
   ['circle', { cx: 12.25, cy: 12.25, r: 3.75 }],

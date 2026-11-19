@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `arrow-left-circle` icon, line variant: arrow, left, circle, back.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const ArrowLeftCircleIcon = /* @__PURE__ */ createNativeIcon('arrow-left-circle', [
   ['circle', { cx: 12.25, cy: 12.25, r: 8.5 }],

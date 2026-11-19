@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `egg-fried` icon, line variant: egg fried, breakfast, cooking, sunny side up.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const EggFriedIcon = /* @__PURE__ */ createNativeIcon('egg-fried', [
   [

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `users-plus` icon, line variant: users plus, invite team, new members, grow group.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const UsersPlusIcon = /* @__PURE__ */ createNativeIcon('users-plus', [
   ['path', { d: 'M5.525 8.25a2.975 2.975 0 1 0 5.95 0 2.975 2.975 0 0 0-5.95 0' }],

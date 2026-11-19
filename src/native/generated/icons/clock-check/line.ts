@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `clock-check` icon, line variant: clock check, on time, confirmed, done.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const ClockCheckIcon = /* @__PURE__ */ createNativeIcon('clock-check', [
   [

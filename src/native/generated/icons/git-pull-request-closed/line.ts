@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `git-pull-request-closed` icon, line variant: pull request closed, rejected, git, review.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const GitPullRequestClosedIcon = /* @__PURE__ */ createNativeIcon(
   'git-pull-request-closed',

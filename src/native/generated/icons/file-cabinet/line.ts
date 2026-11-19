@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `file-cabinet` icon, line variant: file cabinet, filing, archive drawers, records.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const FileCabinetIcon = /* @__PURE__ */ createNativeIcon('file-cabinet', [
   [

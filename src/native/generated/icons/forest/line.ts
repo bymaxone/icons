@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `forest` icon, line variant: forest, trees, woods, woodland.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const ForestIcon = /* @__PURE__ */ createNativeIcon('forest', [
   ['path', { d: 'm7.25 4.25-3.5 6.5H6l-2.25 5h7l-2.25-5h2.25z' }],

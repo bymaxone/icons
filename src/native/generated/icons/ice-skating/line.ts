@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `ice-skating` icon, line variant: ice skating, skate, winter, rink.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const IceSkatingIcon = /* @__PURE__ */ createNativeIcon('ice-skating', [
   ['path', { d: 'M6.25 3.25h6V10l5.5 2c1 .5 1.5 1 1.5 2v1.75h-13z' }],

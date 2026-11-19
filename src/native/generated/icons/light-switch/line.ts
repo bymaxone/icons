@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `light-switch` icon, line variant: light switch, toggle, wall plate, lights.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const LightSwitchIcon = /* @__PURE__ */ createNativeIcon('light-switch', [
   [

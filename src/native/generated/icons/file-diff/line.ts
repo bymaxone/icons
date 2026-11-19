@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `file-diff` icon, line variant: file diff, changes, compare, version.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const FileDiffIcon = /* @__PURE__ */ createNativeIcon('file-diff', [
   [

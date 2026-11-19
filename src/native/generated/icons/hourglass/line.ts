@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `hourglass` icon, line variant: hourglass, waiting, pending, queued.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const HourglassIcon = /* @__PURE__ */ createNativeIcon('hourglass', [
   ['path', { d: 'M5.25 3.75h14' }],

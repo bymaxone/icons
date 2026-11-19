@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `underline` icon, line variant: underline, text, format, emphasis.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const UnderlineIcon = /* @__PURE__ */ createNativeIcon('underline', [
   ['path', { d: 'M7.25 4.75v6.5a5 5 0 0 0 10 0v-6.5' }],

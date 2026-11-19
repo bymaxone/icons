@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `file-clock` icon, line variant: file clock, versions, recent, revision.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const FileClockIcon = /* @__PURE__ */ createNativeIcon('file-clock', [
   [

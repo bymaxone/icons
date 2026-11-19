@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `star` icon, filled variant: star, favorite, rate, highlight.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const StarFilledIcon = /* @__PURE__ */ createNativeIcon(
   'star-filled',

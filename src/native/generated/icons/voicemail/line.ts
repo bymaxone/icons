@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `voicemail` icon, line variant: voicemail, message, recording, tape.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const VoicemailIcon = /* @__PURE__ */ createNativeIcon('voicemail', [
   ['circle', { cx: 6.75, cy: 12.25, r: 3.5 }],

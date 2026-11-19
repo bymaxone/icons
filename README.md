@@ -41,11 +41,11 @@ so the products that use it do not look like every other app built on the same o
 set.
 
 > [!NOTE]
-> **Status: 1.1.0.** The package holds 1,298 line icons, 51
+> **Status: 1.0.0, the first published version.** The package holds 1,298 line icons, 51
 > filled variants, 45 hand-tuned 16 px masters, 110 brand marks and 250 country flags, each
 > as a component, a raw SVG file and a metadata entry; every drawing except a flag is also a
-> sprite symbol, because the sprite holds `currentColor` drawings. 1.0.0 was the first
-> published version; 1.1.0 adds React Native components for all of it, from `./native`.
+> sprite symbol, because the sprite holds `currentColor` drawings. Every drawing is also a
+> React Native component, from `./native`.
 
 The library has **zero direct dependencies**: `react` arrives as a peer dependency, so you
 control its version and the supply-chain surface stays minimal.

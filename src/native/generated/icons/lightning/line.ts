@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `lightning` icon, line variant: bolt, credit, energy, power.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const LightningIcon = /* @__PURE__ */ createNativeIcon('lightning', [
   [

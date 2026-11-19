@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `book-minus` icon, line variant: book minus, drop title, unshelve, delete volume.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const BookMinusIcon = /* @__PURE__ */ createNativeIcon('book-minus', [
   [

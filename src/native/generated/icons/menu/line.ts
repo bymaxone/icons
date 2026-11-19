@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `menu` icon, line variant: hamburger, navigation, lines, open menu.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const MenuIcon = /* @__PURE__ */ createNativeIcon('menu', [
   ['path', { d: 'M4.75 6.25h15' }],

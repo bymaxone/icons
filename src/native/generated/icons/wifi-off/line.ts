@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `wifi-off` icon, line variant: wifi, offline, disconnected, network.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const WifiOffIcon = /* @__PURE__ */ createNativeIcon('wifi-off', [
   [

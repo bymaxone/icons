@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `pull-request` icon, line variant: pull request, git, merge, review.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const PullRequestIcon = /* @__PURE__ */ createNativeIcon('pull-request', [
   ['circle', { cx: 6.75, cy: 5.25, r: 1.75 }],

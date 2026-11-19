@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `home-check` icon, line variant: home check, verified address, confirmed, at home.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const HomeCheckIcon = /* @__PURE__ */ createNativeIcon('home-check', [
   [

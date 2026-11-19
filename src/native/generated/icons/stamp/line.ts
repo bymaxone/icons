@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `stamp` icon, line variant: stamp, approved, official, mark.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const StampIcon = /* @__PURE__ */ createNativeIcon('stamp', [
   [

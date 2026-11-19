@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `flag-off` icon, line variant: flag off, unflag, cleared, marker.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const FlagOffIcon = /* @__PURE__ */ createNativeIcon('flag-off', [
   [

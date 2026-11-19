@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `wallet` icon, filled variant: balance, money, funds, purse.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const WalletFilledIcon = /* @__PURE__ */ createNativeIcon(
   'wallet-filled',

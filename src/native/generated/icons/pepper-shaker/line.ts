@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `pepper-shaker` icon, line variant: pepper shaker, pepper, spice, grinder.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const PepperShakerIcon = /* @__PURE__ */ createNativeIcon('pepper-shaker', [
   ['path', { d: 'M9.25 8.25h6l1 12c0 .75-.5 1-1.25 1H9.5c-.75 0-1.25-.25-1.25-1z' }],

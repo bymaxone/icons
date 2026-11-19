@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `package-search` icon, line variant: package search, track parcel, find order, parcel.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const PackageSearchIcon = /* @__PURE__ */ createNativeIcon('package-search', [
   ['path', { d: 'm12.25 2.75 8 4.25v4.721m-7.887 9.719-.113.06-8-4.25V7l8-4.25' }],

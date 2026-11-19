@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `clipboard-plus` icon, line variant: clipboard, plus, add, checklist.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const ClipboardPlusIcon = /* @__PURE__ */ createNativeIcon('clipboard-plus', [
   [

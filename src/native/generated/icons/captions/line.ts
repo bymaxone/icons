@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `captions` icon, line variant: subtitles, transcript, text track, closed captions.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const CaptionsIcon = /* @__PURE__ */ createNativeIcon('captions', [
   [

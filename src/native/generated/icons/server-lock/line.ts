@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `server-lock` icon, line variant: server lock, protected host, firewall, private.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const ServerLockIcon = /* @__PURE__ */ createNativeIcon('server-lock', [
   [

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `link-plus` icon, line variant: link plus, new link, attach url, connect.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const LinkPlusIcon = /* @__PURE__ */ createNativeIcon('link-plus', [
   [

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `crosshair` icon, line variant: crosshair, target, aim, locate.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const CrosshairIcon = /* @__PURE__ */ createNativeIcon('crosshair', [
   ['circle', { cx: 12.25, cy: 12.25, r: 7.5 }],

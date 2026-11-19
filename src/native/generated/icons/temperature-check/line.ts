@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `temperature-check` icon, line variant: temperature check, fever, thermometer reading, screening.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const TemperatureCheckIcon = /* @__PURE__ */ createNativeIcon('temperature-check', [
   [

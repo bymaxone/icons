@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `baby` icon, line variant: baby, infant, child, newborn.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const BabyIcon = /* @__PURE__ */ createNativeIcon('baby', [
   ['circle', { cx: 12.25, cy: 6.75, r: 3 }],

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `bell` icon, filled variant: notifications, alerts, alarm, ring.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const BellFilledIcon = /* @__PURE__ */ createNativeIcon(
   'bell-filled',

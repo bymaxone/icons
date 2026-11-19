@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `video-x` icon, line variant: video x, playback error, canceled clip, rejected video.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const VideoXIcon = /* @__PURE__ */ createNativeIcon('video-x', [
   [

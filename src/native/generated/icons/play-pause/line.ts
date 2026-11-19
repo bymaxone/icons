@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `play-pause` icon, line variant: play pause, toggle, playback, control.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const PlayPauseIcon = /* @__PURE__ */ createNativeIcon('play-pause', [
   ['path', { d: 'm5.75 6.75 7 5.5-7 5.5z' }],

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `close` icon, line variant: x, cross, dismiss, cancel.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const CloseIcon = /* @__PURE__ */ createNativeIcon('close', [
   ['line', { x1: 6.5, x2: 18, y1: 6.5, y2: 18 }],

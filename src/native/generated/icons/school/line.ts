@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `school` icon, line variant: school, education, building, class.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const SchoolIcon = /* @__PURE__ */ createNativeIcon('school', [
   ['path', { d: 'M3.25 20.25h18' }],

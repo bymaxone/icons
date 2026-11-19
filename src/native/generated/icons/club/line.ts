@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `club` icon, line variant: club, card suit, clover, cards.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const ClubIcon = /* @__PURE__ */ createNativeIcon('club', [
   ['circle', { cx: 12.25, cy: 8, r: 3 }],

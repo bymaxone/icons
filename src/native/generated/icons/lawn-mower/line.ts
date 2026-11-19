@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `lawn-mower` icon, line variant: lawn mower, grass cutter, mowing, garden care.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const LawnMowerIcon = /* @__PURE__ */ createNativeIcon('lawn-mower', [
   ['path', { d: 'M5.25 12.25h11l2 3h-13z' }],

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `git-pull-request-draft` icon, line variant: git pull request draft, draft, review, merge.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const GitPullRequestDraftIcon = /* @__PURE__ */ createNativeIcon('git-pull-request-draft', [
   ['circle', { cx: 6.75, cy: 5.25, r: 1.75 }],

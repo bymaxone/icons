@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `glasses` icon, line variant: glasses, eyewear, read, vision.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const GlassesIcon = /* @__PURE__ */ createNativeIcon('glasses', [
   ['circle', { cx: 7.25, cy: 14.25, r: 3.5 }],

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `phone` icon, line variant: phone, call, telephone, contact.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const PhoneIcon = /* @__PURE__ */ createNativeIcon('phone', [
   [

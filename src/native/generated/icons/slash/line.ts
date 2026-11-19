@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `slash` icon, line variant: slash, divide, command, path.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const SlashIcon = /* @__PURE__ */ createNativeIcon('slash', [
   ['path', { d: 'm16.25 4.25-8 16' }]

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `tooltip` icon, line variant: tooltip, hint, bubble, popover.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const TooltipIcon = /* @__PURE__ */ createNativeIcon('tooltip', [
   [

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `wallet-x` icon, line variant: wallet x, insufficient funds, refused charge, unpaid.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const WalletXIcon = /* @__PURE__ */ createNativeIcon('wallet-x', [
   [

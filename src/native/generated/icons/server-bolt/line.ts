@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `server-bolt` icon, line variant: server bolt, quick host, power usage, performance.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const ServerBoltIcon = /* @__PURE__ */ createNativeIcon('server-bolt', [
   [

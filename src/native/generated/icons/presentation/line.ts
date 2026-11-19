@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `presentation` icon, line variant: presentation, slides, board, pitch.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const PresentationIcon = /* @__PURE__ */ createNativeIcon('presentation', [
   ['path', { d: 'M3.25 4.25h18' }],

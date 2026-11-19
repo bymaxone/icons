@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `hockey` icon, line variant: hockey stick, puck, ice hockey, rink.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const HockeyIcon = /* @__PURE__ */ createNativeIcon('hockey', [
   ['path', { d: 'M8.25 3.25 14 18.75c.25.75.75 1.25 1.5 1.25h5.25' }],

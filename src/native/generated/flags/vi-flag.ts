@@ -10,7 +10,7 @@ import { createNativeFlag } from '@bymax-one/icons/native/runtime'
  * The U.S. Virgin Islands flag, from https://gitlab.com/catamphetamine/country-flag-icons/-/blob/v1.6.20/flags/3x2/VI.svg (MIT, retrieved 2026-11-14).
  * It is reproduced as published by its source; see TRADEMARKS.md.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const ViFlagIcon = /* @__PURE__ */ createNativeFlag('vi-flag', '0 0 512 341.3', [
   ['path', { fill: '#ffffff', d: 'M0 0h512v341.3H0z' }],

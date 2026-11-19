@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `bridge` icon, line variant: bridge, crossing, river, span.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const BridgeIcon = /* @__PURE__ */ createNativeIcon('bridge', [
   ['path', { d: 'M2.75 16.25h19' }],

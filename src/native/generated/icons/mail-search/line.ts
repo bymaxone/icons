@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `mail-search` icon, line variant: mail search, find email, look up, inbox.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const MailSearchIcon = /* @__PURE__ */ createNativeIcon('mail-search', [
   [

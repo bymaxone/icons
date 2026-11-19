@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `scoreboard` icon, line variant: scoreboard, score, match, points.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const ScoreboardIcon = /* @__PURE__ */ createNativeIcon('scoreboard', [
   [

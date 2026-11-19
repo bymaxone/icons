@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `sticker` icon, line variant: sticker, label, decal, peel.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const StickerIcon = /* @__PURE__ */ createNativeIcon('sticker', [
   ['path', { d: 'M20.25 12.25a8 8 0 1 0-8 8z' }],

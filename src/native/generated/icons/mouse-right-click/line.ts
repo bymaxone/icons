@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `mouse-right-click` icon, line variant: mouse right click, context menu, secondary button, pointer.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const MouseRightClickIcon = /* @__PURE__ */ createNativeIcon('mouse-right-click', [
   [

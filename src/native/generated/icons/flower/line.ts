@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `flower` icon, line variant: flower, tulip, garden, spring.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const FlowerIcon = /* @__PURE__ */ createNativeIcon('flower', [
   ['path', { d: 'm7.75 5.25 2.25 2 2.25-2.75 2.25 2.75 2.25-2v4.5a4.5 4.5 0 0 1-9 0z' }],

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `iceberg` icon, line variant: iceberg, ice, polar, floating.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const IcebergIcon = /* @__PURE__ */ createNativeIcon('iceberg', [
   ['path', { d: 'M3.25 12.25h18' }],

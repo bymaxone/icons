@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `baby-carriage` icon, line variant: baby carriage, stroller, infant, pram.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const BabyCarriageIcon = /* @__PURE__ */ createNativeIcon('baby-carriage', [
   ['path', { d: 'M4.25 10.25h15c0 3-2.75 5-7.5 5s-7.5-2-7.5-5m0 0v-2a5 5 0 0 1 5-5v7' }],

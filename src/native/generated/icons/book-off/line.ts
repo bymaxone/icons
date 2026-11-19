@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `book-off` icon, line variant: book off, closed library, hidden title, no reading.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const BookOffIcon = /* @__PURE__ */ createNativeIcon('book-off', [
   [

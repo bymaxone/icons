@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `heart-check` icon, line variant: heart check, healthy, approved, liked.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const HeartCheckIcon = /* @__PURE__ */ createNativeIcon('heart-check', [
   [

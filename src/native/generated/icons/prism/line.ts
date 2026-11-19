@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `prism` icon, line variant: prism, 3d, light, geometry.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const PrismIcon = /* @__PURE__ */ createNativeIcon('prism', [
   ['path', { d: 'm12.25 4.75 8 13.5h-16z' }],

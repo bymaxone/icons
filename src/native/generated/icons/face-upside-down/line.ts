@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `face-upside-down` icon, line variant: upside-down face, irony, sarcasm, silly.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const FaceUpsideDownIcon = /* @__PURE__ */ createNativeIcon('face-upside-down', [
   ['path', { d: 'M4.04 14.45a8.5 8.5 0 1 1 6.01 6.01' }],

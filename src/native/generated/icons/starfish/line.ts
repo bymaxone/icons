@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `starfish` icon, line variant: starfish, sea star, ocean, beach.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const StarfishIcon = /* @__PURE__ */ createNativeIcon('starfish', [
   [

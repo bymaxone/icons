@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `calendar-clock` icon, line variant: calendar clock, schedule, appointment, time.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const CalendarClockIcon = /* @__PURE__ */ createNativeIcon('calendar-clock', [
   [

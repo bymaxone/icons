@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `rake` icon, line variant: rake, garden tool, leaves, yard work.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const RakeIcon = /* @__PURE__ */ createNativeIcon('rake', [
   ['path', { d: 'M12.25 3.25v9' }],

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `key-off` icon, line variant: key off, inactive key, suspended, no access.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const KeyOffIcon = /* @__PURE__ */ createNativeIcon('key-off', [
   ['path', { d: 'M4 15.75a4.25 4.25 0 0 0 8.401.916m-5.058-5.069A4.25 4.25 0 0 0 4 15.75' }],

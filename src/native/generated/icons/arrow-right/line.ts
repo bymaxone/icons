@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `arrow-right` icon, line variant: forward, next, right, continue.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const ArrowRightIcon = /* @__PURE__ */ createNativeIcon('arrow-right', [
   ['path', { d: 'm13.25 5.75 6.5 6.5-6.5 6.5m6.5-6.5h-15' }]

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `lock-clock` icon, line variant: lock clock, auto lock, session timeout, scheduled.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const LockClockIcon = /* @__PURE__ */ createNativeIcon('lock-clock', [
   [

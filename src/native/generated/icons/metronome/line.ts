@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `metronome` icon, line variant: metronome, tempo, beat, rhythm.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const MetronomeIcon = /* @__PURE__ */ createNativeIcon('metronome', [
   ['path', { d: 'M9.25 3.25h6l3.5 17h-13z' }],

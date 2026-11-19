@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `user` icon, filled variant: person, account, profile, avatar.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const UserFilledIcon = /* @__PURE__ */ createNativeIcon(
   'user-filled',

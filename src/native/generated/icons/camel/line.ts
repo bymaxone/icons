@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `camel` icon, line variant: camel, hump, desert, caravan.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const CamelIcon = /* @__PURE__ */ createNativeIcon('camel', [
   [
