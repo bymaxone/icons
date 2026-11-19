@@ -13,6 +13,8 @@ import type { Config } from 'jest'
 const config: Config = {
   preset: 'ts-jest',
   testEnvironment: 'node',
+  // Colour off for every spec file and the programs they spawn; see the file.
+  globalSetup: '<rootDir>/scripts/jest-no-color.mjs',
   rootDir: '.',
   testMatch: [
     '<rootDir>/src/**/*.spec.ts',
