@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `speaker` icon, line variant: speaker, loudspeaker, audio device, sound.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const SpeakerIcon = /* @__PURE__ */ createNativeIcon('speaker', [
   [

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `cookie-off` icon, line variant: cookie off, no cookies, tracking off, privacy.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const CookieOffIcon = /* @__PURE__ */ createNativeIcon('cookie-off', [
   [

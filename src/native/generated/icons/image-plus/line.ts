@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `image-plus` icon, line variant: image plus, add image, new photo, upload.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const ImagePlusIcon = /* @__PURE__ */ createNativeIcon('image-plus', [
   [

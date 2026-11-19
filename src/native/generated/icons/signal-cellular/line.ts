@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `signal-cellular` icon, line variant: signal cellular, bars, reception, mobile network.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const SignalCellularIcon = /* @__PURE__ */ createNativeIcon('signal-cellular', [
   ['path', { d: 'M20.25 3.75v16.5H3.75z' }],

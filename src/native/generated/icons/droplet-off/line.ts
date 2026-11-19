@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `droplet-off` icon, line variant: droplet off, no blur, dry, sharp.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const DropletOffIcon = /* @__PURE__ */ createNativeIcon('droplet-off', [
   ['path', { d: 'M12.25 3.75c3.5 3.75 5.5 7.25 5.5 10.25A5.5 5.5 0 0 1 8 17.5' }],

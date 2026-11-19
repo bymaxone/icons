@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `drink` icon, line variant: drink, cup, straw, beverage.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const DrinkIcon = /* @__PURE__ */ createNativeIcon('drink', [
   ['path', { d: 'M7.25 8.25h10L16 20.75H8.5z' }],

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `align-left` icon, line variant: align, left, text, paragraph.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const AlignLeftIcon = /* @__PURE__ */ createNativeIcon('align-left', [
   ['path', { d: 'M4.75 5.25h15' }],

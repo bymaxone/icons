@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `phone-missed` icon, line variant: phone missed, call, miss, history.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const PhoneMissedIcon = /* @__PURE__ */ createNativeIcon('phone-missed', [
   [

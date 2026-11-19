@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `eye` icon, filled variant: visible, show, view, preview.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const EyeFilledIcon = /* @__PURE__ */ createNativeIcon(
   'eye-filled',

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `lock` icon, filled variant: locked, private, secure, padlock.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const LockFilledIcon = /* @__PURE__ */ createNativeIcon(
   'lock-filled',

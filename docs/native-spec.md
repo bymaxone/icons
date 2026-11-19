@@ -1,6 +1,6 @@
 # P6 React Native: specification draft
 
-> **Status**: built on `feat/p6-native`, open for the auditor's size and peer decisions · **Ships as**: 1.1.0, a minor release · **Source**: [`development_plan.md`](./development_plan.md) §5 (P6)
+> **Status**: **Ships in**: 1.0.0, the first publish · **Source**: [`development_plan.md`](./development_plan.md) §5 (P6)
 
 Each item that depends on a measurement says what is measured, and the number is filled in when it is.
 
@@ -58,7 +58,7 @@ Props that exist only for the DOM (`className`, `style` as a CSS object, `ref` t
 - A colour test renders an icon with `color="red"` and checks that the root carries `color="red"` and the shapes still read `currentColor`; with no `color` the root has none. The Expo test then shows the shapes painted red on a device.
 - Coverage and mutation stay at 100% for the hand-written native code; the generated modules are excluded as they are on the web.
 - The native runtime holds its own copy of the helpers it shares with the web runtime instead of widening `./runtime`; `helpers-parity.spec.ts` runs both copies on the same inputs and fails when they differ.
-- A native component is documented `@since 1.1.0`, the release that introduced the entry, whatever version its drawing came in.
+- A native component is documented `@since 1.0.0`, the release that introduced the entry, whatever version its drawing came in.
 
 ## 6. The Expo test from the tarball
 
@@ -78,7 +78,7 @@ Decided by the auditor:
 
 1. **The subpath.** `./native` with the per-entry subpaths above, one version for web and native.
 2. **Colour.** `currentColor` on the shapes and `color` on the root `<Svg>`; black by default; no required `color`.
-3. **Flags.** In 1.1.0 with the icons and the brands, from `./native/flags`. A flag keeps its own viewBox and colours and takes no `color` prop.
+3. **Flags.** In 1.0.0 with the icons and the brands, from `./native/flags`. A flag keeps its own viewBox and colours and takes no `color` prop.
 4. **Accessibility.** Decorative by default and hidden; `title` gives `accessibilityLabel` and `accessibilityRole="image"`.
 
 Nothing is open.

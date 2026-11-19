@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `bookmark` icon, filled variant: bookmark, save, later, mark.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const BookmarkFilledIcon = /* @__PURE__ */ createNativeIcon(
   'bookmark-filled',

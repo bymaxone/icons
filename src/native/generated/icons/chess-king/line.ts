@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `chess-king` icon, line variant: chess king, king, chess, checkmate.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const ChessKingIcon = /* @__PURE__ */ createNativeIcon('chess-king', [
   ['path', { d: 'M12.25 2.75v3m-1.5-1.5h3' }],

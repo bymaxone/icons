@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `bell-check` icon, line variant: bell check, notifications on, confirmed, alert.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const BellCheckIcon = /* @__PURE__ */ createNativeIcon('bell-check', [
   [

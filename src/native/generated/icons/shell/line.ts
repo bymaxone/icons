@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `shell` icon, line variant: shell, seashell, beach, spiral.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const ShellIcon = /* @__PURE__ */ createNativeIcon('shell', [
   [

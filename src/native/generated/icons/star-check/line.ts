@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `star-check` icon, line variant: star check, confirmed rating, verified favorite, approved score.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const StarCheckIcon = /* @__PURE__ */ createNativeIcon('star-check', [
   [

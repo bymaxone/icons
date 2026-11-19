@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `superscript` icon, line variant: superscript, text, format, raise.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const SuperscriptIcon = /* @__PURE__ */ createNativeIcon('superscript', [
   ['path', { d: 'm4.75 9.25 8 10m0-10-8 10' }],

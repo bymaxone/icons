@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `paragliding` icon, line variant: paragliding, glider, wing, flight.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const ParaglidingIcon = /* @__PURE__ */ createNativeIcon('paragliding', [
   ['path', { d: 'M3.25 8.25c5-4.5 13-4.5 18 0l-2 2C15 7 9.5 7 5.25 10.25z' }],

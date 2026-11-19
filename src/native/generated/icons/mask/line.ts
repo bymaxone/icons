@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `mask` icon, line variant: clip, matte, stencil, reveal.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const MaskIcon = /* @__PURE__ */ createNativeIcon('mask', [
   [

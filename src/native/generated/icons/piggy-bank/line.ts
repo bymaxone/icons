@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `piggy-bank` icon, line variant: piggy bank, savings, save, money.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const PiggyBankIcon = /* @__PURE__ */ createNativeIcon('piggy-bank', [
   [

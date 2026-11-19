@@ -74,8 +74,8 @@ design-language gate: nothing else is drawn until the founder approves it. The v
 (P3) then makes contact sheets, visual regression and the similarity check routine for the
 batches that follow. B2 fixes the list of 16 px masters that B4 draws. The catalog (P4) is
 built on the complete set, and P5 hardens and publishes `1.0.0`. P6 adds the React Native
-components as a minor release after `1.0.0`; it needs the complete set of B4 and does not
-wait for the publish of P5 (decision D6).
+components; it needs the complete set of B4, and the founder decided on 2026-11-19 that they
+ship in `1.0.0` itself, not as a later minor (decision D6).
 
 ---
 
@@ -509,8 +509,8 @@ These rules apply to every phase. Phase sections only add rules specific to them
     on iOS and Android; how it was verified is recorded in the phase's task file.
   - The size and attw gates cover `./native`.
   - The README gains a React Native section.
-- **Context / preconditions:** B4 done (the complete set). P6 does not wait for the publish of
-  `1.0.0`; it ships as `1.1.0`, a minor release.
+- **Context / preconditions:** B4 done (the complete set). P6 ships in `1.0.0`, the
+  first publish, not as a later minor release.
 - **Rules-of-phase:** the native components are generated from the same sources as the web
   ones; no drawing is maintained twice.
 - **References:** spec §1.3, §10, §16, §17 (D6).

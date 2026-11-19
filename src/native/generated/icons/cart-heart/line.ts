@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `cart-heart` icon, line variant: cart heart, wishlist, saved items, favorite products.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const CartHeartIcon = /* @__PURE__ */ createNativeIcon('cart-heart', [
   [

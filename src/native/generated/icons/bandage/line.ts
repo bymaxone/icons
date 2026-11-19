@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `bandage` icon, line variant: bandage, plaster, first aid, wound.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const BandageIcon = /* @__PURE__ */ createNativeIcon('bandage', [
   ['path', { d: 'M2.881 16.316 16.316 2.881l5.303 5.303L8.184 21.619Z' }],

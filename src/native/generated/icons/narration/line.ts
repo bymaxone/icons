@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `narration` icon, line variant: narrator, voice over, storyteller, speaker.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const NarrationIcon = /* @__PURE__ */ createNativeIcon('narration', [
   ['circle', { cx: 9.5, cy: 8.75, r: 3.25 }],

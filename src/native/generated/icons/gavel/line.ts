@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `gavel` icon, line variant: gavel, law, auction, judge.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const GavelIcon = /* @__PURE__ */ createNativeIcon('gavel', [
   ['path', { d: 'm13.159 2.977 6.364 6.364-3.182 3.182-6.364-6.364Z' }],

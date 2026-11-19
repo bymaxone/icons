@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `rhino` icon, line variant: rhino, horn, safari, endangered.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const RhinoIcon = /* @__PURE__ */ createNativeIcon('rhino', [
   [

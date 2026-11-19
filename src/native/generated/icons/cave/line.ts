@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `cave` icon, line variant: cave, cavern, underground, grotto.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const CaveIcon = /* @__PURE__ */ createNativeIcon('cave', [
   ['path', { d: 'M2.75 20.25c.5-6.5 3.5-11.75 9.5-11.75s9 5.25 9.5 11.75' }],

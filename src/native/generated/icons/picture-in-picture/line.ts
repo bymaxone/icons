@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `picture-in-picture` icon, line variant: picture in picture, pip, video, mini player.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const PictureInPictureIcon = /* @__PURE__ */ createNativeIcon('picture-in-picture', [
   [

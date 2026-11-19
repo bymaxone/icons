@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `eye-closed` icon, line variant: eye, closed, sleep, lashes.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const EyeClosedIcon = /* @__PURE__ */ createNativeIcon('eye-closed', [
   ['path', { d: 'M4.25 9.75c2 3 4.75 4.5 8 4.5s6-1.5 8-4.5' }],

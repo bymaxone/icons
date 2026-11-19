@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `timer-off` icon, line variant: timer off, stopped, disabled, countdown.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const TimerOffIcon = /* @__PURE__ */ createNativeIcon('timer-off', [
   [

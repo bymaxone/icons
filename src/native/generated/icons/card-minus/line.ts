@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `card-minus` icon, line variant: card minus, remove payment, delete card, unlink.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const CardMinusIcon = /* @__PURE__ */ createNativeIcon('card-minus', [
   [

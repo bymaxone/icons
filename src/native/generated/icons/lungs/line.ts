@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `lungs` icon, line variant: lungs, breath, respiratory, health.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const LungsIcon = /* @__PURE__ */ createNativeIcon('lungs', [
   ['path', { d: 'M12.25 3.75V11c-1.25 1.25-2.75 1.75-4 1.75' }],

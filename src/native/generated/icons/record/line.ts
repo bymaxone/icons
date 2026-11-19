@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `record` icon, line variant: record, rec, capture, live.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const RecordIcon = /* @__PURE__ */ createNativeIcon('record', [
   ['circle', { cx: 12.25, cy: 12.25, r: 8.5 }],

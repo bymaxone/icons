@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `link-off` icon, line variant: link off, unlink, detach, broken.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const LinkOffIcon = /* @__PURE__ */ createNativeIcon('link-off', [
   [

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `layout-right` icon, line variant: layout right, side panel, inspector, columns.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const LayoutRightIcon = /* @__PURE__ */ createNativeIcon('layout-right', [
   [

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `ladle` icon, line variant: ladle, soup spoon, scoop, serve.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const LadleIcon = /* @__PURE__ */ createNativeIcon('ladle', [
   ['path', { d: 'M4.25 12.25h10a5 5 0 0 1-10 0' }],

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `wifi-x` icon, line variant: wifi x, signal lost, network down, disconnected.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const WifiXIcon = /* @__PURE__ */ createNativeIcon('wifi-x', [
   ['path', { d: 'M5.224 11.947a10.5 10.5 0 0 1 14.014-.034' }],

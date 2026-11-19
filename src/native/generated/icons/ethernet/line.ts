@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `ethernet` icon, line variant: ethernet, lan port, network cable, wired connection.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const EthernetIcon = /* @__PURE__ */ createNativeIcon('ethernet', [
   [

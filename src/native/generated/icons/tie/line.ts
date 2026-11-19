@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `tie` icon, line variant: tie, necktie, formal, dress code.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const TieIcon = /* @__PURE__ */ createNativeIcon('tie', [
   ['path', { d: 'M10.25 3.75h4l-1 3h-2z' }],

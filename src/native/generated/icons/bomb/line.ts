@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `bomb` icon, line variant: bomb, explosive, danger, destroy.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const BombIcon = /* @__PURE__ */ createNativeIcon('bomb', [
   ['circle', { cx: 10.75, cy: 14.25, r: 6.5 }],

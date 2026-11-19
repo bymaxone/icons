@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `keyboard` icon, line variant: shortcuts, keys, typing, input.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const KeyboardIcon = /* @__PURE__ */ createNativeIcon('keyboard', [
   [

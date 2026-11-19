@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `luggage` icon, line variant: luggage, suitcase, travel, trip.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const LuggageIcon = /* @__PURE__ */ createNativeIcon('luggage', [
   [

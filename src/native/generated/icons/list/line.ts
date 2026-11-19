@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `list` icon, line variant: list, items, bullets, view.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const ListIcon = /* @__PURE__ */ createNativeIcon('list', [
   ['path', { d: 'M5.25 6.25h.01' }],

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `key` icon, line variant: key, password, access, credential.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const KeyIcon = /* @__PURE__ */ createNativeIcon('key', [
   ['circle', { cx: 8.25, cy: 15.75, r: 4.25 }],

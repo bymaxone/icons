@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `eye-x` icon, line variant: eye x, conceal, not visible, closed view.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const EyeXIcon = /* @__PURE__ */ createNativeIcon('eye-x', [
   ['path', { d: 'M5.011 10.299a8.244 8.244 0 0 1 14.478 0' }],

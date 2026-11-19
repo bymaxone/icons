@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `chef-hat` icon, line variant: chef, cook, kitchen, recipe.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const ChefHatIcon = /* @__PURE__ */ createNativeIcon('chef-hat', [
   [

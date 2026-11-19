@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `star-half` icon, line variant: star, half, rating, review.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const StarHalfIcon = /* @__PURE__ */ createNativeIcon('star-half', [
   [

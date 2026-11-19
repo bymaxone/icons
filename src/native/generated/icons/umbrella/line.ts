@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `umbrella` icon, line variant: umbrella, rain, insurance, cover.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const UmbrellaIcon = /* @__PURE__ */ createNativeIcon('umbrella', [
   ['path', { d: 'M3.25 12.25c0-5 4-8.5 9-8.5s9 3.5 9 8.5z' }],

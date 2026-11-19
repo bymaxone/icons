@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `cone` icon, line variant: cone, 3d, shape, geometry.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const ConeIcon = /* @__PURE__ */ createNativeIcon('cone', [
   ['path', { d: 'm12.25 3.25-7.5 14' }],

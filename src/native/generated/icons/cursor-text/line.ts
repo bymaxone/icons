@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `cursor-text` icon, line variant: cursor, text, caret, i-beam.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const CursorTextIcon = /* @__PURE__ */ createNativeIcon('cursor-text', [
   [

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `zoom-out` icon, line variant: shrink, reduce, minus, scale down.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const ZoomOutIcon = /* @__PURE__ */ createNativeIcon('zoom-out', [
   ['circle', { cx: 9.75, cy: 9.75, r: 6.5 }],

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `sim-card` icon, line variant: sim card, chip, mobile plan, phone.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const SimCardIcon = /* @__PURE__ */ createNativeIcon('sim-card', [
   [

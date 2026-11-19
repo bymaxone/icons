@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `clock-x` icon, line variant: clock x, expired timer, stop schedule, missed deadline.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const ClockXIcon = /* @__PURE__ */ createNativeIcon('clock-x', [
   [

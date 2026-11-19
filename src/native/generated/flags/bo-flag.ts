@@ -10,7 +10,7 @@ import { createNativeFlag } from '@bymax-one/icons/native/runtime'
  * The Bolivia flag, from https://gitlab.com/catamphetamine/country-flag-icons/-/blob/v1.6.20/flags/3x2/BO.svg (MIT, retrieved 2026-11-14).
  * It is reproduced as published by its source; see TRADEMARKS.md.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const BoFlagIcon = /* @__PURE__ */ createNativeFlag('bo-flag', '0 0 513 342', [
   ['path', { fill: '#d52b1e', d: 'M0 0h513v114H0z' }],

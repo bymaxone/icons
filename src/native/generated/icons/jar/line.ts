@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `jar` icon, line variant: jar, honey, lid, preserves.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const JarIcon = /* @__PURE__ */ createNativeIcon('jar', [
   ['path', { d: 'M7.25 9.25h10v9c0 1.5-.75 2.5-2.25 2.5H9.5c-1.5 0-2.25-1-2.25-2.5z' }],

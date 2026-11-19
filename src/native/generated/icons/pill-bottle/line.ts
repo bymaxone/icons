@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `pill-bottle` icon, line variant: pill bottle, prescription, medication, capsules.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const PillBottleIcon = /* @__PURE__ */ createNativeIcon('pill-bottle', [
   [

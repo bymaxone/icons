@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `route` icon, line variant: route, path, directions, trip.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const RouteIcon = /* @__PURE__ */ createNativeIcon('route', [
   ['circle', { cx: 6.25, cy: 18.25, r: 2 }],

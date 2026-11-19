@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `vibrate-off` icon, line variant: vibrate off, no buzz, haptic disabled, quiet phone.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const VibrateOffIcon = /* @__PURE__ */ createNativeIcon('vibrate-off', [
   [

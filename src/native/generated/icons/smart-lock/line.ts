@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `smart-lock` icon, line variant: smart lock, door lock, keyless entry, digital key.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const SmartLockIcon = /* @__PURE__ */ createNativeIcon('smart-lock', [
   [

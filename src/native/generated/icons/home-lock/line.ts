@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `home-lock` icon, line variant: home lock, secure house, alarm armed, private.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const HomeLockIcon = /* @__PURE__ */ createNativeIcon('home-lock', [
   [

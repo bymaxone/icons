@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `washing-machine` icon, line variant: washing machine, laundry, wash, clothes.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const WashingMachineIcon = /* @__PURE__ */ createNativeIcon('washing-machine', [
   [

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `columns` icon, line variant: columns, layout, split, view.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const ColumnsIcon = /* @__PURE__ */ createNativeIcon('columns', [
   [

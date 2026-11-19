@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `mail-off` icon, line variant: mail off, muted, unsubscribed, no email.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const MailOffIcon = /* @__PURE__ */ createNativeIcon('mail-off', [
   [

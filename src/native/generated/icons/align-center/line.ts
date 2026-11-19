@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `align-center` icon, line variant: center, alignment, text align, justify.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const AlignCenterIcon = /* @__PURE__ */ createNativeIcon('align-center', [
   ['path', { d: 'M4.75 5.25h15' }],

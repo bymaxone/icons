@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `activity` icon, line variant: activity, pulse, monitoring, health.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const ActivityIcon = /* @__PURE__ */ createNativeIcon('activity', [
   ['path', { d: 'M3.25 12.25h3.5l2.5-5.75 5 11.5 2.5-5.75h4' }]

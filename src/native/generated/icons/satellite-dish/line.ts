@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `satellite-dish` icon, line variant: satellite, dish, antenna, signal.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const SatelliteDishIcon = /* @__PURE__ */ createNativeIcon('satellite-dish', [
   ['path', { d: 'M4.25 9.75a10 10 0 0 0 10 10z' }],

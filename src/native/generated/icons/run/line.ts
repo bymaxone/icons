@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `run` icon, line variant: run, runner, jog, exercise.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const RunIcon = /* @__PURE__ */ createNativeIcon('run', [
   ['circle', { cx: 15.5, cy: 3.75, r: 1.75 }],

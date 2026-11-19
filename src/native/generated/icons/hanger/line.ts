@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `hanger` icon, line variant: hanger, clothes, wardrobe, closet.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const HangerIcon = /* @__PURE__ */ createNativeIcon('hanger', [
   ['path', { d: 'M10.25 5.25a2 2 0 1 1 2 2v1.5' }],

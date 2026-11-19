@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `dew` icon, line variant: dew, drop, morning, moisture.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const DewIcon = /* @__PURE__ */ createNativeIcon('dew', [
   ['path', { d: 'm12.25 3.25-4 6a4.75 4.75 0 1 0 8 0z' }],

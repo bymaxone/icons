@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `tea` icon, line variant: tea, cup, hot drink, leaves.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const TeaIcon = /* @__PURE__ */ createNativeIcon('tea', [
   ['path', { d: 'M5.25 9.25h12v5.5c0 3.25-2.5 5.75-6 5.75s-6-2.5-6-5.75z' }],

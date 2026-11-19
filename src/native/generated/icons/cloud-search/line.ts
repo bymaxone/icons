@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `cloud-search` icon, line variant: cloud search, find online files, storage lookup, remote files.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const CloudSearchIcon = /* @__PURE__ */ createNativeIcon('cloud-search', [
   [

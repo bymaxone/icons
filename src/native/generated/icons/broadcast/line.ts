@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `broadcast` icon, line variant: broadcast, live, stream, signal.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const BroadcastIcon = /* @__PURE__ */ createNativeIcon('broadcast', [
   ['circle', { cx: 12.25, cy: 9.25, r: 1.5 }],

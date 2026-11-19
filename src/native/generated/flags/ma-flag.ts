@@ -10,7 +10,7 @@ import { createNativeFlag } from '@bymax-one/icons/native/runtime'
  * The Morocco flag, from https://gitlab.com/catamphetamine/country-flag-icons/-/blob/v1.6.20/flags/3x2/MA.svg (MIT, retrieved 2026-11-14).
  * It is reproduced as published by its source; see TRADEMARKS.md.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const MaFlagIcon = /* @__PURE__ */ createNativeFlag('ma-flag', '0 0 513 342', [
   ['path', { fill: '#d12a46', d: 'M0 .3V342h513V.3z' }],

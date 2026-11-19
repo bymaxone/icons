@@ -10,7 +10,7 @@ Each item carries the evidence it was checked with. The first publish is manual.
 
 `npm pack --dry-run --json` on the release branch:
 
-- 7,973 files, 1,467,284 bytes packed (1.40 MiB) and 7,913,422 bytes unpacked (7.5 MiB).
+- 14,181 files, 2,271,554 bytes packed (2.17 MiB) and 12,634,563 bytes unpacked (12.05 MiB).
 - Top level: `dist/`, `package.json`, `README.md`, `CHANGELOG.md`, `LICENSE` and `TRADEMARKS.md`. The dogfood gate checks that nothing else is in it.
 - No `src/`, `scripts/`, `fixtures/`, `icons/`, `site/`, `docs/` or `.github/`.
 
@@ -20,7 +20,7 @@ Each item carries the evidence it was checked with. The first publish is manual.
 - **arethetypeswrong** (0.18.5, `pnpm check:exports`) packs the package and resolves every non-wildcard subpath, one block per icon and flag (1,308 in all, with `.`, `./runtime`, `./meta`, `./brands` and `./flags`), in node10, node16 from CommonJS, node16 from ESM and bundler: 5,220 green results and none red.
   - It cannot follow a wildcard (`./icons/*`, `./flags/*`, `./svg/*`) or a non-script asset (`./sprite.svg`, `./metadata.json`).
 - **The consumer load gate** (`pnpm check:runtime`) covers what arethetypeswrong cannot. On the packed tarball, in ESM and in CommonJS, 1,553 subpaths export exactly their 4,379 names; the 1,754 generated components and the fixture render; 1,504 sprite symbols and 1,754 raw SVG files resolve; and under the `react-server` condition the fixture and the 1,754 generated components render as Server Components. No bundle has `'use client'`.
-- **The dogfood install** (`pnpm dogfood`, a release gate) installs the packed tarball in a clean directory: 7,973 entries, all under the allowed paths; ESM and CJS specifiers resolve from the consumer's directory through the `exports` map; a fixture icon and 1,754 generated components render with `react-dom/server`. It resolved `./icons/<name>` through its pattern but not `./flags/<name>`, so it stopped on the first flag. It now resolves both patterns.
+- **The dogfood install** (`pnpm dogfood`, a release gate) installs the packed tarball in a clean directory: 14,181 entries, all under the allowed paths; ESM and CJS specifiers resolve from the consumer's directory through the `exports` map; a fixture icon and 1,754 generated components render with `react-dom/server`.
 
 ## 3. The tarball in real applications
 
@@ -101,17 +101,22 @@ Read from the GitHub API on 2026-11-14: one open Dependabot alert and 14 open co
 
 For the founder. Every step runs on the founder's machine, logged in to npm as an owner of the `@bymax-one` scope.
 
-1. **The exact commit.** Use the squash commit of the release pull request on `main`, the one whose title is `chore(release): 1.0.0`.
+1. **The exact commit.** Use the squash commit of the release pull request on `main`, the one whose title is `chore(release): 1.0.0 with React Native`. That title is not shared with any earlier commit, so the search below cannot land on an older release commit.
 
    ```bash
    git clone https://github.com/bymaxone/icons.git && cd icons
-   git checkout "$(git log origin/main --format=%H --grep='^chore(release): 1.0.0' -1)"
-   node -p "require('./package.json').version"   # 1.0.0
+   SHA="$(git log origin/main --format=%H --grep='chore(release): 1.0.0 with React Native' --fixed-strings -1)"
+   echo "$SHA"                                    # must equal the merge SHA of the release pull request
+   git checkout "$SHA"
+   node -p "require('./package.json').version"    # 1.0.0
+   test -d src/native && echo "React Native is in this commit"
    ```
+
+   Stop if `SHA` is empty or differs from the merge SHA shown on the release pull request in GitHub: the tarball must come from that exact commit.
 
    Use Node 24 and pnpm 11.20.0, the versions `package.json` names.
 
-   The date of the `## [1.0.0]` section in `CHANGELOG.md` is the day the release was prepared, not the day of the publish. Leave it as it is: the tarball must come from this exact commit, and a date-correction commit on `main` would carry version 1.1.0.
+   The date of the `## [1.0.0]` section in `CHANGELOG.md` is the day the release was prepared, not the day of the publish. Leave it as it is: the tarball must come from this exact commit, and a date-correction commit on `main` would be a different commit, so a fix to the date would need a new release pull request and a new runbook run.
 
 2. **A clean install.** Run `pnpm install --frozen-lockfile`.
 
@@ -154,8 +159,6 @@ For the founder. Every step runs on the founder's machine, logged in to npm as a
    - The README's npm badge becomes a link to the package, in the next release.
    - The catalog header's "npm soon" (`site/pages.mjs`, the `soon` span) becomes a link to `https://www.npmjs.com/package/@bymax-one/icons`. It is in the site only, so it needs no package release.
 
-10. **Then 1.1.0.** `main` carries version 1.1.0 (section 12). Tag `v1.1.0` only after step 6, because trusted publishing needs the package on npm; `release.yml` then publishes it with provenance.
-
 ---
 
 ## 10. Mutation testing
@@ -196,15 +199,15 @@ The sheets in [`contact-sheets/release-1.0/`](./contact-sheets/release-1.0/) wer
 
 ---
 
-## 12. Release 1.1.0: React Native
+## 12. React Native in 1.0.0
 
-> **Prepared**: 2026-11-16 · **Version**: 1.1.0, a minor release · **Order**: the founder publishes 1.0.0 by hand first (section 9); `v1.1.0` is tagged only after 1.0.0 is on npm.
+> **Prepared**: 2026-11-19 · **Version**: 1.0.0, the first publish, with the `./native` entries in it · **Decided**: by the founder on 2026-11-19; there is no separate 1.1.0.
 
-Trusted publishing needs the package on npm, so pushing `v1.1.0` before 1.0.0 is published would fail the workflow. After the 1.0.0 publish and its trusted-publisher setup, `release.yml` publishes 1.1.0 and `pnpm check:api` compares it with 1.0.0: the web declarations carry no difference, and the native entries are new.
+The first publish carries everything on `main`, React Native included. `pnpm check:api` prints "No earlier published version" and needs no "Apply to a consumer" note, because there is nothing earlier to differ from.
 
-**The tarball** (`npm pack --dry-run --json` on the release branch): 14,181 files, 2,271,761 bytes packed and 12,634,948 bytes unpacked, against 7,973 files and 1,467,284 bytes packed for 1.0.0, a growth of 55% in packed size, because every drawing now ships a second renderer. The dogfood gate checks that the 14,181 entries sit under the allowed paths.
+**The tarball** (`npm pack --dry-run --json` on the release branch): 14,181 files, 2,271,554 bytes packed and 12,634,563 bytes unpacked; every drawing ships a second renderer for `./native`. The dogfood gate checks that the 14,181 entries sit under the allowed paths.
 
-**The gates**, on the release branch: `pnpm prepublishOnly` passes with 81 suites and 3,437 tests at 100% coverage; `pnpm dogfood` passes; `pnpm check:api` prints "No earlier published version", the expected result until 1.0.0 is on npm. `pnpm check:runtime` resolves 1,552 `./native` subpaths in ESM and CommonJS to the declared files, with exactly their names, and the 1,553 web subpaths still export their 4,379 names.
+**The gates**, on the release branch: `pnpm prepublishOnly` passes with 83 suites and 3,440 tests at 100% coverage; `pnpm dogfood` passes; `pnpm check:api` prints "No earlier published version", the expected result until 1.0.0 is on npm. `pnpm check:runtime` resolves 1,552 `./native` subpaths in ESM and CommonJS to the declared files, with exactly their names, and the 1,553 web subpaths still export their 4,379 names.
 
 **Size budgets.** Every `./native` entry is held to a budget in `scripts/check-size.mjs`, with a negative test: index 12.11 kB brotli (budget 14.50 kB), runtime 1.74 kB (2.10 kB), brands 41.60 kB (50.00 kB), flags 0.71 kB (0.90 kB); an icon module is held to the web budget of 1.5 KiB and a flag module to 2 KiB. The build peaks at 4.84 GB of resident memory, which fits a GitHub runner.
 

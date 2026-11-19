@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `magnet` icon, line variant: magnet, attract, snap, magnetic.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const MagnetIcon = /* @__PURE__ */ createNativeIcon('magnet', [
   [

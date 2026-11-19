@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `store` icon, line variant: store, shop, marketplace, storefront.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const StoreIcon = /* @__PURE__ */ createNativeIcon('store', [
   ['path', { d: 'm4.25 9.25 1.25-4.5H19l1.25 4.5z' }],

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `check` icon, sm variant: tick, done, confirm, success.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const CheckSmIcon = /* @__PURE__ */ createNativeIcon(
   'check-sm',

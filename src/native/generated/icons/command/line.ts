@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `command` icon, line variant: command key, shortcut, cmd, cmd key.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const CommandIcon = /* @__PURE__ */ createNativeIcon('command', [
   [

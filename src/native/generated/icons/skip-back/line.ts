@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `skip-back` icon, line variant: previous, rewind, media control, start.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const SkipBackIcon = /* @__PURE__ */ createNativeIcon('skip-back', [
   [

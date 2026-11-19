@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `chevrons-left` icon, line variant: chevrons left, double chevron, first, rewind.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const ChevronsLeftIcon = /* @__PURE__ */ createNativeIcon('chevrons-left', [
   ['path', { d: 'm18.75 6.25-6 6 6 6m-6.5-12-6 6 6 6' }]

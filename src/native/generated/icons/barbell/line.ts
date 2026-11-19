@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `barbell` icon, line variant: barbell, weights, gym, strength.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const BarbellIcon = /* @__PURE__ */ createNativeIcon('barbell', [
   ['path', { d: 'M2.75 9.25v6m3-8.5v11m13-11v11m3-8.5v6M5.75 12h13' }]

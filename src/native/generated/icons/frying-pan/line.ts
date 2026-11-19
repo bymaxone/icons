@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `frying-pan` icon, line variant: frying pan, skillet, sear, sauté.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const FryingPanIcon = /* @__PURE__ */ createNativeIcon('frying-pan', [
   ['circle', { cx: 9.25, cy: 14.25, r: 6.25 }],

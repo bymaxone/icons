@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `tractor` icon, line variant: tractor, farm, agriculture, vehicle.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const TractorIcon = /* @__PURE__ */ createNativeIcon('tractor', [
   ['circle', { cx: 7.25, cy: 16.25, r: 4 }],

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `award` icon, line variant: award, badge, achievement, prize.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const AwardIcon = /* @__PURE__ */ createNativeIcon('award', [
   ['circle', { cx: 12.25, cy: 9.25, r: 5.75 }],

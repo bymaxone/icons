@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `bunk-bed` icon, line variant: bunk bed, bunks, dorm, kids room.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const BunkBedIcon = /* @__PURE__ */ createNativeIcon('bunk-bed', [
   ['path', { d: 'M4.25 3.25v18m16-18v18' }],

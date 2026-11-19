@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `shield-user` icon, line variant: shield user, protected account, identity, profile.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const ShieldUserIcon = /* @__PURE__ */ createNativeIcon('shield-user', [
   ['path', { d: 'M12.25 3.25 5.25 6v5.5c0 4.25 2.75 7.5 7 9.25 4.25-1.75 7-5 7-9.25V6z' }],

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `mail-x` icon, line variant: mail x, delivery failed, bounced, rejected.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const MailXIcon = /* @__PURE__ */ createNativeIcon('mail-x', [
   [

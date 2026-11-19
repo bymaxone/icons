@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `fish-bowl` icon, line variant: fish bowl, aquarium, pet fish, glass.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const FishBowlIcon = /* @__PURE__ */ createNativeIcon('fish-bowl', [
   [

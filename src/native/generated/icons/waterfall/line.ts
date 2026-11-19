@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `waterfall` icon, line variant: waterfall, cascade, river, falls.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const WaterfallIcon = /* @__PURE__ */ createNativeIcon('waterfall', [
   ['path', { d: 'M3.25 5.25h7.5v7m10-7h-7.5v7' }],

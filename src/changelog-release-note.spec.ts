@@ -35,10 +35,18 @@ console.log(section === undefined ? 'missing' : String(hasCompatibilityNote(sect
 
 describe('the CHANGELOG release note', () => {
   it('is recognised by the API surface gate for a minor or major release', () => {
-    // Scenario: a release whose patch number is 0 adds public API, and the gate refuses it
-    // unless the section carries the "Apply to a consumer" note as a heading.
+    // Scenario: a release whose patch number is 0 adds public API after the first one, and the
+    // gate refuses it unless the section carries the "Apply to a consumer" note as a heading.
+    // The first release, 1.0.0, has no earlier version to differ from, so it needs the section
+    // and nothing else.
     const patch = Number(version.split('.')[2])
-    if (patch !== 0) return
+    if (patch !== 0 || version === '1.0.0') return
     expect(recognised()).toBe('true')
+  })
+
+  it('has a section of its own for the version in package.json', () => {
+    // Scenario: `release.yml` extracts the section matching the pushed tag as the release body,
+    // so a version with no `## [x.y.z]` heading would publish with an empty body.
+    expect(recognised()).not.toBe('missing')
   })
 })

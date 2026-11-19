@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `island` icon, line variant: island, palm tree, sea, getaway.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const IslandIcon = /* @__PURE__ */ createNativeIcon('island', [
   ['path', { d: 'M2.75 20.25c3-2.5 6-3.5 9.5-3.5s6.5 1 9.5 3.5' }],

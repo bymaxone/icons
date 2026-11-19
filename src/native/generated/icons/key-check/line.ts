@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `key-check` icon, line variant: key check, confirmed credential, accepted password, authenticated.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const KeyCheckIcon = /* @__PURE__ */ createNativeIcon('key-check', [
   ['path', { d: 'M4 15.75a4.25 4.25 0 0 0 7.768 2.386m.732-2.374v-.012a4.25 4.25 0 0 0-8.5 0' }],

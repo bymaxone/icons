@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `select-all` icon, line variant: select all, everything, multi select, dashed box.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const SelectAllIcon = /* @__PURE__ */ createNativeIcon('select-all', [
   [

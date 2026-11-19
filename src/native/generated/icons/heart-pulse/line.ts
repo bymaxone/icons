@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `heart-pulse` icon, line variant: heart pulse, heartbeat, cardio, vitals.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const HeartPulseIcon = /* @__PURE__ */ createNativeIcon('heart-pulse', [
   [

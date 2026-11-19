@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `golf` icon, line variant: golf, flag, sport, course.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const GolfIcon = /* @__PURE__ */ createNativeIcon('golf', [
   ['path', { d: 'M12.25 18.25v-15l6 3-6 3' }],

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `tag-heart` icon, line variant: tag heart, loved label, preferred category, saved price.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const TagHeartIcon = /* @__PURE__ */ createNativeIcon('tag-heart', [
   [

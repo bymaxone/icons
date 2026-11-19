@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `bookmark-off` icon, line variant: bookmark off, unsaved, hidden, disabled.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const BookmarkOffIcon = /* @__PURE__ */ createNativeIcon('bookmark-off', [
   [

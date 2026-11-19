@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `tag-x` icon, line variant: tag x, discard label, clear tag, cancel.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const TagXIcon = /* @__PURE__ */ createNativeIcon('tag-x', [
   [

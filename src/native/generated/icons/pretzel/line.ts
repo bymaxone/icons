@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `pretzel` icon, line variant: pretzel, twisted, baked, snack.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const PretzelIcon = /* @__PURE__ */ createNativeIcon('pretzel', [
   [

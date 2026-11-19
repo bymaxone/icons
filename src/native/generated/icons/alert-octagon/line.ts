@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `alert-octagon` icon, line variant: alert, octagon, stop, error.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const AlertOctagonIcon = /* @__PURE__ */ createNativeIcon('alert-octagon', [
   [

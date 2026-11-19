@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `image-share` icon, line variant: image share, send picture, post photo, distribute.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const ImageShareIcon = /* @__PURE__ */ createNativeIcon('image-share', [
   [

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `bicycle-electric` icon, line variant: e bike, electric bicycle, pedal assist, green ride.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const BicycleElectricIcon = /* @__PURE__ */ createNativeIcon('bicycle-electric', [
   ['circle', { cx: 6.25, cy: 16.25, r: 3.5 }],

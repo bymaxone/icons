@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `bell-minus` icon, line variant: bell minus, alert, remove, reduce.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const BellMinusIcon = /* @__PURE__ */ createNativeIcon('bell-minus', [
   [

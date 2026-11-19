@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `shield-off` icon, line variant: shield, unprotected, off, disabled.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const ShieldOffIcon = /* @__PURE__ */ createNativeIcon('shield-off', [
   ['path', { d: 'm9 4.5 3.25-1.25 7 2.75v5.5c0 1-.125 2-.375 2.875' }],

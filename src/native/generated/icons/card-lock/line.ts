@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `card-lock` icon, line variant: card lock, secured card, frozen payment, protected card.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const CardLockIcon = /* @__PURE__ */ createNativeIcon('card-lock', [
   [

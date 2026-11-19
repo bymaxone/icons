@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `library` icon, line variant: books, shelf, assets, collection.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const LibraryIcon = /* @__PURE__ */ createNativeIcon('library', [
   [

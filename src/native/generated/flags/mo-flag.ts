@@ -10,7 +10,7 @@ import { createNativeFlag } from '@bymax-one/icons/native/runtime'
  * The Macao SAR China flag, from https://gitlab.com/catamphetamine/country-flag-icons/-/blob/v1.6.20/flags/3x2/MO.svg (MIT, retrieved 2026-11-14).
  * It is reproduced as published by its source; see TRADEMARKS.md.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const MoFlagIcon = /* @__PURE__ */ createNativeFlag('mo-flag', '0 0 513 342', [
   ['path', { fill: '#0f7562', d: 'M0 0h513v342H0z' }],

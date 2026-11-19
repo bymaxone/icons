@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `keyframe` icon, line variant: diamond, animation, key, point.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const KeyframeIcon = /* @__PURE__ */ createNativeIcon('keyframe', [
   [

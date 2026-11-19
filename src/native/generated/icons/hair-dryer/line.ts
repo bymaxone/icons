@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `hair-dryer` icon, line variant: hair dryer, blow dry, salon, heat.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const HairDryerIcon = /* @__PURE__ */ createNativeIcon('hair-dryer', [
   ['path', { d: 'M4.25 8.25a4.5 4.5 0 0 1 4.5-4.5h9.5v9h-9.5a4.5 4.5 0 0 1-4.5-4.5' }],

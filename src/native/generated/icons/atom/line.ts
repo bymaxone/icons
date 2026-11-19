@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `atom` icon, line variant: atom, science, physics, nucleus.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const AtomIcon = /* @__PURE__ */ createNativeIcon('atom', [
   ['path', { d: 'M12.25 12.25h.01' }],

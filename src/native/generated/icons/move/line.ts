@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `move` icon, line variant: drag, pan, arrows, position.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const MoveIcon = /* @__PURE__ */ createNativeIcon('move', [
   ['path', { d: 'M15.25 12.25h6m-2.121-2.121 2.121 2.121-2.121 2.121' }],

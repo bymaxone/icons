@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `server-search` icon, line variant: server search, locate host, scan machines, lookup instance.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const ServerSearchIcon = /* @__PURE__ */ createNativeIcon('server-search', [
   [

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `calendar-lock` icon, line variant: calendar lock, private, closed dates, schedule.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const CalendarLockIcon = /* @__PURE__ */ createNativeIcon('calendar-lock', [
   [

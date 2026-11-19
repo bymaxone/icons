@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `alarm-clock-plus` icon, line variant: alarm clock plus, add reminder, set wake time, new alert.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const AlarmClockPlusIcon = /* @__PURE__ */ createNativeIcon('alarm-clock-plus', [
   [

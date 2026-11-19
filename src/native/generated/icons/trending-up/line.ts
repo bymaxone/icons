@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `trending-up` icon, line variant: trend, up, growth, increase.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const TrendingUpIcon = /* @__PURE__ */ createNativeIcon('trending-up', [
   ['path', { d: 'm3.75 17.25 5.5-5.5 4 4 3.5-3.5' }],

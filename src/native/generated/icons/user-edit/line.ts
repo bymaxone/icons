@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `user-edit` icon, line variant: user edit, edit profile, person pencil, account.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const UserEditIcon = /* @__PURE__ */ createNativeIcon('user-edit', [
   ['path', { d: 'M12.4 6.75a3.15 3.15 0 0 1-6.3 0 3.15 3.15 0 0 1 6.3 0' }],

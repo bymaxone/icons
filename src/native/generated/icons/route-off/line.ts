@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `route-off` icon, line variant: route off, no directions, closed road, path blocked.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const RouteOffIcon = /* @__PURE__ */ createNativeIcon('route-off', [
   ['path', { d: 'M4.25 18.25a2 2 0 1 0 3.999.001 2 2 0 0 0-3.999-.001' }],

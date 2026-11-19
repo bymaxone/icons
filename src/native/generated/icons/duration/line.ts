@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `duration` icon, line variant: length, time span, measure, runtime.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const DurationIcon = /* @__PURE__ */ createNativeIcon('duration', [
   ['path', { d: 'M3.25 6.75v11' }],

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `gender-male` icon, line variant: gender male, man, mars, male sign.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const GenderMaleIcon = /* @__PURE__ */ createNativeIcon('gender-male', [
   ['circle', { cx: 10.25, cy: 13.75, r: 5.5 }],

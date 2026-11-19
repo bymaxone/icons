@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `bird` icon, line variant: bird, wings, animal, fly.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const BirdIcon = /* @__PURE__ */ createNativeIcon('bird', [
   [

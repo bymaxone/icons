@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `gif` icon, line variant: gif, animation, image, format.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const GifIcon = /* @__PURE__ */ createNativeIcon('gif', [
   [

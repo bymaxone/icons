@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `grid` icon, line variant: lattice, guides, hash, layout grid.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const GridIcon = /* @__PURE__ */ createNativeIcon('grid', [
   ['path', { d: 'M8.25 3.25v2m0 6v10' }],

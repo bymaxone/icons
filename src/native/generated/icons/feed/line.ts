@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `feed` icon, line variant: feed, rss, subscribe, updates.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const FeedIcon = /* @__PURE__ */ createNativeIcon('feed', [
   ['path', { d: 'M5.75 18.75h.01' }],

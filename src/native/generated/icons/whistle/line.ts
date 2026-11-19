@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `whistle` icon, line variant: whistle, referee, alert, sports.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const WhistleIcon = /* @__PURE__ */ createNativeIcon('whistle', [
   ['path', { d: 'M10.25 9.25h9.5c.75 0 1 .25 1 1v2c0 .75-.25 1-1 1H17.5' }],

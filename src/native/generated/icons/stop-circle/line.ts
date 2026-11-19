@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `stop-circle` icon, line variant: stop, end, record, circle.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const StopCircleIcon = /* @__PURE__ */ createNativeIcon('stop-circle', [
   ['circle', { cx: 12.25, cy: 12.25, r: 8.5 }],

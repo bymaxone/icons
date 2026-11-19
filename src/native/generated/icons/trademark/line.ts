@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `trademark` icon, line variant: trademark, tm, brand, legal.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const TrademarkIcon = /* @__PURE__ */ createNativeIcon('trademark', [
   ['path', { d: 'M3.25 7.75h6.5m-3.25 0v8.5' }],

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `percent` icon, line variant: percent, discount, rate, sale.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const PercentIcon = /* @__PURE__ */ createNativeIcon('percent', [
   ['circle', { cx: 7.25, cy: 7.25, r: 2.25 }],

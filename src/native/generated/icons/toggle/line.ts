@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `toggle` icon, line variant: toggle, switch, on, off.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const ToggleIcon = /* @__PURE__ */ createNativeIcon('toggle', [
   [

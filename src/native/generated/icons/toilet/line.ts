@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `toilet` icon, line variant: toilet, restroom, wc, bathroom.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const ToiletIcon = /* @__PURE__ */ createNativeIcon('toilet', [
   [

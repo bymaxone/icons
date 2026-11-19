@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `speedometer` icon, line variant: speedometer, gauge, dial, limit, budget, cap.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const SpeedometerIcon = /* @__PURE__ */ createNativeIcon('speedometer', [
   ['path', { d: 'M3.75 16.25a8.5 8.5 0 0 1 13.294-7.019m3.441 4.915a8.5 8.5 0 0 1 .265 2.104' }],

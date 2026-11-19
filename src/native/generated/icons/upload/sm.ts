@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `upload` icon, sm variant: import, send, tray, arrow up.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const UploadSmIcon = /* @__PURE__ */ createNativeIcon(
   'upload-sm',

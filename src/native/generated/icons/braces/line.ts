@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `braces` icon, line variant: braces, curly brackets, code block, object.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const BracesIcon = /* @__PURE__ */ createNativeIcon('braces', [
   [

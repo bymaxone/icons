@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `phone-check` icon, line variant: phone check, number verified, connected call, confirmed contact.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const PhoneCheckIcon = /* @__PURE__ */ createNativeIcon('phone-check', [
   [

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `search-check` icon, line variant: search check, match found, confirmed result, valid query.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const SearchCheckIcon = /* @__PURE__ */ createNativeIcon('search-check', [
   ['path', { d: 'M3.25 9.75a6.5 6.5 0 0 0 9.482 5.777m.903-.566A6.5 6.5 0 1 0 3.25 9.75' }],

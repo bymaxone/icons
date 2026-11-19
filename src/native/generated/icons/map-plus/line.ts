@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `map-plus` icon, line variant: map plus, add place, new location, pin.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const MapPlusIcon = /* @__PURE__ */ createNativeIcon('map-plus', [
   ['path', { d: 'm4.25 6.75 5-2.25 6 2.25 5-2.25v7.586m-8.973 5.674L9.25 17l-5 2.25V6.75' }],

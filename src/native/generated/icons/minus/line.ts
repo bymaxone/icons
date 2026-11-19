@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `minus` icon, line variant: minus, subtract, remove, decrease, collapse.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const MinusIcon = /* @__PURE__ */ createNativeIcon('minus', [
   ['path', { d: 'M5.75 12.25h13' }]

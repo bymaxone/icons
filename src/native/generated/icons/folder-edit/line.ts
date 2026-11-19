@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `folder-edit` icon, line variant: folder edit, rename folder, modify, pencil.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const FolderEditIcon = /* @__PURE__ */ createNativeIcon('folder-edit', [
   [

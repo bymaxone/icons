@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `blinds` icon, line variant: blinds, window, shade, slats.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const BlindsIcon = /* @__PURE__ */ createNativeIcon('blinds', [
   ['path', { d: 'M3.25 4.25h18' }],

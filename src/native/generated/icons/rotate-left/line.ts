@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `rotate-left` icon, line variant: rotate left, counterclockwise, turn, image.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const RotateLeftIcon = /* @__PURE__ */ createNativeIcon('rotate-left', [
   ['path', { d: 'M8.25 9.25h-3.5v-3.5' }],

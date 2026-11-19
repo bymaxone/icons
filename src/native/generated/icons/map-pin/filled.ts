@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `map-pin` icon, filled variant: location, pin, place, address.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const MapPinFilledIcon = /* @__PURE__ */ createNativeIcon(
   'map-pin-filled',

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `heart-plus` icon, line variant: heart plus, favorite, new, collect.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const HeartPlusIcon = /* @__PURE__ */ createNativeIcon('heart-plus', [
   [

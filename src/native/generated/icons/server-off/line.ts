@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `server-off` icon, line variant: server off, offline, down, hosting.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const ServerOffIcon = /* @__PURE__ */ createNativeIcon('server-off', [
   [

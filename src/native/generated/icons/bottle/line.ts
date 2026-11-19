@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `bottle` icon, line variant: bottle, flask, container, liquid.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const BottleIcon = /* @__PURE__ */ createNativeIcon('bottle', [
   [

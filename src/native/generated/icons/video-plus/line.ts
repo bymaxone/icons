@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `video-plus` icon, line variant: video plus, upload video, new clip, create.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const VideoPlusIcon = /* @__PURE__ */ createNativeIcon('video-plus', [
   [

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `home` icon, sm variant: house, start, main page, dashboard home.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const HomeSmIcon = /* @__PURE__ */ createNativeIcon(
   'home-sm',

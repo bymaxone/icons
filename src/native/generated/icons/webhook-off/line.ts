@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `webhook-off` icon, line variant: webhook off, stopped callback, disabled integration, api silent.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const WebhookOffIcon = /* @__PURE__ */ createNativeIcon('webhook-off', [
   ['path', { d: 'M3.75 17.75a2.5 2.5 0 1 0 5 0 2.5 2.5 0 0 0-5 0' }],

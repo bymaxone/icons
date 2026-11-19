@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `coins-swap` icon, line variant: coins swap, exchange, convert, money.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const CoinsSwapIcon = /* @__PURE__ */ createNativeIcon('coins-swap', [
   ['circle', { cx: 8.25, cy: 8.25, r: 4 }],

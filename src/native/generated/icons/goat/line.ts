@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `goat` icon, line variant: goat, horns, farm, mountain.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const GoatIcon = /* @__PURE__ */ createNativeIcon('goat', [
   ['path', { d: 'M9.75 9.75h5L14 16c-.25 1.5-1 2.25-1.75 2.25s-1.5-.75-1.75-2.25z' }],

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `wind-power` icon, line variant: wind power, turbine, renewable, energy.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const WindPowerIcon = /* @__PURE__ */ createNativeIcon('wind-power', [
   ['circle', { cx: 12.25, cy: 9.25, r: 1.5 }],

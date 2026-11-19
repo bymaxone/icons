@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `joystick` icon, line variant: joystick, arcade, game, stick.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const JoystickIcon = /* @__PURE__ */ createNativeIcon('joystick', [
   [

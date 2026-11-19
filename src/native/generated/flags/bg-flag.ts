@@ -10,7 +10,7 @@ import { createNativeFlag } from '@bymax-one/icons/native/runtime'
  * The Bulgaria flag, from https://gitlab.com/catamphetamine/country-flag-icons/-/blob/v1.6.20/flags/3x2/BG.svg (MIT, retrieved 2026-11-14).
  * It is reproduced as published by its source; see TRADEMARKS.md.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const BgFlagIcon = /* @__PURE__ */ createNativeFlag('bg-flag', '0 0 513 342', [
   ['path', { fill: '#00966e', d: 'M0 0h513v342H0z' }],

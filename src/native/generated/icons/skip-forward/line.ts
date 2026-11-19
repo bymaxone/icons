@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `skip-forward` icon, line variant: next, forward, media control, end.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const SkipForwardIcon = /* @__PURE__ */ createNativeIcon('skip-forward', [
   [

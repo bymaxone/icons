@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `chart-bar-horizontal` icon, line variant: chart bar horizontal, bars, ranking, compare.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const ChartBarHorizontalIcon = /* @__PURE__ */ createNativeIcon('chart-bar-horizontal', [
   ['path', { d: 'M3.75 3.75v16.5h16.5' }],

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `message-star` icon, line variant: message star, important chat, pinned comment, highlight.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const MessageStarIcon = /* @__PURE__ */ createNativeIcon('message-star', [
   [

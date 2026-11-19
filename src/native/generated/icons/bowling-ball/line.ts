@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `bowling-ball` icon, line variant: bowling ball, bowling, sport, strike.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const BowlingBallIcon = /* @__PURE__ */ createNativeIcon('bowling-ball', [
   ['circle', { cx: 12.25, cy: 12.25, r: 8.5 }],

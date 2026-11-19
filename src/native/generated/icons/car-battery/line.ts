@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `car-battery` icon, line variant: car battery, vehicle power, terminals, charge.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const CarBatteryIcon = /* @__PURE__ */ createNativeIcon('car-battery', [
   [

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `shadow` icon, line variant: shadow, drop shadow, depth, elevation.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const ShadowIcon = /* @__PURE__ */ createNativeIcon('shadow', [
   ['circle', { cx: 10.75, cy: 10.75, r: 6.25 }],

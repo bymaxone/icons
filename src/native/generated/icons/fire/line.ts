@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `fire` icon, line variant: fire, flame, hot, trending.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const FireIcon = /* @__PURE__ */ createNativeIcon('fire', [
   [

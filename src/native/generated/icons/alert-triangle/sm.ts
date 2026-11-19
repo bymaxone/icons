@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `alert-triangle` icon, sm variant: warning, caution, danger, exclamation.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const AlertTriangleSmIcon = /* @__PURE__ */ createNativeIcon(
   'alert-triangle-sm',

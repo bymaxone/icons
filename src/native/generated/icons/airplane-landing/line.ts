@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `airplane-landing` icon, line variant: airplane landing, arrival, flight, airport.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const AirplaneLandingIcon = /* @__PURE__ */ createNativeIcon('airplane-landing', [
   ['path', { d: 'M3.25 20.25h18' }],

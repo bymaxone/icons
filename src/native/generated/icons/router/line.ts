@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `router` icon, line variant: router, wifi, modem, internet.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const RouterIcon = /* @__PURE__ */ createNativeIcon('router', [
   [

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `render` icon, line variant: export, process, progress, output.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const RenderIcon = /* @__PURE__ */ createNativeIcon('render', [
   [

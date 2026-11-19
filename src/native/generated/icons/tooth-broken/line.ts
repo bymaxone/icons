@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `tooth-broken` icon, line variant: broken tooth, cracked, chipped, dentist.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const ToothBrokenIcon = /* @__PURE__ */ createNativeIcon('tooth-broken', [
   [

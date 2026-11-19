@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `home-bolt` icon, line variant: home bolt, electricity, power, utility.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const HomeBoltIcon = /* @__PURE__ */ createNativeIcon('home-bolt', [
   [

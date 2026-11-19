@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `align-vertical-center` icon, line variant: align middle, center, vertical, layout.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const AlignVerticalCenterIcon = /* @__PURE__ */ createNativeIcon('align-vertical-center', [
   ['path', { d: 'M4.25 12.25h2.5m4 0h3m4 0h2.5' }],

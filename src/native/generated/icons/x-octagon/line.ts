@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `x-octagon` icon, line variant: x octagon, stop, error, critical.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const XOctagonIcon = /* @__PURE__ */ createNativeIcon('x-octagon', [
   [

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `step-into` icon, line variant: step into, debug, enter, dive in.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const StepIntoIcon = /* @__PURE__ */ createNativeIcon('step-into', [
   ['path', { d: 'M12.25 3.25v9.5m-3.5-3.5 3.5 3.5 3.5-3.5' }],

@@ -3,7 +3,7 @@
 > **Type:** npm public library (NOT an application)
 > **Package:** `@bymax-one/icons` — original Bymax icon set: React 19 components, raw SVG, an SVG sprite and typed metadata on one 24 px grid with a 1.5 px stroke
 > **Runtime:** any React 19 renderer, including Server Components | Tooling on Node.js 24+ | Zero direct dependencies (`react` is the only peer)
-> **Status:** 1.1.0 prepared; the founder publishes 1.0.0 by hand first ([docs/release-checklist.md](./docs/release-checklist.md)). The repository scaffold and gates, the runtime (`Icon`, `createIcon` and their types, on `./runtime` and the root) and the build pipeline (`pnpm generate`, the icon lint, the static outputs) are in place, with the twelve keystone icons that fix the design language (spec §2, including the 1.5 px cut between distinct parts), the line set, the filled variants, the hand-tuned 16 px masters, the brand marks and the country flags. React Native components ship in 1.1.0 (`./native`, P6). The phase order is in [docs/development_plan.md](./docs/development_plan.md).
+> **Status:** 1.0.0 prepared for its first publish, React Native included, which the founder makes by hand ([docs/release-checklist.md](./docs/release-checklist.md)). The repository scaffold and gates, the runtime (`Icon`, `createIcon` and their types, on `./runtime` and the root) and the build pipeline (`pnpm generate`, the icon lint, the static outputs) are in place, with the twelve keystone icons that fix the design language (spec §2, including the 1.5 px cut between distinct parts), the line set, the filled variants, the hand-tuned 16 px masters, the brand marks and the country flags. React Native components ship in the same release (`./native`, P6). The phase order is in [docs/development_plan.md](./docs/development_plan.md).
 
 ---
 
@@ -71,7 +71,7 @@
 | `./svg/*`                                                       | Raw SVG files                                             | None                                   | Ready  |
 | `./sprite.svg`                                                  | The sprite                                                | None                                   | Ready  |
 | `./metadata.json`                                               | Merged metadata                                           | None                                   | Ready  |
-| `./native` (+ `/icons/<name>`, `/brands`, `/flags`, `/runtime`) | React Native components, since 1.1.0                      | React 19, react-native-svg `>=15.11.1` | Ready  |
+| `./native` (+ `/icons/<name>`, `/brands`, `/flags`, `/runtime`) | React Native components, since 1.0.0                      | React 19, react-native-svg `>=15.11.1` | Ready  |
 
 Every subpath is built, exported and gated, and holds the full set. The runtime has its own entry because each icon module imports `createIcon` and the root re-exports every icon; inside the root the two would import each other. The gates read the icon subpaths from the built `dist/metadata.json` (`scripts/package-expectations.mjs`), so a new icon needs no gate edit.
 

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `camera-share` icon, line variant: camera share, send capture, post snapshot, upload shot.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const CameraShareIcon = /* @__PURE__ */ createNativeIcon('camera-share', [
   [

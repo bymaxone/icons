@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `calculator` icon, line variant: calculator, calculate, math, sum.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const CalculatorIcon = /* @__PURE__ */ createNativeIcon('calculator', [
   [

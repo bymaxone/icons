@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `frog` icon, line variant: frog, amphibian, pond, green.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const FrogIcon = /* @__PURE__ */ createNativeIcon('frog', [
   ['path', { d: 'M4.25 13.25c0-3 3.5-4.75 8-4.75s8 1.75 8 4.75c0 4-3.5 6.5-8 6.5s-8-2.5-8-6.5' }],

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `bed-double` icon, line variant: bed double, two people, room, sleep.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const BedDoubleIcon = /* @__PURE__ */ createNativeIcon('bed-double', [
   ['path', { d: 'M3.25 20.25v-7h18v7' }],

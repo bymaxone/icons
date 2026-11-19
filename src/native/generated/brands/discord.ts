@@ -10,7 +10,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
  * The Discord brand mark, from https://github.com/simple-icons/simple-icons/blob/16.37.0/icons/discord.svg (CC0-1.0, retrieved 2026-11-11).
  * The mark belongs to its owner and is not covered by the MIT grant; see TRADEMARKS.md and https://discord.com/branding.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const DiscordBrandIcon = /* @__PURE__ */ createNativeIcon(
   'discord-brand',

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `search` icon, line variant: magnifier, find, lookup, query.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const SearchIcon = /* @__PURE__ */ createNativeIcon('search', [
   ['circle', { cx: 9.75, cy: 9.75, r: 6.5 }],

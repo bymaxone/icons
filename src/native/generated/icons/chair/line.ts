@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `chair` icon, line variant: chair, seat, furniture, sit.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const ChairIcon = /* @__PURE__ */ createNativeIcon('chair', [
   ['path', { d: 'M7.25 3.75v16.5m0-7.5H17.5v7.5m-10.25-4H17.5' }]

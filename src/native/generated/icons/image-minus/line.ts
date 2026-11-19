@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `image-minus` icon, line variant: image minus, delete photo, remove picture, detach.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const ImageMinusIcon = /* @__PURE__ */ createNativeIcon('image-minus', [
   [

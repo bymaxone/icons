@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `tag-minus` icon, line variant: tag minus, untag, delete label, detach.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const TagMinusIcon = /* @__PURE__ */ createNativeIcon('tag-minus', [
   [

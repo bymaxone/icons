@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `image-search` icon, line variant: image search, find photo, reverse search, visual lookup.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const ImageSearchIcon = /* @__PURE__ */ createNativeIcon('image-search', [
   [

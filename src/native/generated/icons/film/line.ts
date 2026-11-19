@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `film` icon, line variant: film, movie, cinema, strip.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const FilmIcon = /* @__PURE__ */ createNativeIcon('film', [
   [

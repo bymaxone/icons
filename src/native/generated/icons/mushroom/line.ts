@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `mushroom` icon, line variant: mushroom, fungus, forest, ingredient.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const MushroomIcon = /* @__PURE__ */ createNativeIcon('mushroom', [
   ['path', { d: 'M3.75 12.25c0-4.5 3.75-8 8.5-8s8.5 3.5 8.5 8z' }],

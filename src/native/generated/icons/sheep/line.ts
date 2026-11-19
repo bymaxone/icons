@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `sheep` icon, line variant: sheep, wool, farm, lamb.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const SheepIcon = /* @__PURE__ */ createNativeIcon('sheep', [
   [

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `align-right` icon, line variant: align, right, text, paragraph.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const AlignRightIcon = /* @__PURE__ */ createNativeIcon('align-right', [
   ['path', { d: 'M4.75 5.25h15' }],

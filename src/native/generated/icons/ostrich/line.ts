@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `ostrich` icon, line variant: ostrich, flightless, runner, large bird.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const OstrichIcon = /* @__PURE__ */ createNativeIcon('ostrich', [
   [

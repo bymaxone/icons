@@ -10,7 +10,7 @@ import { createNativeFlag } from '@bymax-one/icons/native/runtime'
  * The St. Martin flag, from https://gitlab.com/catamphetamine/country-flag-icons/-/blob/v1.6.20/flags/3x2/MF.svg (MIT, retrieved 2026-11-14).
  * It is reproduced as published by its source; see TRADEMARKS.md.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const MfFlagIcon = /* @__PURE__ */ createNativeFlag('mf-flag', '0 0 108 72', [
   ['path', { fill: '#003787', d: 'M0 0h108v72H0z' }],

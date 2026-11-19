@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `circle-dashed` icon, line variant: circle dashed, placeholder, empty, outline.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const CircleDashedIcon = /* @__PURE__ */ createNativeIcon('circle-dashed', [
   [

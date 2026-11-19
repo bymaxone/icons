@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `augmented-reality` icon, line variant: augmented reality, ar, overlay, headset.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const AugmentedRealityIcon = /* @__PURE__ */ createNativeIcon('augmented-reality', [
   [

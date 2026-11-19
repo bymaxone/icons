@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `calendar-off` icon, line variant: calendar off, unavailable, disabled, no events.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const CalendarOffIcon = /* @__PURE__ */ createNativeIcon('calendar-off', [
   [

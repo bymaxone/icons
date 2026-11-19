@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `triangle` icon, line variant: triangle, shape, delta, polygon.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const TriangleIcon = /* @__PURE__ */ createNativeIcon('triangle', [
   [

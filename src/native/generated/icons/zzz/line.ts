@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `zzz` icon, line variant: zzz, sleep, snooze, rest.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const ZzzIcon = /* @__PURE__ */ createNativeIcon('zzz', [
   ['path', { d: 'M4.25 12.25h5l-5 6h5m3.5-11.5h4l-4 4.75h4m1.5-8.25h2.5l-2.5 3h2.5' }]

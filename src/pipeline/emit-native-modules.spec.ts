@@ -90,7 +90,7 @@ describe('nativeComponentModules', () => {
      * marked as such.
      */
     const doc = (variant: string): string =>
-      `/**\n * The \`ring\` icon, ${variant} variant: circle.\n *\n * @since 1.1.0\n */\n`
+      `/**\n * The \`ring\` icon, ${variant} variant: circle.\n *\n * @since 1.0.0\n */\n`
     const aliases = (suffix: string, target: string): string =>
       `\n/** \`circle\`: an alias of {@link ${target}}. */\nexport const Circle${suffix}Icon = ${target}\n` +
       `\n/** @deprecated \`old-ring\` is a deprecated alias of \`ring\`, removed in 2.0.0. Use {@link ${target}}. */\nexport const OldRing${suffix}Icon = ${target}\n`
@@ -144,7 +144,7 @@ describe('nativeComponentModules', () => {
         IMPORT +
         '/**\n * The Acme brand mark, from https://example.com/acme (CC0-1.0, retrieved 2026-11-08).\n' +
         ' * The mark belongs to its owner and is not covered by the MIT grant; see TRADEMARKS.md and https://example.com/acme/brand.\n' +
-        ' *\n * @since 1.1.0\n */\n' +
+        ' *\n * @since 1.0.0\n */\n' +
         'export const AcmeBrandIcon = /* @__PURE__ */ createNativeIcon("acme-brand", [["polygon", { points: "12 3 21 21 3 21" }]], { paint: \'fill\' })\n' +
         '\n/** `a-logo`: an alias of {@link AcmeBrandIcon}. */\nexport const ALogoBrandIcon = AcmeBrandIcon\n'
     )
@@ -164,7 +164,7 @@ describe('nativeComponentModules', () => {
         "import { createNativeFlag } from '@bymax-one/icons/native/runtime'\n\n" +
         '/**\n * The Sweden flag, from https://example.com/flags/SE.svg (MIT, retrieved 2026-11-15).\n' +
         ' * It is reproduced as published by its source; see TRADEMARKS.md.\n' +
-        ' *\n * @since 1.1.0\n */\n' +
+        ' *\n * @since 1.0.0\n */\n' +
         'export const SeFlagIcon = /* @__PURE__ */ createNativeFlag("se-flag", "0 0 513 342", [["path", { fill: "#004f8e", d: "M0 0h513v342H0z" }], ["path", { fill: "#f6c500", d: "M0 171h513v57H0z" }]])\n'
     )
     expect(modules.get('src/native/generated/flags/index.ts')).toBe(
@@ -238,7 +238,7 @@ describe('nativeComponentModules', () => {
       createFlag: 'createNativeFlag',
       subpath: '@bymax-one/icons/native/',
       entry: 'the `./native` entry',
-      since: '1.1.0'
+      since: '1.0.0'
     })
   })
 })

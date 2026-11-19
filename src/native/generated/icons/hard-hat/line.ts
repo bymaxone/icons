@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `hard-hat` icon, line variant: hard hat, helmet, construction, safety.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const HardHatIcon = /* @__PURE__ */ createNativeIcon('hard-hat', [
   ['path', { d: 'M5.75 15.25v-2a6.5 6.5 0 0 1 13 0v2' }],

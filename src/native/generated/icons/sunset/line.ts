@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `sunset` icon, line variant: sunset, evening, dusk, sun.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const SunsetIcon = /* @__PURE__ */ createNativeIcon('sunset', [
   ['path', { d: 'M3.25 19.25h18' }],

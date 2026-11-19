@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `align-bottom` icon, line variant: align bottom, bottom edge, layout, position.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const AlignBottomIcon = /* @__PURE__ */ createNativeIcon('align-bottom', [
   ['path', { d: 'M4.25 20.25h16' }],

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `reply` icon, line variant: reply, respond, answer, message.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const ReplyIcon = /* @__PURE__ */ createNativeIcon('reply', [
   ['path', { d: 'M19.75 18.75v-2.5c0-3.5-2.25-5.75-5.75-5.75H4.75' }],

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `cloud-x` icon, line variant: cloud x, sync failed, offline, disconnected.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const CloudXIcon = /* @__PURE__ */ createNativeIcon('cloud-x', [
   [

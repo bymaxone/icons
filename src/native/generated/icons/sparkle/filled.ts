@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `sparkle` icon, filled variant: ai, magic, generated, star.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const SparkleFilledIcon = /* @__PURE__ */ createNativeIcon(
   'sparkle-filled',

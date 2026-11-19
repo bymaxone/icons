@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `loader` icon, line variant: loading, spinner, progress, busy.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const LoaderIcon = /* @__PURE__ */ createNativeIcon('loader', [
   ['path', { d: 'M12.25 4.25a8 8 0 0 1 6.928 12' }],

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `chart-bar` icon, line variant: chart, bars, statistics, report.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const ChartBarIcon = /* @__PURE__ */ createNativeIcon('chart-bar', [
   ['path', { d: 'M3.75 3.75v16.5h16.5' }],

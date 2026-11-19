@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `gym-rings` icon, line variant: gym rings, gymnastics, hanging rings, strength.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const GymRingsIcon = /* @__PURE__ */ createNativeIcon('gym-rings', [
   ['path', { d: 'M7.25 3.25v9.5m10-9.5v9.5' }],

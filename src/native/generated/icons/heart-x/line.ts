@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `heart-x` icon, line variant: heart x, dislike, remove like, withdraw love.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const HeartXIcon = /* @__PURE__ */ createNativeIcon('heart-x', [
   [

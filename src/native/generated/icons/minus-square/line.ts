@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `minus-square` icon, line variant: minus, square, collapse, remove.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const MinusSquareIcon = /* @__PURE__ */ createNativeIcon('minus-square', [
   [

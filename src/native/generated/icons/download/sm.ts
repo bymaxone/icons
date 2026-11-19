@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `download` icon, sm variant: save, export, tray, arrow down.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const DownloadSmIcon = /* @__PURE__ */ createNativeIcon(
   'download-sm',

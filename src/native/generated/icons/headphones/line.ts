@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `headphones` icon, line variant: headphones, audio, support, listen.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const HeadphonesIcon = /* @__PURE__ */ createNativeIcon('headphones', [
   ['path', { d: 'M3.75 17.25v-5a8.5 8.5 0 0 1 17 0v5' }],

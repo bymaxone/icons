@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `list-search` icon, line variant: list search, find item, filter, look up.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const ListSearchIcon = /* @__PURE__ */ createNativeIcon('list-search', [
   ['path', { d: 'M9.25 6.25h10.5m-10.5 6h3.36m-3.36 6h2.08' }],

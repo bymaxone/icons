@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `blender` icon, line variant: blender, kitchen, smoothie, mix.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const BlenderIcon = /* @__PURE__ */ createNativeIcon('blender', [
   ['path', { d: 'M7.25 4.25h10l-1.5 10h-7z' }],

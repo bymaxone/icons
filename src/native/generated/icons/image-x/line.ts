@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `image-x` icon, line variant: image x, missing picture, failed upload, error.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const ImageXIcon = /* @__PURE__ */ createNativeIcon('image-x', [
   [

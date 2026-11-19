@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `plus-square` icon, line variant: plus, square, add, new.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const PlusSquareIcon = /* @__PURE__ */ createNativeIcon('plus-square', [
   [

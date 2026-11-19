@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `clapperboard` icon, line variant: clapperboard, film, take, movie.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const ClapperboardIcon = /* @__PURE__ */ createNativeIcon('clapperboard', [
   [

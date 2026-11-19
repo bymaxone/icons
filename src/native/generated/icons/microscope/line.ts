@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `microscope` icon, line variant: microscope, lab, research, science.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const MicroscopeIcon = /* @__PURE__ */ createNativeIcon('microscope', [
   ['path', { d: 'M5.25 21.25h14' }],

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `campfire` icon, line variant: campfire, camp, flame, outdoors.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const CampfireIcon = /* @__PURE__ */ createNativeIcon('campfire', [
   ['path', { d: 'M12.25 3.75C14.5 6.25 16 8 16 10a3.75 3.75 0 0 1-7.5 0c0-2 1.5-3.75 3.75-6.25' }],

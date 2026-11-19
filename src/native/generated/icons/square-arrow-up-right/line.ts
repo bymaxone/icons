@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `square-arrow-up-right` icon, line variant: external link, open, new window, outside.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const SquareArrowUpRightIcon = /* @__PURE__ */ createNativeIcon('square-arrow-up-right', [
   [

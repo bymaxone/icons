@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `dresser` icon, line variant: dresser, drawers, chest, furniture.
  *
- * @since 1.1.0
+ * @since 1.0.0
  */
 export const DresserIcon = /* @__PURE__ */ createNativeIcon('dresser', [
   [
