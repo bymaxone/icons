@@ -1,10 +1,16 @@
 import type { Config } from 'jest'
 
+// jest-worker puts FORCE_COLOR=1 in a worker's environment when stdout is a terminal and
+// supports-color has not been told otherwise, and Node then colours what a program spawned by
+// a spec prints, so a spec comparing it with a literal reads escape codes. CI has no terminal
+// and never sees it. Setting this while the config loads is early enough, because jest-worker
+// reads the colour support when it starts its first worker; a later `globalSetup` is too late.
+process.env.FORCE_COLOR = '0'
+process.env.NO_COLOR = '1'
+
 const config: Config = {
   preset: 'ts-jest',
   testEnvironment: 'node',
-  // Colour off for every spec file and the programs they spawn; see the file.
-  globalSetup: '<rootDir>/../scripts/jest-no-color.mjs',
   rootDir: 'src',
   testMatch: ['**/*.spec.ts', '**/*.spec.tsx', '**/*.test.ts'],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'json'],
