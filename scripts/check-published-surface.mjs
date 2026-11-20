@@ -26,6 +26,7 @@ import { dirname, join, resolve, sep } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 import { checkSnippets } from './readme-snippets.mjs'
+import { retryRequest } from './retry-request.mjs'
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..')
 const PKG = JSON.parse(readFileSync(join(ROOT, 'package.json'), 'utf8'))
@@ -284,12 +285,20 @@ async function checkLinks() {
         // lookup with its own 5s bound, outside this signal, so a chain's worst
         // case is this timeout plus one lookup per hop. Both are bounded, which
         // is what matters here; they are not one budget.
-        const opts = { headers, signal: AbortSignal.timeout(10_000) }
-        let res = await fetchChecked(probe, { method: 'HEAD', ...opts })
-        if (res.status === 405 || res.status === 403 || res.status === 429) {
-          await res.body?.cancel().catch(() => undefined)
-          res = await fetchChecked(probe, { method: 'GET', ...opts })
-        }
+        //
+        // A server error is asked again, twice: a host that answers 503 now often answers 200 a
+        // second later, and one such answer must not block a release. A dead link answers the
+        // same every time, so it still fails. A refused redirect is never asked again.
+        const res = await retryRequest(
+          async () => {
+            const opts = { headers, signal: AbortSignal.timeout(10_000) }
+            const first = await fetchChecked(probe, { method: 'HEAD', ...opts })
+            if (first.status !== 405 && first.status !== 403 && first.status !== 429) return first
+            await first.body?.cancel().catch(() => undefined)
+            return fetchChecked(probe, { method: 'GET', ...opts })
+          },
+          { retryable: (err) => !(err instanceof UnroutableRedirect) }
+        )
         // Only the status is ever read. undici holds the connection until the
         // body is read or cancelled, and this runs across every link at once.
         await res.body?.cancel().catch(() => undefined)

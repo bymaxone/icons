@@ -34,6 +34,7 @@ import { fileURLToPath } from 'node:url'
 import { execSync, spawnSync } from 'node:child_process'
 import { createRequire } from 'node:module'
 
+import { describeFailure, runProbe } from './consumer-probe.mjs'
 import { bundleExportNames } from './native-bundle-names.mjs'
 import { packageExpectations } from './package-expectations.mjs'
 
@@ -250,22 +251,14 @@ function checkConsumerResolution() {
     '.then(() => process.exit(0))',
     '.catch((e) => { console.error(e); process.exit(5) })'
   ].join('')
-  const esmResult = spawnSync('node', ['--input-type=module', '-e', esmProbe], {
-    cwd: consumerDir,
-    encoding: 'utf8',
-    timeout: 30_000
-  })
+  const esmResult = runProbe(consumerDir, 'probe-esm.mjs', esmProbe)
   if (esmResult.status === 0) pass('ESM specifiers resolve via exports map from consumer cwd')
-  else fail(`Consumer ESM import failed (code ${esmResult.status}): ${esmResult.stderr}`)
+  else fail(`Consumer ESM import failed (${describeFailure(esmResult)})`)
 
   const cjsLines = SUBPATHS.map((s) => `require(${JSON.stringify(specifierFor(s))})`).join('\n')
-  const cjsResult = spawnSync('node', ['--input-type=commonjs', '-e', cjsLines], {
-    cwd: consumerDir,
-    encoding: 'utf8',
-    timeout: 30_000
-  })
+  const cjsResult = runProbe(consumerDir, 'probe-cjs.cjs', cjsLines)
   if (cjsResult.status === 0) pass('CJS specifiers resolve via exports map from consumer cwd')
-  else fail(`Consumer CJS require failed (code ${cjsResult.status}): ${cjsResult.stderr}`)
+  else fail(`Consumer CJS require failed (${describeFailure(cjsResult)})`)
 
   // Native subpaths are resolved, not loaded (see NATIVE_SUBPATHS), and the resolved file must exist.
   const nativeSpecifiers = JSON.stringify(NATIVE_SUBPATHS.map(specifierFor))
@@ -276,30 +269,22 @@ function checkConsumerResolution() {
     '  if (!existsSync(fileURLToPath(import.meta.resolve(s)))) { console.error(s); process.exit(5) }',
     '}'
   ].join('\n')
-  const nativeEsm = spawnSync('node', ['--input-type=module', '-e', nativeEsmProbe], {
-    cwd: consumerDir,
-    encoding: 'utf8',
-    timeout: 30_000
-  })
+  const nativeEsm = runProbe(consumerDir, 'probe-native-esm.mjs', nativeEsmProbe)
   if (nativeEsm.status === 0) {
     pass(
       `${NATIVE_SUBPATHS.length} native specifiers resolve in ESM without react-native-svg installed`
     )
-  } else fail(`Consumer native ESM resolve failed (code ${nativeEsm.status}): ${nativeEsm.stderr}`)
-  const nativeCjs = spawnSync(
-    'node',
-    [
-      '--input-type=commonjs',
-      '-e',
-      `${nativeSpecifiers}.forEach((s) => { if (!require('node:fs').existsSync(require.resolve(s))) process.exit(5) })`
-    ],
-    { cwd: consumerDir, encoding: 'utf8', timeout: 30_000 }
+  } else fail(`Consumer native ESM resolve failed (${describeFailure(nativeEsm)})`)
+  const nativeCjs = runProbe(
+    consumerDir,
+    'probe-native-cjs.cjs',
+    `${nativeSpecifiers}.forEach((s) => { if (!require('node:fs').existsSync(require.resolve(s))) process.exit(5) })`
   )
   if (nativeCjs.status === 0) {
     pass(
       `${NATIVE_SUBPATHS.length} native specifiers resolve in CJS without react-native-svg installed`
     )
-  } else fail(`Consumer native CJS resolve failed (code ${nativeCjs.status}): ${nativeCjs.stderr}`)
+  } else fail(`Consumer native CJS resolve failed (${describeFailure(nativeCjs)})`)
 }
 
 function checkConsumerRender() {
@@ -321,16 +306,12 @@ function checkConsumerRender() {
     '  if (!named || !markup.includes(`class="${className}"`)) { console.error(markup); process.exit(7) }',
     '}'
   ].join('\n')
-  const result = spawnSync('node', ['--input-type=module', '-e', probe], {
-    cwd: consumerDir,
-    encoding: 'utf8',
-    timeout: 30_000
-  })
+  const result = runProbe(consumerDir, 'probe-render.mjs', probe)
   if (result.status === 0) {
     pass(
       `a fixture icon and ${EXPECTED.components.length} generated component(s) render from the installed tarball`
     )
-  } else fail(`Consumer render failed (code ${result.status}): ${result.stderr}`)
+  } else fail(`Consumer render failed (${describeFailure(result)})`)
 }
 
 function checkConsumerInstall() {
