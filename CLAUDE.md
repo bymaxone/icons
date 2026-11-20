@@ -3,7 +3,7 @@
 > **Type:** npm public library (NOT an application)
 > **Package:** `@bymax-one/icons` — original Bymax icon set: React 19 components, raw SVG, an SVG sprite and typed metadata on one 24 px grid with a 1.5 px stroke
 > **Runtime:** any React 19 renderer, including Server Components | Tooling on Node.js 24+ | Zero direct dependencies (`react` is the only peer)
-> **Status:** 1.0.0 prepared for its first publish, React Native included, which the founder makes by hand ([docs/release-checklist.md](./docs/release-checklist.md)). The repository scaffold and gates, the runtime (`Icon`, `createIcon` and their types, on `./runtime` and the root) and the build pipeline (`pnpm generate`, the icon lint, the static outputs) are in place, with the twelve keystone icons that fix the design language (spec §2, including the 1.5 px cut between distinct parts), the line set, the filled variants, the hand-tuned 16 px masters, the brand marks and the country flags. React Native components ship in the same release (`./native`, P6). The phase order is in [docs/development_plan.md](./docs/development_plan.md).
+> **Status:** published on npm, React Native included; versions are published by `release.yml` from a `vX.Y.Z` tag, with provenance ([docs/release-checklist.md](./docs/release-checklist.md)). The phase order is in [docs/development_plan.md](./docs/development_plan.md).
 
 ---
 

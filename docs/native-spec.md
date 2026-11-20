@@ -1,6 +1,6 @@
 # P6 React Native: specification draft
 
-> **Status**: **Ships in**: 1.0.0, the first publish · **Source**: [`development_plan.md`](./development_plan.md) §5 (P6)
+> **Status**: shipped in 1.0.0 · **Source**: [`development_plan.md`](./development_plan.md) §5 (P6)
 
 Each item that depends on a measurement says what is measured, and the number is filled in when it is.
 

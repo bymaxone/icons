@@ -9,13 +9,14 @@
   <sub>24 px grid · 1.5 px round stroke · React 19 and Server Components · Raw SVG and sprite · Typed metadata · Zero Runtime Dependencies</sub>
 </p>
 
-<p align="center"><a href="https://icons.bymax.one">Browse every icon at icons.bymax.one</a></p>
+<p align="center"><a href="https://bymaxone.github.io/icons/">Browse every icon in the catalog</a></p>
 
 <p align="center">
   <a href="https://www.npmjs.com/package/@bymax-one/icons"><img src="https://img.shields.io/npm/v/@bymax-one/icons?style=flat-square&colorA=000000&colorB=000000" alt="npm version" /></a>
   <a href="https://www.npmjs.com/package/@bymax-one/icons"><img src="https://img.shields.io/npm/dm/@bymax-one/icons?style=flat-square&colorA=000000&colorB=000000" alt="npm downloads" /></a>
   <a href="https://github.com/bymaxone/icons/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/bymaxone/icons/ci.yml?branch=main&style=flat-square&colorA=000000&label=CI" alt="CI status" /></a>
   <a href="https://github.com/bymaxone/icons/actions/workflows/ci.yml"><img src="https://img.shields.io/badge/coverage-100%25-brightgreen?style=flat-square&colorA=000000" alt="coverage" /></a>
+  <a href="https://github.com/bymaxone/icons/actions/workflows/ci.yml"><img src="https://img.shields.io/badge/mutation-100%25-brightgreen?style=flat-square&colorA=000000" alt="mutation score" /></a>
   <a href="https://scorecard.dev/viewer/?uri=github.com/bymaxone/icons"><img src="https://api.scorecard.dev/projects/github.com/bymaxone/icons/badge?style=flat-square" alt="OpenSSF Scorecard" /></a>
   <a href="https://github.com/bymaxone/icons/blob/main/LICENSE"><img src="https://img.shields.io/github/license/bymaxone/icons?style=flat-square&colorA=000000&colorB=000000" alt="license" /></a>
   <a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/TypeScript-strict-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" /></a>
@@ -40,12 +41,10 @@ Every non-brand glyph is an original Bymax drawing built on one grid and one set
 so the products that use it do not look like every other app built on the same open-source
 set.
 
-> [!NOTE]
-> **Status: 1.0.0, the first published version.** The package holds 1,298 line icons, 51
-> filled variants, 45 hand-tuned 16 px masters, 110 brand marks and 250 country flags, each
-> as a component, a raw SVG file and a metadata entry; every drawing except a flag is also a
-> sprite symbol, because the sprite holds `currentColor` drawings. Every drawing is also a
-> React Native component, from `./native`.
+The package holds 1,298 line icons, 51 filled variants, 45 hand-tuned 16 px masters, 110
+brand marks and 250 country flags, each as a component, a raw SVG file and a metadata entry;
+every drawing except a flag is also a sprite symbol, because the sprite holds `currentColor`
+drawings. Every drawing is also a React Native component, from `./native`.
 
 The library has **zero direct dependencies**: `react` arrives as a peer dependency, so you
 control its version and the supply-chain surface stays minimal.
@@ -67,13 +66,11 @@ control its version and the supply-chain surface stays minimal.
 
 ## 🔥 Features
 
-✅ marks what the package ships in 1.0.0.
-
 ### 🎨 Drawing System
 
 - ✅ **The grid as data**: `ICON_GRID` holds the viewBox, live area, padding and stroke of the
   24 px master, frozen and typed with literal values
-- ✅ **The design language, approved**: the twelve keystone icons (`home`, `search`, `play`,
+- ✅ **The design language**: the twelve keystone icons (`home`, `search`, `play`,
   `plus`, `close`, `check`, `settings`, `user`, `file`, `folder`, `lightning`, `scene`) fix
   the signature of the set, a 1.5 px cut that keeps distinct parts from touching
 - ✅ **The line set**: icons in the same language, from navigation and actions to media,
@@ -120,23 +117,23 @@ control its version and the supply-chain surface stays minimal.
 
 ## 📦 Subpath Exports
 
-| Subpath                 | Contents                                                                     | Status |
-| ----------------------- | ---------------------------------------------------------------------------- | ------ |
-| `.`                     | Every line, filled and 16 px component, the `Icon` base and the types        | Ready  |
-| `./runtime`             | The `Icon` base, `createIcon` and their types                                | Ready  |
-| `./meta`                | Typed metadata and the `IconName` union, with no React import                | Ready  |
-| `./icons/<name>`        | One icon's components, for consumers that avoid barrels                      | Ready  |
-| `./brands`              | Brand components                                                             | Ready  |
-| `./flags`               | Country flag components (`BrFlagIcon`), 16 px high by default                | Ready  |
-| `./flags/<name>`        | One flag's component, for a dynamic import                                   | Ready  |
-| `./native`              | Every line, filled and 16 px icon as a React Native component, and the bases | Ready  |
-| `./native/icons/<name>` | One icon's React Native components, for a dynamic import                     | Ready  |
-| `./native/brands`       | Brand components for React Native                                            | Ready  |
-| `./native/flags`        | Flag components for React Native                                             | Ready  |
-| `./native/runtime`      | The native base, `createNativeIcon` and their types                          | Ready  |
-| `./svg/*`               | Raw SVG files (`svg/line/<name>.svg`, `filled`, `sm`, `brands`, `flags`)     | Ready  |
-| `./sprite.svg`          | The SVG sprite, one `<symbol>` per drawing                                   | Ready  |
-| `./metadata.json`       | Merged metadata of every icon, brand and flag                                | Ready  |
+| Subpath                 | Contents                                                                     |
+| ----------------------- | ---------------------------------------------------------------------------- |
+| `.`                     | Every line, filled and 16 px component, the `Icon` base and the types        |
+| `./runtime`             | The `Icon` base, `createIcon` and their types                                |
+| `./meta`                | Typed metadata and the `IconName` union, with no React import                |
+| `./icons/<name>`        | One icon's components, for consumers that avoid barrels                      |
+| `./brands`              | Brand components                                                             |
+| `./flags`               | Country flag components (`BrFlagIcon`), 16 px high by default                |
+| `./flags/<name>`        | One flag's component, for a dynamic import                                   |
+| `./native`              | Every line, filled and 16 px icon as a React Native component, and the bases |
+| `./native/icons/<name>` | One icon's React Native components, for a dynamic import                     |
+| `./native/brands`       | Brand components for React Native                                            |
+| `./native/flags`        | Flag components for React Native                                             |
+| `./native/runtime`      | The native base, `createNativeIcon` and their types                          |
+| `./svg/*`               | Raw SVG files (`svg/line/<name>.svg`, `filled`, `sm`, `brands`, `flags`)     |
+| `./sprite.svg`          | The SVG sprite, one `<symbol>` per drawing                                   |
+| `./metadata.json`       | Merged metadata of every icon, brand and flag                                |
 
 A flag takes the props of an icon without `color`, `strokeWidth` and `absoluteStrokeWidth`, since
 it keeps its own colours, and its `size` is its height: 16 by default, so a 3:2 flag is 24 by 16.
@@ -204,23 +201,11 @@ module imports `createIcon`, and the root re-exports every icon. Every JavaScrip
 ships ESM (`.mjs`) and CommonJS (`.cjs`), each with its own declarations (`.d.ts` and
 `.d.cts`).
 
-### Install
-
-```bash
-pnpm add @bymax-one/icons react
-```
-
-### Peer dependency matrix
-
-| Package            | Version                | Needed by                          |
-| ------------------ | ---------------------- | ---------------------------------- |
-| Node.js            | `>=24.0.0`             | Tooling and builds                 |
-| `react`            | `^19.0.0`              | The root, `./brands` and `./flags` |
-| `react-native-svg` | `>=15.11.1` (optional) | The `./native` entries             |
-
 ---
 
 ## 🚀 Quick Start
+
+### 1. Install
 
 ```bash
 # pnpm
@@ -232,6 +217,16 @@ npm install @bymax-one/icons react
 # yarn
 yarn add @bymax-one/icons react
 ```
+
+`react` is the only peer dependency of the web entries; `react-native-svg` is an optional peer, needed only by the `./native` entries.
+
+| Package            | Version                | Needed by                          |
+| ------------------ | ---------------------- | ---------------------------------- |
+| Node.js            | `>=24.0.0`             | Tooling and builds                 |
+| `react`            | `^19.0.0`              | The root, `./brands` and `./flags` |
+| `react-native-svg` | `>=15.11.1` (optional) | The `./native` entries             |
+
+### 2. Render an icon
 
 The grid comes from the React-free entry:
 
