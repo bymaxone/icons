@@ -4,7 +4,7 @@
   "description": "Original Bymax icon set for React 19: per-icon components, raw SVG, a sprite and typed metadata, drawn on one 24 px grid with a 1.5 px stroke.",
   "author": "Bymax One <support@bymax.one>",
   "license": "MIT",
-  "homepage": "https://github.com/bymaxone/icons#readme",
+  "homepage": "https://bymaxone.github.io/icons/",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bymaxone/icons.git"

@@ -20,7 +20,7 @@ A documentation patch: the code, the icons and the types in `dist/` are the same
 ### Changed
 
 - The README states the package as published. The status note and the "ships in 1.0.0" marker are gone, the counts are plain facts in the overview, the subpath table has no status column, and install and the peer matrix live in Quick Start only.
-- The README points at the catalog (`https://bymaxone.github.io/icons/`) and carries a mutation badge that links to the CI workflow.
+- The README points at the catalog (`https://bymaxone.github.io/icons/`) and carries a mutation badge that links to the CI workflow. The package's `homepage` is the catalog too, so the npm page links to it.
 - The release is published by the `release.yml` workflow from a `v1.0.1` tag, with npm provenance and the trusted publisher; 1.0.0 was published by hand.
 
 ## [1.0.0] - 2026-11-19
