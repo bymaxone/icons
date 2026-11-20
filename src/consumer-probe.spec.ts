@@ -1,8 +1,8 @@
 /**
  * Pins `scripts/consumer-probe.mjs` and the rule behind it: a probe that lists data growing with
  * the icon set runs from a file, never as an `-e` argument. Linux refuses one argument past
- * 131,072 bytes (E2BIG); macOS has no such cap, so a gate that inlined the real component list
- * (163,383 bytes) passed on every developer machine and failed in the release run.
+ * 131,072 bytes (E2BIG) and macOS has no such cap, so a probe inlining the real component list
+ * (163,383 bytes) would pass locally and fail on Linux.
  *
  * Layer: repository tooling, tests. The helper is an ES module, so each case runs it in a child
  * process the way the gates do.
@@ -72,7 +72,7 @@ describe('runProbe', () => {
 
 describe('describeFailure', () => {
   it('names the status, the signal, the spawn error and the stderr', () => {
-    // Scenario: a run that never started, as the release run reported it, has a null status.
+    // Scenario: a run that never started has a null status.
     expect(
       evaluate(
         `console.log(JSON.stringify(probe.describeFailure({ status: null, signal: null, error: { code: 'E2BIG' }, stderr: undefined })))`

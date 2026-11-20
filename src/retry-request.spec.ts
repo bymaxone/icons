@@ -87,18 +87,17 @@ describe('retryRequest', () => {
     expect(run([503], '{ attempts: 2 }')).toMatchObject({ result: 503, calls: 2, waits: [1] })
   })
 
-  it('waits a growing time between attempts by default', () => {
-    // Scenario: with no `wait` given, the default pause is 1 s then 2 s; a fake timer would hide
-    // that it elapses, so the pause is read from the real clock with one attempt left to spare.
+  it('waits 1 s and then 2 s between attempts by default', () => {
+    // Scenario: with no `wait` given, two server errors in a row pause for one second and then
+    // two; the timer is replaced by a recorder so the case reads the delays instead of waiting.
     const program = `
       import { retryRequest } from ${JSON.stringify(MODULE)}
+      const delays = []
+      globalThis.setTimeout = (done, ms) => { delays.push(ms); done() }
       let calls = 0
-      const start = Date.now()
-      await retryRequest(async () => ({ status: calls++ === 0 ? 503 : 200 }))
-      console.log(Date.now() - start)`
-    const elapsed = Number(
-      spawnSync('node', ['--input-type=module', '-e', program], { encoding: 'utf8' }).stdout
-    )
-    expect(elapsed).toBeGreaterThanOrEqual(950)
+      await retryRequest(async () => ({ status: calls++ < 2 ? 503 : 200 }))
+      console.log(JSON.stringify(delays))`
+    const run = spawnSync('node', ['--input-type=module', '-e', program], { encoding: 'utf8' })
+    expect(JSON.parse(run.stdout)).toEqual([1000, 2000])
   })
 })

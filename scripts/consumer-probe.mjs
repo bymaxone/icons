@@ -1,11 +1,10 @@
 /**
  * Runs a probe from a file instead of an `-e` argument, and says why a run failed.
  *
- * A probe lists data that grows with the icon set: every subpath, every component. Passed as one
- * `-e` argument it reaches 160 KB, and Linux refuses a single argument past 128 KiB
- * (`MAX_ARG_STRLEN`, 131,072 bytes) with E2BIG, where macOS has no such cap. The gate then passed
- * on every developer machine and failed in CI. A file has no such limit, so the data lives in the
- * file and the command line carries only its name.
+ * A probe lists data that grows with the icon set: every subpath, every component. Linux refuses a
+ * single command-line argument past 128 KiB (`MAX_ARG_STRLEN`, 131,072 bytes) with E2BIG, and
+ * macOS has no such cap, so the data lives in the probe file and the command line carries only
+ * the file's name.
  */
 import { spawnSync } from 'node:child_process'
 import { writeFileSync } from 'node:fs'
