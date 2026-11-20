@@ -42,6 +42,7 @@ import { tmpdir } from 'node:os'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
+import { describeFailure, runProbe } from './consumer-probe.mjs'
 import { declaredFile, nativeEntries, nativeFailures } from './native-bundle-names.mjs'
 import { packageExpectations } from './package-expectations.mjs'
 
@@ -283,22 +284,26 @@ function run(command, args, options = {}) {
  */
 function checkNative(packageDir, expected) {
   const subpaths = Object.keys(expected.nativeExports)
-  // The subpaths and the package name reach the script as an argument, not as code text.
+  // The subpaths are data of the probe file, not a command-line argument: at this size an argument
+  // is past the 131,072 bytes Linux allows one (see consumer-probe.mjs).
   const script = (resolve) =>
-    `const [subpaths, name] = JSON.parse(process.argv[1])
+    `const subpaths = ${JSON.stringify(subpaths)}
+const name = ${JSON.stringify(packageName)}
 console.log(JSON.stringify(subpaths.map((s) => [s, ${resolve}(name + s.slice(1))])))`
-  const argument = JSON.stringify([subpaths, packageName])
   const resolved = {}
-  for (const [format, resolve, flag] of [
-    ['esm', 'import.meta.resolve', '--input-type=module'],
-    ['cjs', 'require.resolve', '--input-type=commonjs']
+  for (const [format, resolve, file] of [
+    ['esm', 'import.meta.resolve', 'resolve-native.mjs'],
+    ['cjs', 'require.resolve', 'resolve-native.cjs']
   ]) {
-    const pairs = JSON.parse(
-      run('node', [flag, '-e', script(resolve), argument], { cwd: consumerDir })
-    )
-    for (const [subpath, location] of pairs) {
-      const file = location.startsWith('file:') ? fileURLToPath(location) : location
-      resolved[subpath] = { ...resolved[subpath], [format]: file }
+    const outcome = runProbe(consumerDir, file, script(resolve))
+    if (outcome.status !== 0) {
+      throw new Error(
+        `resolving the native subpaths in ${format} failed (${describeFailure(outcome)})`
+      )
+    }
+    for (const [subpath, location] of JSON.parse(outcome.stdout)) {
+      const path = location.startsWith('file:') ? fileURLToPath(location) : location
+      resolved[subpath] = { ...resolved[subpath], [format]: path }
     }
   }
   const declared = JSON.parse(readFileSync(join(packageDir, 'package.json'), 'utf8')).exports
@@ -385,6 +390,7 @@ try {
     } catch (error) {
       process.stdout.write(error.stdout ?? '')
       process.stderr.write(error.stderr ?? '')
+      process.stderr.write(`  probe ${args.at(-1)}: ${describeFailure(error)}\n`)
       failed = true
     }
   }

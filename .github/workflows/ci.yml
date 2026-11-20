@@ -44,7 +44,7 @@ jobs:
     name: Verify build + size
     needs: ci
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -147,6 +147,12 @@ jobs:
         # root imports `./meta` by package specifier, so this is also the gate that
         # proves the specifier resolves through the published `exports` map.
         run: pnpm check:runtime
+      - name: Package smoke test (the real set, packed and installed)
+        # The release workflow runs this gate on the real set; the fixture step below runs it on
+        # three placeholder icons. A probe that lists every component grows with the set, and a
+        # Linux argument is capped at 131,072 bytes where macOS has no cap, so the real set must
+        # run here on Linux, in every pull request, not for the first time on a tag.
+        run: pnpm dogfood
       - name: Bundle size budget
         run: pnpm size
       - name: Fixture package
