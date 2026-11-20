@@ -71,7 +71,7 @@ function layout({ title, description, path, base, body, ui, version }) {
     <a class="mark" href="${base}" aria-label="Bymax Icons, home">${ui('LightningIcon')}<span>Bymax <b>Icons</b></span></a>
     <nav class="links" aria-label="Project">
       <a href="${REPOSITORY}">${ui('GithubBrandIcon')}<span>GitHub</span></a>
-      <a href="${NPM}"><span>npm</span></a>
+      <a href="${NPM}">npm</a>
       <span class="ver">v${e(version)}</span>
       <button class="theme" type="button" data-toggle-theme aria-label="Switch to the dark theme">${ui('MoonIcon')}${ui('SunIcon')}</button>
     </nav>
