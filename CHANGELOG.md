@@ -13,6 +13,16 @@ The date of a section is the day the release was prepared, not the day the versi
 
 ## [Unreleased]
 
+## [1.0.1] - 2026-11-20
+
+A documentation patch: the code, the icons and the types in `dist/` are the same as 1.0.0.
+
+### Changed
+
+- The README states the package as published. The status note and the "ships in 1.0.0" marker are gone, the counts are plain facts in the overview, the subpath table has no status column, and install and the peer matrix live in Quick Start only.
+- The README points at the catalog (`https://bymaxone.github.io/icons/`) and carries a mutation badge that links to the CI workflow. The package's `homepage` is the catalog too, so the npm page links to it.
+- The release is published by the `release.yml` workflow from a `v1.0.1` tag, with npm provenance and the trusted publisher; 1.0.0 was published by hand.
+
 ## [1.0.0] - 2026-11-19
 
 The first published version: 1,298 line icons, 51 filled variants, 45 hand-tuned 16 px masters,
@@ -279,5 +289,6 @@ an SVG sprite and typed metadata.
   `pnpm family-sheet` renders the whole set by category; and a pull request that changes a
   drawing gets a preview comment with its render and its nearest matches.
 
-[Unreleased]: https://github.com/bymaxone/icons/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/bymaxone/icons/compare/v1.0.1...HEAD
+[1.0.1]: https://github.com/bymaxone/icons/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/bymaxone/icons/releases/tag/v1.0.0

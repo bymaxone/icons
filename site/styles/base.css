@@ -185,10 +185,6 @@ svg {
   width: 18px;
   height: 18px;
 }
-.soon {
-  font-size: 13px;
-  opacity: 0.7;
-}
 .ver {
   font: 12px var(--mono);
   padding: 3px 8px;
