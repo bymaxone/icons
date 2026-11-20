@@ -147,6 +147,15 @@ jobs:
         # root imports `./meta` by package specifier, so this is also the gate that
         # proves the specifier resolves through the published `exports` map.
         run: pnpm check:runtime
+      - name: Published surface
+        # The README's links, snippets and counts, and the CHANGELOG, against the built package.
+        # The release workflow runs it inside prepublishOnly; it runs here so a pull request
+        # sees what the tag run will see.
+        run: pnpm check:published
+      - name: Public declarations against the published version
+        # Compares the built declarations with the latest version on the registry, as the
+        # release workflow does before it publishes.
+        run: pnpm check:api
       - name: Package smoke test (the real set, packed and installed)
         # The release workflow runs this gate on the real set; the fixture step below runs it on
         # three placeholder icons. A probe that lists every component grows with the set, and a
