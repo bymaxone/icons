@@ -189,7 +189,7 @@ describe('brandsLimit', () => {
   })
 
   it('leaves the floor where the base and the marks pass it', () => {
-    /** Scenario: 20 marks at 5 + 465 each are over 5,120, so the budget rules. */
+    /** Scenario: 20 marks at 5 + 16 each are over the 256 floor, so the budget rules. */
     expect(brandsLimit(20)).toBe(5 + 16 * 20)
   })
 

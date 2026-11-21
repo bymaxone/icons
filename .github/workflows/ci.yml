@@ -147,6 +147,21 @@ jobs:
         # root imports `./meta` by package specifier, so this is also the gate that
         # proves the specifier resolves through the published `exports` map.
         run: pnpm check:runtime
+      - name: Package smoke test (the real set, packed and installed)
+        # The release workflow runs this gate on the real set; the fixture step below runs it on
+        # three placeholder icons. A probe that lists every component grows with the set, and a
+        # Linux argument is capped at 131,072 bytes where macOS has no cap, so the real set must
+        # run here on Linux, in every pull request, not for the first time on a tag.
+        run: pnpm dogfood
+      - name: Bundle size budget
+        run: pnpm size
+      - name: Fixture package
+        # The repository's own icons/ may be empty, so the steps above prove the empty
+        # set. This builds a scratch copy with the placeholder drawings of
+        # fixtures/icons and runs the generator, the type checks, the smoke test, the
+        # build, the size budgets, attw, the consumer runtime and the dogfood install on it.
+        run: pnpm check:fixtures
+      # These two steps come last because setup-node replaces the Node the rest of the job uses.
       - name: Consumer runtime on the oldest supported Node
         # `engines` is the floor a consumer needs, not the version the tooling runs on. The gate
         # that loads every subpath and renders every component runs again on it, on the build
@@ -162,20 +177,6 @@ jobs:
           node-version: 22.x
           package-manager-cache: false
       - run: node scripts/check-consumer-runtime.mjs
-      - name: Package smoke test (the real set, packed and installed)
-        # The release workflow runs this gate on the real set; the fixture step below runs it on
-        # three placeholder icons. A probe that lists every component grows with the set, and a
-        # Linux argument is capped at 131,072 bytes where macOS has no cap, so the real set must
-        # run here on Linux, in every pull request, not for the first time on a tag.
-        run: pnpm dogfood
-      - name: Bundle size budget
-        run: pnpm size
-      - name: Fixture package
-        # The repository's own icons/ may be empty, so the steps above prove the empty
-        # set. This builds a scratch copy with the placeholder drawings of
-        # fixtures/icons and runs the generator, the type checks, the smoke test, the
-        # build, the size budgets, attw, the consumer runtime and the dogfood install on it.
-        run: pnpm check:fixtures
 
   security:
     if: github.event_name == 'pull_request' && github.event.repository.visibility == 'public'

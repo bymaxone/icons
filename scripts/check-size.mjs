@@ -78,12 +78,12 @@ const ROOT = process.env.SIZE_GATE_ROOT ?? resolve(dirname(fileURLToPath(import.
 //     included. The budget is 52 bytes a record, about 20% of headroom for records with longer
 //     tags and use cases, so the limit is 707 + 52 * records and follows the set. A sanity cap of 112 KiB holds whatever the records, room for about
 //     2,000 of them at the measured cost; the arithmetic is `src/pipeline/meta-budget.ts`.
-//   - brands, a budget per mark: `dist/brands/index.mjs` holds the owner's path data of every mark, so
-//     its size follows the set. The fixed part measures 5 bytes brotli with no mark; the tree
-//     measures 42561 bytes with 110 marks, (42561 - 5) / 110 = 386.9 bytes brotli a mark, almost
-//     all of it path data. The budget is 465 bytes a mark, about 20% of headroom for a mark with
-//     a longer path, so the limit is 5 + 465 * marks, within a floor of 5 KiB and a sanity cap of
-//     64 KiB, room for about 140 marks; the arithmetic is `src/pipeline/meta-budget.ts`. An
+//   - brands: `dist/brands/index.mjs` holds one re-export line per mark, through the mark's own
+//     subpath, so its size follows the set: 5 bytes brotli with no mark and 8.7 bytes a mark
+//     with 110. The budget is 16 bytes a mark above a base of 5, within a floor of 256 bytes and
+//     a cap of 8 KiB; the arithmetic is `src/pipeline/meta-budget.ts`. A barrel that inlines the
+//     marks again fails. Each mark's own module, `dist/brands/<name>/index.mjs`, holds the owner's
+//     path data and is held to 4 KiB brotli: the largest of the 110 measures 2,944 bytes. An
 //     inline of the runtime still fails.
 //   - flags: `dist/flags/index.mjs` holds one re-export line per flag, through the flag's own
 //     subpath, so its size follows the set: 5 bytes brotli with no flag and 733 with 250, 2.9
