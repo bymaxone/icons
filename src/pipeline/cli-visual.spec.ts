@@ -258,9 +258,9 @@ describe('runVisual', () => {
     expect(runVisual([], root, output)).toBe(1)
     const report = join(root, 'reports', 'visual', 'line', 'ring.png')
     expect(output.errors).toHaveLength(2)
-    expect(output.errors[0]).toMatch(
-      new RegExp(`^visual/line/ring\\.png: \\d+ pixel\\(s\\) changed; see ${report}$`)
-    )
+    // The report path is compared as text: it comes from a temporary folder and may hold anything.
+    expect(output.errors[0]).toMatch(/^visual\/line\/ring\.png: \d+ pixel\(s\) changed; see /)
+    expect(output.errors[0]?.endsWith(`; see ${report}`)).toBe(true)
     expect(output.errors[1]).toBe(
       'Review the differences, then run pnpm check:visual --update and commit them.'
     )
