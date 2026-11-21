@@ -11,7 +11,9 @@ import { createIcon } from '@bymax-one/icons/runtime'
  *
  * @since 1.0.0
  */
-export const MinusIcon = /* @__PURE__ */ createIcon('minus', [['path', { d: 'M5.75 12.25h13' }]])
+export const MinusIcon = /* @__PURE__ */ createIcon('minus', [
+  ['path', { d: 'M4.775 12.25h14.95' }]
+])
 
 /** `subtract`: an alias of {@link MinusIcon}. */
 export const SubtractIcon = MinusIcon

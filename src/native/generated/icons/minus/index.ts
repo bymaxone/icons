@@ -5,3 +5,4 @@
  */
 
 export { MinusIcon, RemoveIcon, SubtractIcon } from './line'
+export { MinusSmIcon, RemoveSmIcon, SubtractSmIcon } from './sm'

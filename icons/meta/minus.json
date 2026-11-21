@@ -14,7 +14,7 @@
       "deprecated": false
     }
   ],
-  "variants": ["line"],
-  "opticalSizes": [24],
+  "variants": ["line", "sm"],
+  "opticalSizes": [24, 16],
   "since": "1.0.0"
 }

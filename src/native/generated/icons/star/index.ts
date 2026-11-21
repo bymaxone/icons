@@ -6,3 +6,4 @@
 
 export { StarIcon } from './line'
 export { StarFilledIcon } from './filled'
+export { StarSmIcon } from './sm'

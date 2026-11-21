@@ -1149,7 +1149,14 @@ export { MicrowaveIcon } from '@bymax-one/icons/native/icons/microwave'
 export { MilkIcon } from '@bymax-one/icons/native/icons/milk'
 export { MilkOffIcon } from '@bymax-one/icons/native/icons/milk-off'
 export { FullscreenExitIcon, MinimizeIcon } from '@bymax-one/icons/native/icons/minimize'
-export { MinusIcon, RemoveIcon, SubtractIcon } from '@bymax-one/icons/native/icons/minus'
+export {
+  MinusIcon,
+  MinusSmIcon,
+  RemoveIcon,
+  RemoveSmIcon,
+  SubtractIcon,
+  SubtractSmIcon
+} from '@bymax-one/icons/native/icons/minus'
 export { MinusCircleIcon } from '@bymax-one/icons/native/icons/minus-circle'
 export { MinusSquareIcon } from '@bymax-one/icons/native/icons/minus-square'
 export { MirrorIcon } from '@bymax-one/icons/native/icons/mirror'
@@ -1495,10 +1502,13 @@ export { SpadeIcon } from '@bymax-one/icons/native/icons/spade'
 export {
   SparkleFilledIcon,
   SparkleIcon,
+  SparkleSmIcon,
   SparklesFilledIcon,
   SparklesIcon,
+  SparklesSmIcon,
   StarsFilledIcon,
-  StarsIcon
+  StarsIcon,
+  StarsSmIcon
 } from '@bymax-one/icons/native/icons/sparkle'
 export { SpatulaIcon } from '@bymax-one/icons/native/icons/spatula'
 export { SpeakerIcon } from '@bymax-one/icons/native/icons/speaker'
@@ -1520,7 +1530,7 @@ export {
 export { SquareDashedIcon } from '@bymax-one/icons/native/icons/square-dashed'
 export { PlanIcon, StairsIcon } from '@bymax-one/icons/native/icons/stairs'
 export { StampIcon } from '@bymax-one/icons/native/icons/stamp'
-export { StarFilledIcon, StarIcon } from '@bymax-one/icons/native/icons/star'
+export { StarFilledIcon, StarIcon, StarSmIcon } from '@bymax-one/icons/native/icons/star'
 export { StarCheckIcon } from '@bymax-one/icons/native/icons/star-check'
 export { StarHalfIcon } from '@bymax-one/icons/native/icons/star-half'
 export { StarOffIcon } from '@bymax-one/icons/native/icons/star-off'
@@ -1682,8 +1692,10 @@ export { UsbIcon, UsbPlugIcon } from '@bymax-one/icons/native/icons/usb-plug'
 export {
   PersonFilledIcon,
   PersonIcon,
+  PersonSmIcon,
   UserFilledIcon,
-  UserIcon
+  UserIcon,
+  UserSmIcon
 } from '@bymax-one/icons/native/icons/user'
 export { UserCheckIcon } from '@bymax-one/icons/native/icons/user-check'
 export { AccountCircleIcon, UserCircleIcon } from '@bymax-one/icons/native/icons/user-circle'

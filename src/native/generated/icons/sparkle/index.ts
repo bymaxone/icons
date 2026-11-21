@@ -6,3 +6,4 @@
 
 export { SparkleIcon, SparklesIcon, StarsIcon } from './line'
 export { SparkleFilledIcon, SparklesFilledIcon, StarsFilledIcon } from './filled'
+export { SparkleSmIcon, SparklesSmIcon, StarsSmIcon } from './sm'

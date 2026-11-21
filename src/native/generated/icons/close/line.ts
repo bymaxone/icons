@@ -12,6 +12,6 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
  * @since 1.0.0
  */
 export const CloseIcon = /* @__PURE__ */ createNativeIcon('close', [
-  ['line', { x1: 6.5, x2: 18, y1: 6.5, y2: 18 }],
-  ['line', { x1: 18, x2: 6.5, y1: 6.5, y2: 18 }]
+  ['line', { x1: 5.638, x2: 18.863, y1: 5.638, y2: 18.863 }],
+  ['line', { x1: 18.863, x2: 5.638, y1: 5.638, y2: 18.863 }]
 ])

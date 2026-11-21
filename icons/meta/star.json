@@ -4,7 +4,7 @@
   "tags": ["star", "favorite", "rate", "highlight"],
   "categories": ["status"],
   "useCases": ["Marks an item as a favorite", "Rates an item"],
-  "variants": ["line", "filled"],
-  "opticalSizes": [24],
+  "variants": ["line", "filled", "sm"],
+  "opticalSizes": [24, 16],
   "since": "1.0.0"
 }
