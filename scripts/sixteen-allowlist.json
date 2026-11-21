@@ -209,8 +209,8 @@
       "why": "the listed pair of elements closes at 16 px; the drawing still reads as a monkey"
     },
     "nurse": {
-      "pairs": ["1-2"],
-      "why": "the cross fuses with the cap outline; it still reads as a nurse's cap"
+      "pairs": ["0-1"],
+      "why": "the cap meets the head at 16 px; it still reads as a nurse's cap"
     },
     "owl": {
       "pairs": ["0-2"],
