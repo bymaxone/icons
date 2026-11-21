@@ -5,7 +5,7 @@
  * @layer Pipeline
  */
 
-import { ICON_GRID } from '../meta/icon-grid.ts'
+import { ICON_GRID } from '../grid/icon-grid.ts'
 import type { Variant } from './naming.ts'
 
 /** A source directory under `icons/`, named for the drawings it holds. */

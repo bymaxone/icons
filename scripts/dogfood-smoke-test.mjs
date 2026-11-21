@@ -107,10 +107,17 @@ function specifierFor(subpath) {
  * never emitted, which is the half a single shared `types` entry used to hide.
  */
 function distArtifactsFor(subpath) {
-  // `./icons/<name>`, `./flags/<name>` and their `./native/` counterparts are served by
+  // `./icons/<name>`, `./brands/<name>`, `./flags/<name>` and their `./native/` counterparts are served by
   // the matching `*` patterns: the `*` stands for the name.
   const declared = new Map(Object.entries(pkg.exports))
-  const patternKey = ['./icons/', './flags/', './native/icons/', './native/flags/']
+  const patternKey = [
+    './icons/',
+    './brands/',
+    './flags/',
+    './native/icons/',
+    './native/brands/',
+    './native/flags/'
+  ]
     .map((prefix) => `${prefix}*`)
     .find((key) => subpath.startsWith(key.slice(0, -1)))
   const pattern = patternKey === undefined ? undefined : declared.get(patternKey)

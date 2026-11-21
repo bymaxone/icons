@@ -20,7 +20,7 @@
   <a href="https://scorecard.dev/viewer/?uri=github.com/bymaxone/icons"><img src="https://api.scorecard.dev/projects/github.com/bymaxone/icons/badge?style=flat-square" alt="OpenSSF Scorecard" /></a>
   <a href="https://github.com/bymaxone/icons/blob/main/LICENSE"><img src="https://img.shields.io/github/license/bymaxone/icons?style=flat-square&colorA=000000&colorB=000000" alt="license" /></a>
   <a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/TypeScript-strict-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" /></a>
-  <a href="https://nodejs.org/"><img src="https://img.shields.io/badge/Node.js-24%2B-339933?style=flat-square&logo=node.js&logoColor=white" alt="Node.js" /></a>
+  <a href="https://nodejs.org/"><img src="https://img.shields.io/badge/Node.js-20.9%2B-339933?style=flat-square&logo=node.js&logoColor=white" alt="Node.js" /></a>
 </p>
 
 <p align="center">
@@ -111,29 +111,33 @@ control its version and the supply-chain surface stays minimal.
 - ✅ **A build pipeline**: SVGO normalisation, an icon lint over every SVG and metadata rule,
   one generated module per icon variant, raw SVG files, a sprite and merged metadata, with a
   stale-copy check in CI
-- ✅ **Per-icon modules that tree-shake**: one entry per icon, with a size gate per subpath
+- ✅ **Per-icon modules that tree-shake**: one entry per icon, brand mark and flag, with a size
+  gate per subpath and a consumer-bundle gate that holds one imported icon to a few kilobytes
 
 ---
 
 ## 📦 Subpath Exports
 
-| Subpath                 | Contents                                                                     |
-| ----------------------- | ---------------------------------------------------------------------------- |
-| `.`                     | Every line, filled and 16 px component, the `Icon` base and the types        |
-| `./runtime`             | The `Icon` base, `createIcon` and their types                                |
-| `./meta`                | Typed metadata and the `IconName` union, with no React import                |
-| `./icons/<name>`        | One icon's components, for consumers that avoid barrels                      |
-| `./brands`              | Brand components                                                             |
-| `./flags`               | Country flag components (`BrFlagIcon`), 16 px high by default                |
-| `./flags/<name>`        | One flag's component, for a dynamic import                                   |
-| `./native`              | Every line, filled and 16 px icon as a React Native component, and the bases |
-| `./native/icons/<name>` | One icon's React Native components, for a dynamic import                     |
-| `./native/brands`       | Brand components for React Native                                            |
-| `./native/flags`        | Flag components for React Native                                             |
-| `./native/runtime`      | The native base, `createNativeIcon` and their types                          |
-| `./svg/*`               | Raw SVG files (`svg/line/<name>.svg`, `filled`, `sm`, `brands`, `flags`)     |
-| `./sprite.svg`          | The SVG sprite, one `<symbol>` per drawing                                   |
-| `./metadata.json`       | Merged metadata of every icon, brand and flag                                |
+| Subpath                  | Contents                                                                     |
+| ------------------------ | ---------------------------------------------------------------------------- |
+| `.`                      | Every line, filled and 16 px component, the `Icon` base and the types        |
+| `./runtime`              | The `Icon` base, `createIcon` and their types                                |
+| `./grid`                 | `ICON_GRID` alone: the drawing grid, with no metadata and no React import    |
+| `./meta`                 | Typed metadata and the `IconName` union, with no React import                |
+| `./icons/<name>`         | One icon's components, for consumers that avoid barrels                      |
+| `./brands`               | Brand components                                                             |
+| `./brands/<name>`        | One brand mark's component, for consumers that avoid barrels                 |
+| `./flags`                | Country flag components (`BrFlagIcon`), 16 px high by default                |
+| `./flags/<name>`         | One flag's component, for a dynamic import                                   |
+| `./native`               | Every line, filled and 16 px icon as a React Native component, and the bases |
+| `./native/icons/<name>`  | One icon's React Native components, for a dynamic import                     |
+| `./native/brands`        | Brand components for React Native                                            |
+| `./native/brands/<name>` | One brand mark's React Native component                                      |
+| `./native/flags`         | Flag components for React Native                                             |
+| `./native/runtime`       | The native base, `createNativeIcon` and their types                          |
+| `./svg/*`                | Raw SVG files (`svg/line/<name>.svg`, `filled`, `sm`, `brands`, `flags`)     |
+| `./sprite.svg`           | The SVG sprite, one `<symbol>` per drawing                                   |
+| `./metadata.json`        | Merged metadata of every icon, brand and flag                                |
 
 A flag takes the props of an icon without `color`, `strokeWidth` and `absoluteStrokeWidth`, since
 it keeps its own colours, and its `size` is its height: 16 by default, so a 3:2 flag is 24 by 16.
@@ -167,9 +171,9 @@ Architecture on React Native 0.78 or later, so with the New Architecture use the
 supports your React Native version, and read the compatibility table in its README.
 
 ```tsx
-import { LightningIcon } from '@bymax-one/icons/native'
-import { GithubBrandIcon } from '@bymax-one/icons/native/brands'
-import { BrFlagIcon } from '@bymax-one/icons/native/flags'
+import { LightningIcon } from '@bymax-one/icons/native/icons/lightning'
+import { GithubBrandIcon } from '@bymax-one/icons/native/brands/github'
+import { BrFlagIcon } from '@bymax-one/icons/native/flags/br-flag'
 
 export function NativeBadges() {
   return (
@@ -182,6 +186,9 @@ export function NativeBadges() {
 }
 ```
 
+Import each component from its own subpath, as above. Metro does not tree-shake, so a barrel
+(`./native`, `./native/brands`, `./native/flags`) bundles every component it re-exports.
+
 Every subpath is built, exported and checked on every pull request, and holds the full set.
 The root does not export brand marks or flags; they come from `./brands` and `./flags`.
 
@@ -189,15 +196,18 @@ The root does not export brand marks or flags; they come from `./brands` and `./
 @bymax-one/icons ──► @bymax-one/icons/icons/<name> ──► @bymax-one/icons/runtime ──► react (peer)
  (every component)    (one icon's components)          (Icon base, createIcon)
         │                                                        │
-        └────────────────────────────────────────────────────────┴──► @bymax-one/icons/meta
-                                                                       (typed metadata, no React)
+        └────────────────────────────────────────────────────────┴──► @bymax-one/icons/grid
+                                                                       (ICON_GRID, nothing else)
+                                                          @bymax-one/icons/meta ──► grid
+                                                          (typed metadata, no React)
 ```
 
 Every subpath imports its siblings by package specifier, not by relative path. Each entry
 point is a separate bundle, and a module reached from two of them by a relative path would
 be copied into each; through the specifier the published package holds one copy of each
 icon, of the runtime and of the grid. The runtime has an entry of its own because every icon
-module imports `createIcon`, and the root re-exports every icon. Every JavaScript subpath
+module imports `createIcon`, and the root re-exports every icon; the grid has one because the
+runtime reads it and `./meta` re-exports it, so reading the grid never loads the metadata. Every JavaScript subpath
 ships ESM (`.mjs`) and CommonJS (`.cjs`), each with its own declarations (`.d.ts` and
 `.d.cts`).
 
@@ -222,7 +232,7 @@ yarn add @bymax-one/icons react
 
 | Package            | Version                | Needed by                          |
 | ------------------ | ---------------------- | ---------------------------------- |
-| Node.js            | `>=24.0.0`             | Tooling and builds                 |
+| Node.js            | `>=20.9.0`             | Any consumer that runs the package |
 | `react`            | `^19.0.0`              | The root, `./brands` and `./flags` |
 | `react-native-svg` | `>=15.11.1` (optional) | The `./native` entries             |
 
@@ -468,7 +478,7 @@ code from the pull request is executed with repository credentials.
 ## 🧱 Tech Stack
 
 - **Runtime:** any React 19 renderer, including React Server Components
-- **Tooling:** Node.js 24+, pnpm 11
+- **Tooling (contributors):** Node.js 24+, pnpm 11; a consumer needs Node.js 20.9 or later
 - **Build:** tsup, ESM + CJS per subpath with `.d.ts` _and_ `.d.cts` declarations, browser
   entries targeting `es2022` with the automatic JSX runtime
 - **Tests:** Jest + Stryker (mutation)
@@ -490,8 +500,12 @@ it is a regression everywhere at once. The suite is held to a bar beyond "the te
   system does, `check:runtime` loads every subpath from the packed tarball in ESM and
   CommonJS and renders a fixture icon from it through `react-dom/server` and as a Server
   Component, `check:published` compiles this README's snippets against `dist/`, and
-  `check:api` requires an "Apply to a derived backend" CHANGELOG note when the built
+  `check:api` requires an "Apply to a consumer" CHANGELOG note when the built
   declarations change
+- ✅ **Consumer bundle budget**: `check:runtime` bundles one icon, brand mark and flag from the
+  packed tarball the way an application's bundler does, by subpath and through the root, in
+  production mode with React external, and fails when the result passes a few kilobytes; the
+  metadata of the set is not part of it
 - ✅ **Bundle size budget** per subpath, measured on the brotli-compressed bundle. The
   budgets are per drawing, so a new drawing cannot grow a subpath without notice; the
   numbers are in `scripts/check-size.mjs`

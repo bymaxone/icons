@@ -154,7 +154,7 @@ describe('the brands budget constants', () => {
       BRANDS_MARK_BYTES,
       BRANDS_CAP_BYTES,
       BRANDS_FLOOR_BYTES
-    ]).toStrictEqual([5, 465, 65536, 5120])
+    ]).toStrictEqual([5, 16, 8192, 256])
   })
 })
 
@@ -173,7 +173,7 @@ describe('markCost', () => {
 describe('brandsLimit', () => {
   it('is the base plus the budget of each mark', () => {
     /** Scenario: 67 marks are far below the cap. */
-    expect(brandsLimit(67)).toBe(5 + 465 * 67)
+    expect(brandsLimit(67)).toBe(5 + 16 * 67)
   })
 
   it('is the floor with few marks', () => {
@@ -184,7 +184,7 @@ describe('brandsLimit', () => {
 
   it('leaves the floor where the base and the marks pass it', () => {
     /** Scenario: 20 marks at 5 + 465 each are over 5,120, so the budget rules. */
-    expect(brandsLimit(20)).toBe(5 + 465 * 20)
+    expect(brandsLimit(20)).toBe(5 + 16 * 20)
   })
 
   it('stops at the cap', () => {

@@ -14,6 +14,7 @@ import { fileURLToPath } from 'node:url'
 import { brotliCompressSync, constants } from 'node:zlib'
 
 import {
+  BRAND_MODULE_BYTES,
   FLAG_MODULE_BYTES,
   FLAGS_BASE_BYTES,
   FLAGS_CAP_BYTES,
@@ -163,6 +164,16 @@ const metaBundle = readArtifact('dist/meta/index.mjs')
 measure('meta (typed metadata)', metaBundle, metaLimit(records))
 const metaCost = recordCost(brotliCompressSync(metaBundle, BROTLI_OPTS).length, records)
 
+// One directory per brand entry, `dist/brands/<name>/index.mjs`, each held to its own budget: a
+// consumer who imports one mark loads this module and nothing else of the marks.
+const brandsDir = resolve(ROOT, 'dist', 'brands')
+const brandEntries = existsSync(brandsDir)
+  ? readdirSync(brandsDir, { withFileTypes: true }).filter((entry) => entry.isDirectory())
+  : []
+for (const { name } of brandEntries) {
+  measure(`brand ${name}`, readArtifact(`dist/brands/${name}/index.mjs`), BRAND_MODULE_BYTES)
+}
+
 // One directory per flag entry, `dist/flags/<name>/index.mjs`, each held to its own budget: a
 // consumer who imports one flag loads this module and nothing else of the flags.
 const flagsDir = resolve(ROOT, 'dist', 'flags')
@@ -189,7 +200,7 @@ for (const icon of icons) {
 const NATIVE_BUDGETS = [
   ['native (re-exports)', 'dist/native/index.mjs', 14.5 * 1024],
   ['native/runtime', 'dist/native/runtime/index.mjs', 2.1 * 1024],
-  ['native/brands', 'dist/native/brands/index.mjs', 50 * 1024],
+  ['native/brands (re-exports)', 'dist/native/brands/index.mjs', 1.5 * 1024],
   ['native/flags (re-exports)', 'dist/native/flags/index.mjs', 0.9 * 1024]
 ]
 for (const [name, path, limit] of NATIVE_BUDGETS) measure(name, readArtifact(path), limit)
@@ -197,6 +208,7 @@ for (const [name, path, limit] of NATIVE_BUDGETS) measure(name, readArtifact(pat
 // One directory per native icon and per native flag, each held to the budget of its web twin.
 for (const [dir, limit] of [
   ['icons', MODULE_BUDGET],
+  ['brands', BRAND_MODULE_BYTES],
   ['flags', FLAG_MODULE_BYTES]
 ]) {
   const nativeDir = resolve(ROOT, 'dist', 'native', dir)

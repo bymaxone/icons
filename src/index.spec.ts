@@ -18,7 +18,7 @@ import * as runtime from '@bymax-one/icons/runtime'
 import * as generatedBrands from './brands/generated'
 import * as generatedFlags from './flags/generated'
 import * as generatedIcons from './icons/generated'
-import { ICON_GRID } from './meta/icon-grid'
+import { ICON_GRID } from './grid/icon-grid'
 import { createIcon } from './runtime/create-icon'
 import { Icon } from './runtime/icon'
 

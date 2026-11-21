@@ -10,7 +10,7 @@
 import { createElement } from 'react'
 import type { ReactElement, SVGProps } from 'react'
 
-import { ICON_GRID } from '@bymax-one/icons/meta'
+import { ICON_GRID } from '@bymax-one/icons/grid'
 
 import { accessibilityAttributes } from './accessibility'
 import type { IconElement, IconPaint } from './icon-node'

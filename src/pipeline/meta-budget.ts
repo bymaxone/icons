@@ -97,26 +97,33 @@ export function rootLimit(icons: number): number {
 }
 
 /**
- * The brotli bytes of the `./brands` entry with no mark: the runtime import and the empty
- * export, measured on a build that holds no brand mark.
+ * The brotli bytes of the `./brands` entry with no mark: the empty export, measured on a build
+ * that holds no brand mark.
  */
 export const BRANDS_BASE_BYTES = 5
 
 /**
- * The most brotli bytes one brand mark may cost the `./brands` entry, which holds the owner's
- * path data of every mark. The tree measures 386.9 bytes a mark, so this leaves about 20% for
- * a mark with a longer path.
+ * The most brotli bytes one brand mark may cost the `./brands` entry, which re-exports each mark
+ * from its own subpath and holds no path data. The tree measures 8.7 bytes a mark, so this
+ * leaves room for a mark with aliases while a barrel that inlines the marks again fails.
  */
-export const BRANDS_MARK_BYTES = 465
+export const BRANDS_MARK_BYTES = 16
 
-/** The most brotli bytes the `./brands` entry may reach whatever the marks, room for about 140. */
-export const BRANDS_CAP_BYTES = 64 * 1024
+/** The most brotli bytes the `./brands` entry may reach whatever the marks, room for about 500. */
+export const BRANDS_CAP_BYTES = 8 * 1024
+
+/**
+ * The most brotli bytes one brand mark's own module, `dist/brands/<name>/index.mjs`, may weigh:
+ * what a consumer who imports one mark loads, with the owner's path data. The largest of the 110
+ * measures 2,944 bytes, so this leaves about a third for a mark with a longer path.
+ */
+export const BRAND_MODULE_BYTES = 4 * 1024
 
 /**
  * The least brotli bytes the `./brands` entry may be allowed, for a package of a handful of
- * marks, which a single long path can fill.
+ * marks, which is dominated by its fixed part.
  */
-export const BRANDS_FLOOR_BYTES = 5 * 1024
+export const BRANDS_FLOOR_BYTES = 256
 
 /**
  * The brotli bytes one brand mark costs the `./brands` entry: what it weighs above its base,

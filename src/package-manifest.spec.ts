@@ -15,6 +15,7 @@ interface Condition {
 interface Manifest {
   dependencies?: Record<string, string>
   sideEffects?: boolean
+  engines?: { node?: string }
   peerDependencies?: Record<string, string>
   peerDependenciesMeta?: Record<string, { optional?: boolean }>
   exports: Record<string, { import: Condition; require: Condition } | string>
@@ -27,11 +28,18 @@ const NATIVE_SUBPATHS = [
   './native/runtime',
   './native/brands',
   './native/flags',
+  './native/brands/*',
   './native/flags/*',
   './native/icons/*'
 ]
 
 describe('package.json', () => {
+  it('asks a consumer for the oldest Node the package runs on, not the one the tooling uses', () => {
+    // Scenario: yarn 1 refuses to install a package whose `engines` is above the consumer's Node,
+    // and the package loads and renders on Node 20 and 22. The tooling's Node 24 lives in CI.
+    expect(manifest.engines?.node).toBe('>=20.9.0')
+  })
+
   it('declares an explicit, empty dependencies object', () => {
     /**
      * Scenario: the library ships with zero runtime dependencies (React is a peer).

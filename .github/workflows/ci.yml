@@ -121,7 +121,7 @@ jobs:
         # here indicates a tsup misconfiguration that would ship a broken package
         # to npm. The icon entries are checked by the fixture package step below.
         run: |
-          for subpath in index runtime/index meta/index brands/index; do
+          for subpath in index runtime/index grid/index meta/index brands/index; do
             for ext in mjs cjs d.ts d.cts; do
               if [ ! -f "dist/$subpath.$ext" ]; then
                 echo "Missing dist/$subpath.$ext"
@@ -147,6 +147,21 @@ jobs:
         # root imports `./meta` by package specifier, so this is also the gate that
         # proves the specifier resolves through the published `exports` map.
         run: pnpm check:runtime
+      - name: Consumer runtime on the oldest supported Node
+        # `engines` is the floor a consumer needs, not the version the tooling runs on. The gate
+        # that loads every subpath and renders every component runs again on it, on the build
+        # above, so a language feature or a Node API newer than the floor fails here.
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 20.9.0
+          package-manager-cache: false
+      - run: node scripts/check-consumer-runtime.mjs
+      - name: Consumer runtime on the Node in between
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 22.x
+          package-manager-cache: false
+      - run: node scripts/check-consumer-runtime.mjs
       - name: Package smoke test (the real set, packed and installed)
         # The release workflow runs this gate on the real set; the fixture step below runs it on
         # three placeholder icons. A probe that lists every component grows with the set, and a

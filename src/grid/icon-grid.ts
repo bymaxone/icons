@@ -47,7 +47,7 @@ export interface IconGrid {
  * const pixelsPerUnit = 48 / ICON_GRID.size // 2 when rendering at 48 px
  * ```
  */
-export const ICON_GRID: IconGrid = Object.freeze({
+export const ICON_GRID: IconGrid = /* @__PURE__ */ Object.freeze({
   viewBox: '0 0 24 24',
   size: 24,
   smSize: 16,

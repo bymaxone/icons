@@ -32,6 +32,8 @@ const ROOT_RUNTIME = ['Icon', 'createIcon']
 const RUNTIME = ['Flag', 'Icon', 'createFlag', 'createIcon']
 /** The runtime names the React Native entries export: the bases and their factories. */
 const NATIVE_RUNTIME = ['NativeFlag', 'NativeIcon', 'createNativeFlag', 'createNativeIcon']
+/** The names `./grid` exports: the grid and nothing else. */
+const GRID = ['ICON_GRID']
 const META = [
   'BRAND_METADATA',
   'BRAND_NAMES',
@@ -60,6 +62,7 @@ export function packageExpectations(packageDir) {
   const metadata = JSON.parse(readFileSync(join(packageDir, 'dist', 'metadata.json'), 'utf8'))
   const exports = new Map([
     ['./runtime', RUNTIME],
+    ['./grid', GRID],
     ['./meta', META]
   ])
   const brandExports = []
@@ -86,7 +89,9 @@ export function packageExpectations(packageDir) {
     }
   }
   for (const [name, record] of Object.entries(metadata.brands)) {
-    brandExports.push(...namesOf(name, record).map((kebab) => component(created(kebab, 'brand'))))
+    const brandNames = namesOf(name, record).map((kebab) => component(created(kebab, 'brand')))
+    brandExports.push(...brandNames)
+    exports.set(`./brands/${name}`, [...brandNames].sort())
     const variantName = created(name, 'brand')
     components.push({
       subpath: './brands',
@@ -115,6 +120,7 @@ export function packageExpectations(packageDir) {
   const nativeExports = new Map([['./native/runtime', NATIVE_RUNTIME]])
   for (const [subpath, names] of exports) {
     if (subpath.startsWith('./icons/')) nativeExports.set(`./native${subpath.slice(1)}`, names)
+    if (subpath.startsWith('./brands/')) nativeExports.set(`./native${subpath.slice(1)}`, names)
     if (subpath.startsWith('./flags/')) nativeExports.set(`./native${subpath.slice(1)}`, names)
   }
   nativeExports.set('./native/brands', exports.get('./brands'))

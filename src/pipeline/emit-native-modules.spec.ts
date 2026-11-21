@@ -150,7 +150,7 @@ describe('nativeComponentModules', () => {
     )
     expect(modules.get('src/native/generated/brands/index.ts')).toBe(
       HEADER('Every brand mark component.', 'icons/brands') +
-        "export { ALogoBrandIcon, AcmeBrandIcon } from './acme'\n"
+        "export { ALogoBrandIcon, AcmeBrandIcon } from '@bymax-one/icons/native/brands/acme'\n"
     )
   })
 

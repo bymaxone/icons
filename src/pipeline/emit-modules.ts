@@ -6,7 +6,7 @@
  * @layer Pipeline
  */
 
-import { ICON_GRID } from '../meta/icon-grid.ts'
+import { ICON_GRID } from '../grid/icon-grid.ts'
 import { drawnVariants } from './icon-set.ts'
 import type { BrandEntry, Drawing, FlagEntry, IconEntry, IconSet } from './icon-set.ts'
 import type { AliasSource, IconVariantName } from './metadata.ts'
@@ -37,7 +37,7 @@ export interface Flavour {
   readonly createIcon: string
   /** The factory that creates a flag component. */
   readonly createFlag: string
-  /** The specifier prefix of the icon and flag subpaths the barrels re-export through. */
+  /** The specifier prefix of the icon, brand and flag subpaths the barrels re-export through. */
   readonly subpath: string
   /** How the icon barrel's description names the entry that re-exports it. */
   readonly entry: string
@@ -234,14 +234,14 @@ function brandModule(brand: BrandEntry, flavour: Flavour): string {
   ].join('\n')
 }
 
-/** The brand barrel. */
-function brandsBarrel(set: IconSet): string {
+/** The brand barrel, each mark through its own subpath, so it exists once in the package. */
+function brandsBarrel(set: IconSet, flavour: Flavour): string {
   const lines = set.brands.map((brand) => {
     const names = [brand.name, ...(brand.meta.aliases ?? []).map((alias) => alias.name)]
     return `export { ${names
       .map((name) => componentName(name, 'brand'))
       .sort()
-      .join(', ')} } from './${brand.name}'`
+      .join(', ')} } from '${flavour.subpath}brands/${brand.name}'`
   })
   const body = lines.length === 0 ? ['export {}'] : lines
   return [header('Every brand mark component.', 'icons/brands'), ...body, ''].join('\n')
@@ -288,7 +288,7 @@ export function flavouredModules(set: IconSet, flavour: Flavour): Map<string, st
   const { icons, brands, flags } = flavour.directories
   const files = new Map<string, string>([
     [`${icons}/index.ts`, rootBarrel(set, flavour)],
-    [`${brands}/index.ts`, brandsBarrel(set)],
+    [`${brands}/index.ts`, brandsBarrel(set, flavour)],
     [`${flags}/index.ts`, flagsBarrel(set, flavour)]
   ])
   for (const icon of set.icons) {

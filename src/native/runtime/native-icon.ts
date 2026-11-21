@@ -9,7 +9,7 @@ import { createElement } from 'react'
 import type { ReactElement } from 'react'
 import Svg from 'react-native-svg'
 
-import { ICON_GRID } from '@bymax-one/icons/meta'
+import { ICON_GRID } from '@bymax-one/icons/grid'
 import type { IconPaint } from '@bymax-one/icons/runtime'
 
 import { nativeAccessibilityProps } from './native-accessibility'

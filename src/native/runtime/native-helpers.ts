@@ -5,7 +5,7 @@
  * @layer Runtime
  */
 
-import { ICON_GRID } from '@bymax-one/icons/meta'
+import { ICON_GRID } from '@bymax-one/icons/grid'
 
 /**
  * Kebab-case: lower-case letters and digits in words joined by single hyphens, starting

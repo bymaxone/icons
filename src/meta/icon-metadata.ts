@@ -110,16 +110,16 @@ export interface IconCategory {
 }
 
 /** Every icon name, in name order. */
-export const ICON_NAMES: readonly IconName[] = deepFreeze(ICON_NAME_LIST)
+export const ICON_NAMES: readonly IconName[] = /* @__PURE__ */ deepFreeze(ICON_NAME_LIST)
 
 /** Every brand name, in name order. */
-export const BRAND_NAMES: readonly BrandName[] = deepFreeze(BRAND_NAME_LIST)
+export const BRAND_NAMES: readonly BrandName[] = /* @__PURE__ */ deepFreeze(BRAND_NAME_LIST)
 
 /** Every flag name, in name order. */
-export const FLAG_NAMES: readonly FlagName[] = deepFreeze(FLAG_NAME_LIST)
+export const FLAG_NAMES: readonly FlagName[] = /* @__PURE__ */ deepFreeze(FLAG_NAME_LIST)
 
 /** The categories, in the order of `categories.json`. */
-export const ICON_CATEGORIES: readonly IconCategory[] = deepFreeze(CATEGORIES)
+export const ICON_CATEGORIES: readonly IconCategory[] = /* @__PURE__ */ deepFreeze(CATEGORIES)
 
 /**
  * The metadata of every icon, keyed by name, frozen.
@@ -131,10 +131,13 @@ export const ICON_CATEGORIES: readonly IconCategory[] = deepFreeze(CATEGORIES)
  * const searchable = ICON_NAMES.filter((name) => ICON_METADATA[name].tags.includes('energy'))
  * ```
  */
-export const ICON_METADATA: Readonly<Record<IconName, IconMetadata>> = deepFreeze(ICONS)
+export const ICON_METADATA: Readonly<Record<IconName, IconMetadata>> =
+  /* @__PURE__ */ deepFreeze(ICONS)
 
 /** The metadata of every brand mark, keyed by name, frozen. */
-export const BRAND_METADATA: Readonly<Record<BrandName, BrandMetadata>> = deepFreeze(BRANDS)
+export const BRAND_METADATA: Readonly<Record<BrandName, BrandMetadata>> =
+  /* @__PURE__ */ deepFreeze(BRANDS)
 
 /** The metadata of every country flag, keyed by name, frozen. */
-export const FLAG_METADATA: Readonly<Record<FlagName, FlagMetadata>> = deepFreeze(FLAGS)
+export const FLAG_METADATA: Readonly<Record<FlagName, FlagMetadata>> =
+  /* @__PURE__ */ deepFreeze(FLAGS)

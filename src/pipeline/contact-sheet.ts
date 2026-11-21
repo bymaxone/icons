@@ -7,7 +7,7 @@
 
 import { Resvg } from '@resvg/resvg-js'
 
-import { ICON_GRID } from '../meta/icon-grid.ts'
+import { ICON_GRID } from '../grid/icon-grid.ts'
 import { drawnVariants } from './icon-set.ts'
 import type { IconSet } from './icon-set.ts'
 import { rootAttributes } from './svg-kind.ts'

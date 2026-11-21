@@ -13,6 +13,25 @@ The date of a section is the day the release was prepared, not the day the versi
 
 ## [Unreleased]
 
+## [1.0.3] - 2026-11-21
+
+Any icon imported from the package no longer carries the metadata of the set: an icon imported by subpath bundles to about 2 kB minified, where 1.0.2 bundled 426 kB, and the React Native runtime no longer pulls it either. The drawings and the components are unchanged.
+
+### Fixed
+
+- The runtime, the React Native runtime and the root read the drawing grid from a module of its own, `@bymax-one/icons/grid`, instead of `./meta`, and the metadata constants of `./meta` are marked pure, so a bundler drops them when only the grid or a few names are imported.
+- `engines.node` is `>=20.9.0`, the oldest Node the package runs on (the Next.js 16 floor), instead of `>=24.0.0`, which blocked an install with yarn 1 on Node 22. Node 24 is what the repository's tooling uses.
+
+### Added
+
+- `@bymax-one/icons/grid`, which exports `ICON_GRID` and the `IconGrid` type and nothing else. `./meta` and the root still export them.
+- `@bymax-one/icons/brands/<name>` and `@bymax-one/icons/native/brands/<name>`, one brand mark's component each, like `./flags/<name>`, so a React Native app that needs one mark does not bundle all 110. `./brands` and `./native/brands` re-export through them.
+
+#### Apply to a consumer
+
+- Nothing breaks. The new subpaths are additive: `./grid`, `./brands/<name>` and `./native/brands/<name>`.
+- In a React Native app, import each component from its own subpath (`@bymax-one/icons/native/icons/<name>`, `/native/brands/<name>`, `/native/flags/<name>`): Metro does not tree-shake, so a barrel bundles every component it re-exports.
+
 ## [1.0.2] - 2026-11-21
 
 A documentation patch: the code, the icons and the types in `dist/` are the same as 1.0.0. It carries the changes that 1.0.1 was tagged for.
@@ -293,7 +312,8 @@ an SVG sprite and typed metadata.
   `pnpm family-sheet` renders the whole set by category; and a pull request that changes a
   drawing gets a preview comment with its render and its nearest matches.
 
-[Unreleased]: https://github.com/bymaxone/icons/compare/v1.0.2...HEAD
+[Unreleased]: https://github.com/bymaxone/icons/compare/v1.0.3...HEAD
+[1.0.3]: https://github.com/bymaxone/icons/compare/v1.0.2...v1.0.3
 [1.0.2]: https://github.com/bymaxone/icons/compare/v1.0.0...v1.0.2
 [1.0.1]: https://github.com/bymaxone/icons/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/bymaxone/icons/releases/tag/v1.0.0

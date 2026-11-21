@@ -57,7 +57,7 @@ const REFUSED = [
   ],
   [
     'relative import climbing out and back in',
-    "import { ICON_GRID } from '../meta/icon-grid'\nexport const u = ICON_GRID"
+    "import { ICON_NAMES } from '../meta/icon-metadata'\nexport const u = ICON_NAMES"
   ],
   [
     'relative import hiding a .. segment',

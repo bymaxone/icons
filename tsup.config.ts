@@ -62,6 +62,21 @@ const iconEntries = Object.fromEntries(
   })
 )
 
+// One entry per generated brand mark, `./brands/<name>`, emitted as `dist/brands/<name>/index.*`
+// from the same entries directory, like the flags, so a consumer who imports one mark loads it
+// alone.
+const BRANDS_DIR = 'src/brands/generated'
+const brandNames = readdirSync(BRANDS_DIR, { withFileTypes: true })
+  .filter((entry) => entry.isFile() && entry.name.endsWith('.ts') && entry.name !== 'index.ts')
+  .map((entry) => entry.name.slice(0, -'.ts'.length))
+const brandEntries = Object.fromEntries(
+  brandNames.map((name) => {
+    const file = `${ENTRIES_DIR}/brand-${name}.ts`
+    writeFileSync(file, `export * from '../${BRANDS_DIR}/${name}'\n`)
+    return [`brands/${name}/index`, file]
+  })
+)
+
 // One entry per generated flag, `./flags/<name>`, emitted as `dist/flags/<name>/index.*` from the
 // same entries directory, so the flags share one declaration program like the icons do.
 const FLAGS_DIR = 'src/flags/generated'
@@ -95,6 +110,17 @@ const nativeIconEntries = Object.fromEntries(
       return [`native/icons/${entry.name}/index`, file]
     })
 )
+const NATIVE_BRANDS_DIR = 'src/native/generated/brands'
+const nativeBrandEntries = Object.fromEntries(
+  listDirectory(NATIVE_BRANDS_DIR)
+    .filter((entry) => entry.isFile() && entry.name.endsWith('.ts') && entry.name !== 'index.ts')
+    .map((entry) => {
+      const name = entry.name.slice(0, -'.ts'.length)
+      const file = `${ENTRIES_DIR}/native-brand-${name}.ts`
+      writeFileSync(file, `export * from '../${NATIVE_BRANDS_DIR}/${name}'\n`)
+      return [`native/brands/${name}/index`, file]
+    })
+)
 const NATIVE_FLAGS_DIR = 'src/native/generated/flags'
 const nativeFlagEntries = Object.fromEntries(
   listDirectory(NATIVE_FLAGS_DIR)
@@ -112,6 +138,9 @@ export default defineConfig([
   { ...shared, entry: { index: 'src/index.ts' } },
   // Runtime entry: the `Icon` base and `createIcon`, which every icon module imports.
   { ...shared, entry: { 'runtime/index': 'src/runtime/index.ts' } },
+  // Grid entry: the drawing grid alone, which the runtimes import, so reading it never loads
+  // the metadata.
+  { ...shared, entry: { 'grid/index': 'src/grid/index.ts' } },
   // Meta entry: typed metadata with no React import, so a consumer that only needs
   // names, tags or the grid never loads a renderer.
   { ...shared, entry: { 'meta/index': 'src/meta/index.ts' } },
@@ -121,6 +150,7 @@ export default defineConfig([
   { ...shared, entry: { 'flags/index': 'src/flags/index.ts' } },
   // tsup refuses an empty entry list, so the icon and flag entries exist only once one does.
   ...(Object.keys(iconEntries).length > 0 ? [{ ...shared, entry: iconEntries }] : []),
+  ...(Object.keys(brandEntries).length > 0 ? [{ ...shared, entry: brandEntries }] : []),
   ...(Object.keys(flagEntries).length > 0 ? [{ ...shared, entry: flagEntries }] : []),
   // React Native entries: the components, the runtime, the brand marks and the flags.
   { ...native, entry: { 'native/index': 'src/native/index.ts' } },
@@ -128,5 +158,6 @@ export default defineConfig([
   { ...native, entry: { 'native/brands/index': 'src/native/brands/index.ts' } },
   { ...native, entry: { 'native/flags/index': 'src/native/flags/index.ts' } },
   ...(Object.keys(nativeIconEntries).length > 0 ? [{ ...native, entry: nativeIconEntries }] : []),
+  ...(Object.keys(nativeBrandEntries).length > 0 ? [{ ...native, entry: nativeBrandEntries }] : []),
   ...(Object.keys(nativeFlagEntries).length > 0 ? [{ ...native, entry: nativeFlagEntries }] : [])
 ])

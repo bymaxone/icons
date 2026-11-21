@@ -8,7 +8,7 @@
 
 import { Resvg } from '@resvg/resvg-js'
 
-import { ICON_GRID } from '../meta/icon-grid.ts'
+import { ICON_GRID } from '../grid/icon-grid.ts'
 import { serializeContainer } from './svg.ts'
 import type { DrawingElement } from './svg.ts'
 
