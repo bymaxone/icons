@@ -41,7 +41,7 @@ Every non-brand glyph is an original Bymax drawing built on one grid and one set
 so the products that use it do not look like every other app built on the same open-source
 set.
 
-The package holds 1,301 line icons, 51 filled variants, 46 hand-tuned 16 px masters, 113
+The package holds 1,301 line icons, 51 filled variants, 46 hand-tuned 16 px masters, 114
 brand marks and 250 country flags, each as a component, a raw SVG file and a metadata entry;
 every drawing except a flag is also a sprite symbol, because the sprite holds `currentColor`
 drawings. Every drawing is also a React Native component, from `./native`.

@@ -53,6 +53,7 @@ drawing format does not allow.
 - **Anthropic** (`anthropic`): [brand guidelines](https://www.anthropic.com/legal/trademark-guidelines)
 - **App Store** (`appstore`): [brand guidelines](https://developer.apple.com/app-store/marketing/guidelines/)
 - **Apple** (`apple`): [brand guidelines](https://www.apple.com/legal/intellectual-property/guidelinesfor3rdparties.html)
+- **Apple Health** (`apple-health`): [brand guidelines](https://developer.apple.com/design/human-interface-guidelines/healthkit)
 - **Apple Music** (`apple-music`): [brand guidelines](https://marketing.services.apple/apple-music-identity-guidelines)
 - **Apple Pay** (`apple-pay`): [brand guidelines](https://developer.apple.com/apple-pay/marketing/)
 - **Arch Linux** (`arch-linux`): [brand guidelines](https://terms.archlinux.org/docs/trademark-policy/)
@@ -192,6 +193,10 @@ owner's rules for the logo still apply to whoever displays the mark.
 - **Health Connect** (`health-connect`): the white logo,
   [health_connect_logo_white.png](https://developer.android.com/static/downloads/assets/health_connect_logo_white.png),
   from Google's [Health Connect guidelines](https://developer.android.com/health-and-fitness/health-connect/ui/guidelines).
+- **Apple Health** (`apple-health`): the Apple Health icon,
+  [Icon-Apple-Health.dmg](https://devimages-cdn.apple.com/design/resources/download/Icon-Apple-Health.dmg),
+  from Apple's [Design Resources](https://developer.apple.com/design/resources/). The mark is the
+  tile with the heart cut out of it, in one colour.
 
 ## Country flags
 

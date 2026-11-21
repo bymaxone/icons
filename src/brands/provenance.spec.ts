@@ -34,7 +34,8 @@ const LICENSES = new Map(
 /** The marks traced from the owner's own PNG, and the file each was traced from. */
 const OWNER_ARTWORK: Record<string, string> = {
   'health-connect':
-    'https://developer.android.com/static/downloads/assets/health_connect_logo_white.png'
+    'https://developer.android.com/static/downloads/assets/health_connect_logo_white.png',
+  'apple-health': 'https://devimages-cdn.apple.com/design/resources/download/Icon-Apple-Health.dmg'
 }
 const SIMPLE_ICONS_MARKS = BRAND_NAMES.filter((name) => !(name in OWNER_ARTWORK))
 

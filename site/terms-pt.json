@@ -45,6 +45,7 @@
   "apartment": ["apartamento", "prédio residencial", "moradia"],
   "aperture": ["abertura", "lente", "câmera"],
   "apple": ["apple", "maçã", "iphone", "mac"],
+  "apple-health": ["apple saúde", "saúde", "healthkit", "ios"],
   "apple-music": ["apple music", "música", "streaming", "músicas"],
   "apple-pay": ["apple pay", "pagamentos", "carteira digital", "pagamento por aproximação"],
   "apps": ["aplicativos", "apps", "menu"],

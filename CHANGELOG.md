@@ -15,7 +15,7 @@ The date of a section is the day the release was prepared, not the day the versi
 
 ## [1.0.5] - 2026-11-21
 
-Three icons, three brand marks and three redrawn icons for the first consumer of the package, a running app that reviewed every icon it shows at its own sizes.
+Three icons, four brand marks and three redrawn icons for the first consumer of the package, a running app that reviewed every icon it shows at its own sizes.
 
 ### Added
 
@@ -26,6 +26,7 @@ Three icons, three brand marks and three redrawn icons for the first consumer of
 - `share-sheet`, an alias of `upload`, for the arrow leaving a tray used as a share action. `share`, the three nodes, stays.
 - Brand marks `strava` and `garmin`, taken from Simple Icons 16.38.0 with the owners' guidelines recorded. `garmin` is the wordmark with the delta, tagged so and meant for sizes larger than 24 px.
 - Brand mark `health-connect`, traced from the white logo that Google publishes, since Simple Icons has no path for it. Its `license` field reads "All rights reserved by Google LLC".
+- Brand mark `apple-health`, traced from the Apple Health icon that Apple publishes, since Simple Icons has no path for it. Its `license` field reads "All rights reserved by Apple Inc."
 
 ### Changed
 
@@ -35,7 +36,7 @@ Three icons, three brand marks and three redrawn icons for the first consumer of
 
 #### Apply to a consumer
 
-- Nothing breaks. New names: `comb`, `clock-round`, `moon-crescent`, `strava`, `garmin`, `health-connect`, and the alias `share-sheet`.
+- Nothing breaks. New names: `comb`, `clock-round`, `moon-crescent`, `strava`, `garmin`, `health-connect`, `apple-health`, and the alias `share-sheet`.
 - These names changed shape, so check them at the sizes you show: `running-shoe`, `crown` (line and filled), `link`.
 - `crown` now has an `sm` variant: a consumer that picks the 16 px master by size gets it for `crown` from this version.
 - `dist/` otherwise differs from 1.0.4 only in the added modules and the metadata that lists them.

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/brand.schema.json",
+  "title": "Apple Health",
+  "source": "https://devimages-cdn.apple.com/design/resources/download/Icon-Apple-Health.dmg",
+  "guidelines": "https://developer.apple.com/design/human-interface-guidelines/healthkit",
+  "license": "All rights reserved by Apple Inc.",
+  "retrievedAt": "2026-11-21",
+  "tags": ["health", "fitness", "ios", "healthkit", "connection"],
+  "since": "1.0.5"
+}
