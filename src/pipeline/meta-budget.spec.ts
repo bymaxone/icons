@@ -12,6 +12,7 @@ import {
   FLAGS_CAP_BYTES,
   FLAGS_FLAG_BYTES,
   FLAGS_FLOOR_BYTES,
+  BRAND_MODULE_BYTES,
   BRANDS_BASE_BYTES,
   BRANDS_CAP_BYTES,
   BRANDS_FLOOR_BYTES,
@@ -155,6 +156,11 @@ describe('the brands budget constants', () => {
       BRANDS_CAP_BYTES,
       BRANDS_FLOOR_BYTES
     ]).toStrictEqual([5, 16, 8192, 256])
+  })
+
+  it('hold one brand mark module to 4 KiB, a third above the largest of the marks', () => {
+    /** Scenario: a consumer who imports one mark loads its own module, whose budget is 4 KiB. */
+    expect(BRAND_MODULE_BYTES).toBe(4096)
   })
 })
 
