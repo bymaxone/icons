@@ -232,10 +232,10 @@ function setFacet(facet, values, scroll = false) {
   if (scroll) document.querySelector('.sections')?.scrollIntoView({ block: 'start' })
 }
 
-/** Toggles one value of a facet. */
-function toggleFacet(facet, value, on) {
-  const rest = finder.state[facet].filter((item) => item !== value)
-  setFacet(facet, on ? [...rest, value] : rest)
+/** Ticks or unticks one category. */
+function toggleCategory(value, on) {
+  const rest = finder.state.categories.filter((item) => item !== value)
+  setFacet('categories', on ? [...rest, value] : rest)
 }
 
 /** Marks the category the reader is reading in the navigation. */
@@ -298,7 +298,7 @@ function wireFacets(box) {
     document.querySelector('.bar')?.toggleAttribute('data-open', open)
   })
   for (const pick of document.querySelectorAll('input[data-cat]')) {
-    pick.addEventListener('change', () => toggleFacet('categories', pick.dataset.cat, pick.checked))
+    pick.addEventListener('change', () => toggleCategory(pick.dataset.cat, pick.checked))
   }
   document.getElementById('clear')?.addEventListener('click', () => {
     finder.state = { ...finder.state, types: [], categories: [] }

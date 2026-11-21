@@ -133,7 +133,7 @@ export default [
       'no-restricted-imports': ['error', { paths: deniedImports }],
 
       // Security plugin rules.
-      'security/detect-object-injection': 'warn',
+      'security/detect-object-injection': 'error',
       'security/detect-non-literal-regexp': 'warn',
       'security/detect-possible-timing-attacks': 'error',
 
@@ -211,7 +211,7 @@ export default [
       'no-eval': 'error',
       'no-new-func': 'error',
       'no-restricted-imports': ['error', { paths: deniedImports }],
-      'security/detect-object-injection': 'warn'
+      'security/detect-object-injection': 'error'
     }
   },
 
@@ -233,7 +233,7 @@ export default [
       'no-eval': 'error',
       'no-new-func': 'error',
       'no-restricted-imports': ['error', { paths: deniedImports }],
-      'security/detect-object-injection': 'warn'
+      'security/detect-object-injection': 'error'
     }
   },
   {
@@ -265,7 +265,7 @@ export default [
       'no-eval': 'error',
       'no-new-func': 'error',
       'no-restricted-imports': ['error', { paths: deniedImports }],
-      'security/detect-object-injection': 'warn'
+      'security/detect-object-injection': 'error'
     }
   },
 

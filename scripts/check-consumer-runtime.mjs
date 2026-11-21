@@ -290,7 +290,7 @@ function checkNative(packageDir, expected) {
     `const subpaths = ${JSON.stringify(subpaths)}
 const name = ${JSON.stringify(packageName)}
 console.log(JSON.stringify(subpaths.map((s) => [s, ${resolve}(name + s.slice(1))])))`
-  const resolved = {}
+  const resolved = new Map()
   for (const [format, resolve, file] of [
     ['esm', 'import.meta.resolve', 'resolve-native.mjs'],
     ['cjs', 'require.resolve', 'resolve-native.cjs']
@@ -303,11 +303,11 @@ console.log(JSON.stringify(subpaths.map((s) => [s, ${resolve}(name + s.slice(1))
     }
     for (const [subpath, location] of JSON.parse(outcome.stdout)) {
       const path = location.startsWith('file:') ? fileURLToPath(location) : location
-      resolved[subpath] = { ...resolved[subpath], [format]: path }
+      resolved.set(subpath, { ...resolved.get(subpath), [format]: path })
     }
   }
   const declared = JSON.parse(readFileSync(join(packageDir, 'package.json'), 'utf8')).exports
-  return nativeFailures(expected.nativeExports, resolved, (subpath, format) =>
+  return nativeFailures(expected.nativeExports, Object.fromEntries(resolved), (subpath, format) =>
     declaredFile(declared, subpath, format)
   )
 }

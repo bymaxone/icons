@@ -112,6 +112,16 @@ describe('normalizeFlag: colours', () => {
     )
   })
 
+  it('writes only a fill and a stroke as hex, and leaves any other attribute as it is', () => {
+    /**
+     * Scenario: an attribute that is not a paint, with a value shaped like a three-digit hex,
+     * is not a colour, so it is not rewritten as `#rrggbb`.
+     */
+    expect(normalizeFlag(flag('<path opacity="#ABC" d="M0 0h1v1z"/>'))).toContain(
+      '<path d="M0 0h1v1z" opacity="#ABC"/>'
+    )
+  })
+
   it('keeps a six-digit hex on a colour attribute SVGO would shorten', () => {
     /**
      * Scenario: the formatter turns SVGO's hex shortening off, so `#aabbcc` stays six digits

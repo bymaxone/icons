@@ -51,37 +51,52 @@ export interface SearchState extends SearchFilters {
   readonly q: string
 }
 
-/** What a word of the query scores on each field, exactly and as the start of a word. */
-const WEIGHT: Readonly<Record<SearchField, readonly [exact: number, prefix: number]>> = {
-  name: [100, 80],
-  alias: [70, 60],
-  label: [70, 60],
-  pt: [70, 60],
-  tag: [50, 45],
-  category: [35, 30],
-  type: [30, 25],
-  use: [20, 15]
+/** What a word of the query scores on a field, exactly and as the start of a word. */
+function weightOf(field: SearchField): readonly [exact: number, prefix: number] {
+  switch (field) {
+    case 'name':
+      return [100, 80]
+    case 'alias':
+    case 'label':
+    case 'pt':
+      return [70, 60]
+    case 'tag':
+      return [50, 45]
+    case 'category':
+      return [35, 30]
+    case 'type':
+      return [30, 25]
+    case 'use':
+      return [20, 15]
+  }
 }
 
 /** What the whole query scores when it equals one text of the field outright. */
-const WHOLE: Readonly<Partial<Record<SearchField, number>>> = {
-  name: 1000,
-  alias: 500,
-  label: 500,
-  pt: 500,
-  tag: 300
-}
+const WHOLE: ReadonlyMap<SearchField, number> = new Map([
+  ['name', 1000],
+  ['alias', 500],
+  ['label', 500],
+  ['pt', 500],
+  ['tag', 300]
+])
 
 /** The fields a misspelt word is compared against. */
 const FUZZY_FIELDS: ReadonlySet<SearchField> = new Set(['name', 'alias', 'label', 'pt', 'tag'])
 
 /** The type words a reader can search for, by the drawing they name. */
-const TYPE_WORDS: Readonly<Record<Variant, string>> = {
-  line: 'line outline',
-  filled: 'filled solid',
-  sm: 'sm 16 px master',
-  brand: 'brand logo',
-  flag: 'country flag'
+function typeWords(variant: Variant): string {
+  switch (variant) {
+    case 'line':
+      return 'line outline'
+    case 'filled':
+      return 'filled solid'
+    case 'sm':
+      return 'sm 16 px master'
+    case 'brand':
+      return 'brand logo'
+    case 'flag':
+      return 'country flag'
+  }
 }
 
 /**
@@ -112,21 +127,22 @@ export function fold(text: string): string {
 export function editDistance(a: string, b: string, limit: number): number {
   if (Math.abs(a.length - b.length) > limit) return limit + 1
   if (a === '' || b === '') return Math.max(a.length, b.length)
-  // Row i holds the distances from a's first i letters to b's first 1 to n letters. Row 0
-  // and column 0 are not stored: a read off a stored row falls back to them (j, and i).
+  // Row i holds the distances from a's first i letters to b's first j letters, j from 0 to n,
+  // so column 0 is stored and no read falls before the start of a row.
   let before: number[] = []
-  let previous: number[] = []
+  let previous = Array.from({ length: b.length + 1 }, (_, j) => j)
   let value = 0
   for (let i = 1; i <= a.length; i++) {
-    const current: number[] = []
-    for (let j = 0; j < b.length; j++) {
-      const up = previous[j] ?? j + 1
-      const left = current[j - 1] ?? i
-      const diagonal = previous[j - 1] ?? (j === 0 ? i - 1 : j)
-      value = Math.min(up + 1, left + 1, diagonal + (a[i - 1] === b[j] ? 0 : 1))
-      if (a[i - 1] === b[j - 1] && a[i - 2] === b[j]) {
-        // Stryker disable next-line ArithmeticOperator: on row 2, a swap after j - 1 insertions ties keeping the a and substituting the b, so a larger fallback never changes the result
-        value = Math.min(value, (before[j - 2] ?? (j === 1 ? i - 2 : j - 1)) + 1)
+    const current = [i]
+    for (let j = 1; j <= b.length; j++) {
+      const up = previous.at(j) as number
+      const left = current.at(j - 1) as number
+      const diagonal = previous.at(j - 1) as number
+      value = Math.min(up + 1, left + 1, diagonal + (a.charAt(i - 1) === b.charAt(j - 1) ? 0 : 1))
+      // `charAt` outside the word is '', which equals no letter, so a swap cannot start before
+      // the second letter of either word and `before.at(j - 2)` is only read from there.
+      if (a.charAt(i - 1) === b.charAt(j - 2) && a.charAt(i - 2) === b.charAt(j - 1)) {
+        value = Math.min(value, (before.at(j - 2) as number) + 1)
       }
       current.push(value)
     }
@@ -146,7 +162,7 @@ export function allowedEdits(word: string): number {
 
 /** The best a single word of the query scores against one text. */
 function wordScore(word: string, field: SearchField, text: string): number {
-  const [exact, prefix] = WEIGHT[field]
+  const [exact, prefix] = weightOf(field)
   let best = 0
   for (const candidate of text.split(' ')) {
     if (candidate === word) return exact
@@ -177,7 +193,7 @@ export function scoreDoc(doc: SearchDoc, query: string): number {
     if (best === 0) return 0
     total += best
   }
-  const whole = doc.texts.map(({ field, text }) => (text === query ? (WHOLE[field] ?? 0) : 0))
+  const whole = doc.texts.map(({ field, text }) => (text === query ? (WHOLE.get(field) ?? 0) : 0))
   return total + Math.max(...whole)
 }
 
@@ -318,15 +334,15 @@ export function nearCategories(
 export function highlight(text: string, query: string): HighlightRun[] {
   const letters = [...text]
   const folded = letters.map((letter) => fold(letter) || ' ').join('')
-  const marked = letters.map(() => false)
+  const marked = new Set<number>()
   for (const word of fold(query).split(' ').filter(Boolean)) {
     for (let at = folded.indexOf(word); at !== -1; at = folded.indexOf(word, at + 1)) {
-      for (let i = at; i < at + word.length; i++) marked[i] = true
+      for (let i = at; i < at + word.length; i++) marked.add(i)
     }
   }
   const runs: HighlightRun[] = []
   for (const [i, letter] of letters.entries()) {
-    const hit = marked[i] === true
+    const hit = marked.has(i)
     const last = runs.at(-1)
     if (last?.hit === hit) runs.splice(-1, 1, { text: last.text + letter, hit })
     else runs.push({ text: letter, hit })
@@ -417,7 +433,7 @@ function textsOf(
     })),
     ...entry.drawings.map(({ variant }): SearchText => ({
       field: 'type',
-      text: TYPE_WORDS[variant]
+      text: typeWords(variant)
     })),
     ...entry.useCases.map((use): SearchText => ({ field: 'use', text: fold(use) }))
   ]

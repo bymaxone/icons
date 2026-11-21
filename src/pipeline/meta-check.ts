@@ -126,11 +126,12 @@ function labelIssues(
         `${record.name}: label ${JSON.stringify(record.label)} is a placeholder. Write the label the icon is known by.`
     )
   const groups = groupBy(records, (record) => record.label)
+  const allowed = new Map(Object.entries(allowlist))
   const joined = [...groups].flatMap(([label, group]) =>
     group.length < 2
       ? []
       : group
-          .filter((name) => !allowlist[label]?.icons.includes(name))
+          .filter((name) => !allowed.get(label)?.icons.includes(name))
           .map((name) =>
             joinedMessage(
               name,

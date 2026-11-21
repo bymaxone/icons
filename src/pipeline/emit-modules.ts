@@ -146,10 +146,15 @@ export function aliasExports(
  * fill, and a 16 px master declares the size it is made for, so it renders at 16 px with
  * the set's 1.5 px stroke by default.
  */
-export const VARIANT_OPTIONS: Readonly<Record<IconVariantName, string>> = {
-  line: '',
-  filled: `, { paint: 'fill' }`,
-  sm: `, { masterSize: ${ICON_GRID.smSize} }`
+export function variantOptions(variant: IconVariantName): string {
+  switch (variant) {
+    case 'line':
+      return ''
+    case 'filled':
+      return `, { paint: 'fill' }`
+    case 'sm':
+      return `, { masterSize: ${ICON_GRID.smSize} }`
+  }
 }
 
 /** One variant module: the component, created from its drawing, and its aliases. */
@@ -160,7 +165,7 @@ function variantModule(
   flavour: Flavour
 ): string {
   const name = componentName(icon.name, variant)
-  const options = VARIANT_OPTIONS[variant]
+  const options = variantOptions(variant)
   const doc = [
     '/**',
     ` * The \`${icon.name}\` icon, ${variant} variant: ${docText(icon.meta.tags.join(', '))}.`,
