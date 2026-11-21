@@ -14,7 +14,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 export const LinkCheckIcon = /* @__PURE__ */ createNativeIcon('link-check', [
   [
     'path',
-    { d: 'M9.336 17.168a5.888 3.312-45 1 1 4.483-8.14m-.655-3.696a5.888 3.312-45 1 1-4.483 8.14' }
+    { d: 'M9.017 17.209a6.8 3.2-45 1 1 4.832-8.721m-.766-3.597a6.8 3.2-45 1 1-4.832 8.721' }
   ],
   ['path', { d: 'M14.75 17.75 17 20l4.5-4.5' }]
 ])

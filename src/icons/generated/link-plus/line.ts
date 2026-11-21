@@ -14,7 +14,7 @@ import { createIcon } from '@bymax-one/icons/runtime'
 export const LinkPlusIcon = /* @__PURE__ */ createIcon('link-plus', [
   [
     'path',
-    { d: 'M9.336 17.168a5.888 3.312-45 1 1 4.483-8.14m-.655-3.696a5.888 3.312-45 1 1-4.483 8.14' }
+    { d: 'M9.017 17.209a6.8 3.2-45 1 1 4.832-8.721m-.766-3.597a6.8 3.2-45 1 1-4.832 8.721' }
   ],
   ['path', { d: 'M17.75 13.75v7m-3.5-3.5h7' }]
 ])
