@@ -1,0 +1,24 @@
+// usage: node render.mjs out.png size cols file1.svg file2.svg ...  (renders each at 3 sizes on white and dark)
+import { Resvg } from '/Users/maximiliano/Documents/MyApps/bymax-one/icons/node_modules/@resvg/resvg-js/index.js'
+import { readFileSync, writeFileSync } from 'node:fs'
+const [out, ...files] = process.argv.slice(2)
+const cell = 120, cols = Math.min(files.length, 6), rows = Math.ceil(files.length / cols)
+const rowH = cell * 1.5
+let body = ''
+files.forEach((f, i) => {
+  const x = (i % cols) * cell, y = Math.floor(i / cols) * rowH
+  const svg = readFileSync(f, 'utf8').trim().replace(/<\?xml.*?\?>/, '')
+  const inner = svg.replace(/^<svg[^>]*>/, '').replace(/<\/svg>$/, '').trim()
+  const attrs = svg.match(/^<svg([^>]*)>/)[1]
+  const fillAttr = /fill="currentColor"/.test(attrs) && !/stroke=/.test(attrs) ? 'fill="currentColor"' : 'fill="none" stroke="currentColor" stroke-width="' + (attrs.match(/stroke-width="([^"]+)"/)?.[1] ?? 1.5) + '" stroke-linecap="round" stroke-linejoin="round"'
+  const mk = (px, bg, fg, ox, oy) => `<rect x="${ox}" y="${oy}" width="${cell/2}" height="${rowH}" fill="${bg}"/><g color="${fg}" transform="translate(${ox + (cell/2 - px)/2} ${oy + 8}) scale(${px/24})" ${fillAttr}>${inner}</g>`
+  body += `<rect x="${x}" y="${y}" width="${cell}" height="${rowH}" fill="#fff"/>`
+  body += mk(48, '#fff', '#111', x, y) + mk(48, '#16161a', '#f4f4f5', x + cell/2, y)
+  body += mk(24, '#fff', '#111', x, y + 66) + mk(24, '#16161a', '#f4f4f5', x + cell/2, y + 66)
+  body += mk(20, '#fff', '#111', x, y + 100) + mk(20, '#16161a', '#f4f4f5', x + cell/2, y + 100)
+  body += mk(16, '#fff', '#111', x, y + 130) + mk(16, '#16161a', '#f4f4f5', x + cell/2, y + 130)
+  body += `<text x="${x+4}" y="${y+rowH-6}" font-size="9" fill="#888">${f.split('/').pop().replace('.svg','')}</text>`
+})
+const w = cols * cell, h = rows * rowH
+const r = new Resvg(`<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}">${body}</svg>`, { fitTo: { mode: 'width', value: w * 2 }, font: { loadSystemFonts: true } })
+writeFileSync(out, r.render().asPng())

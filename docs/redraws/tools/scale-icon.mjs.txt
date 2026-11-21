@@ -1,0 +1,25 @@
+// node scale-icon.mjs in.svg factor out.svg [dx dy]  — scales about the ink bbox centre, keeps the centre.
+import { readFileSync, writeFileSync } from 'node:fs'
+import { Resvg } from '/Users/maximiliano/Documents/MyApps/bymax-one/icons/node_modules/@resvg/resvg-js/index.js'
+import { optimize } from '/Users/maximiliano/Documents/MyApps/bymax-one/icons/node_modules/svgo/lib/svgo.js'
+const [, , inp, fac, out, dx = '0', dy = '0'] = process.argv
+const s = Number(fac)
+const src = readFileSync(inp, 'utf8')
+const px = 8
+const png = new Resvg(src.replace(/width="\d+" height="\d+"/, `width="${24*px}" height="${24*px}"`).replace('currentColor', '#000').replace(/currentColor/g, '#000'), { fitTo: { mode: 'width', value: 24 * px } }).render()
+const { width, height, pixels } = png
+let x0 = width, y0 = height, x1 = 0, y1 = 0
+for (let y = 0; y < height; y++) for (let x = 0; x < width; x++) if (pixels[(y * width + x) * 4 + 3] > 40) { x0 = Math.min(x0, x); x1 = Math.max(x1, x); y0 = Math.min(y0, y); y1 = Math.max(y1, y) }
+const cx = (x0 + x1 + 1) / 2 / px, cy = (y0 + y1 + 1) / 2 / px
+console.error(`bbox ${(x0/px).toFixed(2)},${(y0/px).toFixed(2)} → ${((x1+1)/px).toFixed(2)},${((y1+1)/px).toFixed(2)} size ${((x1-x0+1)/px).toFixed(2)}×${((y1-y0+1)/px).toFixed(2)} centre ${cx.toFixed(2)},${cy.toFixed(2)}`)
+const tf = `translate(${cx + Number(dx)} ${cy + Number(dy)}) scale(${s}) translate(${-cx} ${-cy})`
+let res = src
+res = res.replace(/<path([^>]*?) d="([^"]+)"/g, (m, attrs, d) => {
+  const o = optimize(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path transform="${tf}" d="${d}"/></svg>`, { plugins: [{ name: 'convertPathData', params: { applyTransforms: true, floatPrecision: 3, curveToArc: false, lineShorthands: false } }] })
+  return `<path${attrs} d="${o.data.match(/ d="([^"]+)"/)[1]}"`
+})
+res = res.replace(/<circle cx="([^"]+)" cy="([^"]+)" r="([^"]+)"/g, (m, a, b, r) => {
+  const nx = cx + Number(dx) + (Number(a) - cx) * s, ny = cy + Number(dy) + (Number(b) - cy) * s
+  return `<circle cx="${nx.toFixed(3)}" cy="${ny.toFixed(3)}" r="${(Number(r) * s).toFixed(3)}"`
+})
+writeFileSync(out, res)
