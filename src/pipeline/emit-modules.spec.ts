@@ -154,6 +154,18 @@ describe('sinceOf', () => {
       '1.0.9007199254740993',
       '1.0.9007199254740992',
       '1.0.9007199254740993'
+    ],
+    [
+      'parts of 255 digits, larger first',
+      `1${'0'.repeat(254)}.0.0`,
+      `${'9'.repeat(254)}.0.0`,
+      `1${'0'.repeat(254)}.0.0`
+    ],
+    [
+      'parts of 255 digits, larger second',
+      `${'9'.repeat(254)}.0.0`,
+      `1${'0'.repeat(254)}.0.0`,
+      `1${'0'.repeat(254)}.0.0`
     ]
   ])('reports the later version for %s', (_name, flavourSince, drawn, expected) => {
     /**
