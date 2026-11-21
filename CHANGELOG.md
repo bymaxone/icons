@@ -39,7 +39,6 @@ Three icons, four brand marks and three redrawn icons for the first consumer of 
 - Nothing breaks. New names: `comb`, `clock-round`, `moon-crescent`, `strava`, `garmin`, `health-connect`, `apple-health`, and the alias `share-sheet`.
 - These names changed shape, so check them at the sizes you show: `running-shoe`, `crown` (line and filled), `link`.
 - `crown` now has an `sm` variant: a consumer that picks the 16 px master by size gets it for `crown` from this version.
-- `dist/` otherwise differs from 1.0.4 only in the added modules and the metadata that lists them.
 
 ## [1.0.4] - 2026-11-21
 

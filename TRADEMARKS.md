@@ -21,7 +21,7 @@ owner's published rules.
   given a line version, because modifying a logo breaks most brand guidelines. The
   geometry is the owner's own: its path in Simple Icons, or, for the marks listed
   under "Marks from the owner's own artwork" below, its outline traced from the
-  PNG the owner publishes.
+  artwork file the owner publishes.
 - **Monochrome.** Every mark renders in the colour of the surrounding text.
 - **Recorded provenance.** Each brand's metadata states its `source`, `guidelines`,
   `license` and `retrievedAt` date.
@@ -185,8 +185,8 @@ as a whole, with no other change.
 
 ## Marks from the owner's own artwork
 
-Simple Icons has no path for the marks below. Each one is the outline of the PNG that its
-owner publishes, traced and then placed in the live area as a whole. Its `license` field
+Simple Icons has no path for the marks below. Each one is the outline of the artwork file
+that its owner publishes, traced and then placed in the live area as a whole. Its `license` field
 reads "All rights reserved by" its owner, because the artwork carries no public licence. The
 owner's rules for the logo still apply to whoever displays the mark.
 
