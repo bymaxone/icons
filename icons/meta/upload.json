@@ -4,6 +4,12 @@
   "tags": ["import", "send", "tray", "arrow up"],
   "categories": ["actions"],
   "useCases": ["Uploads a file", "Imports media into a project"],
+  "aliases": [
+    {
+      "name": "share-sheet",
+      "deprecated": false
+    }
+  ],
   "variants": ["line", "sm"],
   "opticalSizes": [24, 16],
   "since": "1.0.0"

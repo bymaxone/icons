@@ -1,6 +1,6 @@
 # The brand marks of 1.0
 
-The package holds 110 brand marks, in the owners' geometry from Simple Icons 16.38.0. A brand is in only if Simple Icons has its path, the owner's own guidelines page was opened and is about the use of the logo or brand (the page, its owner and the day are in [`../brands/guidelines-evidence.md`](../brands/guidelines-evidence.md)), and the licence of the mark can be shipped. The decision to take this selection over a larger list is the founder's, 2026-11-14, and a brand that fails any of the three is left out with the reason rather than with a guessed address.
+The package holds 113 brand marks: 112 in the owners' geometry from Simple Icons 16.38.0, and one, `health-connect`, traced from the PNG its owner publishes. A brand is in only if Simple Icons has its path, the owner's own guidelines page was opened and is about the use of the logo or brand (the page, its owner and the day are in [`../brands/guidelines-evidence.md`](../brands/guidelines-evidence.md)), and the licence of the mark can be shipped. The decision to take this selection over a larger list is the founder's, 2026-11-14, and a brand that fails any of the three is left out with the reason rather than with a guessed address.
 
 ## Counts
 
@@ -8,9 +8,11 @@ Measured on the files of `icons/brands` when the batches closed:
 
 | Folder         | Files |
 | -------------- | ----- |
-| `icons/brands` | 110   |
+| `icons/brands` | 113   |
 
 The first 14 came with B4a. B7 added 96 in three batches: developer and cloud tools, AI providers and design tools (53); social networks, messaging and streaming (22); and payments, operating systems, browsers and stores (21). `mysql`, `go`, `nextdoor`, `zoom`, `hbo`, `kakaotalk`, `line-messenger`, `ios`, `macos`, `visa`, `ebay`, `samsungpay`, `apple-pay` and `google-pay` are wordmarks, tagged so, meant for sizes larger than 24 px.
+
+The release that followed (1.0.5) added `strava`, `garmin` and `health-connect`, for the first consumer of the package. `garmin` is the wordmark with the delta, tagged so and meant for sizes larger than 24 px. `health-connect` is not in Simple Icons: its outline is traced from the white logo that Google publishes (see `TRADEMARKS.md`).
 
 ## What was left out, and why
 

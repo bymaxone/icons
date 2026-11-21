@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/brand.schema.json",
+  "title": "Strava",
+  "source": "https://github.com/simple-icons/simple-icons/blob/16.38.0/icons/strava.svg",
+  "guidelines": "https://developers.strava.com/guidelines/",
+  "license": "CC0-1.0",
+  "retrievedAt": "2026-11-21",
+  "tags": ["run", "ride", "fitness", "activity", "connection"],
+  "since": "1.0.5"
+}

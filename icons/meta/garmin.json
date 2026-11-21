@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/brand.schema.json",
+  "title": "Garmin",
+  "source": "https://github.com/simple-icons/simple-icons/blob/16.38.0/icons/garmin.svg",
+  "guidelines": "https://developer.garmin.com/brand-guidelines/api-brand-guidelines/",
+  "license": "CC0-1.0",
+  "retrievedAt": "2026-11-21",
+  "tags": ["wordmark", "watch", "gps", "fitness", "connection"],
+  "since": "1.0.5"
+}

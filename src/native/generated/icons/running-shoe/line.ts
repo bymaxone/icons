@@ -12,6 +12,10 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
  * @since 1.0.0
  */
 export const RunningShoeIcon = /* @__PURE__ */ createNativeIcon('running-shoe', [
-  ['path', { d: 'M3.25 18.75V13l3.5-.75 2.25-4 3.5 2.5 6.25 2c1.75.5 2.75 1.75 2.75 3.25v2.75z' }],
-  ['path', { d: 'M3.25 15.75H21.5' }]
+  [
+    'path',
+    { d: 'M3.25 18.75V8.25c.75 1.75 2 2.5 3.75 2.5l3.25-3.5 5.5 4.75c3.25.5 5.5 1.75 5.5 4v2.75z' }
+  ],
+  ['path', { d: 'M3.25 15.75h18' }],
+  ['path', { d: 'm12.25 9-1.5 1.75m4-.25-1.5 1.75' }]
 ])

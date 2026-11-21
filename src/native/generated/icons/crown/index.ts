@@ -6,3 +6,4 @@
 
 export { CrownIcon } from './line'
 export { CrownFilledIcon } from './filled'
+export { CrownSmIcon } from './sm'

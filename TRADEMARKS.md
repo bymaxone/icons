@@ -18,7 +18,10 @@ owner's published rules.
 
 - **Official geometry only.** A mark is scaled into the 20 × 20 live area of the
   24 px grid and filled with `currentColor`. It is never redrawn, simplified or
-  given a line version, because modifying a logo breaks most brand guidelines.
+  given a line version, because modifying a logo breaks most brand guidelines. The
+  geometry is the owner's own: its path in Simple Icons, or, for the marks listed
+  under "Marks from the owner's own artwork" below, its outline traced from the
+  PNG the owner publishes.
 - **Monochrome.** Every mark renders in the colour of the surrounding text.
 - **Recorded provenance.** Each brand's metadata states its `source`, `guidelines`,
   `license` and `retrievedAt` date.
@@ -75,6 +78,7 @@ drawing format does not allow.
 - **Firefox** (`firefox`): [brand guidelines](https://www.mozilla.org/en-US/foundation/trademarks/policy/)
 - **Fly.io** (`flyio`): [brand guidelines](https://docs.fly.io/about/brand)
 - **Framer** (`framer`): [brand guidelines](https://www.framer.com/brand)
+- **Garmin** (`garmin`): [brand guidelines](https://developer.garmin.com/brand-guidelines/api-brand-guidelines/)
 - **Git** (`git`): [brand guidelines](https://git-scm.com/community/logos)
 - **GitHub** (`github`): [brand guidelines](https://github.com/logos)
 - **GitHub Actions** (`github-actions`): [brand guidelines](https://brand.github.com/foundations/logo)
@@ -86,6 +90,7 @@ drawing format does not allow.
 - **Google Play** (`google-play`): [brand guidelines](https://partnermarketinghub.withgoogle.com/brands/google-play/google-play/lockups-icons-badges/)
 - **Grafana** (`grafana`): [brand guidelines](https://grafana.com/trademark-policy/)
 - **HBO** (`hbo`): [brand guidelines](https://brand.hbomax.com/logos); the page is the HBO Max brand site, owned by Warner Bros. Discovery
+- **Health Connect** (`health-connect`): [brand guidelines](https://developer.android.com/health-and-fitness/health-connect/ui/guidelines)
 - **Instagram** (`instagram`): [brand guidelines](https://about.meta.com/brand/resources/instagram)
 - **iOS** (`ios`): [brand guidelines](https://www.apple.com/legal/intellectual-property/guidelinesfor3rdparties.html)
 - **KakaoTalk** (`kakaotalk`): [brand guidelines](https://www.kakao.com/policy/brand/trademark)
@@ -131,6 +136,7 @@ drawing format does not allow.
 - **Spotify** (`spotify`): [brand guidelines](https://developer.spotify.com/documentation/general/design-and-branding/#using-our-logo)
 - **Square** (`square-payments`): [brand guidelines](https://developer.squareup.com/docs/brand-guidelines)
 - **Steam** (`steam`): [brand guidelines](https://partner.steamgames.com/doc/marketing/branding)
+- **Strava** (`strava`): [brand guidelines](https://developers.strava.com/guidelines/)
 - **Stripe** (`stripe`): [brand guidelines](https://stripe.com/br/newsroom/information); the unprefixed address redirects by region
 - **Substack** (`substack`): [brand guidelines](https://substack.com/brand)
 - **Supabase** (`supabase`): [brand guidelines](https://supabase.com/brand)
@@ -175,6 +181,17 @@ as a whole, with no other change.
 - **Git** (`git`): the Git logo by Jason Long, under
   [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/), from
   [git-scm.com](https://git-scm.com/community/logos).
+
+## Marks from the owner's own artwork
+
+Simple Icons has no path for the marks below. Each one is the outline of the PNG that its
+owner publishes, traced and then placed in the live area as a whole. Its `license` field
+reads "All rights reserved by" its owner, because the artwork carries no public licence. The
+owner's rules for the logo still apply to whoever displays the mark.
+
+- **Health Connect** (`health-connect`): the white logo,
+  [health_connect_logo_white.png](https://developer.android.com/static/downloads/assets/health_connect_logo_white.png),
+  from Google's [Health Connect guidelines](https://developer.android.com/health-and-fitness/health-connect/ui/guidelines).
 
 ## Country flags
 

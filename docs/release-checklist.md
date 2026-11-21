@@ -41,7 +41,7 @@ Both applications install the packed 1.0.0 tarball of this branch with `npm inst
   - **The flags:** `<BrFlagIcon size={24} />` renders `width="36" height="24"` with its source view box `0 0 513 342`; `<UsFlagIcon />` renders `width="24" height="16"`, the default height of 16 at 3:2.
 - **Vite 8.3.8 with React.** The build runs `tsc` with `strict`, `exactOptionalPropertyTypes`, `noUncheckedIndexedAccess` and `skipLibCheck: false`, so the package's own declarations are type-checked, and then `vite build` (1,568 modules). The app also passes `ref`, `absoluteStrokeWidth` and `className`.
   - The same component tree rendered with `react-dom/server` through `tsx` holds 8 drawings, 2 of them labelled ("Brazil" and "Delete"), and the flags at `36 x 24` and `24 x 16`. The built bundle itself was not rendered.
-  - Its heading reads the 1,298 names from `ICON_NAMES` and the 250 from `FLAG_NAMES`.
+  - Its heading reads the 1,301 names from `ICON_NAMES` and the 250 from `FLAG_NAMES`.
 - `npm install` of the tarball warns that the packed `package.json` still lists a `prepare` script (`husky`). npm runs `prepare` for installs from a git URL or a local tarball, not for a registry install, which this checklist did not test. The warning did not fail an install.
 
 ## 4. The release workflow

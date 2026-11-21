@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Crescent moon",
+  "tags": ["night", "dark", "dark mode", "sleep", "crescent"],
+  "categories": ["system", "nature"],
+  "useCases": ["Switches to the dark theme", "Marks night time or sleep"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "1.0.5"
+}

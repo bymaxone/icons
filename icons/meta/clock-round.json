@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Round clock",
+  "tags": ["time", "hour", "round", "dial", "face"],
+  "categories": ["time", "status"],
+  "useCases": ["Shows the time of an event", "Marks a duration or a deadline"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "1.0.5"
+}
