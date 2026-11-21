@@ -12,6 +12,9 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
  * @since 1.0.0
  */
 export const WalkIcon = /* @__PURE__ */ createNativeIcon('walk', [
-  ['circle', { cx: 13.25, cy: 4.75, r: 1.75 }],
-  ['path', { d: 'm11.75 9.75-2 4.5 3 2 1 5m-4-7-2 6.5m4.5-11 3 3.5 2.5.5m-11.5-1.5 2.25-2.5' }]
+  ['circle', { cx: 12.75, cy: 3.86, r: 1.75 }],
+  [
+    'path',
+    { d: 'm7.6 13 2.2-1.8 2.6-2.6L12 14l-2 3.6L8.6 21m3.8-12.4L15 11l2.2 1.8M12 14l2.4 3.4 1 3.8' }
+  ]
 ])

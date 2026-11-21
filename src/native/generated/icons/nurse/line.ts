@@ -12,7 +12,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
  * @since 1.0.0
  */
 export const NurseIcon = /* @__PURE__ */ createNativeIcon('nurse', [
-  ['circle', { cx: 12.25, cy: 10.25, r: 3.25 }],
-  ['path', { d: 'M5.75 21.25c.5-3 3-4.75 6.5-4.75s6 1.75 6.5 4.75' }],
-  ['path', { d: 'm9.44 8.62.31-4.37h5l.31 4.37' }]
+  ['circle', { cx: 12.25, cy: 11, r: 2.75 }],
+  ['path', { d: 'm8.9 5.25.6-2.75H15l.6 2.75z' }],
+  ['path', { d: 'M5.75 22c.5-1.8 3-2.6 6.5-2.6s6 .8 6.5 2.6' }]
 ])
