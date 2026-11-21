@@ -58,10 +58,16 @@ export interface Flavour {
  */
 export function sinceOf(flavour: Flavour, drawn: string): string {
   if (flavour.since === undefined) return drawn
-  const order = (version: string): number =>
-    version.split('.').reduce((total, part) => total * 1000 + Number(part), 0)
+  // Each part is padded to the longest part of either version, so the text compares as numbers
+  // whatever their size; the schema allows any non-negative integer in a part.
+  const fields = (version: string): string[] => version.split('.')
+  const width = Math.max(...[flavour.since, drawn].flatMap(fields).map((part) => part.length))
+  const key = (version: string): string =>
+    fields(version)
+      .map((part) => part.padStart(width, '0'))
+      .join('.')
   // Stryker disable next-line EqualityOperator: equal versions are the same text either way
-  return order(flavour.since) > order(drawn) ? flavour.since : drawn
+  return key(flavour.since) > key(drawn) ? flavour.since : drawn
 }
 
 /** The web modules, `createIcon` and `createFlag` from `./runtime`. */
