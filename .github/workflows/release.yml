@@ -24,7 +24,10 @@ jobs:
   publish:
     name: Publish to npm and create GitHub Release
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    # Measured on the cancelled v1.0.1 run (44839906758, ubuntu-latest): setup 18 s, `prepublishOnly`
+    # 14 min, `dogfood` 20 s and check:api 4 s, so about 15 min up to the publish, which takes
+    # seconds. 40 minutes leaves room for a slower runner and still bounds a hung job.
+    timeout-minutes: 40
 
     # Provenance (`--provenance`) requires a public repository: npm rejects a
     # provenance publish sourced from a private repo, and the transparency-log
@@ -111,7 +114,9 @@ jobs:
             exit 1
           fi
 
-      - name: Verify (typecheck, lint, test, build, size)
+      - name: Verify (typecheck, lint, test, build, size, exports, published surface, consumer load)
+        # prepublishOnly ends with check:exports, check:published and check:runtime on the
+        # dist/ it just built, so none of them is a step of its own below.
         run: pnpm prepublishOnly
 
       - name: Package smoke test (packed tarball, every subpath, ESM + CJS)
@@ -133,22 +138,6 @@ jobs:
         # re-exports the grid and its type from `@bymax-one/icons/meta`, so a change there is a
         # change to both entry points and needs the note.
         run: node scripts/check-api-surface.mjs
-
-      - name: Verify published type resolution
-        # Runs after the build inside prepublishOnly and before the publish, so a
-        # tag cannot ship a tarball whose `exports` map resolves to declarations
-        # for the wrong module format.
-        #
-        # It is a step rather than a prepublishOnly entry because the publish below
-        # runs with `--ignore-scripts` — prepublishOnly already ran as its own step,
-        # and a second run would clean and rebuild the `dist/` the gates validated.
-        # A gate inside prepublishOnly would therefore never run on this path.
-        run: pnpm check:exports
-
-      - name: Consumer load
-        # A step for the same reason: prepublishOnly does not run on the publish
-        # below, which passes `--ignore-scripts`.
-        run: pnpm check:runtime
 
       - name: Publish to npm with provenance
         # `npm publish`, not `pnpm publish`. The registry's `readme` field is
