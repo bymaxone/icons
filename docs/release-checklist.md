@@ -38,7 +38,7 @@ Both applications install the packed 1.0.0 tarball of this branch with `npm inst
 
 ## 4. The release workflow
 
-`.github/workflows/release.yml` runs on a `v*.*.*` tag or by hand, in the `npm-publish` environment, with `contents: write` and `id-token: write`, and a 40-minute limit: the gates take about 15. It holds no `NPM_TOKEN`.
+`.github/workflows/release.yml` runs on a `v*.*.*` tag or by hand, in the `npm-publish` environment, with `contents: write` and `id-token: write`, and a 40-minute limit. It holds no `NPM_TOKEN`.
 
 1. It checks the tag against the version in `package.json`.
 2. It extracts the CHANGELOG section of that version as the release notes.
