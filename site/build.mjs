@@ -3,7 +3,7 @@
  * @fileoverview `pnpm site`: builds the catalog at `.site/` from the package's own build
  * output. Every icon on every page is rendered by the built components, imported by package
  * name as a consumer imports them, so the site is also a consumer test of `dist/`. The raw
- * SVG files are copied for the copy and download buttons, and `CNAME` names the domain.
+ * SVG files are copied for the copy and download buttons, and `CNAME` names the domain when it is a custom one.
  * @layer site
  *
  * Usage: node site/build.mjs (after `pnpm build`)
