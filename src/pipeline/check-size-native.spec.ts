@@ -71,7 +71,12 @@ describe('the size gate on the React Native entries', () => {
     // Scenario: 80 KiB of incompressible bytes in one native entry exceeds every native budget.
     build(root, { [file]: randomBytes(80 * 1024) })
     const run = gate(root)
-    expect(run.out).toMatch(new RegExp(`${row.replace(/[()/]/g, '\\$&')}\\s.*FAIL`))
+    // The row is read as text, never built into a pattern: it holds parentheses and slashes.
+    const failing = run.out.split('\n').some((line) => {
+      const cells = line.trimStart()
+      return cells.startsWith(row) && /^\s/.test(cells.slice(row.length)) && cells.includes('FAIL')
+    })
+    expect(failing).toBe(true)
     expect(run.status).toBe(1)
   })
 })
