@@ -103,7 +103,9 @@ writeFileSync(
   join(out, 'assets', 'favicon.svg'),
   readFileSync(join(root, 'dist', 'svg', 'filled', 'lightning.svg'), 'utf8')
 )
-writeFileSync(join(out, 'CNAME'), `${new URL(ORIGIN).host}\n`)
+// A `CNAME` names a custom domain; the project address of GitHub Pages has none to name.
+const { host } = new URL(ORIGIN)
+if (!host.endsWith('.github.io')) writeFileSync(join(out, 'CNAME'), `${host}\n`)
 await build({
   entryPoints: [join(root, 'site', 'client.mjs')],
   bundle: true,
