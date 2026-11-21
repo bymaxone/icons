@@ -38,14 +38,13 @@ Both applications install the packed 1.0.0 tarball of this branch with `npm inst
 
 ## 4. The release workflow
 
-`.github/workflows/release.yml` runs on a `v*.*.*` tag or by hand, in the `npm-publish` environment, with `contents: write` and `id-token: write`. It holds no `NPM_TOKEN`.
+`.github/workflows/release.yml` runs on a `v*.*.*` tag or by hand, in the `npm-publish` environment, with `contents: write` and `id-token: write`, and a 40-minute limit. It holds no `NPM_TOKEN`.
 
 1. It checks the tag against the version in `package.json`.
 2. It extracts the CHANGELOG section of that version as the release notes.
-3. It runs `pnpm prepublishOnly`, then `pnpm dogfood`.
+3. It runs `pnpm prepublishOnly`, which ends with `check:exports`, `check:published` and `check:runtime`, then `pnpm dogfood`.
 4. It runs `node scripts/check-api-surface.mjs`, which passes on a first release: npm's E404 means no earlier version.
-5. It runs `pnpm check:exports` and `pnpm check:runtime`.
-6. It publishes with `npm publish --provenance --access public --ignore-scripts`, skipping a version npm already has.
+5. It publishes with `npm publish --provenance --access public --ignore-scripts`, skipping a version npm already has.
 
 Trusted publishing needs the package to exist on npm, so the first publish is the founder's, by hand, following the runbook in section 9. Pushing a `v1.0.0` tag before that publish would fail the workflow: no package and no trusted publisher exist yet.
 
