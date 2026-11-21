@@ -1,7 +1,7 @@
 {
   "$schema": "../../schemas/brand.schema.json",
   "title": "Android",
-  "source": "https://github.com/simple-icons/simple-icons/blob/16.37.0/icons/android.svg",
+  "source": "https://github.com/simple-icons/simple-icons/blob/16.38.0/icons/android.svg",
   "guidelines": "https://developer.android.com/distribute/marketing-tools/brand-guidelines",
   "license": "CC-BY-3.0",
   "retrievedAt": "2026-11-14",

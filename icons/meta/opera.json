@@ -1,7 +1,7 @@
 {
   "$schema": "../../schemas/brand.schema.json",
   "title": "Opera",
-  "source": "https://github.com/simple-icons/simple-icons/blob/16.37.0/icons/opera.svg",
+  "source": "https://github.com/simple-icons/simple-icons/blob/16.38.0/icons/opera.svg",
   "guidelines": "https://brand.opera.com",
   "license": "CC0-1.0",
   "retrievedAt": "2026-11-14",

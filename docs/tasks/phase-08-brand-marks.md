@@ -10,7 +10,7 @@
 
 ## Context
 
-B4 lands as three pull requests (see the plan). B4a ships the brand marks of spec §5. They are the only third-party shapes in the package, and they are not drawn: each is the path of Simple Icons 16.37.0 (CC0-1.0), a pinned development dependency, placed in the 20 x 20 live area as a whole.
+B4 lands as three pull requests (see the plan). B4a ships the brand marks of spec §5. They are the only third-party shapes in the package, and they are not drawn: each is the path of Simple Icons 16.38.0 (CC0-1.0), a pinned development dependency, placed in the 20 x 20 live area as a whole.
 
 ### Approval
 
@@ -46,7 +46,7 @@ Each mark's `source` names the file its path was taken from, at the pinned versi
 
 <!-- Append one line per completed task: - <id> ✅ YYYY-MM-DD <summary> -->
 
-- 8.1 ✅ 2026-11-11 The marks placed in the live area from Simple Icons 16.37.0, with their metadata.
+- 8.1 ✅ 2026-11-11 The marks placed in the live area from Simple Icons 16.38.0, with their metadata.
 - 8.2 ✅ 2026-11-11 Comparison sheet and table, the brands budget, spec §5, D3 and `TRADEMARKS.md` updated.
 - 8.3 ✅ 2026-11-11 Approved by the delegated auditor on behalf of the founder.
 - 8.4 ✅ 2026-11-11 Merged in pull request #14.

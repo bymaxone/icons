@@ -1,6 +1,6 @@
 {
   "name": "@bymax-one/icons",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Original Bymax icon set for React 19: per-icon components, raw SVG, a sprite and typed metadata, drawn on one 24 px grid with a 1.5 px stroke.",
   "author": "Bymax One <support@bymax.one>",
   "license": "MIT",
@@ -354,7 +354,7 @@
     "react-native": "~0.88.1",
     "react-native-svg": "15.16.1",
     "react-server-dom-webpack": "^19.3.1",
-    "simple-icons": "16.37.0",
+    "simple-icons": "16.38.0",
     "svgo": "^4.1.0",
     "ts-jest": "^29.4.9",
     "ts-node": "^10.9.2",

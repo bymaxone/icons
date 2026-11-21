@@ -13,6 +13,14 @@ The date of a section is the day the release was prepared, not the day the versi
 
 ## [Unreleased]
 
+## [1.0.4] - 2026-11-21
+
+The brand marks are the same: the 110 marks are byte-identical between Simple Icons 16.37.0 and 16.38.0. The package records 16.38.0 as their source. `dist/` differs from 1.0.3 only in the source URLs of the brand marks.
+
+### Changed
+
+- The recorded source of every brand mark is Simple Icons 16.38.0, in `metadata.json`, `TRADEMARKS.md` and the brand modules; the geometry is unchanged.
+
 ## [1.0.3] - 2026-11-21
 
 Any icon imported from the package no longer carries the metadata of the set: an icon imported by subpath bundles to about 2 kB minified, where 1.0.2 bundled 426 kB, and the React Native runtime no longer pulls it either. The drawings and the components are unchanged.
@@ -312,7 +320,8 @@ an SVG sprite and typed metadata.
   `pnpm family-sheet` renders the whole set by category; and a pull request that changes a
   drawing gets a preview comment with its render and its nearest matches.
 
-[Unreleased]: https://github.com/bymaxone/icons/compare/v1.0.3...HEAD
+[Unreleased]: https://github.com/bymaxone/icons/compare/v1.0.4...HEAD
+[1.0.4]: https://github.com/bymaxone/icons/compare/v1.0.3...v1.0.4
 [1.0.3]: https://github.com/bymaxone/icons/compare/v1.0.2...v1.0.3
 [1.0.2]: https://github.com/bymaxone/icons/compare/v1.0.0...v1.0.2
 [1.0.1]: https://github.com/bymaxone/icons/compare/v1.0.0...v1.0.1

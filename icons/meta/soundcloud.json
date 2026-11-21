@@ -1,7 +1,7 @@
 {
   "$schema": "../../schemas/brand.schema.json",
   "title": "SoundCloud",
-  "source": "https://github.com/simple-icons/simple-icons/blob/16.37.0/icons/soundcloud.svg",
+  "source": "https://github.com/simple-icons/simple-icons/blob/16.38.0/icons/soundcloud.svg",
   "guidelines": "https://soundcloud.com/company/media-kit",
   "license": "CC0-1.0",
   "retrievedAt": "2026-11-14",
