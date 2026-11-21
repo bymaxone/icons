@@ -473,12 +473,13 @@ function checkCounts() {
     Object.keys(meta.flags).length
   ]
   const named = ['line icons', 'filled variants', '16 px masters', 'brand marks', 'country flags']
-  named.forEach((name, i) => {
-    const stated = Number(line[i + 1].replaceAll(',', ''))
-    if (stated !== actual[i]) {
-      fail('readme counts', `the README states ${stated} ${name}, the package has ${actual[i]}`)
+  const statedCounts = line.slice(1).map((text) => Number(text.replaceAll(',', '')))
+  for (const [i, name] of named.entries()) {
+    const stated = statedCounts.at(i)
+    if (stated !== actual.at(i)) {
+      fail('readme counts', `the README states ${stated} ${name}, the package has ${actual.at(i)}`)
     }
-  })
+  }
   console.log(`  readme counts: ${actual.map((n) => n.toLocaleString('en-US')).join(' / ')}`)
 }
 

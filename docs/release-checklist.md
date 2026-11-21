@@ -6,6 +6,14 @@ Each item carries the evidence it was checked with. The first publish is manual.
 
 ---
 
+## Version policy: every release is a 1.0.x patch
+
+The founder's rule: the package stays in 1.0.x. New icons, new API and new entries ship as the next patch (1.0.1, 1.0.2, ...), never as 1.1.0 or 2.0.0, and the audit rejects a minor or a major bump.
+
+`pnpm check:api` does not look at the bump level. Any difference in the built declarations passes only when that version's CHANGELOG section holds the `#### Apply to a consumer` heading (or `Apply to a derived backend`), so a patch that adds icons carries that note.
+
+---
+
 ## 1. What the tarball holds
 
 `npm pack --dry-run --json` on the release branch:

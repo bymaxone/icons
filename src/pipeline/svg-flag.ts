@@ -48,7 +48,7 @@ function flattenGroup(group: XastElement): XastChild[] {
   const loose = inner.find((child) => !isElement(child))
   if (loose !== undefined) throw new Error(`a <g> holds ${loose.type} content`)
   const elements = inner.filter(isElement)
-  const moved: Record<string, string> = {}
+  const moved = new Map<string, string>()
   for (const [name, value] of Object.entries(group.attributes)) {
     if (DROPPED.includes(name)) continue
     if (name === 'opacity') {
@@ -57,10 +57,11 @@ function flattenGroup(group: XastElement): XastChild[] {
         throw new Error('a <g> with an opacity holds several elements, or one with its own opacity')
       }
       only.attributes['opacity'] = value
-    } else if ((MOVED_DOWN as readonly string[]).includes(name)) moved[name] = value
+    } else if ((MOVED_DOWN as readonly string[]).includes(name)) moved.set(name, value)
     else throw new Error(`a <g> carries ${name}, which cannot be moved onto its children`)
   }
-  for (const child of elements) child.attributes = { ...moved, ...child.attributes }
+  for (const child of elements)
+    child.attributes = { ...Object.fromEntries(moved), ...child.attributes }
   return elements
 }
 
@@ -98,10 +99,13 @@ const tidyAttributes: CustomPlugin = {
     element: {
       enter: (node: XastElement): void => {
         for (const name of DROPPED) Reflect.deleteProperty(node.attributes, name)
-        for (const name of ['fill', 'stroke']) {
-          const value = node.attributes[name]
-          if (value !== undefined) node.attributes[name] = hexColour(value)
-        }
+        const painted = Object.entries(node.attributes).filter(
+          ([name]) => name === 'fill' || name === 'stroke'
+        )
+        Object.assign(
+          node.attributes,
+          Object.fromEntries(painted.map(([name, value]) => [name, hexColour(value)]))
+        )
       }
     }
   })

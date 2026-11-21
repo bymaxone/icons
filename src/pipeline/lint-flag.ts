@@ -81,8 +81,9 @@ interface CheckedElement extends DrawingElement {
 /** The root holds the namespace and a view box that is four numbers and 3:2. */
 function rootMessages(root: SvgElementNode): string[] {
   const namespace = rootAttributes('flags')
+  const present = new Map(Object.entries(root.attributes))
   const wrong = Object.entries(namespace)
-    .filter(([name, value]) => root.attributes[name] !== value)
+    .filter(([name, value]) => present.get(name) !== value)
     .map(([name, value]) => `root attribute ${name} must be "${value}"`)
   const extra = Object.keys(root.attributes)
     .filter((name) => !Object.hasOwn(namespace, name) && name !== 'viewBox')
@@ -120,26 +121,27 @@ function attributeMessages(elements: readonly CheckedElement[]): string[] {
 
 /** Colours are `#rrggbb` or `none`; a numeric attribute and `opacity` are numbers; keywords are known. */
 function paintMessages(elements: readonly CheckedElement[]): string[] {
-  return elements.flatMap(({ tag, attributes }) => {
+  return elements.flatMap(({ tag, attributes: record }) => {
+    const attributes = new Map(Object.entries(record))
     const colours = COLOURS.flatMap((name) => {
-      const value = attributes[name]
+      const value = attributes.get(name)
       if (value === undefined || value === 'none' || HEX_COLOUR.test(value)) return []
       return [`<${tag}> ${name}="${value}" must be #rrggbb or none`]
     })
-    const opacity = attributes['opacity']
+    const opacity = attributes.get('opacity')
     const level = opacity !== undefined && NUMBER_TEXT.test(opacity) ? Number(opacity) : Number.NaN
     const opacityMessages =
       opacity === undefined || (level >= 0 && level <= 1)
         ? []
         : [`<${tag}> opacity="${opacity}" must be a number from 0 to 1`]
     const numbers = NUMERIC.flatMap((name) => {
-      const value = attributes[name]
+      const value = attributes.get(name)
       return value === undefined || NUMBER_TEXT.test(value)
         ? []
         : [`<${tag}> ${name}="${value}" must be a number`]
     })
     const keywords = [...KEYWORDS].flatMap(([name, allowed]) => {
-      const value = attributes[name]
+      const value = attributes.get(name)
       return value === undefined || allowed.includes(value)
         ? []
         : [`<${tag}> ${name}="${value}" must be one of ${allowed.join(', ')}`]

@@ -54,9 +54,11 @@ export function bundleExportNames(file) {
  */
 export function nativeFailures(nativeExports, resolved, expectedFile) {
   const failures = []
+  const resolvedBySubpath = new Map(Object.entries(resolved))
   for (const [subpath, names] of Object.entries(nativeExports)) {
     for (const format of /** @type {const} */ (['esm', 'cjs'])) {
-      const actual = resolved[subpath]?.[format]
+      const where = resolvedBySubpath.get(subpath)
+      const actual = format === 'esm' ? where?.esm : where?.cjs
       const expected = expectedFile(subpath, format)
       if (actual === undefined) {
         failures.push(`${subpath} did not resolve in ${format}`)
@@ -90,18 +92,19 @@ export function nativeFailures(nativeExports, resolved, expectedFile) {
  * @returns {string} The file, without a leading `./`.
  */
 export function declaredFile(exportsMap, subpath, format) {
-  const condition = format === 'esm' ? 'import' : 'require'
-  let entry = exportsMap[subpath]
+  const table = new Map(Object.entries(exportsMap))
+  let entry = table.get(subpath)
   let star = ''
   if (entry === undefined) {
-    const key = Object.keys(exportsMap).find(
+    const key = [...table.keys()].find(
       (candidate) => candidate.endsWith('/*') && subpath.startsWith(candidate.slice(0, -1))
     )
     if (key === undefined) throw new Error(`no exports entry for ${subpath}`)
-    entry = exportsMap[key]
+    entry = table.get(key)
     star = subpath.slice(key.length - 1)
   }
-  return entry[condition].default.replace(/^\.\//, '').replaceAll('*', star)
+  const conditions = format === 'esm' ? entry.import : entry.require
+  return conditions.default.replace(/^\.\//, '').replaceAll('*', star)
 }
 
 /**

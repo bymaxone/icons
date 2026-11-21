@@ -67,33 +67,33 @@ export function sixteenDrawings(set: IconSet): SixteenDrawing[] {
  * @returns `true` when the parts fuse.
  */
 export function rendersFuse(first: Float32Array, second: Float32Array): boolean {
-  const alphaOf = (pixels: Float32Array, index: number): number => pixels[index] ?? 0
+  // `at` counts back from the end for a negative index, so a row above the image is checked first.
+  const alphaOf = (pixels: Float32Array, index: number): number =>
+    index < 0 ? 0 : (pixels.at(index) ?? 0)
   const inkAt = (index: number): number => alphaOf(first, index) + alphaOf(second, index)
   // Stryker disable next-line EqualityOperator: alphas are multiples of 1/255 and the bridge is 0.35, so no sum equals it.
   const joined = (index: number): boolean => inkAt(index) >= BRIDGE_ALPHA
   const side = Math.round(Math.sqrt(first.length))
-  const seen = new Uint8Array(first.length)
+  const seen = new Set<number>()
   // Stryker disable next-line EqualityOperator: a start past the last pixel reads as no ink, so it is skipped.
   for (let start = 0; start < first.length; start++) {
     // Stryker disable next-line ConditionalExpression: revisiting a region already judged cannot change the answer.
-    if (seen[start] === 1) continue
+    if (seen.has(start)) continue
     if (!joined(start)) continue
-    seen[start] = 1
     const stack = [start]
     let inkOfFirst = false
     let inkOfSecond = false
     for (let index = stack.pop(); index !== undefined; index = stack.pop()) {
+      // A pixel is marked when it is read, so one reached from two sides is read once.
+      if (seen.has(index)) continue
+      seen.add(index)
       inkOfFirst ||= alphaOf(first, index) >= INK_ALPHA
       inkOfSecond ||= alphaOf(second, index) >= INK_ALPHA
       // A row above or below the image reads as no ink, so only the sides need a bound.
       const neighbours = [index - side, index + side]
       if (index % side > 0) neighbours.push(index - 1)
       if (index % side < side - 1) neighbours.push(index + 1)
-      for (const next of neighbours) {
-        if (seen[next] === 1 || !joined(next)) continue
-        seen[next] = 1
-        stack.push(next)
-      }
+      for (const next of neighbours) if (joined(next)) stack.push(next)
     }
     if (inkOfFirst && inkOfSecond) return true
   }
@@ -111,7 +111,7 @@ export function rendersFuse(first: Float32Array, second: Float32Array): boolean 
 export function rendersTouch(first: Float32Array, second: Float32Array): boolean {
   // Stryker disable next-line EqualityOperator: alphas are multiples of 1/255 and the touch alpha is 0.98, so none equals it.
   const covered = (alpha: number): boolean => alpha >= TOUCH_ALPHA
-  return first.some((alpha, index) => covered(alpha) && covered(second[index] as number))
+  return first.some((alpha, index) => covered(alpha) && covered(second.at(index) as number))
 }
 
 /** Renders one element alone, on the drawing's own root, as alpha at a pixel size. */
@@ -129,7 +129,7 @@ function renderPart(kind: SvgKind, element: DrawingElement, size: number): Float
 export function fusedPairs(drawing: SixteenDrawing): PartPair[] {
   const small = drawing.elements.map((element) => renderPart(drawing.kind, element, SIXTEEN_SIZE))
   const atTouchSize = (index: number): Float32Array =>
-    renderPart(drawing.kind, drawing.elements[index] as DrawingElement, TOUCH_SIZE)
+    renderPart(drawing.kind, drawing.elements.at(index) as DrawingElement, TOUCH_SIZE)
   const pairs: PartPair[] = []
   small.forEach((first, i) => {
     small.slice(i + 1).forEach((second, offset) => {
@@ -218,7 +218,8 @@ export function sixteenIssues(
   allowlist: Readonly<Record<string, AllowedFusion>>
 ): string[] {
   const known = new Set(drawings.map((drawing) => drawing.name))
-  const listed = (name: string): Set<string> => new Set(allowlist[name]?.pairs)
+  const allowed = new Map(Object.entries(allowlist))
+  const listed = (name: string): Set<string> => new Set(allowed.get(name)?.pairs)
   const unlisted = [...fusing].flatMap(([name, pairs]) =>
     pairs
       .map(pairKey)
