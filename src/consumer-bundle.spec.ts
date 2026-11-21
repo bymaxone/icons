@@ -87,8 +87,7 @@ export const ICON_METADATA = /* @__PURE__ */ freeze(${RECORDS})
 
   it('fails an icon whose module runs a call that a bundler must keep', () => {
     // Scenario: the same metadata frozen by a top-level call with no pure annotation is kept
-    // whenever the module is reached, so the icon ships all of it, which is how 1.0.2 bundled
-    // 420 KB for one icon.
+    // whenever the module is reached, so the icon ships all of it.
     const root = consumer(
       `function freeze(value) {
   if (typeof value === 'object' && value !== null) {
