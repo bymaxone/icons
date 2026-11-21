@@ -436,6 +436,7 @@ export { ClockOffIcon } from '@bymax-one/icons/native/icons/clock-off'
 export { ClockPauseIcon } from '@bymax-one/icons/native/icons/clock-pause'
 export { ClockPlayIcon } from '@bymax-one/icons/native/icons/clock-play'
 export { ClockPlusIcon } from '@bymax-one/icons/native/icons/clock-plus'
+export { ClockRoundIcon } from '@bymax-one/icons/native/icons/clock-round'
 export { ClockShareIcon } from '@bymax-one/icons/native/icons/clock-share'
 export { ClockXIcon } from '@bymax-one/icons/native/icons/clock-x'
 export { CloseIcon, CloseSmIcon } from '@bymax-one/icons/native/icons/close'
@@ -488,6 +489,7 @@ export {
   EyedropperIcon
 } from '@bymax-one/icons/native/icons/color-picker'
 export { ColumnsIcon, LayoutIcon } from '@bymax-one/icons/native/icons/columns'
+export { CombIcon } from '@bymax-one/icons/native/icons/comb'
 export { CommandIcon } from '@bymax-one/icons/native/icons/command'
 export { CommitIcon, GitCommitIcon } from '@bymax-one/icons/native/icons/commit'
 export { CompassIcon, ExploreIcon } from '@bymax-one/icons/native/icons/compass'
@@ -521,7 +523,7 @@ export { CraneIcon } from '@bymax-one/icons/native/icons/crane'
 export { CribIcon } from '@bymax-one/icons/native/icons/crib'
 export { CropIcon } from '@bymax-one/icons/native/icons/crop'
 export { CrosshairIcon, LocateIcon } from '@bymax-one/icons/native/icons/crosshair'
-export { CrownFilledIcon, CrownIcon } from '@bymax-one/icons/native/icons/crown'
+export { CrownFilledIcon, CrownIcon, CrownSmIcon } from '@bymax-one/icons/native/icons/crown'
 export { CurrencyBitcoinIcon } from '@bymax-one/icons/native/icons/currency-bitcoin'
 export { CurrencyDollarIcon } from '@bymax-one/icons/native/icons/currency-dollar'
 export { CurrencyEuroIcon, EuroIcon } from '@bymax-one/icons/native/icons/currency-euro'
@@ -1158,6 +1160,7 @@ export { MonitorPlayIcon } from '@bymax-one/icons/native/icons/monitor-play'
 export { MonkeyIcon } from '@bymax-one/icons/native/icons/monkey'
 export { MonumentIcon } from '@bymax-one/icons/native/icons/monument'
 export { MoonFilledIcon, MoonIcon } from '@bymax-one/icons/native/icons/moon'
+export { MoonCrescentIcon } from '@bymax-one/icons/native/icons/moon-crescent'
 export { MoonStarsIcon } from '@bymax-one/icons/native/icons/moon-stars'
 export { MooseIcon } from '@bymax-one/icons/native/icons/moose'
 export {
@@ -1669,7 +1672,12 @@ export { UmbrellaClosedIcon } from '@bymax-one/icons/native/icons/umbrella-close
 export { UnderlineIcon } from '@bymax-one/icons/native/icons/underline'
 export { UndoIcon } from '@bymax-one/icons/native/icons/undo'
 export { UngroupIcon } from '@bymax-one/icons/native/icons/ungroup'
-export { UploadIcon, UploadSmIcon } from '@bymax-one/icons/native/icons/upload'
+export {
+  ShareSheetIcon,
+  ShareSheetSmIcon,
+  UploadIcon,
+  UploadSmIcon
+} from '@bymax-one/icons/native/icons/upload'
 export { UsbIcon, UsbPlugIcon } from '@bymax-one/icons/native/icons/usb-plug'
 export {
   PersonFilledIcon,

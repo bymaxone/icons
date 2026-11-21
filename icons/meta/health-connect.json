@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/brand.schema.json",
+  "title": "Health Connect",
+  "source": "https://developer.android.com/static/downloads/assets/health_connect_logo_white.png",
+  "guidelines": "https://developer.android.com/health-and-fitness/health-connect/ui/guidelines",
+  "license": "All rights reserved by Google LLC",
+  "retrievedAt": "2026-11-21",
+  "tags": ["health", "fitness", "android", "data", "connection"],
+  "since": "1.0.5"
+}

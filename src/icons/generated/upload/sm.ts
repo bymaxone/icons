@@ -19,3 +19,6 @@ export const UploadSmIcon = /* @__PURE__ */ createIcon(
   ],
   { masterSize: 16 }
 )
+
+/** `share-sheet`: an alias of {@link UploadSmIcon}. */
+export const ShareSheetSmIcon = UploadSmIcon

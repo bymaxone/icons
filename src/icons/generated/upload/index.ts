@@ -4,5 +4,5 @@
  * @layer Generated
  */
 
-export { UploadIcon } from './line'
-export { UploadSmIcon } from './sm'
+export { ShareSheetIcon, UploadIcon } from './line'
+export { ShareSheetSmIcon, UploadSmIcon } from './sm'

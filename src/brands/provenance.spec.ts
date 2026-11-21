@@ -5,7 +5,9 @@
  * Goal: prove that every brand record names the file its path data was taken from at the pinned
  * version of the `simple-icons` development dependency, that the file exists there, that the
  * record carries the licence Simple Icons states for it, that the owner's guidelines page is
- * recorded with the day it was read, and that a licence that asks for attribution has it.
+ * recorded with the day it was read, and that a licence that asks for attribution has it. A mark
+ * that Simple Icons does not have is traced from the owner's own PNG and is held to its own
+ * record instead: the owner's file as its source and a licence that reserves the owner's rights.
  * Mocks: none.
  */
 
@@ -29,6 +31,14 @@ const LICENSES = new Map(
   ).map((entry) => [entry.slug, entry.license?.type ?? 'CC0-1.0'])
 )
 
+/** The marks traced from the owner's own PNG, and the file each was traced from. */
+const OWNER_ARTWORK: Record<string, string> = {
+  'health-connect':
+    'https://developer.android.com/static/downloads/assets/health_connect_logo_white.png',
+  'apple-health': 'https://devimages-cdn.apple.com/design/resources/download/Icon-Apple-Health.dmg'
+}
+const SIMPLE_ICONS_MARKS = BRAND_NAMES.filter((name) => !(name in OWNER_ARTWORK))
+
 /** The Simple Icons file name a record's `source` points at, without its extension. */
 function sourceSlug(source: string): string {
   return source.slice(source.lastIndexOf('/') + 1, -'.svg'.length)
@@ -43,7 +53,7 @@ describe('brand provenance', () => {
     expect(SIMPLE_ICONS).toMatch(/^\d+\.\d+\.\d+$/)
   })
 
-  it.each(BRAND_NAMES)('names the Simple Icons file of %s as its source', (name) => {
+  it.each(SIMPLE_ICONS_MARKS)('names the Simple Icons file of %s as its source', (name) => {
     /**
      * Scenario: `source` is where the path data was taken from (schemas/brand.schema.json): a
      * file of Simple Icons at the pinned version, which exists in the installed package. The
@@ -60,7 +70,7 @@ describe('brand provenance', () => {
     )
   })
 
-  it.each(BRAND_NAMES)('records the licence Simple Icons states for %s', (name) => {
+  it.each(SIMPLE_ICONS_MARKS)('records the licence Simple Icons states for %s', (name) => {
     /**
      * Scenario: the `license` of a mark is the one Simple Icons states for it, CC0-1.0 when it
      * states none, so a mark under another licence cannot be shipped as if it were public domain.
@@ -94,7 +104,21 @@ describe('brand provenance', () => {
     expect(cells?.[5]).toMatch(/^\d{4}-\d{2}-\d{2}$/)
   })
 
-  it.each(BRAND_NAMES.filter((name) => BRAND_METADATA[name].license !== 'CC0-1.0'))(
+  it.each(Object.keys(OWNER_ARTWORK))('names the owner file %s was traced from', (name) => {
+    /**
+     * Scenario: a mark Simple Icons does not have records the owner's own file as its `source`,
+     * and its `license` reserves the owner's rights instead of claiming a public licence, so the
+     * record cannot be mistaken for a Simple Icons path.
+     */
+    const meta = BRAND_METADATA[name as keyof typeof BRAND_METADATA]
+    expect(meta.source).toBe(OWNER_ARTWORK[name])
+    expect(meta.license).toMatch(/^All rights reserved by .+/)
+    const section = TRADEMARKS.slice(TRADEMARKS.indexOf("## Marks from the owner's own artwork"))
+    expect(section).toContain(`(\`${name}\`)`)
+    expect(section).toContain(meta.source)
+  })
+
+  it.each(SIMPLE_ICONS_MARKS.filter((name) => BRAND_METADATA[name].license !== 'CC0-1.0'))(
     'carries the attribution of %s',
     (name) => {
       /**

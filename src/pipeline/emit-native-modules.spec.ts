@@ -83,6 +83,18 @@ describe('nativeComponentModules', () => {
     ])
   })
 
+  it('documents a component newer than the native entry with its own version', () => {
+    /**
+     * Scenario: the native entry began in 1.0.0, so a component whose drawing is older reports
+     * 1.0.0, but one drawn later reports the version that added it, since it did not exist in
+     * the native entry before.
+     */
+    const since = (path: string): string | undefined =>
+      /@since (\S+)/.exec(modules.get(path) ?? '')?.[1]
+    expect(since('src/native/generated/icons/dot/line.ts')).toBe('1.2.0')
+    expect(since('src/native/generated/icons/ring/line.ts')).toBe('1.0.0')
+  })
+
   it('writes each variant as a createNativeIcon call with its paint and its aliases', () => {
     /**
      * Scenario: the line variant has no options, the filled one passes the fill paint, the

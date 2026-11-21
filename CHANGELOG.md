@@ -13,6 +13,33 @@ The date of a section is the day the release was prepared, not the day the versi
 
 ## [Unreleased]
 
+## [1.0.5] - 2026-11-21
+
+Three icons, four brand marks and three redrawn icons for the first consumer of the package, a running app that reviewed every icon it shows at its own sizes.
+
+### Added
+
+- `comb`, for hair and grooming.
+- `clock-round`, a round clock face with its four hour marks. `clock` keeps its squircle face.
+- `moon-crescent`, a plain crescent. `moon` keeps its star.
+- `crown` has a 16 px master of its own: a closed body with a jewel, for the tags that show it at 11 to 15 px.
+- `share-sheet`, an alias of `upload`, for the arrow leaving a tray used as a share action. `share`, the three nodes, stays.
+- Brand marks `strava` and `garmin`, taken from Simple Icons 16.38.0 with the owners' guidelines recorded. `garmin` is the wordmark with the delta, tagged so and meant for sizes larger than 24 px.
+- Brand mark `health-connect`, traced from the white logo that Google publishes, since Simple Icons has no path for it. Its `license` field reads "All rights reserved by Google LLC".
+- Brand mark `apple-health`, traced from the Apple Health icon that Apple publishes, since Simple Icons has no path for it. Its `license` field reads "All rights reserved by Apple Inc."
+
+### Changed
+
+- `running-shoe` is a running shoe in profile, with a collar, a tongue and two lace ticks; it read as a clog.
+- `crown` has taller points, the outer ones opening outwards, in the line and filled variants.
+- `link` is two open chain links on the diagonal; it read as a paperclip.
+
+#### Apply to a consumer
+
+- Nothing breaks. New names: `comb`, `clock-round`, `moon-crescent`, `strava`, `garmin`, `health-connect`, `apple-health`, and the alias `share-sheet`.
+- These names changed shape, so check them at the sizes you show: `running-shoe`, `crown` (line and filled), `link`.
+- `crown` now has an `sm` variant: a consumer that picks the 16 px master by size gets it for `crown` from this version.
+
 ## [1.0.4] - 2026-11-21
 
 The brand marks are the same: the 110 marks are byte-identical between Simple Icons 16.37.0 and 16.38.0. The package records 16.38.0 as their source. `dist/` differs from 1.0.3 only in the source URLs of the brand marks.
@@ -320,7 +347,8 @@ an SVG sprite and typed metadata.
   `pnpm family-sheet` renders the whole set by category; and a pull request that changes a
   drawing gets a preview comment with its render and its nearest matches.
 
-[Unreleased]: https://github.com/bymaxone/icons/compare/v1.0.4...HEAD
+[Unreleased]: https://github.com/bymaxone/icons/compare/v1.0.5...HEAD
+[1.0.5]: https://github.com/bymaxone/icons/compare/v1.0.4...v1.0.5
 [1.0.4]: https://github.com/bymaxone/icons/compare/v1.0.3...v1.0.4
 [1.0.3]: https://github.com/bymaxone/icons/compare/v1.0.2...v1.0.3
 [1.0.2]: https://github.com/bymaxone/icons/compare/v1.0.0...v1.0.2

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/icon.schema.json",
+  "label": "Comb",
+  "tags": ["comb", "hair", "hairstyle", "grooming"],
+  "categories": ["household", "people"],
+  "useCases": ["Opens the hair options of an avatar", "Marks a grooming service"],
+  "variants": ["line"],
+  "opticalSizes": [24],
+  "since": "1.0.5"
+}

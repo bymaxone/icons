@@ -18,7 +18,13 @@ import {
   iconMeta,
   sources
 } from './__tests__/support.ts'
-import { componentModules, GENERATED_DIRECTORIES, iconNodeLiteral } from './emit-modules.ts'
+import {
+  componentModules,
+  GENERATED_DIRECTORIES,
+  iconNodeLiteral,
+  sinceOf,
+  WEB_FLAVOUR
+} from './emit-modules.ts'
 import { lintSources } from './lint.ts'
 
 /**
@@ -127,6 +133,40 @@ describe('iconNodeLiteral', () => {
      * Scenario: nothing is invented for an element list with no element.
      */
     expect(iconNodeLiteral([])).toBe('[]')
+  })
+})
+
+describe('sinceOf', () => {
+  it.each([
+    ['a drawing older than the flavour in the major', '2.0.0', '1.9.9', '2.0.0'],
+    ['a drawing newer than the flavour in the major', '1.9.9', '2.0.0', '2.0.0'],
+    ['a drawing older in the minor', '1.2.0', '1.1.9', '1.2.0'],
+    ['a drawing newer in the minor', '1.1.9', '1.2.0', '1.2.0'],
+    ['a drawing older in the patch', '1.0.5', '1.0.4', '1.0.5'],
+    ['a drawing newer in the patch', '1.0.4', '1.0.5', '1.0.5'],
+    ['the same version', '1.0.0', '1.0.0', '1.0.0'],
+    ['a two-digit minor against a one-digit one', '1.9.0', '1.10.0', '1.10.0'],
+    ['a one-digit minor against a two-digit one', '1.10.0', '1.9.0', '1.10.0'],
+    ['a minor of 1000 against a later major', '2.0.0', '1.1000.0', '2.0.0'],
+    ['a major against a minor of 1000', '1.1000.0', '2.0.0', '2.0.0'],
+    [
+      'parts too large for a double',
+      '1.0.9007199254740993',
+      '1.0.9007199254740992',
+      '1.0.9007199254740993'
+    ]
+  ])('reports the later version for %s', (_name, flavourSince, drawn, expected) => {
+    /**
+     * Scenario: a component is documented as introduced in the later of its drawing's version
+     * and the version its flavour began in; the parts compare as integers of any size, which the
+     * schema allows, so no ordering of the text or of a packed number stands in for it.
+     */
+    expect(sinceOf({ ...WEB_FLAVOUR, since: flavourSince }, drawn)).toBe(expected)
+  })
+
+  it("reports the drawing's version when the flavour has none", () => {
+    /** Scenario: the web flavour has no start version, so every component keeps its drawing's. */
+    expect(sinceOf({ ...WEB_FLAVOUR }, '1.0.5')).toBe('1.0.5')
   })
 })
 

@@ -18,3 +18,6 @@ export const UploadIcon = /* @__PURE__ */ createIcon('upload', [
   ],
   ['path', { d: 'M12.25 17.75v-14M8.361 7.639 12.25 3.75l3.889 3.889' }]
 ])
+
+/** `share-sheet`: an alias of {@link UploadIcon}. */
+export const ShareSheetIcon = UploadIcon
