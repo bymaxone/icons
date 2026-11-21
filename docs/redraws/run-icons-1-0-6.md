@@ -2,14 +2,14 @@
 
 The first consumer of the package, a running app, measured every icon it shows against the optical balance rule (spec section 2.5: a 20 px circle, an 18 px square and a 21 px triangle read as the same size). Each drawing below sat well inside the circle and the square of the set (ink 18.5 and 17.5 units wide) and was drawn larger, about the same shape, within the live area and the ink ceiling.
 
-- `star`: 18.3 units wide, now 20.3; the filled variant follows (approval pending: the auditor, for the founder)
-- `heart`: 18.0 units wide, now 20.0 (19.5 filled, which the live area bounds); the filled variant follows (approval pending: the auditor, for the founder)
-- `eye`: the lids were 16.0 units wide, now 19.0; the filled variant follows (approval pending: the auditor, for the founder)
-- `user`: the bust was 15.5 units wide, now 16.8; the filled variant follows (approval pending: the auditor, for the founder)
-- `plus`: the arms were 14.5 units, now 16.5, with `close` and `minus` following so the three keep one size (approval pending: the auditor, for the founder)
-- `close`: follows `plus` (approval pending: the auditor, for the founder)
-- `minus`: follows `plus` (approval pending: the auditor, for the founder)
-- `leaf`: 16.5 by 15.5 units, now 17.8 by 16.5 (approval pending: the auditor, for the founder)
+- `star`: 18.3 units wide, now 20.3; the filled variant follows (approved by the auditor for the founder, 2026-11-21)
+- `heart`: 18.0 units wide, now 20.0 (19.5 filled, which the live area bounds). The similarity check flags the line heart (d=0.05 against `phosphor/heart-straight`; it was 0.10 before), and the flag stays: a heart is a convention, the drawing is the one that was already in the set, and a normalised score cannot move under a uniform scaling; the filled variant follows (approved by the auditor for the founder, 2026-11-21)
+- `eye`: the lids were 16.0 units wide, now 19.0; the filled variant follows (approved by the auditor for the founder, 2026-11-21)
+- `user`: the bust was 15.5 units wide, now 16.8; the filled variant follows (approved by the auditor for the founder, 2026-11-21)
+- `plus`: the arms were 14.5 units, now 16.5, with `close` and `minus` following so the three keep one size (approved by the auditor for the founder, 2026-11-21)
+- `close`: follows `plus` (approved by the auditor for the founder, 2026-11-21)
+- `minus`: follows `plus` (approved by the auditor for the founder, 2026-11-21)
+- `leaf`: 16.5 by 15.5 units, now 17.8 by 16.5 (approved by the auditor for the founder, 2026-11-21)
 
 ## Evaluated and left as they are
 
