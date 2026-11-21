@@ -11,9 +11,9 @@ At 192 px the figures had a back arm that hooked down, a torso that was a stub, 
 - `link-check`: the new link with the check (approved by the founder, 2026-11-21)
 - `link-x`: the new link with the cross (approved by the founder, 2026-11-21)
 - `treadmill`: the runner rebuilt on the same construction, on the belt (approved by the auditor for the founder, 2026-11-21)
-- `airplane-landing`: a side-view airliner, nose 15 degrees below the horizontal, above the ground line; the top view pitched down read as a plane crashing (approved by the auditor for the founder, 2026-11-21)
+- `airplane-landing`: the `airplane` silhouette itself, unaltered, with its nose 20 degrees below the flight line above the ground line, in place of a scribble (approved by the founder, 2026-11-21)
 - `yoga`: a warrior pose in place of a T with a triangle (approved by the auditor for the founder, 2026-11-21)
 - `swimming`: a front-crawl swimmer over the wave, in place of a line with a dot (approved by the auditor for the founder, 2026-11-21)
-- `nurse`: the cap set off from the head by the cut, with its cross (approved by the auditor for the founder, 2026-11-21)
+- `nurse`: a smaller cap set off from the head by the cut, with its cross, so the head and shoulders dominate (approved by the founder, 2026-11-21)
 
 `accessibility` was checked against the same construction and left as it is: its arms leave the top of the spine, its legs leave the hip, and the head is set off by the cut.

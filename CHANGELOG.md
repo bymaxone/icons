@@ -25,8 +25,8 @@ The figures and the link family, redrawn because they did not hold up at 192 px:
 
 - `run`, `walk`, `treadmill`, `swimming` and `yoga` are redrawn on that construction. `yoga` is a warrior pose and `swimming` a front-crawl swimmer; the old ones read as a T with a triangle and as a line chart.
 - `link` is two interlocking oval links, and `link-off`, `link-plus`, `link-minus`, `link-check` and `link-x` are redrawn on it. The five still carried the capsule with an inner stroke of before 1.0.5.
-- `airplane-landing` is a side-view airliner pitched nose down above the ground line.
-- `nurse` has the cap set off from the head, with its cross.
+- `airplane-landing` is the `airplane` silhouette with its nose 20 degrees down, above the ground line.
+- `nurse` has a smaller cap set off from the head, with its cross.
 
 #### Apply to a consumer
 
