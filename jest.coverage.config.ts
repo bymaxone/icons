@@ -39,12 +39,15 @@ const config: Config = {
   moduleNameMapper: {
     '^@bymax-one/icons$': '<rootDir>/src/index.ts',
     '^@bymax-one/icons/brands$': '<rootDir>/src/brands/index.ts',
+    '^@bymax-one/icons/brands/([a-z0-9-]+)$': '<rootDir>/src/brands/generated/$1.ts',
     '^@bymax-one/icons/flags$': '<rootDir>/src/flags/index.ts',
     '^@bymax-one/icons/flags/([a-z0-9-]+)$': '<rootDir>/src/flags/generated/$1.ts',
     '^@bymax-one/icons/icons/([a-z0-9-]+)$': '<rootDir>/src/icons/generated/$1/index.ts',
+    '^@bymax-one/icons/grid$': '<rootDir>/src/grid/index.ts',
     '^@bymax-one/icons/meta$': '<rootDir>/src/meta/index.ts',
     '^@bymax-one/icons/native$': '<rootDir>/src/native/index.ts',
     '^@bymax-one/icons/native/brands$': '<rootDir>/src/native/brands/index.ts',
+    '^@bymax-one/icons/native/brands/([a-z0-9-]+)$': '<rootDir>/src/native/generated/brands/$1.ts',
     '^@bymax-one/icons/native/flags$': '<rootDir>/src/native/flags/index.ts',
     '^@bymax-one/icons/native/flags/([a-z0-9-]+)$': '<rootDir>/src/native/generated/flags/$1.ts',
     '^@bymax-one/icons/native/icons/([a-z0-9-]+)$':

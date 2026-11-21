@@ -42,6 +42,7 @@ import { tmpdir } from 'node:os'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
+import { bundleEntries, measureBundles } from './consumer-bundle.mjs'
 import { describeFailure, runProbe } from './consumer-probe.mjs'
 import { declaredFile, nativeEntries, nativeFailures } from './native-bundle-names.mjs'
 import { packageExpectations } from './package-expectations.mjs'
@@ -132,6 +133,7 @@ function rscProbe(expected) {
         subpath === './brands' ||
         subpath === './flags' ||
         subpath.startsWith('./icons/') ||
+        subpath.startsWith('./brands/') ||
         subpath.startsWith('./flags/')
     )
     .map((subpath, i) => `import * as m${i} from '${specifier(subpath)}'`)
@@ -141,6 +143,7 @@ function rscProbe(expected) {
         subpath === './brands' ||
         subpath === './flags' ||
         subpath.startsWith('./icons/') ||
+        subpath.startsWith('./brands/') ||
         subpath.startsWith('./flags/')
     )
     .map((subpath, i) => `'${subpath}': m${i}`)
@@ -184,7 +187,7 @@ renderToPipeableStream(tree, {}, {
 
 /** The bundles of every subpath that has JavaScript, by path in the package. */
 function bundles(expected) {
-  const entries = ['index', 'meta/index', 'brands/index', 'flags/index']
+  const entries = ['index', 'grid/index', 'meta/index', 'brands/index', 'flags/index']
   // The native runtime is the one bundle that imports react (and react-native-svg); the others
   // import neither, and `scanBundles` reads the runtime on its own.
   entries.push(
@@ -193,7 +196,11 @@ function bundles(expected) {
     )
   )
   for (const subpath of Object.keys(expected.exports)) {
-    if (subpath.startsWith('./icons/') || subpath.startsWith('./flags/')) {
+    if (
+      subpath.startsWith('./icons/') ||
+      subpath.startsWith('./brands/') ||
+      subpath.startsWith('./flags/')
+    ) {
       entries.push(`${subpath.slice(2)}/index`)
     }
   }
@@ -251,10 +258,10 @@ import { readFileSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import { createElement } from 'react'
 import { renderToStaticMarkup } from 'react-dom/server'
-import metadataJson from '${packageName}/metadata.json' with { type: 'json' }
 const EXPECTED = ${JSON.stringify(expected)}
 const loaded = { ${subpaths.map((s, i) => `'${s}': m${i}`).join(', ')} }
 const readAsset = (file) => readFileSync(fileURLToPath(import.meta.resolve('${packageName}/' + file)), 'utf8')
+const metadataJson = JSON.parse(readAsset('metadata.json'))
 const FORMAT = 'ESM'
 ${probeBody}`
 }
@@ -380,6 +387,23 @@ try {
   else {
     console.log(
       `  ✓ native: ${Object.keys(expected.nativeExports).length} subpath(s) resolve in ESM and CommonJS to the declared files and export exactly their names (resolved and read from the bundle, not loaded: react-native-svg cannot run under Node)`
+    )
+  }
+
+  // What a consumer's bundler keeps: one icon, the grid, a brand and a flag, each by subpath and
+  // through the root, held to a budget of a few kilobytes (see consumer-bundle.mjs).
+  const [icon] = Object.keys(expected.metadata.icons)
+  const [brand] = Object.keys(expected.metadata.brands)
+  const [flag] = Object.keys(expected.metadata.flags)
+  const bundles = await measureBundles(bundleEntries({ icon, brand, flag }), consumerDir)
+  const overBudget = bundles.filter((entry) => !entry.ok)
+  for (const { name, bytes, limit } of overBudget) {
+    console.error(`  ✗ bundle: ${name} is ${bytes} bytes minified, over its ${limit}`)
+  }
+  if (overBudget.length) failed = true
+  else {
+    console.log(
+      `  ✓ bundle: ${bundles.map(({ name, bytes }) => `${name} ${bytes} B`).join(', ')} (minified, react external)`
     )
   }
 

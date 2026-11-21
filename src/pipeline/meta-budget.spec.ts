@@ -12,6 +12,7 @@ import {
   FLAGS_CAP_BYTES,
   FLAGS_FLAG_BYTES,
   FLAGS_FLOOR_BYTES,
+  BRAND_MODULE_BYTES,
   BRANDS_BASE_BYTES,
   BRANDS_CAP_BYTES,
   BRANDS_FLOOR_BYTES,
@@ -154,7 +155,12 @@ describe('the brands budget constants', () => {
       BRANDS_MARK_BYTES,
       BRANDS_CAP_BYTES,
       BRANDS_FLOOR_BYTES
-    ]).toStrictEqual([5, 465, 65536, 5120])
+    ]).toStrictEqual([5, 16, 8192, 256])
+  })
+
+  it('hold one brand mark module to 4 KiB, a third above the largest of the marks', () => {
+    /** Scenario: a consumer who imports one mark loads its own module, whose budget is 4 KiB. */
+    expect(BRAND_MODULE_BYTES).toBe(4096)
   })
 })
 
@@ -173,7 +179,7 @@ describe('markCost', () => {
 describe('brandsLimit', () => {
   it('is the base plus the budget of each mark', () => {
     /** Scenario: 67 marks are far below the cap. */
-    expect(brandsLimit(67)).toBe(5 + 465 * 67)
+    expect(brandsLimit(67)).toBe(5 + 16 * 67)
   })
 
   it('is the floor with few marks', () => {
@@ -183,8 +189,8 @@ describe('brandsLimit', () => {
   })
 
   it('leaves the floor where the base and the marks pass it', () => {
-    /** Scenario: 20 marks at 5 + 465 each are over 5,120, so the budget rules. */
-    expect(brandsLimit(20)).toBe(5 + 465 * 20)
+    /** Scenario: 20 marks at 5 + 16 each are over the 256 floor, so the budget rules. */
+    expect(brandsLimit(20)).toBe(5 + 16 * 20)
   })
 
   it('stops at the cap', () => {

@@ -27,9 +27,10 @@ const deniedImports = [
 // The `./meta` subpath is the React-free entry: typed metadata a consumer can load
 // without a renderer. Rather than listing what it may not import (every list had a
 // gap: a subpath, a computed specifier, an extension), it may import only from
-// itself. Static data needs no package, no sibling module and no runtime loading.
+// itself, plus the grid, a subpath of constants that imports nothing. Static data needs no
+// package, no other sibling module and no runtime loading.
 const META_MESSAGE =
-  'The ./meta subpath may import only from src/meta (it must stay React-free and dependency-free).'
+  'The ./meta subpath may import only from src/meta and @bymax-one/icons/grid (it must stay React-free and dependency-free).'
 
 export default [
   // Global ignores: only build artifacts and coverage, NOT config files.
@@ -172,7 +173,7 @@ export default [
     files: ['src/meta/**/*.ts'],
     ignores: ['**/*.spec.ts', '**/*.test.ts'],
     rules: {
-      // One specifier allowlist: './' followed by a path with no '..' segment and
+      // One specifier allowlist: the grid subpath, or './' followed by a path with no '..' segment and
       // no backslash (a separator on Windows and to TypeScript's resolver), so
       // an import can only name a file at or below its own directory. Anything
       // else is refused: a package, a node: builtin, this package, an absolute
@@ -182,7 +183,12 @@ export default [
         'error',
         {
           paths: deniedImports,
-          patterns: [{ regex: '^(?!\\./)|(?:^|/)\\.\\.(?:/|$)|\\\\', message: META_MESSAGE }]
+          patterns: [
+            {
+              regex: '^(?!\\./|@bymax-one/icons/grid$)|(?:^|/)\\.\\.(?:/|$)|\\\\',
+              message: META_MESSAGE
+            }
+          ]
         }
       ],
       // Runtime loading, whatever the specifier: literal, computed or template.

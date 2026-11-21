@@ -13,7 +13,7 @@
  * root and the icon modules would import each other.
  */
 
-export { ICON_GRID } from '@bymax-one/icons/meta'
+export { ICON_GRID } from '@bymax-one/icons/grid'
 export { createIcon, Icon } from '@bymax-one/icons/runtime'
 export * from './icons/generated'
 

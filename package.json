@@ -1,6 +1,6 @@
 {
   "name": "@bymax-one/icons",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Original Bymax icon set for React 19: per-icon components, raw SVG, a sprite and typed metadata, drawn on one 24 px grid with a 1.5 px stroke.",
   "author": "Bymax One <support@bymax.one>",
   "license": "MIT",
@@ -42,6 +42,16 @@
         "default": "./dist/runtime/index.cjs"
       }
     },
+    "./grid": {
+      "import": {
+        "types": "./dist/grid/index.d.ts",
+        "default": "./dist/grid/index.mjs"
+      },
+      "require": {
+        "types": "./dist/grid/index.d.cts",
+        "default": "./dist/grid/index.cjs"
+      }
+    },
     "./meta": {
       "import": {
         "types": "./dist/meta/index.d.ts",
@@ -60,6 +70,16 @@
       "require": {
         "types": "./dist/brands/index.d.cts",
         "default": "./dist/brands/index.cjs"
+      }
+    },
+    "./brands/*": {
+      "import": {
+        "types": "./dist/brands/*/index.d.ts",
+        "default": "./dist/brands/*/index.mjs"
+      },
+      "require": {
+        "types": "./dist/brands/*/index.d.cts",
+        "default": "./dist/brands/*/index.cjs"
       }
     },
     "./flags": {
@@ -122,6 +142,16 @@
         "default": "./dist/native/brands/index.cjs"
       }
     },
+    "./native/brands/*": {
+      "import": {
+        "types": "./dist/native/brands/*/index.d.ts",
+        "default": "./dist/native/brands/*/index.mjs"
+      },
+      "require": {
+        "types": "./dist/native/brands/*/index.d.cts",
+        "default": "./dist/native/brands/*/index.cjs"
+      }
+    },
     "./native/flags": {
       "import": {
         "types": "./dist/native/flags/index.d.ts",
@@ -166,6 +196,10 @@
         "./dist/runtime/index.d.cts",
         "./dist/runtime/index.d.ts"
       ],
+      "grid": [
+        "./dist/grid/index.d.cts",
+        "./dist/grid/index.d.ts"
+      ],
       "meta": [
         "./dist/meta/index.d.cts",
         "./dist/meta/index.d.ts"
@@ -173,6 +207,10 @@
       "brands": [
         "./dist/brands/index.d.cts",
         "./dist/brands/index.d.ts"
+      ],
+      "brands/*": [
+        "./dist/brands/*/index.d.cts",
+        "./dist/brands/*/index.d.ts"
       ],
       "flags": [
         "./dist/flags/index.d.cts",
@@ -197,6 +235,10 @@
       "native/brands": [
         "./dist/native/brands/index.d.cts",
         "./dist/native/brands/index.d.ts"
+      ],
+      "native/brands/*": [
+        "./dist/native/brands/*/index.d.cts",
+        "./dist/native/brands/*/index.d.ts"
       ],
       "native/flags": [
         "./dist/native/flags/index.d.cts",
@@ -335,7 +377,7 @@
   ],
   "packageManager": "pnpm@11.20.0",
   "engines": {
-    "node": ">=24.0.0"
+    "node": ">=20.9.0"
   },
   "publishConfig": {
     "access": "public",

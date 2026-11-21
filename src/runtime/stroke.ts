@@ -5,7 +5,7 @@
  * @layer Runtime
  */
 
-import { ICON_GRID } from '@bymax-one/icons/meta'
+import { ICON_GRID } from '@bymax-one/icons/grid'
 
 /**
  * Resolves the `stroke-width` an icon writes.

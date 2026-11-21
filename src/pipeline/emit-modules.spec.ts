@@ -262,8 +262,8 @@ describe('componentModules', () => {
     )
     expect(modules.get('src/brands/generated/index.ts')).toBe(
       HEADER('Every brand mark component.', 'icons/brands') +
-        "export { ALogoBrandIcon, AcmeBrandIcon } from './acme'\n" +
-        "export { BetaBrandIcon } from './beta'\n"
+        "export { ALogoBrandIcon, AcmeBrandIcon } from '@bymax-one/icons/brands/acme'\n" +
+        "export { BetaBrandIcon } from '@bymax-one/icons/brands/beta'\n"
     )
   })
 

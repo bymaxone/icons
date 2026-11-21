@@ -4,7 +4,7 @@
  * @layer Module
  */
 
-export { ICON_GRID } from './icon-grid'
+export { ICON_GRID } from '@bymax-one/icons/grid'
 export {
   BRAND_METADATA,
   BRAND_NAMES,
@@ -15,7 +15,7 @@ export {
   ICON_NAMES
 } from './icon-metadata'
 
-export type { IconGrid } from './icon-grid'
+export type { IconGrid } from '@bymax-one/icons/grid'
 export type {
   BrandMetadata,
   BrandName,
