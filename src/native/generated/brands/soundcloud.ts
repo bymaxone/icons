@@ -7,7 +7,7 @@
 import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 
 /**
- * The SoundCloud brand mark, from https://github.com/simple-icons/simple-icons/blob/16.37.0/icons/soundcloud.svg (CC0-1.0, retrieved 2026-11-14).
+ * The SoundCloud brand mark, from https://github.com/simple-icons/simple-icons/blob/16.38.0/icons/soundcloud.svg (CC0-1.0, retrieved 2026-11-14).
  * The mark belongs to its owner and is not covered by the MIT grant; see TRADEMARKS.md and https://soundcloud.com/company/media-kit.
  *
  * @since 1.0.0

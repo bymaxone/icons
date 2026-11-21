@@ -7,7 +7,7 @@
 import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 
 /**
- * The Netflix brand mark, from https://github.com/simple-icons/simple-icons/blob/16.37.0/icons/netflix.svg (CC0-1.0, retrieved 2026-11-14).
+ * The Netflix brand mark, from https://github.com/simple-icons/simple-icons/blob/16.38.0/icons/netflix.svg (CC0-1.0, retrieved 2026-11-14).
  * The mark belongs to its owner and is not covered by the MIT grant; see TRADEMARKS.md and https://help.netflix.com/legal/media-terms-and-conditions.
  *
  * @since 1.0.0

@@ -1,6 +1,6 @@
 # The brand marks of 1.0
 
-The package holds 110 brand marks, in the owners' geometry from Simple Icons 16.37.0. A brand is in only if Simple Icons has its path, the owner's own guidelines page was opened and is about the use of the logo or brand (the page, its owner and the day are in [`../brands/guidelines-evidence.md`](../brands/guidelines-evidence.md)), and the licence of the mark can be shipped. The decision to take this selection over a larger list is the founder's, 2026-11-14, and a brand that fails any of the three is left out with the reason rather than with a guessed address.
+The package holds 110 brand marks, in the owners' geometry from Simple Icons 16.38.0. A brand is in only if Simple Icons has its path, the owner's own guidelines page was opened and is about the use of the logo or brand (the page, its owner and the day are in [`../brands/guidelines-evidence.md`](../brands/guidelines-evidence.md)), and the licence of the mark can be shipped. The decision to take this selection over a larger list is the founder's, 2026-11-14, and a brand that fails any of the three is left out with the reason rather than with a guessed address.
 
 ## Counts
 
@@ -16,7 +16,7 @@ The first 14 came with B4a. B7 added 96 in three batches: developer and cloud to
 
 The 89 names below were considered and are not in the package, grouped by the reason. None is a promise, and none is a judgement of the brand.
 
-### Not in Simple Icons 16.37.0
+### Not in Simple Icons 16.38.0
 
 The pinned package has no mark for them, by slug or by title. The reason is proven only for `microsoft` and `linkedin`, which Simple Icons removed at their owners' request.
 

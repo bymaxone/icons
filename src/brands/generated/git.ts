@@ -7,7 +7,7 @@
 import { createIcon } from '@bymax-one/icons/runtime'
 
 /**
- * The Git brand mark, from https://github.com/simple-icons/simple-icons/blob/16.37.0/icons/git.svg (CC-BY-3.0, retrieved 2026-11-14).
+ * The Git brand mark, from https://github.com/simple-icons/simple-icons/blob/16.38.0/icons/git.svg (CC-BY-3.0, retrieved 2026-11-14).
  * The mark belongs to its owner and is not covered by the MIT grant; see TRADEMARKS.md and https://git-scm.com/community/logos.
  *
  * @since 1.0.0

@@ -25,7 +25,7 @@ owner's published rules.
 
 ## Source and credit
 
-Path data comes from [Simple Icons](https://simpleicons.org/) 16.37.0, a pinned
+Path data comes from [Simple Icons](https://simpleicons.org/) 16.38.0, a pinned
 development dependency. Each path is placed in the live area as a whole, by a translation
 and a uniform scale, without redrawing any part.
 Simple Icons publishes its data under [CC0-1.0](https://creativecommons.org/publicdomain/zero/1.0/),
