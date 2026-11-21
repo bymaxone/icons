@@ -8,8 +8,11 @@
 
 import { escapeHtml as e } from '../src/pipeline/site.ts'
 
-/** The site's address, written to `CNAME` and to the canonical links. */
-export const ORIGIN = 'https://icons.bymax.one'
+/**
+ * The site's address, written to the canonical links, and to `CNAME` when it is a custom domain.
+ * It is the address the site answers at, so it changes with the DNS record, not before it.
+ */
+export const ORIGIN = 'https://bymaxone.github.io/icons'
 
 /** The repository, linked from every page. */
 const REPOSITORY = 'https://github.com/bymaxone/icons'

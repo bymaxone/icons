@@ -3,7 +3,7 @@
  * @fileoverview `pnpm site`: builds the catalog at `.site/` from the package's own build
  * output. Every icon on every page is rendered by the built components, imported by package
  * name as a consumer imports them, so the site is also a consumer test of `dist/`. The raw
- * SVG files are copied for the copy and download buttons, and `CNAME` names the domain.
+ * SVG files are copied for the copy and download buttons, and `CNAME` names the domain when it is a custom one.
  * @layer site
  *
  * Usage: node site/build.mjs (after `pnpm build`)
@@ -103,7 +103,9 @@ writeFileSync(
   join(out, 'assets', 'favicon.svg'),
   readFileSync(join(root, 'dist', 'svg', 'filled', 'lightning.svg'), 'utf8')
 )
-writeFileSync(join(out, 'CNAME'), `${new URL(ORIGIN).host}\n`)
+// A `CNAME` names a custom domain; the project address of GitHub Pages has none to name.
+const { host } = new URL(ORIGIN)
+if (!host.endsWith('.github.io')) writeFileSync(join(out, 'CNAME'), `${host}\n`)
 await build({
   entryPoints: [join(root, 'site', 'client.mjs')],
   bundle: true,
