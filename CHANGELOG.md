@@ -13,6 +13,24 @@ The date of a section is the day the release was prepared, not the day the versi
 
 ## [Unreleased]
 
+## [1.0.6] - 2026-11-21
+
+Four 16 px masters and larger drawings for the icons that look small beside their neighbours at the sizes the first consumer shows them, a running app.
+
+### Added
+
+- 16 px masters for `sparkle` (the large star and the spark dot), `star`, `minus` and `user`.
+
+### Changed
+
+- `star`, `heart`, `eye` and `user` are drawn larger, in the line and filled variants, so they sit with the circle and the square of the optical balance rule instead of well inside them.
+- `plus`, `close` and `minus` have longer arms, and `leaf` is larger, for the same reason.
+
+#### Apply to a consumer
+
+- Nothing breaks. New names: `SparkleSmIcon`, `StarSmIcon`, `MinusSmIcon` and `UserSmIcon`, with the aliases of each icon (`SparklesSmIcon`, `StarsSmIcon`, `RemoveSmIcon`, `SubtractSmIcon`, `PersonSmIcon`), and the 16 px masters that a consumer picking by size now gets for `sparkle`, `star`, `minus` and `user`.
+- These names changed shape, so check them at the sizes you show: `star`, `heart`, `eye`, `user` (line and filled), `plus`, `close`, `minus`, `leaf`.
+
 ## [1.0.5] - 2026-11-21
 
 Three icons, four brand marks and three redrawn icons for the first consumer of the package, a running app that reviewed every icon it shows at its own sizes.
@@ -347,7 +365,8 @@ an SVG sprite and typed metadata.
   `pnpm family-sheet` renders the whole set by category; and a pull request that changes a
   drawing gets a preview comment with its render and its nearest matches.
 
-[Unreleased]: https://github.com/bymaxone/icons/compare/v1.0.5...HEAD
+[Unreleased]: https://github.com/bymaxone/icons/compare/v1.0.6...HEAD
+[1.0.6]: https://github.com/bymaxone/icons/compare/v1.0.5...v1.0.6
 [1.0.5]: https://github.com/bymaxone/icons/compare/v1.0.4...v1.0.5
 [1.0.4]: https://github.com/bymaxone/icons/compare/v1.0.3...v1.0.4
 [1.0.3]: https://github.com/bymaxone/icons/compare/v1.0.2...v1.0.3
