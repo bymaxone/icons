@@ -58,10 +58,14 @@ export interface Flavour {
  */
 export function sinceOf(flavour: Flavour, drawn: string): string {
   if (flavour.since === undefined) return drawn
-  // The collator compares each run of digits as a number of any size, which the schema allows.
-  const order = flavour.since.localeCompare(drawn, 'en', { numeric: true })
+  // Each part compares as an integer of any size, which the schema allows.
+  const parts = (version: string): bigint[] => version.split('.').map((part) => BigInt(part))
+  const drawnParts = parts(drawn)
+  const first = parts(flavour.since)
+    .map((part, index) => part - (drawnParts.at(index) as bigint))
+    .find((difference) => difference !== 0n)
   // Stryker disable next-line EqualityOperator: equal versions are the same text either way
-  return order > 0 ? flavour.since : drawn
+  return (first ?? 0n) > 0n ? flavour.since : drawn
 }
 
 /** The web modules, `createIcon` and `createFlag` from `./runtime`. */
