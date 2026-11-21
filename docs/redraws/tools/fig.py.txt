@@ -1,3 +1,4 @@
+// Run from a copy named *.mjs placed inside the repository, so '@resvg/resvg-js' and 'svgo' resolve.
 import math,sys,json
 H0='<svg xmlns="http://www.w3.org/2000/svg" width="%d" height="%d" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="%s" stroke-linecap="round" stroke-linejoin="round">'
 def f(v): return ('%.2f'%v).rstrip('0').rstrip('.')

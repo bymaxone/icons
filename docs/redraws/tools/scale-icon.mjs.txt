@@ -1,7 +1,8 @@
+// Run from a copy named *.mjs placed inside the repository, so '@resvg/resvg-js' and 'svgo' resolve.
 // node scale-icon.mjs in.svg factor out.svg [dx dy]  — scales about the ink bbox centre, keeps the centre.
 import { readFileSync, writeFileSync } from 'node:fs'
-import { Resvg } from '/Users/maximiliano/Documents/MyApps/bymax-one/icons/node_modules/@resvg/resvg-js/index.js'
-import { optimize } from '/Users/maximiliano/Documents/MyApps/bymax-one/icons/node_modules/svgo/lib/svgo.js'
+import { Resvg } from '@resvg/resvg-js'
+import { optimize } from 'svgo'
 const [, , inp, fac, out, dx = '0', dy = '0'] = process.argv
 const s = Number(fac)
 const src = readFileSync(inp, 'utf8')

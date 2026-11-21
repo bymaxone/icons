@@ -1,3 +1,4 @@
+// Run from a copy named *.mjs placed inside the repository, so '@resvg/resvg-js' and 'svgo' resolve.
 import math
 def f(v): return ('%.3f'%v).rstrip('0').rstrip('.')
 class Ell:

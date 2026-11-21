@@ -1,6 +1,7 @@
-// node cand.mjs out192.png out1x.png file:label ...   (labels under every drawing; 192 px panel and true 24 px 1x panel, light over dark)
+// Run from a copy named *.mjs placed inside the repository, so '@resvg/resvg-js' and 'svgo' resolve.
+// node cand.mjs out192.png out1x.png file::label ...   (labels under every drawing; 192 px panel and true 24 px 1x panel, light over dark)
 import { readFileSync, writeFileSync } from 'node:fs'
-import { Resvg } from '/Users/maximiliano/Documents/MyApps/bymax-one/icons/node_modules/@resvg/resvg-js/index.js'
+import { Resvg } from '@resvg/resvg-js'
 const [out192, out1x, ...items] = process.argv.slice(2)
 const parse = (f, fg) => {
   const t = readFileSync(f, 'utf8').trim()
