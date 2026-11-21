@@ -25,7 +25,7 @@ Any icon imported from the package no longer carries the metadata of the set: an
 ### Added
 
 - `@bymax-one/icons/grid`, which exports `ICON_GRID` and the `IconGrid` type and nothing else. `./meta` and the root still export them.
-- `@bymax-one/icons/brands/<name>` and `@bymax-one/icons/native/brands/<name>`, one brand mark's component each, like `./flags/<name>`, so a React Native app that needs one mark does not bundle all 110. `./brands` and `./native/brands` re-export through them.
+- `@bymax-one/icons/brands/<name>` and `@bymax-one/icons/native/brands/<name>`, one brand mark's component each, like `./flags/<name>`, so a React Native app that needs one mark does not bundle every mark. `./brands` and `./native/brands` re-export through them.
 
 #### Apply to a consumer
 
