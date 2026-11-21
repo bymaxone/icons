@@ -24,9 +24,9 @@ jobs:
   publish:
     name: Publish to npm and create GitHub Release
     runs-on: ubuntu-latest
-    # Measured on the cancelled v1.0.1 run (44839906758, ubuntu-latest): setup 18 s, `prepublishOnly`
-    # 14 min, `dogfood` 20 s and check:api 4 s, so about 15 min up to the publish, which takes
-    # seconds. 40 minutes leaves room for a slower runner and still bounds a hung job.
+    # Measured on ubuntu-latest: setup 18 s, `prepublishOnly` 14 min, `dogfood` 20 s and
+    # check:api 4 s, so about 15 min up to the publish, which takes seconds. 40 minutes leaves
+    # room for a slower runner and still bounds a hung job.
     timeout-minutes: 40
 
     # Provenance (`--provenance`) requires a public repository: npm rejects a
