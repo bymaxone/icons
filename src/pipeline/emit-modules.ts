@@ -41,8 +41,27 @@ export interface Flavour {
   readonly subpath: string
   /** How the icon barrel's description names the entry that re-exports it. */
   readonly entry: string
-  /** The version a component of this flavour was introduced in, when it is not its drawing's. */
+  /**
+   * The version this flavour began in. A component whose drawing is older reports it, since the
+   * component did not exist before; one whose drawing is newer reports its drawing's version.
+   */
   readonly since?: string
+}
+
+/**
+ * The version a component is documented as introduced in: its drawing's, or the one its flavour
+ * began in when that is later.
+ *
+ * @param flavour - The flavour the component is written for.
+ * @param drawn - The version the drawing was added in.
+ * @returns The later of the two versions, or `drawn` when the flavour has none.
+ */
+export function sinceOf(flavour: Flavour, drawn: string): string {
+  if (flavour.since === undefined) return drawn
+  const order = (version: string): number =>
+    version.split('.').reduce((total, part) => total * 1000 + Number(part), 0)
+  // Stryker disable next-line EqualityOperator: equal versions are the same text either way
+  return order(flavour.since) > order(drawn) ? flavour.since : drawn
 }
 
 /** The web modules, `createIcon` and `createFlag` from `./runtime`. */
@@ -170,7 +189,7 @@ function variantModule(
     '/**',
     ` * The \`${icon.name}\` icon, ${variant} variant: ${docText(icon.meta.tags.join(', '))}.`,
     ' *',
-    ` * @since ${flavour.since ?? icon.meta.since}`,
+    ` * @since ${sinceOf(flavour, icon.meta.since)}`,
     ' */'
   ].join('\n')
   return [
@@ -222,7 +241,7 @@ function brandModule(brand: BrandEntry, flavour: Flavour): string {
     ` * The ${docText(meta.title)} brand mark, from ${docText(meta.source)} (${docText(meta.license)}, retrieved ${meta.retrievedAt}).`,
     ` * The mark belongs to its owner and is not covered by the MIT grant; see TRADEMARKS.md and ${docText(meta.guidelines)}.`,
     ' *',
-    ` * @since ${flavour.since ?? meta.since}`,
+    ` * @since ${sinceOf(flavour, meta.since)}`,
     ' */'
   ].join('\n')
   return [
@@ -255,7 +274,7 @@ function flagModule(flag: FlagEntry, flavour: Flavour): string {
     ` * The ${docText(meta.title)} flag, from ${docText(meta.source)} (${docText(meta.license)}, retrieved ${meta.retrievedAt}).`,
     ' * It is reproduced as published by its source; see TRADEMARKS.md.',
     ' *',
-    ` * @since ${flavour.since ?? meta.since}`,
+    ` * @since ${sinceOf(flavour, meta.since)}`,
     ' */'
   ].join('\n')
   const view = JSON.stringify(flag.viewBox)

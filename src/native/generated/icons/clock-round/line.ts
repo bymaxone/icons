@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `clock-round` icon, line variant: time, hour, round, dial, face.
  *
- * @since 1.0.0
+ * @since 1.0.5
  */
 export const ClockRoundIcon = /* @__PURE__ */ createNativeIcon('clock-round', [
   ['circle', { cx: 12.25, cy: 12.25, r: 8.75 }],

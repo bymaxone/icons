@@ -18,7 +18,13 @@ import {
   iconMeta,
   sources
 } from './__tests__/support.ts'
-import { componentModules, GENERATED_DIRECTORIES, iconNodeLiteral } from './emit-modules.ts'
+import {
+  componentModules,
+  GENERATED_DIRECTORIES,
+  iconNodeLiteral,
+  sinceOf,
+  WEB_FLAVOUR
+} from './emit-modules.ts'
 import { lintSources } from './lint.ts'
 
 /**
@@ -127,6 +133,34 @@ describe('iconNodeLiteral', () => {
      * Scenario: nothing is invented for an element list with no element.
      */
     expect(iconNodeLiteral([])).toBe('[]')
+  })
+})
+
+describe('sinceOf', () => {
+  const flavour = { ...WEB_FLAVOUR, since: '1.0.0' }
+
+  it.each([
+    ['a drawing older than the flavour', '0.9.0', '1.0.0'],
+    ['a drawing from the same version', '1.0.0', '1.0.0'],
+    ['a drawing newer than the flavour', '1.0.5', '1.0.5']
+  ])('reports the later version for %s', (_name, drawn, expected) => {
+    /**
+     * Scenario: a component is documented as introduced in the later of its drawing's version
+     * and the version its flavour began in; versions compare number by number, so 1.10.0 is
+     * later than 1.9.0.
+     */
+    expect(sinceOf(flavour, drawn)).toBe(expected)
+  })
+
+  it('compares versions number by number', () => {
+    /** Scenario: 1.10.0 is later than 1.9.0, which a comparison of the text would get wrong. */
+    expect(sinceOf({ ...WEB_FLAVOUR, since: '1.9.0' }, '1.10.0')).toBe('1.10.0')
+    expect(sinceOf({ ...WEB_FLAVOUR, since: '1.10.0' }, '1.9.0')).toBe('1.10.0')
+  })
+
+  it("reports the drawing's version when the flavour has none", () => {
+    /** Scenario: the web flavour has no start version, so every component keeps its drawing's. */
+    expect(sinceOf({ ...WEB_FLAVOUR }, '1.0.5')).toBe('1.0.5')
   })
 })
 

@@ -9,7 +9,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
 /**
  * The `comb` icon, line variant: comb, hair, hairstyle, grooming.
  *
- * @since 1.0.0
+ * @since 1.0.5
  */
 export const CombIcon = /* @__PURE__ */ createNativeIcon('comb', [
   [

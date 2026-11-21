@@ -10,7 +10,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
  * The Apple Health brand mark, from https://devimages-cdn.apple.com/design/resources/download/Icon-Apple-Health.dmg (All rights reserved by Apple Inc., retrieved 2026-11-21).
  * The mark belongs to its owner and is not covered by the MIT grant; see TRADEMARKS.md and https://developer.apple.com/design/human-interface-guidelines/healthkit.
  *
- * @since 1.0.0
+ * @since 1.0.5
  */
 export const AppleHealthBrandIcon = /* @__PURE__ */ createNativeIcon(
   'apple-health-brand',

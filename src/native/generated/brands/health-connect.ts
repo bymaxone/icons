@@ -10,7 +10,7 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
  * The Health Connect brand mark, from https://developer.android.com/static/downloads/assets/health_connect_logo_white.png (All rights reserved by Google LLC, retrieved 2026-11-21).
  * The mark belongs to its owner and is not covered by the MIT grant; see TRADEMARKS.md and https://developer.android.com/health-and-fitness/health-connect/ui/guidelines.
  *
- * @since 1.0.0
+ * @since 1.0.5
  */
 export const HealthConnectBrandIcon = /* @__PURE__ */ createNativeIcon(
   'health-connect-brand',
