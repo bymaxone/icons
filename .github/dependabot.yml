@@ -62,6 +62,11 @@ updates:
       # Lift this hold when the tooling moves to a newer Node.
       - dependency-name: '@types/node'
         update-types: [version-update:semver-major]
+      # The brand marks are Simple Icons' geometry, pinned to the version it was taken from
+      # (TRADEMARKS.md), and the recorded provenance names that version. A bump of this
+      # dependency is therefore never mechanical: it is a deliberate re-sync that compares
+      # every mark against the new release and moves the provenance with it.
+      - dependency-name: simple-icons
 
   # The workflow actions themselves (checkout, setup-node, pnpm, etc.).
   - package-ecosystem: github-actions
