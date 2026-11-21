@@ -5,3 +5,4 @@
  */
 
 export { RunIcon } from './line'
+export { RunSmIcon } from './sm'

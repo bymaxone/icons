@@ -12,6 +12,8 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
  * @since 1.0.0
  */
 export const LinkIcon = /* @__PURE__ */ createNativeIcon('link', [
-  ['path', { d: 'm11.331 9.068 2.545-2.546a2.9 2.9 0 0 1 4.102 4.102l-2.546 2.545' }],
-  ['path', { d: 'm9.068 11.331-2.546 2.545a2.9 2.9 0 0 0 4.102 4.102l2.545-2.546' }]
+  [
+    'path',
+    { d: 'M10.421 18.749a7.48 3.52-45 1 1 5.08-9.057m-1.422-3.941a7.48 3.52-45 1 1-5.08 9.057' }
+  ]
 ])

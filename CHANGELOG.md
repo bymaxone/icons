@@ -13,6 +13,26 @@ The date of a section is the day the release was prepared, not the day the versi
 
 ## [Unreleased]
 
+## [1.0.7] - 2026-11-21
+
+The figures and the link family, redrawn because they did not hold up at 192 px: broken arms, floating segments, and a link that read as a split pill. Every figure now follows one construction: a spine, a head set off by the cut, both arms from one shoulder and both legs from one hip.
+
+### Added
+
+- A 16 px master for `run`.
+
+### Changed
+
+- `run`, `walk`, `treadmill`, `swimming` and `yoga` are redrawn on that construction. `yoga` is a warrior pose and `swimming` a front-crawl swimmer; the old ones read as a T with a triangle and as a line chart.
+- `link` is two interlocking oval links, and `link-off`, `link-plus`, `link-minus`, `link-check` and `link-x` are redrawn on it. The five still carried the capsule with an inner stroke of before 1.0.5.
+- `airplane-landing` is the `airplane` silhouette with its nose 20 degrees down, above the ground line.
+- `nurse` has a smaller cap set off from the head, with its cross.
+
+#### Apply to a consumer
+
+- Nothing breaks. New names: `RunSmIcon`, the 16 px master of `run`.
+- These names changed shape, so check them at the sizes you show: `run`, `walk`, `treadmill`, `swimming`, `yoga`, `link`, `link-off`, `link-plus`, `link-minus`, `link-check`, `link-x`, `airplane-landing`, `nurse`.
+
 ## [1.0.6] - 2026-11-21
 
 Four 16 px masters and larger drawings for the icons that look small beside their neighbours at the sizes the first consumer shows them, a running app.
@@ -365,7 +385,8 @@ an SVG sprite and typed metadata.
   `pnpm family-sheet` renders the whole set by category; and a pull request that changes a
   drawing gets a preview comment with its render and its nearest matches.
 
-[Unreleased]: https://github.com/bymaxone/icons/compare/v1.0.6...HEAD
+[Unreleased]: https://github.com/bymaxone/icons/compare/v1.0.7...HEAD
+[1.0.7]: https://github.com/bymaxone/icons/compare/v1.0.6...v1.0.7
 [1.0.6]: https://github.com/bymaxone/icons/compare/v1.0.5...v1.0.6
 [1.0.5]: https://github.com/bymaxone/icons/compare/v1.0.4...v1.0.5
 [1.0.4]: https://github.com/bymaxone/icons/compare/v1.0.3...v1.0.4

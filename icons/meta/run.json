@@ -4,7 +4,7 @@
   "tags": ["run", "runner", "jog", "exercise"],
   "categories": ["health", "people"],
   "useCases": ["Tracks a running session", "Marks a workout"],
-  "variants": ["line"],
-  "opticalSizes": [24],
+  "variants": ["line", "sm"],
+  "opticalSizes": [24, 16],
   "since": "1.0.0"
 }

@@ -12,6 +12,8 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
  * @since 1.0.0
  */
 export const YogaIcon = /* @__PURE__ */ createNativeIcon('yoga', [
-  ['circle', { cx: 12.25, cy: 4.75, r: 1.75 }],
-  ['path', { d: 'M12.25 9.5v5.75m-7-4.5 7-1.25 7 1.25m-11 9.5 4-4 4 4m-11 0h14' }]
+  ['circle', { cx: 12.25, cy: 4.5, r: 1.75 }],
+  ['path', { d: 'M12.25 9.25v4.95' }],
+  ['path', { d: 'M3.4 10.4h17.7' }],
+  ['path', { d: 'm4.2 20.8 8.05-6.6 5.95 2.4v4.2' }]
 ])
