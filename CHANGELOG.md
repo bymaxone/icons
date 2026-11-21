@@ -23,7 +23,7 @@ The figures and the link family, redrawn because they did not hold up at 192 px:
 
 ### Changed
 
-- `run`, `walk`, `treadmill`, `swimming`, `wheelchair` and `yoga` are redrawn on that construction. `yoga` is a warrior pose and `swimming` a front-crawl swimmer; the old ones read as a T with a triangle and as a line chart.
+- `run`, `walk`, `treadmill`, `swimming` and `yoga` are redrawn on that construction. `yoga` is a warrior pose and `swimming` a front-crawl swimmer; the old ones read as a T with a triangle and as a line chart.
 - `link` is two interlocking oval links, and `link-off`, `link-plus`, `link-minus`, `link-check` and `link-x` are redrawn on it. The five still carried the capsule with an inner stroke of before 1.0.5.
 - `airplane-landing` is a side-view airliner pitched nose down above the ground line.
 - `nurse` has the cap set off from the head, with its cross.
@@ -31,7 +31,7 @@ The figures and the link family, redrawn because they did not hold up at 192 px:
 #### Apply to a consumer
 
 - Nothing breaks. New names: `RunSmIcon`, the 16 px master of `run`.
-- These names changed shape, so check them at the sizes you show: `run`, `walk`, `treadmill`, `swimming`, `wheelchair`, `yoga`, `link`, `link-off`, `link-plus`, `link-minus`, `link-check`, `link-x`, `airplane-landing`, `nurse`.
+- These names changed shape, so check them at the sizes you show: `run`, `walk`, `treadmill`, `swimming`, `yoga`, `link`, `link-off`, `link-plus`, `link-minus`, `link-check`, `link-x`, `airplane-landing`, `nurse`.
 
 ## [1.0.6] - 2026-11-21
 

@@ -12,8 +12,8 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
  * @since 1.0.0
  */
 export const WheelchairIcon = /* @__PURE__ */ createNativeIcon('wheelchair', [
-  ['circle', { cx: 12.4, cy: 4.5, r: 1.75 }],
-  ['path', { d: 'M12.4 9.2V15h5.2l1.7 5.2' }],
-  ['path', { d: 'm12.4 10.6 4.4 2' }],
-  ['path', { d: 'M9.9 21.3a4.8 4.8 0 1 1-.7-9.5' }]
+  ['circle', { cx: 13.25, cy: 4.75, r: 1.75 }],
+  ['path', { d: 'M12.75 9.5v5.75h5l2 4.25' }],
+  ['path', { d: 'M12.75 12h4.5' }],
+  ['path', { d: 'M9.5 12a4.75 4.75 0 1 0 5.5 7' }]
 ])
