@@ -187,7 +187,7 @@ for (const icon of icons) {
 // numbers, as the runtime's is: the native index re-exports every icon, so it moves with the set,
 // and a growing set raises it here with a reviewed number rather than a formula. Measured on 1,298
 // icon modules, 250 flag modules and 110 marks: index 12,397 bytes, runtime 1,786, brands 42,602,
-// flags 732; the largest native icon module is `octopus` at 932 and the largest flag `sa-flag` at
+// flags 732; the largest native icon module is `octopus` and the largest flag `sa-flag` at
 // 1,504, so the per-module budgets are the web's (1.65 KiB and 2 KiB).
 const NATIVE_BUDGETS = [
   ['native (re-exports)', 'dist/native/index.mjs', 14.5 * 1024],

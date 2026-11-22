@@ -1,6 +1,6 @@
 /**
  * @fileoverview The ink rule of the icon lint (spec section 2.5): a line drawing covers at most
- * 21.5% of its 24 px canvas, measured with its stroke; a 16 px master covers at most 32.25% of
+ * 30% of its 24 px canvas as a contour, or 21.5% measured with its stroke; a 16 px master covers at most 32.25% of
  * its 16 px canvas, the same weight at its size, and at most 1.5 times the ink of its line
  * drawing, because a master simplifies and never adds geometry. Filled drawings are solid by
  * design and are not held to a ceiling. Ink is the mean coverage of the drawing rendered by

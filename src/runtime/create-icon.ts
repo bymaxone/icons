@@ -13,7 +13,7 @@ import type { IconProps } from './icon-props'
 
 /** Options of {@link createIcon}. */
 export interface IconOptions {
-  /** How the drawing is painted. Default `stroke`; `fill` for filled icons and brand marks. */
+  /** How the drawing is painted. Default `stroke`; `fill` for catalog icons and brand marks. */
   paint?: IconPaint | undefined
   /**
    * The px size the drawing is made for: 24 (the default) for the line and filled

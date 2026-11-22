@@ -60,9 +60,9 @@ export const KIND_VARIANT: Readonly<Record<SvgKind, Variant>> = {
 }
 
 /**
- * Whether a kind is drawn with strokes. The line icons and the 16 px masters are; filled
- * icons and brand marks are filled shapes with no stroke at all, and a flag paints each
- * element itself.
+ * Whether a kind is drawn with strokes unless its source is a contour (`usesContours`).
+ * Line and 16 px sources are; filled icons and brand marks are filled shapes with no
+ * stroke at all, and a flag paints each element itself.
  *
  * @param kind - The source directory.
  * @returns True for `line` and `sm`.
