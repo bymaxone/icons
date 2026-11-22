@@ -74,6 +74,19 @@ describe('svg kinds', () => {
     expect(Object.entries(rootAttributes('brands'))).toStrictEqual(Object.entries(FILL_ROOT))
   })
 
+  it('writes the filled root for a contour drawing, 16 px wide only on a 16 px master', () => {
+    /**
+     * Scenario: a contour drawing is a filled path, so a line, filled or 16 px contour gets
+     * the filled root; a line or filled contour stays 24 px wide and only a 16 px master is
+     * 16 px wide.
+     */
+    expect(Object.entries(rootAttributes('line', true))).toStrictEqual(Object.entries(FILL_ROOT))
+    expect(Object.entries(rootAttributes('filled', true))).toStrictEqual(Object.entries(FILL_ROOT))
+    expect(Object.entries(rootAttributes('sm', true))).toStrictEqual(
+      Object.entries({ ...FILL_ROOT, width: '16', height: '16' })
+    )
+  })
+
   it('fixes only the namespace on the root of a flag', () => {
     /**
      * Scenario: a flag keeps the view box of its source, which differs from flag to flag, so
