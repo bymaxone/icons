@@ -109,7 +109,7 @@ Measured with resvg at 20x zoom. The bounding box includes the stroke, the centr
 
 ### Consumer adoption
 
-The plan asks that the first consumer app use the package through a local link from B1 on (decision D5). That app is still in its specification phase, with no `package.json`, so the adoption is deferred; the plan records when it returns as a criterion.
+The plan asks that the first consumer app use the package through a local link from B1 on (decision D5). That app was still in its specification phase, with no `package.json`, when B1 closed, so the adoption was deferred; the plan records when it returns as a criterion.
 
 ### Build
 

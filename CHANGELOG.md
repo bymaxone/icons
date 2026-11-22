@@ -28,7 +28,7 @@ The date of a section is the day the release was prepared, not the day the versi
 
 - Style a catalog icon with `size` and `color`. Its weight scales with its size, so `strokeWidth` and `absoluteStrokeWidth` leave it unchanged; they apply to custom drawings rendered with stroke paint through `Icon` or `createIcon`.
 - Import the octopus as `OctopusIcon`, `OctopusFilledIcon` and `OctopusSmIcon`, and look it up as `octopus` in the metadata.
-- New names: `RunFilledIcon`, `WalkFilledIcon`. Every other icon keeps its name and its aliases.
+- New names: `RunFilledIcon`, `WalkFilledIcon`. Every icon except the octopus keeps its name and its aliases.
 
 ## [1.0.7] - 2026-11-21
 
