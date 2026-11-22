@@ -13,6 +13,21 @@ The date of a section is the day the release was prepared, not the day the versi
 
 ## [Unreleased]
 
+## [1.0.9] - 2026-11-22
+
+### Added
+
+- Filled yoga and freestyle swimming silhouettes for the web and React Native catalogs.
+- Filled variants for `paragliding`, `parachute`, `wheelchair`, `accessibility`, `escalator` and `hospital-bed`.
+
+### Changed
+
+- Line icons and 16 px masters use optical stroke weights calibrated for their display sizes.
+
+#### Apply to a consumer
+
+- Import `YogaFilledIcon`, `SwimmingFilledIcon`, `ParaglidingFilledIcon`, `ParachuteFilledIcon`, `WheelchairFilledIcon`, `AccessibilityFilledIcon`, `EscalatorFilledIcon` or `HospitalBedFilledIcon` alongside the corresponding line icon.
+
 ## [1.0.8] - 2026-11-21
 
 ### Added
@@ -401,7 +416,8 @@ an SVG sprite and typed metadata.
   `pnpm family-sheet` renders the whole set by category; and a pull request that changes a
   drawing gets a preview comment with its render and its nearest matches.
 
-[Unreleased]: https://github.com/bymaxone/icons/compare/v1.0.8...HEAD
+[Unreleased]: https://github.com/bymaxone/icons/compare/v1.0.9...HEAD
+[1.0.9]: https://github.com/bymaxone/icons/compare/v1.0.8...v1.0.9
 [1.0.8]: https://github.com/bymaxone/icons/compare/v1.0.7...v1.0.8
 [1.0.7]: https://github.com/bymaxone/icons/compare/v1.0.6...v1.0.7
 [1.0.6]: https://github.com/bymaxone/icons/compare/v1.0.5...v1.0.6

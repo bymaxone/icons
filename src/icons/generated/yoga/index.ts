@@ -5,3 +5,4 @@
  */
 
 export { YogaIcon } from './line'
+export { YogaFilledIcon } from './filled'

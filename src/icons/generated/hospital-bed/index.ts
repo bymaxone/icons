@@ -5,3 +5,4 @@
  */
 
 export { HospitalBedIcon } from './line'
+export { HospitalBedFilledIcon } from './filled'

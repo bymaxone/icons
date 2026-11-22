@@ -3,8 +3,12 @@
   "label": "Escalator",
   "tags": ["escalator", "stairs", "moving steps", "mall"],
   "categories": ["transport", "maps"],
-  "useCases": ["Marks a moving staircase", "Guides people to another floor"],
-  "variants": ["line"],
+  "useCases": [
+    "Marks a moving staircase",
+    "Guides people to another floor",
+    "Filled: selected escalator connection"
+  ],
+  "variants": ["line", "filled"],
   "opticalSizes": [24],
   "since": "1.0.0"
 }

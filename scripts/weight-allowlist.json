@@ -1,0 +1,134 @@
+{
+  "line/barcode": {
+    "reason": "The narrow bars keep the alternating barcode pattern distinct.",
+    "sha256": "b86e107c77e9bed42fc728781bed5c4807028c3e8383c9bb4a6da59e47d46ff0"
+  },
+  "line/basket": {
+    "reason": "The stepped rim leaves the three upright slats open at 16 px and keeps both handles separate from the top edge.",
+    "sha256": "7794b8c1136d00dca6d67773410551ee956bae49134ad85d948db15ad27f7a88"
+  },
+  "line/basketball-hoop": {
+    "reason": "Fine strands preserve the openings in the net below the rim.",
+    "sha256": "45827655dd9ab09c9a79175373443fb18d0e9081b30188edafd24821e53e7a17"
+  },
+  "line/beer-off": {
+    "reason": "The diagonal slash leaves the mug handle open and the flutes separate at 16 and 24 px.",
+    "sha256": "d27325fae89ca1be0ed4413085a7893d978391a6e73d7371df7c2dbca164b7d7"
+  },
+  "line/bicycle-electric": {
+    "reason": "The open wheel contours keep the bicycle frame and electric detail legible.",
+    "sha256": "415ec48ddc90cb83b08422facc3e28019238d6368cf8f3a485b8f3e09ccfdd44"
+  },
+  "line/blinds": {
+    "reason": "Narrow slats preserve the gaps across the window.",
+    "sha256": "e98e67920f7656a8af5ddfb74667da1df2026da773f02aa8ac40d1d795940833"
+  },
+  "line/bold": {
+    "reason": "The heavy vertical strokes depict the bold typographic weight.",
+    "sha256": "357418d46cf2a3e1ea6006dcbbc4421c9ed1ed774c8688744919ffec4e26e702"
+  },
+  "line/certificate": {
+    "reason": "The document outline leaves space for the seal and its fine details.",
+    "sha256": "259dfe12901a60a7549b710216d708e067ed528dbb8d00c928b4f983d4c317c7"
+  },
+  "line/curtains": {
+    "reason": "The narrow folds keep the two draped panels distinguishable.",
+    "sha256": "f67eabab00e2c80c63576c30a0ef02ec9626b5648ee96d677e775db49c18f48f"
+  },
+  "line/fish-off": {
+    "reason": "The fine fish outline stays distinct beside the diagonal slash.",
+    "sha256": "289f176a41c9323417af8f6c866c15d7277bf2b14b0da79ee9254b514b08f063"
+  },
+  "line/grip": {
+    "reason": "The drawing consists of solid dots without a stroked contour.",
+    "sha256": "8bda78883952e622909e42d4f08d702439596d1f67cc8be8c9222372d250b107"
+  },
+  "line/grip-horizontal": {
+    "reason": "The drawing consists of solid dots without a stroked contour.",
+    "sha256": "f2654218f26318c7c9ca8a228548c4b2dc350084a7f45b8ecdec85b710c90443"
+  },
+  "line/kanban": {
+    "reason": "Lighter card outlines keep seven horizontal slots open at small sizes.",
+    "sha256": "949da7f46b68f63bfdc0fb7e0bc724860a5eac8ae0a425292bb6f2a5e56ece7f"
+  },
+  "line/keyboard-off": {
+    "reason": "The rows of small keys remain distinct beside the diagonal slash.",
+    "sha256": "21186e721df6d819bd77dc55d64764412785c653ceb91f0758abdeff7dee12d5"
+  },
+  "line/more-horizontal": {
+    "reason": "The drawing consists of solid dots without a stroked contour.",
+    "sha256": "5a6600ed47950448ac870b5ccbdf0207da746a757528df5f044931f58073508c"
+  },
+  "line/more-vertical": {
+    "reason": "The drawing consists of solid dots without a stroked contour.",
+    "sha256": "eed30e829f8cfaf428e7ddc4758bec6002dbc4f7899fa1824fa844e86f6403f7"
+  },
+  "line/onion": {
+    "reason": "Fine inner curves distinguish the layers of the bulb.",
+    "sha256": "23b0ffd9d196c6a3435263f0db746373a8a363bbe711038b080ed47cdcc15215"
+  },
+  "line/opacity": {
+    "reason": "The diagonal stripes remain individually visible inside the overlapping shapes.",
+    "sha256": "4aaec940fc0d544f7a7f54a527d8041e682baf91fe3ece4e38786307303eff88"
+  },
+  "line/orbit": {
+    "reason": "The orbit leaves a clear gap around the planet and its small satellite.",
+    "sha256": "62528bb1a83494ab5e9f2524e2b335cbe4d72947b52956661c363d8b1e313801"
+  },
+  "line/panda": {
+    "reason": "The facial markings remain separate from the head outline.",
+    "sha256": "0c024ddb97fc778d32d9985ef7df4057124d10fbf0ed0e397a91602f955dc717"
+  },
+  "line/parachute": {
+    "reason": "Fine suspension lines keep the jumper distinct beneath the segmented canopy.",
+    "sha256": "451a01081e104701a99c8bd69ab95a3c475d14ef1552d98571fa0aa376068566"
+  },
+  "line/paragliding": {
+    "reason": "The narrow canopy cells and fine lines leave clear space around the pilot.",
+    "sha256": "905c317e1c8f045877ba88cbc83696747484527f4065cd1adbd67a62641b28b4"
+  },
+  "line/parking-meter": {
+    "reason": "Lighter graduations and a distinct pointer keep the meter dial readable at small sizes.",
+    "sha256": "1b9a7d96136c70bdccc16717f1b7adc442f41e6752ba0e1b8c0877e023bccb4f"
+  },
+  "line/piggy-bank": {
+    "reason": "The coin, slot and facial details remain distinct from the body.",
+    "sha256": "f4fa2d0496b7af94445eba1a825c1f965dba44352e966b9de769e9f8e305b8ec"
+  },
+  "line/radar": {
+    "reason": "The thinner inner sweeps keep both blips distinct from the concentric arcs at 16 px.",
+    "sha256": "fd4526a50e08b2d8cee2ff7eefa7b9cca8003c764f5323d68a210a99b4fe1938"
+  },
+  "line/screwdriver": {
+    "reason": "The two parallel grip grooves remain distinct from the handle and each other at 16 px.",
+    "sha256": "229642cfeaa19e6252b90f6e82ea7aa782633eb7fef532f705a6e264efe0f79c"
+  },
+  "line/storyboard": {
+    "reason": "The approved four-panel drawing keeps its fine rounded frames and open landscape details.",
+    "sha256": "8fc2402b8554690c5016dfeafd71a90fa0dc7091935d44e5558bb9a82804b08d"
+  },
+  "line/subscript": {
+    "reason": "The small lowered character stays legible beside the main character.",
+    "sha256": "ec7ec1fbdcdf51edfec60816c1c792ceb8f4dfdfd79e6824c535e9ed85163deb"
+  },
+  "line/taxi": {
+    "reason": "The window openings remain separate from the roof sign and wheels.",
+    "sha256": "63f870854630dbd3c4f73a67b73e13e1198721b8facb8ed8169eb550bdfce124"
+  },
+  "line/tomato": {
+    "reason": "The stem and leaf openings remain visible above the fruit outline.",
+    "sha256": "24e0b66e0202c4c8a3175172a72b72519e53b958281fa69c0111c9d771d169e2"
+  },
+  "sm/more-horizontal": {
+    "reason": "The drawing consists of solid dots without a stroked contour.",
+    "sha256": "ed08799c2434f1d02064f3c229f3f89e7b2c60dbfa9ac7daf60ea992c8497c39"
+  },
+  "sm/more-vertical": {
+    "reason": "The drawing consists of solid dots without a stroked contour.",
+    "sha256": "62839664f309dfe522c7cfb0a960221a856bf66ebd16e2c94cd25e02e5d1c62b"
+  },
+  "sm/run": {
+    "reason": "The compact running figure keeps its head opening and separated limbs at 16 px.",
+    "sha256": "cd10dbb046c82ebd9c2b7dfcf51205b9b071797d29fca4d495eb53c266f4cb93"
+  }
+}

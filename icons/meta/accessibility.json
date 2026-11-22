@@ -3,8 +3,12 @@
   "label": "Accessibility",
   "tags": ["accessibility", "a11y", "inclusive", "person"],
   "categories": ["people", "system"],
-  "useCases": ["Opens the accessibility settings", "Marks an accessible option"],
-  "variants": ["line"],
+  "useCases": [
+    "Opens the accessibility settings",
+    "Marks an accessible option",
+    "Filled: active accessibility settings"
+  ],
+  "variants": ["line", "filled"],
   "opticalSizes": [24],
   "since": "1.0.0"
 }

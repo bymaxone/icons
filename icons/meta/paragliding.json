@@ -3,8 +3,12 @@
   "label": "Paragliding",
   "tags": ["paragliding", "glider", "wing", "flight"],
   "categories": ["games", "transport"],
-  "useCases": ["Marks an air sport", "Shows a flight under a wing"],
-  "variants": ["line"],
+  "useCases": [
+    "Marks an air sport",
+    "Shows a flight under a wing",
+    "Filled: selected paragliding activity"
+  ],
+  "variants": ["line", "filled"],
   "opticalSizes": [24],
   "since": "1.0.0"
 }

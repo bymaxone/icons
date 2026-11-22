@@ -3,8 +3,8 @@
   "label": "Parachute",
   "tags": ["parachute", "skydiving", "descent", "safety"],
   "categories": ["games", "transport"],
-  "useCases": ["Marks a safe descent", "Shows skydiving"],
-  "variants": ["line"],
+  "useCases": ["Marks a safe descent", "Shows skydiving", "Filled: active skydiving session"],
+  "variants": ["line", "filled"],
   "opticalSizes": [24],
   "since": "1.0.0"
 }

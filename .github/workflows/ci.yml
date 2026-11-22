@@ -82,6 +82,8 @@ jobs:
         # Every rule of the SVG and metadata sources: allowed elements and attributes,
         # fills, precision, live area, names, schemas, aliases and variants.
         run: pnpm lint:icons
+      - name: Optical stroke weight
+        run: pnpm check:weight
       - name: Generated modules match the sources
         # Regenerates src/**/generated from icons/ and fails when the committed copy
         # differs, so a hand edit or a forgotten `pnpm generate` cannot merge.

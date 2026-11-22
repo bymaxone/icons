@@ -340,11 +340,16 @@ function actions(entry, drawing, render) {
     </span>`
 }
 
+/** Render the component at each labelled CSS pixel size. */
+function sizeSamples(drawing, render, sizes) {
+  return `<div class="sizes">${sizes.map((size) => `<span class="sz" data-size="${size}">${render(drawing.component)}<i>${size}</i></span>`).join('')}</div>`
+}
+
 /** The card of a 24 px drawing: large, then from 16 to 48 px. */
 function drawingCard(entry, drawing, render) {
   return `<figure class="pv" data-kind="${entry.kind}">
   <div class="big">${render(drawing.component)}</div>
-  <div class="sizes">${[16, 20, 24, 32, 48].map((size) => `<span class="sz" data-size="${size}">${render(drawing.component)}<i>${size}</i></span>`).join('')}</div>
+  ${sizeSamples(drawing, render, [16, 20, 24, 32, 48])}
   <figcaption><span class="cap"><b>${VARIANT_LABEL[drawing.variant]}</b> <code>${drawing.component}</code></span>
     ${actions(entry, drawing, render)}
   </figcaption>
@@ -357,6 +362,7 @@ function masterCard(entry, drawing, render) {
     `<span class="px-col"><span class="px-frame"><img class="px" src="../../px/${file}/${e(entry.name)}.png" width="128" height="128" alt=""></span><span class="px-1x"><img src="../../px/${file}/${e(entry.name)}.png" width="16" height="16" alt=""><i>1x</i></span><span class="px-cap">${caption}</span></span>`
   return `<figure class="pv">
   <div class="big px-pair" role="img" aria-label="The line icon reduced to 16 px beside the 16 px master, pixel by pixel">${pair('line', 'Line reduced to 16')}${pair('sm', '16 px master')}</div>
+  ${sizeSamples(drawing, render, [16, 20, 24])}
   <figcaption><span class="cap"><b>${VARIANT_LABEL[drawing.variant]}</b> <code>${drawing.component}</code></span>
     ${actions(entry, drawing, render)}
   </figcaption>
