@@ -54,7 +54,10 @@ export function similarityEntries(
     .filter((icon) => names === undefined || names.has(icon.name))
     .flatMap((icon) =>
       drawnVariants(icon).flatMap(([variant, source]) => {
-        const drawing = readDrawing(source.text, isStrokeKind(variant) ? 'stroke' : 'fill')
+        const drawing = readDrawing(
+          source.text,
+          isStrokeKind(variant) && !source.contour ? 'stroke' : 'fill'
+        )
         const shape = normalisedShape(drawing)
         if (shape === undefined) return []
         const matches = nearest(shape, references, MATCHES_PER_DRAWING)

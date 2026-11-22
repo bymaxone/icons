@@ -11,10 +11,24 @@ import { createIcon } from '@bymax-one/icons/runtime'
  *
  * @since 1.0.0
  */
-export const PlusCircleIcon = /* @__PURE__ */ createIcon('plus-circle', [
-  ['circle', { cx: 12.25, cy: 12.25, r: 8.5 }],
-  ['path', { d: 'M12.25 8.75v7m-3.5-3.5h7' }]
-])
+export const PlusCircleIcon = /* @__PURE__ */ createIcon(
+  'plus-circle',
+  [
+    [
+      'path',
+      {
+        d: 'M10.8 20.9C3.14 19.69.51 9.85 6.55 4.97c5.87-4.76 14.27-.57 14.2 7.09-.04 5.37-4.86 9.65-9.95 8.84m3.32-1.79c5.15-1.59 6.75-8.59 2.86-12.51C11.1.68 1.65 8.28 5.76 15.62c1.71 3.04 5.15 4.48 8.36 3.49'
+      }
+    ],
+    [
+      'path',
+      {
+        d: 'M11.62 16.36c-.39-.18-.51-.7-.51-2.18v-1.35H9.58c-1.78 0-2.15-.15-2.15-.89s.37-.89 2.15-.89h1.53V9.62c0-1.79.19-2.24.94-2.24.69-.01.84.37.84 2.08v1.59h1.53c1.73 0 2.18.18 2.18.87 0 .75-.37.91-2.13.91h-1.58v1.59c0 1.94-.31 2.41-1.27 1.94'
+      }
+    ]
+  ],
+  { paint: 'fill' }
+)
 
 /** `add-circle`: an alias of {@link PlusCircleIcon}. */
 export const AddCircleIcon = PlusCircleIcon

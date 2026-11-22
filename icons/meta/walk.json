@@ -3,8 +3,12 @@
   "label": "Walking",
   "tags": ["walk", "pedestrian", "steps", "stroll"],
   "categories": ["people", "maps"],
-  "useCases": ["Switches a route to walking", "Marks a pedestrian path"],
-  "variants": ["line"],
+  "useCases": [
+    "Switches a route to walking",
+    "Marks a pedestrian path",
+    "Filled: selected walking route"
+  ],
+  "variants": ["line", "filled"],
   "opticalSizes": [24],
   "since": "1.0.0"
 }

@@ -1,7 +1,7 @@
 /**
  * @fileoverview The family sheet a drawing batch is reviewed beside: every drawing of the
  * set, grouped by its first category, at 48, 24 and 16 px, on the light and the dark
- * Studio page side by side, with the drawings of the batch under review outlined.
+ * page side by side, with the drawings of the batch under review outlined.
  * @layer Pipeline
  */
 
@@ -51,6 +51,7 @@ export function familyGroups(set: IconSet, highlight: ReadonlySet<string>): Fami
           name: icon.name,
           label: variant === 'line' ? icon.name : `${icon.name} (${variant})`,
           kind: variant,
+          ...(drawing.contour && { contour: true }),
           elements: drawing.elements,
           highlighted: highlight.has(icon.name)
         }))

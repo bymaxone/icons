@@ -11,6 +11,15 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
  *
  * @since 1.0.0
  */
-export const ArrowUpRightIcon = /* @__PURE__ */ createNativeIcon('arrow-up-right', [
-  ['path', { d: 'M8.75 5.75h10v10m0-10-13 13' }]
-])
+export const ArrowUpRightIcon = /* @__PURE__ */ createNativeIcon(
+  'arrow-up-right',
+  [
+    [
+      'path',
+      {
+        d: 'M5.35 18.91c-.79-.43-.64-.82.93-2.35.73-.72 3.04-2.98 5.13-5.03s4.11-4.02 4.49-4.39l.7-.67h-2.57c-2.45 0-2.57-.01-2.81-.19-.32-.26-.34-.8-.03-1.1.33-.31 7.24-.31 7.63 0l.24.19v6.96l-.22.23c-.29.29-.62.29-.96.01l-.26-.23-.04-2.37-.05-2.38-1.58 1.55c-.87.85-3.34 3.28-5.48 5.4-4.92 4.85-4.65 4.62-5.12 4.37'
+      }
+    ]
+  ],
+  { paint: 'fill' }
+)

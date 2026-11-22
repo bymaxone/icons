@@ -30,7 +30,7 @@ export const TOUCH_ALPHA = 0.98
 /** An icon's drawing as the check reads it: the 16 px master when there is one, else the line drawing. */
 export interface SixteenDrawing {
   readonly name: string
-  readonly kind: Extract<SvgKind, 'sm' | 'line'>
+  readonly kind: Extract<SvgKind, 'sm' | 'line' | 'filled'>
   /** Where the drawing was read from, from the repository root. */
   readonly path: string
   readonly elements: readonly DrawingElement[]
@@ -54,7 +54,14 @@ export function sixteenDrawings(set: IconSet): SixteenDrawing[] {
     const drawing = sm ?? line
     return drawing === undefined
       ? []
-      : [{ name: icon.name, kind, path: drawing.path, elements: drawing.elements }]
+      : [
+          {
+            name: icon.name,
+            kind: drawing.contour ? 'filled' : kind,
+            path: drawing.path,
+            elements: drawing.elements
+          }
+        ]
   })
 }
 

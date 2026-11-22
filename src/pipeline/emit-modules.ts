@@ -165,18 +165,18 @@ export function aliasExports(
 }
 
 /**
- * The `createIcon` options each icon variant passes: a filled variant is painted with
- * fill, and a 16 px master declares the size it is made for, so it renders at 16 px with
- * the set's 1.5 px stroke by default.
+ * The `createIcon` options each icon variant passes: a filled variant and a contour
+ * source are painted with fill, and a 16 px master declares the size it is made for, so
+ * it renders at 16 px by default.
  */
-export function variantOptions(variant: IconVariantName): string {
+export function variantOptions(variant: IconVariantName, contour = false): string {
   switch (variant) {
     case 'line':
-      return ''
+      return contour ? ", { paint: 'fill' }" : ''
     case 'filled':
       return `, { paint: 'fill' }`
     case 'sm':
-      return `, { masterSize: ${ICON_GRID.smSize} }`
+      return `, { ${contour ? "paint: 'fill', " : ''}masterSize: ${ICON_GRID.smSize} }`
   }
 }
 
@@ -188,7 +188,7 @@ function variantModule(
   flavour: Flavour
 ): string {
   const name = componentName(icon.name, variant)
-  const options = variantOptions(variant)
+  const options = variantOptions(variant, drawing.contour)
   const doc = [
     '/**',
     ` * The \`${icon.name}\` icon, ${variant} variant: ${docText(icon.meta.tags.join(', '))}.`,

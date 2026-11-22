@@ -76,7 +76,7 @@ describe('escapeHtml', () => {
      * Scenario: only the five characters change; letters, digits, spaces and non-ASCII
      * text are written as given.
      */
-    expect(escapeHtml('Polvi 16 px · olá')).toBe('Polvi 16 px · olá')
+    expect(escapeHtml('Octopus 16 px · olá')).toBe('Octopus 16 px · olá')
     expect(escapeHtml('')).toBe('')
   })
 })

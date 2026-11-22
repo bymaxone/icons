@@ -11,12 +11,15 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
  *
  * @since 1.0.0
  */
-export const BorderAllIcon = /* @__PURE__ */ createNativeIcon('border-all', [
+export const BorderAllIcon = /* @__PURE__ */ createNativeIcon(
+  'border-all',
   [
-    'path',
-    {
-      d: 'M6.25 5.25h12c.813 0 1 .188 1 1v12c0 .813-.188 1-1 1h-12c-.813 0-1-.188-1-1v-12c0-.813.188-1 1-1'
-    }
+    [
+      'path',
+      {
+        d: 'M6 4.36h12.5l.37.04.31.09.32.16.27.25.19.29.05.13.09.31.04.37.01 12.25-.03.51-.11.42-.16.32-.25.27-.29.19-.13.05-.31.09-.37.04-12.25.01-.51-.03-.42-.11-.32-.16-.27-.25-.19-.29-.05-.13-.09-.31-.04-.37V5.93l.08-.46.1-.28.19-.29.17-.17.29-.19.13-.05.31-.09zm.15 13.99h5.2v-5.2h-5.2zm0-7h5.2v-5.2h-5.2zm7-5.2v5.2h5.2v-5.2zm5.2 7h-5.2v5.2h5.2z'
+      }
+    ]
   ],
-  ['path', { d: 'M12.25 5.25v14m-7-7h14' }]
-])
+  { paint: 'fill' }
+)

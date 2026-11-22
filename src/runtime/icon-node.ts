@@ -64,9 +64,10 @@ export type IconElement = readonly [tag: IconElementTag, attributes: IconElement
 export type IconNode = readonly IconElement[]
 
 /**
- * How a drawing is painted. `stroke` is a line icon (and a 16 px master): shapes
- * are outlined in the icon's colour and the root carries the stroke attributes.
- * `fill` is a filled icon or a brand mark: shapes are filled in the icon's colour
- * and no stroke attribute is written, so `strokeWidth` has nothing to act on.
+ * How a drawing is painted. `stroke` is a custom stroked drawing: shapes are outlined
+ * in the icon's colour and the root carries the stroke attributes. `fill` is every
+ * catalog icon (line, filled and 16 px master, all fixed-weight contours) and every
+ * brand mark: shapes are filled in the icon's colour and no stroke attribute is
+ * written, so `strokeWidth` has nothing to act on.
  */
 export type IconPaint = 'stroke' | 'fill'

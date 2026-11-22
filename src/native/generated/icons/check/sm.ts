@@ -13,6 +13,13 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
  */
 export const CheckSmIcon = /* @__PURE__ */ createNativeIcon(
   'check-sm',
-  [['path', { d: 'm5.25 12.75 4.875 4.875 9.75-9.75' }]],
-  { masterSize: 16 }
+  [
+    [
+      'path',
+      {
+        d: 'M8.73 17.53c-.45-.16-4.43-4.02-4.74-4.59-.53-1 .63-2.09 1.65-1.54.16.09 1.11.98 2.12 1.99l1.82 1.83 4.35-4.34c2.39-2.38 4.46-4.39 4.59-4.45.8-.41 1.77.38 1.6 1.3-.09.46-9.12 9.53-9.75 9.8-.49.2-1.08.2-1.64 0'
+      }
+    ]
+  ],
+  { paint: 'fill', masterSize: 16 }
 )

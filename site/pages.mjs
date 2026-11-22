@@ -18,7 +18,7 @@ export const ORIGIN = 'https://bymaxone.github.io/icons'
 const REPOSITORY = 'https://github.com/bymaxone/icons'
 const NPM = 'https://www.npmjs.com/package/@bymax-one/icons'
 
-/** The Studio accents, by name, as the controls list them. */
+/** The accents, by name, as the controls list them. */
 export const ACCENTS = ['ink', 'yellow', 'orange', 'red', 'green', 'blue', 'lilac']
 
 /** The preview sizes, in px. */
@@ -93,8 +93,7 @@ ${body}
 }
 
 /**
- * The construction specimen: `home` on its visible grid, with the live area, the stroke and
- * the cut between its door and its floor marked, as a type specimen marks a letter.
+ * The construction specimen: `home` on its visible grid, with the live area marked.
  *
  * @param {(component: string) => string} render
  * @returns {string} The figure.
@@ -108,13 +107,6 @@ function specimen(render) {
   <div class="board">
     <svg class="grid24" viewBox="0 0 24 24" aria-hidden="true">${lines}<rect class="live" x="2" y="2" width="20" height="20"/></svg>
     <div class="glyph">${render('HomeIcon')}</div>
-    <svg class="marks" viewBox="0 0 24 24" aria-hidden="true">
-      <rect class="cut" x="9.25" y="17" width="5.5" height="1.5"/>
-      <path class="cut-dim" d="M15.7 17v1.5M15.35 17h.7M15.35 18.5h.7M12 18.5v3.4"/>
-      <path class="stroke-dim" d="M3.5 12.6h1.5M3.5 12.25v.7M5 12.25v.7M3.5 12.95v8.95"/>
-      <text class="cut-label" x="12.35" y="22.65">the cut · 1.5 px</text>
-      <text x="3.85" y="22.65">stroke · 1.5 px</text>
-    </svg>
     <span class="tag tag-grid">24 × 24 grid · 20 px live area</span>
   </div>
   <figcaption class="trio">
@@ -163,8 +155,8 @@ function intro(icons, brands, flags, render) {
     icons.filter((entry) => entry.drawings.some((d) => d.variant === variant)).length
   return `<div class="hero-text">
     <p class="eyebrow">An original icon set for React and the web</p>
-    <h1>One grid.<br>One stroke.<br>Every part apart.</h1>
-    <p class="lede">${n(icons.length)} icons${flags > 0 ? `, ${n(brands)} brand marks and ${n(flags)} country flags` : ` and ${n(brands)} brand marks`}, drawn on a 24 px grid with a 1.5 px stroke and a cut that keeps every part clear of the next. With filled variants, hand-tuned 16 px masters, React components that render in Server Components, raw SVG, a sprite and typed metadata.</p>
+    <h1>Bymax icons</h1>
+    <p class="lede">${n(icons.length)} icons${flags > 0 ? `, ${n(brands)} brand marks and ${n(flags)} country flags` : ` and ${n(brands)} brand marks`}, drawn on a 24 px grid with a fixed weight for each silhouette. With filled variants, hand-tuned 16 px masters, React components that render in Server Components, raw SVG, a sprite and typed metadata.</p>
     <div class="install"><code>pnpm add @bymax-one/icons</code><button type="button" class="copy" data-copy-text="pnpm add @bymax-one/icons" aria-label="Copy the install command">${render('CopyIcon')}</button></div>
     <dl class="facts">
       <div><dt>${n(icons.length)}</dt><dd>icons</dd></div>
@@ -210,7 +202,7 @@ const POPULAR = [
   'download'
 ]
 
-/** The controls bar: the search, then the type, size, stroke and colour, which a narrow screen folds behind a button. */
+/** The controls bar: the search, then the type, size and colour, which a narrow screen folds behind a button. */
 function controls(render) {
   const accents = ACCENTS.map(
     (accent) =>
@@ -233,7 +225,6 @@ function controls(render) {
         SIZES.map((size) => [String(size), String(size)]),
         '24'
       )}
-      <label class="stroke"><span>Stroke</span><input id="stroke" type="range" min="1" max="2.5" step="0.25" value="1.5"><output for="stroke">1.5</output></label>
       <div class="seg sws" role="group" aria-label="Colour">${accents}</div>
     </div>
   </div>`
@@ -322,7 +313,7 @@ export function homePage(catalog, render, version) {
 </section>`
   return layout({
     title: 'Bymax Icons: an original icon set for React and the web',
-    description: `${n(icons.length)} original icons${flags > 0 ? `, ${n(brands)} brand marks and ${n(flags)} country flags` : ` and ${n(brands)} brand marks`} on one 24 px grid with a 1.5 px stroke: React components, raw SVG, a sprite and typed metadata.`,
+    description: `${n(icons.length)} original icons${flags > 0 ? `, ${n(brands)} brand marks and ${n(flags)} country flags` : ` and ${n(brands)} brand marks`} on one 24 px grid with fixed-weight contours: React components, raw SVG, a sprite and typed metadata.`,
     path: '',
     base: '',
     body,

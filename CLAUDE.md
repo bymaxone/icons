@@ -1,7 +1,7 @@
 # @bymax-one/icons — AI Agent Quick Reference
 
 > **Type:** npm public library (NOT an application)
-> **Package:** `@bymax-one/icons` — original Bymax icon set: React 19 components, raw SVG, an SVG sprite and typed metadata on one 24 px grid with a 1.5 px stroke
+> **Package:** `@bymax-one/icons` — original Bymax icon set: React 19 components, raw SVG, an SVG sprite and typed metadata on one 24 px grid with fixed-weight contours
 > **Runtime:** any React 19 renderer, including Server Components | Tooling on Node.js 24+ | Zero direct dependencies (`react` is the only peer)
 > **Status:** published on npm, React Native included; versions are published by `release.yml` from a `vX.Y.Z` tag, with provenance ([docs/release-checklist.md](./docs/release-checklist.md)). The phase order is in [docs/development_plan.md](./docs/development_plan.md).
 

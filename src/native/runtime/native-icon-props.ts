@@ -31,8 +31,10 @@ export interface NativeIconProps extends Omit<SvgProps, OwnedProps | 'strokeWidt
    */
   color?: string | undefined
   /**
-   * Stroke width in dp at the icon's master size, so the default 1.5 is 1.5 dp at 24 on a
-   * line icon and 1.5 dp at 16 on a 16 px master. Ignored by filled and brand icons.
+   * Stroke width in dp at the drawing's master size, for a custom drawing rendered with
+   * stroke paint: the default 1.5 is 1.5 dp at 24, or at 16 with `masterSize: 16`. Ignored
+   * by fill paint, so by every catalog icon (line, filled and 16 px master, which are
+   * fixed-weight contours) and every brand mark.
    */
   strokeWidth?: number | undefined
   /**

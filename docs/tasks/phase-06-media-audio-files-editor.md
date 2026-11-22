@@ -43,7 +43,7 @@ The report is [`../contact-sheets/b2/similarity.md`](../contact-sheets/b2/simila
 
 ### The 16 px check and the master list
 
-[`../contact-sheets/b2/sixteen-px.md`](../contact-sheets/b2/sixteen-px.md) renders every drawing at 16 px and 1x and records two objective tests: two parts that fuse through their inked pixels, and a closed part whose interior fills. `copy`, `duplicate`, `file`, `file-audio`, `file-video`, `frame`, `lock`, `timeline` and `volume` fuse a cut at 16 px (the three file icons share the crease of `file`), and the small nodes of `share` close. The list of 16 px masters in spec §4.2 is the union of these and of the icons the Studio shell shows at 16 px by role, 42 in all. The list rests on role and measurement because the Studio has no application to measure usage in; the plan records when usage returns as a criterion.
+[`../contact-sheets/b2/sixteen-px.md`](../contact-sheets/b2/sixteen-px.md) renders every drawing at 16 px and 1x and records two objective tests: two parts that fuse through their inked pixels, and a closed part whose interior fills. `copy`, `duplicate`, `file`, `file-audio`, `file-video`, `frame`, `lock`, `timeline` and `volume` fuse a cut at 16 px (the three file icons share the crease of `file`), and the small nodes of `share` close. The list of 16 px masters in spec §4.2 is the union of these and of the icons the app shell shows at 16 px by role, 42 in all. The list rests on role and measurement because the first consumer has no application to measure usage in; the plan records when usage returns as a criterion.
 
 ### Measurements
 
@@ -104,7 +104,7 @@ Measured with resvg at 20x zoom. The bounding box includes the stroke, the centr
 
 ### Evidence
 
-- [`../contact-sheets/b2/contact-sheet.png`](../contact-sheets/b2/contact-sheet.png): `pnpm contact-sheet` on the 50 drawings, at 16, 20, 24 and 48 px on the light and dark Studio pages, in the ink and the six accents.
+- [`../contact-sheets/b2/contact-sheet.png`](../contact-sheets/b2/contact-sheet.png): `pnpm contact-sheet` on the 50 drawings, at 16, 20, 24 and 48 px on the light and dark pages, in the ink and the six accents.
 - [`../contact-sheets/b2/family-sheet.png`](../contact-sheets/b2/family-sheet.png): `pnpm family-sheet --highlight`, the batch outlined beside B0 and B1 by category.
 - [`../contact-sheets/b2/similarity.md`](../contact-sheets/b2/similarity.md) and [`../contact-sheets/b2/similarity-sheet.png`](../contact-sheets/b2/similarity-sheet.png): `pnpm similarity --names` on the batch.
 - [`../contact-sheets/b2/alternatives-sheet.png`](../contact-sheets/b2/alternatives-sheet.png): each conventional glyph beside its measured alternatives.

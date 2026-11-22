@@ -2,7 +2,7 @@
  * Unit tests for the contact sheet.
  *
  * Layer: unit, with resvg for the PNG.
- * Goal: pin the sizes, the two Studio pages and their seven colours, the rows a set
+ * Goal: pin the sizes, the two pages and their seven colours, the rows a set
  * yields, the layout of every cell, and that the render is a PNG of the sheet's size.
  * Mocks: none.
  */
@@ -45,9 +45,9 @@ describe('the sheet constants', () => {
     expect([CELL, LABEL_WIDTH, HEADER_HEIGHT]).toStrictEqual([56, 200, 48])
   })
 
-  it('pins the Studio light and dark pages, the ink and the six accents', () => {
+  it('pins the light and dark pages, the ink and the six accents', () => {
     /**
-     * Scenario: the colours are the Studio design system's, so a drawing is judged on
+     * Scenario: the colours are the design system's, so a drawing is judged on
      * the surfaces it will appear on.
      */
     expect(SHEET_THEMES).toStrictEqual([

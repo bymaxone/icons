@@ -35,7 +35,7 @@ What it delivers:
 
 **Generated code exclusions.** `**/generated/**` is excluded from both Jest coverage configs and from Stryker's `mutate`, as `bymaxone/nest-auth` excludes its generated OpenAPI directory. `src/icons/render-smoke.spec.tsx` renders every generated component, aliases included, in jsdom and through `react-dom/server`; its list comes from the generated metadata and the naming rules, so it needs no generation of its own.
 
-**The contact sheet (open question 1).** `pnpm contact-sheet` renders every drawing at 16, 20, 24 and 48 px on the light page (`#e9eff3`) and the dark page (`#101114`) of the Studio design system (`bymax-studio-web` `docs/preview/frontend/design-system.html`, direction A), in the ink and the six accents (the values are in `src/pipeline/contact-sheet.ts`). It writes `reports/contact-sheet.png` (ignored), one device pixel per CSS pixel. Each cell is a group translated into place and scaled from the 24 px master; a nested `<svg>` would be simpler, but resvg aborts the whole process (a Rust panic, not a JavaScript error) on a nested `<svg>` that lies outside the sheet.
+**The contact sheet (open question 1).** `pnpm contact-sheet` renders every drawing at 16, 20, 24 and 48 px on the light page (`#e9eff3`) and the dark page (`#101114`) of the design system, in the ink and the six accents (the values are in `src/pipeline/contact-sheet.ts`). It writes `reports/contact-sheet.png` (ignored), one device pixel per CSS pixel. Each cell is a group translated into place and scaled from the 24 px master; a nested `<svg>` would be simpler, but resvg aborts the whole process (a Rust panic, not a JavaScript error) on a nested `<svg>` that lies outside the sheet.
 
 ### Deviations from the specification
 
@@ -450,7 +450,7 @@ Completion Protocol (after you finish):
 
 #### Acceptance criteria
 
-- [x] `pnpm contact-sheet [--icons <dir>] [--out <file>]` renders every drawing at 16, 20, 24 and 48 px on both Studio pages in the ink and the six accents (values in `src/pipeline/contact-sheet.ts`) to `reports/contact-sheet.png`.
+- [x] `pnpm contact-sheet [--icons <dir>] [--out <file>]` renders every drawing at 16, 20, 24 and 48 px on both pages in the ink and the six accents (values in `src/pipeline/contact-sheet.ts`) to `reports/contact-sheet.png`.
 - [x] Open question 1 of the plan is recorded as resolved with this choice.
 
 #### Files to create / modify
@@ -470,7 +470,7 @@ PRECONDITIONS
 - Task 2.4 is done.
 
 REQUIRED READING (only these):
-- docs/development_plan.md §4 rule 11, §6; bymax-studio-web docs/preview/frontend/design-system.html
+- docs/development_plan.md §4 rule 11, §6
   (read-only: the page, ink and accent tokens of direction A).
 
 TASK
@@ -680,7 +680,7 @@ Completion Protocol (after you finish):
 - 2.4 ✅ 2026-11-08 Generated variant modules, icon entries, barrels, brand modules, typed and frozen `./meta` records, and the static outputs.
 - 2.5 ✅ 2026-11-08 `./runtime`, `./brands`, `./icons/*` and asset subpaths; data-driven `check:exports`, `check:runtime`, `dogfood` and `size`.
 - 2.6 ✅ 2026-11-08 `check:generated`, `check:fixtures` and the CI `verify` steps; actionlint clean.
-- 2.7 ✅ 2026-11-08 `pnpm contact-sheet` with the Studio pages and accents; open question 1 resolved.
+- 2.7 ✅ 2026-11-08 `pnpm contact-sheet` with the design-system pages and accents; open question 1 resolved.
 - 2.8 ✅ 2026-11-08 README, CONTRIBUTING, CLAUDE.md, AGENTS.md and CHANGELOG updated to the pipeline.
 - 2.9 ✅ 2026-11-08 mutation:full 100.00; full local gate and `check:fixtures` green; dashboards at P2 👀.
 - 2.10 ✅ 2026-11-08 phase merged via PR #5 (squash `deb3bb7`); Codex review clean, no open thread.

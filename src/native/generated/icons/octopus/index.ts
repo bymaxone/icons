@@ -4,6 +4,6 @@
  * @layer Generated
  */
 
-export { OctopusIcon, PolviIcon } from './line'
-export { OctopusFilledIcon, PolviFilledIcon } from './filled'
-export { OctopusSmIcon, PolviSmIcon } from './sm'
+export { OctopusIcon } from './line'
+export { OctopusFilledIcon } from './filled'
+export { OctopusSmIcon } from './sm'

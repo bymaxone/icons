@@ -77,7 +77,7 @@ primitives (spec §3.5) are flagged there.
 
 ### Evidence
 
-- [`../contact-sheets/b0/contact-sheet.png`](../contact-sheets/b0/contact-sheet.png): `pnpm contact-sheet`, every drawing at 16, 20, 24 and 48 px on the light and dark Studio pages, in the ink and the six accents.
+- [`../contact-sheets/b0/contact-sheet.png`](../contact-sheets/b0/contact-sheet.png): `pnpm contact-sheet`, every drawing at 16, 20, 24 and 48 px on the light and dark pages, in the ink and the six accents.
 - [`../contact-sheets/b0/family-sheet.png`](../contact-sheets/b0/family-sheet.png): the twelve side by side at 48 px, at 24 and 16 px rendered at 1x and enlarged three times without smoothing, blurred at 16 px, and at 16 and 20 px. There is no earlier batch to sit beside.
 - Similarity: reviewed by hand, as open question 1 of the plan provides for B0. The automated check arrives with P3 and runs on this batch then.
 

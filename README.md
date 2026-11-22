@@ -6,7 +6,7 @@
 
 <p align="center">
   <strong>Original icons for Bymax products, drawn on one grid with one set of rules</strong><br />
-  <sub>24 px grid · 1.5 px round stroke · React 19 and Server Components · Raw SVG and sprite · Typed metadata · Zero Runtime Dependencies</sub>
+  <sub>24 px grid · Fixed-weight contours · React 19 and Server Components · Raw SVG and sprite · Typed metadata · Zero Runtime Dependencies</sub>
 </p>
 
 <p align="center"><a href="https://bymaxone.github.io/icons/">Browse every icon in the catalog</a></p>
@@ -41,7 +41,7 @@ Every non-brand glyph is an original Bymax drawing built on one grid and one set
 so the products that use it do not look like every other app built on the same open-source
 set.
 
-The package holds 1,301 line icons, 51 filled variants, 51 hand-tuned 16 px masters, 114
+The package holds 1,301 line icons, 53 filled variants, 51 hand-tuned 16 px masters, 114
 brand marks and 250 country flags, each as a component, a raw SVG file and a metadata entry;
 every drawing except a flag is also a sprite symbol, because the sprite holds `currentColor`
 drawings. Every drawing is also a React Native component, from `./native`.
@@ -56,8 +56,7 @@ control its version and the supply-chain surface stays minimal.
   are new, made for Bymax products.
 - **Concepts other sets do not draw well.** Scene, shot, keyframe, lip-sync and version are
   first-class icons, not approximations.
-- **One grid, one stroke, verified.** A 24 px master, a 20 px live area and a 1.5 px round
-  stroke apply to every icon, and a lint checks the rules a machine can check.
+- **Fixed-weight contours.** Each drawing encodes its curves, weight and interior spaces on the 24 px grid.
 - **The engineering of the most adopted sets.** One source SVG and one metadata file per
   icon, named aliases with deprecation, per-icon ES modules that tree-shake, an accessible
   default and a searchable catalog.
@@ -68,17 +67,14 @@ control its version and the supply-chain surface stays minimal.
 
 ### 🎨 Drawing System
 
-- ✅ **The grid as data**: `ICON_GRID` holds the viewBox, live area, padding and stroke of the
-  24 px master, frozen and typed with literal values
-- ✅ **The design language**: the twelve keystone icons (`home`, `search`, `play`,
-  `plus`, `close`, `check`, `settings`, `user`, `file`, `folder`, `lightning`, `scene`) fix
-  the signature of the set, a 1.5 px cut that keeps distinct parts from touching
+- ✅ **The grid as data**: `ICON_GRID` holds the viewBox, live area, padding and the default
+  stroke for custom drawings of the 24 px master, frozen and typed with literal values
+- ✅ **Fixed-weight artwork** preserves each silhouette and its negative space across React, SVG and sprite outputs
 - ✅ **The line set**: icons in the same language, from navigation and actions to media,
   files, AI, people, weather, food, sports, transport and objects, in categories
 - ✅ **Filled variants** for icons with a stateful meaning, with the same silhouette as
   the line icon so switching causes no size jump
-- ✅ **Hand-tuned 16 px masters** for icons used in dense UI, drawn separately rather
-  than scaled, at 16 px with the set's 1.5 px stroke
+- ✅ **Dedicated 16 px masters** for dense interfaces
 - ✅ **Aliases**: each alias in the metadata has a component of its own (`DeleteIcon` for
   `trash`); a deprecated alias is the old name of a renamed icon, kept until the version its
   metadata names
@@ -95,7 +91,7 @@ control its version and the supply-chain surface stays minimal.
 - ✅ **Accessible by default**: decorative icons are silent; a `title` turns an icon into a
   named image
 - ✅ **`ref` as a regular prop** (React 19), no `forwardRef`
-- ✅ **`absoluteStrokeWidth`** keeps the visual stroke constant at every size
+- ✅ **`absoluteStrokeWidth`** keeps the visual stroke constant on custom stroked drawings
 - ✅ **One component per drawing**, generated from it: `<Name>Icon` (`LightningIcon`),
   `<Name>FilledIcon`, `<Name>SmIcon`, from the root or from `./icons/<name>`, and
   `<Name>BrandIcon` from `./brands`
@@ -245,9 +241,9 @@ The grid comes from the React-free entry:
 ```typescript
 import { ICON_GRID } from '@bymax-one/icons/meta'
 
-// Rendering at 48 px doubles every unit of the 24 px master.
+// Rendering at 48 px doubles every unit of the 24 px master, its live area included.
 const scale = 48 / ICON_GRID.size
-const visualStroke = ICON_GRID.strokeWidth * scale
+const liveArea = ICON_GRID.liveArea * scale // 40 px
 ```
 
 Every icon is a component, from the root or from its own subpath:
@@ -308,13 +304,13 @@ and a set-wide default comes from CSS (`color`, `width` and `height` on a wrappe
 which needs no client boundary. A context provider for default size or colour is deliberately
 not offered.
 
-| Prop                  | Default        | Description                                                  |
-| --------------------- | -------------- | ------------------------------------------------------------ |
-| `size`                | `24`           | Width and height; 16 on a 16 px master (`LightningSmIcon`)   |
-| `strokeWidth`         | `1.5`          | Stroke width in px at the icon's master size (24, or 16)     |
-| `absoluteStrokeWidth` | `false`        | Keeps the visual stroke width constant at every size         |
-| `color`               | `currentColor` | Colour of the drawing                                        |
-| `title`               | none           | Accessible name; when present the icon is announced as image |
+| Prop                  | Default        | Description                                                               |
+| --------------------- | -------------- | ------------------------------------------------------------------------- |
+| `size`                | `24`           | Width and height; 16 on a 16 px master (`LightningSmIcon`)                |
+| `strokeWidth`         | `1.5`          | Stroke width for custom stroked drawings at their master size (24, or 16) |
+| `absoluteStrokeWidth` | `false`        | Keeps custom stroked drawings at a constant weight                        |
+| `color`               | `currentColor` | Colour of the drawing                                                     |
+| `title`               | none           | Accessible name; when present the icon is announced as image              |
 
 ---
 
@@ -329,23 +325,12 @@ the ones a machine can check.
   reach 21 × 21.
 - The 24 px drawing is the master for every icon. The 16 px masters are separate drawings.
 
-### Stroke
+### Contours
 
-- **1.5 px** at 24 px, round caps, round joins.
-- Straight strokes sit on `.25` / `.75` coordinates so they render sharp at 1x and 2x.
-
-### Corners
-
-- Continuous-curvature (squircle) corners: radius 2.5 on shapes 10 px or larger, 1.25 on
-  smaller shapes, 0 where three or more strokes meet.
-
-### Signature details
-
-- **Overlap knockout.** A modifier (plus, slash, badge, check) cuts the base shape with a
-  uniform 1.5 px gap, and always sits in the bottom-right 10 × 10 quadrant.
-- **Spark dot.** A 2 px filled dot, the only fill allowed in a line icon, marks "generated",
-  "AI" or "new" from the same top-right position.
-- **Recessed terminals.** Open strokes stop 0.5 px short of the live-area edge.
+The line, filled and 16 px variants are fixed-weight contours: each drawing stores
+both edges of its ink as filled vector paths, with interior spaces as holes. The weight
+scales with the size, so `size` and `color` style a catalog icon, and `strokeWidth` and
+`absoluteStrokeWidth` apply only to custom drawings rendered with stroke paint.
 
 ### Theme behaviour
 
@@ -413,7 +398,7 @@ stale copy fails the build. The org package checks then run on the packed tarbal
 | Principle                        | Description                                                                                        |
 | -------------------------------- | -------------------------------------------------------------------------------------------------- |
 | ✏️ **Original drawings**         | Every non-brand glyph is drawn from scratch; similarity with other sets is checked, not assumed    |
-| 📏 **One grid, one stroke**      | Every icon obeys the same grid and stroke rules, and the machine-checkable ones are linted         |
+| 📏 **Shared grid**               | Catalog contours share a 24 px grid and their ink coverage is checked at the master size           |
 | 🧾 **Data, not markup strings**  | Components build their elements from data, so no icon path ever passes through an HTML parser      |
 | 🌳 **One module per icon**       | Per-icon ES modules tree-shake, and sibling modules are external to each other so each exists once |
 | 🔇 **Silent by default**         | A decorative icon is hidden from assistive technology; a `title` makes it a named image            |
@@ -549,16 +534,16 @@ pnpm check:visual  # compare every drawing with its baseline under visual/ (--up
 Exported from `@bymax-one/icons/meta` and re-exported from `@bymax-one/icons`. A frozen
 object whose values are literal types.
 
-| Key              | Value         | Meaning                                      |
-| ---------------- | ------------- | -------------------------------------------- |
-| `viewBox`        | `'0 0 24 24'` | The `viewBox` of every icon's root `<svg>`   |
-| `size`           | `24`          | Width and height of the master canvas, in px |
-| `smSize`         | `16`          | The px size the 16 px masters are made for   |
-| `liveArea`       | `20`          | Width and height a drawing may occupy, in px |
-| `padding`        | `2`           | Space between the live area and each edge    |
-| `strokeWidth`    | `1.5`         | Stroke width of a line icon at 24 px         |
-| `strokeLinecap`  | `'round'`     | Cap applied to the open ends of every stroke |
-| `strokeLinejoin` | `'round'`     | Join applied where two stroke segments meet  |
+| Key              | Value         | Meaning                                         |
+| ---------------- | ------------- | ----------------------------------------------- |
+| `viewBox`        | `'0 0 24 24'` | The `viewBox` of every icon's root `<svg>`      |
+| `size`           | `24`          | Width and height of the master canvas, in px    |
+| `smSize`         | `16`          | The px size the 16 px masters are made for      |
+| `liveArea`       | `20`          | Width and height a drawing may occupy, in px    |
+| `padding`        | `2`           | Space between the live area and each edge       |
+| `strokeWidth`    | `1.5`         | Default width for custom stroked icons at 24 px |
+| `strokeLinecap`  | `'round'`     | Cap applied to the open ends of every stroke    |
+| `strokeLinejoin` | `'round'`     | Join applied where two stroke segments meet     |
 
 ### `IconGrid`
 
@@ -570,14 +555,14 @@ The props of every icon component. Every other SVG attribute, `className`, `styl
 attribute and event handler is passed to the `<svg>`, and one the consumer names overrides
 the default of the same name.
 
-| Prop                  | Type                 | Default        | Behaviour                                                                                          |
-| --------------------- | -------------------- | -------------- | -------------------------------------------------------------------------------------------------- |
-| `size`                | `number \| string`   | `24`           | Width and height, 16 by default on a 16 px master; a number is px, a string any CSS length         |
-| `strokeWidth`         | `number \| string`   | `1.5`          | Stroke width in px at the icon's master size (24, or 16 on a 16 px master); ignored when filled    |
-| `absoluteStrokeWidth` | `boolean`            | `false`        | Writes `strokeWidth * 24 / size`; a CSS-length `size` such as `'1em'` keeps `strokeWidth` as given |
-| `color`               | `string`             | `currentColor` | The stroke (or fill) colour; drawing details in `currentColor` follow it                           |
-| `title`               | `string`             | none           | Gives `role="img"`, `aria-label` and a `<title>` child; an empty title counts as none              |
-| `ref`                 | `Ref<SVGSVGElement>` | none           | A regular prop (React 19)                                                                          |
+| Prop                  | Type                 | Default        | Behaviour                                                                                                        |
+| --------------------- | -------------------- | -------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `size`                | `number \| string`   | `24`           | Width and height, 16 by default on a 16 px master; a number is px, a string any CSS length                       |
+| `strokeWidth`         | `number \| string`   | `1.5`          | Stroke width for custom stroked drawings at their master size (24, or 16 on a 16 px master); ignored when filled |
+| `absoluteStrokeWidth` | `boolean`            | `false`        | Writes `strokeWidth * 24 / size`; a CSS-length `size` such as `'1em'` keeps `strokeWidth` as given               |
+| `color`               | `string`             | `currentColor` | The stroke (or fill) colour; drawing details in `currentColor` follow it                                         |
+| `title`               | `string`             | none           | Gives `role="img"`, `aria-label` and a `<title>` child; an empty title counts as none                            |
+| `ref`                 | `Ref<SVGSVGElement>` | none           | A regular prop (React 19)                                                                                        |
 
 Without a title the icon is `aria-hidden="true"`; any `role` or `aria-*` prop with a value
 suppresses that default. Every icon defaults to `focusable="false"`.
@@ -587,12 +572,12 @@ suppresses that default. Every icon defaults to `focusable="false"`.
 Creates a named icon component from a drawing. `name` is kebab-case (a `TypeError`
 otherwise) and gives the component's `displayName` (`lightning-filled` becomes
 `LightningFilledIcon`) and the class names `bx-icon bx-icon-<name>`, which come before the
-consumer's `className`. `options.paint` is `'stroke'` (the default, for line icons) or
-`'fill'` (filled icons and brand marks: filled in `color`, no stroke attributes).
+consumer's `className`. `options.paint` is `'stroke'` (the default for custom drawings) or
+`'fill'` (catalog icons and brand marks: filled in `color`, no stroke attributes).
 `options.masterSize` is the px size the drawing is made for, 24 by default and 16 for a
 16 px master (a positive number, a `TypeError` otherwise): it is the default `size`, and
-`strokeWidth` is read in px at that size, so a 16 px master draws its 1.5 px stroke as 2.25
-units of the 24 grid.
+`strokeWidth` is read in px at that size, so a stroked drawing made for 16 px draws a 1.5 px
+stroke as 2.25 units of the 24 grid.
 
 ### `Icon`
 

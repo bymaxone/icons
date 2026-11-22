@@ -1,7 +1,7 @@
 /**
  * @fileoverview The drawing grid every Bymax icon is built on: the 24 px master
- * canvas, its live area and padding, the stroke the line icons are drawn with, and
- * the size the 16 px masters are made for.
+ * canvas, its live area and padding, the default stroke of a custom stroked drawing,
+ * and the size the 16 px masters are made for.
  * These values are the design language as data, so the runtime defaults, the
  * generator and the SVG lint read one source instead of repeating the numbers.
  * @layer Metadata
@@ -25,7 +25,7 @@ export interface IconGrid {
   readonly liveArea: 20
   /** Empty space between the live area and each canvas edge, in px. */
   readonly padding: 2
-  /** Stroke width of a line icon at the 24 px master, in px. */
+  /** Default stroke width of a custom stroked drawing at the 24 px master, in px. */
   readonly strokeWidth: 1.5
   /** Cap applied to the open ends of every stroke. */
   readonly strokeLinecap: 'round'

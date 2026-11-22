@@ -1,7 +1,7 @@
 /**
  * @fileoverview The contact sheet a drawing batch is reviewed on: every drawing at 16, 20,
- * 24 and 48 px, on the light and the dark Studio page, in the ink colour and in each of
- * the six Studio accents, rendered to PNG with resvg at one device pixel per CSS pixel.
+ * 24 and 48 px, on the light and the dark page, in the ink colour and in each of
+ * the six accents, rendered to PNG with resvg at one device pixel per CSS pixel.
  * @layer Pipeline
  */
 
@@ -32,10 +32,9 @@ export interface SheetTheme {
 export type SheetColour = readonly [name: string, value: string]
 
 /**
- * The Studio's two pages and the colours drawn on each, from the Studio design system
- * (`bymax-studio-web` `docs/preview/frontend/design-system.html`, direction A): the page
- * and ink tokens, and per accent the light `--accent` and the dark `--vivid` value of the
- * tinted-button variants, which are the ones the Studio paints with.
+ * The two pages and the colours drawn on each, from the Bymax design system (direction A):
+ * the page and ink tokens, and per accent the light `--accent` and the dark `--vivid` value
+ * of the tinted-button variants, which are the ones an interface paints with.
  */
 export const SHEET_THEMES: readonly SheetTheme[] = [
   {
@@ -70,6 +69,7 @@ export const SHEET_THEMES: readonly SheetTheme[] = [
 
 /** One row of the sheet: a label and a drawing. */
 export interface SheetRow {
+  readonly contour?: boolean | undefined
   readonly label: string
   readonly kind: SvgKind
   readonly elements: readonly DrawingElement[]
@@ -108,6 +108,7 @@ export function sheetRows(set: IconSet): SheetRow[] {
       drawnVariants(icon).map(([variant, drawing]) => ({
         label: `${icon.name} (${variant})`,
         kind: variant,
+        ...(drawing.contour && { contour: true }),
         elements: drawing.elements
       }))
     ),
@@ -156,7 +157,7 @@ export function placedDrawing(
     height: _height,
     viewBox: _viewBox,
     ...paint
-  } = rootAttributes(row.kind)
+  } = rootAttributes(row.kind, row.contour)
   const offset = (CELL - size) / 2
   const attributes = {
     transform: `translate(${x + offset} ${y + offset}) scale(${size / ICON_GRID.size})`,

@@ -11,10 +11,24 @@ import { createIcon } from '@bymax-one/icons/runtime'
  *
  * @since 1.0.0
  */
-export const ArrowUpCircleIcon = /* @__PURE__ */ createIcon('arrow-up-circle', [
-  ['circle', { cx: 12.25, cy: 12.25, r: 8.5 }],
-  ['path', { d: 'M9 11.25 12.25 8l3.25 3.25M12.25 8v8' }]
-])
+export const ArrowUpCircleIcon = /* @__PURE__ */ createIcon(
+  'arrow-up-circle',
+  [
+    [
+      'path',
+      {
+        d: 'M10.7 20.89C3.47 19.72.57 10.7 5.79 5.63c3.84-3.73 9.79-3.43 13.16.66 2.18 2.65 2.58 6.62.98 9.79-1.73 3.42-5.55 5.41-9.23 4.81m3.58-1.58c6.82-2.29 7.13-11.96.45-14.47-3.96-1.48-8.31.54-9.82 4.57-2.17 5.8 3.55 11.85 9.37 9.9'
+      }
+    ],
+    [
+      'path',
+      {
+        d: 'M11.64 16.86c-.15-.09-.18-.7-.23-3.84l-.06-3.74-1.13 1.06c-1.24 1.16-1.61 1.31-1.96.78-.27-.41-.15-.58 1.74-2.41 2.16-2.1 1.96-2.1 4.12 0 1.88 1.83 1.79 1.72 1.79 2.11.01.96-.69.8-2.01-.48-.6-.59-1.12-1.07-1.14-1.07-.03 0-.05 1.65-.05 3.67 0 3.18-.02 3.69-.18 3.85-.21.21-.62.25-.89.07'
+      }
+    ]
+  ],
+  { paint: 'fill' }
+)
 
 /** `arrow-circle-up`: an alias of {@link ArrowUpCircleIcon}. */
 export const ArrowCircleUpIcon = ArrowUpCircleIcon

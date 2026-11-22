@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * @fileoverview `pnpm contact-sheet`: renders every drawing at 16, 20, 24 and 48 px on the
- * light and dark Studio pages, in the ink and the six accents, to a PNG under `reports/`.
+ * light and dark pages, in the ink and the six accents, to a PNG under `reports/`.
  * A thin entry over `src/pipeline/cli.ts`.
  * @layer scripts
  *

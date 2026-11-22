@@ -68,7 +68,7 @@ After that publish, the founder sets the trusted publisher on npmjs.com:
 
 - The plan's definition of done names 1.0.0.
 - The component API, the subpaths and the metadata shape are what the spec fixed, and P5 adds no API change.
-- `bymax-studio-web` is to depend on a range that accepts compatible fixes and features.
+- A consumer app is to depend on a range that accepts compatible fixes and features.
 - A 0.x version would make a caret range pin the minor version.
 
 The release branch sets `version` and every `since` to 1.0.0 and cuts `## [1.0.0]` in the CHANGELOG.
@@ -162,7 +162,7 @@ For the founder. Every step runs on the founder's machine, logged in to npm as a
    - It finds 1.0.0 already on npm, skips the publish and creates the GitHub Release from the CHANGELOG section.
 
 9. **After.**
-   - `bymax-studio-web` switches its dependency to `@bymax-one/icons@^1.0.0`.
+   - A consumer app switches its dependency to `@bymax-one/icons@^1.0.0`.
    - The README's npm badge becomes a link to the package, in the next release.
    - The catalog header's "npm soon" (`site/pages.mjs`, the `soon` span) becomes a link to `https://www.npmjs.com/package/@bymax-one/icons`. It is in the site only, so it needs no package release.
 

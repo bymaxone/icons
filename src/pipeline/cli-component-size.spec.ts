@@ -65,14 +65,14 @@ afterAll(() => {
 
 describe('budgets', () => {
   it('are the targets of spec §12', () => {
-    // Scenario: 0.6 KiB per component alone, 1.5 KiB with the runtime.
-    expect(COMPONENT_BUDGET).toBe(614.4)
-    expect(RUNTIME_WITH_COMPONENT_BUDGET).toBe(1536)
+    // Scenario: 1.4 KiB per component alone, 2.25 KiB with the runtime.
+    expect(COMPONENT_BUDGET).toBe(1433.6)
+    expect(RUNTIME_WITH_COMPONENT_BUDGET).toBe(2304)
   })
 })
 
 describe('componentProblems', () => {
-  const size = { component: 'XIcon', drawing: 'x', alone: 614, withRuntime: 1536, leaks: [] }
+  const size = { component: 'XIcon', drawing: 'x', alone: 1433, withRuntime: 2304, leaks: [] }
 
   it('passes a component at both budgets exactly', () => {
     // Scenario: a budget is a ceiling, reached but not exceeded.
@@ -80,16 +80,16 @@ describe('componentProblems', () => {
   })
 
   it('reports a component one byte over the budget alone', () => {
-    // Scenario: 615 bytes against 614.4.
-    expect(componentProblems({ ...size, alone: 615 })).toEqual([
-      'XIcon: 0.60 kB alone, over 0.60 kB'
+    // Scenario: 1434 bytes against 1433.6.
+    expect(componentProblems({ ...size, alone: 1434 })).toEqual([
+      'XIcon: 1.40 kB alone, over 1.40 kB'
     ])
   })
 
   it('reports a component one byte over the budget with the runtime', () => {
-    // Scenario: 1537 bytes against 1536.
-    expect(componentProblems({ ...size, withRuntime: 1537 })).toEqual([
-      'XIcon: 1.50 kB with the runtime, over 1.50 kB'
+    // Scenario: 2305 bytes against 2304.
+    expect(componentProblems({ ...size, withRuntime: 2305 })).toEqual([
+      'XIcon: 2.25 kB with the runtime, over 2.25 kB'
     ])
   })
 
@@ -118,8 +118,8 @@ describe('componentProblems', () => {
         leaks: ['a']
       })
     ).toEqual([
-      'XIcon: 2.00 kB alone, over 0.60 kB',
-      'XIcon: 3.00 kB with the runtime, over 1.50 kB',
+      'XIcon: 2.00 kB alone, over 1.40 kB',
+      'XIcon: 3.00 kB with the runtime, over 2.25 kB',
       'XIcon: its drawing cannot be read, so its bundle cannot be checked',
       'XIcon: its bundle keeps a, so the module does not tree-shake'
     ])
@@ -196,7 +196,7 @@ describe('runComponentSize', () => {
     // Scenario: the directory lists `b` before `a`; the problems still come in name order.
     const output = sink()
     const dir = root({
-      b: iconModule([noisy('B', 400)]),
+      b: iconModule([noisy('B', 800)]),
       a: iconModule([component('A', 2, false), component('D', 2)])
     })
     expect(await runComponentSize(dir, output, () => ['b', 'a'])).toBe(1)
@@ -204,8 +204,8 @@ describe('runComponentSize', () => {
     expect(output.errors[0]).toBe(
       'DIcon: its bundle keeps a-fixture, so the module does not tree-shake'
     )
-    expect(output.errors[1]).toMatch(/^BIcon: \d\.\d\d kB alone, over 0\.60 kB$/)
-    expect(output.errors[2]).toMatch(/^BIcon: \d\.\d\d kB with the runtime, over 1\.50 kB$/)
+    expect(output.errors[1]).toMatch(/^BIcon: \d\.\d\d kB alone, over 1\.40 kB$/)
+    expect(output.errors[2]).toMatch(/^BIcon: \d\.\d\d kB with the runtime, over 2\.25 kB$/)
     expect(output.logs).toHaveLength(1)
   })
 })

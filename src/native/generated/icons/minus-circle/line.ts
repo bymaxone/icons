@@ -11,7 +11,21 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
  *
  * @since 1.0.0
  */
-export const MinusCircleIcon = /* @__PURE__ */ createNativeIcon('minus-circle', [
-  ['circle', { cx: 12.25, cy: 12.25, r: 8.5 }],
-  ['path', { d: 'M8.75 12.25h7' }]
-])
+export const MinusCircleIcon = /* @__PURE__ */ createNativeIcon(
+  'minus-circle',
+  [
+    [
+      'path',
+      {
+        d: 'M10.4 20.84C2.85 19.07.86 9.27 7.11 4.67c7.36-5.42 16.68 3.15 12.48 11.48-1.77 3.51-5.69 5.51-9.19 4.69m2.62-1.13c4.86-.63 7.88-6.9 5.49-11.39-2.44-4.58-7.97-5.46-11.55-1.84-4.77 4.82-1.71 13.01 4.98 13.33.13 0 .62-.04 1.08-.1'
+      }
+    ],
+    [
+      'path',
+      {
+        d: 'M7.73 12.47c-.32-.32-.3-.84.04-1.16.38-.36 8.18-.41 8.6-.05.38.32.43.76.13 1.13l-.25.32h-4.14c-3.98 0-4.15-.01-4.38-.24'
+      }
+    ]
+  ],
+  { paint: 'fill' }
+)

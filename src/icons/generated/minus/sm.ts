@@ -13,8 +13,15 @@ import { createIcon } from '@bymax-one/icons/runtime'
  */
 export const MinusSmIcon = /* @__PURE__ */ createIcon(
   'minus-sm',
-  [['path', { d: 'M7.5 12.75H18' }]],
-  { masterSize: 16 }
+  [
+    [
+      'path',
+      {
+        d: 'M6.37 12.84c-.52-.29-.61-1-.19-1.46l.28-.3h5.51c5.39 0 5.52 0 5.73.16.55.41.5 1.29-.09 1.6-.35.18-10.9.18-11.24 0'
+      }
+    ]
+  ],
+  { paint: 'fill', masterSize: 16 }
 )
 
 /** `subtract`: an alias of {@link MinusSmIcon}. */

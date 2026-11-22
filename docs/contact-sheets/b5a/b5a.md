@@ -1,6 +1,6 @@
 # B5a: actions, status and controls
 
-The first sub-batch of B5, the general-purpose icons the first 148 drawings, drawn around the Studio, did not cover. [`b5a-1.png`](./b5a-1.png), [`b5a-2.png`](./b5a-2.png) and [`b5a-3.png`](./b5a-3.png) show the 25 line drawings at 48 and at 24 and 16 px 1x on the dark and light pages, and blurred; [`b5a-filled.png`](./b5a-filled.png) shows the six filled drawings beside their line drawings. The delegated auditor approved them on behalf of the founder.
+The first sub-batch of B5, the general-purpose icons the first 148 drawings, drawn around the first consumer, did not cover. [`b5a-1.png`](./b5a-1.png), [`b5a-2.png`](./b5a-2.png) and [`b5a-3.png`](./b5a-3.png) show the 25 line drawings at 48 and at 24 and 16 px 1x on the dark and light pages, and blurred; [`b5a-filled.png`](./b5a-filled.png) shows the six filled drawings beside their line drawings. The delegated auditor approved them on behalf of the founder.
 
 ## Language
 
