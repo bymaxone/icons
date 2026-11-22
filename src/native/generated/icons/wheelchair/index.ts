@@ -5,3 +5,4 @@
  */
 
 export { WheelchairIcon } from './line'
+export { WheelchairFilledIcon } from './filled'

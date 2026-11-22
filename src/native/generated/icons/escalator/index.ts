@@ -5,3 +5,4 @@
  */
 
 export { EscalatorIcon } from './line'
+export { EscalatorFilledIcon } from './filled'

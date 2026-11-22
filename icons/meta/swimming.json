@@ -3,8 +3,8 @@
   "label": "Swimming",
   "tags": ["swimming", "swimmer", "pool", "water sport"],
   "categories": ["health", "games"],
-  "useCases": ["Marks a swimming pool", "Tracks a swim workout"],
-  "variants": ["line"],
+  "useCases": ["Marks a swimming pool", "Tracks a swim workout", "Filled: active swim workout"],
+  "variants": ["line", "filled"],
   "opticalSizes": [24],
   "since": "1.0.0"
 }

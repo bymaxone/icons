@@ -5,3 +5,4 @@
  */
 
 export { ParachuteIcon } from './line'
+export { ParachuteFilledIcon } from './filled'

@@ -5,3 +5,4 @@
  */
 
 export { AccessibilityIcon } from './line'
+export { AccessibilityFilledIcon } from './filled'

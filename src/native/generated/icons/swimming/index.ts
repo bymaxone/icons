@@ -5,3 +5,4 @@
  */
 
 export { SwimmingIcon } from './line'
+export { SwimmingFilledIcon } from './filled'

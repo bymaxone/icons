@@ -3,8 +3,8 @@
   "label": "Yoga",
   "tags": ["yoga", "pose", "stretch", "wellness"],
   "categories": ["health", "people"],
-  "useCases": ["Marks a yoga class", "Shows a calm exercise"],
-  "variants": ["line"],
+  "useCases": ["Marks a yoga class", "Shows a calm exercise", "Filled: selected yoga class"],
+  "variants": ["line", "filled"],
   "opticalSizes": [24],
   "since": "1.0.0"
 }

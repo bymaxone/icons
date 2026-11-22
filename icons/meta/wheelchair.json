@@ -3,8 +3,12 @@
   "label": "Wheelchair",
   "tags": ["wheelchair", "accessible", "mobility", "disability"],
   "categories": ["health", "people"],
-  "useCases": ["Marks an accessible place", "Shows mobility support"],
-  "variants": ["line"],
+  "useCases": [
+    "Marks an accessible place",
+    "Shows mobility support",
+    "Filled: selected wheelchair-accessible route"
+  ],
+  "variants": ["line", "filled"],
   "opticalSizes": [24],
   "since": "1.0.0"
 }
