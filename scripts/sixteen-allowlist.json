@@ -508,10 +508,6 @@
       "pairs": ["0-1", "1-2"],
       "why": "At 16 px the nearest ink pixels in the reference are 0.51, 0.68 px apart for these pairs, respectively. Preserve the spacing of the devices drawing."
     },
-    "dew": {
-      "pairs": ["0-1"],
-      "why": "At 16 px the nearest ink pixels in the reference are 1.08 px apart for these pairs, respectively. Preserve the spacing of the dew drawing."
-    },
     "dialpad": {
       "pairs": ["2-5", "7-8"],
       "why": "At 16 px the nearest ink pixels in the reference are 1.13, 1.06 px apart for these pairs, respectively. Preserve the spacing of the dialpad drawing."
