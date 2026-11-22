@@ -146,6 +146,7 @@ function readDrawings(
         path: file.path,
         text: file.text,
         elements: report.elements,
+        ...(report.contour && { contour: true }),
         ...(report.viewBox === undefined ? {} : { viewBox: report.viewBox })
       })
     }

@@ -11,11 +11,24 @@ import { createIcon } from '@bymax-one/icons/runtime'
  *
  * @since 1.0.0
  */
-export const ThermometerIcon = /* @__PURE__ */ createIcon('thermometer', [
-  ['path', { d: 'M10.25 13.25v-8.5a2 2 0 0 1 4 0v8.5a4.5 4.5 0 1 1-4 0' }],
-  ['path', { d: 'M12.25 16.75h.01' }],
-  ['path', { d: 'M17.25 5.25h2m-2 3h2m-2 3h2' }]
-])
+export const ThermometerIcon = /* @__PURE__ */ createIcon(
+  'thermometer',
+  [
+    [
+      'path',
+      {
+        d: 'M10.46 21.75c-3.32-1.19-4.33-5.25-1.96-7.88l.48-.52V8.77c0-4.37.01-4.6.27-5.14.91-1.87 3.45-2.18 4.88-.6.72.81.76 1.09.76 5.87v4.32l.6.64c3.43 3.67-.34 9.57-5.03 7.89m3.41-1.33c2.28-1.39 2.57-4.14.62-6.01l-.65-.62V9.18c0-4.12-.02-4.65-.23-5.06-.68-1.34-2.53-1.4-3.32-.1-.25.4-.26.67-.26 5.16v4.74l-.54.52c-3.17 3.07.62 8.27 4.38 5.98'
+      }
+    ],
+    [
+      'path',
+      {
+        d: 'M11.13 19.05c-1.51-.69-1.55-2.95-.07-3.73l.45-.23-.09-3.38c-.09-3.67-.02-4.08.68-3.82.4.15.42.3.42 3.8l.01 3.43.4.17c1.35.56 1.56 2.71.35 3.57-.5.35-1.58.45-2.15.19'
+      }
+    ]
+  ],
+  { paint: 'fill' }
+)
 
 /** `temperature`: an alias of {@link ThermometerIcon}. */
 export const TemperatureIcon = ThermometerIcon

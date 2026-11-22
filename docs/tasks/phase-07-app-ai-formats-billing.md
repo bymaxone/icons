@@ -1,4 +1,4 @@
-# Phase B3: studio-ai-formats-billing
+# Phase B3: app-ai-formats-billing
 
 > **Status**: ✅ Done · **Progress**: 6 / 6 tasks · **Last updated**: 2026-11-11
 > **Source roadmap**: [`../development_plan.md`](../development_plan.md) §5 (B3)
@@ -20,10 +20,10 @@ B3 draws the Credits and billing, People and roles, Formats, AI and agent and Sy
 - **`character`.** A bust with a badge read as `user-plus`. It is now a mask, a persona rather than a user.
 - **`storyboard`.** Two equal panels read as "00". It is now a wide panel and a narrow one, with their captions.
 - **`globe`.** Every alternative read as a beetle or a "no" sign, so the ring with a meridian and the equator stays, as a convention (spec §3 item 5).
-- **`octopus`** (alias `polvi`, the agent of the Studio). A bulbous mantle narrowing down, four arms and two solid eyes.
+- **`octopus`** (the agent mascot). A bulbous mantle narrowing down, four arms and two solid eyes.
 - **`feedback`.** A four-point star is the AI motif of the set; a five-point rating star replaces it.
 
-`users` was centred again and the highlight of `accent` shortened so it keeps a clear pixel at 16 px. Following the naming rule of spec §4.3, the mascot is named for what it depicts, `octopus`, with the product name `polvi` as its alias.
+`users` was centred again and the highlight of `accent` shortened so it keeps a clear pixel at 16 px. Following the naming rule of spec §4.3, the mascot is named for what it depicts, `octopus`.
 
 ### Where the language shows
 
@@ -118,7 +118,7 @@ The root and `meta` size budgets are recalibrated in the header of `scripts/chec
 
 ## Reference docs
 
-- [`../development_plan.md`](../development_plan.md) §4 rule 11 "Drawing batch gate", §5 "B3: studio-ai-formats-billing".
+- [`../development_plan.md`](../development_plan.md) §4 rule 11 "Drawing batch gate", §5 "B3: app-ai-formats-billing".
 - [`../technical_specification.md`](../technical_specification.md) §2, §3, §4.1, §4.2, §4.3.
 
 ---
@@ -174,7 +174,7 @@ Verification:
 
 #### Acceptance criteria
 
-- [x] `aspect-16-9`, `aspect-9-16`, `aspect-1-1`, `aspect-4-5`, `duration`, `resolution`, `sparkle`, `octopus` (alias `polvi`), `agent`, `prompt`, `generate`, `regenerate`, `variations`, `storyboard`, `script` and `style`, with their metadata.
+- [x] `aspect-16-9`, `aspect-9-16`, `aspect-1-1`, `aspect-4-5`, `duration`, `resolution`, `sparkle`, `octopus`, `agent`, `prompt`, `generate`, `regenerate`, `variations`, `storyboard`, `script` and `style`, with their metadata.
 - [x] `pnpm lint:icons` passes; `pnpm check:generated` is clean.
 
 #### Agent prompt

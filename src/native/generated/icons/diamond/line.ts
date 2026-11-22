@@ -11,14 +11,18 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
  *
  * @since 1.0.0
  */
-export const DiamondIcon = /* @__PURE__ */ createNativeIcon('diamond', [
+export const DiamondIcon = /* @__PURE__ */ createNativeIcon(
+  'diamond',
   [
-    'path',
-    {
-      d: 'M10.659 4.841q1.591-1.591 3.182 0l5.818 5.818q1.591 1.591 0 3.182l-5.818 5.818q-1.591 1.591-3.182 0l-5.818-5.818q-1.591-1.591 0-3.182Z'
-    }
-  ]
-])
+    [
+      'path',
+      {
+        d: 'M11.23 20.51c-.47-.27-7.75-7.49-7.89-7.83-.38-.92-.35-.97 3.65-4.94 4.75-4.73 4.79-4.76 5.73-4.26.75.39 7.81 7.49 7.94 7.98.25.9.19.97-4.01 5.25l-3.9 3.95-.63-.01c-.35 0-.75-.07-.89-.14m4.76-4.56c2.96-2.99 3.73-3.84 3.74-4.08 0-.24-.68-.97-3.64-3.86-4.18-4.1-3.87-3.84-4.38-3.49-.6.41-7.56 7.4-7.56 7.59 0 .1.69.85 1.53 1.67s2.55 2.5 3.79 3.72c1.62 1.6 2.34 2.23 2.53 2.23s1.23-.98 3.99-3.78'
+      }
+    ]
+  ],
+  { paint: 'fill' }
+)
 
 /** `diamond-suit`: an alias of {@link DiamondIcon}. */
 export const DiamondSuitIcon = DiamondIcon

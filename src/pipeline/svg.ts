@@ -9,7 +9,7 @@ import { optimize } from 'svgo'
 import type { CustomPlugin, XastChild, XastElement, XastParent, XastRoot } from 'svgo'
 
 import { normalizeFlag } from './svg-flag.ts'
-import { isStrokeKind, rootAttributes } from './svg-kind.ts'
+import { isStrokeKind, rootAttributes, usesContours } from './svg-kind.ts'
 import type { SvgKind } from './svg-kind.ts'
 
 /** An element of a parsed SVG, with its attributes as written. */
@@ -93,14 +93,14 @@ export function isSparkDot(name: string, attributes: Readonly<Record<string, str
 }
 
 /** Writes the kind's fixed root attributes, replacing whatever the root carried. */
-function setRootPlugin(kind: SvgKind): CustomPlugin {
+function setRootPlugin(kind: SvgKind, contour: boolean): CustomPlugin {
   return {
     // Stryker disable next-line StringLiteral: SVGO uses a custom plugin's name only as a label, so any string behaves the same.
     name: 'bymax-set-root',
     fn: () => ({
       element: {
         enter: (node: XastElement, parent: XastParent): void => {
-          if (parent.type === 'root') node.attributes = { ...rootAttributes(kind) }
+          if (parent.type === 'root') node.attributes = { ...rootAttributes(kind, contour) }
         }
       }
     })
@@ -149,11 +149,12 @@ function stripPaintPlugin(kind: SvgKind): CustomPlugin {
  */
 export function normalizeSvg(text: string, kind: SvgKind): string {
   if (kind === 'flags') return normalizeFlag(text)
+  const contour = usesContours(kind, svgRoot(parseSvg(text))?.attributes['fill'])
   return optimize(text, {
     floatPrecision: 3,
     js2svg: { pretty: true, indent: 2, eol: 'lf' },
     plugins: [
-      setRootPlugin(kind),
+      setRootPlugin(kind, contour),
       {
         name: 'preset-default',
         params: {
@@ -164,8 +165,8 @@ export function normalizeSvg(text: string, kind: SvgKind): string {
           }
         }
       },
-      stripPaintPlugin(kind),
-      setRootPlugin(kind)
+      stripPaintPlugin(contour ? 'filled' : kind),
+      setRootPlugin(kind, contour)
     ]
   }).data
 }

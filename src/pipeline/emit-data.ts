@@ -136,8 +136,8 @@ export function metadataModule(set: IconSet): string {
 }
 
 /** The attributes of a sprite symbol: the kind's root attributes without the document ones. */
-function symbolAttributes(id: string, kind: SvgKind): Record<string, string> {
-  const { xmlns: _xmlns, width: _width, height: _height, ...paint } = rootAttributes(kind)
+function symbolAttributes(id: string, kind: SvgKind, contour?: boolean): Record<string, string> {
+  const { xmlns: _xmlns, width: _width, height: _height, ...paint } = rootAttributes(kind, contour)
   return { id, ...paint }
 }
 
@@ -149,11 +149,17 @@ function symbolAttributes(id: string, kind: SvgKind): Record<string, string> {
  * @returns The sprite file, ending with a newline.
  */
 export function sprite(set: IconSet): string {
-  const symbols: { id: string; kind: SvgKind; elements: readonly DrawingElement[] }[] = [
+  const symbols: {
+    id: string
+    kind: SvgKind
+    contour?: boolean | undefined
+    elements: readonly DrawingElement[]
+  }[] = [
     ...set.icons.flatMap((icon) =>
       drawnVariants(icon).map(([variant, drawing]) => ({
         id: symbolId(icon.name, variant),
         kind: variant,
+        contour: drawing.contour,
         elements: drawing.elements
       }))
     ),
@@ -163,8 +169,8 @@ export function sprite(set: IconSet): string {
       elements: brand.drawing.elements
     }))
   ]
-  const body = symbols.map(({ id, kind, elements }) =>
-    serializeContainer('symbol', symbolAttributes(id, kind), elements, '  ')
+  const body = symbols.map(({ id, kind, elements, contour }) =>
+    serializeContainer('symbol', symbolAttributes(id, kind, contour), elements, '  ')
   )
   return ['<svg xmlns="http://www.w3.org/2000/svg">', ...body, '</svg>', ''].join('\n')
 }

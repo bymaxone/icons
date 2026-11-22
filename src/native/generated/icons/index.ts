@@ -1211,10 +1211,7 @@ export { OctagonIcon } from '@bymax-one/icons/native/icons/octagon'
 export {
   OctopusFilledIcon,
   OctopusIcon,
-  OctopusSmIcon,
-  PolviFilledIcon,
-  PolviIcon,
-  PolviSmIcon
+  OctopusSmIcon
 } from '@bymax-one/icons/native/icons/octopus'
 export { OnionIcon } from '@bymax-one/icons/native/icons/onion'
 export { OpacityIcon } from '@bymax-one/icons/native/icons/opacity'
@@ -1386,7 +1383,7 @@ export { RouteOffIcon } from '@bymax-one/icons/native/icons/route-off'
 export { RouterIcon } from '@bymax-one/icons/native/icons/router'
 export { RugbyIcon } from '@bymax-one/icons/native/icons/rugby'
 export { RulerIcon } from '@bymax-one/icons/native/icons/ruler'
-export { RunIcon, RunSmIcon } from '@bymax-one/icons/native/icons/run'
+export { RunFilledIcon, RunIcon, RunSmIcon } from '@bymax-one/icons/native/icons/run'
 export { RunningShoeIcon } from '@bymax-one/icons/native/icons/running-shoe'
 export { SafeIcon, VaultIcon } from '@bymax-one/icons/native/icons/safe'
 export { BoatIcon, SailboatIcon } from '@bymax-one/icons/native/icons/sailboat'
@@ -1774,7 +1771,7 @@ export {
   VolumeOffIcon,
   VolumeXIcon
 } from '@bymax-one/icons/native/icons/volume-off'
-export { WalkIcon } from '@bymax-one/icons/native/icons/walk'
+export { WalkFilledIcon, WalkIcon } from '@bymax-one/icons/native/icons/walk'
 export { WallIcon } from '@bymax-one/icons/native/icons/wall'
 export { WalletFilledIcon, WalletIcon, WalletSmIcon } from '@bymax-one/icons/native/icons/wallet'
 export { WalletCheckIcon } from '@bymax-one/icons/native/icons/wallet-check'

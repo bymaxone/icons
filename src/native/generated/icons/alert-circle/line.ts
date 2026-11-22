@@ -11,11 +11,28 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
  *
  * @since 1.0.0
  */
-export const AlertCircleIcon = /* @__PURE__ */ createNativeIcon('alert-circle', [
-  ['circle', { cx: 12.25, cy: 12.25, r: 8.5 }],
-  ['path', { d: 'M12.25 7.75v5' }],
-  ['path', { d: 'M12.25 15.75h.01' }]
-])
+export const AlertCircleIcon = /* @__PURE__ */ createNativeIcon(
+  'alert-circle',
+  [
+    [
+      'path',
+      {
+        d: 'M10.81 20.9c-4.35-.73-8.06-5.36-7.59-9.49.9-8 10.58-11.27 15.54-5.25 5.16 6.26-.11 16.05-7.95 14.74m3.6-1.71c4.23-1.43 6.21-6.48 4.19-10.69-2.75-5.74-11.04-5.18-13.46.9-2.26 5.69 3.48 11.75 9.27 9.79'
+      }
+    ],
+    [
+      'path',
+      {
+        d: 'M11.56 13.38c-.33-.25-.32-6.23 0-6.52.27-.24.73-.25 1.04-.03.32.24.42 5.95.11 6.43-.21.32-.8.38-1.15.12'
+      }
+    ],
+    [
+      'path',
+      { d: 'M11.45 16.85a1 1 0 0 1 .12-1.7c.52-.27.82-.23 1.21.16.92.92-.29 2.32-1.33 1.54' }
+    ]
+  ],
+  { paint: 'fill' }
+)
 
 /** `exclamation-circle`: an alias of {@link AlertCircleIcon}. */
 export const ExclamationCircleIcon = AlertCircleIcon

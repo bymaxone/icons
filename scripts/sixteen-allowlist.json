@@ -1,296 +1,1760 @@
 {
   "icons": {
-    "alien": {
-      "pairs": ["0-1"],
-      "why": "the eyes fuse with the head outline; it still reads as an alien head"
+    "accessibility": {
+      "pairs": ["0-1", "1-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 1.00, 0.58 px apart for these pairs, respectively. Preserve the spacing of the accessibility drawing."
     },
-    "antenna": {
-      "pairs": ["2-3", "3-5"],
-      "why": "the listed pair of elements closes at 16 px; the drawing still reads as a broadcast antenna"
+    "air-conditioner": {
+      "pairs": ["0-3", "0-4", "0-5"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.61, 0.61, 0.61 px apart for these pairs, respectively. Preserve the spacing of the air-conditioner drawing."
+    },
+    "alarm-clock": {
+      "pairs": ["0-2", "1-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.26, 0.37 px apart for these pairs, respectively. Preserve the spacing of the alarm-clock drawing."
+    },
+    "alarm-clock-check": {
+      "pairs": ["0-2", "1-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.30, 0.42 px apart for these pairs, respectively. Preserve the spacing of the alarm-clock-check drawing."
+    },
+    "alarm-clock-minus": {
+      "pairs": ["0-2", "1-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.34, 0.42 px apart for these pairs, respectively. Preserve the spacing of the alarm-clock-minus drawing."
+    },
+    "alarm-clock-off": {
+      "pairs": ["0-2", "1-2", "2-4", "3-4"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.52, 0.54, 0.63, 0.63 px apart for these pairs, respectively. Preserve the spacing of the alarm-clock-off drawing."
+    },
+    "alarm-clock-plus": {
+      "pairs": ["0-2", "1-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.53, 0.53 px apart for these pairs, respectively. Preserve the spacing of the alarm-clock-plus drawing."
+    },
+    "alarm-snooze": {
+      "pairs": ["0-2", "1-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.49, 0.53 px apart for these pairs, respectively. Preserve the spacing of the alarm-snooze drawing."
+    },
+    "alien": {
+      "pairs": ["0-1", "0-2", "1-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.62, 0.65, 1.06 px apart for these pairs, respectively. Preserve the spacing of the alien drawing."
+    },
+    "align-bottom": {
+      "pairs": ["0-1", "0-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.60, 0.60 px apart for these pairs, respectively. Preserve the spacing of the align-bottom drawing."
+    },
+    "ambulance": {
+      "pairs": ["0-1", "0-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.70, 0.51 px apart for these pairs, respectively. Preserve the spacing of the ambulance drawing."
+    },
+    "apps": {
+      "pairs": ["0-1", "0-2", "1-3", "2-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.56, 0.56, 0.56, 0.56 px apart for these pairs, respectively. Preserve the spacing of the apps drawing."
+    },
+    "arrow-up-clock": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.86 px apart for these pairs, respectively. Preserve the spacing of the arrow-up-clock drawing."
+    },
+    "aspect-1-1": {
+      "pairs": ["0-1", "0-2", "0-3", "0-4"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.92, 0.99, 0.92, 0.99 px apart for these pairs, respectively. Preserve the spacing of the aspect-1-1 drawing."
     },
     "aspect-16-9": {
-      "pairs": ["0-1"],
-      "why": "aspect family: the frame's proportion carries the meaning; at 16 px the inner corner marks meet the frame on the short side and the ratio still reads, wide or tall, in the blur"
+      "pairs": ["0-1", "0-2", "0-3", "0-4"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.85, 0.85, 0.94, 0.94 px apart for these pairs, respectively. Preserve the spacing of the aspect-16-9 drawing."
     },
-    "aspect-9-16": {
+    "atm": {
       "pairs": ["0-1"],
-      "why": "aspect family: the frame's proportion carries the meaning; at 16 px the inner corner marks meet the frame on the short side and the ratio still reads, wide or tall, in the blur"
+      "why": "At 16 px the nearest ink pixels in the reference are 0.58 px apart for these pairs, respectively. Preserve the spacing of the atm drawing."
     },
-    "book-open": {
+    "award": {
+      "pairs": ["0-1", "1-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.86, 0.83 px apart for these pairs, respectively. Preserve the spacing of the award drawing."
+    },
+    "baby-bottle": {
+      "pairs": ["0-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.68 px apart for these pairs, respectively. Preserve the spacing of the baby-bottle drawing."
+    },
+    "baby-carriage": {
       "pairs": ["0-1"],
-      "why": "still reads as the object in the blur"
+      "why": "At 16 px the nearest ink pixels in the reference are 0.75 px apart for these pairs, respectively. Preserve the spacing of the baby-carriage drawing."
+    },
+    "backpack": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.58 px apart for these pairs, respectively. Preserve the spacing of the backpack drawing."
+    },
+    "bag": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.15 px apart for these pairs, respectively. Preserve the spacing of the bag drawing."
+    },
+    "balloon": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.77 px apart for these pairs, respectively. Preserve the spacing of the balloon drawing."
+    },
+    "banana": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.59 px apart for these pairs, respectively. Preserve the spacing of the banana drawing."
+    },
+    "bank": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.50 px apart for these pairs, respectively. Preserve the spacing of the bank drawing."
+    },
+    "barcode": {
+      "pairs": ["0-1", "1-2", "2-3", "5-6", "6-7"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.63, 0.63, 0.71, 0.49, 0.71 px apart for these pairs, respectively. Preserve the spacing of the barcode drawing."
+    },
+    "basket": {
+      "pairs": ["0-2", "1-2", "1-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.19, 0.19, 0.24 px apart for these pairs, respectively. Preserve the spacing of the basket drawing."
+    },
+    "basketball-hoop": {
+      "pairs": ["1-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.38 px apart for these pairs, respectively. Preserve the spacing of the basketball-hoop drawing."
+    },
+    "bathtub": {
+      "pairs": ["0-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.50 px apart for these pairs, respectively. Preserve the spacing of the bathtub drawing."
+    },
+    "battery-full": {
+      "pairs": ["0-1", "1-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.85, 0.85 px apart for these pairs, respectively. Preserve the spacing of the battery-full drawing."
+    },
+    "battery-low": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.85 px apart for these pairs, respectively. Preserve the spacing of the battery-low drawing."
+    },
+    "battery-medium": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.85 px apart for these pairs, respectively. Preserve the spacing of the battery-medium drawing."
+    },
+    "battery-warning": {
+      "pairs": ["1-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.43 px apart for these pairs, respectively. Preserve the spacing of the battery-warning drawing."
+    },
+    "beach": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.71 px apart for these pairs, respectively. Preserve the spacing of the beach drawing."
+    },
+    "beer-off": {
+      "pairs": ["0-1", "0-2", "0-4"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.43, 0.43, 0.43 px apart for these pairs, respectively. Preserve the spacing of the beer-off drawing."
+    },
+    "bell-off": {
+      "pairs": ["1-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.67 px apart for these pairs, respectively. Preserve the spacing of the bell-off drawing."
+    },
+    "bicycle-electric": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.35 px apart for these pairs, respectively. Preserve the spacing of the bicycle-electric drawing."
+    },
+    "binoculars": {
+      "pairs": ["0-1", "0-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.54, 0.51 px apart for these pairs, respectively. Preserve the spacing of the binoculars drawing."
+    },
+    "blender": {
+      "pairs": ["0-4"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.55 px apart for these pairs, respectively. Preserve the spacing of the blender drawing."
+    },
+    "blood-bag": {
+      "pairs": ["1-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.57 px apart for these pairs, respectively. Preserve the spacing of the blood-bag drawing."
+    },
+    "blood-test": {
+      "pairs": ["0-4"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.57 px apart for these pairs, respectively. Preserve the spacing of the blood-test drawing."
+    },
+    "bomb": {
+      "pairs": ["1-3", "3-7"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.30, 0.61 px apart for these pairs, respectively. Preserve the spacing of the bomb drawing."
+    },
+    "book-check": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.56 px apart for these pairs, respectively. Preserve the spacing of the book-check drawing."
+    },
+    "book-lock": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.53 px apart for these pairs, respectively. Preserve the spacing of the book-lock drawing."
+    },
+    "book-minus": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.58 px apart for these pairs, respectively. Preserve the spacing of the book-minus drawing."
+    },
+    "book-off": {
+      "pairs": ["1-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.30 px apart for these pairs, respectively. Preserve the spacing of the book-off drawing."
+    },
+    "book-plus": {
+      "pairs": ["0-1", "1-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.58, 0.92 px apart for these pairs, respectively. Preserve the spacing of the book-plus drawing."
+    },
+    "book-x": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.58 px apart for these pairs, respectively. Preserve the spacing of the book-x drawing."
+    },
+    "bookmarks": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.55 px apart for these pairs, respectively. Preserve the spacing of the bookmarks drawing."
+    },
+    "bowling-ball": {
+      "pairs": ["0-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.78 px apart for these pairs, respectively. Preserve the spacing of the bowling-ball drawing."
+    },
+    "brain": {
+      "pairs": ["0-1", "0-2", "0-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.81, 0.97, 0.49 px apart for these pairs, respectively. Preserve the spacing of the brain drawing."
+    },
+    "bridge": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.36 px apart for these pairs, respectively. Preserve the spacing of the bridge drawing."
+    },
+    "bucket": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.35 px apart for these pairs, respectively. Preserve the spacing of the bucket drawing."
+    },
+    "building": {
+      "pairs": ["0-1", "0-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.92, 0.92 px apart for these pairs, respectively. Preserve the spacing of the building drawing."
+    },
+    "bus": {
+      "pairs": ["0-1", "0-2", "0-3", "0-4"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.58, 0.42, 0.83, 0.83 px apart for these pairs, respectively. Preserve the spacing of the bus drawing."
+    },
+    "cabinet": {
+      "pairs": ["0-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.75 px apart for these pairs, respectively. Preserve the spacing of the cabinet drawing."
     },
     "cable-car": {
-      "pairs": ["0-2"],
-      "why": "the cable fuses with the cabin outline; it still reads as a cable car"
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.67 px apart for these pairs, respectively. Preserve the spacing of the cable-car drawing."
+    },
+    "calculator": {
+      "pairs": ["0-1", "0-5", "1-2", "1-4", "2-6", "4-5"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.83, 0.83, 0.83, 0.83, 0.92, 0.58 px apart for these pairs, respectively. Preserve the spacing of the calculator drawing."
+    },
+    "calendar": {
+      "pairs": ["0-2", "0-3", "1-2", "1-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.29, 0.18, 0.18, 0.23 px apart for these pairs, respectively. Preserve the spacing of the calendar drawing."
+    },
+    "calendar-check": {
+      "pairs": ["0-2", "0-3", "1-2", "1-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.23, 0.18, 0.18, 0.23 px apart for these pairs, respectively. Preserve the spacing of the calendar-check drawing."
+    },
+    "calendar-clock": {
+      "pairs": ["0-2", "0-3", "1-2", "1-3", "2-4", "4-5"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.26, 0.18, 0.18, 0.23, 0.36, 0.62 px apart for these pairs, respectively. Preserve the spacing of the calendar-clock drawing."
+    },
+    "calendar-event": {
+      "pairs": ["0-2", "0-3", "1-2", "1-3", "2-8", "2-9", "4-7", "5-8", "6-9", "7-9"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.24, 0.18, 0.18, 0.29, 0.75, 0.73, 0.24, 0.24, 0.24, 0.29 px apart for these pairs, respectively. Preserve the spacing of the calendar-event drawing."
+    },
+    "calendar-heart": {
+      "pairs": ["0-2", "0-3", "1-2", "1-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.30, 0.24, 0.19, 0.30 px apart for these pairs, respectively. Preserve the spacing of the calendar-heart drawing."
+    },
+    "calendar-lock": {
+      "pairs": ["0-2", "0-3", "1-2", "1-3", "3-4", "4-5"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.24, 0.24, 0.26, 0.19, 0.67, 0.33 px apart for these pairs, respectively. Preserve the spacing of the calendar-lock drawing."
+    },
+    "calendar-minus": {
+      "pairs": ["0-2", "0-3", "1-2", "1-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.26, 0.23, 0.18, 0.23 px apart for these pairs, respectively. Preserve the spacing of the calendar-minus drawing."
+    },
+    "calendar-search": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.57 px apart for these pairs, respectively. Preserve the spacing of the calendar-search drawing."
+    },
+    "calendar-user": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.50 px apart for these pairs, respectively. Preserve the spacing of the calendar-user drawing."
+    },
+    "calendar-x": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.16 px apart for these pairs, respectively. Preserve the spacing of the calendar-x drawing."
+    },
+    "camera": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.71 px apart for these pairs, respectively. Preserve the spacing of the camera drawing."
+    },
+    "camera-check": {
+      "pairs": ["0-1", "0-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.68, 0.72 px apart for these pairs, respectively. Preserve the spacing of the camera-check drawing."
+    },
+    "camera-motion": {
+      "pairs": ["0-1", "0-2", "0-4"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.63, 0.83, 0.58 px apart for these pairs, respectively. Preserve the spacing of the camera-motion drawing."
+    },
+    "camera-off": {
+      "pairs": ["0-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.71 px apart for these pairs, respectively. Preserve the spacing of the camera-off drawing."
+    },
+    "campfire": {
+      "pairs": ["0-1", "0-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.29, 0.49 px apart for these pairs, respectively. Preserve the spacing of the campfire drawing."
+    },
+    "candle": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.30 px apart for these pairs, respectively. Preserve the spacing of the candle drawing."
+    },
+    "candlestick-chart": {
+      "pairs": ["0-1", "1-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.97, 0.97 px apart for these pairs, respectively. Preserve the spacing of the candlestick-chart drawing."
+    },
+    "cane": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.32 px apart for these pairs, respectively. Preserve the spacing of the cane drawing."
+    },
+    "car": {
+      "pairs": ["0-1", "0-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.45, 0.42 px apart for these pairs, respectively. Preserve the spacing of the car drawing."
+    },
+    "card-lock": {
+      "pairs": ["1-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.77 px apart for these pairs, respectively. Preserve the spacing of the card-lock drawing."
+    },
+    "card-off": {
+      "pairs": ["0-1", "0-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.48, 0.48 px apart for these pairs, respectively. Preserve the spacing of the card-off drawing."
+    },
+    "card-refund": {
+      "pairs": ["1-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.62 px apart for these pairs, respectively. Preserve the spacing of the card-refund drawing."
+    },
+    "card-x": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.85 px apart for these pairs, respectively. Preserve the spacing of the card-x drawing."
+    },
+    "cart-dollar": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.42 px apart for these pairs, respectively. Preserve the spacing of the cart-dollar drawing."
+    },
+    "cart-heart": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.69 px apart for these pairs, respectively. Preserve the spacing of the cart-heart drawing."
+    },
+    "cart-off": {
+      "pairs": ["0-1", "1-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.40, 0.51 px apart for these pairs, respectively. Preserve the spacing of the cart-off drawing."
+    },
+    "cat": {
+      "pairs": ["0-4"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.44 px apart for these pairs, respectively. Preserve the spacing of the cat drawing."
     },
     "cctv": {
-      "pairs": ["0-1", "0-4"],
-      "why": "the listed pair of elements closes at 16 px; the drawing still reads as a wall camera"
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.32 px apart for these pairs, respectively. Preserve the spacing of the cctv drawing."
+    },
+    "certificate": {
+      "pairs": ["0-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.79 px apart for these pairs, respectively. Preserve the spacing of the certificate drawing."
+    },
+    "chart-bar": {
+      "pairs": ["0-1", "0-2", "0-3", "1-2", "2-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.38, 0.38, 0.38, 0.31, 0.31 px apart for these pairs, respectively. Preserve the spacing of the chart-bar drawing."
+    },
+    "chart-bar-horizontal": {
+      "pairs": ["0-1", "0-2", "0-3", "1-2", "2-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.54, 0.54, 0.54, 0.77, 0.69 px apart for these pairs, respectively. Preserve the spacing of the chart-bar-horizontal drawing."
+    },
+    "chart-bubble": {
+      "pairs": ["0-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 1.07 px apart for these pairs, respectively. Preserve the spacing of the chart-bubble drawing."
     },
     "chart-donut": {
       "pairs": ["0-1"],
-      "why": "the two slices fuse across the gap between them; it still reads as a donut chart"
+      "why": "At 16 px the nearest ink pixels in the reference are 0.31 px apart for these pairs, respectively. Preserve the spacing of the chart-donut drawing."
     },
-    "cherry": {
+    "chart-histogram": {
       "pairs": ["0-1"],
-      "why": "the two cherries fuse across the gap between them; it still reads as a cherry pair"
+      "why": "At 16 px the nearest ink pixels in the reference are 0.46 px apart for these pairs, respectively. Preserve the spacing of the chart-histogram drawing."
+    },
+    "chart-line": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.31 px apart for these pairs, respectively. Preserve the spacing of the chart-line drawing."
+    },
+    "chart-pie": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.33 px apart for these pairs, respectively. Preserve the spacing of the chart-pie drawing."
+    },
+    "chart-scatter": {
+      "pairs": ["3-5"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.66 px apart for these pairs, respectively. Preserve the spacing of the chart-scatter drawing."
+    },
+    "cheese": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.62 px apart for these pairs, respectively. Preserve the spacing of the cheese drawing."
+    },
+    "clipboard-minus": {
+      "pairs": ["0-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.45 px apart for these pairs, respectively. Preserve the spacing of the clipboard-minus drawing."
+    },
+    "clipboard-plus": {
+      "pairs": ["0-3", "3-5"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.42, 0.67 px apart for these pairs, respectively. Preserve the spacing of the clipboard-plus drawing."
+    },
+    "clipboard-x": {
+      "pairs": ["0-3", "3-5"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.42, 0.59 px apart for these pairs, respectively. Preserve the spacing of the clipboard-x drawing."
+    },
+    "clock-check": {
+      "pairs": ["0-2", "1-2", "2-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.48, 0.52, 0.52 px apart for these pairs, respectively. Preserve the spacing of the clock-check drawing."
+    },
+    "clock-edit": {
+      "pairs": ["0-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.53 px apart for these pairs, respectively. Preserve the spacing of the clock-edit drawing."
+    },
+    "clock-off": {
+      "pairs": ["1-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.50 px apart for these pairs, respectively. Preserve the spacing of the clock-off drawing."
+    },
+    "clock-pause": {
+      "pairs": ["3-4"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.63 px apart for these pairs, respectively. Preserve the spacing of the clock-pause drawing."
+    },
+    "clock-plus": {
+      "pairs": ["0-2", "1-2", "2-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.46, 0.47, 0.75 px apart for these pairs, respectively. Preserve the spacing of the clock-plus drawing."
+    },
+    "clock-x": {
+      "pairs": ["0-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.64 px apart for these pairs, respectively. Preserve the spacing of the clock-x drawing."
     },
     "cloud-drizzle": {
-      "pairs": ["0-1"],
-      "why": "the drops fuse with the cloud outline; it still reads as drizzle"
+      "pairs": ["0-1", "0-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.68, 0.68 px apart for these pairs, respectively. Preserve the spacing of the cloud-drizzle drawing."
     },
-    "contract": {
+    "cloud-fog": {
       "pairs": ["0-1"],
-      "why": "the crease fuses with the outline at the family's cut; the silhouette still reads as a document"
+      "why": "At 16 px the nearest ink pixels in the reference are 0.77 px apart for these pairs, respectively. Preserve the spacing of the cloud-fog drawing."
     },
-    "copy-check": {
+    "cloud-lock": {
+      "pairs": ["0-1", "1-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.51, 0.59 px apart for these pairs, respectively. Preserve the spacing of the cloud-lock drawing."
+    },
+    "cloud-off": {
+      "pairs": ["1-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.49 px apart for these pairs, respectively. Preserve the spacing of the cloud-off drawing."
+    },
+    "cloud-sun": {
+      "pairs": ["3-4"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.53 px apart for these pairs, respectively. Preserve the spacing of the cloud-sun drawing."
+    },
+    "cloud-upload": {
       "pairs": ["0-1"],
-      "why": "the two sheets fuse where they overlap; it still reads as a copied document"
+      "why": "At 16 px the nearest ink pixels in the reference are 1.01 px apart for these pairs, respectively. Preserve the spacing of the cloud-upload drawing."
+    },
+    "cloud-warning": {
+      "pairs": ["0-1", "1-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.49, 0.61 px apart for these pairs, respectively. Preserve the spacing of the cloud-warning drawing."
+    },
+    "cloudy": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.43 px apart for these pairs, respectively. Preserve the spacing of the cloudy drawing."
+    },
+    "coins-swap": {
+      "pairs": ["0-1", "2-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.51, 0.51 px apart for these pairs, respectively. Preserve the spacing of the coins-swap drawing."
     },
     "copy-plus": {
       "pairs": ["0-1"],
-      "why": "the two sheets fuse where they overlap; it still reads as a copy with a plus"
+      "why": "At 16 px the nearest ink pixels in the reference are 0.58 px apart for these pairs, respectively. Preserve the spacing of the copy-plus drawing."
+    },
+    "dashboard": {
+      "pairs": ["0-1", "0-2", "0-3", "1-2", "1-3", "2-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.82, 0.82, 0.90, 0.90, 0.90, 0.82 px apart for these pairs, respectively. Preserve the spacing of the dashboard drawing."
+    },
+    "database-check": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.42 px apart for these pairs, respectively. Preserve the spacing of the database-check drawing."
+    },
+    "database-export": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.45 px apart for these pairs, respectively. Preserve the spacing of the database-export drawing."
+    },
+    "database-import": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.44 px apart for these pairs, respectively. Preserve the spacing of the database-import drawing."
     },
     "database-lock": {
-      "pairs": ["0-2"],
-      "why": "the lock badge fuses with the cylinder outline; it still reads as a locked database"
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.51 px apart for these pairs, respectively. Preserve the spacing of the database-lock drawing."
     },
-    "elephant": {
-      "pairs": ["0-2", "0-3", "1-4"],
-      "why": "the listed pair of elements closes at 16 px; the drawing still reads as an elephant"
+    "database-minus": {
+      "pairs": ["0-1", "1-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.42, 0.82 px apart for these pairs, respectively. Preserve the spacing of the database-minus drawing."
+    },
+    "database-off": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.44 px apart for these pairs, respectively. Preserve the spacing of the database-off drawing."
+    },
+    "database-plus": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.85 px apart for these pairs, respectively. Preserve the spacing of the database-plus drawing."
+    },
+    "database-search": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.49 px apart for these pairs, respectively. Preserve the spacing of the database-search drawing."
+    },
+    "database-share": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.46 px apart for these pairs, respectively. Preserve the spacing of the database-share drawing."
+    },
+    "deer": {
+      "pairs": ["0-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.63 px apart for these pairs, respectively. Preserve the spacing of the deer drawing."
+    },
+    "desk": {
+      "pairs": ["0-1", "0-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.67, 0.67 px apart for these pairs, respectively. Preserve the spacing of the desk drawing."
+    },
+    "devices": {
+      "pairs": ["0-1", "1-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.51, 0.68 px apart for these pairs, respectively. Preserve the spacing of the devices drawing."
+    },
+    "dew": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 1.08 px apart for these pairs, respectively. Preserve the spacing of the dew drawing."
+    },
+    "dialpad": {
+      "pairs": ["2-5", "7-8"],
+      "why": "At 16 px the nearest ink pixels in the reference are 1.13, 1.06 px apart for these pairs, respectively. Preserve the spacing of the dialpad drawing."
+    },
+    "diameter": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.45 px apart for these pairs, respectively. Preserve the spacing of the diameter drawing."
+    },
+    "dice": {
+      "pairs": ["0-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.66 px apart for these pairs, respectively. Preserve the spacing of the dice drawing."
+    },
+    "disc": {
+      "pairs": ["0-1", "0-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.95, 0.95 px apart for these pairs, respectively. Preserve the spacing of the disc drawing."
+    },
+    "door": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.79 px apart for these pairs, respectively. Preserve the spacing of the door drawing."
+    },
+    "door-open": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.79 px apart for these pairs, respectively. Preserve the spacing of the door-open drawing."
+    },
+    "dresser": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.90 px apart for these pairs, respectively. Preserve the spacing of the dresser drawing."
+    },
+    "drone": {
+      "pairs": ["0-2", "1-2", "2-4", "2-5"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.24, 0.24, 0.32, 0.32 px apart for these pairs, respectively. Preserve the spacing of the drone drawing."
+    },
+    "droplet": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.80 px apart for these pairs, respectively. Preserve the spacing of the droplet drawing."
+    },
+    "droplet-off": {
+      "pairs": ["0-1", "1-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.54, 0.33 px apart for these pairs, respectively. Preserve the spacing of the droplet-off drawing."
+    },
+    "droplets": {
+      "pairs": ["2-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.65 px apart for these pairs, respectively. Preserve the spacing of the droplets drawing."
+    },
+    "drum": {
+      "pairs": ["0-1", "0-2", "1-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 1.00, 0.33, 0.42 px apart for these pairs, respectively. Preserve the spacing of the drum drawing."
+    },
+    "ear-off": {
+      "pairs": ["0-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.99 px apart for these pairs, respectively. Preserve the spacing of the ear-off drawing."
+    },
+    "earbuds": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.82 px apart for these pairs, respectively. Preserve the spacing of the earbuds drawing."
+    },
+    "eject": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.82 px apart for these pairs, respectively. Preserve the spacing of the eject drawing."
+    },
+    "elevator": {
+      "pairs": ["0-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.79 px apart for these pairs, respectively. Preserve the spacing of the elevator drawing."
+    },
+    "escalator": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.33 px apart for these pairs, respectively. Preserve the spacing of the escalator drawing."
+    },
+    "ethernet": {
+      "pairs": ["2-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 1.13 px apart for these pairs, respectively. Preserve the spacing of the ethernet drawing."
+    },
+    "extend": {
+      "pairs": ["0-2", "1-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.83, 0.75 px apart for these pairs, respectively. Preserve the spacing of the extend drawing."
+    },
+    "eye-check": {
+      "pairs": ["0-1", "1-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.54, 0.41 px apart for these pairs, respectively. Preserve the spacing of the eye-check drawing."
+    },
+    "eye-edit": {
+      "pairs": ["0-1", "0-2", "1-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.84, 0.62, 0.61 px apart for these pairs, respectively. Preserve the spacing of the eye-edit drawing."
+    },
+    "eye-off": {
+      "pairs": ["0-1", "0-2", "1-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.50, 0.50, 0.87 px apart for these pairs, respectively. Preserve the spacing of the eye-off drawing."
+    },
+    "eye-plus": {
+      "pairs": ["0-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.48 px apart for these pairs, respectively. Preserve the spacing of the eye-plus drawing."
+    },
+    "eye-search": {
+      "pairs": ["1-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.47 px apart for these pairs, respectively. Preserve the spacing of the eye-search drawing."
+    },
+    "eye-x": {
+      "pairs": ["1-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.51 px apart for these pairs, respectively. Preserve the spacing of the eye-x drawing."
+    },
+    "face-confused": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.78 px apart for these pairs, respectively. Preserve the spacing of the face-confused drawing."
+    },
+    "face-cry": {
+      "pairs": ["0-3", "2-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.73, 0.50 px apart for these pairs, respectively. Preserve the spacing of the face-cry drawing."
+    },
+    "face-dizzy": {
+      "pairs": ["0-1", "0-2", "1-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.78, 0.81, 0.79 px apart for these pairs, respectively. Preserve the spacing of the face-dizzy drawing."
+    },
+    "face-grimace": {
+      "pairs": ["0-5", "1-3", "2-4"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.86, 0.46, 0.46 px apart for these pairs, respectively. Preserve the spacing of the face-grimace drawing."
+    },
+    "face-laugh": {
+      "pairs": ["0-4", "4-6"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.40, 0.40 px apart for these pairs, respectively. Preserve the spacing of the face-laugh drawing."
+    },
+    "face-love": {
+      "pairs": ["0-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.64 px apart for these pairs, respectively. Preserve the spacing of the face-love drawing."
+    },
+    "face-nerd": {
+      "pairs": ["0-1", "0-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.55, 0.55 px apart for these pairs, respectively. Preserve the spacing of the face-nerd drawing."
+    },
+    "face-sick": {
+      "pairs": ["0-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.40 px apart for these pairs, respectively. Preserve the spacing of the face-sick drawing."
+    },
+    "face-sleep": {
+      "pairs": ["0-2", "2-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.24, 0.24 px apart for these pairs, respectively. Preserve the spacing of the face-sleep drawing."
+    },
+    "face-star-eyes": {
+      "pairs": ["0-1", "0-2", "1-2", "1-3", "2-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.53, 0.48, 0.32, 0.87, 0.87 px apart for these pairs, respectively. Preserve the spacing of the face-star-eyes drawing."
+    },
+    "factory": {
+      "pairs": ["0-1", "2-3", "3-4"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.33, 1.00, 1.00 px apart for these pairs, respectively. Preserve the spacing of the factory drawing."
+    },
+    "fan": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.37 px apart for these pairs, respectively. Preserve the spacing of the fan drawing."
+    },
+    "faucet": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.40 px apart for these pairs, respectively. Preserve the spacing of the faucet drawing."
     },
     "file-chart": {
-      "pairs": ["0-1"],
-      "why": "the crease fuses with the outline at the family's cut; the silhouette still reads as a document"
-    },
-    "file-check": {
-      "pairs": ["0-1"],
-      "why": "the crease fuses with the outline at the family's cut; the silhouette still reads as a document"
+      "pairs": ["0-1", "0-3", "1-2", "2-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 1.03, 1.03, 0.43, 0.43 px apart for these pairs, respectively. Preserve the spacing of the file-chart drawing."
     },
     "file-clock": {
-      "pairs": ["0-1"],
-      "why": "the crease fuses with the outline at the family's cut; the silhouette still reads as a document"
+      "pairs": ["1-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.60 px apart for these pairs, respectively. Preserve the spacing of the file-clock drawing."
     },
-    "file-cloud": {
+    "file-import": {
       "pairs": ["0-1"],
-      "why": "the crease fuses with the outline at the family's cut; the silhouette still reads as a document"
-    },
-    "file-code": {
-      "pairs": ["0-1"],
-      "why": "the crease fuses with the outline at the family's cut; the silhouette still reads as a document"
-    },
-    "file-diff": {
-      "pairs": ["0-1"],
-      "why": "the crease fuses with the outline at the family's cut; the silhouette still reads as a document"
-    },
-    "file-download": {
-      "pairs": ["0-1"],
-      "why": "the crease fuses with the outline at the family's cut; the silhouette still reads as a document"
-    },
-    "file-edit": {
-      "pairs": ["0-1"],
-      "why": "the crease fuses with the outline at the family's cut; the silhouette still reads as a document"
-    },
-    "file-image": {
-      "pairs": ["0-1"],
-      "why": "the crease fuses with the outline at the family's cut; the silhouette still reads as a document"
-    },
-    "file-info": {
-      "pairs": ["0-1"],
-      "why": "the crease fuses with the outline at the family's cut; the silhouette still reads as a document"
-    },
-    "file-lock": {
-      "pairs": ["0-1"],
-      "why": "the crease fuses with the outline at the family's cut; the silhouette still reads as a document"
-    },
-    "file-minus": {
-      "pairs": ["0-1"],
-      "why": "the crease fuses with the outline at the family's cut; the silhouette still reads as a document"
-    },
-    "file-plus": {
-      "pairs": ["0-1"],
-      "why": "the crease fuses with the outline at the family's cut; the silhouette still reads as a document"
-    },
-    "file-question": {
-      "pairs": ["0-1"],
-      "why": "the crease fuses with the outline at the family's cut; the silhouette still reads as a document"
+      "why": "At 16 px the nearest ink pixels in the reference are 0.74 px apart for these pairs, respectively. Preserve the spacing of the file-import drawing."
     },
     "file-search": {
       "pairs": ["0-1"],
-      "why": "the crease fuses with the outline at the family's cut; the silhouette still reads as a document"
-    },
-    "file-share": {
-      "pairs": ["0-1"],
-      "why": "the crease fuses with the outline at the family's cut; the silhouette still reads as a document"
-    },
-    "file-star": {
-      "pairs": ["0-1"],
-      "why": "the crease fuses with the outline at the family's cut; the silhouette still reads as a document"
-    },
-    "file-text": {
-      "pairs": ["0-1"],
-      "why": "the crease fuses with the outline at the family's cut; the silhouette still reads as a document"
-    },
-    "file-upload": {
-      "pairs": ["0-1"],
-      "why": "the crease fuses with the outline at the family's cut; the silhouette still reads as a document"
-    },
-    "file-user": {
-      "pairs": ["0-1"],
-      "why": "the crease fuses with the outline at the family's cut; the silhouette still reads as a document"
+      "why": "At 16 px the nearest ink pixels in the reference are 0.94 px apart for these pairs, respectively. Preserve the spacing of the file-search drawing."
     },
     "file-warning": {
       "pairs": ["0-1"],
-      "why": "the crease fuses with the outline at the family's cut; the silhouette still reads as a document"
-    },
-    "file-x": {
-      "pairs": ["0-1"],
-      "why": "the crease fuses with the outline at the family's cut; the silhouette still reads as a document"
-    },
-    "file-zip": {
-      "pairs": ["0-1"],
-      "why": "the crease fuses with the outline at the family's cut; the silhouette still reads as a document"
+      "why": "At 16 px the nearest ink pixels in the reference are 1.03 px apart for these pairs, respectively. Preserve the spacing of the file-warning drawing."
     },
     "files": {
       "pairs": ["0-1"],
-      "why": "the crease fuses with the outline at the family's cut; the silhouette still reads as a document"
+      "why": "At 16 px the nearest ink pixels in the reference are 0.49 px apart for these pairs, respectively. Preserve the spacing of the files drawing."
+    },
+    "filter-off": {
+      "pairs": ["0-1", "0-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.65, 0.60 px apart for these pairs, respectively. Preserve the spacing of the filter-off drawing."
+    },
+    "filter-plus": {
+      "pairs": ["0-1", "1-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.35, 0.79 px apart for these pairs, respectively. Preserve the spacing of the filter-plus drawing."
+    },
+    "fingerprint": {
+      "pairs": ["0-1", "1-2", "1-3", "1-6", "3-4", "4-6", "4-7"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.83, 0.71, 0.68, 0.71, 0.63, 0.79, 0.71 px apart for these pairs, respectively. Preserve the spacing of the fingerprint drawing."
+    },
+    "fingerprint-off": {
+      "pairs": ["0-1", "0-2", "1-2", "1-4", "2-4", "3-5", "5-6", "6-8", "8-9", "9-10"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.67, 0.78, 0.62, 0.67, 0.71, 0.68, 0.71, 0.79, 0.78, 0.81 px apart for these pairs, respectively. Preserve the spacing of the fingerprint-off drawing."
+    },
+    "fire-hydrant": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.62 px apart for these pairs, respectively. Preserve the spacing of the fire-hydrant drawing."
+    },
+    "fire-station": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.58 px apart for these pairs, respectively. Preserve the spacing of the fire-station drawing."
+    },
+    "fish": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.44 px apart for these pairs, respectively. Preserve the spacing of the fish drawing."
+    },
+    "fish-off": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.35 px apart for these pairs, respectively. Preserve the spacing of the fish-off drawing."
+    },
+    "flag-off": {
+      "pairs": ["0-1", "0-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.52, 0.52 px apart for these pairs, respectively. Preserve the spacing of the flag-off drawing."
+    },
+    "flashlight-off": {
+      "pairs": ["0-1", "2-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.53, 0.77 px apart for these pairs, respectively. Preserve the spacing of the flashlight-off drawing."
     },
     "flip-horizontal": {
-      "pairs": ["0-2", "1-2"],
-      "why": "the listed pair of elements closes at 16 px; the drawing still reads as a horizontal flip"
+      "pairs": ["1-3", "2-3", "2-4"],
+      "why": "At 16 px the nearest ink pixels in the reference are 1.03, 1.03, 1.03 px apart for these pairs, respectively. Preserve the spacing of the flip-horizontal drawing."
     },
     "flip-vertical": {
-      "pairs": ["0-2", "1-2"],
-      "why": "the listed pair of elements closes at 16 px; the drawing still reads as a vertical flip"
+      "pairs": ["0-2", "2-4"],
+      "why": "At 16 px the nearest ink pixels in the reference are 1.03, 1.03 px apart for these pairs, respectively. Preserve the spacing of the flip-vertical drawing."
+    },
+    "flood": {
+      "pairs": ["1-2", "2-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.59, 0.90 px apart for these pairs, respectively. Preserve the spacing of the flood drawing."
+    },
+    "floppy-disk": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.60 px apart for these pairs, respectively. Preserve the spacing of the floppy-disk drawing."
+    },
+    "folder-clock": {
+      "pairs": ["1-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.76 px apart for these pairs, respectively. Preserve the spacing of the folder-clock drawing."
+    },
+    "folder-lock": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.57 px apart for these pairs, respectively. Preserve the spacing of the folder-lock drawing."
+    },
+    "folder-music": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.97 px apart for these pairs, respectively. Preserve the spacing of the folder-music drawing."
+    },
+    "folder-off": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.63 px apart for these pairs, respectively. Preserve the spacing of the folder-off drawing."
+    },
+    "folder-search": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.97 px apart for these pairs, respectively. Preserve the spacing of the folder-search drawing."
+    },
+    "folder-sync": {
+      "pairs": ["0-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.80 px apart for these pairs, respectively. Preserve the spacing of the folder-sync drawing."
+    },
+    "folder-user": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.65 px apart for these pairs, respectively. Preserve the spacing of the folder-user drawing."
+    },
+    "football-helmet": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.68 px apart for these pairs, respectively. Preserve the spacing of the football-helmet drawing."
     },
     "fridge": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.85 px apart for these pairs, respectively. Preserve the spacing of the fridge drawing."
+    },
+    "frog": {
+      "pairs": ["0-1", "0-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.63, 0.60 px apart for these pairs, respectively. Preserve the spacing of the frog drawing."
+    },
+    "frying-pan": {
       "pairs": ["0-2"],
-      "why": "the handle touches the outline; without it the drawing is a cabinet, and it still reads as a fridge"
+      "why": "At 16 px the nearest ink pixels in the reference are 0.72 px apart for these pairs, respectively. Preserve the spacing of the frying-pan drawing."
+    },
+    "fuel": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.75 px apart for these pairs, respectively. Preserve the spacing of the fuel drawing."
+    },
+    "function": {
+      "pairs": ["1-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.73 px apart for these pairs, respectively. Preserve the spacing of the function drawing."
+    },
+    "garage": {
+      "pairs": ["0-1", "1-2", "1-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.65, 0.57, 0.57 px apart for these pairs, respectively. Preserve the spacing of the garage drawing."
+    },
+    "gavel": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.82 px apart for these pairs, respectively. Preserve the spacing of the gavel drawing."
+    },
+    "gif": {
+      "pairs": ["1-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.45 px apart for these pairs, respectively. Preserve the spacing of the gif drawing."
+    },
+    "git-compare": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.67 px apart for these pairs, respectively. Preserve the spacing of the git-compare drawing."
+    },
+    "git-pull-request-draft": {
+      "pairs": ["0-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.65 px apart for these pairs, respectively. Preserve the spacing of the git-pull-request-draft drawing."
+    },
+    "globe-off": {
+      "pairs": ["0-1", "1-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.60, 0.60 px apart for these pairs, respectively. Preserve the spacing of the globe-off drawing."
+    },
+    "golf": {
+      "pairs": ["0-1", "0-3", "1-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.30, 0.15, 0.67 px apart for these pairs, respectively. Preserve the spacing of the golf drawing."
+    },
+    "goose": {
+      "pairs": ["0-5"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.71 px apart for these pairs, respectively. Preserve the spacing of the goose drawing."
+    },
+    "grid-off": {
+      "pairs": ["0-3", "0-5", "0-6"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.65, 0.65, 0.65 px apart for these pairs, respectively. Preserve the spacing of the grid-off drawing."
+    },
+    "grill": {
+      "pairs": ["0-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.60 px apart for these pairs, respectively. Preserve the spacing of the grill drawing."
+    },
+    "gym-rings": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.52 px apart for these pairs, respectively. Preserve the spacing of the gym-rings drawing."
     },
     "hail": {
-      "pairs": ["0-3"],
-      "why": "the right hailstone fuses with the cloud outline; it still reads as hail"
+      "pairs": ["0-1", "0-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.51, 0.51 px apart for these pairs, respectively. Preserve the spacing of the hail drawing."
+    },
+    "hand-sanitizer": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.52 px apart for these pairs, respectively. Preserve the spacing of the hand-sanitizer drawing."
+    },
+    "hand-wave": {
+      "pairs": ["0-1", "3-4"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.75, 0.71 px apart for these pairs, respectively. Preserve the spacing of the hand-wave drawing."
+    },
+    "hd": {
+      "pairs": ["1-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.67 px apart for these pairs, respectively. Preserve the spacing of the hd drawing."
     },
     "hdr": {
+      "pairs": ["0-1", "0-3", "1-2", "2-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 1.07, 0.99, 0.58, 0.41 px apart for these pairs, respectively. Preserve the spacing of the hdr drawing."
+    },
+    "headset-off": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.56 px apart for these pairs, respectively. Preserve the spacing of the headset-off drawing."
+    },
+    "heart-x": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.59 px apart for these pairs, respectively. Preserve the spacing of the heart-x drawing."
+    },
+    "help-square": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 1.20 px apart for these pairs, respectively. Preserve the spacing of the help-square drawing."
+    },
+    "high-speed-train": {
+      "pairs": ["0-1", "0-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 1.13, 0.51 px apart for these pairs, respectively. Preserve the spacing of the high-speed-train drawing."
+    },
+    "home-lock": {
+      "pairs": ["0-1", "1-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.85, 0.43 px apart for these pairs, respectively. Preserve the spacing of the home-lock drawing."
+    },
+    "home-off": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.63 px apart for these pairs, respectively. Preserve the spacing of the home-off drawing."
+    },
+    "home-share": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.85 px apart for these pairs, respectively. Preserve the spacing of the home-share drawing."
+    },
+    "home-signal": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.93 px apart for these pairs, respectively. Preserve the spacing of the home-signal drawing."
+    },
+    "hospital": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.75 px apart for these pairs, respectively. Preserve the spacing of the hospital drawing."
+    },
+    "hospital-bed": {
       "pairs": ["1-2"],
-      "why": "the D and the R fuse; it still reads as HDR"
+      "why": "At 16 px the nearest ink pixels in the reference are 0.25 px apart for these pairs, respectively. Preserve the spacing of the hospital-bed drawing."
     },
-    "heart-half": {
-      "pairs": ["0-1"],
-      "why": "the filled half fuses with the outline it sits in; it still reads as a half heart"
+    "hotel": {
+      "pairs": ["0-1", "0-2", "0-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.44, 0.44, 0.44 px apart for these pairs, respectively. Preserve the spacing of the hotel drawing."
     },
-    "hippo": {
+    "hourglass": {
       "pairs": ["0-1"],
-      "why": "the head arc fuses with the snout; it still reads as a hippo"
+      "why": "At 16 px the nearest ink pixels in the reference are 0.62 px apart for these pairs, respectively. Preserve the spacing of the hourglass drawing."
+    },
+    "humidity": {
+      "pairs": ["1-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.56 px apart for these pairs, respectively. Preserve the spacing of the humidity drawing."
+    },
+    "iceberg": {
+      "pairs": ["0-1", "1-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.42, 0.33 px apart for these pairs, respectively. Preserve the spacing of the iceberg drawing."
+    },
+    "id-card": {
+      "pairs": ["0-1", "0-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.81, 0.81 px apart for these pairs, respectively. Preserve the spacing of the id-card drawing."
+    },
+    "image-check": {
+      "pairs": ["0-2", "2-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.60, 0.64 px apart for these pairs, respectively. Preserve the spacing of the image-check drawing."
+    },
+    "image-minus": {
+      "pairs": ["0-2", "2-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.58, 0.75 px apart for these pairs, respectively. Preserve the spacing of the image-minus drawing."
+    },
+    "image-plus": {
+      "pairs": ["0-2", "2-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.59, 0.75 px apart for these pairs, respectively. Preserve the spacing of the image-plus drawing."
     },
     "image-search": {
-      "pairs": ["2-3"],
-      "why": "the sun fuses with the lens; it still reads as an image search"
+      "pairs": ["0-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.59 px apart for these pairs, respectively. Preserve the spacing of the image-search drawing."
     },
-    "lightbulb": {
+    "incognito": {
       "pairs": ["0-1"],
-      "why": "still reads as the object in the blur"
+      "why": "At 16 px the nearest ink pixels in the reference are 0.37 px apart for these pairs, respectively. Preserve the spacing of the incognito drawing."
     },
-    "lightbulb-off": {
+    "iron": {
       "pairs": ["0-1"],
-      "why": "the base line fuses with the bulb outline; it still reads as an unlit bulb"
+      "why": "At 16 px the nearest ink pixels in the reference are 0.62 px apart for these pairs, respectively. Preserve the spacing of the iron drawing."
+    },
+    "island": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.36 px apart for these pairs, respectively. Preserve the spacing of the island drawing."
+    },
+    "joystick": {
+      "pairs": ["0-1", "0-2", "0-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.57, 0.47, 0.47 px apart for these pairs, respectively. Preserve the spacing of the joystick drawing."
+    },
+    "kanban": {
+      "pairs": ["0-1", "0-2", "0-3", "0-4", "0-5", "0-6", "0-7", "1-6", "2-4", "3-5"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.30, 0.30, 0.37, 0.30, 0.37, 0.30, 0.30, 0.60, 0.52, 0.52 px apart for these pairs, respectively. Preserve the spacing of the kanban drawing."
+    },
+    "ketchup": {
+      "pairs": ["0-1", "1-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.58, 0.42 px apart for these pairs, respectively. Preserve the spacing of the ketchup drawing."
+    },
+    "key-off": {
+      "pairs": ["1-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.38 px apart for these pairs, respectively. Preserve the spacing of the key-off drawing."
+    },
+    "keyboard": {
+      "pairs": ["0-1", "0-5", "0-10", "1-2", "1-6", "2-3", "3-4", "4-5", "5-9"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.77, 0.77, 1.03, 0.51, 0.94, 0.51, 0.60, 0.60, 0.94 px apart for these pairs, respectively. Preserve the spacing of the keyboard drawing."
+    },
+    "keyboard-off": {
+      "pairs": ["0-1", "0-2", "0-5", "1-3", "2-6", "6-10"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.60, 0.60, 0.55, 0.68, 0.68, 0.94 px apart for these pairs, respectively. Preserve the spacing of the keyboard-off drawing."
+    },
+    "koala": {
+      "pairs": ["3-4", "3-5"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.58, 0.63 px apart for these pairs, respectively. Preserve the spacing of the koala drawing."
+    },
+    "ladybug": {
+      "pairs": ["0-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.77 px apart for these pairs, respectively. Preserve the spacing of the ladybug drawing."
+    },
+    "library": {
+      "pairs": ["0-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.44 px apart for these pairs, respectively. Preserve the spacing of the library drawing."
+    },
+    "lightning-off": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.50 px apart for these pairs, respectively. Preserve the spacing of the lightning-off drawing."
+    },
+    "lightning-stack": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.58 px apart for these pairs, respectively. Preserve the spacing of the lightning-stack drawing."
+    },
+    "link": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.46 px apart for these pairs, respectively. Preserve the spacing of the link drawing."
+    },
+    "link-check": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.50 px apart for these pairs, respectively. Preserve the spacing of the link-check drawing."
+    },
+    "link-minus": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.49 px apart for these pairs, respectively. Preserve the spacing of the link-minus drawing."
+    },
+    "link-plus": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.52 px apart for these pairs, respectively. Preserve the spacing of the link-plus drawing."
+    },
+    "link-x": {
+      "pairs": ["0-1", "0-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.47, 0.52 px apart for these pairs, respectively. Preserve the spacing of the link-x drawing."
     },
     "lip-sync": {
-      "pairs": ["0-2"],
-      "why": "the listed pair of elements closes at 16 px; the drawing still reads as lips with sound"
+      "pairs": ["1-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.75 px apart for these pairs, respectively. Preserve the spacing of the lip-sync drawing."
+    },
+    "list-ordered": {
+      "pairs": ["2-4"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.87 px apart for these pairs, respectively. Preserve the spacing of the list-ordered drawing."
+    },
+    "list-search": {
+      "pairs": ["1-2", "2-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.46, 0.67 px apart for these pairs, respectively. Preserve the spacing of the list-search drawing."
+    },
+    "lock-clock": {
+      "pairs": ["1-2", "2-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.73, 0.64 px apart for these pairs, respectively. Preserve the spacing of the lock-clock drawing."
+    },
+    "log-out": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.58 px apart for these pairs, respectively. Preserve the spacing of the log-out drawing."
+    },
+    "loop": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.63 px apart for these pairs, respectively. Preserve the spacing of the loop drawing."
+    },
+    "mail-check": {
+      "pairs": ["0-1", "1-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.55, 0.66 px apart for these pairs, respectively. Preserve the spacing of the mail-check drawing."
+    },
+    "mail-lock": {
+      "pairs": ["0-1", "1-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.38, 0.68 px apart for these pairs, respectively. Preserve the spacing of the mail-lock drawing."
+    },
+    "mail-minus": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.48 px apart for these pairs, respectively. Preserve the spacing of the mail-minus drawing."
+    },
+    "mail-off": {
+      "pairs": ["0-1", "0-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.50, 0.55 px apart for these pairs, respectively. Preserve the spacing of the mail-off drawing."
+    },
+    "mail-plus": {
+      "pairs": ["0-1", "1-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.48, 0.94 px apart for these pairs, respectively. Preserve the spacing of the mail-plus drawing."
+    },
+    "mail-search": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.58 px apart for these pairs, respectively. Preserve the spacing of the mail-search drawing."
+    },
+    "mail-x": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.50 px apart for these pairs, respectively. Preserve the spacing of the mail-x drawing."
+    },
+    "mailbox": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.26 px apart for these pairs, respectively. Preserve the spacing of the mailbox drawing."
+    },
+    "map-pin-off": {
+      "pairs": ["1-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.67 px apart for these pairs, respectively. Preserve the spacing of the map-pin-off drawing."
     },
     "masks": {
-      "pairs": ["0-1", "1-2"],
-      "why": "the two masks fuse where they overlap, and the face marks fuse with the front mask; it still reads as theatre masks"
+      "pairs": ["0-4"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.40 px apart for these pairs, respectively. Preserve the spacing of the masks drawing."
     },
-    "monkey": {
-      "pairs": ["0-3", "1-3"],
-      "why": "the listed pair of elements closes at 16 px; the drawing still reads as a monkey"
+    "math-symbols": {
+      "pairs": ["4-5"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.67 px apart for these pairs, respectively. Preserve the spacing of the math-symbols drawing."
+    },
+    "medical-chart": {
+      "pairs": ["4-5"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.83 px apart for these pairs, respectively. Preserve the spacing of the medical-chart drawing."
+    },
+    "memory": {
+      "pairs": ["1-2", "2-3", "3-4"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.50, 0.50, 0.50 px apart for these pairs, respectively. Preserve the spacing of the memory drawing."
+    },
+    "message-off": {
+      "pairs": ["0-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.77 px apart for these pairs, respectively. Preserve the spacing of the message-off drawing."
+    },
+    "message-text": {
+      "pairs": ["2-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 1.11 px apart for these pairs, respectively. Preserve the spacing of the message-text drawing."
+    },
+    "message-warning": {
+      "pairs": ["1-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.54 px apart for these pairs, respectively. Preserve the spacing of the message-warning drawing."
+    },
+    "mic": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.92 px apart for these pairs, respectively. Preserve the spacing of the mic drawing."
+    },
+    "microwave": {
+      "pairs": ["0-1", "0-2", "0-5"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.55, 0.55, 0.55 px apart for these pairs, respectively. Preserve the spacing of the microwave drawing."
+    },
+    "milk-off": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.57 px apart for these pairs, respectively. Preserve the spacing of the milk-off drawing."
+    },
+    "moose": {
+      "pairs": ["0-1", "0-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.61, 1.01 px apart for these pairs, respectively. Preserve the spacing of the moose drawing."
+    },
+    "music-off": {
+      "pairs": ["0-1", "1-2", "1-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.62, 0.62, 0.62 px apart for these pairs, respectively. Preserve the spacing of the music-off drawing."
+    },
+    "narration": {
+      "pairs": ["0-2", "1-3", "2-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.78, 0.71, 0.78 px apart for these pairs, respectively. Preserve the spacing of the narration drawing."
+    },
+    "network-off": {
+      "pairs": ["0-1", "1-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.59, 0.56 px apart for these pairs, respectively. Preserve the spacing of the network-off drawing."
+    },
+    "newspaper": {
+      "pairs": ["1-4", "4-5"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.65, 0.87 px apart for these pairs, respectively. Preserve the spacing of the newspaper drawing."
+    },
+    "note": {
+      "pairs": ["1-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 1.27 px apart for these pairs, respectively. Preserve the spacing of the note drawing."
     },
     "nurse": {
-      "pairs": ["0-1"],
-      "why": "the cap meets the head at 16 px; it still reads as a nurse's cap"
+      "pairs": ["0-1", "0-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.27, 0.45 px apart for these pairs, respectively. Preserve the spacing of the nurse drawing."
+    },
+    "oven": {
+      "pairs": ["0-1", "0-3", "0-4", "4-5"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.75, 0.75, 0.90, 0.60 px apart for these pairs, respectively. Preserve the spacing of the oven drawing."
     },
     "owl": {
-      "pairs": ["0-2"],
-      "why": "the right eye fuses with the body outline; it still reads as an owl"
+      "pairs": ["0-1", "0-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.61, 0.61 px apart for these pairs, respectively. Preserve the spacing of the owl drawing."
     },
-    "panda": {
-      "pairs": ["0-2"],
-      "why": "the eye patches fuse with the head outline; it still reads as a panda"
+    "package-search": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.55 px apart for these pairs, respectively. Preserve the spacing of the package-search drawing."
     },
-    "pepper-shaker": {
-      "pairs": ["0-2"],
-      "why": "the band line fuses with the body outline; it still reads as a shaker"
+    "palette": {
+      "pairs": ["0-2", "0-3", "3-4"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.82, 0.90, 0.59 px apart for these pairs, respectively. Preserve the spacing of the palette drawing."
+    },
+    "parking-meter": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.54 px apart for these pairs, respectively. Preserve the spacing of the parking-meter drawing."
+    },
+    "paw": {
+      "pairs": ["0-1", "2-4", "3-4"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.75, 0.71, 0.71 px apart for these pairs, respectively. Preserve the spacing of the paw drawing."
+    },
+    "peanut": {
+      "pairs": ["0-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.66 px apart for these pairs, respectively. Preserve the spacing of the peanut drawing."
+    },
+    "pen-off": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.57 px apart for these pairs, respectively. Preserve the spacing of the pen-off drawing."
     },
     "pharmacy": {
       "pairs": ["0-1"],
-      "why": "the awning fuses with the walls; it still reads as a pharmacy"
+      "why": "At 16 px the nearest ink pixels in the reference are 0.45 px apart for these pairs, respectively. Preserve the spacing of the pharmacy drawing."
     },
-    "podcast": {
-      "pairs": ["1-2"],
-      "why": "the two broadcast arcs touch; it still reads as a podcast"
+    "phone-lock": {
+      "pairs": ["0-1", "0-4"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.41, 0.49 px apart for these pairs, respectively. Preserve the spacing of the phone-lock drawing."
+    },
+    "picture-in-picture": {
+      "pairs": ["0-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.40 px apart for these pairs, respectively. Preserve the spacing of the picture-in-picture drawing."
+    },
+    "pie": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.42 px apart for these pairs, respectively. Preserve the spacing of the pie drawing."
+    },
+    "pin-off": {
+      "pairs": ["0-1", "1-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.56, 0.53 px apart for these pairs, respectively. Preserve the spacing of the pin-off drawing."
+    },
+    "pizza": {
+      "pairs": ["0-1", "0-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.55, 0.41 px apart for these pairs, respectively. Preserve the spacing of the pizza drawing."
+    },
+    "play-pause": {
+      "pairs": ["0-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.99 px apart for these pairs, respectively. Preserve the spacing of the play-pause drawing."
+    },
+    "police-station": {
+      "pairs": ["0-1", "0-2", "0-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.42, 0.58, 0.58 px apart for these pairs, respectively. Preserve the spacing of the police-station drawing."
+    },
+    "pool": {
+      "pairs": ["1-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.67 px apart for these pairs, respectively. Preserve the spacing of the pool drawing."
+    },
+    "popsicle": {
+      "pairs": ["0-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 1.15 px apart for these pairs, respectively. Preserve the spacing of the popsicle drawing."
+    },
+    "prescription": {
+      "pairs": ["0-4"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.67 px apart for these pairs, respectively. Preserve the spacing of the prescription drawing."
+    },
+    "presentation": {
+      "pairs": ["0-1", "0-3", "2-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.83, 0.83, 1.00 px apart for these pairs, respectively. Preserve the spacing of the presentation drawing."
+    },
+    "printer": {
+      "pairs": ["0-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 1.17 px apart for these pairs, respectively. Preserve the spacing of the printer drawing."
+    },
+    "printer-check": {
+      "pairs": ["0-2", "2-4"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.45, 0.42 px apart for these pairs, respectively. Preserve the spacing of the printer-check drawing."
+    },
+    "prism": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.37 px apart for these pairs, respectively. Preserve the spacing of the prism drawing."
     },
     "projector": {
+      "pairs": ["0-1", "0-5"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.53, 1.05 px apart for these pairs, respectively. Preserve the spacing of the projector drawing."
+    },
+    "qr-code": {
+      "pairs": ["0-4", "0-6", "0-13", "1-3", "1-5", "6-7", "7-8", "13-16", "16-17", "16-18"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.71, 0.63, 0.79, 0.55, 0.71, 0.63, 0.22, 0.71, 0.63, 0.71 px apart for these pairs, respectively. Preserve the spacing of the qr-code drawing."
+    },
+    "quote": {
       "pairs": ["0-1"],
-      "why": "the listed pair of elements closes at 16 px; the drawing still reads as a projector"
+      "why": "At 16 px the nearest ink pixels in the reference are 0.14 px apart for these pairs, respectively. Preserve the spacing of the quote drawing."
+    },
+    "radar": {
+      "pairs": ["0-1", "4-5"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.46, 0.47 px apart for these pairs, respectively. Preserve the spacing of the radar drawing."
+    },
+    "radiator": {
+      "pairs": ["0-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.81 px apart for these pairs, respectively. Preserve the spacing of the radiator drawing."
+    },
+    "radio": {
+      "pairs": ["1-3", "3-4"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.67, 0.75 px apart for these pairs, respectively. Preserve the spacing of the radio drawing."
+    },
+    "radioactive": {
+      "pairs": ["0-1", "0-2", "0-4", "1-3", "2-3", "3-4"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.73, 0.75, 0.80, 0.57, 0.59, 0.59 px apart for these pairs, respectively. Preserve the spacing of the radioactive drawing."
+    },
+    "rainbow": {
+      "pairs": ["0-1", "1-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.87, 0.91 px apart for these pairs, respectively. Preserve the spacing of the rainbow drawing."
+    },
+    "rake": {
+      "pairs": ["0-1", "0-2", "1-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.50, 0.48, 0.21 px apart for these pairs, respectively. Preserve the spacing of the rake drawing."
+    },
+    "reference-card": {
+      "pairs": ["0-1", "0-2", "0-3", "1-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.89, 0.65, 0.49, 0.73 px apart for these pairs, respectively. Preserve the spacing of the reference-card drawing."
+    },
+    "regex": {
+      "pairs": ["0-2", "1-3", "3-4"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.57, 0.55, 0.61 px apart for these pairs, respectively. Preserve the spacing of the regex drawing."
+    },
+    "remote-control": {
+      "pairs": ["1-2", "3-4"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.94, 0.94 px apart for these pairs, respectively. Preserve the spacing of the remote-control drawing."
+    },
+    "repeat-off": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.71 px apart for these pairs, respectively. Preserve the spacing of the repeat-off drawing."
+    },
+    "replace": {
+      "pairs": ["0-2", "0-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.49, 0.83 px apart for these pairs, respectively. Preserve the spacing of the replace drawing."
+    },
+    "resolution": {
+      "pairs": ["0-1", "0-2", "0-7", "0-8", "3-4", "3-5", "4-6", "5-6"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.83, 0.83, 0.75, 0.75, 0.83, 0.67, 0.67, 0.83 px apart for these pairs, respectively. Preserve the spacing of the resolution drawing."
+    },
+    "rocket": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.95 px apart for these pairs, respectively. Preserve the spacing of the rocket drawing."
+    },
+    "rocket-launch": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.54 px apart for these pairs, respectively. Preserve the spacing of the rocket-launch drawing."
+    },
+    "role": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.67 px apart for these pairs, respectively. Preserve the spacing of the role drawing."
+    },
+    "roller-skate": {
+      "pairs": ["0-1", "0-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.76, 0.74 px apart for these pairs, respectively. Preserve the spacing of the roller-skate drawing."
+    },
+    "route": {
+      "pairs": ["2-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.37 px apart for these pairs, respectively. Preserve the spacing of the route drawing."
+    },
+    "route-off": {
+      "pairs": ["0-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.38 px apart for these pairs, respectively. Preserve the spacing of the route-off drawing."
     },
     "sailboat": {
-      "pairs": ["0-2"],
-      "why": "the mainsail fuses with the hull; it still reads as a sailboat"
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.54 px apart for these pairs, respectively. Preserve the spacing of the sailboat drawing."
     },
-    "salt": {
-      "pairs": ["0-3", "1-3"],
-      "why": "the listed pair of elements closes at 16 px; the drawing still reads as a salt shaker"
+    "scalpel": {
+      "pairs": ["0-1", "0-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.32, 0.32 px apart for these pairs, respectively. Preserve the spacing of the scalpel drawing."
+    },
+    "scan": {
+      "pairs": ["0-2", "0-4", "0-5"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.47, 0.63, 0.63 px apart for these pairs, respectively. Preserve the spacing of the scan drawing."
+    },
+    "scene": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.78 px apart for these pairs, respectively. Preserve the spacing of the scene drawing."
+    },
+    "scissors": {
+      "pairs": ["0-2", "0-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.55, 0.55 px apart for these pairs, respectively. Preserve the spacing of the scissors drawing."
+    },
+    "scoreboard": {
+      "pairs": ["1-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 1.22 px apart for these pairs, respectively. Preserve the spacing of the scoreboard drawing."
+    },
+    "script": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 1.06 px apart for these pairs, respectively. Preserve the spacing of the script drawing."
+    },
+    "sd-card": {
+      "pairs": ["0-1", "0-2", "0-4", "3-4"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.92, 0.92, 0.89, 0.92 px apart for these pairs, respectively. Preserve the spacing of the sd-card drawing."
+    },
+    "search-off": {
+      "pairs": ["0-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.78 px apart for these pairs, respectively. Preserve the spacing of the search-off drawing."
+    },
+    "server": {
+      "pairs": ["0-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.90 px apart for these pairs, respectively. Preserve the spacing of the server drawing."
+    },
+    "server-bolt": {
+      "pairs": ["0-3", "0-4"],
+      "why": "At 16 px the nearest ink pixels in the reference are 1.05, 0.42 px apart for these pairs, respectively. Preserve the spacing of the server-bolt drawing."
+    },
+    "server-check": {
+      "pairs": ["0-3", "0-4"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.94, 0.40 px apart for these pairs, respectively. Preserve the spacing of the server-check drawing."
     },
     "server-lock": {
-      "pairs": ["1-2"],
-      "why": "the lock badge fuses with the lower rack; it still reads as a locked server"
+      "pairs": ["0-3", "0-4"],
+      "why": "At 16 px the nearest ink pixels in the reference are 1.03, 0.40 px apart for these pairs, respectively. Preserve the spacing of the server-lock drawing."
     },
-    "shadow": {
-      "pairs": ["0-1"],
-      "why": "the shadow arc fuses with the circle it trails; it still reads as a shadow"
+    "server-off": {
+      "pairs": ["0-3", "0-4", "0-5", "4-5"],
+      "why": "At 16 px the nearest ink pixels in the reference are 1.08, 0.44, 0.46, 0.54 px apart for these pairs, respectively. Preserve the spacing of the server-off drawing."
+    },
+    "server-plus": {
+      "pairs": ["0-3", "0-4", "4-7"],
+      "why": "At 16 px the nearest ink pixels in the reference are 1.00, 0.41, 0.73 px apart for these pairs, respectively. Preserve the spacing of the server-plus drawing."
+    },
+    "server-search": {
+      "pairs": ["0-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.68 px apart for these pairs, respectively. Preserve the spacing of the server-search drawing."
+    },
+    "server-x": {
+      "pairs": ["0-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.60 px apart for these pairs, respectively. Preserve the spacing of the server-x drawing."
     },
     "shark": {
-      "pairs": ["0-2"],
-      "why": "the eye fuses with the body outline; it still reads as a shark"
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.71 px apart for these pairs, respectively. Preserve the spacing of the shark drawing."
     },
-    "snail": {
+    "shell": {
+      "pairs": ["0-1", "0-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.42, 0.42 px apart for these pairs, respectively. Preserve the spacing of the shell drawing."
+    },
+    "shield-lock": {
       "pairs": ["1-2"],
-      "why": "the centre of the spiral touches the shell ring; the spiral draws the shell, and it still reads as a snail"
+      "why": "At 16 px the nearest ink pixels in the reference are 0.42 px apart for these pairs, respectively. Preserve the spacing of the shield-lock drawing."
+    },
+    "shield-search": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.80 px apart for these pairs, respectively. Preserve the spacing of the shield-search drawing."
+    },
+    "shield-user": {
+      "pairs": ["0-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.73 px apart for these pairs, respectively. Preserve the spacing of the shield-user drawing."
+    },
+    "shower": {
+      "pairs": ["0-1", "0-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.47, 0.47 px apart for these pairs, respectively. Preserve the spacing of the shower drawing."
+    },
+    "sidebar": {
+      "pairs": ["0-1", "0-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.65, 0.65 px apart for these pairs, respectively. Preserve the spacing of the sidebar drawing."
+    },
+    "signal": {
+      "pairs": ["0-1", "1-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.32, 0.32 px apart for these pairs, respectively. Preserve the spacing of the signal drawing."
+    },
+    "signal-cellular": {
+      "pairs": ["1-2", "2-3", "3-4"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.46, 0.38, 0.46 px apart for these pairs, respectively. Preserve the spacing of the signal-cellular drawing."
+    },
+    "sim-card": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.85 px apart for these pairs, respectively. Preserve the spacing of the sim-card drawing."
+    },
+    "siren": {
+      "pairs": ["3-4"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.92 px apart for these pairs, respectively. Preserve the spacing of the siren drawing."
+    },
+    "skip-back": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.38 px apart for these pairs, respectively. Preserve the spacing of the skip-back drawing."
+    },
+    "sleet": {
+      "pairs": ["0-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.84 px apart for these pairs, respectively. Preserve the spacing of the sleet drawing."
+    },
+    "smart-lock": {
+      "pairs": ["1-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.82 px apart for these pairs, respectively. Preserve the spacing of the smart-lock drawing."
+    },
+    "smartphone": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.68 px apart for these pairs, respectively. Preserve the spacing of the smartphone drawing."
+    },
+    "smoking": {
+      "pairs": ["1-2", "2-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.73, 0.41 px apart for these pairs, respectively. Preserve the spacing of the smoking drawing."
+    },
+    "solar-panel": {
+      "pairs": ["3-6"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.45 px apart for these pairs, respectively. Preserve the spacing of the solar-panel drawing."
+    },
+    "spatula": {
+      "pairs": ["0-1", "0-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.72, 0.72 px apart for these pairs, respectively. Preserve the spacing of the spatula drawing."
+    },
+    "speaker": {
+      "pairs": ["0-1", "0-2", "1-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.67, 0.67, 0.50 px apart for these pairs, respectively. Preserve the spacing of the speaker drawing."
+    },
+    "split": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.83 px apart for these pairs, respectively. Preserve the spacing of the split drawing."
+    },
+    "star-off": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.73 px apart for these pairs, respectively. Preserve the spacing of the star-off drawing."
+    },
+    "star-x": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.65 px apart for these pairs, respectively. Preserve the spacing of the star-x drawing."
+    },
+    "stethoscope": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.59 px apart for these pairs, respectively. Preserve the spacing of the stethoscope drawing."
+    },
+    "storyboard": {
+      "pairs": ["0-1", "0-2", "0-5", "0-6", "1-2", "1-5", "2-6", "5-6", "6-8"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.60, 0.51, 0.60, 0.51, 0.51, 0.43, 0.43, 0.51, 0.51 px apart for these pairs, respectively. Preserve the spacing of the storyboard drawing."
+    },
+    "strikethrough": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.47 px apart for these pairs, respectively. Preserve the spacing of the strikethrough drawing."
+    },
+    "subscript": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.46 px apart for these pairs, respectively. Preserve the spacing of the subscript drawing."
+    },
+    "subway": {
+      "pairs": ["1-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.60 px apart for these pairs, respectively. Preserve the spacing of the subway drawing."
+    },
+    "sunset": {
+      "pairs": ["1-2", "2-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.75, 0.75 px apart for these pairs, respectively. Preserve the spacing of the sunset drawing."
+    },
+    "swimming": {
+      "pairs": ["1-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.75 px apart for these pairs, respectively. Preserve the spacing of the swimming drawing."
     },
     "swipe-down": {
       "pairs": ["0-1"],
-      "why": "the listed pair of elements closes at 16 px; the drawing still reads as a swipe down"
+      "why": "At 16 px the nearest ink pixels in the reference are 0.70 px apart for these pairs, respectively. Preserve the spacing of the swipe-down drawing."
     },
-    "turtle": {
+    "swipe-left": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.67 px apart for these pairs, respectively. Preserve the spacing of the swipe-left drawing."
+    },
+    "swipe-right": {
+      "pairs": ["0-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.71 px apart for these pairs, respectively. Preserve the spacing of the swipe-right drawing."
+    },
+    "tag-off": {
+      "pairs": ["1-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.64 px apart for these pairs, respectively. Preserve the spacing of the tag-off drawing."
+    },
+    "taxi": {
+      "pairs": ["0-1", "0-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.17, 0.92 px apart for these pairs, respectively. Preserve the spacing of the taxi drawing."
+    },
+    "tea": {
+      "pairs": ["2-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.76 px apart for these pairs, respectively. Preserve the spacing of the tea drawing."
+    },
+    "temperature-check": {
+      "pairs": ["0-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 1.03 px apart for these pairs, respectively. Preserve the spacing of the temperature-check drawing."
+    },
+    "text-color": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.82 px apart for these pairs, respectively. Preserve the spacing of the text-color drawing."
+    },
+    "thermometer": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.96 px apart for these pairs, respectively. Preserve the spacing of the thermometer drawing."
+    },
+    "thermometer-hot": {
+      "pairs": ["2-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.98 px apart for these pairs, respectively. Preserve the spacing of the thermometer-hot drawing."
+    },
+    "timeline": {
+      "pairs": ["0-1", "0-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.63, 0.63 px apart for these pairs, respectively. Preserve the spacing of the timeline drawing."
+    },
+    "toggle": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.50 px apart for these pairs, respectively. Preserve the spacing of the toggle drawing."
+    },
+    "tools": {
+      "pairs": ["0-1", "0-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.51, 0.51 px apart for these pairs, respectively. Preserve the spacing of the tools drawing."
+    },
+    "tornado": {
+      "pairs": ["0-1", "0-2", "1-3", "2-3", "2-4", "3-4"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.35, 0.29, 0.22, 0.60, 0.16, 0.18 px apart for these pairs, respectively. Preserve the spacing of the tornado drawing."
+    },
+    "trackpad": {
+      "pairs": ["1-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.69 px apart for these pairs, respectively. Preserve the spacing of the trackpad drawing."
+    },
+    "tractor": {
+      "pairs": ["0-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.49 px apart for these pairs, respectively. Preserve the spacing of the tractor drawing."
+    },
+    "trademark": {
+      "pairs": ["0-1", "0-2", "1-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.76, 0.74, 0.30 px apart for these pairs, respectively. Preserve the spacing of the trademark drawing."
+    },
+    "traffic-light": {
+      "pairs": ["0-1", "0-2", "0-3", "1-2", "2-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.72, 1.08, 0.72, 0.45, 0.45 px apart for these pairs, respectively. Preserve the spacing of the traffic-light drawing."
+    },
+    "train": {
+      "pairs": ["0-1", "0-2", "0-3", "1-2", "1-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.67, 0.75, 0.75, 0.75, 0.75 px apart for these pairs, respectively. Preserve the spacing of the train drawing."
+    },
+    "tram": {
+      "pairs": ["0-1", "0-2", "0-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.42, 0.58, 0.67 px apart for these pairs, respectively. Preserve the spacing of the tram drawing."
+    },
+    "transition": {
       "pairs": ["1-2"],
-      "why": "the head fuses with the legs; it still reads as a turtle"
+      "why": "At 16 px the nearest ink pixels in the reference are 0.58 px apart for these pairs, respectively. Preserve the spacing of the transition drawing."
+    },
+    "translate": {
+      "pairs": ["0-3", "0-5"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.49, 0.49 px apart for these pairs, respectively. Preserve the spacing of the translate drawing."
+    },
+    "trash": {
+      "pairs": ["1-2", "2-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 1.06, 1.06 px apart for these pairs, respectively. Preserve the spacing of the trash drawing."
+    },
+    "treadmill": {
+      "pairs": ["0-1", "0-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.46, 0.46 px apart for these pairs, respectively. Preserve the spacing of the treadmill drawing."
+    },
+    "tsunami": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.49 px apart for these pairs, respectively. Preserve the spacing of the tsunami drawing."
+    },
+    "tv-retro": {
+      "pairs": ["0-1", "0-2", "1-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.58, 0.75, 0.58 px apart for these pairs, respectively. Preserve the spacing of the tv-retro drawing."
+    },
+    "ufo": {
+      "pairs": ["0-1", "0-2", "0-4", "0-5"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.67, 0.67, 0.62, 0.62 px apart for these pairs, respectively. Preserve the spacing of the ufo drawing."
+    },
+    "usb-plug": {
+      "pairs": ["0-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.42 px apart for these pairs, respectively. Preserve the spacing of the usb-plug drawing."
+    },
+    "user-lock": {
+      "pairs": ["1-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.92 px apart for these pairs, respectively. Preserve the spacing of the user-lock drawing."
+    },
+    "user-star": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.52 px apart for these pairs, respectively. Preserve the spacing of the user-star drawing."
+    },
+    "user-x": {
+      "pairs": ["0-1", "1-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.41, 0.64 px apart for these pairs, respectively. Preserve the spacing of the user-x drawing."
+    },
+    "users-check": {
+      "pairs": ["0-1", "0-2", "0-3", "3-4"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.42, 0.42, 0.42, 0.42 px apart for these pairs, respectively. Preserve the spacing of the users-check drawing."
+    },
+    "users-minus": {
+      "pairs": ["0-1", "0-2", "0-3", "2-3", "3-4"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.41, 0.41, 0.41, 0.66, 0.58 px apart for these pairs, respectively. Preserve the spacing of the users-minus drawing."
+    },
+    "users-plus": {
+      "pairs": ["0-1", "0-2", "0-3", "3-4"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.41, 0.41, 0.41, 0.55 px apart for these pairs, respectively. Preserve the spacing of the users-plus drawing."
+    },
+    "users-x": {
+      "pairs": ["0-1", "0-2", "0-3", "2-3", "3-4"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.39, 0.39, 0.42, 0.56, 0.49 px apart for these pairs, respectively. Preserve the spacing of the users-x drawing."
+    },
+    "uv-index": {
+      "pairs": ["3-4", "4-5"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.54, 0.26 px apart for these pairs, respectively. Preserve the spacing of the uv-index drawing."
+    },
+    "vase": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.36 px apart for these pairs, respectively. Preserve the spacing of the vase drawing."
+    },
+    "vibrate": {
+      "pairs": ["2-5", "3-4"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.83, 0.86 px apart for these pairs, respectively. Preserve the spacing of the vibrate drawing."
+    },
+    "vibrate-off": {
+      "pairs": ["0-1", "0-2", "3-6", "4-5"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.59, 0.83, 0.83, 0.82 px apart for these pairs, respectively. Preserve the spacing of the vibrate-off drawing."
+    },
+    "video-off": {
+      "pairs": ["0-1", "0-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.57, 0.60 px apart for these pairs, respectively. Preserve the spacing of the video-off drawing."
+    },
+    "virus": {
+      "pairs": ["0-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.69 px apart for these pairs, respectively. Preserve the spacing of the virus drawing."
+    },
+    "voice": {
+      "pairs": ["0-3", "1-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.67, 0.67 px apart for these pairs, respectively. Preserve the spacing of the voice drawing."
+    },
+    "volume-off": {
+      "pairs": ["0-1", "1-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.57, 0.60 px apart for these pairs, respectively. Preserve the spacing of the volume-off drawing."
+    },
+    "wallet": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.57 px apart for these pairs, respectively. Preserve the spacing of the wallet drawing."
     },
     "wallet-check": {
-      "pairs": ["0-2"],
-      "why": "the strap line fuses with the wallet outline; it still reads as a wallet with a check"
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.69 px apart for these pairs, respectively. Preserve the spacing of the wallet-check drawing."
+    },
+    "wallet-off": {
+      "pairs": ["0-1", "0-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.68, 0.55 px apart for these pairs, respectively. Preserve the spacing of the wallet-off drawing."
     },
     "wallet-plus": {
-      "pairs": ["0-2"],
-      "why": "the strap line fuses with the wallet outline; it still reads as a wallet with a plus"
+      "pairs": ["0-1", "0-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.68, 0.55 px apart for these pairs, respectively. Preserve the spacing of the wallet-plus drawing."
     },
     "wallet-x": {
-      "pairs": ["0-2"],
-      "why": "the strap line fuses with the wallet outline; it still reads as a wallet with a cross"
+      "pairs": ["0-1", "0-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.68, 0.57 px apart for these pairs, respectively. Preserve the spacing of the wallet-x drawing."
+    },
+    "warehouse": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.67 px apart for these pairs, respectively. Preserve the spacing of the warehouse drawing."
+    },
+    "washing-machine": {
+      "pairs": ["0-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.75 px apart for these pairs, respectively. Preserve the spacing of the washing-machine drawing."
+    },
+    "waterfall": {
+      "pairs": ["0-1", "0-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.56, 0.67 px apart for these pairs, respectively. Preserve the spacing of the waterfall drawing."
+    },
+    "waveform": {
+      "pairs": ["0-1", "0-2", "1-3", "2-4"],
+      "why": "At 16 px the nearest ink pixels in the reference are 1.06, 0.97, 0.97, 0.97 px apart for these pairs, respectively. Preserve the spacing of the waveform drawing."
+    },
+    "webcam": {
+      "pairs": ["1-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.54 px apart for these pairs, respectively. Preserve the spacing of the webcam drawing."
+    },
+    "webcam-off": {
+      "pairs": ["0-1", "1-2", "1-3", "1-4", "1-5", "3-4"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.52, 0.46, 0.46, 0.46, 0.41, 0.51 px apart for these pairs, respectively. Preserve the spacing of the webcam-off drawing."
     },
     "webhook-off": {
-      "pairs": ["1-2", "1-3"],
-      "why": "the upper node fuses with the arc and the arrow beside it; it still reads as a disabled webhook"
+      "pairs": ["0-1", "0-2", "1-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.77, 0.77, 0.77 px apart for these pairs, respectively. Preserve the spacing of the webhook-off drawing."
+    },
+    "wheelchair": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.93 px apart for these pairs, respectively. Preserve the spacing of the wheelchair drawing."
+    },
+    "whistle": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.74 px apart for these pairs, respectively. Preserve the spacing of the whistle drawing."
+    },
+    "wifi-check": {
+      "pairs": ["2-3", "3-4"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.59, 0.46 px apart for these pairs, respectively. Preserve the spacing of the wifi-check drawing."
     },
     "wifi-lock": {
-      "pairs": ["0-3"],
-      "why": "the lock badge fuses with the outer arc; it still reads as a locked network"
+      "pairs": ["2-3", "2-4", "2-5"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.52, 0.73, 0.58 px apart for these pairs, respectively. Preserve the spacing of the wifi-lock drawing."
+    },
+    "wifi-off": {
+      "pairs": ["0-4"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.65 px apart for these pairs, respectively. Preserve the spacing of the wifi-off drawing."
+    },
+    "wifi-x": {
+      "pairs": ["2-3", "3-4"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.50, 0.54 px apart for these pairs, respectively. Preserve the spacing of the wifi-x drawing."
+    },
+    "wildfire": {
+      "pairs": ["0-1"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.50 px apart for these pairs, respectively. Preserve the spacing of the wildfire drawing."
     },
     "window": {
-      "pairs": ["0-2"],
-      "why": "the title-bar dot touches the frame; it still reads as a window"
+      "pairs": ["0-1", "0-2", "0-3"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.58, 0.58, 0.58 px apart for these pairs, respectively. Preserve the spacing of the window drawing."
+    },
+    "zzz": {
+      "pairs": ["0-1", "1-2"],
+      "why": "At 16 px the nearest ink pixels in the reference are 0.32, 0.23 px apart for these pairs, respectively. Preserve the spacing of the zzz drawing."
     }
   }
 }

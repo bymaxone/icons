@@ -16,6 +16,8 @@ import type { DrawingElement } from './svg.ts'
 
 /** One drawing: its source file, its normalised text and its elements. */
 export interface Drawing {
+  /** The source paints the boundary of each ink region at a fixed optical weight. */
+  readonly contour?: boolean | undefined
   /** The source path from the repository root. */
   readonly path: string
   /** The normalised file, which is also the published raw SVG. */

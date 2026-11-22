@@ -15,6 +15,9 @@ import { coverage, renderRgba } from './raster.ts'
 /** The most a line drawing may cover of its 24 px canvas. */
 export const LINE_INK_CEILING = 0.215
 
+/** Maximum ink of an outlined Line master. The densest reference uses 29.9% at 24 px. */
+export const CONTOUR_INK_CEILING = 0.3
+
 /** The most a 16 px master may cover of its 16 px canvas: 21.5% x 24 / 16. */
 export const SM_INK_CEILING = 0.3225
 
@@ -56,11 +59,12 @@ export function inkIssues(
   for (const [name, drawing] of line) {
     const ink = measure(drawing.text)
     lineInk.set(name, ink)
-    if (ink > LINE_INK_CEILING) {
+    const ceilingValue = drawing.contour ? CONTOUR_INK_CEILING : LINE_INK_CEILING
+    if (ink > ceilingValue) {
       issues.push({
         file: drawing.path,
         rule: 'svg-ink',
-        message: `covers ${percent(ink)} of the canvas at 24 px, over the ${ceiling(LINE_INK_CEILING)} ceiling`
+        message: `covers ${percent(ink)} of the canvas at 24 px, over the ${ceiling(ceilingValue)} ceiling`
       })
     }
   }

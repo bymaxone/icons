@@ -8,7 +8,7 @@
 import type { LintIssue, RuleId } from './lint-issue.ts'
 import { geometryBounds, isInsideLiveArea, LIVE_AREA_LIMIT } from './live-area.ts'
 import type { SourceFile } from './sources.ts'
-import { isStrokeKind, rootAttributes } from './svg-kind.ts'
+import { isStrokeKind, rootAttributes, usesContours } from './svg-kind.ts'
 import type { SvgKind } from './svg-kind.ts'
 import { isSparkDot, normalizeSvg, parseSvg, svgRoot } from './svg.ts'
 import type { DrawingElement, SvgElementNode } from './svg.ts'
@@ -62,6 +62,7 @@ export interface SvgSubject {
 
 /** The outcome of checking one file: its issues and, when it parses, its drawing. */
 export interface SvgReport {
+  readonly contour?: boolean | undefined
   readonly issues: readonly LintIssue[]
   readonly elements: readonly DrawingElement[] | undefined
   /** The view box of a flag, which keeps its own; absent for every other kind. */
@@ -69,8 +70,8 @@ export interface SvgReport {
 }
 
 /** The root's attributes against the kind's fixed set. */
-function rootMessages(root: SvgElementNode, kind: SvgKind): string[] {
-  const expected = rootAttributes(kind)
+function rootMessages(root: SvgElementNode, kind: SvgKind, contour: boolean): string[] {
+  const expected = rootAttributes(kind, contour)
   const actual = new Map(Object.entries(root.attributes))
   const wrong = Object.entries(expected)
     .filter(([name, value]) => actual.get(name) !== value)
@@ -211,14 +212,21 @@ export function lintSvg(subject: SvgSubject): SvgReport {
     }
   }
   const elements = drawingElements(root)
+  const contour = usesContours(subject.kind, root.attributes['fill'])
   const issues = [
     ...normalisedMessages(text, subject.kind).map(at('svg-normalised')),
-    ...rootMessages(root, subject.kind).map(at('svg-root')),
+    ...rootMessages(root, subject.kind, contour).map(at('svg-root')),
     ...elementMessages(root).map(at('svg-element')),
     ...attributeMessages(elements).map(at('svg-attribute')),
-    ...fillMessages(elements, subject).map(at('svg-fill')),
+    ...fillMessages(elements, contour ? { ...subject, kind: 'filled' } : subject).map(
+      at('svg-fill')
+    ),
     ...precisionMessages(elements).map(at('svg-precision')),
     ...liveAreaMessages(elements.map(geometryOnly)).map(at('svg-live-area'))
   ]
-  return { issues, elements: elements.map(({ tag, attributes }) => ({ tag, attributes })) }
+  return {
+    issues,
+    ...(contour && { contour }),
+    elements: elements.map(({ tag, attributes }) => ({ tag, attributes }))
+  }
 }

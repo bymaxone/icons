@@ -13,6 +13,23 @@ The date of a section is the day the release was prepared, not the day the versi
 
 ## [Unreleased]
 
+## [1.0.8] - 2026-11-21
+
+### Added
+
+- `RunFilledIcon` and `WalkFilledIcon`, the filled variants of `run` and `walk`.
+
+### Changed
+
+- Every line icon, filled variant and 16 px master is a fixed-weight contour: a filled vector path that carries its own weight and interior spaces.
+- The `octopus` icon has no alias.
+
+#### Apply to a consumer
+
+- Style a catalog icon with `size` and `color`. Its weight scales with its size, so `strokeWidth` and `absoluteStrokeWidth` leave it unchanged; they apply to custom drawings rendered with stroke paint through `Icon` or `createIcon`.
+- Import the octopus as `OctopusIcon`, `OctopusFilledIcon` and `OctopusSmIcon`, and look it up as `octopus` in the metadata.
+- New names: `RunFilledIcon`, `WalkFilledIcon`. Every other icon keeps its name and its aliases.
+
 ## [1.0.7] - 2026-11-21
 
 The figures and the link family, redrawn because they did not hold up at 192 px: broken arms, floating segments, and a link that read as a split pill. Every figure now follows one construction: a spine, a head set off by the cut, both arms from one shoulder and both legs from one hip.
@@ -140,7 +157,7 @@ an SVG sprite and typed metadata.
   (`file-minus` stays "Remove file"), and `x-square` is "Dismiss" and `minus-circle` "Remove item"
   (`minus` stays "Remove"). Labels only: names and drawings are unchanged.
 - The categories follow one taxonomy, fixed before the set grows: 28 categories,
-  replacing the Studio's grouping. `credits-billing` joins `commerce`,
+  replacing the first grouping. `credits-billing` joins `commerce`,
   `formats` joins `media`, and `places-devices` splits into `devices`, `maps` and
   `connectivity`; `arrows`, `text`, `time`, `emotions`, `tools`, `nature`, `games`, `math`,
   `transport` and `health` are new, and `data-charts`, `ai-agent`, `editor-canvas`, `people-roles`,
@@ -273,18 +290,17 @@ an SVG sprite and typed metadata.
   `file-video`, `file-audio`, `image`, `paperclip`, `reference-card` and `asset`. Editor and
   canvas: `layers`, `crop`, `move`, `zoom-in`, `zoom-out`, `hand`, `cursor`, `text`,
   `align-center`, `grid`, `palette`, `brush`, `eraser`, `split` and `mask`.
-- The Studio, AI, format, billing, people and system icons, 42 drawings. Credits and
+- The video production, AI, format, billing, people and system icons, 42 drawings. Credits and
   billing: `wallet`, `card`, `receipt`, `gift`, `lightning-stack` (alias `credit-pack`),
   `spending-cap` and `plan`. People and roles: `users`, `user-plus`, `crown`, `mail-invite`,
   `log-in`, `log-out`, `character` and `role`. Formats: `aspect-16-9`, `aspect-9-16`,
   `aspect-1-1`, `aspect-4-5`, `duration` and `resolution`. AI and agent: `sparkle`,
-  `octopus` (alias `polvi`), `agent`, `prompt`, `generate`, `regenerate`, `variations`,
+  `octopus`, `agent`, `prompt`, `generate`, `regenerate`, `variations`,
   `storyboard`, `script` and `style`. System: `bell`, `message`, `help`, `feedback`, `sun`,
   `moon`, `monitor`, `globe`, `keyboard`, `command` and `accent`.
 - Filled variants of 40 icons with a stateful meaning, each the silhouette of its line icon
   made solid with its interior details knocked out at 1.5 px (`HomeFilledIcon` to
-  `MoonFilledIcon`, from the root and from `./icons/<name>`, aliases included, such as
-  `PolviFilledIcon`), with their raw SVG files under `svg/filled/`, sprite symbols and
+  `MoonFilledIcon`, from the root and from `./icons/<name>`, aliases included), with their raw SVG files under `svg/filled/`, sprite symbols and
   metadata: `home`, `dashboard`, `folder`, `folder-stack`, `library`, `templates`,
   `settings`, `user`, `users`, `file`, `play`, `pause`, `scene`, `video`, `camera`, `mic`,
   `volume`, `image`, `layers`, `bell`, `message`, `lock`, `eye`, `pin`, `check-circle`,
@@ -376,7 +392,7 @@ an SVG sprite and typed metadata.
   exception, three-decimal precision, the live area, kebab-case file names paired with
   their metadata, the schemas, alias and component-name uniqueness, declared variants and
   brand names only in `icons/brands`.
-- `pnpm contact-sheet`: every drawing at 16, 20, 24 and 48 px on the light and dark Studio
+- `pnpm contact-sheet`: every drawing at 16, 20, 24 and 48 px on the light and dark
   pages, in the ink and the six accents, rendered to `reports/contact-sheet.png`.
 - The visual tools every drawing batch is reviewed with: `pnpm check:visual` compares every
   drawing at 16, 20, 24 and 48 px, light and dark, with committed baselines;
@@ -385,7 +401,8 @@ an SVG sprite and typed metadata.
   `pnpm family-sheet` renders the whole set by category; and a pull request that changes a
   drawing gets a preview comment with its render and its nearest matches.
 
-[Unreleased]: https://github.com/bymaxone/icons/compare/v1.0.7...HEAD
+[Unreleased]: https://github.com/bymaxone/icons/compare/v1.0.8...HEAD
+[1.0.8]: https://github.com/bymaxone/icons/compare/v1.0.7...v1.0.8
 [1.0.7]: https://github.com/bymaxone/icons/compare/v1.0.6...v1.0.7
 [1.0.6]: https://github.com/bymaxone/icons/compare/v1.0.5...v1.0.6
 [1.0.5]: https://github.com/bymaxone/icons/compare/v1.0.4...v1.0.5

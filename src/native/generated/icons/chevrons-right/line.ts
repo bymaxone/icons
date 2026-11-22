@@ -11,9 +11,24 @@ import { createNativeIcon } from '@bymax-one/icons/native/runtime'
  *
  * @since 1.0.0
  */
-export const ChevronsRightIcon = /* @__PURE__ */ createNativeIcon('chevrons-right', [
-  ['path', { d: 'm5.75 6.25 6 6-6 6m6.5-12 6 6-6 6' }]
-])
+export const ChevronsRightIcon = /* @__PURE__ */ createNativeIcon(
+  'chevrons-right',
+  [
+    [
+      'path',
+      {
+        d: 'M5.57 18.57c-.27-.21-.39-.49-.39-.86 0-.39.14-.55 2.84-3.31 1.06-1.09 1.94-2.06 1.97-2.19.1-.4.21-.27-3.3-3.86L5.18 6.82V6.4c0-1.2 1.11-1.51 2.01-.56.2.2 1.35 1.4 2.57 2.66 2.06 2.14 2.21 2.32 2.37 2.81.44 1.4.21 1.72-5.05 7.03-.45.45-1.11.55-1.51.23'
+      }
+    ],
+    [
+      'path',
+      {
+        d: 'M12.06 18.49c-.67-.66-.52-.97 1.36-2.91 3.31-3.42 3.24-3.34 3.09-3.74-.06-.15-2.35-2.6-4.13-4.4-.67-.68-.78-1.02-.5-1.6.39-.82 1.2-.76 2.05.16.24.27 1.17 1.24 2.06 2.17 2.37 2.48 2.45 2.57 2.65 3.09.31.81.13 1.74-.46 2.37-.38.4-3.78 3.96-4.4 4.58-.61.64-1.26.74-1.72.28'
+      }
+    ]
+  ],
+  { paint: 'fill' }
+)
 
 /** `chevron-double-right`: an alias of {@link ChevronsRightIcon}. */
 export const ChevronDoubleRightIcon = ChevronsRightIcon

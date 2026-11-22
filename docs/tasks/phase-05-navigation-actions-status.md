@@ -102,14 +102,14 @@ Measured with resvg at 20x zoom. The bounding box includes the stroke, the centr
 
 ### Evidence
 
-- [`../contact-sheets/b1/contact-sheet.png`](../contact-sheets/b1/contact-sheet.png): `pnpm contact-sheet` on the 44 drawings, at 16, 20, 24 and 48 px on the light and dark Studio pages, in the ink and the six accents.
+- [`../contact-sheets/b1/contact-sheet.png`](../contact-sheets/b1/contact-sheet.png): `pnpm contact-sheet` on the 44 drawings, at 16, 20, 24 and 48 px on the light and dark pages, in the ink and the six accents.
 - [`../contact-sheets/b1/family-sheet.png`](../contact-sheets/b1/family-sheet.png): `pnpm family-sheet --highlight`, the batch outlined beside B0 by category.
 - [`../contact-sheets/b1/similarity.md`](../contact-sheets/b1/similarity.md) and [`../contact-sheets/b1/similarity-sheet.png`](../contact-sheets/b1/similarity-sheet.png): `pnpm similarity --names` on the batch.
 - [`../contact-sheets/b1/alternatives-sheet.png`](../contact-sheets/b1/alternatives-sheet.png): each justified glyph beside its measured alternatives.
 
-### Studio adoption
+### Consumer adoption
 
-The plan asks that `bymax-studio-web` consume the package through a local link from B1 on (decision D5). The Studio is still in its specification phase, with no `package.json`, so the adoption is deferred; the plan records when it returns as a criterion.
+The plan asks that the first consumer app use the package through a local link from B1 on (decision D5). That app is still in its specification phase, with no `package.json`, so the adoption is deferred; the plan records when it returns as a criterion.
 
 ### Build
 
@@ -223,7 +223,7 @@ Verification:
 You are a senior icon designer and engineer on @bymax-one/icons.
 
 TASK
-Draw the status icons of spec §4.1 not drawn yet, the Studio concepts queued, repair and
+Draw the status icons of spec §4.1 not drawn yet, the app concepts queued, repair and
 version included, as code on the 24 unit grid, following spec §2, and write their metadata.
 
 Verification:

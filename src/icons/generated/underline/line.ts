@@ -11,7 +11,15 @@ import { createIcon } from '@bymax-one/icons/runtime'
  *
  * @since 1.0.0
  */
-export const UnderlineIcon = /* @__PURE__ */ createIcon('underline', [
-  ['path', { d: 'M7.25 4.75v6.5a5 5 0 0 0 10 0v-6.5' }],
-  ['path', { d: 'M5.75 20.25h13' }]
-])
+export const UnderlineIcon = /* @__PURE__ */ createIcon(
+  'underline',
+  [
+    [
+      'path',
+      {
+        d: 'M3.96 12.57c-.28-.33-.27-.72.01-1l.28-.28h7.8c7.65 0 7.8.01 8.01.22.28.27.29.78.02 1.02-.26.24-15.92.28-16.12.04'
+      }
+    ]
+  ],
+  { paint: 'fill' }
+)

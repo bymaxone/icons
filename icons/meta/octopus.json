@@ -8,12 +8,6 @@
     "Marks a message from the agent",
     "Filled: the agent while it is active"
   ],
-  "aliases": [
-    {
-      "name": "polvi",
-      "deprecated": false
-    }
-  ],
   "variants": ["line", "filled", "sm"],
   "opticalSizes": [24, 16],
   "since": "1.0.0"

@@ -1,4 +1,4 @@
-/* The catalog's base styles: the Studio's page and ink tokens, its six accents in both themes,
+/* The catalog's base styles: the design system's page and ink tokens, its six accents in both themes,
    and the page header. Layer: site. The build joins base.css, home.css and entry.css, in that
    order, into one stylesheet. */
 
@@ -12,7 +12,6 @@
   --ring: #2450b8;
   --accent: var(--ink);
   --icon: 24px;
-  --stroke: 1.5;
   --radius: 14px;
   --font:
     ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;

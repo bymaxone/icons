@@ -5,3 +5,4 @@
  */
 
 export { WalkIcon } from './line'
+export { WalkFilledIcon } from './filled'

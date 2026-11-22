@@ -11,10 +11,24 @@ import { createIcon } from '@bymax-one/icons/runtime'
  *
  * @since 1.0.0
  */
-export const DropletIcon = /* @__PURE__ */ createIcon('droplet', [
-  ['path', { d: 'm12.25 3.25 5.244 7.159a6.5 6.5 0 1 1-10.488 0z' }],
-  ['path', { d: 'M10.982 16.969a3 3 0 0 1-1.63-1.943' }]
-])
+export const DropletIcon = /* @__PURE__ */ createIcon(
+  'droplet',
+  [
+    [
+      'path',
+      {
+        d: 'M10.54 21.14c-3.66-.68-5.94-4.16-5.19-7.93.37-1.83 1.29-3.5 3.6-6.51.62-.8 1.51-1.99 1.99-2.65.99-1.34 1.31-1.53 1.72-1.03.24.29.83 1.1 3.39 4.69 2.17 3.04 2.86 4.82 2.73 7.09-.23 4.14-4.09 7.11-8.24 6.34m2.84-1.17c3.36-.87 5.17-4.31 4.05-7.67-.47-1.4-1.18-2.55-3.36-5.54-.23-.32-.75-1.03-1.15-1.59-.7-.98-.73-1-.9-.74-.1.15-.72.97-1.39 1.82-3.39 4.32-4.35 6.16-4.35 8.35 0 3.77 3.38 6.33 7.1 5.37'
+      }
+    ],
+    [
+      'path',
+      {
+        d: 'M10.62 18.64c-2.01-.56-3.87-3.43-3.12-4.82.31-.59.97-.19.97.58 0 1.6 1.54 3.32 2.98 3.32.44 0 .67.19.67.55 0 .56-.42.66-1.5.37'
+      }
+    ]
+  ],
+  { paint: 'fill' }
+)
 
 /** @deprecated `accent` is a deprecated alias of `droplet`, removed in 2.0.0. Renamed to droplet, the object the drawing shows. Use {@link DropletIcon}. */
 export const AccentIcon = DropletIcon

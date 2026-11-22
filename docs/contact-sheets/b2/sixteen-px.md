@@ -1,6 +1,6 @@
 # The 16 px check
 
-Every drawing of the set, rendered at 16 px and 1x with resvg, with two objective tests. The 16 px master of spec §2.1 is drawn for the icons that fail one of them, and for the icons the shell of the Studio shows at 16 px (spec §4.2).
+Every drawing of the set, rendered at 16 px and 1x with resvg, with two objective tests. The 16 px master of spec §2.1 is drawn for the icons that fail one of them, and for the icons the app shell shows at 16 px (spec §4.2).
 
 ## Parts that fuse
 

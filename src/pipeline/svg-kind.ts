@@ -73,6 +73,11 @@ export function isStrokeKind(kind: SvgKind): boolean {
 
 const SVG_NAMESPACE = 'http://www.w3.org/2000/svg'
 
+/** A fixed-weight Line or Sm source describes ink boundaries with a filled SVG root. */
+export function usesContours(kind: SvgKind, fill: string | undefined): boolean {
+  return isStrokeKind(kind) && fill === 'currentColor'
+}
+
 /** Root attributes every drawing shares: the namespace, the master size and its viewBox. */
 const CANVAS: Readonly<Record<string, string>> = {
   xmlns: SVG_NAMESPACE,
@@ -117,8 +122,12 @@ const FLAG_ROOT: Readonly<Record<string, string>> = { xmlns: SVG_NAMESPACE }
  * @param kind - The source directory.
  * @returns The attribute names and values of the `<svg>` element.
  */
-export function rootAttributes(kind: SvgKind): Readonly<Record<string, string>> {
+export function rootAttributes(kind: SvgKind, contour = false): Readonly<Record<string, string>> {
   if (kind === 'flags') return FLAG_ROOT
+  if (contour)
+    return kind === 'sm'
+      ? { ...FILL_ROOT, width: String(ICON_GRID.smSize), height: String(ICON_GRID.smSize) }
+      : FILL_ROOT
   if (kind === 'sm') return SM_ROOT
   return isStrokeKind(kind) ? STROKE_ROOT : FILL_ROOT
 }

@@ -98,44 +98,10 @@
   stroke-dasharray: 0.3 0.3;
   opacity: 0.6;
 }
-/* The accent colours the drawing, as it does in the grid. The annotations never take it:
-   they keep one fixed colour, and turn muted when the accent is that same blue. */
 .glyph svg {
   width: 100%;
   height: 100%;
   color: var(--accent);
-  stroke-width: 1.5;
-}
-.marks {
-  --note: #2450b8;
-}
-[data-theme='dark'] .marks {
-  --note: #7fa6ff;
-}
-[data-accent='blue'] .marks {
-  --note: var(--muted);
-}
-.marks .cut {
-  fill: var(--note);
-  opacity: 0.22;
-}
-.marks .cut-dim {
-  fill: none;
-  stroke: var(--note);
-  stroke-width: 0.06;
-}
-.marks .stroke-dim {
-  fill: none;
-  stroke: var(--muted);
-  stroke-width: 0.05;
-}
-.marks text {
-  font-family: var(--mono);
-  font-size: 0.6px;
-  fill: var(--muted);
-}
-.marks .cut-label {
-  fill: var(--note);
 }
 .tag {
   position: absolute;
@@ -289,26 +255,6 @@
   cursor: not-allowed;
   opacity: 0.45;
 }
-.stroke {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  height: 38px;
-  padding: 0 10px;
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  color: var(--muted);
-  font-size: 13px;
-}
-.stroke input {
-  width: 84px;
-  accent-color: var(--ink);
-}
-.stroke output {
-  width: 30px;
-  font: 12px var(--mono);
-  color: var(--ink);
-}
 .sws {
   margin-left: auto;
 }
@@ -397,7 +343,6 @@
 .cell svg {
   width: var(--icon);
   height: var(--icon);
-  stroke-width: var(--stroke);
 }
 /* A flag is 3:2: its height is the size and its width follows, and it keeps its own colours.
    A hairline inset outline keeps the white edge of a flag visible on the light page; the SVG
@@ -406,9 +351,6 @@
   width: calc(var(--icon) * 1.5);
   outline: 1px solid var(--line);
   outline-offset: -1px;
-}
-.cell .d[data-d='sm'] svg {
-  stroke-width: calc(var(--stroke) * 1.5);
 }
 .cell[data-fallback] .d {
   opacity: 0.32;
@@ -601,7 +543,7 @@
   cursor: pointer;
 }
 
-/* The filters button folds the type, size, stroke and colour on a narrow screen. */
+/* The filters button folds the type, size and colour on a narrow screen. */
 .more-toggle {
   display: none;
   align-items: center;

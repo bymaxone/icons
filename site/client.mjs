@@ -1,7 +1,7 @@
 /**
  * @fileoverview The catalog's browser script: the search over the index the build writes, the
  * type and category facets kept in the address, the category navigation, the keyboard, the
- * variant, size, stroke, theme and colour controls, and the copy buttons. It never writes
+ * variant, size, theme and colour controls, and the copy buttons. It never writes
  * markup: matched words are marked with elements it creates and fills as text. It keeps the
  * reader's theme and colour in local storage.
  * @layer site
@@ -391,12 +391,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // A page with a grid and no search (an entry's related icons) shows the line drawings.
   if (!document.getElementById('q') && document.querySelector('.grid')) showVariant('line')
   startSearch()
-  const stroke = document.getElementById('stroke')
-  stroke?.addEventListener('input', () => {
-    root.style.setProperty('--stroke', stroke.value)
-    const output = document.querySelector('output[for="stroke"]')
-    if (output) output.textContent = stroke.value
-  })
   document.addEventListener('click', (event) => {
     const target = event.target instanceof Element ? event.target.closest('button') : null
     if (!target) return

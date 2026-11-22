@@ -43,7 +43,7 @@
 | P3   | visual-tooling                    | ✅     | 100%     | L    | 2026-11-11   |
 | B1   | navigation-actions-status         | ✅     | 100%     | L    | 2026-11-11   |
 | B2   | media-audio-files-editor          | ✅     | 100%     | L    | 2026-11-11   |
-| B3   | studio-ai-formats-billing         | ✅     | 100%     | L    | 2026-11-11   |
+| B3   | app-ai-formats-billing            | ✅     | 100%     | L    | 2026-11-11   |
 | B4   | filled-variants-sm-masters-brands | ✅     | 100%     | L    | 2026-11-11   |
 | P4   | catalog-site                      | ✅     | 100%     | M    | 2026-11-11   |
 | P4.1 | catalog-categories-search         | 🔄     | 80%      | M    | 2026-11-12   |
@@ -63,7 +63,7 @@
 P0 ── P1 ── P2 ── B0 ── P3 ── B1 ── B2 ── B3 ── B4 ── P4 ── P5 ── P6
                    │           │                 │                 │
                    │           │                 └─────────────────┘  P6 also waits for the complete set of B4
-                   │           └── bymax-studio-web adopts the package (local link)
+                   │           └── first consumer app adopts the package (local link)
                    └── founder approves the design language
 ```
 
@@ -86,8 +86,8 @@ ship in `1.0.0` itself, not as a later minor (decision D6).
   can land between batches without reopening a batch's approval.
 - **B1 to B4 are sequential on purpose.** Each batch's family sheet is drawn beside every
   earlier batch, so the next batch starts from an approved family, not from a draft.
-- **`bymax-studio-web` adopts the package from B1 on** through a local link (decision D5) and
-  switches to the npm version at `1.0.0`. A batch that changes a name the Studio already uses
+- **The first consumer app adopts the package from B1 on** through a local link (decision D5) and
+  switches to the npm version at `1.0.0`. A batch that changes a name the first consumer already uses
   keeps the old name as a deprecated alias.
 - Test suites always run with a bounded worker pool (`maxWorkers` capped in the Jest
   configs); phases are never verified by concurrent test runs of the same package.
@@ -290,15 +290,15 @@ These rules apply to every phase. Phase sections only add rules specific to them
 - **Goal:** Draw the navigation, action and status icons (about 35).
 - **Scope (in):** the remaining icons of the Navigation, Actions and Status categories of spec
   §4.1, with metadata.
-- **Definition of Done:** the batch gate of section 4, rule 11; `bymax-studio-web` consumes the
+- **Definition of Done:** the batch gate of section 4, rule 11; the first consumer app consumes the
   package through a local link.
 - **Approved (2026-11-11):** the 44 drawings, approved by the delegated auditor on behalf of
   the founder, 2026-11-11, after one round that redrew `dashboard`, `library` and `templates`.
-- **Studio adoption deferred (2026-11-11):** `bymax-studio-web` is still in its specification
+- **Consumer adoption deferred (2026-11-11):** the first consumer app is still in its specification
   phase, with documents only and no `package.json`, so it has nothing to link the package
-  into. The adoption becomes a criterion again in the first batch that closes after the Studio
+  into. The adoption becomes a criterion again in the first batch that closes after the first consumer has an application
   has a `package.json`, and at the latest in P5, before 1.0. From then on the rule of spec
-  §4.3 holds: a name the Studio already uses keeps its old name as a deprecated alias.
+  §4.3 holds: a name the first consumer already uses keeps its old name as a deprecated alias.
 - **Context / preconditions:** P3 done.
 - **References:** spec §4.1, §16, §17 (D5).
 - **Size:** L
@@ -308,23 +308,23 @@ These rules apply to every phase. Phase sections only add rules specific to them
 - **Goal:** Draw the media, audio, file and editor icons (about 35) and fix the 16 px master
   list.
 - **Scope (in):** the Media and video, Audio and voice, Files and Editor and canvas categories
-  of spec §4.1, with metadata; the 16 px master list from real usage in the Studio replica.
+  of spec §4.1, with metadata; the 16 px master list from real usage in the consumer replica.
 - **Definition of Done:** the batch gate of section 4, rule 11; the 16 px master list recorded
   in the specification's section 4.2.
-- **16 px list from role and measurement (2026-11-11):** the Studio has no application yet,
+- **16 px list from role and measurement (2026-11-11):** the first consumer has no application yet,
   so the list cannot come from real usage. It is the union of the icons
-  the Studio shell shows at 16 px by role (spec §4.2) and the drawings whose 16 px render
+  the app shell shows at 16 px by role (spec §4.2) and the drawings whose 16 px render
   fails a measured check (a fused cut or a closed interior), capped near 40 with the measured
-  failures first. Usage becomes a criterion again when the Studio has an application, with
+  failures first. Usage becomes a criterion again when the first consumer has an application, with
   the adoption deferred in B1.
 - **Context / preconditions:** B1 approved.
 - **References:** spec §4.1, §4.2, §16.
 - **Size:** L
 
-### B3: studio-ai-formats-billing
+### B3: app-ai-formats-billing
 
-- **Goal:** Draw the Studio, AI, format, billing and Polvi icons (about 30).
-- **Scope (in):** the Studio (S) concepts not drawn yet, the Formats, Credits and billing, AI and
+- **Goal:** Draw the app, AI, format, billing and mascot icons (about 30).
+- **Scope (in):** the app (S) concepts not drawn yet, the Formats, Credits and billing, AI and
   agent, People and roles and System categories of spec §4.1, with metadata and aliases.
 - **Definition of Done:** the batch gate of section 4, rule 11.
 - **Context / preconditions:** B2 approved.
@@ -399,7 +399,7 @@ These rules apply to every phase. Phase sections only add rules specific to them
 
 ### B5: general-icons
 
-- **Goal:** Add the icons every product needs, which the first 148, drawn around the Studio, do not cover: 105 drawings in five sub-batches.
+- **Goal:** Add the icons every product needs, which the first 148, drawn around the first consumer, do not cover: 105 drawings in five sub-batches.
 - **Why:** a founder decision of 2026-11-11, before 1.0. The names come from the coverage of a general-purpose set; Feather's list of names was read for coverage only, never its drawings, and Feather joins the similarity comparison set.
 - **Sub-batches:** B5a actions, status and controls (25); B5b people and security (11); B5c data, time and files (24); B5d commerce, communication, places and devices (35); B5e text and development (10).
 - **Naming:** each name says what is drawn, and product meanings are aliases (`save` for `floppy-disk`, `team` for `users`, `terminal` for `prompt`). New categories: `security`, `data-charts`, `commerce`, `communication`, `places-devices` and `dev`. `bold`, `italic` and `underline` are the one accepted exception to "no part reads as a letter" (spec section 2.5).
@@ -472,7 +472,7 @@ These rules apply to every phase. Phase sections only add rules specific to them
   release after it.
 - **Scope (out):** new icons or API changes.
 - **From the catalog review (2026-11-11):** write the use cases of the published metadata
-  without internal product names (the `octopus` cases name the Studio and Polvi; product
+  without internal product names (the `octopus` cases name a product and its mascot; product
   meanings stay in aliases), and add a short action label to the metadata for the labelled
   `title` example of each icon page.
 - **API surface check on a first release (cleared 2026-11-11):** `scripts/check-api-surface.mjs`
@@ -482,7 +482,7 @@ These rules apply to every phase. Phase sections only add rules specific to them
 - **Definition of Done:**
   - Every gate of spec §12 is green, and `pnpm prepublishOnly` passes.
   - `@bymax-one/icons@1.0.0` is on npm; the published tarball matches a local pack.
-  - Trusted publishing is configured, and `bymax-studio-web` switches to the npm version.
+  - Trusted publishing is configured, and the first consumer app switches to the npm version.
 - **Context / preconditions:** P4 done.
 - **References:** spec §11, §12, §13, §16.
 - **Size:** M
@@ -541,7 +541,7 @@ motivates it.
 
 1. **Evidence for the B0 gate.** Resolved: P2 ships a minimal contact-sheet render,
    `pnpm contact-sheet`, which draws every icon at 16, 20, 24 and 48 px on the light and dark
-   Studio pages in the ink and the six accents (the Studio design system's values), with
+   the design-system pages in the ink and the six accents, with
    `@resvg/resvg-js` as a dev dependency, into `reports/contact-sheet.png`. B0 gates on that
    sheet and a manual similarity review; P3 keeps the family sheet, the visual regression,
    the automated similarity check and the PR preview.

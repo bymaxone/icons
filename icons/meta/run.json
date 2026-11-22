@@ -3,8 +3,8 @@
   "label": "Running",
   "tags": ["run", "runner", "jog", "exercise"],
   "categories": ["health", "people"],
-  "useCases": ["Tracks a running session", "Marks a workout"],
-  "variants": ["line", "sm"],
+  "useCases": ["Tracks a running session", "Marks a workout", "Filled: active running workout"],
+  "variants": ["line", "filled", "sm"],
   "opticalSizes": [24, 16],
   "since": "1.0.0"
 }

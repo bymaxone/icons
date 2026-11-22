@@ -16,6 +16,8 @@ icons/
 A directory with no file yet does not exist; there is no placeholder. The icon lint
 (`pnpm lint:icons`) reports anything else found here.
 
+Line and small masters encode both edges of each ink region with filled paths under a `fill="currentColor"` root. Keep interior spaces as holes in those paths.
+
 ## Adding an icon
 
 1. Draw `line/<name>.svg` on the 24 px grid (see the design language in

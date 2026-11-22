@@ -1,6 +1,6 @@
 /**
  * @fileoverview Visual regression: every drawing is rendered at 16, 20, 24 and 48 px on the
- * light and the dark Studio page, as one strip, and compared pixel by pixel with the strip
+ * light and the dark page, as one strip, and compared pixel by pixel with the strip
  * committed under `visual/`. A drawing that changes, appears or disappears without its
  * baseline changing too fails the check; the difference is written as an image.
  * @layer Pipeline
@@ -48,6 +48,7 @@ export function visualTargets(set: IconSet): VisualTarget[] {
         name: icon.name,
         label: `${icon.name} (${variant})`,
         kind: variant,
+        ...(drawing.contour && { contour: true }),
         elements: drawing.elements,
         file: `${variant}/${icon.name}.png`
       }))

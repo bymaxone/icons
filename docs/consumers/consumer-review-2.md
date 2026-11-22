@@ -1,8 +1,8 @@
-# Bymax Run icon review 2: after the switch to `@bymax-one/icons` 1.0.6
+# Consumer icon review 2: after the switch to `@bymax-one/icons` 1.0.6
 
-Second handoff from the first consumer of the package. The first review (`bymax-run-icon-review.md`, audited on 1.0.3) was answered by 1.0.5 and 1.0.6. This one was written after the switch: the app prototype now draws only package icons.
+Second handoff from the first consumer of the package. The first review (`consumer-icon-review.md`, audited on 1.0.3) was answered by 1.0.5 and 1.0.6. This one was written after the switch: the app prototype now draws only package icons.
 
-Sheets that go with this file: `bymax-run-icons-1.0.6-closeup.png` (the icons named below at 48, 20, 16 and 14 px, each beside `calendar` at 20 px) and `bymax-run-icons-1.0.6-all-1.png` / `-all-2.png` (every line icon the app shows, at 20 px and at 14 px).
+Sheets that go with this file: `consumer-icons-1.0.6-closeup.png` (the icons named below at 48, 20, 16 and 14 px, each beside `calendar` at 20 px) and `consumer-icons-1.0.6-all-1.png` / `-all-2.png` (every line icon the app shows, at 20 px and at 14 px).
 
 ## 1. Where the app stands
 
